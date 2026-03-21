@@ -42,6 +42,7 @@
 |------|------|
 | [MCP 深度解析](articles/concepts/mcp-model-context-protocol.md) | Model Context Protocol 架构、生态、2026 路线图 |
 | [Agent 记忆机制](articles/concepts/agent-memory-architecture.md) | 四种记忆架构对比：Vector Store / Graph / Hybrid / Mem0 |
+| [Context Engineering：Agent 开发核心技能](articles/concepts/context-engineering-for-agents.md) | Anthropic 官方：从 Prompt Engineering 到 Context Engineering、Just-in-Time 策略 |
 
 #### 🔧 engineering/ — 工程实践
 
@@ -52,7 +53,10 @@
 
 #### 🔬 research/ — 论文解读
 
-> 暂无内容，欢迎投稿
+| 文章 | 简介 |
+|------|------|
+| [Anthropic 教你构建有效的 AI Agent](articles/research/anthropic-building-effective-agents.md) | Anthropic 官方 Agent 设计原则、六大模式、三大核心原则 |
+| [Claude Code 架构深度解析](articles/research/claude-code-architecture-deep-dive.md) | Agent Teams、Memory Checkpoint、Subagent 设计 |
 
 ---
 

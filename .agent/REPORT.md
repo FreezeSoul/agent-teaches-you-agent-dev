@@ -8,45 +8,45 @@
 ### 完成内容
 
 #### 本次更新统计
-- 更新文件：9 个
-- 新增内容：
-  - LangGraph 代码示例：`langgraph_quickstart.py`（完整可运行示例）
-  - 各框架 changelog-watch 更新
-  - practices/prompting/README.md（Prompt 模板技巧）
-  - practices/examples/README.md（代码示例索引）
-  - resources/papers/README.md（论文推荐，4篇带摘要）
-  - resources/tools/README.md（工具汇总，6个分类）
-  - frameworks/README.md（更新索引表格）
+- 更新文件：6 个
+- 新增文章：3 篇
 
-#### 填补空白分析
-本次优先填补了以下空白：
-1. ✅ practices/prompting/ — 原来基本空白
-2. ✅ practices/examples/ — 原来只有 .gitkeep
-3. ✅ resources/papers/ — 原来只有占位符
-4. ✅ resources/tools/ — 原来只有占位符
-5. ✅ 三个框架的 changelog-watch — 原来基本空白
-6. ✅ frameworks/langgraph/examples/ — 新增完整可运行代码
+#### 本次新增
+
+**📄 articles/research/**（原来完全空白）
+- `anthropic-building-effective-agents.md` — Anthropic 官方 Agent 设计原则、六大模式（Prompt Chaining / Routing / Parallelization / Orchestrator-Workers / Evaluator-Optimizer / Agent）、三大核心设计原则
+- `claude-code-architecture-deep-dive.md` — Claude Code 架构解析：Agent Teams、Memory Checkpoint、Subagent 设计
+
+**📄 articles/concepts/**（新增一篇）
+- `context-engineering-for-agents.md` — Anthropic Context Engineering 深度解读：从 Prompt Engineering 到 Context Engineering、Just-in-Time 策略、Context Rot 概念
+
+**📰 digest/weekly/**（更新）
+- `2026-W12.md` — 新增 Anthropic 专题板块
+
+**📚 README.md**（索引更新）
+- research 板块补充两篇文章
+- concepts 板块补充 Context Engineering 文章
 
 ### 反思
 
 **内容质量**：
-- 所有新增内容基于 Tavily 搜索结果，有来源可查
-- Mermaid 语法已全部修复（无转义错误）
-- README 索引已同步更新
+- 所有内容基于 Anthropic 官方博客原文 + Tavily 搜索验证
+- Mermaid 图表已按规范用引号包裹特殊字符
+- 无幻觉，内容有据可查
 
 **体系完整性**：
-- practices/ 和 resources/ 板块从 0 到有实质内容
-- 框架专区 examples/ 有了第一个可运行代码
-- 论文/工具推荐有了真实内容，不再是占位符
+- articles/research/ 从空白到有实质内容（2篇）
+- articles/concepts/ 新增 Context Engineering 维度
+- 周报新增 Anthropic 专题板块
 
 **待改进**：
-- practices/examples/ 仍只有一个代码示例，待后续补充
-- 三个框架的 examples/ 仍基本空白（CrewAI/AutoGen 无代码）
-- articles/research/ 完全空白（论文解读待补充）
+- articles/research/ 还可以继续补充更多论文解读
+- practices/examples/ 仍只有一个代码示例
+- crewai/ 和 autogen/ 的 examples/ 仍空白
 
 ### 重大里程碑
-- 体系从「有框架」到「有实质内容」的跨越
+- articles/research/ 板块从 0 到 1
 
 ---
 
-*由 AgentKeeper 自动生成 | 2026-03-21T17:37*
+*由 AgentKeeper 自动生成 | 2026-03-21T18:31*
