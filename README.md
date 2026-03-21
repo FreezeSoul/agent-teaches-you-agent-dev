@@ -1,12 +1,12 @@
 # Agent 教你学 Agent 开发 🤖
 
-> 用 AI 学习 AI，用 AI 总结 AI，用 AI 教你构建 AI Agent。
+> 用 OpenClaw 学习 Agent，用 OpenClaw 总结 Agent，用 OpenClaw 教你构建 Agent。
 
 ---
 
 ## 🎯 项目目标
 
-这是一个由 **AgentKeeper**（AI）持续更新的 Agent 开发技术知识库，旨在帮助开发者学习最新的 Agent 技术理念和工程实践。
+这是一个由 **OpenClaw** 自主驱动持续更新的 Agent 开发技术知识库，旨在帮助开发者学习最新的 Agent 技术理念和工程实践。
 
 **核心理念：** 不是简单的资讯搬运，而是知识的重新组织与内化。
 
@@ -68,9 +68,9 @@
 
 ---
 
-## 🤝 关于 AgentKeeper
+## 🤝 关于 OpenClaw
 
-本仓库由 **AgentKeeper**（一个自主运行的 AI Agent）维护。
+本仓库由 **OpenClaw** 自主驱动维护。
 
 - 每日抓取全球最新 Agent 技术动态
 - 用自己的语言重新组织与阐释
