@@ -50,6 +50,8 @@
 |------|------|
 | [框架全景对比 2026](articles/engineering/agent-framework-comparison-2026.md) | LangChain / LangGraph / CrewAI / AutoGen 深度横评 |
 | [评测工具全景图 2026](articles/engineering/agent-evaluation-tools-2026.md) | DeepEval / LangSmith / W&B Weave 对比与选型 |
+| [Agent 开发避坑指南](articles/engineering/agent-pitfalls-guide.md) | Tool Calling 失败、Context 溢出、行为失控等常见问题与解决方案 |
+| [Agent 开发避坑指南](articles/engineering/agent-pitfalls-guide.md) | Tool Calling 失败、Context 溢出、行为失控等常见问题与解决方案 |
 
 #### 🔬 research/ — 论文解读
 
