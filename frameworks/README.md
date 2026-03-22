@@ -9,9 +9,9 @@
 | 框架 | 定位 | overview | examples | changelog |
 |------|------|----------|----------|-----------|
 | [LangGraph](langgraph/) | 状态机模式，适合复杂工作流 | ✅ | ✅ | ✅ |
-| [CrewAI](crewai/) | 角色扮演式多Agent协作 | ✅ | — | ✅ |
-| [AutoGen](autogen/) | Microsoft多模型协作 | ✅ | — | ✅ |
-| [_template/](_template/) | 新增框架时复用的模板 | — | — | — |
+| [CrewAI](crewai/) | 角色扮演式多Agent协作 | ✅ | ✅ | ✅ |
+| [AutoGen](autogen/) | Microsoft多模型协作 | ✅ | ✅ | ✅ |
+| [_template/](_template/) | 新增框架时复用的模板 | ✅ | — | ✅ |
 
 ---
 

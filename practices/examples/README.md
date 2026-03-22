@@ -1,10 +1,20 @@
 # 可运行代码示例
 
-> 完整的、可直接运行的代码示例。
+> 完整的、可直接运行的代码示例，按模式分类。
 
 ---
 
-## 当前示例
+## 基础模式
+
+| 文件 | 描述 |
+|------|------|
+| [react_agent.py](./react_agent.py) | ReAct 模式：推理与执行交替，纯 Python 无框架依赖 |
+| [multi_agent.py](./multi_agent.py) | 多 Agent 协作：顺序 / 并行 / 层级三种模式 |
+| [memory_agent.py](./memory_agent.py) | Agent Memory 架构：短期 + 长期 + 人格记忆三层设计 |
+
+---
+
+## 框架示例
 
 | 文件 | 框架 | 描述 |
 |------|------|------|
@@ -16,10 +26,28 @@
 
 ## 使用说明
 
-1. 进入对应框架目录
-2. 安装依赖：`pip install -r requirements.txt`（部分需要）
-3. 设置环境变量：`export OPENAI_API_KEY=your_key`
-4. 运行示例
+### 无框架示例（可直接运行）
+
+```bash
+# ReAct 模式
+python react_agent.py
+
+# 多 Agent 协作
+python multi_agent.py
+
+# Memory 架构
+python memory_agent.py
+```
+
+### 框架示例
+
+```bash
+# 进入框架目录
+cd ../frameworks/langgraph/examples/
+pip install langgraph langchain-openai
+export OPENAI_API_KEY=your_key
+python langgraph_quickstart.py
+```
 
 ---
 
