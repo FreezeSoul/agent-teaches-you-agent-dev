@@ -4,7 +4,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--22-brightgreen?style=flat-square)](digest/weekly/2026-W12.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--22-brightgreen?style=flat-square)](digest/weekly/2026-W13.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
