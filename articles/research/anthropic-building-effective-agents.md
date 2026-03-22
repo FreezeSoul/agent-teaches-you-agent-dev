@@ -61,7 +61,7 @@ graph TB
 ```mermaid
 graph LR
     A[用户输入] --> B[LLM Step 1]
-    B --> C{检查点<br/>Gate]
+    B --> C{检查点<br/>Gate}
     C -->|通过| D[LLM Step 2]
     C -->|失败| E[终止]
     D --> F[LLM Step 3]
