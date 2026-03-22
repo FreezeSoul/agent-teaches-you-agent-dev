@@ -69,6 +69,7 @@ graph LR
 | [Building Effective AI Agents](articles/research/anthropic-building-effective-agents.md) | Anthropic 官方出品，六大 Agent 设计模式 |
 | [Claude Code Architecture](articles/research/claude-code-architecture-deep-dive.md) | Agent Teams + Memory Checkpoint 的工程实现 |
 | [ReAct: Reasoning + Acting](articles/research/react-paper-deep-dive.md) | ICLR 2023 经典论文，理解现代 Agent 的起点 |
+| [MemGPT: LLM as OS](articles/research/memgpt-paper-deep-dive.md) | 层级记忆+中断机制，Agent 记忆架构的理论奠基 |
 
 ### ⚙️ 工程实践
 

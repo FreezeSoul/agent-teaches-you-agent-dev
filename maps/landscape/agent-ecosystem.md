@@ -108,22 +108,102 @@ graph LR
 
 ```mermaid
 gantt
-    title Agent 技术演进
+    title Agent 技术演进（2022-2026）
     dateFormat  YYYY-MM
+    section 基础研究
+    ReAct 论文发布         :2022-05, 2022-06
+    Toolformer 论文        :2023-02, 2023-03
     section 模型
-    GPT-4 Function Call    :2023-06, 2023-09
-    Claude Tool Use         :2023-11, 2024-02
-    Gemini Extensions       :2023-12, 2024-03
+    GPT-4 发布            :2023-03, 2023-03
+    GPT-4 Function Call   :2023-06, 2023-09
+    Claude 2 发布          :2023-07, 2023-07
+    Claude Tool Use        :2023-11, 2024-02
+    Gemini 1.0 发布        :2023-12, 2023-12
+    GPT-4o 发布            :2024-05, 2024-05
+    Claude 3.5 发布        :2024-06, 2024-06
+    Gemini 2.0 发布        :2025-02, 2025-02
+    GPT-5.4 发布           :2026-03, 2026-03
     section 框架
-    LangChain LCEL         :2023-09, 2024-03
-    LangGraph              :2024-01, 2024-06
-    CrewAI                 :2023-11, 2024-03
-    AutoGen                :2023-07, 2024-01
+    LangChain LCEL        :2023-09, 2024-03
+    AutoGen v0.1          :2023-07, 2023-10
+    CrewAI 公开版         :2023-11, 2024-03
+    LangGraph 0.1         :2024-01, 2024-06
+    OpenAI Agents SDK     :2025-03, 2025-05
     section 协议
-    MCP 发布               :2024-11, 2024-11
-    MCP 捐赠 Linux 基金会   :2026-02, 2026-02
-    Google MCP 支持         :2026-02, 2026-03
+    OpenAI Tool Calls     :2023-06, 2023-06
+    Anthropic Tool Use    :2023-11, 2023-11
+    MCP 规范发布          :2024-11, 2024-11
+    MCP 捐赠 Linux 基金会  :2026-02, 2026-02
+    Google MCP 支持       :2026-03, 2026-03
 ```
+
+### 详细时间线解读
+
+#### 2022：基础研究期
+
+| 时间 | 里程碑 | 意义 |
+|------|--------|------|
+| 2022-05 | **ReAct 论文**（Yao et al.） | 首次提出「推理+行动」协同范式，为 Agent 循环奠基 |
+| 2022 下半年 | Toolformer 论文 | 证明 LLM 可自主学习使用工具 |
+
+#### 2023：框架萌芽期
+
+| 时间 | 里程碑 | 意义 |
+|------|--------|------|
+| 2023-03 | **GPT-4 发布** | 多模态推理能力大幅提升，Agent 基础模型成熟 |
+| 2023-06 | GPT-4 Function Calling | OpenAI 官方支持工具调用，Agent 开发门槛降低 |
+| 2023-07 | AutoGen 论文/早期版本 | 微软多模型协作框架出现 |
+| 2023-09 | LangChain LCEL | LangChain 推出新执行语言，链条式开发 |
+| 2023-11 | **Claude Tool Use** | Anthropic 跟进工具调用 |
+| 2023-11 | **CrewAI 开源** | 多 Agent 协作概念进入大众视野 |
+
+#### 2024：框架爆发期
+
+| 时间 | 里程碑 | 意义 |
+|------|--------|------|
+| 2024-01 | **LangGraph 发布** | 状态机式 Agent 框架，弥补 LCEL 无法处理循环的缺陷 |
+| 2024-06 | Claude 3.5 Sonnet | Agent 任务处理能力质的飞跃 |
+| 2024-11 | **MCP 协议发布** | Anthropic 推出模型上下文协议，工具生态开始标准化 |
+
+#### 2025：生态整合期
+
+| 时间 | 里程碑 | 意义 |
+|------|--------|------|
+| 2025-02 | Gemini 2.0 发布 | Google 全面拥抱 Agent 架构 |
+| 2025-03 | OpenAI Agents SDK | OpenAI 官方入场 Agent 框架 |
+| 2025 全年 | Agent 评测体系成熟 | GAIA、OSWorld 成为标准评测基准 |
+
+#### 2026：标准化与生产期
+
+| 时间 | 里程碑 | 意义 |
+|------|--------|------|
+| 2026-02 | **MCP 捐赠 Linux 基金会** | MCP 从单厂商协议升级为行业标准 |
+| 2026-02 | Google 全面支持 MCP | 头部厂商全面采用 MCP |
+| 2026-03 | GPT-5.4 / Mistral Small 4 / MiniMax M2.7 | 模型军备竞赛持续，Agent 能力继续提升 |
+
+### 关键技术转折点
+
+```mermaid
+graph LR
+    A[2022 ReAct] --> B[2023 Tool Calling]
+    B --> C[2024 LangGraph]
+    C --> D[2024 MCP]
+    D --> E[2026 标准统一]
+    
+    style A fill:#ffd93d
+    style B fill:#ffa502
+    style C fill:#ff6b6b
+    style D fill:#6bcb77
+    style E fill:#4d96ff
+```
+
+| 转折点 | 为什么重要 |
+|--------|-----------|
+| **ReAct** | 证明了「思考+行动」循环的价值，Agent 范式的理论基础 |
+| **Tool Calling 标准化** | OpenAI/Anthropic 各自推出官方方案，工具调用从 Hack 变规范 |
+| **LangGraph** | 解决了 Workflow 无法处理循环的问题，Agent 状态管理才真正可行 |
+| **MCP** | 从工具调用到协议层，Agent 与外部世界的接口开始标准化 |
+| **MCP 捐赠 Linux 基金会** | 协议竞争结束，生态开始收敛 |
 
 ---
 
