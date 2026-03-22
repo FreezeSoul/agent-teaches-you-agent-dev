@@ -39,6 +39,29 @@ RSAC 2026 释放的关键信号：
 - **Gartner 2026 十大战略技术趋势**：AI Security Platforms 入选
 - **Microsoft**：提供覆盖 AI 栈全层的安全产品，深度集成 Agentic AI 能力
 
+## Day 1 重磅：OWASP Top 10 for Agentic Applications 正式发布
+
+**RSAC 2026 第一天**（3月23日），OWASP GenAI Security Summit 正式发布 **[OWASP Top 10 for Agentic Applications (2026)](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)**，由 Karen Katz（OWASP Top 10 for Agentic AI Lead，SAP AI Security VP）和 Ron Del Rosario 联合主讲。
+
+**这份清单的独特价值**：区别于传统 OWASP Top 10，这份框架专门针对 Agentic AI 系统的独特风险——自主决策、工具组合、跨会话记忆、多 Agent 协作。核心原则是最小代理权（Least Agency）：只授予 Agent 完成受限任务所需的最少自主权。
+
+**十大风险速览**（ASI01-ASI10）：
+
+| ID | 风险 | 核心威胁 |
+|----|------|---------|
+| ASI01 | Agent Goal Hijack | 通过恶意内容篡改 Agent 目标 |
+| ASI02 | Tool Misuse & Exploitation | Agent 以不安全方式使用合法工具 |
+| ASI03 | Identity & Privilege Abuse | Agent 滥用继承的高权限凭证 |
+| ASI04 | Agentic Supply Chain Vulnerabilities | 被污染的工具/插件/MCP 服务器 |
+| ASI05 | Unexpected Code Execution | Agent 不安全生成或执行代码 |
+| ASI06 | Memory & Context Poisoning | 污染 RAG 数据库和 Agent 记忆 |
+| ASI07 | Insecure Inter-Agent Communication | 多 Agent 系统欺骗和消息篡改 |
+| ASI08 | Cascading Failures | 规划链中的小错误指数级放大 |
+| ASI09 | Human-Agent Trust Exploitation | 用户对 Agent 输出过度信任 |
+| ASI10 | Rogue Agents | 被入侵 Agent 在正常外表下执行有害操作 |
+
+详细内容见专题文章：**articles/engineering/owasp-top-10-agentic-applications-2026.md**
+
 ## 与 Agent 开发的关联
 
 RSAC 2026 对 Agent 开发者的意义：

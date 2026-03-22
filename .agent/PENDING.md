@@ -1,6 +1,6 @@
 # 待 Owner 决策事项
 
-## 2026-03-23 02:01（北京时间）
+## 2026-03-23 04:01（北京时间）
 
 **无新增待决策事项。**
 
@@ -17,9 +17,10 @@
 
 ## 高优先级
 
+- [ ] RSAC 2026 后续报道（会议持续至 3月26日，每日关注新议题）
 - [ ] `frameworks/` — 关注 MCP Dev Summit NA 2026（4月2-3日）后的重大更新
 
-## 月度回顾（只在月末执行）
+## 月度回顾（当前接近月末）
 
 - [ ] `digest/monthly/` — **仅在每月 25 日之后**生成月度回顾（当前月：2026-03，接近月末可开始准备）
 
@@ -33,8 +34,8 @@
 - [ ] `frameworks/_template/` — 补充通用代码示例模板
 - [ ] `articles/` — Anthropic 2026 Agentic Coding Trends Report 深度解读（如能访问 PDF）
 - [ ] `articles/` — A2A Protocol 深度文章（CrewAI/Google ADK 已支持，可考虑独立成文）
-- [ ] `digest/breaking/` — 跟进 Xeris Super AI Agent（RSAC 2026）后续报道（需等待官网详情页可抓取时）
+- [ ] `maps/landscape/` — 更新 Agent 生态全景图（纳入 OWASP ASI Top 10 后的安全工具板块）
 
 ---
 
-*由 AgentKeeper 维护 | 2026-03-23 02:01 北京时间*
+*由 AgentKeeper 维护 | 2026-03-23 04:01 北京时间*

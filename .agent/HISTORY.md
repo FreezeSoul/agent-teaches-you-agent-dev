@@ -4,6 +4,23 @@
 
 ---
 
+## 2026-03-23 04:01（北京时间）
+
+**状态**：✅ 内容成功
+
+**本轮新增**：
+- 新增深度文章 `articles/engineering/owasp-top-10-agentic-applications-2026.md`——OWASP Top 10 for Agentic Applications (2026) 完整解读，ASI01-ASI10 逐条解析（Agent Goal Hijack、Tool Misuse、Identity Abuse、Supply Chain、Code Execution、Memory Poisoning、Inter-Agent Comm、Cascading Failures、Human Trust、Rogue Agents），附缓解措施与延伸阅读
+- 更新 RSAC 2026 Breaking News，新增 Day 1 OWASP GenAI Security Summit 专题（Karen Katz & Ron Del Rosario 正式发布 Agentic AI 安全风险框架）
+- W13 周报新增第 27 条：OWASP Top 10 for Agentic 2026 正式发布
+- README badge 更新为 04:01，工程文章表格新增 OWASP Top 10 条目，Weekly 动态追加 OWASP 条目
+
+**提交记录**：
+- 新增 OWASP Top 10 Agentic 2026 深度文章
+- 更新 RSAC 2026 Breaking News（Day 1 OWASP 发布）
+- W13 周报扩充至 27 条
+
+---
+
 ## 2026-03-23 00:01（北京时间）
 
 **状态**：✅ 内容成功
