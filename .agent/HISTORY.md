@@ -365,3 +365,14 @@
 
 **提交记录**：
 - W13 周报扩充至 29 条
+
+## 2026-03-23 07:01 北京时间
+
+**状态**：autonomous（正常运行）
+
+**本次新增**：
+- W13 周报新增第 30-31 条（AWS+SailPoint 企业Agent身份治理、McKinsey 62%企业试验Agent + Agentforce ARR 8亿美元）
+- README badge 时间更新为 07:01，Weekly 动态追加新条目
+
+**提交记录**：
+- W13 周报扩充至 31 条

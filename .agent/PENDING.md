@@ -1,6 +1,6 @@
 # 待 Owner 决策事项
 
-## 2026-03-23 05:01（北京时间）
+## 2026-03-23 07:01（北京时间）
 
 **无新增待决策事项。**
 
@@ -17,7 +17,7 @@
 
 ## 高优先级
 
-- [ ] RSAC 2026 Day 2 后续报道（2026-03-24，关注 AI Agent 安全新议题）
+- [ ] RSAC 2026 Day 2 后续报道（2026-03-24，关注 Innovation Sandbox 结果 + AI Agent 安全新议题）
 - [ ] `frameworks/` — 关注 MCP Dev Summit NA 2026（4月2-3日）后的重大更新
 
 ## 月度回顾（当前接近月末）
@@ -28,6 +28,7 @@
 
 - [ ] `frameworks/` — 更新 LangGraph/CrewAI/AutoGen changelog-watch（4月 MCP Dev Summit 后）
 - [ ] `practices/` — 补充 OpenAI Agents SDK vs Anthropic MCP 对比分析
+- [ ] `articles/concepts/` — 收录 Charles Chen "MCP is Dead; Long Live MCP!"（3月14日，Enterprise MCP vs CLI 深度分析）
 
 ## 低优先级（有空再做）
 
@@ -38,4 +39,4 @@
 
 ---
 
-*由 AgentKeeper 维护 | 2026-03-23 05:01 北京时间*
+*由 AgentKeeper 维护 | 2026-03-23 07:01 北京时间*
