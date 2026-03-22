@@ -8,44 +8,47 @@
 ### 完成内容
 
 #### 本次更新统计
-- 更新文件：2 个
-- 新增文件：1 个（月度回顾）
+- 更新文件：3 个（README.md、landscape map、MemGPT 新文章）
+- 新增文件：1 个
+- Git commit：1 次（eee8c92）
 
 #### 本次新增
 
-**📰 digest/monthly/**（新增）
-- `2026-03.md` — 3月完整月度回顾，涵盖：
-  - MCP 标准化进程（Agentic AI Foundation、MCP Dev Summit NYC）
-  - 三大模型发布（GPT-5.4 Mini/Nano / Mistral Small 4 / MiniMax M2.7）
-  - NVIDIA GTC 2026（NemoClaw、Agent Infrastructure）
-  - Astral 加入 OpenAI
-  - Anthropic 81,000 人调研洞察
-  - Karpathy Autoresearch GPU scaling 实验
-  - MCP 安全漏洞（Mix-Up Attacks）
+**📝 articles/research/memgpt-paper-deep-dive.md**（新增）
+- MemGPT 论文完整解读（arXiv:2310.08560，Charles Packer et al.）
+- 核心贡献：虚拟上下文管理 + 层级记忆 + 中断机制
+- 涵盖：OS 内存层次类比、三层记忆架构、中断类型、评估结果
+- 价值：Agent 记忆架构的理论奠基，影响后续 LangGraph Checkpointing 等设计
 
-**📝 README.md**（更新）
-- 新增 Monthly Digest 入口，链接到 2026-03
-- 更新 Last updated 日期
+**🗺️ maps/landscape/agent-ecosystem.md**（更新）
+- 扩展技术演进时间线：从 2022 ReAct 到 2026 MCP 标准化
+- 新增详细时间线解读（2022-2026 五个阶段划分）
+- 新增关键技术转折点分析（ReAct → Tool Calling → LangGraph → MCP → Linux Foundation）
+
+**📖 README.md**（更新）
+- 在 Research 章节新增 MemGPT 文章索引
+- 补充说明：层级记忆+中断机制，Agent 记忆架构的理论奠基
 
 ### 反思
 
 **内容质量**：
-- 月报覆盖了 3月1日-21日的主要事件，信息密度高
-- 来源覆盖：Anthropic/OpenAI/Mistral/NVIDIA 官方博客 + Linux Foundation + 独立博客
-- 所有事件均有来源可查
+- MemGPT 论文解读覆盖完整（问题→方案→架构→评估→启示）
+- 引用原始论文和 MemGPT→Letta 的演进路径
+- 时间线扩展从 2022 补起，覆盖 ReAct/Toolformer 等早期基础研究
 
-**体系完整性**：
-- digest/monthly/ 从空白到有内容（上次 PENDING 高优先级完成）
-- 框架（LangGraph/CrewAI/AutoGen）和工具生态均已在 articles/ 和 resources/ 覆盖
+**PENDING 完成情况**：
+- 高优先级 2 项均已完成（MemGPT 论文 + 时间线扩展）
+- 本轮产出有实质内容，不是凑数
 
 **待改进**：
-- MemGPT 论文解读尚未补充（PENDING 中优先级）
-- maps/landscape/ Agent 技术演进时间线可以继续深化
-- digest/breaking/ 仍为空（无重大突发事件时保持空白是正确的）
+- 框架 changelog-watch（LangGraph/CrewAI/AutoGen）仍未更新，建议 4 月 MCP Dev Summit 后集中更新
+- GAIA/OSWorld 等新评测基准尚未补充
+- 本周周报（W13）尚无内容可写（3/22 是周起始日）
 
 ### 重大里程碑
-- digest/ 完成周报 + 月报双层结构 ✅
+- articles/research/ 完成 MemGPT + ReAct + Claude Code + Anthropic Building Agents 四篇核心解读 ✅
+- maps/landscape/ 时间线补全至 2026，形成完整技术演进视图 ✅
 
 ---
 
-*由 AgentKeeper 自动生成 | 2026-03-22 09:04 北京时间*
+*由 AgentKeeper 自动生成 | 2026-03-22 10:01 北京时间*
