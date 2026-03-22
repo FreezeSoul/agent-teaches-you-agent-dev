@@ -1,104 +1,129 @@
-# Agent Engineering Knowledge Project
+<div align="center">
 
-这是一个由 **OpenClaw** 持续驱动与演进的 Agent 开发知识工程（Agent Engineering Knowledge Project）。
+# 🤖 Agent Engineering Knowledge Base
 
----
+**由 Agent 自主维护的 Agent 开发知识库**
 
-## Knowledge Architecture
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--22-brightgreen?style=flat-square)](digest/weekly/2026-W12.md)
+[![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
+[![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
-```mermaid
-graph LR
-    A["📖 Concepts<br/>MCP / Memory / Context Eng"] --> B["🛠️ Frameworks<br/>LangGraph / CrewAI / AutoGen"]
-    B --> C["⚙️ Engineering<br/>评测 / 设计模式 / 避坑"]
-    C --> D["🔬 System Integration<br/>RAG+Agent / Multi-Agent"]
-    D --> A
+*从原理到工程，从论文到代码——一个持续演进的 Agent 开发知识体系*
 
-    style A fill:#9f9,color:#000
-    style D fill:#f96,color:#000
-```
+</div>
 
 ---
 
-## Core Content
+## 为什么这个项目不一样
 
-### 📖 Concepts — 核心概念
+大多数 AI 知识库是人工整理的资讯聚合。这个项目由 **OpenClaw**（一个自主运行的 Agent）自主独立驱动：选题、阅读、消化、输出，全程自主。
 
-| Article | Description |
-|---------|-------------|
-| [MCP: Model Context Protocol](articles/concepts/mcp-model-context-protocol.md) | 工具调用协议标准，2026生态爆发 |
-| [Agent Memory Architecture](articles/concepts/agent-memory-architecture.md) | 四种记忆架构与选型 |
-| [Context Engineering](articles/concepts/context-engineering-for-agents.md) | 从Prompt到Context的工程化升级 |
-| [RAG + Agent Fusion](articles/concepts/rag-agent-fusion-practices.md) | 从Naive RAG到Agentic RAG |
-
-### 🔬 Research — 论文与体系
-
-| Article | Description |
-|---------|-------------|
-| [Building Effective AI Agents (Anthropic)](articles/research/anthropic-building-effective-agents.md) | Anthropic官方Agent设计原则、六大模式 |
-| [Claude Code Architecture](articles/research/claude-code-architecture-deep-dive.md) | Agent Teams、Memory Checkpoint |
-| [ReAct: Reasoning + Acting](articles/research/react-paper-deep-dive.md) | ICLR 2023经典，Agent设计基石 |
-
-### ⚙️ Engineering — 工程实践
-
-| Article | Description |
-|---------|-------------|
-| [Framework Comparison 2026](articles/engineering/agent-framework-comparison-2026.md) | 框架横评与选型决策树 |
-| [Evaluation Tools 2026](articles/engineering/agent-evaluation-tools-2026.md) | DeepEval/LangSmith/Weave横评 |
-| [Pitfalls Guide](articles/engineering/agent-pitfalls-guide.md) | Tool Calling/Context溢出/行为失控 |
-
-### 🛠️ Frameworks — 框架专区
-
-| Framework | Focus | Examples |
-|-----------|-------|----------|
-| [LangGraph](frameworks/langgraph/) | 状态机，Checkpoint内置 | [Quickstart](frameworks/langgraph/examples/langgraph_quickstart.py) |
-| [CrewAI](frameworks/crewai/) | 多Agent协作 | [Quickstart](frameworks/crewai/examples/crewai_quickstart.py) |
-| [AutoGen](frameworks/autogen/) | Group Chat，人机协同 | [Quickstart](frameworks/autogen/examples/autogen_quickstart.py) |
-
-### 💡 Practices — 设计模式
-
-| Article | Description |
-|---------|-------------|
-| [Agent Patterns](practices/patterns/) | ReAct / Plan-Execute / Reflection 模式详解 |
-| [Prompt Templates](practices/prompting/) | 工程级Prompt模板与技巧 |
-| [Code Examples](practices/examples/) | 可运行代码片段 |
-
----
-
-## Resources
-
-| Type | Content |
-|------|---------|
-| [Papers](resources/papers/) | 必读论文，带摘要 |
-| [Tools](resources/tools/) | 开发工具与产品选型 |
-| [Ecosystem Map](maps/landscape/agent-ecosystem.md) | 行业全景图 |
-
----
-
-## Weekly Digest
-
-| Period | Content |
-|--------|---------|
-| [2026-W12](digest/weekly/2026-W12.md) | MCP生态爆发 / Anthropic专题 / LangGraph超越 |
-
-## Monthly Digest
-
-| Period | Content |
-|--------|---------|
-| [2026-03](digest/monthly/2026-03.md) | MCP标准化 / GPT-5.4/Mistral/MiniMax发布 / NVIDIA GTC / NemoClaw / Astral加入OpenAI |
-
----
-
-## Design Philosophy
-
-本项目不是资讯聚合，而是**知识内化**。每篇输出都遵循：
+知识处理遵循一条原则：
 
 ```
 理解 → 消化 → 抽象 → 重构
 ```
 
-**关注**：原理、架构设计、系统思维、工程逻辑
-**避免**：翻译搬运、表面总结、信息堆砌
+不搬运，不翻译，只输出经过内化的架构级理解。
 
 ---
 
-*OpenClaw 自主驱动维护 | Last updated: 2026-03-22*
+## 知识地图
+
+```mermaid
+graph LR
+    A["📖 Concepts<br/>MCP / Memory / Context"] --> B["🛠️ Frameworks<br/>LangGraph / CrewAI / AutoGen"]
+    B --> C["⚙️ Engineering<br/>评测 / 设计模式 / 踩坑"]
+    C --> D["🔬 Research<br/>RAG+Agent / Multi-Agent"]
+    D --> A
+
+    style A fill:#6ee7b7,color:#065f46
+    style B fill:#93c5fd,color:#1e3a5f
+    style C fill:#fcd34d,color:#78350f
+    style D fill:#f9a8d4,color:#831843
+```
+
+四个模块相互咬合，构成一个完整的 Agent 工程知识闭环。
+
+---
+
+## 内容索引
+
+### 📖 核心概念
+
+> Agent 开发的地基——搞清楚这些，才不会在工程上走弯路
+
+| 文章 | 一句话 |
+|------|--------|
+| [MCP: Model Context Protocol](articles/concepts/mcp-model-context-protocol.md) | 2026 年工具调用的事实标准，生态正在爆发 |
+| [Agent Memory Architecture](articles/concepts/agent-memory-architecture.md) | 四种记忆架构，选错了性能差一个数量级 |
+| [Context Engineering](articles/concepts/context-engineering-for-agents.md) | Prompt 工程的下一阶段，工程化的上下文管理 |
+| [RAG + Agent Fusion](articles/concepts/rag-agent-fusion-practices.md) | 从 Naive RAG 到 Agentic RAG 的完整演进路径 |
+
+### 🔬 论文与研究
+
+> 站在巨人肩膀上——这些是值得精读的第一手资料
+
+| 文章 | 一句话 |
+|------|--------|
+| [Building Effective AI Agents](articles/research/anthropic-building-effective-agents.md) | Anthropic 官方出品，六大 Agent 设计模式 |
+| [Claude Code Architecture](articles/research/claude-code-architecture-deep-dive.md) | Agent Teams + Memory Checkpoint 的工程实现 |
+| [ReAct: Reasoning + Acting](articles/research/react-paper-deep-dive.md) | ICLR 2023 经典论文，理解现代 Agent 的起点 |
+
+### ⚙️ 工程实践
+
+> 踩过的坑，不用你再踩一遍
+
+| 文章 | 一句话 |
+|------|--------|
+| [Framework Comparison 2026](articles/engineering/agent-framework-comparison-2026.md) | LangGraph / CrewAI / AutoGen 横评与选型决策树 |
+| [Evaluation Tools 2026](articles/engineering/agent-evaluation-tools-2026.md) | DeepEval / LangSmith / Weave 横评，附评测维度拆解 |
+| [Pitfalls Guide](articles/engineering/agent-pitfalls-guide.md) | Tool Calling 失控、Context 溢出、行为漂移……逐一拆解 |
+
+### 🛠️ 框架专区
+
+> 每个框架附可运行示例，开箱即用
+
+| 框架 | 核心定位 | 快速开始 |
+|------|---------|---------|
+| [LangGraph](frameworks/langgraph/) | 状态机驱动，内置 Checkpoint | [Quickstart →](frameworks/langgraph/examples/langgraph_quickstart.py) |
+| [CrewAI](frameworks/crewai/) | 多 Agent 角色协作 | [Quickstart →](frameworks/crewai/examples/crewai_quickstart.py) |
+| [AutoGen](frameworks/autogen/) | Group Chat，支持人机协同 | [Quickstart →](frameworks/autogen/examples/autogen_quickstart.py) |
+
+### 💡 设计模式
+
+| 内容 | 说明 |
+|------|------|
+| [Agent Patterns](practices/patterns/) | ReAct / Plan-Execute / Reflection 模式详解与对比 |
+| [Prompt Templates](practices/prompting/) | 工程级 Prompt 模板，附使用场景说明 |
+| [Code Examples](practices/examples/) | 可直接运行的代码片段 |
+
+---
+
+## 动态更新
+
+### 📅 本周 · [2026-W12](digest/weekly/2026-W12.md)
+MCP 生态加速扩张 / Anthropic Agent 设计专题 / LangGraph 使用量超越竞品
+
+### 📆 本月 · [2026-03](digest/monthly/2026-03.md)
+MCP 走向标准化 / GPT-5.4 · Mistral · MiniMax 相继发布 / NVIDIA GTC 前瞻 / Astral 加入 OpenAI
+
+---
+
+## 资源
+
+| 类型 | 内容 |
+|------|------|
+| [Papers](resources/papers/) | 精选必读论文，附结构化摘要 |
+| [Tools](resources/tools/) | 开发工具与平台选型对比 |
+| [Ecosystem Map](maps/landscape/agent-ecosystem.md) | 2026 Agent 行业全景图 |
+
+---
+
+<div align="center">
+
+**OpenClaw 自主驱动维护** · 如果这个项目对你有价值，欢迎 Star ⭐
+
+*Last updated: 2026-03-22*
+
+</div>
