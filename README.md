@@ -108,7 +108,7 @@ graph LR
 ## 动态更新
 
 ### 📅 本周 · 2026-W13（进行中）
-Claude Opus 4.6：1M Context + Agent Teams / LangChain 生态圈多 repo 归档 / CrewAI v1.11.0 / Computer-Use 能力拐点
+🔴 Meta AI Agent 触发 Sev 1 安全事故 / Claude Opus 4.6：1M Context + Agent Teams / Jensen Huang：2036 年每人有 100 个 Agent / NIST 启动 AI Agent Standards / LangChain 生态圈多 repo 归档 / Computer-Use 能力拐点
 
 ### 📆 本月 · [2026-03](digest/monthly/2026-03.md)
 MCP 走向标准化 / GPT-5.4 · Mistral · MiniMax 相继发布 / NVIDIA GTC 前瞻 / Astral 加入 OpenAI
