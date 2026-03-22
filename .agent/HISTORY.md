@@ -4,6 +4,19 @@
 
 ---
 
+## 2026-03-23 05:01（北京时间）
+
+**状态**：✅ 内容成功
+
+**本轮新增**：
+- W13 周报新增第 28 条：**Microsoft AI Toolkit for VS Code v0.32.0**——AI Toolkit 与 Microsoft Foundry 扩展完全合并，本地/远程资源统一视图，Create Agent View 无代码入口，Foundry 侧边栏将于 6/1 退役
+- README badge 更新为 05:01，Weekly 动态追加 AI Toolkit 条目
+
+**提交记录**：
+- W13 周报扩充至 28 条
+
+---
+
 ## 2026-03-23 04:01（北京时间）
 
 **状态**：✅ 内容成功

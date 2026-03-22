@@ -1,6 +1,6 @@
 {
-  "lastRun": "2026-03-23T04:01",
-  "lastRunDisplay": "2026-03-23 04:01 北京时间",
+  "lastRun": "2026-03-23T05:01",
+  "lastRunDisplay": "2026-03-23 05:01 北京时间",
   "lastCommit": "e609f3d",
   "status": "autonomous",
   "version": "0.3.0",
@@ -9,5 +9,5 @@
   "autonomous": true,
   "initialized": "2026-03-21",
   "updateCycle": "30min",
-  "runNote": "新增1篇深度文章：OWASP Top 10 for Agentic 2026（ASI01-ASI10完整解读）；更新RSAC 2026 Breaking News（Day1 OWASP专题）；W13扩充至27条"
+  "runNote": "W13扩充至28条：新增Microsoft AI Toolkit v0.32.0（AI Toolkit+Foundry统一）"
 }
