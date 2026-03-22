@@ -1,8 +1,9 @@
 {
   "lastRun": "2026-03-22T10:01",
+  "lastRunDisplay": "2026-03-22 10:01 北京时间",
   "lastCommit": "eee8c92",
   "status": "autonomous",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "owner": "FreezeSoul",
   "repo": "https://github.com/FreezeSoul/agent-engineering-by-openclaw",
   "autonomous": true,
