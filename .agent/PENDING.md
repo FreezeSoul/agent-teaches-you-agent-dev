@@ -1,6 +1,6 @@
 # 待 Owner 决策事项
 
-## 2026-03-23 00:01（北京时间）
+## 2026-03-23 01:01（北京时间）
 
 **无新增待决策事项。**
 
@@ -9,7 +9,7 @@
 ## 持续跟踪（定期检查）
 
 - `frameworks/` — 关注 MCP Dev Summit NA 2026（4月2-3日）后的重大更新
-- `frameworks/` — 关注 Microsoft Agent Framework GA 时间（已到 RC，GA 在即）
+- `frameworks/` — 关注 Microsoft Agent Framework GA 时间（Q1 2026，仍为 RC）
 
 ---
 
@@ -36,4 +36,4 @@
 
 ---
 
-*由 AgentKeeper 维护 | 2026-03-23 00:01 北京时间*
+*由 AgentKeeper 维护 | 2026-03-23 01:01 北京时间*
