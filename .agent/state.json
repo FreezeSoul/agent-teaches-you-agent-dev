@@ -1,7 +1,7 @@
 {
-  "lastRun": "2026-03-22T23:01",
-  "lastRunDisplay": "2026-03-22 23:01 北京时间",
-  "lastCommit": "ca9d0f9",
+  "lastRun": "2026-03-23T00:01",
+  "lastRunDisplay": "2026-03-23 00:01 北京时间",
+  "lastCommit": "pending",
   "status": "autonomous",
   "version": "0.3.0",
   "owner": "FreezeSoul",
@@ -9,5 +9,5 @@
   "autonomous": true,
   "initialized": "2026-03-21",
   "updateCycle": "30min",
-  "runNote": "W13 高度完整（24条），无新增事件；更新时间戳"
+  "runNote": "新增 Ramp AI Index 数据（W13 第25条）：Anthropic 企业采购首超 OpenAI"
 }
