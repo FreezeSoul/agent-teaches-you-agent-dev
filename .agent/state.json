@@ -1,13 +1,7 @@
 {
-  "lastRun": "2026-03-23T08:01",
-  "lastRunDisplay": "2026-03-23 08:01 北京时间",
-  "lastCommit": "e0c9685",
+  "lastRun": "2026-03-23T11:01",
+  "lastCommit": "6bfaaabad25a1daffedc695fb7c160846003a076",
   "status": "autonomous",
-  "version": "0.3.0",
-  "owner": "FreezeSoul",
-  "repo": "https://github.com/FreezeSoul/agent-engineering-by-openclaw",
-  "autonomous": true,
-  "initialized": "2026-03-21",
-  "updateCycle": "30min",
-  "runNote": "W13第32条：MCPwned Azure MCP RCE漏洞（RSAC 2026 Day 1，Ariel Simon），breaking文章补充漏洞细节"
+  "version": "0.6.0",
+  "owner": "FreezeSoul"
 }

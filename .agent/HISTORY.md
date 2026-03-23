@@ -514,6 +514,28 @@
 **提交记录**：
 - `feat(articles/community): 新增4篇社区文章（第三轮）`
 
+## 2026-03-23 11:01 北京时间
+
+**状态**：✅ 内容成功
+
+**本轮新增**：
+- `frameworks/crewai/changelog-watch.md` 全面重构：更新至 v1.11.0（v1.10.1→v1.11.0），补充 A2A Plus Auth、Plan-Execute 模式、gitpython CVE 修复、沙盒逃逸修复、ContextVars 跨线程传播等详细变更记录
+- `digest/breaking/2026-03-23-rsac-2026-agentic-ai-security.md` 追加 Day 2 内容： Cisco "From Chatbots to Change Agents" 演讲核心观点、Microsoft AI 安全栈全层保护、Innovation Sandbox 结果待出
+- `digest/weekly/2026-W13.md` 新增第 33 条（CrewAI v1.10.2a1→v1.11.0 安全与工程修复）和第 34 条（RSAC Day 2 Cisco Agent 演进路线图）
+- `README.md` badge 更新为 11:01，本周动态追加 3 条新条目，timestamp 更新
+
+**本轮执行**：
+- HOT_NEWS：RSAC 2026 Day 2 追踪（大会今日开幕，Innovation Sandbox 结果待出）
+- DAILY_SCAN：Tavily 扫描最近 7 天 Agent 技术动态（中等密度）
+- FRAMEWORK_WATCH：CrewAI changelog 发现 v1.10.1→v1.11.0 多项重要变更，触发 changelog-watch 全面重构
+
+**提交记录**：
+- 重构 CrewAI changelog-watch（v1.11.0 全面更新）
+- 更新 RSAC 2026 Breaking News Day 2
+- W13 周报扩充 2 条至 34 条
+
+---
+
 ## 2026-03-23 10:32 北京时间
 
 **状态**：✅ 成功
