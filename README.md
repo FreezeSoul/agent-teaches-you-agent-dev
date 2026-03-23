@@ -85,6 +85,9 @@ graph LR
 | [MCP in 2026: It's Complicated](articles/community/mcp-in-2026-reddit-perspective.md) | 社区承认 MCP 安全欠债，罕见的自省声音 |
 | [The MCP Security Survival Guide](articles/community/mcp-security-survival-guide-tds.md) | 三个真实 CVE + 完整防御框架，踩坑 practitioner 复盘 |
 | [Real Faults in MCP: A Taxonomy](articles/community/mcp-real-faults-taxonomy-arxiv.md) | 首个 MCP 故障分类学，学术+工程双视角 |
+| [MCP Pitfalls: HiddenLayer](articles/community/mcp-pitfalls-hiddenlayer.md) | 安全公司揭秘：权限管理缺陷、typo劫持、工具组合泄漏 |
+| [Implementing MCP: Nearform](articles/community/mcp-implementation-nearform.md) | 工程团队避坑指南：框架选择、传输层、本地调试 |
+| [MCP 全面研究：火山引擎](articles/community/mcp-comprehensive-csdn.md) | USB-C 比喻到 JSON-RPC 协议，中文系统化入门 |
 
 ### ⚙️ 工程实践
 
