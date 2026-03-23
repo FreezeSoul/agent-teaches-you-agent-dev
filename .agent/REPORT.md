@@ -1,7 +1,7 @@
 # AgentKeeper 自我报告
 
 > 上次维护：2026-03-23 08:08（北京时间）
-> 本次维护：2026-03-23 08:11（北京时间）
+> 本次维护：2026-03-23 08:14（北京时间）
 
 ---
 
@@ -16,25 +16,22 @@
 | 产出 | MCPwned 漏洞补充至 breaking 文章 |
 | 消耗 | LOW |
 
-### COMMUNITY_SCAN · 社区文章筛选（首轮建立）
+### COMMUNITY_SCAN · 社区文章筛选
 
 | 项目 | 结果 |
 |------|------|
-| 执行 | ✅ 完成（模拟） |
+| 执行 | ✅ 体系建立（模拟） |
 | 搜索源 | Tavily（英文） |
-| 命中 | 10 篇初筛 → 3 篇收录 |
-| 评分机制 | 热度预筛 + LLM 1-5 评分 |
-| 收录 | 3 篇（全部 ≥ 4/5） |
-| 消耗 | MEDIUM |
+| 命中 | 10 篇初筛 → 3 篇收录（≥ 4/5） |
 | 目录 | `articles/community/` |
-| 状态 | 体系已建立，待下次周末窗口正式执行 |
+| 状态 | 体系已建立，待周末窗口正式执行 |
 
-### FRAMEWORK_WATCH · 框架动态追踪
+### 任务体系重构
 
 | 项目 | 结果 |
 |------|------|
-| 执行 | ⏸️ 未触发（等待周一窗口） |
-| 下次 | 2026-03-24（周一） |
+| 变动 | ✅ 三频分类简化：去掉消耗预估，按自然节奏执行 |
+| 文件 | SKILL.md / PENDING.md / REPORT.md 已更新 |
 
 ---
 
@@ -42,33 +39,14 @@
 
 ### 做对了什么
 
-1. **社区文章体系成功建立**
-   - 新增 `articles/community/` 目录
-   - 建立「热度预筛 → LLM 评分 → 要点摘要」流程
-   - 填补了「非官方声音」的摄入缺口
-
-2. **三频任务分类体系落地**
-   - PENDING.md / REPORT.md 按新格式更新
-   - SKILL.md 新增完整任务定义 + 评分标准 + 数据源映射
-
-3. **搜索工具链验证**
-   - Tavily 可作为主力搜索（替代 union-search-skill 的部分功能）
-   - agent-browser / playwright 处理 JS 渲染页面
+1. **社区文章体系建立**：`articles/community/` + 评分机制填补了非官方声音缺口
+2. **三频任务简化**：去掉消耗预估，以「该不该执行」为唯一判断逻辑
+3. **任务-数据源映射清晰**：每个任务类型对应明确的工具和来源
 
 ### 需要改进什么
 
-1. **中文社区未启用**
-   - agent-browser 获取知乎/B站 尚未实测
-   - 需要 FSIO 确认是否纳入
-
-2. **union-search-skill 环境损坏**
-   - pygments 缺失、HN 平台不可用
-   - 暂用 Tavily 替代 HN/Reddit 部分能力
-   - 长期需修复或记录为已知限制
-
-3. **任务消耗预估需验证**
-   - 本轮 COMMUNITY_SCAN 估 MEDIUM，实际符合
-   - 需更多轮次数据校准
+1. **中文社区未启用**：agent-browser 知乎/B站尚未实测
+2. **union-search-skill 损坏**：暂用 Tavily 替代 HN/Reddit
 
 ---
 
@@ -77,48 +55,37 @@
 | 指标 | 数值 |
 |------|------|
 | 新增文章 | 3 篇（community） |
-| 更新文章 | 2 篇（breaking 补充 + 周报） |
-| 文件变更 | 5 个（3 new + 2 modified） |
-| commit | 2 次 |
-| 消耗估算 | MEDIUM |
+| 更新文章 | 2 篇（breaking + 周报） |
+| commit | 3 次 |
 | 执行时间估算 | 15 分钟 |
-
----
-
-## 📊 任务体系更新说明
-
-| 文件 | 更新内容 |
-|------|---------|
-| SKILL.md | 重写，新增任务类型定义 + 评分标准 + 数据源映射 + 三频分类 + 决策流程 |
-| PENDING.md | 重构为三频分类表 |
-| REPORT.md | 新增执行情况表 + 消耗预估 + 反思章节 |
 
 ---
 
 ## 🔮 下轮规划
 
-### 高频（每次 Cron）
-- [ ] HOT_NEWS：RSAC 2026 Day 2 + Innovation Sandbox 结果
+### 高频（每次Cron）
+- [ ] HOT_NEWS：RSAC 2026 Day 2 + Innovation Sandbox
 
-### 中频（本周末窗口 2026-03-28/29）
-- [ ] COMMUNITY_SCAN：启用中文社区（知乎/B站）→ 待 FSIO 确认
-- [ ] WEEKLY_DIGEST：2026-W13 周报
+### 中频（2026-03-28/29 周末窗口）
+- [ ] WEEKLY_DIGEST：W13 周报
+- [ ] COMMUNITY_SCAN：中文社区待确认后启用
 
 ### 中频（2026-03-24 周一）
 - [ ] FRAMEWORK_WATCH：LangGraph / CrewAI / AutoGen changelog
 
-### 低频（按需）
+### 中频（2026-03-28 后）
+- [ ] MONTHLY_DIGEST：2026-03 月报
+
+### 低频（explicit trigger）
 - [ ] CONCEPT_UPDATE：Charles Chen MCP 文章评估
 
 ---
 
-## ⚠️ 待决策事项
+## ⚠️ 待决策
 
 | 事项 | 优先级 | 状态 |
 |------|--------|------|
 | 中文社区纳入 COMMUNITY_SCAN | 高 | ⏳ 待 FSIO 确认 |
-| Cron 频率是否维持每小时 | 低 | ⏳ 可调整 |
-| union-search-skill 环境修复 | 中 | ⚠️ 已知问题 |
 
 ---
 
