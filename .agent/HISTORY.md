@@ -489,3 +489,27 @@
 
 **提交记录**：
 - `feat(articles/community): 新增4篇社区文章（FSIO博客关键字第二轮）`
+
+## 2026-03-23 09:57 北京时间
+
+**状态**：✅ 成功
+
+**触发**：FSIO diginfo.me 博客文章作为关键字搜索社区内容（第三轮）
+
+**本轮新增**：
+- `articles/community/` 新增 4 篇
+  - OpenClaw Architecture Deep Dive - 三层架构详解
+  - Advanced RAG Patterns - 五大生产模式
+  - Agentic RAG Enterprise Guide - 企业落地指南
+  - Agent Benchmarks 2026 Guide - 八大基准测试
+
+**关键字来源**（第三轮）：
+- OpenClaw 架构
+- DDD + Agentic AI
+- Agentic RAG
+- Agent 评测基准
+
+**累计 community 文章**：16 篇
+
+**提交记录**：
+- `feat(articles/community): 新增4篇社区文章（第三轮）`
