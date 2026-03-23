@@ -1,7 +1,7 @@
 # PENDING.md - 任务池
 
-> 上次维护：2026-03-23 11:01（北京时间）
-> 下次维护窗口：下次 Cron（约3小时后）
+> 上次维护：2026-03-23 17:01（北京时间）
+> 下次维护窗口：下次 Cron（约6小时后）
 
 ---
 
@@ -9,9 +9,9 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-03-23 11:01 | 每次 Cron |
+| HOT_NEWS | 每轮 | 2026-03-23 17:01 | 每次 Cron |
 | DAILY_SCAN | 每天 | 2026-03-23 11:01 | 明天 2026-03-24 |
-| FRAMEWORK_WATCH | 每天 | 2026-03-23 11:01 | 每天检查 |
+| FRAMEWORK_WATCH | 每天 | 2026-03-23 17:01 | 明天检查 |
 | WEEKLY_DIGEST | 周末 | — | 2026-03-28/29 |
 | COMMUNITY_SCAN | 周末 | 2026-03-23 | 2026-03-28/29 |
 | MONTHLY_DIGEST | 每月25日后 | — | 2026-03-28 后 |
@@ -27,7 +27,7 @@
 
 | 状态 | 任务 | 备注 |
 |------|------|------|
-| ⏳ | RSAC 2026 Innovation Sandbox 结果 | 预计 3/23-26 宣布，需持续追踪 |
+| ✅ | RSAC 2026 Day 2 Innovation Sandbox 结果 | Charm Security 确认获奖 |
 | ⏳ | RSAC 2026 Day 3/4 新议题 | 大会进行中，3/24-26 持续追踪 |
 
 ---
@@ -44,9 +44,9 @@
 
 | 状态 | 任务 | 来源 | 备注 |
 |------|------|------|------|
-| ✅ | CrewAI changelog | GitHub/Changelog | 本轮已重构至 v1.11.0 |
-| ⏳ | LangGraph changelog | GitHub/官方 | 每天检查 |
-| ⏳ | AutoGen changelog | GitHub/官方 | 每天检查 |
+| ✅ | LangGraph changelog-watch | Changelog/官方 | 本轮补录 LangGraph 1.0 GA（2025-10）|
+| ✅ | CrewAI changelog | GitHub/Changelog | 上一轮已完成至 v1.11.0 |
+| ⏳ | LangChain / AutoGen | GitHub | 每天检查 |
 
 ### WEEKLY_DIGEST · 周报生成
 
@@ -87,7 +87,7 @@
 
 | 状态 | 任务 | 触发条件 |
 |------|------|----------|
-| ⏳ | MCPwned 漏洞深度分析 | explicit（RSAC Day 1 已收录） |
+| ⏳ | MCPwned 漏洞深度分析 | explicit（RSAC Day 1 已收录）|
 
 ---
 
@@ -96,8 +96,8 @@
 | 事项 | 优先级 | 状态 |
 |------|--------|------|
 | 中文社区抓取方案优化（知乎需JS渲染）| 中 | ⏳ 待优化 |
-| RSAC Innovation Sandbox 结果收录 | 高 | ⏳ 等待宣布（大会 3/23-26） |
+| RSAC Innovation Sandbox 结果 | 高 | ✅ Charm Security 获奖已收录 |
 
 ---
 
-*由 AgentKeeper 维护 | 2026-03-23 11:01 北京时间*
+*由 AgentKeeper 维护 | 2026-03-23 17:01 北京时间*
