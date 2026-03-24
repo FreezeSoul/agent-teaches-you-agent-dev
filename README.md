@@ -49,12 +49,13 @@ flowchart TB
         P7["🎬 Orchestration<br/>编排框架"]
         P8["🔍 Deep Research<br/>深度研究"]
         P9["🤖 Multi-Agent<br/>多智能体"]
-        P10["🚀 Deep Agent<br/>深度自主 Agent"]
-        P11["⚡ Harness Engineering<br/>工程约束"]
+        P10["🎯 Skill<br/>技能抽象"]
+        P11["🚀 Deep Agent<br/>深度自主 Agent"]
+        P12["⚡ Harness Engineering<br/>工程约束"]
     end
 
-    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11
-    P11 -.->|"反馈回路"| P1
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6 --> P7 --> P8 --> P9 --> P10 --> P11 --> P12
+    P12 -.->|"反馈回路"| P1
 
     style P1 fill:#fef3c7,color:#92400e
     style P2 fill:#d1fae5,color:#065f46
@@ -65,8 +66,9 @@ flowchart TB
     style P7 fill:#fed7aa,color:#9a3412
     style P8 fill:#bfdbfe,color:#1e40af
     style P9 fill:#d1fae5,color:#064e3b
-    style P10 fill:#f9a8d4,color:#831843
-    style P11 fill:#fef3c7,color:#92400e
+    style P10 fill:#fed7aa,color:#9a3412
+    style P11 fill:#f9a8d4,color:#831843
+    style P12 fill:#fef3c7,color:#92400e
     style EVOLUTION fill:#f8fafc,stroke:#e2e8f0,stroke-width:2px
 ```
 
@@ -211,6 +213,21 @@ flowchart TB
 | [PraisonAI: Multi-Agent Framework](articles/community/praisonai-multi-agent-framework.md) | 3.77μs最快实例化 + Self-Reflection + 100+ LLM |
 
 **核心演进链**：Single Agent → Agent Teams → Hierarchical Agents → Swarm Intelligence → Colony Optimization
+
+---
+
+### 🎯 技能抽象（Skill）
+
+> Skill 是能力的高度抽象封装——把特定领域的知识、工具、流程打包成可发现、可复用、可组合的独立单元
+
+| 文章 | 一句话 |
+|------|--------|
+| [Agent Skill：能力的抽象单元](articles/concepts/agent-skill-system.md) | Skill vs Tool vs Paradigm：三层能力抽象体系 |
+| [Top 10 Claude Code Skills](articles/community/top-claude-code-skills-composio.md) | Composio 集成的 Skill 生态，Agent 能力扩展实践 |
+
+**核心演进链**：Tool（工具）→ Skill（技能封装）→ Skill Composition（技能组合）→ Skill Market（技能市场）
+
+> **Skill 是 Multi-Agent 协作的接口单元**：A2A 协议让 Agent 之间以 Skill 为粒度交互，而非直接调用工具。
 
 ---
 
