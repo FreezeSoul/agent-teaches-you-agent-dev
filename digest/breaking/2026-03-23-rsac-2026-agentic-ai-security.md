@@ -112,18 +112,18 @@ RSAC 2026 Innovation Sandbox 十强已公布，**结果将在大会期间宣布*
 - **Token Security**（身份优先安全 for Agentic AI）
 - 传统云安全方向（Wiz、SentinelOne 等）
 
-## Day 2 重磅：Charm Security 赢得 RSAC 2026 Innovation Sandbox
+## Day 2 重磅：Geordie AI 赢得 RSAC 2026 Innovation Sandbox
 
-**RSAC 2026 Innovation Sandbox 创新大奖正式揭晓**——**Charm Security** 从十强中脱颖而出，荣获"Most Innovative Startup"。
+**更正说明**：本节内容已于 2026-03-24 依据 RSAC 官方公告更正。
 
-**Charm Security 核心方向**：AI 反欺诈平台，专注于**社会工程学欺诈实时干预**。其技术核心是理解人类心理决策模式，在攻击发生瞬间进行实时拦截。
+**RSAC 2026 Innovation Sandbox 创新大奖正式揭晓**——**Geordie AI** 从十强中脱颖而出，荣获 **"Most Innovative Startup 2026"** 大奖。
 
-**对 Agent 开发者的启示**：
-- 社会工程学攻击正在进化：攻击者开始利用 AI Agent 进行大规模个性化欺诈
-- Charm Security 的技术路径——"理解人类心理 + 实时干预"——代表了一个新兴的安全方向
-- 随着 AI Agent 在企业中的部署增加，针对 Agent 的社会工程学攻击将成为新威胁向量
+**Geordie AI 核心方向**：企业级 AI Agent 安全与治理平台，专注于：
+- **Agent 实时发现与监控**：对企业内部 AI Agent 进行实时行为追踪
+- **风险情报分析**：全链路可视化 + 风险评分
+- **策略合规治理**：基于策略的 Agent 行为管控
 
-> 来源：[Charm Security LinkedIn](https://www.linkedin.com/posts/chen-yanai-064380199_big-moment-for-us-at-charm-security-charm-activity-7426992133628157952-OmZ9) | [NS Focus Global](https://nsfocusglobal.com/rsac-2026-innovation-sandbox-charm-security-ai-anti-fraud-platform-for-new-types-of-fraud/)
+> ⚠️ 此前版本误标注 Charm Security 获奖，特此更正。正确信息以 RSAC 官方公告和 [RSAC Innovation Sandbox 主页](https://www.rsaconference.com/usa/programs/innovation-sandbox) 为准。
 
 ## 与 Agent 开发的关联
 
