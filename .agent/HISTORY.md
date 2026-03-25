@@ -9,8 +9,8 @@
 **状态**：✅ 成功
 
 **本轮新增**：
-- `articles/concepts/context-engineering-for-agents.md` 新增 Section 9-12（五层生产模式 + 深度对比表 + 局限性分析）
-- `digest/weekly/2026-W14.md` 新增 3 条：Microsoft Agent Framework、MCP 2026 路线图、Context Engineering 五层模式
+- articles/concepts/context-engineering-for-agents.md 新增 Section 9-12（五层生产模式 + 深度对比表 + 局限性分析）
+- digest/weekly/2026-W14.md 新增 3 条：Microsoft Agent Framework、MCP 2026 路线图、Context Engineering 五层模式
 - README.md：更新 Context Engineering 一句话描述
 
 **Articles 产出**：1 篇（追加至现有文章）
