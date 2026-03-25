@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--25%2023%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--26%2005%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -163,6 +163,7 @@ flowchart TB
 | [MCP 企业级价值重估](articles/concepts/mcp-enterprise-value-reassessment.md) | CLI vs MCP：组织级场景为何必须选 MCP |
 | [MCP in 2026: It's Complicated](articles/community/mcp-in-2026-reddit-perspective.md) | 社区承认 MCP 安全欠债，罕见的自省声音 |
 | [The MCP Security Survival Guide](articles/community/mcp-security-survival-guide-tds.md) | 三个真实 CVE + 完整防御框架，踩坑 practitioner 复盘 |
+| [MCP 安全危机：30 CVEs · 60 天](articles/community/mcp-security-crisis-30-cves-60-days.md) | 实证数据：38% 服务器零认证、43% 命令注入，AI 行为安全第一公里问题 |
 | [Real Faults in MCP: A Taxonomy](articles/community/mcp-real-faults-taxonomy-arxiv.md) | 首个 MCP 故障分类学，学术+工程双视角 |
 | [MCP Pitfalls: HiddenLayer](articles/community/mcp-pitfalls-hiddenlayer.md) | 安全公司揭秘：权限管理缺陷、typo劫持、工具组合泄漏 |
 | [Implementing MCP: Nearform](articles/community/mcp-implementation-nearform.md) | 工程团队避坑指南：框架选择、传输层、本地调试 |
@@ -310,6 +311,7 @@ flowchart TB
 | [Harness Engineering: Martin Fowler](articles/community/harness-engineering-martin-fowler.md) | MF 评注 OpenAI：工具+规则+定期清理的三层约束 |
 | [NVIDIA Sandbox Security Guide](articles/community/nvidia-sandbox-security-guide.md) | Red Team 实录：OS 层沙箱 + 三大强制控制 |
 | [OWASP Top 10 for Agentic 2026](articles/engineering/owasp-top-10-agentic-applications-2026.md) | ASI01-ASI10 安全风险框架，每个 Agent 开发者必读 |
+| [MCP 安全危机：30 CVEs · 60 天](articles/community/mcp-security-crisis-30-cves-60-days.md) | MCP 最快增长攻击面：38% 服务器零认证、43% 命令注入，AI 行为安全第一公里 |
 | [Geordie AI: RSAC 2026 冠军 + Beam](articles/community/geordie-ai-beam-context-engineering.md) | Context Engineering 三阶段闭环：实时行为映射 → 上下文感知评估 → 自适应修复 |
 
 **核心演进链**：Prompt 约束 → Rule Engine → Harness Pattern → Safety Guardrails → Constitutional AI → Context Engineering → MCP Security

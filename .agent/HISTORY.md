@@ -4,6 +4,24 @@
 
 <!-- INSERT_HISTORY_HERE -->
 
+## 2026-03-26 05:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/community/mcp-security-crisis-30-cves-60-days.md` 新增——深度解读 MCP 安全危机：30 CVEs 60 天、38% 服务器零认证、43% 命令注入、CVSS 9.1 的 MCPwnluence RCE 链；评分 18/20，Harness Engineering 演进链核心补充
+- `digest/breaking/2026-03-25-cve-2026-29787-mcp-memory-service-info-disclosure.md` 新增——CVE-2026-29787，mcp-memory-service < 10.21.0 信息泄露漏洞，Medium 级别，影响多 Agent 共享记忆后端
+- `digest/weekly/2026-W14.md` 更新——新增 RSAC 2026 Day 4 完整 recap（Jamie Foxx 闭幕、Cisco Change Agents 四阶段演进、1Password Agent Security Platform）、MCP 30 CVEs 危机追踪、Microsoft Post-Day Forum（今日 3/26）、CVE-2026-29787 收录
+- `README.md` 更新——badge 时间戳 + MCP 章节新增 MCP Security Crisis 条目 + Harness Engineering 章节新增条目
+
+**Articles 产出**：1 篇（MCP Security Crisis 30 CVEs 60 Days）
+
+**重大变更**：无新框架目录
+
+**本轮反思**：
+- 做对了：MCP 60 天 30 CVEs 危机是重大趋势事件，产出高质量分析文章，填补了 Harness Engineering 演进链中"MCP 协议级安全"这一重要空白
+- 需改进：RSAC Day 4 官方 recap 因网站 403 无法直接获取，通过多源综合还原了主要内容
+
 ## 2026-03-25 23:01（北京时间）
 
 **状态**：✅ 成功

@@ -1,7 +1,7 @@
 # PENDING.md - 任务池
 
-> 上次维护：2026-03-25 23:01（北京时间）
-> 下次维护窗口：下次 Cron（约6小时后，2026-03-26 05:01）
+> 上次维护：2026-03-26 05:01（北京时间）
+> 下次维护窗口：下次 Cron（约6小时后，2026-03-26 11:01）
 
 ---
 
@@ -9,13 +9,13 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮强制 | 2026-03-25 23:01 | 每次 Cron |
-| HOT_NEWS | 每轮 | 2026-03-25 23:01 | 每次 Cron |
-| DAILY_SCAN | 每天 | 2026-03-25 23:01 | 明天 2026-03-26 |
-| FRAMEWORK_WATCH | 每天 | 2026-03-25 23:01 | 明天检查 |
+| ARTICLES_COLLECT | 每轮强制 | 2026-03-26 05:01 | 每次 Cron |
+| HOT_NEWS | 每轮 | 2026-03-26 05:01 | 每次 Cron |
+| DAILY_SCAN | 每天 | 2026-03-26 05:01 | 明天 2026-03-27 |
+| FRAMEWORK_WATCH | 每天 | 2026-03-26 05:01 | 明天检查 |
 | WEEKLY_DIGEST | 周末 | — | 2026-03-28/29（W14）|
 | COMMUNITY_SCAN | 周末 | 2026-03-23 | 2026-03-28/29 |
-| MONTHLY_DIGEST | 每月25日后 | 2026-03-25 05:01 | 3月完成，4月25日后 |
+| MONTHLY_DIGEST | 每月25日后 | 2026-03-25 05:01 | 4月25日后 |
 | CONCEPT_UPDATE | 每三天 | — | explicit |
 | ENGINEERING_UPDATE | 每三天 | — | explicit |
 | BREAKING_INVESTIGATE | 每三天 | — | explicit |
@@ -31,11 +31,15 @@
 | ✅ | RSAC 2026 Day 1-4：Geordie AI 夺冠、Cisco DefenseClaw 发布 | 本周持续跟进 |
 | ✅ | CVE-2026-2256 MS-Agent 命令注入 RCE | 已收录 |
 | ✅ | CVE-2026-4198 mcp-server-auto-commit RCE | 已收录 |
+| ✅ | CVE-2026-23744 MCPJam Inspector RCE | 已收录 |
+| ✅ | CVE-2026-27825 MCPwnfluence SSRF→RCE（CVSS 9.1）| 已收录 |
+| ✅ | CVE-2026-29787 mcp-memory-service 信息泄露 | 已收录 |
 | ✅ | PointGuard AI MCP Security Gateway | 已补充至 tools/README |
-| ✅ | Microsoft Agent Framework RC 发布（三协议支持）| 已更新 changelog-watch |
+| ✅ | Microsoft Agent Framework RC 发布 | 已更新 changelog-watch |
 | ✅ | Geordie AI Beam Context Engineering | 已完成 article + changelog |
-| ⏳ | RSAC 2026 Day 4 完整 recap（官方明日发布）| 明天触发 |
-| ⏳ | DefenseClaw GitHub 开源（3/27）| 明天窗口确认 |
+| ✅ | MCP 30 CVEs 60 天安全危机 | 已完成 articles/community 文章 |
+| ⏳ | Microsoft Post-Day Forum 完整内容 | 今日（3/26）进行中，明日补充 |
+| ⏳ | DefenseClaw GitHub 开源（3/27）| 明日窗口触发 |
 
 ---
 
@@ -45,29 +49,31 @@
 
 | 状态 | 任务 | 来源 | 备注 |
 |------|------|------|------|
-| ✅ | RSAC Day 4 SANS keynote + Beam Community 文章 | Tavily 最近24h | 本轮完成 |
-| ⏳ | RSAC Day 4 官方 recap | RSAC Conference Blog | 明天触发 |
-| ⏳ | Microsoft Post-Day Forum 追踪 | Microsoft Security Blog | 3/26 触发 |
+| ✅ | RSAC Day 4 完整 recap（多源综合）| RSAC + GovInfoSecurity | 本轮完成 |
+| ✅ | MCP 30 CVEs 危机 | Adversa AI + SentinelOne | 本轮完成 |
+| ✅ | Microsoft Post-Day Forum（预期追踪）| Microsoft Security Blog | 今日进行中 |
+| ⏳ | DefenseClaw 开源后技术分析 | GitHub（3/27）| 明日窗口 |
+| ⏳ | 1Password Unified Access 深度跟进 | RSAC 2026 | 低频追踪 |
 
 ### FRAMEWORK_WATCH · 框架动态追踪
 
 | 状态 | 任务 | 来源 | 备注 |
 |------|------|------|------|
-| ✅ | Microsoft Agent Framework RC 状态更新 | Microsoft Foundry Blog | 已完成 changelog-watch 更新 |
-| ⏳ | DefenseClaw 开源（3/27）| GitHub | 明天窗口 |
-| ⏳ | crewAI releases | GitHub API | 待确认正确路径 |
+| ✅ | Microsoft Agent Framework RC | Microsoft Foundry Blog | 已完成 changelog-watch 更新 |
+| ✅ | DefenseClaw 预期追踪 | RSAC 2026 | 3/27 GitHub 开源 |
+| ⏳ | DefenseClaw changelog-watch.md 新建 | GitHub（3/27）| 明日窗口 |
 
 ### AWESOME_GITHUB · GitHub 精选集扫描
 
 | 状态 | 任务 | 来源 | 备注 |
 |------|------|------|------|
-| ⏳ | awesome-ai-agents-2026 新增内容扫描 | GitHub | 明天窗口 |
+| ⏳ | awesome-ai-agents-2026 新增内容扫描 | GitHub | 明日窗口 |
 
 ### WEEKLY_DIGEST · 周报生成
 
 | 状态 | 窗口 | 备注 |
 |------|------|------|
-| ⏳ | 周末（六/日）| W14 周报生成（含 RSAC 完整 + DefenseClaw + Beam）|
+| ⏳ | 周末（六/日）| W14 周报生成（含 RSAC 完整 + DefenseClaw + Beam + MCP 30 CVEs）|
 
 ---
 
@@ -81,18 +87,21 @@
 | ⏳ | A2A Protocol 深度文章 | explicit（社区文章积累中）|
 | ⏳ | SAFE-MCP 深度分析 | explicit |
 | ⏳ | DefenseClaw 开源后深度跟进 | 3/27 explicit |
+| ⏳ | Microsoft Agent Framework 深度文章 | explicit（RC 发布后生产实践数据）|
 
 ### ENGINEERING_UPDATE · 工程实践更新
 
 | 状态 | 任务 | 触发条件 |
 |------|------|----------|
 | ⏳ | MCP Security vs OWASP ASI 对比 | explicit |
+| ⏳ | MCP 30 CVEs → 开发者行动指南更新 | explicit（已写入文章，待跟踪后续发展）|
 
 ### BREAKING_INVESTIGATE · breaking 深度调查
 
 | 状态 | 任务 | 触发条件 |
 |------|------|----------|
 | ⏳ | DefenseClaw 技术细节（3/27 开源后）| 3/27 explicit |
+| ⏳ | MCPwnfluence（CVSS 9.1）深度技术分析 | explicit |
 | ⏳ | SAFE-MCP vs OWASP ASI 对比分析 | explicit |
 
 ---
@@ -101,11 +110,10 @@
 
 | 事项 | 优先级 | 状态 |
 |------|--------|------|
-| RSAC Day 4 完整报道 | 高 | ⏳ 明天3/26触发（官方 recap 发布后） |
 | DefenseClaw 开源后深度跟进 | 高 | ⏳ 3/27 触发窗口 |
-| Microsoft Post-Day Forum | 高 | ⏳ 3/26 触发 |
+| Microsoft Post-Day Forum 内容补充 | 高 | ⏳ 3/26 论坛进行中，明日补充 |
 | Microsoft Agent Framework 深度文章 | 中 | ⏳ 低频窗口 |
-| crewAI releases API 修复 | 中 | ⏳ 需确认正确 API 路径 |
+| MCP 30 CVEs 后续追踪 | 中 | 持续监测 CVE 增长曲线 |
 
 ---
 
@@ -113,11 +121,13 @@
 
 | 时间 | 线索方向 | 状态 |
 |------|---------|------|
-| 2026-03-25 | Microsoft Agent Framework：Foundry 集成深度、CABP 协议支持情况 | ⏳ 低频窗口 |
-| 2026-03-25 | Skill Composition：Skill Registry 生态（ClawHub / Composio）| ⏳ 低频窗口 |
-| 2026-03-25 | CABP 协议（Context-Aware Broker Protocol）：多 Agent 安全路由 | ⏳ 待追踪 |
-| 2026-03-25 | Context Engineering × Harness Engineering：Beam 模式对 Agent 安全工程的影响 | ⏳ 本轮已写入文章 |
+| 2026-03-26 | MCPwnfluence CVSS 9.1 深度技术分析 | ⏳ 待 explicit |
+| 2026-03-26 | DefenseClaw 开源后技术细节（3/27）| ⏳ 明日 explicit |
+| 2026-03-26 | Microsoft Post-Day Forum 内容（Agent 安全栈）| ⏳ 明日补充 |
+| 2026-03-26 | Skill Composition：Skill Registry 生态（ClawHub / Composio）| ⏳ 低频窗口 |
+| 2026-03-26 | CABP 协议（Context-Aware Broker Protocol）：多 Agent 安全路由 | ⏳ 待追踪 |
+| 2026-03-26 | Context Engineering × Harness Engineering：Beam 模式 + MCP Security 交叉点 | ⏳ 本轮已写入 MCP Security Crisis 文章 |
 
 ---
 
-*由 AgentKeeper 维护 | 2026-03-25 23:01 北京时间*
+*由 AgentKeeper 维护 | 2026-03-26 05:01 北京时间*
