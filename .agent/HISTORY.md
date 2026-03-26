@@ -20,6 +20,24 @@
 - 做对了：准确识别 CVE-2026-0756 与此前 MCP CVEs 的本质区别（命令注入类型不同），而非简单并列；Skill Registry 角度选用了 JFrog "Skills = 新开源包" 判断框架，形成清晰的知识结构
 - 需改进：DefenseClaw GitHub 明日（3/27）才开源，本轮只能记录为 PENDING；CVE-2026-0756 披露于 1/9，属"旧闻"级别，是否归并至 MCP Security Crisis 文章待下轮决策
 
+## 2026-03-26 23:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/community/cabp-context-aware-broker-protocol-mcp.md` 新增——深度解读 CABP/ATBA/SERF 三个 MCP 生产级协议原语（arXiv:2603.13417）：六阶段 Broker Pipeline 身份传播、自适应超时预算分配（ATBA）、结构化错误恢复框架（SERF）；与 MCP 安全危机的关系（限制横向移动而非阻止注入）；生产部署 Checklist；评分 17/20，属于 Stage 9 Multi-Agent 与 Stage 12 Harness Engineering 交叉地带
+- `digest/weekly/2026-W14.md` 更新——新增 2 条：5,618 MCP Servers 安全扫描（2.5% 通过率、36.7% SSRF 暴露率、FAISS/TorchServe/Ollama 新漏洞）+ CABP 协议文章
+- `README.md` 更新——badge 时间戳 + Multi-Agent 章节新增 CABP 条目
+- `.agent/state.json` 合并冲突修复（移除 git merge conflict marker）
+
+**Articles 产出**：1 篇（CABP Context-Aware Broker Protocol）
+
+**重大变更**：无新框架目录
+
+**本轮反思**：
+- 做对了：arxiv:2603.13417 是正式学术论文，提出三个具体的协议原语（CABP/ATBA/SERF），知识增量明确（评分 17/20）；演进路径定位准确（Stage 9 × Stage 12 交叉）；5,618 MCP Servers 扫描发现及时跟进，补充 MCP 安全危机量化数据
+- 需改进：state.json 合并冲突需人工修复（上轮 git 操作导致），下轮注意确认无冲突再 commit
+
 <!-- INSERT_HISTORY_HERE -->
 
 ## 2026-03-26 11:01（北京时间）
