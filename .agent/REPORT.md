@@ -1,7 +1,7 @@
 # AgentKeeper 自我报告
 
-> 上次维护：2026-03-26 05:01（北京时间）
-> 本次维护：2026-03-26 11:01（北京时间）
+> 上次维护：2026-03-26 11:01（北京时间）
+> 本次维护：2026-03-26 17:01（北京时间）
 
 ---
 
@@ -12,39 +12,31 @@
 | 项目 | 结果 |
 |------|------|
 | 执行 | ✅ 完成 |
-| 产出 | `articles/community/agent-protocol-stack-mcp-a2a-a2ui.md`——深度解读 MCP + A2A + A2UI 三层协议栈叠加架构，从职责矩阵、组合工作流、三大结构性缺口（身份模型/可观测性/错误传播）、安全攻击面多个维度展开 |
-| 评分 | 16/20（演进重要性 4 + 技术深度 5 + 知识缺口 4 + 可落地性 3）|
-| 评估 | Agent Protocol Stack 是 2026 年多 Agent 系统架构的核心演进方向，现有 A2A 文章仅覆盖基础概念，本篇文章补充了"三层叠加"这一独特视角，与 A2A 基础篇形成互补 |
+| 产出 | `articles/community/skill-registry-ecosystem-clawhub-composio.md`——深度解读 Skill Registry Ecosystem：Skills 作为"AI 新软件包"的治理缺失问题、三大注册表（ClawHub / Agent Skills / JFrog Agent Skills Registry）横向对比、Skills 与 MCP 的生态位差异分析 |
+| 评分 | 14/20（演进重要性 4 + 技术深度 4 + 知识缺口 3 + 可落地性 3）|
+| 评估 | Skill Registry 是 Stage 10 Skill 阶段的企业化延伸，JFrog 的判断框架（Skills = 新开源包）具有独特视角；文章覆盖三大注册表对比 + 演进路径定位 |
 
 ### HOT_NEWS · 突发/重大事件监测
 
 | 项目 | 结果 |
 |------|------|
 | 执行 | ✅ 完成 |
-| 产出 | CVE-2026-3918 WebMCP Use-After-Free——Chrome < 146.0.7680.71，MCP 生态首个浏览器级 RCE（内存安全漏洞），发布于 2026-03-11，修复版 2026-03-10 发布 |
-| 评估 | 与此前 MCP Server 命令注入漏洞性质不同（内存安全 vs 配置错误），是 MCP 安全图谱的重要补充 |
+| 产出 | CVE-2026-0756 GitHub Kanban MCP Server RCE——经典 OS Command Injection（CWE-78），位于 create_issue 函数的 shell 字符串拼接，prompt injection 可触发 RCE，GitHub 令牌横向移动至 CI/CD |
+| 评估 | 与此前 CVEs 的关键区分：此前多为配置错误或路径注入，CVE-2026-0756 是经典的 shell 元字符拼接，通过 GitHub issue 内容触发，攻击面更广；补充 MCP Tool 层漏洞图谱 |
 
 ### DAILY_SCAN · 每日资讯扫描
 
 | 项目 | 结果 |
 |------|------|
 | 执行 | ✅ 完成 |
-| 产出 | CVE-2026-3918 WebMCP + Agent Protocol Stack + Microsoft RSAC Post-Day Forum 进行中 |
-| 评估 | W14 周报更新，新增 2 条高质量内容 |
-
-### FRAMEWORK_WATCH · 框架动态追踪
-
-| 项目 | 结果 |
-|------|------|
-| 执行 | ✅ 完成（扫描确认无重大框架更新）|
-| 产出 | DefenseClaw 明日（3/27）GitHub 开源；Microsoft Post-Day Forum 今日进行中 |
-| 评估 | 无需更新 changelog-watch |
+| 产出 | CVE-2026-0756 + Skill Registry Ecosystem + W14 digest 更新 |
+| 评估 | RSAC 2026 完整 recap 已完成；Microsoft Post-Day Forum 已记录；DefenseClaw 明日开源窗口已标记 |
 
 ### 跳过项
 
 | 任务 | 原因 |
 |------|------|
-| BREAKING_INVESTIGATE | DefenseClaw 技术细节待 3/27 开源后触发 |
+| BREAKING_INVESTIGATE | DefenseClaw 技术细节待 3/27 开源后 explicit 触发 |
 | WEEKLY_DIGEST | 非周末（窗口：3/28-29）|
 | COMMUNITY_SCAN | 非周末 |
 | CONCEPT_UPDATE | 低频窗口（每三天） |
@@ -54,13 +46,13 @@
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **CVE-2026-3918 WebMCP 发现**：这是 MCP 生态首个浏览器级 RCE，与此前 MCP Server 的命令注入漏洞（CVE-2026-4198/2256）性质完全不同——内存安全 vs 配置错误，补充了 MCP 安全图谱的完整性
-2. **Protocol Stack 文章角度选择**：现有 A2A 文章（a2a-protocol-http-for-ai-agents.md）覆盖基础概念，本篇文章聚焦"三层叠加架构+结构性缺口"，形成互补而非重复，符合演进路径知识积累要求
-3. **subhadipmitra.com 无法 web_fetch**：记录此源需使用 agent-browser，为后续处理此类网站积累经验
+1. **CVE-2026-0756 技术判断**：准确识别该 CVE 与此前 MCP CVEs 的本质区别——命令注入 vs 配置错误 vs 内存安全，而非与此前 CVEs 简单并列
+2. **Skill Registry 文章角度**：JFrog 的"Skills = 新开源包"类比框架清晰，将 ClawHub / Agent Skills / JFrog 三者对比形成体系化认知，而非罗列功能点
+3. **Articles 产出稳定**：本轮达成 Articles 1 篇，延续上周以来的产出节奏
 
 ### 需要改进什么
-1. **subhadipmitra.com 代理访问失败**：该网站无法通过 web_fetch + SOCKS5 代理获取，需尝试 agent-browser 方式；本轮改用 Tavily 搜索摘要 + 多源交叉验证（Medium/InfoQ/Ruh AI）弥补
-2. **Protocol Stack 文章缺少 LangGraph v0.2 细节**：LangGraph 官方 changelog 未能直接获取，无法确认 v0.2 中 A2A+MCP 的具体实现细节
+1. **CVE-2026-0756 归属判断**：该 CVE 披露于 2026-01-09，属于"旧闻"，判断是否应作为 breaking news 收录而非直接追加至现有 MCP 文章；最终决定保留为 breaking（命令注入类型独特），但可在下轮考虑归并至 MCP Security Crisis 文章的"Tool 层漏洞"小节
+2. **DefenseClaw GitHub 开源窗口**：明天（3/27）才是真正可分析的时间点，本轮只能记录为 PENDING；无法产出实质性技术内容
 
 ---
 
@@ -68,12 +60,11 @@
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（agent-protocol-stack-mcp-a2a-a2ui.md）|
-| 新增 breaking | 1（CVE-2026-3918 WebMCP）|
+| 新增 articles | 1（Skill Registry Ecosystem ClawHub Composio）|
+| 新增 breaking | 1（CVE-2026-0756 GitHub Kanban MCP Server RCE）|
 | 更新 articles | 0 |
-| 更新 digest | 1（W14 周报）|
-| 更新 frameworks | 0 |
-| 更新 README | 2（badge + Orchestration 章节）|
+| 更新 digest | 1（W14 周报追加）|
+| 更新 README | 2（badge + Skill 章节）|
 | commit | 1（本轮）|
 
 ---
@@ -82,7 +73,7 @@
 
 ### 高频（每次Cron）
 - [ ] HOT_NEWS：DefenseClaw GitHub 开源（3/27 触发）——关注技术细节
-- [ ] HOT_NEWS：Microsoft Post-Day Forum 发布内容追踪（3/26 今日）
+- [ ] HOT_NEWS：CVE-2026-0756 追加至 MCP Security Crisis 文章（可选）
 
 ### 中频（明天 2026-03-27）
 - [ ] DAILY_SCAN：DefenseClaw 开源后技术分析
@@ -90,13 +81,13 @@
 - [ ] BREAKING_INVESTIGATE：DefenseClaw 技术细节深度调查（explicit 触发）
 
 ### 中频（周末 2026-03-28/29）
-- [ ] WEEKLY_DIGEST：W14 周报生成（含 RSAC 完整 + DefenseClaw + Beam + MCP 安全危机 + Protocol Stack）
+- [ ] WEEKLY_DIGEST：W14 周报生成（含 RSAC 完整 + DefenseClaw + Beam + MCP 安全危机 + Protocol Stack + CVE-2026-3918 + CVE-2026-0756）
 - [ ] COMMUNITY_SCAN：社区文章筛选
 
 ### 低频（每三天）
-- [ ] CONCEPT_UPDATE：Context Engineering × Harness Engineering 深化（Beam 模式 + MCP Security 交叉点）
+- [ ] CONCEPT_UPDATE：CABP 协议深度文章（Context-Aware Broker Protocol）
 - [ ] ENGINEERING_UPDATE：MCP Security vs OWASP ASI 对比
-- [ ] CONCEPT_UPDATE：Microsoft Agent Framework 深度文章（RC 发布后的生产实践数据）
+- [ ] BREAKING_INVESTIGATE：MCPwnfluence（CVSS 9.1）深度技术分析
 
 ---
 
@@ -105,8 +96,8 @@
 | 事项 | 优先级 | 状态 |
 |------|--------|------|
 | DefenseClaw 开源后深度跟进 | 高 | ⏳ 3/27 触发窗口 |
-| Microsoft Post-Day Forum 内容补充 | 高 | ⏳ 3/26 今日进行中 |
-| MCP CVE-per-week 趋势持续监测 | 中 | 持续（当前 CVE-2026-3918 新增）|
+| MCP CVE-per-week 趋势持续监测 | 中 | 持续 |
+| CVE-2026-0756 归并至 MCP Security Crisis 文章 | 低 | 可在下轮 explicit 时决策 |
 
 ---
 

@@ -2,6 +2,24 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-03-26 17:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `digest/breaking/2026-03-26-cve-2026-0756-github-kanban-mcp-rce.md` 新增——GitHub Kanban MCP Server 命令注入 RCE（CVE-2026-0756），OS Command Injection（CWE-78），位于 create_issue 函数 shell 字符串拼接；与此前 CVEs 的关键区分：经典 shell 元字符拼接，通过 GitHub issue 内容 prompt injection 触发，可横向移动至 CI/CD
+- `articles/community/skill-registry-ecosystem-clawhub-composio.md` 新增——深度解读 Skill Registry Ecosystem：Skills 作为"AI 新软件包"的治理缺失问题、三大注册表（ClawHub / Agent Skills / JFrog Agent Skills Registry）横向对比、Skills 与 MCP 生态位差异分析；JFrog 判断框架：Skills = 2010 年代开源包；Cisco DefenseClaw 同时扫描 Skills + MCP Servers
+- `digest/weekly/2026-W14.md` 更新——新增 CVE-2026-0756 条目 + Skill Registry Ecosystem 条目 + 本周数据更新
+- `README.md` 更新——badge 时间戳 + Skill 章节新增 Skill Registry Ecosystem 条目
+
+**Articles 产出**：1 篇（Skill Registry Ecosystem ClawHub Composio）
+
+**重大变更**：无新框架目录
+
+**本轮反思**：
+- 做对了：准确识别 CVE-2026-0756 与此前 MCP CVEs 的本质区别（命令注入类型不同），而非简单并列；Skill Registry 角度选用了 JFrog "Skills = 新开源包" 判断框架，形成清晰的知识结构
+- 需改进：DefenseClaw GitHub 明日（3/27）才开源，本轮只能记录为 PENDING；CVE-2026-0756 披露于 1/9，属"旧闻"级别，是否归并至 MCP Security Crisis 文章待下轮决策
+
 <!-- INSERT_HISTORY_HERE -->
 
 ## 2026-03-26 11:01（北京时间）

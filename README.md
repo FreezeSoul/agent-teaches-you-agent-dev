@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--26%2011%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--26%2017%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -276,6 +276,7 @@ flowchart TB
 |------|--------|
 | [Agent Skill：能力的抽象单元](articles/concepts/agent-skill-system.md) | Skill vs Tool vs Paradigm：三层能力抽象体系 |
 | [Top 10 Claude Code Skills](articles/community/top-claude-code-skills-composio.md) | Composio 集成的 Skill 生态，Agent 能力扩展实践 |
+| [Skill Registry Ecosystem：技能注册表崛起](articles/community/skill-registry-ecosystem-clawhub-composio.md) | ClawHub + JFrog + Agent Skills：三大注册表生态对比与供应链安全分析 |
 
 **核心演进链**：Tool（工具）→ Skill（技能封装）→ Skill Composition（技能组合）→ Skill Market（技能市场）
 
