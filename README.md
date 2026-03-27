@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--27%2023%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--28%2005%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -248,6 +248,7 @@ flowchart TB
 | 文章 | 一句话 |
 |------|--------|
 | [Measuring Agent Autonomy](articles/research/measuring-agent-autonomy-in-practice.md) | Anthropic 实证研究：模型自主性被低估，监督策略决定成败 |
+| [Deployment Overhang：模型能力与实际部署的落差](articles/research/measuring-agent-autonomy-2026.md) | Clio隐私保护分析法揭示：自主时长3月翻倍、80%有防护机制、0.8%不可逆操作 |
 | [GAIA & OSWorld Benchmark 2026](articles/research/gaia-osworld-benchmark-2026.md) | GPT-5 GAIA 90%+ / SWE-bench 74% / OSWorld——评测基准全景横评 |
 | [Agent Benchmarks 2026](articles/community/agent-benchmarks-2026-guide.md) | 八大基准：SWEBench 74% / OSWorld 62% / GAIA 90%+ |
 | [Best AI Coding Agents 2026](articles/community/best-ai-coding-agents-2026.md) | PlayCode/Cursor/Devin 六大对比：$10-$500 不同定位 |
