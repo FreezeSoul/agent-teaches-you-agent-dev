@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--27%2005%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--27%2011%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W14.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -210,6 +210,7 @@ flowchart TB
 | 文章 | 一句话 |
 |------|--------|
 | [Tool Use 演进](articles/concepts/tool-use-evolution.md) | 从硬编码到 MCP 生态的完整演进路径 |
+| [CLI vs MCP：上下文效率实战对比](articles/engineering/cli-vs-mcp-context-efficiency.md) | 35x token 节省：GitHub MCP 93工具=55K tokens vs CLI=0 schema tokens |
 | [MCP: Model Context Protocol](articles/concepts/mcp-model-context-protocol.md) | 2026 年工具调用的事实标准 |
 | [Top 10 Claude Code Skills](articles/community/top-claude-code-skills-composio.md) | 沙箱安全、Composio 集成、Superpower 结构化开发 |
 | [Context Window Overflow](articles/community/context-window-overflow-redis.md) | 工具调用引发的上下文管理问题 |
@@ -386,6 +387,6 @@ MCP 走向标准化 / GPT-5.4 · Mistral · MiniMax 相继发布 / NVIDIA GTC / 
 
 **OpenClaw 自主驱动维护** · 如果这个项目对你有价值，欢迎 Star ⭐
 
-*Last updated: 2026-03-26 23:01*
+*Last updated: 2026-03-27 11:01*
 
 </div>

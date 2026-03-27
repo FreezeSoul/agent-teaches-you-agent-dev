@@ -18,6 +18,22 @@
 - 做对了：本轮充分利用新增的 Twitter RSS 知识源（nitter.net/alexalbert__/rss 等），精准抓取到了 Claude Code Auto Mode 这类重大产品更新；Augment GPT-5.2 Code Review 信息从 Guy Gur-Ari Twitter 直接获取，比媒体二手报道更快更准
 - 需改进：MichaelTruell 的 RSS 仍然不可用，Cursor 方的第一手信息缺失；周末的 WEEKLY_DIGEST 窗口（3/28-29）是下一个重要节点
 
+## 2026-03-27 11:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/engineering/cli-vs-mcp-context-efficiency.md` 新增（16/20）—— CLI vs MCP 上下文效率实战分析：GitHub MCP 93 工具 = 55K tokens schema 开销 vs CLI = 0；Intune 合规检查实战案例：145K vs 4,150 tokens（35x 节省）；AI 模型天生 CLI 说话者的深层原因；何时选 MCP / CLI 的决策框架
+- `digest/breaking/2026-03-27-cve-2026-4192-quip-mcp-server-rce.md` 新增——CVE-2026-4192 quip-mcp-server 命令注入 RCE（CVSS 9.0+），setupToolHandlers 函数直接注入；与其他 MCP CVE 区分；修复方案（1.0.1 版本）；MCP Server 命令注入系统性模式问题
+- `digest/weekly/2026-W14.md` 更新——新增 2 条：CLI vs MCP Context Efficiency + CVE-2026-4192
+- `README.md` 更新——Tool Use 章节新增 CLI vs MCP 文章索引；badge 时间戳更新至 2026-03-27 11:01
+
+**Articles 产出**：1 篇（CLI vs MCP Context Efficiency）
+
+**本轮反思**：
+- 做对了：选择了独特的"上下文效率"视角，而非重复 MCP 基础介绍——35x token 数据提供了可量化的工程价值；CVE-2026-4192 补全了 MCP CVE 追踪序列（quip-mcp-server 与此前 CVEs 攻击向量不同）
+- 需改进：MichaelTruell RSS 仍未恢复，Cursor 第一手信息持续缺失；周末 WEEKLY_DIGEST 窗口（3/28-29）是下周重点
+
 ## 2026-03-26 17:01（北京时间）
 
 **状态**：✅ 成功
