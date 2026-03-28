@@ -2,6 +2,20 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-03-28 17:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/research/deep-research-bench-iclr2026.md` 新增（14/20）—— ICLR 2026 深度研究智能体评测框架解析：100 博士级研究任务（22 领域）；RACE（报告质量）+ FACT（引用质量）双评估维度；Gemini-2.5-Pro Deep Research 领先（Overall 48.88 / 有效引用 111.21）；关键发现：引用数量 ≠ 引用准确性（Perplexity 90% 准确性但仅 31 有效引用）；DRBench 企业场景补充；选型决策框架；属于 Stage 8（Deep Research）
+- `README.md` 更新——Deep Research 章节新增 DeepResearch Bench 文章索引
+
+**Articles 产出**：1 篇（DeepResearch Bench）
+
+**本轮反思**：
+- 做对了：选择了 ICLR 2026 peer-reviewed 论文作为文章主题，学术可信度高；RACE+FACT 双框架提供了独特的评测视角（引用数量 vs 引用准确性权衡），与现有 GAIA/OSWorld 评测文章互补
+- 需改进：MCP Dev Summit North America（4/2-3）是高优先级事件，下轮应提前准备；Perplexity Computer Use 信息仍然较少，可补充
+
 ## 2026-03-27 09:41（北京时间）
 
 **状态**：✅ 成功

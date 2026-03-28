@@ -252,6 +252,7 @@ flowchart TB
 | [GAIA & OSWorld Benchmark 2026](articles/research/gaia-osworld-benchmark-2026.md) | GPT-5 GAIA 90%+ / SWE-bench 74% / OSWorld——评测基准全景横评 |
 | [Agent Benchmarks 2026](articles/community/agent-benchmarks-2026-guide.md) | 八大基准：SWEBench 74% / OSWorld 62% / GAIA 90%+ |
 | [Best AI Coding Agents 2026](articles/community/best-ai-coding-agents-2026.md) | PlayCode/Cursor/Devin 六大对比：$10-$500 不同定位 |
+| [DeepResearch Bench：ICLR 2026 深度研究评测框架](articles/research/deep-research-bench-iclr2026.md) | RACE+FACT 双维度：Gemini-2.5-Pro 48.88分 / 引用量≠引用准确性 |
 
 **核心演进链**：Prompt → Few-Shot → Chain-of-Thought → Tree-of-Thought → ReAct → Agentic Reasoning → Deep Research
 
