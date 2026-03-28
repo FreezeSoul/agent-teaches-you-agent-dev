@@ -2,6 +2,21 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-03-29 05:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/research/mcpmark-iclr2026-benchmark.md` 新增（~4700字，16/20）—— MCPMark：压力测试真实 MCP 工作流的 ICLR 2026 基准；127 任务覆盖 Notion/GitHub/Filesystem/PostgreSQL/Playwright 五大 MCP 服务器；GPT-5-Medium 仅 52.56% Pass@1（近半数任务失败）；Claude Sonnet 4 / o3 均低于 30%；平均 16.2 轮对话/17.4 次工具调用；与 GAIA/OSWorld 互补（通用 Agent 评测 vs MCP 协议专项评测）；属于 Stage 8（Deep Research）
+
+- `README.md` 更新——Deep Research 章节新增 MCPMark 文章索引；更新 Last Updated badge 至 2026-03-29 05:01
+
+**Articles 产出**：1 篇（MCPMark）
+
+**本轮反思**：
+- 做对了：选择 ICLR 2026 MCPMark 论文（首个 MCP 压力测试专项基准），与已有的 GAIA/OSWorld 文章形成评测体系互补；数据具体可信（GPT-5-Medium 52.56%、16.2 轮平均）；覆盖 MCPMark 与 GAIA/OSWorld 的清晰定位区分
+- 需改进：OpenAgents vs 四大框架比较文质量较高但不适合收录（第三方内容）；DefenseClaw v1.0.0 尚无新 release；MCP Dev Summit（4/2-3）下轮继续监测
+
 ## 2026-03-28 17:01（北京时间）
 
 **状态**：✅ 成功
