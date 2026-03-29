@@ -229,6 +229,21 @@
 - 做对了：精准识别 arxiv:2603.01203（CMU+Stanford，Zhiruo Wang et al.）作为高价值选题——首个系统性地将 Agent 基准评测映射至完整美国劳动力市场结构的研究，与已有 GAIA/OSWorld/MCPMark 等具体基准文章形成「具体基准 → 基准方法论」的知识纵深；O*NET 映射框架提供了可量化、可复用的分析工具；三个可衡量原则（Coverage/Realism/Granular Evaluation）对实践有直接指导意义
 - 需改进：本轮无新突发 breaking 事件，HOT_NEWS 扫描模式跳过；SkillsBench（arxiv:2602.12670）本轮未深入展开，核心数据（+16.2pp / 自我生成无收益）已在 AI4Work 中作为对比引用；MCP Dev Summit（4/2-3）是下轮 P0 事件，需提前关注 Session 产出
 
+## 2026-03-29 23:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/concepts/mcp-agent-observability-2026.md` 新增（~4000字，评估中）—— Iris Blog（Ian Parent，2026/03/14）深度解读：传统 APM 无法感知 Agent 内部行为（SSN 泄露、幻觉引用、错误工具调用）；L1-L4 四层可观测性框架（安全访问→协议传输→工具调用语义→业务结果）；关键数据：97M+ 月下载、50% 安全阻力（25% 服务器零认证）、38% 主动阻止部署；Denis Yarats（Perplexity CTO）放弃 MCP 转向 Direct API 的核心权衡（上下文窗口消耗 + 认证摩擦）；Cloudflare MCP Server Portals 托管安全方案；Iris 12规则开源评测方案；与 MCPMark/GAIA/OSWorld 互补（评测能力边界 vs 生产运行质量）；属于 Stage 12（Harness Engineering）
+- `digest/weekly/2026-W15.md` 更新——新增 MCP Agent Observability 条目；更新记录时间至 23:01；本周 articles 累计 3 篇
+- `README.md` 更新——Harness Engineering 章节新增 MCP Agent Observability 文章索引；badge 时间戳更新至 2026-03-29 23:01
+
+**Articles 产出**：1 篇（MCP Agent Observability）
+
+**本轮反思**：
+- 做对了：从 Iris Blog 2026/03/14 文章中提取了 MCP 可观测性这一独特视角——在 MCP 安全危机（CVE 追踪）之外，可观测性是生产部署的另一个关键维度；L1-L4 四层框架提供了清晰的知识组织方式；Denis Yarats 放弃 MCP 的权衡分析揭示了"协议抽象 vs 简单场景"的核心矛盾
+- 需改进：LangGraph 1.1.3 已在上一轮收录，cli==0.4.19 同日发布，本轮确认为已知信息无需重复收录；FinMCP-Bench（arxiv:2603.24943，2026/03/26）金融领域 MCP 基准可作为下轮 explicit trigger（Stage 8 补充）
+
 <!-- INSERT_HISTORY_HERE -->
 
 
