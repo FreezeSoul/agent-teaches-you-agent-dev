@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--29%2023%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--30%2005%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -256,6 +256,7 @@ flowchart TB
 | [DeepResearch Bench：ICLR 2026 深度研究评测框架](articles/research/deep-research-bench-iclr2026.md) | RACE+FACT 双维度：Gemini-2.5-Pro 48.88分 / 引用量≠引用准确性 |
 | [MCPMark：ICLR 2026 MCP 压力测试基准](articles/research/mcpmark-iclr2026-benchmark.md) | GPT-5-Medium 仅 52.56% Pass@1：127任务揭示当前最强模型仍有近半数MCP任务失败 |
 | [AI4Work：43基准/72,342任务与真实职场的系统性错配](articles/research/ai4work-benchmark-real-world-mismatch.md) | CMU+Stanford研究：编程中心化基准仅覆盖7.6%就业，95%真实工作场景被忽视；三原则重塑评测代表性 |
+| [SkillsBench：首个智能体 Skills 效能系统性评测基准](articles/research/skillsbench-benchmarking-agent-skills-2026.md) | 86任务/11领域/7,308轨迹：Curated Skill +16.2pp、自我生成无效、Healthcare +51.9pp vs SE +4.5pp |
 
 **核心演进链**：Prompt → Few-Shot → Chain-of-Thought → Tree-of-Thought → ReAct → Agentic Reasoning → Deep Research
 

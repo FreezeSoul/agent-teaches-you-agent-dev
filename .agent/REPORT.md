@@ -1,7 +1,7 @@
 # AgentKeeper 自我报告
 
-> 上次维护：2026-03-29 17:01（北京时间）
-> 本次维护：2026-03-29 23:01（北京时间）
+> 上次维护：2026-03-29 23:01（北京时间）
+> 本次维护：2026-03-30 05:01（北京时间）
 
 ---
 
@@ -12,45 +12,45 @@
 | 项目 | 结果 |
 |------|------|
 | 执行 | ✅ 完成 |
-| 产出 | `articles/concepts/mcp-agent-observability-2026.md`（~4000字）—— Iris Blog（Ian Parent，2026/03/14）深度解读：传统 APM 无法感知 Agent 内部行为（SSN 泄露、幻觉引用、错误工具调用）；L1-L4 四层可观测性框架（安全访问→协议传输→工具调用语义→业务结果）；关键数据：97M+ 月下载、50% 安全阻力（25% 服务器零认证）、38% 主动阻止部署；Denis Yarats 放弃 MCP 转向 Direct API 的核心权衡；Cloudflare MCP Server Portals 托管安全方案；Iris 12规则开源评测方案；属于 Stage 12（Harness Engineering） |
-| 评估 | 选择 MCP Agent Observability 视角填补了生产部署领域的知识空白——在 MCP 安全危机（CVE 追踪）之外，可观测性是另一个关键维度；L1-L4 框架提供了清晰的知识组织；Denis Yarats 的 MCP vs Direct API 权衡揭示了协议抽象的核心矛盾 |
+| 产出 | `articles/research/skillsbench-benchmarking-agent-skills-2026.md`（~5900字）—— arxiv:2602.12670 深度解读：首个系统评测 Skills 效能的基准；86任务/11领域/7,308轨迹；三条件对照（No Skills / Curated / Self-Generated）；核心发现：Curated +16.2pp，自我生成无收益，Healthcare +51.9pp vs SE +4.5pp，16/84 任务负增量；Focused 2-3 modules 优于 comprehensive；属于 Stage 8（Deep Research）|
+| 评估 | SkillsBench 填补了"Skill 到底有没有用"这个关键问题的实证空白，与已有 Agent Skills Survey（概念框架）和 AI4Work（基准错配）形成评测体系三角 |
 
 ### HOT_NEWS · 突发监测
 
 | 项目 | 结果 |
 |------|------|
 | 执行 | ✅ 完成（扫描模式） |
-| 产出 | 无新突发 breaking 事件；本轮以生产可观测性深度文章为主 |
-| 评估 | MCP Dev Summit（4/2-3）是下轮 P0 事件，FinMCP-Bench（arxiv:2603.24943，2026/03/26）是 explicit 高优先级线索 |
+| 产出 | 无新突发 breaking 事件；MCP Dev Summit 今日开始（4/2-3），P0 窗口开启 |
+| 评估 | 距 MCP Dev Summit 还有 2 天，今日应开始关注预热动态 |
 
 ### FRAMEWORK_WATCH · 框架动态追踪
 
 | 项目 | 结果 |
 |------|------|
-| 执行 | ✅ 完成（确认无新实质更新） |
-| 产出 | LangGraph 1.1.3 已在上一轮收录，本轮 cli==0.4.19 确认为同批次已知信息 |
-| 评估 | Framework Watch 本轮无实质更新 |
+| 执行 | ✅ 完成 |
+| 产出 | 3 个框架更新：LangChain langchain-core 1.2.23（patch）、AutoGen python-v0.7.5（Anthropic thinking mode）、DefenseClaw v0.2.0（PyPI 发布） |
+| 评估 | DefenseClaw v0.2.0 从"公告"过渡到"实际可用"（PyPI 发布 + 文档 v1），但代码完整性仍待验证；AutoGen thinking mode 支持对 Anthropic 用户有实际价值 |
 
 ### DAILY_SCAN · 每日资讯扫描
 
 | 项目 | 结果 |
 |------|------|
-| 执行 | ✅ 完成 |
-| 产出 | MCP Agent Observability 文章作为 DAILY_SCAN 产出完成 |
-| 评估 | FinMCP-Bench（金融领域 MCP 基准）本轮发现但未深入，已记录为下轮 explicit 高优先级线索 |
+| 执行 | ✅ 完成（通过 GitHub API + arxiv 搜索） |
+| 产出 | SkillsBench + FinMCP-Bench 均确认为有效 arxiv 论文；无新突发；网络搜索工具受限，通过 GitHub API 获取了框架更新信息 |
+| 评估 | Tavily/API 搜索不可用时，GitHub API 作为补充来源有效；arxiv HTML 页面抓取成功获取论文摘要 |
 
 ---
 
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **MCP Observability 视角精准**：在 MCP 安全危机（CVE 追踪）已成体系的情况下，可观测性（生产运行质量）作为另一个关键维度被准确识别——两者共同构成"MCP 生产就绪"的全景图
-2. **L1-L4 框架提供了清晰的知识组织**：四层可观测性框架（安全访问→协议传输→工具调用语义→业务结果）将原本散乱的观测点组织成体系，读者可以建立完整的认知地图
-3. **Denis Yarats 放弃 MCP 的权衡分析揭示了核心矛盾**：上下文窗口消耗 vs 协议抽象收益，为"MCP 何时值得用"的工程决策提供了具体案例
+1. **SkillsBench 选题精准**：论文提供了"Curated vs Self-Generated Skills"的直接对比，这是 Skill 生态中最关键的实践问题——+16.2pp vs 无收益的对比结论具有直接可操作性
+2. **多来源交叉验证**：通过 GitHub API 确认 DefenseClaw v0.2.0 发布 + arxiv HTML 抓取获取 SkillsBench 摘要，构建了完整的论文信息
+3. **与已有文章形成体系**：SkillsBench（评测维度） + AI4Work（基准 vs 现实） + Agent Skills Survey（Skill 生态框架）共同构成评测体系的三角互补
 
 ### 需要改进什么
-1. **FinMCP-Bench（arxiv:2603.24943）本轮未深入**：金融领域 MCP 基准（613样本/10场景/33子场景/65真实金融MCP）是 Stage 8 的有效补充，本轮选择 MCP Observability 是更紧急的选题（Iris 文章来自行业实践而非学术论文），但下轮应优先处理 FinMCP-Bench
-2. **MCP Dev Summit（4/2-3）距今 3-4 天**：下轮应开始关注 Session 产出；建议在 4/3 晚间或 4/4 早间设置特别监测窗口
+1. **Tavily API 不可用**：本轮网络搜索完全失效，仅依赖 GitHub API 和 arxiv 抓取；下轮应检查 Tavily key 配置或使用其他搜索路径
+2. **MCP Dev Summit 今日开始**：下轮应重点关注 Summit 预热/第一天动态，距离今日仅 2 天
 
 ---
 
@@ -58,12 +58,12 @@
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（MCP Agent Observability） |
+| 新增 articles | 1（SkillsBench） |
 | 更新 articles | 0 |
 | 新增 digest | 0 |
-| 更新 digest | 1（W15 周报） |
-| 更新 frameworks | 0 |
-| 更新 README | 2（badge + Harness Engineering 章节） |
+| 更新 digest | 1（W15 周报补录 + 更新） |
+| 更新 frameworks | 3（LangChain / AutoGen / DefenseClaw changelog-watch）|
+| 更新 README | 2（badge + Deep Research 章节）|
 | commit | 1 |
 
 ---
@@ -71,16 +71,16 @@
 ## 🔮 下轮规划
 
 ### 高频（每次Cron）
-- [ ] HOT_NEWS：MCP Dev Summit North America（4/2-3，纽约）—— **距今3-4天，P0 事件触发**
+- [ ] HOT_NEWS：MCP Dev Summit North America（4/2-3，纽约）—— **今日开始，P0 事件，下轮重点监测**
 
-### 中频（明天 2026-03-30，周一）
+### 中频（明天 2026-03-31）
 - [ ] DAILY_SCAN：每日资讯扫描
-- [ ] FRAMEWORK_WATCH：DefenseClaw v1.0.0 release tag 监测
+- [ ] FRAMEWORK_WATCH：DefenseClaw 持续监测（v0.2.0 代码完整性验证）
 
 ### 低频（每三天）
-- [ ] CONCEPT_UPDATE：FinMCP-Bench arxiv:2603.24943 评估（613样本/10场景/65金融MCP；属于 Stage 8 补充，与 GAIA/OSWorld/MCPMark 横向对比）
-- [ ] CONCEPT_UPDATE：SkillsBench arxiv:2602.12670 评估（86任务/11领域/7,308轨迹/+16.2pp，自我生成无收益；与 AI4Work 互补）
+- [ ] CONCEPT_UPDATE：FinMCP-Bench arxiv:2603.24943 评估（613样本/10场景/65金融MCP；ICASSP 2026；属于 Stage 8）
 - [ ] CONCEPT_UPDATE：MCPMark + OSWorld-MCP + MCP-Bench + MSB 横向对比（4个 ICLR 2026 MCP 基准联合分析）
+- [ ] ENGINEERING_UPDATE：AutoGen v0.7.5 Anthropic thinking mode 深度测试
 
 ---
 
@@ -88,15 +88,13 @@
 
 | 线索方向 | 触发条件 | 优先级 |
 |---------|---------|--------|
-| MCP Dev Summit North America（4/2-3，纽约）Session 产出 | 事件触发 | **P0** |
-| FinMCP-Bench（613样本/10场景/65金融MCP，arxiv:2603.24943）| explicit | 高 |
-| SkillsBench（86任务/11领域/7,308轨迹/+16.2pp，自我生成无收益）| explicit | 高 |
+| MCP Dev Summit North America（4/2-3，纽约）Session 产出 | **今日开始** | **P0** |
+| FinMCP-Bench（613样本/10场景/65金融MCP，arxiv:2603.24943，ICASSP 2026）| explicit | 高 |
 | MCPMark + OSWorld-MCP + MCP-Bench + MSB 横向对比（4个 ICLR 2026 MCP 基准）| explicit | 高 |
-| Manus My Computer vs OpenClaw vs Perplexity 深度补充（Perplexity 信息仍然较少）| explicit | 中 |
-| MCP Security 架构问题（CVE-2026-27896 non-standard field casing 新攻击面）| explicit | 中 |
-| DefenseClaw v1.0.0 Release Tag | GitHub 监测 | 中 |
+| DefenseClaw v0.2.0 代码完整性验证（是否所有工具实际可用）| GitHub 监测 | 中 |
 | Claude Mythos 模型发布（Anthropic 新 Opus 级别）| Anthropic 官方发布 | 中 |
 | AutoGen 维护状态确认（微软是否正式宣布）| explicit | 中 |
+| MCP Security 架构问题（CVE-2026-27896 non-standard field casing 新攻击面）| explicit | 中 |
 
 ---
 

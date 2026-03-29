@@ -2,6 +2,22 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-03-30 05:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/research/skillsbench-benchmarking-agent-skills-2026.md` 新增（~5900字，16/20）—— arxiv:2602.12670 深度解读：首个系统评测 Skills 效能的基准；86任务/11领域/7,308轨迹三条件对照（No Skills / Curated / Self-Generated）；核心发现：Curated Skills +16.2pp，自我生成无收益；巨大领域差异：Healthcare +51.9pp vs Software Engineering +4.5pp；16/84 任务负增量（Skill 反而帮倒忙）；Focused 2-3 modules 优于 comprehensive 文档；小模型 + Skill 可匹配大模型；与 AI4Work/Agent Skills Survey 形成评测三角；属于 Stage 8（Deep Research）
+- 框架 changelog-watch 更新：LangChain langchain-core 1.2.23、AutoGen python-v0.7.5、DefenseClaw v0.2.0（PyPI 发布 + docs v1）
+- `digest/weekly/2026-W15.md` 更新——新增 SkillsBench 条目 + 框架更新 + FinMCP-Bench 线索记录
+- `README.md` 更新——badge 时间戳至 2026-03-30 05:01 + Deep Research 章节新增 SkillsBench 条目
+
+**Articles 产出**：1 篇（SkillsBench）
+
+**本轮反思**：
+- 做对了：SkillsBench 选题精准——直接回答"Curated vs Self-Generated Skills"哪个有效，这是 Skill 生态最关键的实践问题；与 AI4Work/Agent Skills Survey 形成评测体系三角；GitHub API 作为网络搜索失效时的有效补充
+- 需改进：Tavily API 不可用导致网络搜索完全失效；MCP Dev Summit（4/2-3，纽约）今日开始，下轮应重点监测
+
 ## 2026-03-29 05:01（北京时间）
 
 **状态**：✅ 成功
