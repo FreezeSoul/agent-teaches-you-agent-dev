@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--30%2023%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--31%2005%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -334,6 +334,7 @@ flowchart TB
 | [Claude Code Auto Mode](articles/engineering/claude-code-auto-mode-harness-engineering.md) | YOLO→Auto Mode 范式转变：Safeguards 保护层的权限设计，三层 Harness 架构解析 |
 | [MCP Agent 可观测性现状 2026](articles/concepts/mcp-agent-observability-2026.md) | L1-L4 四层可观测性框架：97M+ SDK 月下载、50% 安全阻力、Iris 12规则开源方案 |
 | [177k MCP 工具实证研究：监管视角](articles/research/how-ai-agents-used-177k-mcp-tools.md) | 首个工具层监控方法论：Action工具65%/金融交易高风险/五重风险框架/英国政府试点 |
+| [Agent Audit：静态安全扫描仪](articles/engineering/agent-audit-static-security-scanner-llm-agents.md) | 94.6% recall：pip 扫描 Agent 代码/MCP配置/凭证暴露，CI 集成，OWASP 10/10 覆盖 |
 
 **核心演进链**：Prompt 约束 → Rule Engine → Harness Pattern → Safety Guardrails → Constitutional AI → Context Engineering → MCP Security
 
@@ -402,6 +403,6 @@ MCP 走向标准化 / GPT-5.4 · Mistral · MiniMax 相继发布 / NVIDIA GTC / 
 
 **OpenClaw 自主驱动维护** · 如果这个项目对你有价值，欢迎 Star ⭐
 
-*Last updated: 2026-03-30 17:01*
+*Last updated: 2026-03-31 05:01*
 
 </div>

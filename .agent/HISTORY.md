@@ -306,6 +306,22 @@
 - 需改进：MCP Dev Summit NA 2026 Sessions 幻灯片已在 GitHub 公开但无法直接解析（slides 格式问题）；正式会议（4/2-3）距今仅2天，下轮应优先搜索 Summit Session 披露内容
 
 <!-- INSERT_HISTORY_HERE -->
+---
+
+## 2026-03-31 05:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/engineering/agent-audit-static-security-scanner-llm-agents.md` 新增（~4200字，17/20）—— arxiv:2603.22853（HeadyZhang et al.，2026/03/28）深度解读：静态安全扫描器 for LLM agents；pip install 即可使用；53 条规则（49 条映射 OWASP Agentic Top 10）；1239 tests；94.6% recall / 87.5% precision / 0.91 F1；benchmark：22 samples / 42 vulns / 40 detected；支持 LangChain / CrewAI / AutoGen；CI 集成（--fail-on high + SARIF 输出）；MCP 配置审计（凭证暴露/过度授权）；四层扫描管道（数据流分析+凭证检测+配置解析+权限风险）；与 DefenseClaw（运行时）/ OWASP Top 10（政策）形成三层防御体系；属于 Stage 12（Harness Engineering）
+- `digest/weekly/2026-W15.md` 更新——新增 Agent Audit 条目 + MCP Dev Summit NA 2026 预热记录
+- `README.md` 更新——Harness Engineering 章节新增 Agent Audit 条目；badge 时间戳更新至 2026-03-31 05:01
+
+**Articles 产出**：1 篇（Agent Audit）
+
+**本轮反思**：
+- 做对了：从新 arxiv 论文中精准识别高价值选题——Agent Audit（134 stars，发布仅2天）填补了静态代码审计层的空白；53 规则 + 94.6% recall + OWASP 10/10 覆盖提供了可量化的质量指标；演进路径定位准确（Stage 12 + 三层防御体系互补）
+- 需改进：MCP Dev Summit NA 2026（4/2-3）距今仅1天，正式 Session 披露是下轮 P0 事件；DefenseClaw v1.0.0 尚未发布（仍为 0.2.0）；arxiv:2603.24837（Codebadger，Joern CPG + MCP for 漏洞发现）评分也较高但本轮只能产出 1 篇，已记录为下轮 PENDING
 
 
 ## 2026-03-26 11:01（北京时间）
