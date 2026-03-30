@@ -290,6 +290,21 @@
 - 做对了：精准识别 arxiv:2603.24203 作为高价值选题——TIP 是首个系统性地解决 MCP 间接提示注入攻击生成问题的论文，填补了 MCP Security Crisis 文章中的「工具响应路径攻击」缺口；与 AIP（身份验证）和 CABP（协议层）形成 MCP 安全三层补充；文章结构完整（问题→方法→实验→缓解→实践指南）
 - 需改进：MCP Dev Summit North America（4/2-3，纽约）距今仅 2 天，今日（3/30）预热窗口正式开启；arxiv:2603.23802（177k MCP tools 实证研究）评分也很高但本轮只能产出 1 篇，已记录为下轮 PENDING
 
+## 2026-03-30 23:01（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/research/how-ai-agents-used-177k-mcp-tools.md` 新增（~4600字）—— arxiv:2603.23802（Merlin Stein，2026/03/25）深度解读：首个大规模 MCP 工具实证研究；177,436 工具/11/2024~02/2026 追踪；Perception/Reasoning/Action 三层分类；软件开发主导（67%/90%下载）；Action 工具从 27% 飙升至 65%——Agent 正在从观察者变为执行者；金融交易类高风险 Action 工具增长最快；提出监管工具层的五重风险框架（直接影响/环境约束/stakes/规模/代码来源）；与英国政府金融监管机构开展试点合作；属于 Stage 6（Tool Use）× Stage 12（Harness Engineering）
+- `digest/weekly/2026-W15.md` 更新——新增 177k MCP 工具实证研究条目 + MCP Dev Summit NA 2026 预热记录
+- `README.md` 更新——badge 时间戳至 2026-03-30 23:01；Tool Use 章节和 Harness Engineering 章节均新增条目
+
+**Articles 产出**：1 篇（177k MCP Tools 实证研究）
+
+**本轮反思**：
+- 做对了：arxiv:2603.23802 是新提交（5天前）的实证研究论文，数据详实（177k 工具、16个月趋势数据、O*NET 映射），是 MCP 生态领域的里程碑级研究；Action 工具从 27% 升至 65% 的发现是整个 Agent 领域最重要的趋势信号之一；论文提出的"监管工具层"方法论与 Harness Engineering 直接相关；演进路径定位准确（Stage 6 × Stage 12）
+- 需改进：MCP Dev Summit NA 2026 Sessions 幻灯片已在 GitHub 公开但无法直接解析（slides 格式问题）；正式会议（4/2-3）距今仅2天，下轮应优先搜索 Summit Session 披露内容
+
 <!-- INSERT_HISTORY_HERE -->
 
 

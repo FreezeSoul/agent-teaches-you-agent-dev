@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--03--30%2017%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--03--30%2023%3A01-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -216,6 +216,7 @@ flowchart TB
 | [MCP: Model Context Protocol](articles/concepts/mcp-model-context-protocol.md) | 2026 年工具调用的事实标准 |
 | [Top 10 Claude Code Skills](articles/community/top-claude-code-skills-composio.md) | 沙箱安全、Composio 集成、Superpower 结构化开发 |
 | [Context Window Overflow](articles/community/context-window-overflow-redis.md) | 工具调用引发的上下文管理问题 |
+| [177k MCP 工具实证研究：Action工具从27%飙升至65%](articles/research/how-ai-agents-used-177k-mcp-tools.md) | 首个大规模实证：177k工具/16个月追踪/Action工具主导/金融交易高风险/监管工具层框架 |
 
 **核心演进链**：Hardcoded → Function Calling → Tool Schema → MCP生态 → Tool Mesh
 
@@ -332,6 +333,7 @@ flowchart TB
 | [Geordie AI: RSAC 2026 冠军 + Beam](articles/community/geordie-ai-beam-context-engineering.md) | Context Engineering 三阶段闭环：实时行为映射 → 上下文感知评估 → 自适应修复 |
 | [Claude Code Auto Mode](articles/engineering/claude-code-auto-mode-harness-engineering.md) | YOLO→Auto Mode 范式转变：Safeguards 保护层的权限设计，三层 Harness 架构解析 |
 | [MCP Agent 可观测性现状 2026](articles/concepts/mcp-agent-observability-2026.md) | L1-L4 四层可观测性框架：97M+ SDK 月下载、50% 安全阻力、Iris 12规则开源方案 |
+| [177k MCP 工具实证研究：监管视角](articles/research/how-ai-agents-used-177k-mcp-tools.md) | 首个工具层监控方法论：Action工具65%/金融交易高风险/五重风险框架/英国政府试点 |
 
 **核心演进链**：Prompt 约束 → Rule Engine → Harness Pattern → Safety Guardrails → Constitutional AI → Context Engineering → MCP Security
 
