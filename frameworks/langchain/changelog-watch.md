@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-04-01｜langchain-core 1.2.23：安全补丁 + 性能优化
+
+**版本**：langchain-core 1.2.23
+**性质**：🟢 Patch（安全 + 性能）
+**来源**：[GitHub Release](https://github.com/langchain-ai/langchain/releases/tag/langchain-core%401.2.23)
+
+### 变更要点
+
+| 类别 | 变更 |
+|------|------|
+| **CVE-2026-4539** | 通过升级 pygments>=2.20.0 修复安全漏洞 |
+| **性能** | Init 速度提升 15% |
+| **Async TodoList** | TodoList 中间件新增 async 实现 |
+| **Bug 修复** | Revert "trace invocation params in metadata"（regression 回退）|
+| **依赖更新** | requests 2.32.5 → 2.33.0；cryptography 46.0.5 → 46.0.6 |
+
+**为什么重要**：CVE-2026-4539 是跨依赖包的安全漏洞修复；Init 速度提升 15% 对大型 Chain 应用有感知价值；revert 说明该版本的 trace 相关改动引入了回归。
+
+**版本判断**：Patch（安全修复 + 性能优化，非 Breaking Changes）
+
+---
+
 ## 2026-03-25｜langchain-anthropic 1.4：AnthropicPromptCachingMiddleware 正式发布
 
 **版本**：langchain-anthropic 1.4

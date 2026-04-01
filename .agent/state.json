@@ -1,58 +1,59 @@
 {
-  "lastRun": "2026-04-01T21:14:00+08:00",
-  "lastRunUnix": 1743515640,
-  "roundCount": 10,
+  "lastRun": "2026-04-02T03:14:00+08:00",
+  "lastRunUnix": 1743538440,
+  "roundCount": 11,
   "articlesThisSession": 1,
   "frameworkWatch": {
     "microsoftAgentFramework": {
       "status": "rc",
       "gaExpected": "2026-05-01",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02"
     },
     "microsoftSemanticKernel": {
       "status": "stable",
       "version": "python-1.41.1",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02"
     },
     "langchainLanggraph": {
       "status": "stable",
       "version": "langchain-core-1.2.23",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02",
+      "notes": "CVE-2026-4539 fix, init speed +15%, async todolist"
     },
     "autogen": {
       "status": "migrating",
       "migrationTarget": "Microsoft Agent Framework",
       "version": "autogen-core-0.7.5",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02"
     },
     "semanticKernel": {
       "status": "maintenance",
       "recommendation": "migrate_to_maf",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02"
     },
     "crewai": {
       "status": "v1.13.0a5",
       "latestStable": "v1.12.2",
-      "lastCheck": "2026-04-01",
-      "notes": "Qdrant Edge storage, AMP token usage events, GPT-5.x stop fix"
+      "lastCheck": "2026-04-02",
+      "notes": "v1.13 URL needs verification, Qdrant Edge, AMP token events, GPT-5.x stop fix"
     },
     "defenseClaw": {
       "status": "v0.2.0",
       "gaExpected": "v1.0.0 pending",
-      "lastCheck": "2026-04-01"
+      "lastCheck": "2026-04-02"
     }
   },
   "contentStats": {
-    "articlesTotal": 54,
-    "breakingNews": 19,
+    "articlesTotal": 55,
+    "breakingNews": 20,
     "weeklyDigests": 4
   },
   "hotTopics": [
-    "mcp_dev_summit_na_2026_day1_live_today",
+    "mcp_30_cves_security_crisis_2026",
+    "cve_2026_27896_go_sdk_case_sensitivity_bypass",
+    "mcp_dev_summit_na_2026_day1_replay_available",
     "mcp_dev_summit_na_2026_day2_4_3",
-    "mcp_python_sdk_v2_roadmap_max_isbey",
-    "xaa_id_jag_sso_for_agents",
-    "formal_semantics_mcp_sgd_2603.24747"
+    "ai_agent_frameworks_three_category_taxonomy_zeroclaw"
   ],
-  "p0Current": "MCP Dev Summit NA 2026 Day 1 replay evaluation + Day 2 (4/3 OpenAI MCP x MCP)"
+  "p0Current": "MCP Dev Summit Day 1 replay analysis (YouTube available) + Day 2 (4/3 OpenAI MCP x MCP)"
 }

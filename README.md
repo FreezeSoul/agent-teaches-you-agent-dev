@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--04--01%2021%3A14-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--04--02%2003%3A14-brightgreen?style=flat-square)](digest/breaking/2026-04-02-mcp-30-cves-security-crisis.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -174,6 +174,7 @@ flowchart TB
 | [VACP: Visual Analytics Context Protocol](articles/concepts/vacp-visual-analytics-context-protocol.md) | MCP 扩展到可视化分析：显式暴露 VA 应用状态+交互+执行层，token/延迟双降 |
 | [形式化语义验证：MCP 与 SGD 的 π-calculus 深度解析](articles/concepts/formal-semantics-agentic-tool-protocols-2603-24747.md) | 首个 π-calculus 形式化证明：SGD≃MCP 但 MCP⁻¹ 有损，MCP+ 五原则扩展达到完全双射 |
 | [MCP 威胁建模：STRIDE/DREAD 框架系统性安全分析](articles/concepts/mcp-threat-modeling-stride-dread-2026.md) | 首个 MCP 客户端系统性威胁建模：STRIDE/DREAD 五组件覆盖，tool poisoning 最严峻，四层防御策略 |
+| [⚡ MCP 安全危机：30+ CVEs 加速失速](digest/breaking/2026-04-02-mcp-30-cves-security-crisis.md) | Go SDK CVE-2026-27896 + 36% 服务器零认证 + McpFirewall 三层防御方案 |
 
 **核心演进链**：Direct API → Tool Schema → MCP (标准化) → A2A (Agent间通信)
 
@@ -233,6 +234,7 @@ flowchart TB
 | 文章 | 一句话 |
 |------|--------|
 | [Framework Comparison 2026](articles/engineering/agent-framework-comparison-2026.md) | LangGraph / CrewAI / AutoGen 横评与选型决策树 |
+| [AI Agent 框架三分类：为什么比较 LangChain 和 ZeroClaw 是错误的问题](articles/community/ai-agent-frameworks-three-categories-2026.md) | 编排 vs 无代码 vs 运行时三层分类法，2026 年安全重塑选型逻辑 |
 | [Multi-Agent Orchestration: Deloitte](articles/community/multi-agent-orchestration-deloitte.md) | 2028 33% 企业 Agent 化：协议收敛 + Guardian Agent |
 | [Mimosa：自适应多智能体科学发现系统](articles/research/mimosa-evolving-multi-agent-framework-scientific-research.md) | Meta-Orchestrator 动态生成工作流拓扑+MCP 动态工具发现+LLM Judge 反馈驱动演进 |
 | [PraisonAI: Multi-Agent Framework](articles/community/praisonai-multi-agent-framework.md) | 3.77μs最快实例化 + Self-Reflection + 100+ LLM |

@@ -2,6 +2,22 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-04-02 03:14（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `digest/breaking/2026-04-02-mcp-30-cves-security-crisis.md` 新增——MCP 安全危机：30+ CVEs 加速失速；Go SDK CVE-2026-27896（大小写绕过）；三层攻击面分析（Server/SDK/Host）；36% 服务器零认证；McpFirewall 防御方案（29 写操作阻断 + 字段级脱敏 + 工具白名单）
+- `articles/community/ai-agent-frameworks-three-categories-2026.md` 新增（~4800字，社区）——ZeroClaw 深度分析：AI Agent 框架三层分类法（Orchestration vs No-Code vs Runtime）；LangChain/CrewAI/AutoGen vs n8n vs ZeroClaw/OpenClaw 正确对比方式；2026 年 OpenClaw CVE 危机 vs ZeroClaw 零 CVE；Runtime Engine 选型决策树；属于 Stage 7 补充
+- `frameworks/langchain/changelog-watch.md` 更新——langchain-core 1.2.23：CVE-2026-4539 修复 + Init 速度 +15% + Async TodoList
+- `README.md` 更新——MCP 章节新增 Breaking News；Orchestration 章节新增三分类文章；badge 更新至 2026-04-02 03:14
+
+**Articles 产出**：1 篇（AI Agent 框架三分类，社区文章）
+
+**本轮反思**：
+- 做对了：ZeroClaw 三层分类法是 agent-framework-comparison-2026.md（框架横评）缺失的元框架视角，互补非重复；MCP 30+ CVEs 是 Stage 12+3 双重重要内容
+- 需改进：MCP Dev Summit Day 1 回放已可在 YouTube，本轮未深入分析具体 Session
+
 ## 2026-03-30 11:01（北京时间）
 
 **状态**：✅ 成功
