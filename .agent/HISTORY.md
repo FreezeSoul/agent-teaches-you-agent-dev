@@ -351,6 +351,24 @@
 - 需改进：arxiv API 多次连接超时，建议下轮直接使用 web_fetch 获取摘要；MCP Dev Summit Day 1（4/2）距约 17 小时，下轮应为 Day 1 实时追踪
 
 <!-- INSERT_HISTORY_HERE -->
+## 2026-04-01 21:14（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/concepts/formal-semantics-agentic-tool-protocols-2603-24747.md` 新增（~7493字，19/20）—— arXiv:2603.24747（Andreas Schlapbach / SBB，2026/03/25）：首个 π-calculus 形式化验证 SGD 和 MCP 协议等价性；SGD≃MCP（Φ 双模拟成立）但 Φ⁻¹ 有损揭示 MCP 表达能力缺口；MCP+ 五原则类型系统使 MCP+≅SGD 完全双射；安全属性作为进程不变量（含 tool poisoning 防御）；属于 Stage 3（MCP）× Stage 12（Harness Engineering）
+- `frameworks/crewai/changelog-watch.md` 更新——新增 v1.12.0~v1.13.0a5 更新记录：Qdrant Edge 存储后端、AMP token 使用量事件化、GPT-5.x stop 参数修复
+- `digest/weekly/2026-W15.md` 更新——新增本轮条目（Formal Semantics + CrewAI v1.12.x + MCP Dev Summit Day 1 追踪）
+- `README.md` 更新——MCP 章节新增 Formal Semantics 条目；badge 时间戳更新至 21:14
+
+**Articles 产出**：1 篇（Formal Semantics，评分 19/20）
+
+**重大变更**：无新框架目录
+
+**本轮反思**：
+- 做对了：精准识别 2603.24747 作为 MCP 理论基础的里程碑级论文（评分 19/20）——填补了协议形式化验证空白，与已有 MCP 安全研究（CABP/TIP/AIP）形成理论层×协议层×运行时三层体系；MCP Dev Summit Day 1 Python SDK V2 路线图分析为下轮提供了明确的监测方向
+- 需改进：MCP Dev Summit Day 1 录制/内容发布需等待，Day 2（4/3）和 Day 1 回放是后续重要内容窗口
+
 ## 2026-04-01 09:14（北京时间）
 
 **状态**：✅ 成功

@@ -6,7 +6,29 @@
 
 ## 更新记录
 
-### 2026-03-25（v1.11.1）补丁更新
+### 2026-04-01（v1.13.0a5）
+
+**2026-03-31 · v1.13.0a3** ⭐
+- **Token Usage 数据事件化**：LLMCallCompletedEvent 新增 token 使用量数据，AMP（Agent Memory Protocol）可提取和发布工具元数据
+- **GPT-5.x stop 参数修复**：修复 GPT-5.x 模型不支持 `stop` API 参数的问题
+- Agent capabilities 文档多语言修复
+
+**2026-03-26 · v1.12.2**
+- 保留 `@human_feedback` 方法返回值作为 flow 输出（emit 模式）
+- 安全策略和报告说明修订
+
+**2026-03-26 · v1.12.1** ⭐
+- HumanFeedbackRequestedEvent 新增 request_id
+- **Qdrant Edge 存储后端**：CrewAI Memory System 新增 Qdrant Edge 支持，针对边缘部署场景的向量数据库选择
+- docs-check 命令：自动分析变更并生成带翻译的文档
+- 阿拉伯语支持（文档全面翻译）
+
+**2026-03-26 · v1.12.0** ⭐
+- Qdrant Edge 存储后端正式版
+- 多语言文档（阿拉伯语等）
+- 企业级发布流程改进
+
+**2026-03-25（v1.11.1）补丁更新**
 
 **2026-03-23 · v1.11.1 正式版**
 - 继 v1.11.0 之后的小版本补丁

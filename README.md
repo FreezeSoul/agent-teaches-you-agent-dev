@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 开发知识库**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--04--01%2015%3A14-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
+[![Last Updated](https://img.shields.io/badge/updated-2026--04--01%2021%3A14-brightgreen?style=flat-square)](digest/weekly/2026-W15.md)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -172,6 +172,7 @@ flowchart TB
 | [MCP 全面研究：火山引擎](articles/community/mcp-comprehensive-csdn.md) | USB-C 比喻到 JSON-RPC 协议，中文系统化入门 |
 | [AIP: IBCT 令牌解决 MCP/A2A 身份验证缺失](articles/research/aip-agent-identity-protocol-ibct.md) | 扫描 2000 MCP 服务器全部无认证：IBCT 令牌链解决方案，0.086% 延迟开销 |
 | [VACP: Visual Analytics Context Protocol](articles/concepts/vacp-visual-analytics-context-protocol.md) | MCP 扩展到可视化分析：显式暴露 VA 应用状态+交互+执行层，token/延迟双降 |
+| [形式化语义验证：MCP 与 SGD 的 π-calculus 深度解析](articles/concepts/formal-semantics-agentic-tool-protocols-2603-24747.md) | 首个 π-calculus 形式化证明：SGD≃MCP 但 MCP⁻¹ 有损，MCP+ 五原则扩展达到完全双射 |
 | [MCP 威胁建模：STRIDE/DREAD 框架系统性安全分析](articles/concepts/mcp-threat-modeling-stride-dread-2026.md) | 首个 MCP 客户端系统性威胁建模：STRIDE/DREAD 五组件覆盖，tool poisoning 最严峻，四层防御策略 |
 
 **核心演进链**：Direct API → Tool Schema → MCP (标准化) → A2A (Agent间通信)
