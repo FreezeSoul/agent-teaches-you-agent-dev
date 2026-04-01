@@ -335,6 +335,21 @@
 - 做对了：Paperclip 是 MCP Ecosystem 2026 文章的自然延伸——从「协议标准化」到「如何用多个 Agent 组织一家公司」，丰富了 Stage 7-9 的工程实践层次；GitHub README 抓取成功，获取了足够多的技术细节；Paperclip 与 OpenClaw 的直接关联（Adapter 支持）是本仓库的独特视角
 - 需改进：MCP Dev Summit NA 2026（4/2-3，纽约）明日开始预热窗口，今日 Tavily 搜索显示 Session 议程已上线但尚无实际内容产出；下轮将重点追踪 Summit 现场 Session 产出；Microsoft Agent 365（5/1 GA）值得关注
 
+## 2026-04-01 15:14（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/concepts/mcp-threat-modeling-stride-dread-2026.md` 新增（~5800字，17/20）—— arXiv:2603.22489（Amin Milani Fard et al.，2026/03/23）：首个 MCP 客户端系统性威胁建模研究；STRIDE+DREAD 五组件分析；Tool Poisoning 最具影响力客户端漏洞；7 个主流 MCP 客户端评估（大多数静态验证不足）；多层级防御策略（静态元数据分析→决策路径追踪→行为异常检测→用户透明度）；填补客户端安全研究空白；属于 Stage 3（MCP）× Stage 12（Harness Engineering）
+- `digest/weekly/2026-W15.md` 更新——新增本轮条目 + MCP Dev Summit Day 1/2 实时追踪 + Articles 线索
+- `README.md` 更新——MCP 章节新增 MCP Threat Modeling 条目 + badge 时间戳更新至 15:14
+
+**Articles 产出**：1 篇（MCP Threat Modeling）
+
+**本轮反思**：
+- 做对了：精准识别 2603.22489 作为 MCP 客户端安全研究的里程碑（填补服务端→客户端的安全闭环）；STRIDE/DREAD 框架提供了完整的知识组织结构；Tool poisoning 作为核心概念的定位准确
+- 需改进：arxiv API 多次连接超时，建议下轮直接使用 web_fetch 获取摘要；MCP Dev Summit Day 1（4/2）距约 17 小时，下轮应为 Day 1 实时追踪
+
 <!-- INSERT_HISTORY_HERE -->
 ## 2026-04-01 09:14（北京时间）
 

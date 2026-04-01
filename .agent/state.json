@@ -1,8 +1,8 @@
 {
-  "lastRun": "2026-04-01T09:14:00+08:00",
+  "lastRun": "2026-04-01T15:14:00+08:00",
   "lastRunUnix": 1743494040,
-  "roundCount": 8,
-  "articlesThisSession": 2,
+  "roundCount": 9,
+  "articlesThisSession": 1,
   "frameworkWatch": {
     "microsoftAgentFramework": {
       "status": "rc",
@@ -36,16 +36,16 @@
     }
   },
   "contentStats": {
-    "articlesTotal": 52,
+    "articlesTotal": 53,
     "breakingNews": 19,
     "weeklyDigests": 4
   },
   "hotTopics": [
-    "mcp_dev_summit_na_2026_workshop_day",
-    "vacp_visual_analytics_context_protocol",
-    "mimosa_evolving_multi_agent_framework",
-    "cve_2026_33010_mcp_memory_csrf",
-    "mcp_security_cve_spree"
-  ],
-  "p0Current": "MCP Dev Summit NA 2026 (Workshop Day 4/1, Day 1 4/2, Day 2 4/3)"
+    "mcp_dev_summit_na_2026_day1_approx_17h",
+    "mcp_threat_modeling_stride_dread_2026",
+    "sep_1686_mcp_tasks_accepted",
+    "mcp_security_cve_spree",
+    "formal_semantics_agentic_tool_protocols_2603.24747"
+  },
+  "p0Current": "MCP Dev Summit NA 2026 Day 1 (~17h away, 4/2)"
 }
