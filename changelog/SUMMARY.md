@@ -100,6 +100,7 @@
 | [mcp-ecosystem-2026-state-of-the-standard.md](articles/deep-dives/mcp-ecosystem-2026-state-of-the-standard.md) | `mcp` `ecosystem` `standard` | 概念 |
 | [vacp-visual-analytics-context-protocol.md](articles/deep-dives/vacp-visual-analytics-context-protocol.md) | `mcp` `visual-analytics` `protocol` | 概念 |
 | [claude-code-architecture-deep-analysis.md](articles/deep-dives/claude-code-architecture-deep-analysis.md) | `claude` `architecture` `source-leak` | 研究 |
+| [vibe-researching-human-ai-collaboration-2604-00945.md](articles/deep-dives/vibe-researching-human-ai-collaboration-2604-00945.md) | `multi-agent` `human-AI-collaboration` `research` | 研究 |
 | [agents-of-chaos-paper.md](articles/deep-dives/agents-of-chaos-paper.md) | `security` `adversarial` | 研究 |
 
 ---
@@ -114,8 +115,8 @@
 | orchestration/ | 9 |
 | harness/ | 7 |
 | evaluation/ | 12 |
-| deep-dives/ | 5 |
-| **合计** | **60** |
+| deep-dives/ | 6 |
+| **合计** | **61** |
 
 ---
 

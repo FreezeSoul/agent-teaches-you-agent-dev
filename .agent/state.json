@@ -1,61 +1,60 @@
 {
-  "lastRun": "2026-04-02T21:14:00+08:00",
-  "lastRunUnix": 1743597240,
-  "roundCount": 13,
+  "lastRun": "2026-04-03T03:14:00+08:00",
+  "lastRunUnix": 1743612840,
+  "roundCount": 14,
   "articlesThisSession": 1,
   "frameworkWatch": {
     "microsoftAgentFramework": {
       "status": "rc",
       "gaExpected": "2026-05-01",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     },
     "microsoftSemanticKernel": {
       "status": "stable",
       "version": "python-1.41.1",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     },
     "langchainLanggraph": {
       "status": "stable",
       "version": "langchain-core-1.2.23",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     },
     "autogen": {
       "status": "migrating",
       "migrationTarget": "Microsoft Agent Framework",
       "version": "autogen-core-0.7.5",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     },
     "semanticKernel": {
       "status": "maintenance",
       "recommendation": "migrate_to_maf",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     },
     "crewai": {
       "status": "v1.12.2-stable",
       "latestStable": "v1.12.2",
       "preRelease": "v1.13.0a6",
-      "lastCheck": "2026-04-02",
+      "lastCheck": "2026-04-03",
       "notes": "v1.13.0a6 is pre-release, v1.12.2 confirmed as PyPI latest stable"
     },
     "defenseClaw": {
       "status": "v0.2.0",
       "gaExpected": "v1.0.0 pending",
-      "lastCheck": "2026-04-02"
+      "lastCheck": "2026-04-03"
     }
   },
   "contentStats": {
-    "articlesTotal": 60,
+    "articlesTotal": 61,
     "breakingNews": 20,
     "weeklyDigests": 0
   },
   "hotTopics": [
-    "mcp_dev_summit_na_2026_day2_live_2026-04-02",
+    "mcp_dev_summit_na_2026_day2_replay_available_youtube",
     "mcp_dev_summit_na_2026_day1_replay_available",
-    "agent_q_mix_2604_00344_rl_topology_selection",
-    "mcp_python_sdk_v2_roadmap_max_isbey",
-    "mcp_x_mcp_openai_nick_cooper_keynote_2026-04-03",
-    "xaA_id_jag_mcp_sso_for_agents",
-    "vibe_researching_2604_00945"
+    "vibe_researching_2604_00945_article_published",
+    "humanx_conference_2026-04-06_san_francisco",
+    "mcp_security_cve_2026_4198_auto_commit_rce",
+    "mcp_python_sdk_v2_roadmap_max_isbey"
   ],
-  "p0Current": "MCP Dev Summit Day 1 replay analysis + Day 2 (4/2) live; Vibe Researching (2604.00945) next Articles priority"
+  "p0Current": "MCP Dev Summit Day 2 replay analysis; HumanX conference (4/6-9) monitoring; arxiv 2603.29755 CausalPulse pending"
 }
