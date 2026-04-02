@@ -1,7 +1,7 @@
 {
-  "lastRun": "2026-04-02T03:14:00+08:00",
-  "lastRunUnix": 1743538440,
-  "roundCount": 11,
+  "lastRun": "2026-04-02T09:14:00+08:00",
+  "lastRunUnix": 1743561240,
+  "roundCount": 12,
   "articlesThisSession": 1,
   "frameworkWatch": {
     "microsoftAgentFramework": {
@@ -17,8 +17,7 @@
     "langchainLanggraph": {
       "status": "stable",
       "version": "langchain-core-1.2.23",
-      "lastCheck": "2026-04-02",
-      "notes": "CVE-2026-4539 fix, init speed +15%, async todolist"
+      "lastCheck": "2026-04-02"
     },
     "autogen": {
       "status": "migrating",
@@ -32,10 +31,10 @@
       "lastCheck": "2026-04-02"
     },
     "crewai": {
-      "status": "v1.13.0a5",
+      "status": "v1.13.0a6",
       "latestStable": "v1.12.2",
       "lastCheck": "2026-04-02",
-      "notes": "v1.13 URL needs verification, Qdrant Edge, AMP token events, GPT-5.x stop fix"
+      "notes": "Lazy Event Bus reduces overhead, GPT-5.x stop param fix, token usage in LLMCallCompletedEvent; repo confirmed crewaiinc/crewai"
     },
     "defenseClaw": {
       "status": "v0.2.0",
@@ -44,16 +43,16 @@
     }
   },
   "contentStats": {
-    "articlesTotal": 55,
+    "articlesTotal": 56,
     "breakingNews": 20,
     "weeklyDigests": 4
   },
   "hotTopics": [
-    "mcp_30_cves_security_crisis_2026",
-    "cve_2026_27896_go_sdk_case_sensitivity_bypass",
-    "mcp_dev_summit_na_2026_day1_replay_available",
-    "mcp_dev_summit_na_2026_day2_4_3",
-    "ai_agent_frameworks_three_category_taxonomy_zeroclaw"
+    "mcp_dev_summit_na_2026_day2_live_2026-04-02",
+    "mcp_dev_summit_na_2026_day1_replay",
+    "semantic_router_dsl_2603_27299_openclaw_emitter",
+    "crewai_v1_13_0a6_lazy_event_bus",
+    "cve_2026_2256_modelscope_ms_agent_rce"
   ],
-  "p0Current": "MCP Dev Summit Day 1 replay analysis (YouTube available) + Day 2 (4/3 OpenAI MCP x MCP)"
+  "p0Current": "MCP Dev Summit Day 1 replay analysis + Day 2 (4/2) OpenAI MCP x MCP keynote"
 }

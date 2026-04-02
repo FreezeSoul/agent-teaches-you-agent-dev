@@ -6,6 +6,28 @@
 
 ## 更新记录
 
+### 2026-04-01 · v1.13.0a6 ⭐（最新预发布）
+
+**来源**：[GitHub Release v1.13.0a6](https://github.com/crewaiinc/crewai/releases/tag/v1.13.0a6) | 仓库名已确认为 `crewaiinc/crewai`（非 crewAIInc/crewAI）
+
+| 变更类型 | 变更内容 |
+|---------|---------|
+| **性能** | **Lazy Event Bus**：实现惰性事件总线，禁用 tracing 时跳过跟踪，显著降低框架开销 |
+| **文档** | RBAC 权限级别修复（与实际 UI 选项对齐）|
+| **贡献者** | @alex-clawd、@joaomdmoura、@lucasgomide |
+
+**值得关注的 v1.13.0 演进线索**（从 a3 ~ a6 累积）：
+- **GPT-5.x stop 参数处理**：修复 GPT-5.x 模型不支持 `stop` API 参数的问题（v1.13.0a3）
+- **Token Usage 事件化**：`LLMCallCompletedEvent` 新增 token 使用量数据（v1.13.0a3）
+- **Flow → Pydantic BaseModel**：将 Flow 转换为 Pydantic BaseModel（v1.13.0a3，结构性变更）
+- **SSO 配置指南**：新增完整 SSO 配置指南（v1.13.0a3）
+- **Agent Capabilities 文档**：新增 Agent Capabilities 概述和改进 Skills 文档（v1.13.0a3）
+
+**为什么重要**：
+- Lazy Event Bus 是性能优化方向——CrewAI 在 v1.13 中开始关注框架自身开销，而非仅增加功能
+- GPT-5.x stop 参数修复表明主流框架正在适应 GPT-5 的 API 差异
+- Flow → Pydantic 转换是CrewAI 内部架构升级，可能影响自定义 Flow 的编写方式
+
 ### 2026-04-01（v1.13.0a5）
 
 **2026-03-31 · v1.13.0a3** ⭐

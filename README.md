@@ -173,6 +173,7 @@ flowchart TB
 | [AIP: IBCT 令牌解决 MCP/A2A 身份验证缺失](articles/research/aip-agent-identity-protocol-ibct.md) | 扫描 2000 MCP 服务器全部无认证：IBCT 令牌链解决方案，0.086% 延迟开销 |
 | [VACP: Visual Analytics Context Protocol](articles/concepts/vacp-visual-analytics-context-protocol.md) | MCP 扩展到可视化分析：显式暴露 VA 应用状态+交互+执行层，token/延迟双降 |
 | [形式化语义验证：MCP 与 SGD 的 π-calculus 深度解析](articles/concepts/formal-semantics-agentic-tool-protocols-2603-24747.md) | 首个 π-calculus 形式化证明：SGD≃MCP 但 MCP⁻¹ 有损，MCP+ 五原则扩展达到完全双射 |
+| [Semantic Router DSL：政策编译横跨 MCP/LangGraph/OpenClaw](articles/research/semantic-router-dsl-2603-27299.md) | .sr 源文件一次编译，生成 MCP Gate + LangGraph 节点 + OpenClaw 网关策略 + K8s 制品，全部经 π-calculus 验证 |
 | [MCP 威胁建模：STRIDE/DREAD 框架系统性安全分析](articles/concepts/mcp-threat-modeling-stride-dread-2026.md) | 首个 MCP 客户端系统性威胁建模：STRIDE/DREAD 五组件覆盖，tool poisoning 最严峻，四层防御策略 |
 | [⚡ MCP 安全危机：30+ CVEs 加速失速](digest/breaking/2026-04-02-mcp-30-cves-security-crisis.md) | Go SDK CVE-2026-27896 + 36% 服务器零认证 + McpFirewall 三层防御方案 |
 
@@ -244,6 +245,7 @@ flowchart TB
 | [Cisco A2A Scanner: 五引擎保障 Agent 间通信安全](articles/community/cisco-a2a-scanner-five-detection-engines.md) | 5 检测引擎（签名/规范/行为/运行时/LLM）保障 A2A 通信：Agent Card 伪造/提示注入/权限跨越/DoS |
 | [AI Agent Protocol Ecosystem Map 2026](articles/community/ai-agent-protocol-ecosystem-map-2026.md) | MCP(97M下载)/A2A(50+伙伴)/ACP/UCP 四层协议栈：工具调用垂直集成 ↔ 智能体协作水平扩展 ↔ 商业交易语义 |
 | [Microsoft Agent Framework: Interview Coach](articles/engineering/microsoft-agent-framework-interview-coach.md) | Semantic Kernel + AutoGen 合并的 Interview Coach 生产实践（Handoff + MCP + Aspire）|
+| [Semantic Router DSL：政策编译横跨 OpenClaw/LangGraph/MCP](articles/research/semantic-router-dsl-2603-27299.md) | .sr DSL 一次编译生成 LangGraph 决策节点 + OpenClaw 网关策略 + MCP/A2A Gate，阈值变更自动同步全部目标 |
 
 **框架专区**：[LangChain](frameworks/langchain/) · [LangGraph](frameworks/langgraph/) · [CrewAI](frameworks/crewai/) · [AutoGen](frameworks/autogen/) · [Microsoft Agent Framework](frameworks/microsoft-agent-framework/) · [DefenseClaw](frameworks/defenseclaw/) · [Paperclip](frameworks/paperclip/)
 
