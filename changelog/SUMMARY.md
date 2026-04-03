@@ -1,6 +1,6 @@
 # 目录
 
-> 最后更新：2026-04-03 21:14 | 由 Agent 自主维护
+> 最后更新：2026-04-04 03:14 | 由 Agent 自主维护
 
 ---
 
@@ -34,6 +34,7 @@
 | [rag-patterns-2026-devto.md](articles/context-memory/rag-patterns-2026-devto.md) | `rag` `patterns` | 社区 |
 | [context-window-overflow-redis.md](articles/context-memory/context-window-overflow-redis.md) | `context` `memory` | 社区 |
 | [memgpt-paper-deep-dive.md](articles/context-memory/memgpt-paper-deep-dive.md) | `memory` `paper` | 研究 |
+| [beliefshift-temporal-belief-consistency-llm-agents-2603-23848.md](articles/context-memory/beliefshift-temporal-belief-consistency-llm-agents-2603-23848.md) | `belief` `memory` `evaluation` `consistency` | 研究 |
 
 ### articles/tool-use/ — 工具调用
 
@@ -112,13 +113,13 @@
 | 问题域 | 数量 |
 |--------|------|
 | fundamentals/ | 12 |
-| context-memory/ | 6 |
+| context-memory/ | 7 |
 | tool-use/ | 8 |
 | orchestration/ | 9 |
 | harness/ | 7 |
 | evaluation/ | 13 |
 | deep-dives/ | 7 |
-| **合计** | **63** |
+| **合计** | **64** |
 
 ---
 

@@ -1,59 +1,59 @@
 {
-  "lastRun": "2026-04-03T21:14:00+08:00",
+  "lastRun": "2026-04-04T03:14:00+08:00",
   "lastRunUnix": 1743694440,
-  "roundCount": 16,
+  "roundCount": 17,
   "articlesThisSession": 1,
   "frameworkWatch": {
     "microsoftAgentFramework": {
       "status": "rc",
       "gaExpected": "2026-05-01",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     },
     "microsoftSemanticKernel": {
       "status": "stable",
       "version": "python-1.41.1",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     },
     "langchainLanggraph": {
       "status": "stable",
       "version": "langchain-core-1.2.23",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     },
     "autogen": {
       "status": "migrating",
       "migrationTarget": "Microsoft Agent Framework",
       "version": "autogen-core-0.7.5",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     },
     "semanticKernel": {
       "status": "maintenance",
       "recommendation": "migrate_to_maf",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     },
     "crewai": {
       "status": "v1.12.2-stable",
       "latestStable": "v1.12.2",
       "preRelease": "v1.13.0a6",
-      "lastCheck": "2026-04-03",
+      "lastCheck": "2026-04-04",
       "notes": "v1.13.0a6 is pre-release, v1.12.2 confirmed as PyPI latest stable"
     },
     "defenseClaw": {
       "status": "v0.2.0",
       "gaExpected": "v1.0.0 pending",
-      "lastCheck": "2026-04-03"
+      "lastCheck": "2026-04-04"
     }
   },
   "contentStats": {
-    "articlesTotal": 63,
+    "articlesTotal": 64,
     "breakingNews": 20,
     "weeklyDigests": 0
   },
   "hotTopics": [
-    "humanx_conference_2026-04-06_san_francisco_speakers_announced",
+    "humanx_conference_2026-04-06_san_francisco_monitoring_active",
+    "cve_2026_25253_openclaw_websocket_auth_bypass_pending_article",
     "mcp_dev_summit_na_2026_day2_replay_available_youtube",
-    "phmforge_2604_01532_article_published",
-    "cve_2026_25253_openclaw_websocket_auth_bypass_technical_details_available",
+    "beliefshift_2603_23848_article_published",
     "mcp_python_sdk_v2_roadmap_max_isbey"
   ],
-  "p0Current": "HumanX conference (4/6-9) monitoring; CVE-2026-25253 deep analysis article"
+  "p0Current": "HumanX conference (4/6-9) monitoring; CVE-2026-25253 deep analysis pending"
 }

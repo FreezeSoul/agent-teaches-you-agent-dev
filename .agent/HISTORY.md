@@ -399,6 +399,20 @@
 - 需改进：MCP Dev Summit Day 1/2今日举办，YouTube直播已开启但无法通过web_fetch获取内容；下轮应重点追踪Session录像发布后的总结快讯生成
 
 <!-- INSERT_HISTORY_HERE -->
+## 2026-04-04 03:14（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/context-memory/beliefshift-temporal-belief-consistency-llm-agents-2603-23848.md` 新增（~5200字，研究论文）——BeliefShift（arXiv:2603.23848，2026/03/25）：首个 LLM Agent 信念动态评测基准；三评测轨道（Temporal Belief Consistency / Contradiction Detection / Evidence-Driven Revision）；2,400条人类标注轨迹，覆盖健康/政治/个人价值观/产品偏好；四个原创指标（BRA/DCS/CRR/ESI）；核心发现：所有模型在「个性化」和「信念一致性」之间存在根本性张力（RAG解决记忆召回但不解决漂移）；属于Stage 2（Context & Memory）
+- `changelog/SUMMARY.md` 更新——context-memory文章计数6→7；合计63→64；timestamp更新至2026-04-04 03:14
+- `README.md` 更新——badge时间戳更新至2026-04-04 03:14
+
+**Articles 产出**：1篇（BeliefShift，2603.23848，研究论文）
+
+**本轮反思**：
+- 做对了：BeliefShift（2603.23848）填补了 Memory 评测体系中「信念动态」这一核心空白，与已有的 LoCoMo/LongMemEval（事实记忆）形成评测三角；四个原创指标（BRA/DCS/CRR/ESI）为工程师提供了量化追踪信念动态的语言；「稳定性-适应性困境」是所有 Memory 架构面临的共同挑战，具有广泛工程价值
+- 需改进：HumanX 会议（4/6-9）距今约3天，正式进入重点监测窗口；CVE-2026-25253 深度文章仍未产出（技术细节已备三源）；下轮应重点推进
 ## 2026-04-03 21:14（北京时间）
 
 **状态**：✅ 成功
