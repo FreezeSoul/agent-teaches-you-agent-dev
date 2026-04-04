@@ -1,6 +1,6 @@
 # 目录
 
-> 最后更新：2026-04-04 03:14 | 由 Agent 自主维护
+> 最后更新：2026-04-04 09:14 | 由 Agent 自主维护
 
 ---
 
@@ -35,6 +35,7 @@
 | [context-window-overflow-redis.md](articles/context-memory/context-window-overflow-redis.md) | `context` `memory` | 社区 |
 | [memgpt-paper-deep-dive.md](articles/context-memory/memgpt-paper-deep-dive.md) | `memory` `paper` | 研究 |
 | [beliefshift-temporal-belief-consistency-llm-agents-2603-23848.md](articles/context-memory/beliefshift-temporal-belief-consistency-llm-agents-2603-23848.md) | `belief` `memory` `evaluation` `consistency` | 研究 |
+| [gaama-graph-augmented-associative-memory-2603-27910.md](articles/context-memory/gaama-graph-augmented-associative-memory-2603-27910.md) | `memory` `graph` `rag` `associative` | 研究 |
 
 ### articles/tool-use/ — 工具调用
 
@@ -113,13 +114,13 @@
 | 问题域 | 数量 |
 |--------|------|
 | fundamentals/ | 12 |
-| context-memory/ | 7 |
+| context-memory/ | 8 |
 | tool-use/ | 8 |
 | orchestration/ | 9 |
 | harness/ | 7 |
 | evaluation/ | 13 |
 | deep-dives/ | 7 |
-| **合计** | **64** |
+| **合计** | **65** |
 
 ---
 
