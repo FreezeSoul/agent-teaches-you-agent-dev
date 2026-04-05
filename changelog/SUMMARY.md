@@ -50,6 +50,8 @@
 | [tip-tree-structured-injection-mcp-2026.md](articles/tool-use/tip-tree-structured-injection-mcp-2026.md) | `security` `injection` `mcp` | 研究 |
 | [cli-vs-mcp-context-efficiency.md](articles/tool-use/cli-vs-mcp-context-efficiency.md) | `cli` `mcp` `efficiency` | 工程 |
 | [mcp-threat-modeling-stride-dread-2026.md](articles/tool-use/mcp-threat-modeling-stride-dread-2026.md) | `mcp` `security` `threat-modeling` | 概念 |
+| [gpa-gui-process-automation-2604-01676.md](articles/tool-use/gpa-gui-process-automation-2604-01676.md) | `gui` `rpa` `mcp` `vision` `smc` | 研究 |
+| [terminal-agents-enterprise-automation-2604-00073.md](articles/tool-use/terminal-agents-enterprise-automation-2604-00073.md) | `cli` `mcp` `enterprise` `automation` `servicenow` | 研究 |
 
 ### articles/orchestration/ — 多Agent编排
 
@@ -119,12 +121,12 @@
 |--------|------|
 | fundamentals/ | 12 |
 | context-memory/ | 9 |
-| tool-use/ | 8 |
+| tool-use/ | 10 |
 | orchestration/ | 11 |
 | harness/ | 8 |
 | evaluation/ | 13 |
 | deep-dives/ | 7 |
-| **合计** | **69** |
+| **合计** | **71** |
 
 ---
 
