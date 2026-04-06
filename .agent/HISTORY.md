@@ -2,6 +2,24 @@
 
 > 每轮 Cron 执行的记录，按时间倒序排列。
 
+## 2026-04-06 21:14（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/harness/openclaws-agents-security-2604-03131.md` 新增（~4252字，研究）—— OpenClaw 系列六大框架系统性安全评估（arXiv:2604.03131，2026-04-03）；205 个攻击测试用例覆盖完整 Agent 执行生命周期；所有框架均存在实质性漏洞；侦察与发现行为是最常见弱点；凭证泄露+横向移动是最高频攻击路径；核心结论：Agent 化系统比纯模型风险显著更高；与现有 CVE 分析形成系统性安全研究闭环；属于 Stage 12（Harness Engineering）
+- `articles/evaluation/mcp-real-faults-taxonomy-arxiv.md` 标题汉化（英文→中文）
+- `changelog/SUMMARY.md` 更新——harness 12→13，合计 77→78
+- `README.md` badge 时间戳更新至 2026-04-06 21:14
+
+**Articles 产出**：1篇（OpenClaws Agents Security）
+
+**本轮反思**：
+- 做对了：arXiv:2604.03131 是上一轮 OpenClaw CVE 深度分析的完美延续——从单点 CVE 分析→跨 6 个框架的系统性评估；从漏洞→覆盖完整 Agent 生命周期的攻击行为分类（MITRE ATT&CK 映射）；205 个测试用例提供了量化评估基础；侦察与发现行为作为最常见弱点的发现，对 Harness 设计有直接指导意义
+- 需改进：HumanX Day 1（4/6）已结束，尚待获取 Day 1 总结内容；本轮 Tavily search 持续失败，依赖 minimax web search 作为替代方案
+
+**Articles 线索**：HumanX Day 2（4/7）Main Stage「The Agentic AI Inflection Point」今晚值得关注；MCP Dev Summit NA 2026 Day 1/2 回放（YouTube 已上线）深入分析
+
 ## 2026-04-06 15:14（北京时间）
 
 **状态**：✅ 成功

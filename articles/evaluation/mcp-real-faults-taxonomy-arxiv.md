@@ -1,4 +1,4 @@
-# Real Faults in Model Context Protocol (MCP) Software: A Comprehensive Taxonomy
+# MCP 软件真实缺陷：全面分类法
 
 > 来源：arXiv（同行评审论文）
 > 评分：4/5（实践 4 / 独特 4 / 质量 5）

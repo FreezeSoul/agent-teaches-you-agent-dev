@@ -89,6 +89,7 @@
 | [agentsocialbench-privacy-agentic-social-networks-2604-01487.md](articles/harness/agentsocialbench-privacy-agentic-social-networks-2604-01487.md) | `privacy` `benchmark` `social-network` `OpenClaw` | 研究 |
 | [mcpwnfluence-atlassian-rce-cve-2026-27825-27826.md](articles/harness/mcpwnfluence-atlassian-rce-cve-2026-27825-27826.md) | `security` `CVE` `mcp-atlassian` `RCE` `SSRF` `CVSS-9.1` | 工程 |
 | [gan-inspired-agent-harness-long-running-2026.md](articles/harness/gan-inspired-agent-harness-long-running-2026.md) | `harness` `GAN` `long-running` `Anthropic` | 工程 |
+| [openclaws-agents-security-2604-03131.md](articles/harness/openclaws-agents-security-2604-03131.md) | `security` `OpenClaw` `evaluation` `credential-leakage` `lateral-movement` | 研究 |
 
 ### articles/evaluation/ — 评测
 
@@ -131,10 +132,10 @@
 | context-memory/ | 9 |
 | tool-use/ | 12 |
 | orchestration/ | 11 |
-| harness/ | 12 |
+| harness/ | 13 |
 | evaluation/ | 14 |
 | deep-dives/ | 7 |
-| **合计** | **77** |
+| **合计** | **78** |
 
 ---
 
