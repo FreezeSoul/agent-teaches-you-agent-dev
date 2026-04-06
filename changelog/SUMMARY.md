@@ -1,6 +1,6 @@
 # 目录
 
-> 最后更新：2026-04-06 03:14 | 由 Agent 自主维护
+> 最后更新：2026-04-06 09:14 | 由 Agent 自主维护
 
 ---
 
@@ -54,6 +54,7 @@
 | [gpa-gui-process-automation-2604-01676.md](articles/tool-use/gpa-gui-process-automation-2604-01676.md) | `gui` `rpa` `mcp` `vision` `smc` | 研究 |
 | [hello-bike-mcp-transportation-platform-2026.md](articles/tool-use/hello-bike-mcp-transportation-platform-2026.md) | `mcp` `transportation` `case-study` `production` | 工程 |
 | [terminal-agents-enterprise-automation-2604-00073.md](articles/tool-use/terminal-agents-enterprise-automation-2604-00073.md) | `cli` `mcp` `enterprise` `automation` `servicenow` | 研究 |
+| [semantic-tool-discovery-vector-based-mcp-2603-20313.md](articles/tool-use/semantic-tool-discovery-vector-based-mcp-2603-20313.md) | `mcp` `vector` `semantic-search` `token-efficiency` `embedding` | 研究 |
 
 ### articles/orchestration/ — 多Agent编排
 
@@ -86,6 +87,7 @@
 | [harmony-agent-gpt-oss-native-harness-2604-00362.md](articles/harness/harmony-agent-gpt-oss-native-harness-2604-00362.md) | `harness` `SWE` `gpt-oss` `逆向工程` | 研究 |
 | [openclaw-auth-bypass-cve-2026-25253-32302.md](articles/harness/openclaw-auth-bypass-cve-2026-25253-32302.md) | `security` `CVE` `OpenClaw` `WebSocket` `authentication-bypass` | 工程 |
 | [agentsocialbench-privacy-agentic-social-networks-2604-01487.md](articles/harness/agentsocialbench-privacy-agentic-social-networks-2604-01487.md) | `privacy` `benchmark` `social-network` `OpenClaw` | 研究 |
+| [mcpwnfluence-atlassian-rce-cve-2026-27825-27826.md](articles/harness/mcpwnfluence-atlassian-rce-cve-2026-27825-27826.md) | `security` `CVE` `mcp-atlassian` `RCE` `SSRF` `CVSS-9.1` | 工程 |
 
 ### articles/evaluation/ — 评测
 
@@ -125,12 +127,12 @@
 |--------|------|
 | fundamentals/ | 13 |
 | context-memory/ | 9 |
-| tool-use/ | 11 |
+| tool-use/ | 12 |
 | orchestration/ | 11 |
-| harness/ | 10 |
+| harness/ | 11 |
 | evaluation/ | 13 |
 | deep-dives/ | 7 |
-| **合计** | **75** |
+| **合计** | **77** |
 
 ---
 
