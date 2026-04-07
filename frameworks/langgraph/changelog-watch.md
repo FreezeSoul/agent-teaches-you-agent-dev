@@ -6,6 +6,13 @@
 
 ## 更新记录
 
+### 2026-04
+
+**langchain-core 1.2.26（2026-04-03）**：
+- Patch release，主要为依赖更新（requests 2.32.5→2.33.0）和 model-profiles 数据刷新
+- ollama partner 版本 1.1.0，支持 `reasoning_content` 回传
+- 无 breaking changes
+
 ### 2026-03
 
 **新特性**：
