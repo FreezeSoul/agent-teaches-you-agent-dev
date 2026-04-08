@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 工程知识体系**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--04--08%2004%3A03-brightgreen?style=flat-square)](#)
+[![Last Updated](https://img.shields.io/badge/updated-2026--04--08%2022%3A03-brightgreen?style=flat-square)](#)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -64,7 +64,7 @@
 | **orchestration/** | 多个 Agent 如何协作？ | A2A/MCP/A2UI 协议栈、CABP、多 Agent 框架 |
 | **harness/** | 如何让 Agent 可靠、安全地工作？ | Harness Engineering、OWASP Top 10、NVIDIA 红队 |
 | **evaluation/** | 如何评测 Agent 的能力？ | GAIA/OSWorld、Agent Autonomy 测量、MCP 故障分类 |
-| **deep-dives/** | 单点深度分析 | Claude Code 源码泄露分析、MCP 生态、Deep Agent 范式 |
+| **deep-dives/** | 单点深度分析 | Claude Code 源码泄露分析、MCP 生态、Deep Agent 范式、**物理 AI Agent 万物网架构（2026-03）** |
 
 ---
 

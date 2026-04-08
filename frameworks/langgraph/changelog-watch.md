@@ -8,6 +8,19 @@
 
 ### 2026-04
 
+**langgraph 1.1.6（2026-04-07）**：
+- Patch release，`fix: execution info patching (#7406)`
+- `feat(sdk-py): add langsmith_tracing param to runs.create/stream/wait (#7431)`
+- SDK 层面 LangSmith tracing 支持强化
+
+**langgraph 1.1.5（2026-04-03）**：
+- Patch release，`feat: enhance runtime w/ more...`（runtime 增强）
+- CLI 层面 `validate command (#7438)`、`remote build support for langgraph deploy (#7234)`
+
+**langgraph "vigilant mode"（2026-04-07 announced）**：
+- 官方发布公告，增强生产工作流的监控与错误处理能力
+- 具体技术细节待进一步追踪
+
 **langchain-core 1.2.27（2026-04-07）**：
 - Patch release，修复 `deprecated prompt save path` 中的符号链接解析漏洞（安全修复）
 - Credit: Jeff Ponte (@JDP-Security) 报告
@@ -17,6 +30,13 @@
 - Patch release，主要为依赖更新（requests 2.32.5→2.33.0）和 model-profiles 数据刷新
 - ollama partner 版本 1.1.0，支持 `reasoning_content` 回传
 - 无 breaking changes
+
+### ⚠️ 安全：LangChain/LangGraph 漏洞（2026-03，漏登补录）
+
+**LangChain/LangGraph 多个漏洞（The Hacker News，2026-03）**：
+- 文件/密钥/数据库暴露类漏洞
+- 具体 CVE 待追踪
+- 来源：[The Hacker News - LangChain, LangGraph Flaws](https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html)
 
 ### 2026-03
 
