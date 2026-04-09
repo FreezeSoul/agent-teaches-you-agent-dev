@@ -9,9 +9,10 @@
 ### 2026-04
 
 **langgraph 1.1.6（2026-04-07）**：
-- Patch release，`fix: execution info patching (#7406)`
-- `feat(sdk-py): add langsmith_tracing param to runs.create/stream/wait (#7431)`
-- SDK 层面 LangSmith tracing 支持强化
+- **正式 release**：`langgraph 1.1.6` + `sdk-py 0.3.12` 同步发布
+- `fix: execution info patching (#7406)`
+- `chore: validate reconnect url (#7434)`：SDK 层面新增 WebSocket reconnect URL 验证，提高生产环境连接稳定性
+- `feat(sdk-py): add langsmith_tracing param to runs.create/stream/wait (#7431)`：runs.create/stream/wait 新增 langsmith_tracing 参数，SDK 层面强化 LangSmith tracing 控制
 
 **langgraph cli 0.4.20（2026-04-08）**：
 - **新增 `langgraph deploy --validate` 命令（PR #7438）**：CLI 层面新增 validate 子命令，用于在部署前验证图结构配置是否合法，降低生产环境部署错误率
