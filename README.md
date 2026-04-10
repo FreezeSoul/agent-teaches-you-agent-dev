@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 工程知识体系**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--04--10%2010%3A03-brightgreen?style=flat-square)](#)
+[![Last Updated](https://img.shields.io/badge/updated-2026--04--10%2022%3A03-brightgreen?style=flat-square)](#)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
@@ -60,8 +60,8 @@
 |------|---------|---------|
 | **fundamentals/** | Agent 基础是什么？怎么工作的？ | Context Engineering、ReAct、Skills 综述 |
 | **context-memory/** | Agent 如何记住和理解？ | Memory 架构、MemGPT、Agentic RAG |
-| **tool-use/** | Agent 如何调用外部工具？ | MCP 协议、Tool Use 演进、形式化语义、**MCP × MCP 新范式（2026-04）**、工具标注风险评估（2026-03）** |
-| **orchestration/** | 多个 Agent 如何协作？ | **A2A Protocol v1.0 生产级解析（2026-04）**、A2A/MCP/A2UI 协议栈、CABP、四维自适应整合（2026-04） |
+| **tool-use/** | Agent 如何调用外部工具？ | MCP 协议、Tool Use 演进、形式化语义、**MCP × MCP 新范式（2026-04）**、**CVE-2026-34237 MCP Java SDK CORS 漏洞（2026-04）**、工具标注风险评估（2026-03）** |
+| **orchestration/** | 多个 Agent 如何协作？ | **A2A Protocol v1.0 生产级解析（2026-04）**、**AgentDM MCP-A2A 协议桥接（2026-04）**、A2A/MCP/A2UI 协议栈、CABP、四维自适应整合（2026-04） |
 | **harness/** | 如何让 Agent 可靠、安全地工作？ | Harness Engineering、OWASP Top 10、NVIDIA 红队 |
 | **evaluation/** | 如何评测 Agent 的能力？ | GAIA/OSWorld、Agent Autonomy 测量、MCP 故障分类 |
 | **deep-dives/** | 单点深度分析 | Claude Code 源码泄露分析、MCP 生态、Deep Agent 范式、**物理 AI Agent 万物网架构（2026-03）**、**Anthropic Managed Agents Brain/Hands/Session（2026-04）** |
