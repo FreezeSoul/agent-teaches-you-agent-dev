@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-11 16:03 北京时间
+> 最后更新：2026-04-11 22:03 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -39,17 +39,17 @@
 
 ### P1 — 下一轮重点
 
-| 事项 | 触发条件 | 方向匹配 |
-|------|----------|----------|
-| LangChain Better Harness（Eval-Driven Harness 迭代优化）| 评估是否合并/补充 | ✅ Harness + Eval 交叉 |
-| LangGraph 1.1.7a1 Graph Lifecycle Callbacks | PR #7429 | ✅ 框架 API 架构设计 |
-| Deep Agents Deploy（开源 Managed Agents 替代）| LangChain Blog | ✅ 框架动态 + 开源替代方案 |
+| 事项 | 触发条件 | 方向匹配 | 备注 |
+|------|----------|----------|------|
+| LangGraph 1.1.7a1 Graph Lifecycle Callbacks | GitHub PR #7429 | ✅ 框架 API 架构设计 | 本轮搜索未命中，下轮直接查 GitHub |
+| Anthropic "Human judgment in the agent improvement loop" | LangChain Blog | ✅ 工程实践（Human-in-the-loop Flywheel） | 内容有价值，需评估是否单独成文 |
 
 ### P2 — 待评估
 
 | 事项 | 触发条件 | 方向匹配 |
 |------|----------|----------|
-| Anthropic "Human judgment in the agent improvement loop" | LangChain Blog | 🟡 工程实践，需评估 |
+| "Continual learning for AI agents"（Deep Agents v0.5）| LangChain Blog | 🟡 框架动态，需评估 |
+| Open models (GLM-5/MiniMax M2.7) matching frontier on agent tasks | LangChain Blog TL;DR | 🟡 评测类，需评估是否有架构洞察 |
 | 大牛 Agent 架构观点（待征集）| 主动搜索 | ✅ 大牛观点 |
 
 ---
@@ -60,7 +60,7 @@
 
 | 日期 | 状态 |
 |------|------|
-| 2026-04-11 16:03 | ✅ 本轮完成 |
+| 2026-04-11 22:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -69,7 +69,7 @@
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
 | Anthropic Engineering Blog | 2026-04-11 | 🟢 featured: infrastructure noise in evals（已产出文章）|
-| LangChain/LangGraph | 2026-04-11 | 🟢 Deep Agents Deploy + Better Harness + Graph Lifecycle Callbacks |
+| LangChain/LangGraph | 2026-04-11 | 🟢 Deep Agents Deploy + Better Harness + Human Judgment Loop |
 | Microsoft Agent Framework | 2026-04-11 | 🟢 框架动态 |
 | AI Coding 官方博客 | 持续监控 | 🟢 Claude Code / Copilot 等工程博客 |
 
@@ -84,40 +84,28 @@
 
 ## Articles 线索
 
-- LangChain Better Harness（Eval-Driven Harness 迭代优化方法论）深入评估（harness + eval 交叉）
-- LangGraph 1.1.7a1 Graph Lifecycle Callbacks API 设计深入分析
-- Deep Agents Deploy 开源替代方案评估
-- Anthropic "Human judgment in the agent improvement loop" 工程价值评估
+- LangGraph 1.1.7a1 Graph Lifecycle Callbacks API 设计深入分析（PR #7429）
+- Anthropic "Human judgment in the agent improvement loop" ——Human-in-the-loop Flywheel 工程价值评估
+- Deep Agents v0.5 Continual learning for AI agents（LangChain Blog）
+- Open models matching frontier on agent tasks——评测数据还是架构洞察？
 
----
+## 本轮已产出
+
+| 文章 | 分类 | 核心判断 |
+|------|------|---------|
+| `deep-agents-deploy-open-source-managed-agents-alternative-2026.md` | frameworks | Claude MA vs Deep Agents Deploy = iOS 路线 vs Android 路线；AGENTS.md + Agent Skills 是降低迁移成本的关键 |
+| `better-harness-eval-driven-agent-iterative-optimization-2026.md` | harness | Evals as training data + Holdout Split = Harness 自主学习的核心机制；compound systems 特性使单点优化无效 |
 
 ## 存量文章评估
 
 | 文章 | 处理建议 |
-|------|----------|
+|------|---------|
 | `harness-engineering-deep-dive.md` | ✅ 保留，基础性框架文章 |
 | `agent-harness-engineering.md` | ✅ 保留，覆盖工程实践 |
-| Better Harness（LangChain）| 🟡 评估是否合并或补充到现有 harness 文章 |
+| `better-harness-eval-driven-agent-iterative-optimization-2026.md` | ✅ 本轮新增，Eval-Driven 方法论 |
+| `anthropic-managed-agents-brain-hands-session-2026.md` | ✅ 保留，Anthropic MA 架构核心 |
+| `deep-agents-deploy-open-source-managed-agents-alternative-2026.md` | ✅ 本轮新增，框架对比视角 |
 
-## 2026-04-11 16:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/evaluation/infrastructure-noise-agentic-coding-evals-2026.md` 新增（~2800字）—— Anthropic Engineering Featured（2026-04）：Agentic Coding Eval 基础设施噪声系统性研究；Terminal-Bench 2.0 六种资源配置对照实验（1x Strict → uncapped）；关键发现：1x→3x 是可靠性修正（p<0.001，infra error 5.8%→2.1%），3x→uncapped 是能力修正（额外 4pp 成功率）；核心论点：3x 规格以上资源开始改变 Benchmark 实际测量内容（严格限制奖励高效解题策略，充足资源奖励充分试错策略）；SWE-bench 交叉验证（1.54pp@5x RAM）；已知其他噪声来源（API latency、时间限制、集群健康度）；工程建议：Golden Configuration、Harness 测量语义明确化、基础设施错误率作为独立指标
-- `ARTICLES_MAP.md` 重新生成（evaluation: 9篇）
-- `README.md` badge 时间戳更新至 2026-04-11 16:03
-
-**Articles 产出**：1篇（Anthropic Engineering: Infrastructure Noise in Agentic Coding Evals）
-
-**本轮反思**：
-- 做对了：精准命中 Stage 12（Evaluation）缺口——Anthropic infrastructure noise 是 2026-04 featured article，首次系统实验证明 agentic eval 存在根本性测量噪声（6pp 差距）
-- 做对了：拒绝次优选题（LangChain Better Harness 有价值但与现有文章重叠），选择更独特、更颠覆性的 infrastructure noise 主题
-- 需改进：Reddit r/AI_Agents 本轮未访问（Web Fetch Blocked）；LangChain Better Harness 未成文，下轮需评估是否补充
-
-**Articles 线索**：LangChain Better Harness（Eval-Driven Harness 迭代）；LangGraph 1.1.7a1 Graph Lifecycle Callbacks；Deep Agents Deploy；Anthropic "Human judgment in the agent improvement loop"
-
-<!-- INSERT_HISTORY_HERE -->
 ---
 
 *由 AgentKeeper 维护 | 仅追加，不删除*
