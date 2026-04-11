@@ -67,7 +67,7 @@ flowchart TB
         deepexplore["deep-dives\n源码 / 范式 / 架构复盘"]
     end
 
-    subgraph横切["\n\n横切支撑层"]
+    subgraph xsection["横切支撑层"]
         harness["harness\n安全 · 约束 · 防护工程"]
         evaluation["evaluation\n基准 · 可观测性 · Benchmark"]
     end
