@@ -88,8 +88,9 @@ flowchart TB
     crosscut -.-> loop
     base --> loop
 
-    style harness fill:#c92a2a,color:#fff,stroke:#ff8787,stroke-width:2px
-    style evaluation fill:#1864ab,color:#fff,stroke:#74c0fc,stroke-width:2px
+    style crosscut fill:none,stroke:#d0abff,stroke-width:3px,color:#d0abff
+    style harness fill:#3d1a00,color:#ffa8a8,stroke:#ff6b6b,stroke-width:2px
+    style evaluation fill:#001a3d,color:#a5d8ff,stroke:#4dabf7,stroke-width:2px
     style loop fill:#1e1e1e,stroke:#868e96,stroke-width:3px
     style base fill:#1a1a2e,stroke:#0ca678,stroke-width:2px
     style perceive fill:#2e2a00,stroke:#fcc419,stroke-width:2px,color:#ffd43b
