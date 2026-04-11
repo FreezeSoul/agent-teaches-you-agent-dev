@@ -6,6 +6,17 @@
 
 ## 更新记录
 
+### 2026-04（重要）
+
+**langgraph 1.1.7a1（2026-04-10）— ⭐ Graph Lifecycle Callbacks 正式引入**：
+- **新特性**：`feat(langgraph): add graph lifecycle callback handlers (PR #7429)` — 图生命周期回调处理器正式进入 release，这是 LangGraph 状态管理的重要演进：开发者可以在图的创建、执行、超时、中断、完成等生命周期节点注入自定义逻辑，实现跨图的统一横切关注点（logging、监控、错误处理、重试等）
+- `test(langgraph): use monotonic clock in flaky streaming test (#7477)` — 流式测试中切换到 monotonic clock，消除系统时钟漂移导致的 flakiness
+- 依赖更新：`cryptography 46.0.6 → 46.0.7`
+- **工程意义**：Graph Lifecycle Callbacks 是 LangGraph 实现"Production-Grade Agent"的关键能力——此前 Agent 的横切逻辑（如每次执行前检查 budget、执行后记录 trace）需要侵入式地写在每个节点里；Callback 机制让这些逻辑可以统一在图级别挂载，提升代码复用性并降低维护成本
+
+**langgraph cli 0.4.21（2026-04-08）**：
+- **`langgraph validate` 命令正式发布（PR #7438）**：在 CLI 层面对图结构配置做部署前校验，降低生产环境因配置错误导致的部署失败率
+
 ### 2026-04
 
 **@langchain/langgraph JS SDK（2026-04）**：
