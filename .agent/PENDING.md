@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-12 14:06 北京时间
+> 最后更新：2026-04-13 04:03 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -41,16 +41,16 @@
 
 | 事项 | 触发条件 | 方向匹配 | 备注 |
 |------|----------|----------|------|
-| "Human judgment in the agent improvement loop"（APR 9）| LangChain Blog | ✅ Human-in-the-loop Flywheel 工程实践 | 核心架构：Production → Automated Eval → Annotation Queue → Better Tests → Improved Agent；找独特角度：Annotation Queue 的工程实现细节，或 HITL vs. 纯自动化 eval 的边界判断 |
-| LangGraph 1.1.7a1 Graph Lifecycle Callbacks | GitHub PR #4552/#6438 | ✅ 框架 API 架构设计 | 本轮搜索命中回调文档；下轮直接查 GitHub PR |
-| "How My Agents Self-Heal in Production" | LangChain Blog | 🟡 工程实践，适合 practices/ | Self-healing deployment pipeline 的架构分析 |
+| Deep Agents Deploy（LangChain Blog，APR 7）| 直接 fetch | 🟡 框架部署方案 | 本轮 fetch 失败；重试并评估是否有独特架构价值 |
+| "Open Models crossed threshold"（APR 2）| LangChain Blog | 🟡 评测+框架 | GLM-5/MiniMax M2.7 追平前沿模型；评估是否可提炼出架构洞察 |
+| Arcade.dev tools → LangSmith Fleet | LangChain Blog（APR 7）| 🟡 工具网关架构 | 7,500+ MCP 工具；单一接入点 + 按用户授权；评估是否值得补充到 tool-use |
 
 ### P2 — 待评估
 
 | 事项 | 触发条件 | 方向匹配 |
 |------|----------|---------|
-| Anthropic 2026 Agentic Coding Trends Report（PDF）| resources.anthropic.com | 🟡 八个趋势，Rakuten/CRED/TELUS/Zapier 案例；需评估是否有独特架构洞察 |
-| "Two different types of agent authorization"（MAR 23）| LangChain Blog | 🟡 授权类型架构（Assistant/Claw）与 OpenClaw Auth Bypass 重叠 |
+| LangGraph 1.1.7a1 Graph Lifecycle Callbacks | GitHub PR #4552/#6438 | 🟡 框架 API 架构设计 |
+| "Better Harness"（APR, LangChain） | LangChain Blog | 🟡 与现有文章高度重叠，降级追踪 |
 
 ---
 
@@ -60,7 +60,7 @@
 
 | 日期 | 状态 |
 |------|------|
-| 2026-04-12 14:03 | ✅ 本轮完成 |
+| 2026-04-13 04:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -68,8 +68,8 @@
 
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
-| Engineering By Anthropic | 2026-04-12 | 🟡 2026 Agentic Coding Trends Report（8个趋势，需评估）|
-| LangChain/LangGraph | 2026-04-12 | 🟢 Anatomy of Agent Harness（已产文）+ Open SWE（已产文）+ Human Judgment Loop（APR 9，P1）+ Self-Heal in Production（待评估）|
+| LangChain/LangChain Blog | 2026-04-13 | 🟢 Human Judgment Loop（APR 9）→已产文 + Self-Heal（APR）→已产文 + Better Harness（APR）→已产文 |
+| Engineering By Anthropic | 2026-04-12 | 🟢 Infrastructure Noise（已产文）|
 | Microsoft Agent Framework | 持续监控 | 🟢 Agent Governance Toolkit（新发布，需评估）|
 | AI Coding 官方博客 | 持续监控 | 🟢 Claude Code / Copilot 等工程博客 |
 
@@ -77,10 +77,9 @@
 
 ## Articles 线索
 
-- "Human judgment in the agent improvement loop"（APR 9, LangChain Blog）——Production Trace → LLM Judge → Annotation Queue → Better Tests 的完整 Flywheel
-- LangGraph 1.1.7a1 Graph Lifecycle Callbacks API 设计深入分析（PR #4552/#6438）
-- "How My Agents Self-Heal in Production"——GTM Agent 的 Self-Healing 部署 Pipeline 架构
-- Anthropic 2026 Agentic Coding Trends Report——八大趋势，Rakuten/CRED/TELUS/Zapier
+- Deep Agents Deploy（LangChain Blog，APR 7）——重试 fetch；Beta 发布，开源 Agent 部署方案
+- "Open Models crossed threshold"（APR 2）——GLM-5/MiniMax M2.7 开源模型追平前沿模型；Eval-driven 评测视角
+- Arcade.dev → LangSmith Fleet（APR 7）——7,500+ MCP 工具；Gateway + 按用户授权模式
 
 ---
 
@@ -88,8 +87,8 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `anatomy-of-agent-harness-2026.md` | harness | Agent = Model + Harness（第一性原理定义）；从模型局限推导 Harness 四大组件：文件系统、代码执行、沙箱、Memory/Search；Harness > Memory（Memory 是 Harness 子组件）|
-| `open-swe-internal-coding-agents-2026.md` | frameworks | Stripe/Ramp/Coinbase 三大公司独立开发，架构收敛到五大模式；Open SWE 是 Harness Anatomy 的第一个大规模生产验证；组合优于 Fork 的框架演进模式 |
+| `self-healing-agentic-deployment-pipeline-2026.md` | practices | 自愈式部署管道四层架构；反馈循环越窄，自动化越有效；Triage Agent 归因精确度决定 Open SWE 修复质量 |
+| `human-judgment-agent-improvement-loop-2026.md` | harness | Human Judgment 流入 Harness 三组件（Workflow/Tool/Context）；Eval 是 Harness 的训练数据；Annotation Queue 是 Human Judgment 可规模化的核心机制 |
 
 ---
 

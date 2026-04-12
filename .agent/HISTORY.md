@@ -110,6 +110,25 @@
 **Articles 线索**：LangGraph vigilant mode 具体技术细节（彻底放弃）；MCP Dev Summit NA 2026 YouTube 回放深度分析（Nick Cooper Session 已有文章，覆盖 Stage 3/6/7）；HumanX Day 4 后续 Physical AI 动态监测
 
 
+## 2026-04-13 04:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/practices/self-healing-agentic-deployment-pipeline-2026.md` 新增（~4000字）—— LangChain Blog（2026）"How My Agents Self-Heal in Production"深度解析：自愈式部署管道完整架构（Docker Build 检测 + Poisson 回归测试 + Triage Agent 归因过滤 + Open SWE 自动修复）；Poisson 分布用于错误率回归检测（7天基线 vs 60分钟部署窗口）；Triage Agent 的文件分类 + 因果链验证防止 Open SWE 乱修；Fix-Forward vs Rollback 的决策框架；与 Ramp "部署前生成监控" 的对比；核心判断：反馈循环越窄，自动化越有效
+- `articles/harness/human-judgment-agent-improvement-loop-2026.md` 新增（~3500字）—— LangChain Blog（APR 9, 2026）"Human judgment in the agent improvement loop"深度解析；Workflow Design / Tool Design / Agent Context 三个 Harness 组件如何从 Human Judgment 中持续学习；LLM-as-Judge + Align Evaluator 校准机制；Annotation Queue 作为 Human Judgment 可规模化的核心机制；Eval 是 Harness 的训练数据（类比 ML 的 training data → weights）；与 Anatomy of Agent Harness（2026-04-12）的逻辑关联
+- `ARTICLES_MAP.md` 重新生成（77篇）
+
+**Articles 产出**：2篇（自愈式部署管道 + Human Judgment in the Agent Improvement Loop）
+
+**本轮反思**：
+- 做对了：命中 P1 线索（Human judgment APR 9）——完成上一轮遗留的 P1 任务，Human Judgment Loop 是 Anatomy of Agent Harness 的直接续篇，逻辑链完整
+- 做对了：两篇文章形成逻辑链——Self-Healing 展示 Human Judgment Loop 的生产级实现（Annotation Queue 驱动 Triage Agent），Human Judgment Loop 解释机制原理
+- 做对了：正确选择 practices 目录归档 Self-Healing（工程实践类）而非 harness（Harness 组件定义类）
+- 需改进：Anthropic Infrastructure Noise 已有文章（infrastructure-noise-agentic-coding-evals-2026.md），未重复成文
+
+**Articles 线索**：Better Harness（LangChain Blog，APR）——Eval-Driven Harness 迭代的完整工程方法论，已有同名旧文（better-harness-eval-driven...）；Deep Agents Deploy（LangChain，APR 7）——开源部署方案，本轮 fetch 失败，下轮重试
+
 ## 2026-04-12 10:03（北京时间）
 
 **状态**：✅ 成功
