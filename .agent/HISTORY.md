@@ -146,6 +146,25 @@
 
 **Articles 线索**：Human judgment in the agent improvement loop（APR 9）；LangGraph 1.1.7a1 Graph Lifecycle Callbacks 直接查 GitHub；Open Models crossed threshold（APR 2）
 
+## 2026-04-13 10:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/evaluation/open-models-crossed-threshold-agent-eval-2026.md` 新增（~3200字）—— LangChain Blog（2026-04-13）深度解析：Open Models（GLM-5、MiniMax M2.7）在 Agent 评测上追平 Closed Frontier Models 的系统性分析；四指标评测体系（Correctness/Solve Rate/Step Ratio/Tool Call Ratio）；核心发现：File Ops（1.0）、Tool Use（0.82-0.87）、Unit Test（1.0）追平，Conversation（0.14-0.38）差距显著；成本差距 20 倍、延迟差距 4 倍的量化数据；Deep Agents CLI Runtime Model Swapping 实现 Planning/Execution 分离；工程决策框架（按任务类型选模型）
+- `README.md` badge 时间戳更新至 2026-04-13 10:03
+- `ARTICLES_MAP.md` 重新生成（evaluation: 10篇）
+
+**Articles 产出**：1篇（Open Models 跨越 Agent 任务门槛）
+
+**本轮反思**：
+- 做对了：精准命中 Evaluation 缺口——Open Models 追平 Frontier 是 2026 年 Agent 工程领域最重要的趋势之一，评测数据填补了仓库内 Benchmark 数字 vs 工程可行性认知空白
+- 做对了：四指标评测体系（Correctness + Solve Rate + Step Ratio + Tool Call Ratio）拆解了正确性的层次；Solve Rate（GLM-5 = 1.17，远超其他）是隐藏的关键发现
+- 做对了：正确评估 Deep Agents Deploy（APR 9）与已有文章重叠，选择 Open Models threshold 作为本轮唯一 article
+- 需改进：Deep Agents Deploy 今日 blog post 与 APR 9 版本关系待进一步梳理
+
+**Articles 线索**：Continual Learning for AI Agents（LangChain Blog）三层学习机制；LangChain Interrupt 2026（5/13-14）会后评估；Amjad Masad Eval as a Service
+
 <!-- INSERT_HISTORY_HERE -->
 
 ---
