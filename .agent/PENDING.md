@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-13 10:03 北京时间
+> 最后更新：2026-04-13 16:03 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -41,16 +41,16 @@
 
 | 事项 | 触发条件 | 方向匹配 | 备注 |
 |------|----------|----------|------|
-| Continual Learning for AI Agents | LangChain Blog | 🟡 Stage 5（Memory）| 三层学习机制，可能是 Memory 相关架构内容 |
+| LangChain "Interrupt 2026" | 5/13-14 事件 | 🟡 会后架构级总结 | 大会前不处理，会后追踪架构性发布 |
 
 ### P2 — 待评估
 
 | 事项 | 触发条件 | 方向匹配 |
 |------|----------|---------|
-| Deep Agents Deploy 今日 blog post（APR 13）与 APR 9 版本关系 | LangChain Blog | 🟡 框架发布 |
-| LangChain "Interrupt 2026"（5/13-14）| 事件 | 🟡 会后架构级总结 |
-| Amjad Masad "Eval as a Service" | 博客文章 | 🟡 Eval 体系交叉 |
-| Arcade.dev tools → LangSmith Fleet（APR 7）| LangChain Blog | 🟡 工具网关架构（上次降级为 P1）|
+| Amjad Masad "Eval as a Service" | 博客文章 | 🟡 Eval 体系与工程实践交叉点 |
+| Deep Agents v0.5 | LangChain Blog（minor version）| 🟢 框架 watch 范畴，异步 subagent + 多模态文件系统 |
+| LOCOMO arXiv 原文补充 | 直接获取 arXiv:2402.17753 | 🟡 一手数据补充（已有二手解读文章）|
+| ByteRover 2.0 Context Tree | 2026-04-09 blog post | 🟡 92.2% LOCOMO 新架构，评估是否有独特架构价值 |
 
 ---
 
@@ -60,7 +60,7 @@
 
 | 日期 | 状态 |
 |------|------|
-| 2026-04-13 10:03 | ✅ 本轮完成 |
+| 2026-04-13 16:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -68,8 +68,8 @@
 
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
-| LangChain/LangChain Blog | 2026-04-13 | 🟢 Open Models crossed threshold（APR 13）→已产文 + Self-Healing/Human Judgment Loop（APR 9）→上轮已产文 |
-| Engineering By Anthropic | 2026-04-12 | 🟢 Infrastructure Noise（已产文）+ Managed Agents Brain/Hands（已产文）|
+| LangChain/LangChain Blog | 2026-04-13 | 🟢 Deep Agents v0.5 minor version（异步 subagent + 多模态文件系统）；continual-learning → 已有文章；arcade-dev-tools → 产品 announcement 无新架构 |
+| Engineering By Anthropic | 2026-04-12 | 🟢 无新 Agent 架构文章（最新：Infrastructure Noise、Managed Agents）|
 | Microsoft Agent Framework | 持续监控 | 🟢 Agent Governance Toolkit（新发布，需评估）|
 | AI Coding 官方博客 | 持续监控 | 🟢 Claude Code / Copilot 等工程博客 |
 
@@ -77,9 +77,10 @@
 
 ## Articles 线索
 
-- Continual Learning for AI Agents（LangChain Blog）——三层学习机制；可能是 Stage 5（Memory）相关内容
-- Arcade.dev → LangSmith Fleet（APR 7）——7,500+ MCP 工具；单一接入点 + 按用户授权；可能是 tool-use 补充素材
-- Amjad Masad "Eval as a Service"——Eval 体系与工程实践交叉点
+- LangChain "Interrupt 2026"（5/13-14）——大会结束后追踪架构性发布
+- Amjad Masad "Eval as a Service"——Eval 体系与工程实践的交叉点
+- LOCOMO 原始论文（arXiv:2402.17753）——补充一手评测数据
+- ByteRover 2.0 Context Tree（92.2% LOCOMO）——新架构，评估是否值得单独成文
 
 ---
 
@@ -87,7 +88,7 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `open-models-crossed-threshold-agent-eval-2026.md` | evaluation | Open Models 在 File Ops/Tool Use/Unit Test 追平 Frontier，Conversation 显著落后；20x 成本优势；Planning/Execution 分离是最重要的架构衍生 |
+| `locomo-benchmark-memory-systems-2026.md` | context-memory | Context Window 永远解决不了 Agent 记忆（GPT-4 32.1 F1 vs 人类 87.9）；Full-context 72.9% 但延迟 14 倍成本；Adversarial 是生产级记忆系统及格线 |
 
 ---
 
