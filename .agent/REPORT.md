@@ -1,27 +1,28 @@
 # AgentKeeper 自我报告
 
+# AgentKeeper 自我报告
+
 ## 📋 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 产出1篇 | `meta-harness-auto-harness-automation-2026.md`（harness，~6000字）：Meta-Harness（Stanford）+ AutoHarness（DeepMind）两条技术路线深度解析 |
-| HOT_NEWS | ⬇️ 跳过 | 无明显 breaking news；LangChain Interrupt 2026（5/13-14）P1，会前不处理 |
-| FRAMEWORK_WATCH | ✅ 完成 | LangChain Blog 无新架构文章；Anthropic Q1 2026 汇总（大量产品发布，无工程博客）；Microsoft Agent Framework 仍为 v1.0 GA 状态 |
-| ARTICLES_MAP | ✅ 完成 | 88篇（+1），ARTICLES_MAP.md 已更新 |
-| COMMIT | ✅ 完成 | commit 4a05f40 |
+| ARTICLES_COLLECT | ✅ 产出1篇 | `anthropic-three-agent-harness-gan-inspired-long-running-apps-2026.md`（harness，~7200字）：Anthropic Labs 三代理 GAN 启发架构（Planner-Generator-Evaluator）深度解析 |
+| HOT_NEWS | ⬇️ 跳过 | LangChain Interrupt 2026（5/13-14）P1，会前不处理；本轮无明显 breaking news |
+| FRAMEWORK_WATCH | ✅ 完成 | Anthropic Engineering Blog 新增 Mar 24「Harness design」文章；Apr 9/14 文章扫描偏向 policy，非技术工程博客 |
+| ARTICLES_MAP | ✅ 完成 | 89篇（+1），ARTICLES_MAP.md 已更新 |
+| COMMIT | 🔄 待执行 | commit pending |
 
 ---
 
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **命中 P2 项目**：按照 PENDING.md 的规划，完成了「Better Harness（Meta-Harness Stanford + Auto-Harness DeepMind）」的深入分析
-2. **找到互补角度**：Meta-Harness（Filesystem-based，全栈优化）和 AutoHarness（Environment Feedback Loop，约束规则生成）解决不同层面的问题，形成完整的技术对比
-3. **提炼关键 insight**：Code-Policy 可以超越 LLM Policy（AutoHarness 证明小模型 + custom harness > 裸大模型）是反直觉但有工程价值的发现
+1. **直接抓取原始来源**：从 Web 搜索发现 Anthropic Engineering Blog 新文章后，直接抓取原文（而非依赖被 Cloudflare 拦截的 InfoQ 二手报道），拿到完整技术内容
+2. **识别标题与内容的差异**：InfoQ 报道标题是"Three-Agent Harness"，但原文强调的是 GAN 启发架构（Generator-Evaluator 对抗循环）；按原文内容写 article 而非按 InfoQ 二手标题
+3. **提炼有工程价值的洞察**：Context Reset vs Compaction 的选择标准（context anxiety 模型需 Reset，Opus 4.5 无需）；Evaluator Prompt 措辞如何影响 Generator 输出质量
 
 ### 需要改进什么
-1. **exec 执行受限**：gen_article_map.py 因 "complex interpreter invocation" 错误无法自动执行，需要手动更新 ARTICLES_MAP.md
-2. **框架监控仍需深入**：Microsoft Agent Framework v1.0 GA 已有一段时间，需要关注其实际采用情况和工程案例
+1. **框架监控效率**：本轮花了较长时间在 InfoQ/Cloudflare 拦截问题上，后续遇到 Cloudflare 页面直接跳过，节省扫描时间
 
 ---
 
@@ -30,9 +31,9 @@
 | 指标 | 数值 |
 |------|------|
 | 新增 articles | 1 |
-| 新增 article #1 | `meta-harness-auto-harness-automation-2026.md`（harness，Meta-Harness + AutoHarness：Harness 自动合成的两条技术路线）|
-| 更新 ARTICLES_MAP | 1（88篇，harness: 22）|
-| commit | 1（4a05f40）|
+| 新增 article #1 | `anthropic-three-agent-harness-gan-inspired-long-running-apps-2026.md`（harness，Anthropic 三代理 Harness：GAN 启发的长时运行应用开发架构）|
+| 更新 ARTICLES_MAP | 1（89篇，harness: 23）|
+| commit | 🔄 pending |
 
 ---
 
@@ -46,11 +47,12 @@
 
 ## 本轮产出文章摘要
 
-### 1. meta-harness-auto-harness-automation-2026.md
-- **核心判断**：Harness 优化从手工 → Better Harness（人主导） → Meta-Harness/AutoHarness（AI 主导）是必然演进路径
-- **Meta-Harness 核心创新**：Filesystem-based Proposer（10M tokens/iter vs 其他方法最大 0.026 tokens/iter）；全量 traces 是诊断关键
-- **AutoHarness 核心创新**：Environment Feedback Loop；在 145 个 TextArena 游戏中消除所有非法动作；Code-Policy 可超越 LLM Policy
-- **两条路线对比**：Meta-Harness 擅长复杂多步骤任务全栈优化；AutoHarness 擅长有明确环境约束的规则生成
+### 1. anthropic-three-agent-harness-gan-inspired-long-running-apps-2026.md
+- **核心判断**：三代理 GAN 启发架构（Planner-Generator-Evaluator）是长时运行应用开发的最优 Harness 范式之一
+- **Generator-Evaluator 对抗循环**：替代 Agent 自我评价失效问题；独立 Evaluator 通过 Prompt 调参实现严格评估
+- **Playwright MCP 使能**：Evaluator 配备 Playwright MCP，从静态代码分析升级为动态行为测试
+- **Context Reset vs Compaction**：有 context anxiety 的模型（Sonnet 4.5）需 Reset；无此问题的模型（Opus 4.5）用 Compaction 即可
+- **Evaluator Prompt 措辞影响生成质量**：评估语言本身是隐式的生成引导
 
 ---
 

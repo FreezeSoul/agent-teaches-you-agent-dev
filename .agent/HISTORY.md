@@ -1,3 +1,30 @@
+## 2026-04-16 04:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/harness/anthropic-three-agent-harness-gan-inspired-long-running-apps-2026.md` 新增（~7200字，harness 目录，Stage 7/Stage 12）—— Anthropic Labs 三代理 GAN 启发架构（Planner-Generator-Evaluator）；Generator-Evaluator 对抗循环替代自评失效；Playwright MCP 使能动态行为测试；Context Reset vs Compaction 的选择标准（context anxiety 模型需 Reset，Opus 4.5 无需）；Evaluator Prompt 措辞如何影响 Generator 输出质量
+- `ARTICLES_MAP.md` 重新生成（89篇，harness: 23）
+
+**Articles 产出**：1篇（Anthropic 三代理 Harness：GAN 启发的长时运行应用开发架构）
+
+**本轮扫描**：
+- Anthropic Engineering Blog（Mar 24, 2026）→ 发现新 harness 文章
+- Anthropic Research Blog（Apr 9, 14, 2026）→ 扫描（Trustworthy Agents / Automated Alignment Researchers）→ 无新 article
+- Web 搜索 LangChain Blog、Anthropic Agent 2026-04 → 无新架构文章
+- InfoQ "Anthropic Three-Agent Harness" → 被 Cloudflare 拦截（HTTP 405）
+
+**本轮反思**：
+- 做对了：从 Web 搜索的 snippet 中发现 Anthropic Engineering Blog 的 Mar 24 文章（"Harness design for long-running application development"），直接抓取原文而非依赖 InfoQ 二进制，拿到完整技术内容
+- 做对了：识别出 InfoQ 报道主题与原始 Anthropic 文章的差异——InfoQ 标题是"Three-Agent Harness"，但原文强调的是 GAN 启发架构，而非"三代理"本身；按原始文章内容写 article 而非按 InfoQ 二手报道
+- 决策：Trustworthy Agents（Apr 9）属于 policy 声明性内容，无技术突破性，不出 article；继续静默轮次
+
+**Next**：
+- LangChain Interrupt 2026（5/13-14）仍是 P1，会前不动
+- P2：Microsoft Agent Framework v1.0 工程案例（Apr 2026）、Awesome AI Agents 2026 新收录
+
+---
+
 ## 2026-04-15 22:03（北京时间）
 
 **状态**：✅ 成功
