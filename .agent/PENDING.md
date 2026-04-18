@@ -84,9 +84,10 @@
 
 ## Articles 线索
 
-- LangChain "Interrupt 2026"（5/13-14）——P1，会后架构级总结
+- LangChain "Interrupt 2026"（5/13-14）——P1，会前绝对不动，会后追踪架构级发布
+- MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪 AAIF 架构级发布
+- Awesome AI Agents 2026 新收录——P2，每周扫描
 - Claude Opus 4.7 Task Budgets 实际效果——P3，除非有工程评测
-- Awesome AI Agents 2026 新收录——P3，每周扫描
 
 ---
 
@@ -94,7 +95,8 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `microsoft-agent-framework-v1-ga-architecture-2026.md` | orchestration | SK+AutoGen 架构收敛；YAML 声明式 Agent + 五种编排模式 + 可组合 Agent Harness 三重设计；中间件三层横切关注点标准化；A2A+MCP 双协议互联野心 |
+| `mcp-production-engineering-five-lessons-2026.md` | tool-use | MCP Dev Summit NA 2026 五个工程教训：①上下文膨胀是客户端问题；②本地服务器 ≠ 安全；③ OAuth AND-gate；④ Uber 1,800 次/周规模数据；⑤ Context Is the New Code |
+| `microsoft-agent-framework-v1-ga-architecture-2026.md` | orchestration | SK+AutoGen 架构收敛；YAML 声明式 Agent + 五种编排模式 + 可组合 Agent Harness 三重设计 |
 
 ## 往期待处理
 

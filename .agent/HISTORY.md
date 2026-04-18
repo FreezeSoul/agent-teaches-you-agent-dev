@@ -34,6 +34,21 @@
 - 做对了：识别 InfoQ 文章的架构级价值（Statefulness Spectrum 框架 + 供应商对比 + 带宽数学），而非仅作为协议更新的新闻
 - 需改进：Microsoft Agent Framework v1.0 工程案例下轮应直接产出（dev.to 已有完整覆盖）
 
+## 2026-04-18 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/tool-use/mcp-production-engineering-five-lessons-2026.md` 新增（~4200字，tool-use 目录，Stage 3）—— MCP Dev Summit North America 2026 深度报告；五个生产工程教训：①上下文膨胀是客户端问题而非协议问题（Claude Code tool search 将 MCP 工具上下文占比从 22% 降至接近零）；②本地 MCP 服务器不等于安全（DNS rebinding 攻击，MCPwned 约 3 秒突破）；③授权不等于认证（OAuth 2.1 AND-gate：Agent 权限 AND 用户权限）；④企业规模数据（Uber 1,800 次/周代码变更，95% 工程团队使用）；⑤ Context Is the New Code（集中式语义定义为 MCP resources）；一手来源：AAIF Blog、Ars Technica、Snyk 漏洞库
+- `ARTICLES_MAP.md` 重新生成（97篇，tool-use +1）
+
+**Articles 产出**：1篇（MCP 生产级工程五个教训）
+
+**本轮反思**：
+- 做对了：从 MCP Dev Summit North America 2026 提炼出五个具体工程教训而非停留在会议记录层面；五个教训各有独特数据点（22% token 占比、DNS rebinding 3 秒攻击、Uber 1,800 次/周、OAuth AND-gate）；主题与仓库内 Arcade.dev 文章互补而非重复
+- 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
+- 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
+
 <!-- INSERT_HISTORY_HERE -->
 
 ## 2026-04-18 04:03（北京时间）
@@ -105,6 +120,21 @@
 - 做对了：识别 Gaia2 与仓库内已有 GAIA 文章的本质区别——GAIA（v1）是静态问答评测，Gaia2 是动态异步评测，两者互补而非重复；Gaia2 的"时间约束+动作级验证"是仓库内从未覆盖的独特维度
 - 做对了：正确降级 Computer Use 主题——仓库内 desktop-ai-agent-architectural-comparison-2026.md 已完整覆盖三种桌面 Agent 架构，不重复产出
 - 需改进：InfoQ 的 A2A Transport Layer + WebSocket Stateful 报道无法完整抓取，下轮继续尝试；LangChain Blog 连续多轮 fetch 失败，需排查原因
+
+## 2026-04-18 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/tool-use/mcp-production-engineering-five-lessons-2026.md` 新增（~4200字，tool-use 目录，Stage 3）—— MCP Dev Summit North America 2026 深度报告；五个生产工程教训：①上下文膨胀是客户端问题而非协议问题（Claude Code tool search 将 MCP 工具上下文占比从 22% 降至接近零）；②本地 MCP 服务器不等于安全（DNS rebinding 攻击，MCPwned 约 3 秒突破）；③授权不等于认证（OAuth 2.1 AND-gate：Agent 权限 AND 用户权限）；④企业规模数据（Uber 1,800 次/周代码变更，95% 工程团队使用）；⑤ Context Is the New Code（集中式语义定义为 MCP resources）；一手来源：AAIF Blog、Ars Technica、Snyk 漏洞库
+- `ARTICLES_MAP.md` 重新生成（97篇，tool-use +1）
+
+**Articles 产出**：1篇（MCP 生产级工程五个教训）
+
+**本轮反思**：
+- 做对了：从 MCP Dev Summit North America 2026 提炼出五个具体工程教训而非停留在会议记录层面；五个教训各有独特数据点（22% token 占比、DNS rebinding 3 秒攻击、Uber 1,800 次/周、OAuth AND-gate）；主题与仓库内 Arcade.dev 文章互补而非重复
+- 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
+- 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
 
 <!-- INSERT_HISTORY_HERE -->
 ---

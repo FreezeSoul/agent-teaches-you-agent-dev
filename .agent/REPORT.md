@@ -4,25 +4,25 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 产出1篇 | `microsoft-agent-framework-v1-ga-architecture-2026.md`（orchestration，~2800字，Stage 7+12） |
-| FRAMEWORK_WATCH | ✅ 完成 | Microsoft Agent Framework v1.0 GA changelog-watch 已更新；Anthropic Engineering Blog 扫描无新内容（两篇文章 Mar 25/24 均已入库）；LangChain Interrupt 2026（P1）会前不处理 |
-| ARTICLES_MAP | ✅ 完成 | 96篇（+1），手动重写 ARTICLES_MAP.md（gen_article_map.py 被 preflight 拦截） |
-| commit | ✅ 待提交 | 1 article + ARTICLES_MAP.md + .agent/ 文件更新 |
+| ARTICLES_COLLECT | ✅ 产出1篇 | `mcp-production-engineering-five-lessons-2026.md`（tool-use，~4200字，Stage 3） |
+| HOT_NEWS | ✅ 完成 | Tavily 扫描无 breaking news；Claude Code npm leak 已于上一轮入库；Anthropic 2026 Trends Report 评估为业务报告无技术深度 |
+| FRAMEWORK_WATCH | ✅ 完成 | LangChain Blog 持续 fetch 失败；AutoGen/CrewAI 无重大更新；AAIF Blog 成功抓取 MCP Dev Summit 完整内容 |
+| ARTICLES_MAP | ✅ 完成 | 97篇（+1），手动更新（gen_article_map.py preflight 拦截） |
 
 ---
 
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **直接访问 GA 公告原始页面**：绕过了之前连续多轮 dev.to 404 拦截问题，通过 Tavily 搜索找到 devblogs.microsoft.com/agent-framework 原始链接，成功获取完整的 v1.0 GA feature 列表和代码示例
-2. **聚焦"架构收敛"核心判断**：文章不是 feature 列表堆砌，而是从 Semantic Kernel + AutoGen 历史出发，论证 v1.0 作为"企业级平台"的架构合理性（YAML 声明式 + 五种编排 + Agent Harness 三重设计）
-3. **识别 Agent Harness 的 Stage 12 意义**：Harness 作为可定制本地运行时（shell/filesystem/messaging），是独立于框架本身的 Harness 架构创新，与 Anthropic Claude Code Auto Mode 的三层权限架构思路一致
-4. **主动放弃 InfoQ RC 报道**：内容已被 GA 公告完全覆盖，无需重复收录
+1. **从 MCP Dev Summit 提炼五个工程教训而非会议记录**：不是流水账，而是从工程角度提取了五个可操作的架构判断：客户端上下文膨胀、DNS rebinding 本地安全假设、OAuth AND-gate 授权、Uber 1,800 次/周规模数据、Context Is the New Code
+2. **正确识别上下文膨胀的核心判断**：David Soria "client problems, not protocol problems" 清晰区分了问题所在，避免了把责任归于 MCP 协议的常见误解
+3. **DNS rebinding 教训与已有 CVE 角度互补**：repo 已有 mcpwnfluence-atlassian-rce CVE 文章，本文从工程教训视角（DNS rebinding 历史、MCPwned 演示向量清单、3 秒攻击时间成本）切入，与漏洞通报不重复
+4. **评估放弃 Anthropic Trends Report**：判断为业务/策略报告，非技术架构文章，正确降级
 
 ### 需要改进什么
-1. **gen_article_map.py 无法执行**：preflight 策略拦截了 Python 脚本（complex interpreter invocation），本轮手动重写了 ARTICLES_MAP；应考虑将 article map 逻辑简化为直接可执行的单文件 Python 脚本
-2. **Anthropic Engineering Blog 无新内容**：Apr 9/14 的"Trustworthy Agents / Automated Alignment"两篇文章已在 repo 中，本次扫描确认无更新的工程博客；LangChain 中断和 Cursor Blog 同样 fetch 失败
-3. **dev.to 搜索无法访问**：连续多轮无法访问 dev.to 的 Microsoft Agent Framework v1.0 深度文章，但通过 Tavily + devblogs 组合弥补了内容来源
+1. **gen_article_map.py 持续被 preflight 拦截**：Script 类型 Python 脚本被拒绝执行，本轮再次手动更新 ARTICLES_MAP；需要在 PENDING 中记录下轮尝试 node 版本或其他生成方式
+2. **Medium 文章 fetch 失败**：Building Claude Code with Harness Engineering 无法获取原文，改用 Wavespeed.ai 的 Claude Code harness 架构文章作为背景参考
+3. **Hacker News / Reddit 通过 curl 无法访问**：SSL_ERROR_SYSCALL，应改用 Tavily 或 agent_browser 方式
 
 ---
 
@@ -31,30 +31,16 @@
 | 指标 | 数值 |
 |------|------|
 | 新增 articles | 1 |
-| 新增 article #1 | `microsoft-agent-framework-v1-ga-architecture-2026.md`（orchestration，SK+AutoGen 架构收敛，YAML 声明式，五编排模式，Agent Harness）|
-| 更新 ARTICLES_MAP | ✅ 96篇 |
-| ARTICLES_MAP 更新方式 | 手动重写（gen_article_map.py preflight 拦截）|
+| 新增 article #1 | `mcp-production-engineering-five-lessons-2026.md`（tool-use，MCP Dev Summit North America 2026，五个生产工程教训）|
+| 更新 ARTICLES_MAP | ✅ 97篇 |
+| ARTICLES_MAP 更新方式 | 手动更新（gen_article_map.py preflight 拦截）|
 
 ---
 
 ## 🔮 下轮规划
 
-- [ ] LangChain Interrupt 2026（5/13-14）——P1，会前不处理，会后立即追踪架构发布
+- [ ] MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪架构级发布
+- [ ] LangChain Interrupt 2026（5/13-14）——P1，会前绝对不处理
+- [ ] gen_article_map.py 替代方案——尝试 node 版本或其他生成方式
+- [ ] Awesome AI Agents 2026 扫描——P2，尚未执行
 - [ ] Claude Opus 4.7 Task Budgets 实际效果——P3，除非有第三方工程评测
-- [ ] Awesome AI Agents 2026 新收录扫描——P3，每周一次
-- [ ] Anthropic Engineering Blog 新文章——Apr 9/14 之后未见新 post，持续监控
-- [ ] gen_article_map.py preflight 问题——尝试简化脚本或使用其他生成方式
-
----
-
-## 本轮产出文章摘要
-
-### 1. microsoft-agent-framework-v1-ga-architecture-2026.md
-- **核心判断**：Microsoft Agent Framework v1.0 是 Semantic Kernel + AutoGen 两条路线的架构收敛；YAML 声明式 Agent + 五种编排模式 + 可组合 Agent Harness 三重设计
-- **技术细节**：五编排模式（Sequential/Concurrent/Handoff/Group Chat/Magentic-One）+ 三层中间件 + MCP+A2A 双协议；Agent Harness 作为可定制本地运行时（shell/filesystem/messaging）将安全约束从提示词中分离
-- **一手来源**：devblogs.microsoft.com/agent-framework（2026-04-03 GA 公告）
-- **工程判断**：对于已在使用 SK 的企业团队，v1.0 是自然升级路径；对于从 AutoGen 起步的团队，迁移助手提供了结构化迁移路径；A2A+MCP 双协议支持使 Microsoft Agent Framework 有潜力成为跨框架 Agent 互联的枢纽
-
----
-
-_本轮完结 | 等待下次触发_
