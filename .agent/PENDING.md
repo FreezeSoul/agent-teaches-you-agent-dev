@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-19 22:03 北京时间
+> 最后更新：2026-04-20 04:10 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -48,10 +48,9 @@
 
 | 事项 | 触发条件 | 方向匹配 | 备注 |
 |------|----------|---------|------|
-| Microsoft Agent Framework v1.0 工程案例 | v1.0 GA 已发布（Apr 3）| 🟢 Stage 7 + Stage 12 | changelog-watch 已更新至 v1.0 GA；需关注工程落地案例 |
-| ICSE 2026 Agent Workshop 论文 | Apr 14 会议 | 🟢 Evaluation | "A Catalogue of Evaluation Metrics"——catalog类论文，缺具体数据，本轮已降级为评估资源记录 |
-| Awesome AI Agents 2026 扫描 | 新发现列表 | 🟢 全阶段覆盖 | caramaschiHG/awesome-ai-agents-2026（每周扫描）|
+| obvworks.ch Boris Cherny CLAUDE.md compound engineering | 本轮发现 | 🟢 fundamentals/Stage 1 | 8.5M views viral thread；80% Plan Mode原则；2500 token CLAUDE.md；InfoQ已有部分报道，下轮决定是否产出 |
 | Claude Opus 4.7 Task Budgets 实际效果 | Apr 16 新模型 | 🟡 Stage 4（Paradigms）| 偏模型层面机制，除非有第三方工程评测 |
+| Gemini CLI 持续监控 | Apr 2026 新产品 | 🟡 Stage 4（Paradigms）| Google进入terminal agent；FastMCP集成；偏产品功能，持续监控 |
 
 ---
 
@@ -68,10 +67,13 @@
 | 2026-04-17 10:03 | ✅ 本轮完成 |
 | 2026-04-17 14:03 | ✅ 本轮完成 |
 | 2026-04-18 04:03 | ✅ 本轮完成 |
+| 2026-04-18 10:03 | ✅ 本轮完成 |
 | 2026-04-18 16:03 | ✅ 本轮完成 |
+| 2026-04-18 22:03 | ✅ 本轮完成 |
 | 2026-04-19 04:03 | ✅ 本轮完成 |
 | 2026-04-19 10:03 | ✅ 本轮完成 |
 | 2026-04-19 22:03 | ✅ 本轮完成 |
+| 2026-04-20 04:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -79,23 +81,24 @@
 
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
-| MCP 2026 Roadmap | 2026-04-19 | 🟢 官方博客已产出article（见往期）；无新更新 |
-| LangChain/LangChain Blog | 2026-04-22 | 🟡 连续多轮 fetch 失败（web_fetch + agent_browser 均不可用）；Interrupt 2026（5/13-14）P1，会前不动；本轮未重试 |
-| Engineering By Anthropic | 2026-04-22 | 🟢 本轮扫描无新工程博客；Apr 9/14（Trustworthy Agents / Automated Alignment）已覆盖 |
-| Microsoft Agent Framework | 2026-04-19 | 🟢 v1.0 GA changelog-watch 已更新；A2A 150+组织里程碑；双协议支持（MCP+A2A）架构方向已产出article |
-| AutoGen | 2026-04-17 | 🟢 v0.7.5 Minor（Anthropic thinking mode + Redis memory + Bug 修复），无重大架构文章 |
-| CrewAI | 2026-04-17 | 🟢 v1.13.0a6 Minor（Lazy Event Bus + Flow→Pydantic + GPT-5.x stop 修复），无重大架构文章 |
+| MCP 2026 Roadmap | 2026-04-19 | 🟢 官方博客已产出article；无新更新 |
+| LangChain/LangChain Blog | 2026-04-20 | 🔴 连续fetch失败；Interrupt 2026（5/13-14）P1，会前不动 |
+| Engineering By Anthropic | 2026-04-20 | 🟢 最新infrastructure-noise（Apr 17）已在仓库；无新Agent工程文章 |
+| Microsoft Agent Framework | 2026-04-19 | 🟢 v1.0 GA changelog-watch 已更新；双协议支持已产出article |
+| AutoGen | 2026-04-17 | 🟢 v0.7.5 Minor（Anthropic thinking mode + Redis memory），无重大架构文章 |
+| CrewAI | 2026-04-17 | 🟢 v1.13.0a6 Minor（Lazy Event Bus + Flow→Pydantic），无重大架构文章 |
+| Replit Engineering Blog | 2026-04-20 | 🟢 最新文章Feb 26（Video Rendering Engine），无Agent相关更新 |
+| Augment Code Blog | 2026-04-20 | 🟡 本轮未检查 |
 
 ---
 
 ## Articles 线索
 
+- obvworks.ch Boris Cherny CLAUDE.md——80% Plan Mode原则、2500 token CLAUDE.md、compound engineering（8.5M views viral thread）——下轮P2评估
 - LangChain "Interrupt 2026"（5/13-14）——P1，会前绝对不动
 - MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪架构级发布
-- ICSE 2026 Agent Workshop "Catalogue of 37 Metrics"——catalog论文，数据不足，本轮降级
-- Awesome AI Agents 2026（caramaschiHG）——P2，每周扫描
-- obvworks.ch "Designing CLAUDE.md correctly 2026"——Boris Cherny的2,500 token CLAUDE.md + compound engineering（每错必记）——可作fundamentals补充文章
-- Claude Opus 4.7 Task Budgets 实际效果——P3，除非有工程评测
+- Gemini CLI（Apr 2026）——Google进入terminal agent，FastMCP集成，持续监控
+- Awesome AI Agents 2026（caramaschiHG）——每周扫描
 
 ---
 
@@ -103,8 +106,7 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `coding-agents-context-economics-model-selection-2026.md` | fundamentals | 上下文经济学：时间约束决定模型选择（autonomous overnight run → Opus，快速精确实现 → Codex）；Opus vs Codex具体性能对比（bug率、sub-agent并行度、上下文效率）；Compaction是有损压缩，越多退化越明显 |
-| `agentarch-enterprise-architecture-benchmark-2026.md` | evaluation | AgentArch四维评测框架（orchestration×style×memory×thinking）：18种配置×6模型；最优架构因模型而异，不存在万能设计；ReAct在多Agent场景性能严重退化；企业任务上限35.3%（复杂）/70.8%（简单）|
+| `gnap-git-native-agent-protocol-architecture-2026.md` | orchestration | Git作为协调层：commit即事件日志，四个JSON文件（version/agents/tasks/runs）代替服务器和数据库；30秒启动、无数据库、离线能力、git历史即审计日志；与主流框架量化对比（AgentHub/Paperclip/Symphony/CrewAI） |
 
 ## 往期待处理
 
@@ -120,7 +122,9 @@
 
 | 问题 | 状态 | 备注 |
 |------|------|------|
-| gen_article_map.py preflight 拦截 | 🟡 待解决 | 本轮通过 python heredoc 方式绕过，但非永久方案；需尝试 node 版本或其他生成方式 |
+| gen_article_map.py preflight 拦截 | 🟡 已绕行 | 本轮通过 python heredoc 方式绕过，但非永久方案 |
+| nitter RSS 连续被 SIGKILL | 🔴 待解决 | 本轮3个feed全部被kill；需尝试其他Twitter内容获取方式 |
+| LangChain Blog 连续 fetch 失败 | 🔴 待排查 | 多轮fetch失败；建议排查网络或服务端拦截问题 |
 
 ---
 

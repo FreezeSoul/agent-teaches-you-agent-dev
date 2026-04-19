@@ -1,5 +1,98 @@
 # 更新历史
 
+## 2026-04-20 04:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/orchestration/gnap-git-native-agent-protocol-architecture-2026.md` 新增（~2700字，orchestration 目录，Stage 7+9）—— GNAP（Git-Native Agent Protocol）RFC草稿；核心判断：git本身作为协调层，commit作为分布式事件日志，四个JSON文件（version/agents.json/tasks/*.json/runs/*.json）代替服务器和数据库；与传统框架（AgentHub/Paperclip/Symphony/CrewAI）量化对比；离线能力、零基础设施、git历史即审计日志；已知局限（心跳延迟、冲突解决、历史膨胀、RFC草稿）
+- `ARTICLES_MAP.md` 重新生成（102篇，orchestration +1）
+
+**Articles 产出**：1篇（GNAP：Git原生Agent协调协议）
+
+**本轮扫描**：
+- Tavily agent architecture 2026 → IBM/MLMastery趋势文章，质量不足，不产出
+- Awesome AI Agents 2026 (caramaschiHG) → 发现GNAP（Git-Native Agent Protocol）+ Gemini CLI（Apr 2026）+ Caliber（配置质量评分CLI）
+- GNAP → farol-team RFC草稿，OpenHands/AgentSquad均已引用；git作为协调事件源是真正新范式；产出article
+- Gemini CLI → Google Apr 2026新产品，FastMCP集成，但产品功能为主，架构创新不足，降级为监控
+- Caliber → 无LLM调用的静态配置质量评分，解决CLAUDE.md随代码老化问题，工具类，非架构分析，不产出
+- obvworks.ch Boris Cherny CLAUDE.md → 8.5M views viral thread，80% Plan Mode原则，但InfoQ报道已有覆盖；维持P2下轮评估
+- LangChain Blog → fetch失败；Anthropic Engineering → 最新infrastructure-noise已在仓库；Kevin Hou blog → 无新Agent文章
+- Nitter RSS → 连续被SIGKILL，无法获取Twitter内容
+
+**跳过/未处理**：
+- Gemini CLI → 产品发布，非架构分析，不产出
+- Caliber → 工具类，非架构文章，不产出
+- obvworks.ch Boris Cherny CLAUDE.md → 下轮P2
+- LangChain Blog → fetch失败
+
+**反思**：做对了——GNAP是真正的新协调范式（git作为协调层），OpenHands和AWS AgentSquad均已引用，有一手RFC规范和对比数据；正确降级了Gemini CLI（产品功能）、Caliber（工具类）、Boris工作流（已有InfoQ覆盖）；坚持了"协议协调层≠协议本身"的原则。需改进——nitter RSS连续被kill，下轮应尝试其他Twitter获取方式。
+
+---
+
+## 2026-04-19 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/fundamentals/coding-agents-context-economics-model-selection-2026.md` 新增（~2500字，fundamentals 目录，Stage 1/4）—— calv.info Feb 2026；核心判断：上下文经济学——时间约束决定模型选择；Opus vs Codex具体性能对比矩阵；Compaction是有损压缩
+- `articles/evaluation/agentarch-enterprise-architecture-benchmark-2026.md` 恢复（~2200字，evaluation 目录，Stage 8）—— 从6193911孤立commit恢复；arXiv:2509.10769；18种配置×6模型企业评测
+- `ARTICLES_MAP.md` 重新生成（101篇，+2）
+
+**Articles 产出**：2篇
+
+**本轮扫描**：
+- Tavily agent architecture 2026 → 发现 calv.info Coding Agents Feb 2026（核心来源）
+- obvworks.ch "Designing CLAUDE.md correctly 2026" → 5-scopes cascade + compound engineering，下轮P2
+- getstream.io/neomanex AI Agent Protocols → 协议概览，已覆盖，降级为监控
+- LangChain changelog → 无新更新；Microsoft Agent Framework v1.0 GA → changelog-watch已完整
+
+**跳过**：obviousworks.ch 5-scopes（下轮P2）；LinkedIn Year of Harnesses（资讯类）；MCP/A2A协议变化（不出article）
+
+**反思**：做对了——选择「上下文经济学」作为fundamentals独特视角；从孤立commit恢复失踪AgentArch文章；通过heredoc绕过gen_article_map.py preflight。需改进——rebase conflict频发（下轮优先skip/abort）；扫描深度需提高。
+
+---
+
+## 2026-04-19 10:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md` 新增（~2800字，deep-dives 目录，Stage 8/12）—— 基于 ICLR Blogposts 2026；五层Agent评测Taxonomy（Level 1 技能评测 → Level 5 通用Agent评测）；关键数据：Mini SWE-Agent（131行代码）= 65% SWE-Bench vs SWE-Agent（4,161行）= 67%（差距2%，成本7倍）；ReAct（358行）= 44% at $0.31 vs ASTA-v0（13,768行）= 53% at $3.40；Level 4协议中心评测的核心矛盾（标准化 vs 灵活性）；Meta-Protocol作为Level 5的可能路径；三大缺口分析（Agent接口/环境接口/研究者接口）
+
+**Articles 产出**：1篇（通用Agent评测的五层架构）
+
+**本轮扫描**：
+- Tavily 搜索 ICSE 2026 Agent Workshop → 发现"A Catalogue of Evaluation Metrics"（37个指标，四分类），ICLR Blogposts 2026 五层Taxonomy为核心产出
+- Tavily 搜索 A2A/MCP/Enterprise 2026 → A2A超过150家组织，Microsoft Agent Framework 1.0同时支持MCP+A2A双协议
+- Tavily 搜索 Manus AI/GAIA/Computer Use → Shareuhack对比报告（Manus vs Cowork vs Operator），Think-Act Loop架构有价值但产品化内容降级为监控
+- LangChain Interrupt 2026（5/13-14）→ P1维持，会前不动
+
+**跳过/未处理**：
+- Shareuhack/Manus vs Operator 对比 → 产品化Consumer内容，非架构分析，不产出
+- ICSE "Catalogue of 37 Metrics" → catalog类论文，缺具体数据，仅标记为评估资源
+
+**反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
+
+---
+
+## 2026-04-18 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/tool-use/mcp-production-engineering-five-lessons-2026.md` 新增（~4200字，tool-use 目录，Stage 3）—— MCP Dev Summit North America 2026 深度报告；五个生产工程教训：①上下文膨胀是客户端问题而非协议问题（Claude Code tool search 将 MCP 工具上下文占比从 22% 降至接近零）；②本地 MCP 服务器不等于安全（DNS rebinding 攻击，MCPwned 约 3 秒突破）；③授权不等于认证（OAuth 2.1 AND-gate：Agent 权限 AND 用户权限）；④企业规模数据（Uber 1,800 次/周代码变更，95% 工程团队使用）；⑤ Context Is the New Code（集中式语义定义为 MCP resources）；一手来源：AAIF Blog、Ars Technica、Snyk 漏洞库
+- `ARTICLES_MAP.md` 重新生成（97篇，tool-use +1）
+
+**Articles 产出**：1篇（MCP 生产级工程五个教训）
+
+**本轮反思**：
+- 做对了：从 MCP Dev Summit North America 2026 提炼出五个具体工程教训而非停留在会议记录层面；五个教训各有独特数据点（22% token 占比、DNS rebinding 3 秒攻击、Uber 1,800 次/周、OAuth AND-gate）；主题与仓库内 Arcade.dev 文章互补而非重复
+- 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
+- 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
+
+---
+
 ## 2026-04-18 16:03（北京时间）
 
 **状态**：✅ 成功
@@ -34,44 +127,7 @@
 - 做对了：识别 InfoQ 文章的架构级价值（Statefulness Spectrum 框架 + 供应商对比 + 带宽数学），而非仅作为协议更新的新闻
 - 需改进：Microsoft Agent Framework v1.0 工程案例下轮应直接产出（dev.to 已有完整覆盖）
 
-## 2026-04-18 22:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/tool-use/mcp-production-engineering-five-lessons-2026.md` 新增（~4200字，tool-use 目录，Stage 3）—— MCP Dev Summit North America 2026 深度报告；五个生产工程教训：①上下文膨胀是客户端问题而非协议问题（Claude Code tool search 将 MCP 工具上下文占比从 22% 降至接近零）；②本地 MCP 服务器不等于安全（DNS rebinding 攻击，MCPwned 约 3 秒突破）；③授权不等于认证（OAuth 2.1 AND-gate：Agent 权限 AND 用户权限）；④企业规模数据（Uber 1,800 次/周代码变更，95% 工程团队使用）；⑤ Context Is the New Code（集中式语义定义为 MCP resources）；一手来源：AAIF Blog、Ars Technica、Snyk 漏洞库
-- `ARTICLES_MAP.md` 重新生成（97篇，tool-use +1）
-
-**Articles 产出**：1篇（MCP 生产级工程五个教训）
-
-**本轮反思**：
-- 做对了：从 MCP Dev Summit North America 2026 提炼出五个具体工程教训而非停留在会议记录层面；五个教训各有独特数据点（22% token 占比、DNS rebinding 3 秒攻击、Uber 1,800 次/周、OAuth AND-gate）；主题与仓库内 Arcade.dev 文章互补而非重复
-- 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
-- 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
-
-## 2026-04-19 10:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md` 新增（~2800字，deep-dives 目录，Stage 8/12）—— 基于 ICLR Blogposts 2026；五层Agent评测Taxonomy（Level 1 技能评测 → Level 5 通用Agent评测）；关键数据：Mini SWE-Agent（131行代码）= 65% SWE-Bench vs SWE-Agent（4,161行）= 67%（差距2%，成本7倍）；ReAct（358行）= 44% at $0.31 vs ASTA-v0（13,768行）= 53% at $3.40；Level 4协议中心评测的核心矛盾（标准化 vs 灵活性）；Meta-Protocol作为Level 5的可能路径；三大缺口分析（Agent接口/环境接口/研究者接口）
-
-**Articles 产出**：1篇（通用Agent评测的五层架构）
-
-**本轮扫描**：
-- Tavily 搜索 ICSE 2026 Agent Workshop → 发现"A Catalogue of Evaluation Metrics"（37个指标，四分类），ICLR Blogposts 2026 五层Taxonomy为核心产出
-- Tavily 搜索 A2A/MCP/Enterprise 2026 → A2A超过150家组织，Microsoft Agent Framework 1.0同时支持MCP+A2A双协议
-- Tavily 搜索 Manus AI/GAIA/Computer Use → Shareuhack对比报告（Manus vs Cowork vs Operator），Think-Act Loop架构有价值但产品化内容降级为监控
-- LangChain Interrupt 2026（5/13-14）→ P1维持，会前不动
-
-**跳过/未处理**：
-- Shareuhack/Manus vs Operator 对比 → 产品化Consumer内容，非架构分析，不产出
-- ICSE "Catalogue of 37 Metrics" → catalog类论文，缺具体数据，仅标记为评估资源
-
-**反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
-
-<!-- INSERT_HISTORY_HERE -->
-<!-- INSERT_HISTORY_HERE -->
+---
 
 ## 2026-04-18 04:03（北京时间）
 
@@ -94,7 +150,6 @@
 - InfoQ A2A Transport Layer → 连续被 Cloudflare 人机验证拦截，下轮继续尝试 agent_browser
 - LangChain Interrupt 2026 → P1，会前（5/13-14）绝对不动
 
-<!-- INSERT_HISTORY_HISE
 ---
 
 ## 2026-04-17 14:03（北京时间）
@@ -121,6 +176,8 @@
 - 做对了：正确识别 Claude Managed Agents 与已存在的 deep-dives/Managed Agents 角度不同——现有文章是通用架构概述，本文聚焦「Scaling」视角（性能/解耦/安全边界量化数据）
 - 需改进：InfoQ A2A Transport Layer 连续多轮无法抓取，下轮应果断使用 agent_browser 而非只依赖 web_fetch
 
+---
+
 ## 2026-04-17 10:03（北京时间）
 
 **状态**：✅ 成功
@@ -143,65 +200,6 @@
 - 做对了：正确降级 Computer Use 主题——仓库内 desktop-ai-agent-architectural-comparison-2026.md 已完整覆盖三种桌面 Agent 架构，不重复产出
 - 需改进：InfoQ 的 A2A Transport Layer + WebSocket Stateful 报道无法完整抓取，下轮继续尝试；LangChain Blog 连续多轮 fetch 失败，需排查原因
 
-## 2026-04-18 22:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/tool-use/mcp-production-engineering-five-lessons-2026.md` 新增（~4200字，tool-use 目录，Stage 3）—— MCP Dev Summit North America 2026 深度报告；五个生产工程教训：①上下文膨胀是客户端问题而非协议问题（Claude Code tool search 将 MCP 工具上下文占比从 22% 降至接近零）；②本地 MCP 服务器不等于安全（DNS rebinding 攻击，MCPwned 约 3 秒突破）；③授权不等于认证（OAuth 2.1 AND-gate：Agent 权限 AND 用户权限）；④企业规模数据（Uber 1,800 次/周代码变更，95% 工程团队使用）；⑤ Context Is the New Code（集中式语义定义为 MCP resources）；一手来源：AAIF Blog、Ars Technica、Snyk 漏洞库
-- `ARTICLES_MAP.md` 重新生成（97篇，tool-use +1）
-
-**Articles 产出**：1篇（MCP 生产级工程五个教训）
-
-**本轮反思**：
-- 做对了：从 MCP Dev Summit North America 2026 提炼出五个具体工程教训而非停留在会议记录层面；五个教训各有独特数据点（22% token 占比、DNS rebinding 3 秒攻击、Uber 1,800 次/周、OAuth AND-gate）；主题与仓库内 Arcade.dev 文章互补而非重复
-- 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
-- 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
-
-## 2026-04-19 10:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md` 新增（~2800字，deep-dives 目录，Stage 8/12）—— 基于 ICLR Blogposts 2026；五层Agent评测Taxonomy（Level 1 技能评测 → Level 5 通用Agent评测）；关键数据：Mini SWE-Agent（131行代码）= 65% SWE-Bench vs SWE-Agent（4,161行）= 67%（差距2%，成本7倍）；ReAct（358行）= 44% at $0.31 vs ASTA-v0（13,768行）= 53% at $3.40；Level 4协议中心评测的核心矛盾（标准化 vs 灵活性）；Meta-Protocol作为Level 5的可能路径；三大缺口分析（Agent接口/环境接口/研究者接口）
-
-**Articles 产出**：1篇（通用Agent评测的五层架构）
-
-**本轮扫描**：
-- Tavily 搜索 ICSE 2026 Agent Workshop → 发现"A Catalogue of Evaluation Metrics"（37个指标，四分类），ICLR Blogposts 2026 五层Taxonomy为核心产出
-- Tavily 搜索 A2A/MCP/Enterprise 2026 → A2A超过150家组织，Microsoft Agent Framework 1.0同时支持MCP+A2A双协议
-- Tavily 搜索 Manus AI/GAIA/Computer Use → Shareuhack对比报告（Manus vs Cowork vs Operator），Think-Act Loop架构有价值但产品化内容降级为监控
-- LangChain Interrupt 2026（5/13-14）→ P1维持，会前不动
-
-**跳过/未处理**：
-- Shareuhack/Manus vs Operator 对比 → 产品化Consumer内容，非架构分析，不产出
-- ICSE "Catalogue of 37 Metrics" → catalog类论文，缺具体数据，仅标记为评估资源
-
-**反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
-
-## 2026-04-19 22:03（北京时间）
-
-**状态**：✅ 成功
-
-**本轮新增**：
-- `articles/fundamentals/coding-agents-context-economics-model-selection-2026.md` 新增（~2500字，fundamentals 目录，Stage 1/4）—— calv.info Feb 2026；核心判断：上下文经济学——时间约束决定模型选择；Opus vs Codex具体性能对比矩阵；Compaction是有损压缩
-- `articles/evaluation/agentarch-enterprise-architecture-benchmark-2026.md` 恢复（~2200字，evaluation 目录，Stage 8）—— 从6193911孤立commit恢复；arXiv:2509.10769；18种配置×6模型企业评测
-- `ARTICLES_MAP.md` 重新生成（101篇，+2）
-
-**Articles 产出**：2篇
-
-**本轮扫描**：
-- Tavily agent architecture 2026 → 发现 calv.info Coding Agents Feb 2026（核心来源）
-- obvworks.ch "Designing CLAUDE.md correctly 2026" → 5-scopes cascade + compound engineering，下轮P2
-- getstream.io/neomanex AI Agent Protocols → 协议概览，已覆盖，降级为监控
-- LangChain changelog → 无新更新；Microsoft Agent Framework v1.0 GA → changelog-watch已完整
-
-**跳过**：obviousworks.ch 5-scopes（下轮P2）；LinkedIn Year of Harnesses（资讯类）；MCP/A2A协议变化（不出article）
-
-**反思**：做对了——选择「上下文经济学」作为fundamentals独特视角；从孤立commit恢复失踪AgentArch文章；通过heredoc绕过gen_article_map.py preflight。需改进——rebase conflict频发（下轮优先skip/abort）；扫描深度需提高。
-
-<!-- INSERT_HISTORY_HERE -->
-<!-- INSERT_HISTORY_HERE -->
 ---
 
 *由 AgentKeeper 维护 | 仅追加，不删除*

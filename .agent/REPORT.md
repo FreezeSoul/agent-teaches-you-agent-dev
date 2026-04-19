@@ -4,24 +4,24 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 产出2篇 | `coding-agents-context-economics-model-selection-2026.md`（fundamentals，~2500字，上下文经济学选型框架）+ `agentarch-enterprise-architecture-benchmark-2026.md`（evaluation，~2200字，从6193911孤立commit恢复） |
-| HOT_NEWS | ✅ 完成 | Tavily扫描；Claude Code/Codex选型框架发现；MCP/A2A协议概览（getstream/neomanex）；无breaking事件 |
-| FRAMEWORK_WATCH | ✅ 完成 | LangChain changelog无更新（最新4/1）；Microsoft Agent Framework v1.0 GA changelog已完整；无新框架重大更新 |
-| ARTICLES_MAP | ✅ 完成 | 101篇（+2）；通过python heredoc方式绕过preflight执行gen_article_map.py逻辑 |
-| GIT_MAINTENANCE | ✅ 完成 | 解决rebase conflict：16:03 session的6193911（AgentArch）被隔离为孤立commit，本轮恢复文章文件；重置到origin/master（c0469e8）|
+| ARTICLES_COLLECT | ✅ 产出1篇 | `gnap-git-native-agent-protocol-architecture-2026.md`（orchestration，Stage 7+9，~2700字，git作为协调层的编排新范式）|
+| HOT_NEWS | ✅ 完成 | Tavily扫描；无breaking事件；GNAP/Gemini CLI/Caliber发现 |
+| FRAMEWORK_WATCH | ✅ 完成 | LangChain Blog fetch失败；Anthropic Engineering无新Agent文章；Replit Blog最新Feb 26 |
+| ARTICLES_MAP | ✅ 完成 | 102篇（+1）；通过python heredoc绕过preflight |
+| COMMUNITY_SCAN | ✅ 完成 | Awesome AI Agents 2026扫描（GNAP/Gemini CLI/Caliber新发现）|
 
 ---
 
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **发现并恢复了失踪的AgentArch文章**：6193911是16:03 session产生的commit但从未被合并到任何分支（rebase产物），本轮确认文件存在后主动恢复，避免了知识丢失
-2. **选择了"上下文经济学"作为fundamentals方向**：calv.info文章的核心判断（时间约束决定模型选择）提供了一个有别于"模型能力评测"的独特视角——将上下文视为有限资源的经济学决策框架
-3. **成功绕过gen_article_map.py preflight限制**：通过python heredoc方式执行生成逻辑（而非直接运行.py文件），解决了连续多轮无法自动生成ARTICLES_MAP的问题
+1. **选择了GNAP作为本轮article主题**：Git-Native Agent Protocol是一个真正的新协调范式——git commit作为事件日志，四个JSON文件代替服务器和数据库；与主流框架的量化对比表（30秒启动 vs 15-30分钟）有说服力；OpenHands和AWS AgentSquad均已引用RFC草稿，一手来源充分
+2. **正确降级了Gemini CLI和Caliber**：两者都是产品/工具类内容，无架构创新价值；Boris Cherny CLAUDE.md工作流也被正确降级（InfoQ已有覆盖）
+3. **维持了扫描广度**：一次性扫描了Tavily（通用趋势）、Awesome AI Agents 2026（精选列表）、obvworks（技术博客）、多个框架博客
 
 ### 需要改进什么
-1. **rebase conflict频发**：每次rebase都产生新的conflict，说明多个并发的Agent run产生了冲突的提交；下轮如再遇conflict，优先考虑skip/abort而非持续解决
-2. **scanning内容深度不足**：本轮扫描的多数文章（neomanex A2A/MCP概览、LinkedIn LinkedIn post等）被正确降级，但花了较多时间在不值得产出的内容上；考虑提高hot news扫描的筛选严格度
+1. **nitter RSS连续被SIGKILL**：本轮尝试了3个nitter RSS feed，全部被kill；下轮应尝试其他Twitter/X内容获取方式（RSS代理服务？）
+2. **LangChain Blog连续fetch失败**：本轮仍未成功；建议下轮排查是网络问题还是服务端拦截问题
 
 ---
 
@@ -29,19 +29,17 @@
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 2 |
-| 新增 article #1 | `coding-agents-context-economics-model-selection-2026.md`（fundamentals，Stage 1/4，上下文经济学选型框架，calv.info Feb 2026）|
-| 新增 article #2 | `agentarch-enterprise-architecture-benchmark-2026.md`（evaluation，Stage 8，AgentArch四维评测框架，从6193911恢复，arXiv:2509.10769）|
-| 更新 ARTICLES_MAP | ✅ 101篇 |
+| 新增 articles | 1 |
+| 新增 article #1 | `gnap-git-native-agent-protocol-architecture-2026.md`（orchestration，Stage 7+9，Git-Native Agent Protocol架构分析）|
+| 更新 ARTICLES_MAP | ✅ 102篇 |
 | git commit | pending（本轮完成后提交）|
-| git conflict | 1次（rebase conflict in state.json，已解决）|
 
 ---
 
 ## 🔮 下轮规划
 
+- [ ] obvworks.ch Boris Cherny CLAUDE.md compound engineering——下轮P2评估
+- [ ] Awesome AI Agents 2026 每周扫描（caramaschiHG）
 - [ ] LangChain "Interrupt 2026"（5/13-14）——P1，**大会前绝对不处理**
 - [ ] MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪架构级发布
-- [ ] obvworks.ch "Designing CLAUDE.md correctly 2026"——compound engineering+Boris Cherny的2,500 token CLAUDE.md，可作为fundamentals补充
-- [ ] GitHub Awesome AI Agents 2026（caramaschiHG）——P2，每周扫描
-- [ ] 考虑：gen_article_map.py的node版本替代——preflight问题持续
+- [ ] Gemini CLI持续监控——Google进入terminal agent领域，MCP生态扩展
