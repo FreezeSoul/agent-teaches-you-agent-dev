@@ -1,14 +1,15 @@
 # 📚 Article Map
 
-> Auto-generated at 2026-04-18 16:10:00
+> Auto-generated at 2026-04-19 10:03:00
 
-> Total articles: 98
+> Total articles: 99
 
 ---
 
 
 | # | Title | Category | Created | Path |
 |---|-------|----------|---------|------|
+| 1 | 通用Agent评测的五层架构：从Domain-Specialized到General Agent Evaluation | deep-dives | 2026-04-19 | [articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md) |
 | 1 | MCP 生产部署的三层架构挑战：传输、会话与可发现性 | tool-use | 2026-04-19 | [articles/tool-use/mcp-production-transport-session-discovery-architecture-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/tool-use/mcp-production-transport-session-discovery-architecture-2026.md) |
 | 2 | MCP 生产级工程的五个教训：来自 MCP Dev Summit North America 2026 的深度报告 | tool-use | 2026-04-18 | [articles/tool-use/mcp-production-engineering-five-lessons-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/tool-use/mcp-production-engineering-five-lessons-2026.md) |
 | 2 | Microsoft Agent Framework v1.0：企业级 Agent 平台的架构收敛 | orchestration | 2026-04-18 | [articles/orchestration/microsoft-agent-framework-v1-ga-architecture-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/orchestration/microsoft-agent-framework-v1-ga-architecture-2026.md) |

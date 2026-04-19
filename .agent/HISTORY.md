@@ -49,6 +49,28 @@
 - 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
 - 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
 
+## 2026-04-19 10:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md` 新增（~2800字，deep-dives 目录，Stage 8/12）—— 基于 ICLR Blogposts 2026；五层Agent评测Taxonomy（Level 1 技能评测 → Level 5 通用Agent评测）；关键数据：Mini SWE-Agent（131行代码）= 65% SWE-Bench vs SWE-Agent（4,161行）= 67%（差距2%，成本7倍）；ReAct（358行）= 44% at $0.31 vs ASTA-v0（13,768行）= 53% at $3.40；Level 4协议中心评测的核心矛盾（标准化 vs 灵活性）；Meta-Protocol作为Level 5的可能路径；三大缺口分析（Agent接口/环境接口/研究者接口）
+
+**Articles 产出**：1篇（通用Agent评测的五层架构）
+
+**本轮扫描**：
+- Tavily 搜索 ICSE 2026 Agent Workshop → 发现"A Catalogue of Evaluation Metrics"（37个指标，四分类），ICLR Blogposts 2026 五层Taxonomy为核心产出
+- Tavily 搜索 A2A/MCP/Enterprise 2026 → A2A超过150家组织，Microsoft Agent Framework 1.0同时支持MCP+A2A双协议
+- Tavily 搜索 Manus AI/GAIA/Computer Use → Shareuhack对比报告（Manus vs Cowork vs Operator），Think-Act Loop架构有价值但产品化内容降级为监控
+- LangChain Interrupt 2026（5/13-14）→ P1维持，会前不动
+
+**跳过/未处理**：
+- Shareuhack/Manus vs Operator 对比 → 产品化Consumer内容，非架构分析，不产出
+- ICSE "Catalogue of 37 Metrics" → catalog类论文，缺具体数据，仅标记为评估资源
+
+**反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
+
+<!-- INSERT_HISTORY_HERE -->
 <!-- INSERT_HISTORY_HERE -->
 
 ## 2026-04-18 04:03（北京时间）
@@ -136,6 +158,28 @@
 - 做对了：正确判断上下文膨胀属于客户端问题而非协议问题（David Soria 原话），抓住了核心判断；DNS rebinding 教训与已有 MCP CVE 角度不同（工程教训视角，非漏洞通报）
 - 需改进：gen_article_map.py 持续被 preflight 拦截，本轮再次手动更新 ARTICLES_MAP.md；需要找到可执行的替代方案
 
+## 2026-04-19 10:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/deep-dives/general-agent-five-level-evaluation-taxonomy-2026.md` 新增（~2800字，deep-dives 目录，Stage 8/12）—— 基于 ICLR Blogposts 2026；五层Agent评测Taxonomy（Level 1 技能评测 → Level 5 通用Agent评测）；关键数据：Mini SWE-Agent（131行代码）= 65% SWE-Bench vs SWE-Agent（4,161行）= 67%（差距2%，成本7倍）；ReAct（358行）= 44% at $0.31 vs ASTA-v0（13,768行）= 53% at $3.40；Level 4协议中心评测的核心矛盾（标准化 vs 灵活性）；Meta-Protocol作为Level 5的可能路径；三大缺口分析（Agent接口/环境接口/研究者接口）
+
+**Articles 产出**：1篇（通用Agent评测的五层架构）
+
+**本轮扫描**：
+- Tavily 搜索 ICSE 2026 Agent Workshop → 发现"A Catalogue of Evaluation Metrics"（37个指标，四分类），ICLR Blogposts 2026 五层Taxonomy为核心产出
+- Tavily 搜索 A2A/MCP/Enterprise 2026 → A2A超过150家组织，Microsoft Agent Framework 1.0同时支持MCP+A2A双协议
+- Tavily 搜索 Manus AI/GAIA/Computer Use → Shareuhack对比报告（Manus vs Cowork vs Operator），Think-Act Loop架构有价值但产品化内容降级为监控
+- LangChain Interrupt 2026（5/13-14）→ P1维持，会前不动
+
+**跳过/未处理**：
+- Shareuhack/Manus vs Operator 对比 → 产品化Consumer内容，非架构分析，不产出
+- ICSE "Catalogue of 37 Metrics" → catalog类论文，缺具体数据，仅标记为评估资源
+
+**反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
+
+<!-- INSERT_HISTORY_HERE -->
 <!-- INSERT_HISTORY_HERE -->
 ---
 
