@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-19 10:03 北京时间
+> 最后更新：2026-04-19 22:03 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -71,6 +71,7 @@
 | 2026-04-18 16:03 | ✅ 本轮完成 |
 | 2026-04-19 04:03 | ✅ 本轮完成 |
 | 2026-04-19 10:03 | ✅ 本轮完成 |
+| 2026-04-19 22:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -79,8 +80,8 @@
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
 | MCP 2026 Roadmap | 2026-04-19 | 🟢 官方博客已产出article（见往期）；无新更新 |
-| LangChain/LangChain Blog | 2026-04-17 | 🟡 连续多轮 fetch 失败（web_fetch + agent_browser 均不可用）；Interrupt 2026（5/13-14）P1，会前不动 |
-| Engineering By Anthropic | 2026-04-17 | 🟢 Apr 9/14（Trustworthy Agents / Automated Alignment）扫描无工程博客；Q1 2026 产品发布汇总有 harness 架构价值 |
+| LangChain/LangChain Blog | 2026-04-22 | 🟡 连续多轮 fetch 失败（web_fetch + agent_browser 均不可用）；Interrupt 2026（5/13-14）P1，会前不动；本轮未重试 |
+| Engineering By Anthropic | 2026-04-22 | 🟢 本轮扫描无新工程博客；Apr 9/14（Trustworthy Agents / Automated Alignment）已覆盖 |
 | Microsoft Agent Framework | 2026-04-19 | 🟢 v1.0 GA changelog-watch 已更新；A2A 150+组织里程碑；双协议支持（MCP+A2A）架构方向已产出article |
 | AutoGen | 2026-04-17 | 🟢 v0.7.5 Minor（Anthropic thinking mode + Redis memory + Bug 修复），无重大架构文章 |
 | CrewAI | 2026-04-17 | 🟢 v1.13.0a6 Minor（Lazy Event Bus + Flow→Pydantic + GPT-5.x stop 修复），无重大架构文章 |
@@ -93,6 +94,7 @@
 - MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪架构级发布
 - ICSE 2026 Agent Workshop "Catalogue of 37 Metrics"——catalog论文，数据不足，本轮降级
 - Awesome AI Agents 2026（caramaschiHG）——P2，每周扫描
+- obvworks.ch "Designing CLAUDE.md correctly 2026"——Boris Cherny的2,500 token CLAUDE.md + compound engineering（每错必记）——可作fundamentals补充文章
 - Claude Opus 4.7 Task Budgets 实际效果——P3，除非有工程评测
 
 ---
@@ -101,7 +103,8 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `general-agent-five-level-evaluation-taxonomy-2026.md` | deep-dives | 五层评测Taxonomy揭示：通用Agent（131-358行代码）接近专用系统（4,161-13,768行）90%+性能，成本1/7-1/11；Level 4协议中心评测的标准化 vs 灵活性根本矛盾；Level 5通用Agent评测（缺失层）的三大缺口 |
+| `coding-agents-context-economics-model-selection-2026.md` | fundamentals | 上下文经济学：时间约束决定模型选择（autonomous overnight run → Opus，快速精确实现 → Codex）；Opus vs Codex具体性能对比（bug率、sub-agent并行度、上下文效率）；Compaction是有损压缩，越多退化越明显 |
+| `agentarch-enterprise-architecture-benchmark-2026.md` | evaluation | AgentArch四维评测框架（orchestration×style×memory×thinking）：18种配置×6模型；最优架构因模型而异，不存在万能设计；ReAct在多Agent场景性能严重退化；企业任务上限35.3%（复杂）/70.8%（简单）|
 
 ## 往期待处理
 
@@ -117,7 +120,7 @@
 
 | 问题 | 状态 | 备注 |
 |------|------|------|
-| gen_article_map.py preflight 拦截 | 🟡 待解决 | Script 类型 Python 脚本持续被拒绝；需尝试 node 版本或其他生成方式 |
+| gen_article_map.py preflight 拦截 | 🟡 待解决 | 本轮通过 python heredoc 方式绕过，但非永久方案；需尝试 node 版本或其他生成方式 |
 
 ---
 

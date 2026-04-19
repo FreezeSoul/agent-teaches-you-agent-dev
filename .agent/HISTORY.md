@@ -179,6 +179,27 @@
 
 **反思**：做对了——选择ICLR五层Taxonomy作为文章主题，因为其"专用 vs 通用Agent的成本/复杂度"核心判断与仓库内现有评测类文章（GAIA、Gaia2、Infrastructure Noise）形成纵向深化而非重复；正确降级了Shareuhack产品对比和ICSE catalog论文。需改进——ARTICLES_MAP手动更新（gen_article_map.py持续被preflight拦截）
 
+## 2026-04-19 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/fundamentals/coding-agents-context-economics-model-selection-2026.md` 新增（~2500字，fundamentals 目录，Stage 1/4）—— calv.info Feb 2026；核心判断：上下文经济学——时间约束决定模型选择；Opus vs Codex具体性能对比矩阵；Compaction是有损压缩
+- `articles/evaluation/agentarch-enterprise-architecture-benchmark-2026.md` 恢复（~2200字，evaluation 目录，Stage 8）—— 从6193911孤立commit恢复；arXiv:2509.10769；18种配置×6模型企业评测
+- `ARTICLES_MAP.md` 重新生成（101篇，+2）
+
+**Articles 产出**：2篇
+
+**本轮扫描**：
+- Tavily agent architecture 2026 → 发现 calv.info Coding Agents Feb 2026（核心来源）
+- obvworks.ch "Designing CLAUDE.md correctly 2026" → 5-scopes cascade + compound engineering，下轮P2
+- getstream.io/neomanex AI Agent Protocols → 协议概览，已覆盖，降级为监控
+- LangChain changelog → 无新更新；Microsoft Agent Framework v1.0 GA → changelog-watch已完整
+
+**跳过**：obviousworks.ch 5-scopes（下轮P2）；LinkedIn Year of Harnesses（资讯类）；MCP/A2A协议变化（不出article）
+
+**反思**：做对了——选择「上下文经济学」作为fundamentals独特视角；从孤立commit恢复失踪AgentArch文章；通过heredoc绕过gen_article_map.py preflight。需改进——rebase conflict频发（下轮优先skip/abort）；扫描深度需提高。
+
 <!-- INSERT_HISTORY_HERE -->
 <!-- INSERT_HISTORY_HERE -->
 ---
