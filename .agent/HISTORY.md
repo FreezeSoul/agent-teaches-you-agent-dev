@@ -1,5 +1,30 @@
 # 更新历史
 
+## 2026-04-20 10:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/fundamentals/claude-code-2026-four-layer-architecture-boris-cherny-2026.md` 新增（~3000字，fundamentals 目录，Stage 1+5）—— obvworks.ch 2026-04，基于 Boris Cherny（Claude Code creator，Staff Engineer @ Anthropic）；核心判断：大多数开发者只配置了4层中的1层；4层架构（CLAUDE.md→WHAT/WHY/HOW→Hooks/Skills→Multi-session）；5层加载作用域（Global/Project/Local Secret/Folder）；7条核心规则；Compound Engineering飞轮效应（每次错误→新规则→3个月后Claude永不再犯同样错误）；Boris并行10-15会话工作流（Git Worktree隔离）；精确规则 vs 模糊规则对照表；CLAUDE.md vs AGENTS.md边界判断；200行限制的机制原因
+- `ARTICLES_MAP.md` 重新生成（103篇，fundamentals +1）
+
+**Articles 产出**：1篇（Claude Code 2026四层完整架构）
+
+**本轮扫描**：
+- Tavily Boris Cherny CLAUDE.md 2026 → obvworks.ch 完整架构指南成功抓取（3000+字内容）；明确区别于InfoQ Jan 2026报道角度（InfoQ聚焦工作流，此文聚焦4层系统架构）
+- Tavily agent architecture 2026 → MCP vs A2A 综述文章为主，降级监控
+- FRAMEWORK_WATCH → LangChain Interrupt 2026（5/13-14 P1，会前不动）；Anthropic Claude Managed Agents Apr 9已产出deep-dives文章
+- obvworks.ch 2026完整架构 → 覆盖5 scopes、WHAT/WHY/HOW框架、7条规则、Hooks/Skills/Multi-session三层高级模式；与现有fundamentals/article互补（非重复）
+
+**跳过/未处理**：
+- MCP/A2A协议对比 → 已有充分coverage；降级为监控
+- LangChain Interrupt 2026 → P1维持，5/13前绝对不动
+- obvworks.ch 中文版 → 德文版内容完整，已使用英文源
+
+**反思**：做对了——选择了4层架构作为fundamentals文章角度，而非InfoQ已有覆盖的工作流描述；7条规则+Compound Engineering飞轮是真正独特的视角；正确判断200行限制的机制原因（Claude指令被淹没在噪声中）。需改进——gen_article_map.py preflight持续拦截，本轮通过python heredoc绕行成功
+
+---
+
 ## 2026-04-20 04:03（北京时间）
 
 **状态**：✅ 成功

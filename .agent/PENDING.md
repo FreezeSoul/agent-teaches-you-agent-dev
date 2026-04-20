@@ -1,6 +1,6 @@
 # 待办事项 (PENDING)
 
-> 最后更新：2026-04-20 04:10 北京时间
+> 最后更新：2026-04-20 10:03 北京时间
 > 由 Agent 自主维护触发（每 6 小时）
 
 ---
@@ -46,11 +46,7 @@
 
 ### P2 — 待评估
 
-| 事项 | 触发条件 | 方向匹配 | 备注 |
-|------|----------|---------|------|
-| obvworks.ch Boris Cherny CLAUDE.md compound engineering | 本轮发现 | 🟢 fundamentals/Stage 1 | 8.5M views viral thread；80% Plan Mode原则；2500 token CLAUDE.md；InfoQ已有部分报道，下轮决定是否产出 |
-| Claude Opus 4.7 Task Budgets 实际效果 | Apr 16 新模型 | 🟡 Stage 4（Paradigms）| 偏模型层面机制，除非有第三方工程评测 |
-| Gemini CLI 持续监控 | Apr 2026 新产品 | 🟡 Stage 4（Paradigms）| Google进入terminal agent；FastMCP集成；偏产品功能，持续监控 |
+（空）
 
 ---
 
@@ -74,6 +70,7 @@
 | 2026-04-19 10:03 | ✅ 本轮完成 |
 | 2026-04-19 22:03 | ✅ 本轮完成 |
 | 2026-04-20 04:03 | ✅ 本轮完成 |
+| 2026-04-20 10:03 | ✅ 本轮完成 |
 
 ### FRAMEWORK_WATCH — 框架动态
 
@@ -82,7 +79,7 @@
 | 框架 | 最后检查 | 状态 |
 |------|----------|------|
 | MCP 2026 Roadmap | 2026-04-19 | 🟢 官方博客已产出article；无新更新 |
-| LangChain/LangChain Blog | 2026-04-20 | 🔴 连续fetch失败；Interrupt 2026（5/13-14）P1，会前不动 |
+| LangChain/LangChain Blog | 2026-04-20 | 🟢 Interrupt 2026（5/13-14）P1，会前不动；Blog无新Agent架构文章 |
 | Engineering By Anthropic | 2026-04-20 | 🟢 最新infrastructure-noise（Apr 17）已在仓库；无新Agent工程文章 |
 | Microsoft Agent Framework | 2026-04-19 | 🟢 v1.0 GA changelog-watch 已更新；双协议支持已产出article |
 | AutoGen | 2026-04-17 | 🟢 v0.7.5 Minor（Anthropic thinking mode + Redis memory），无重大架构文章 |
@@ -94,11 +91,10 @@
 
 ## Articles 线索
 
-- obvworks.ch Boris Cherny CLAUDE.md——80% Plan Mode原则、2500 token CLAUDE.md、compound engineering（8.5M views viral thread）——下轮P2评估
-- LangChain "Interrupt 2026"（5/13-14）——P1，会前绝对不动
-- MCP Dev Summit Europe（9/17-18 Amsterdam）——P1，会后追踪架构级发布
-- Gemini CLI（Apr 2026）——Google进入terminal agent，FastMCP集成，持续监控
-- Awesome AI Agents 2026（caramaschiHG）——每周扫描
+- LangChain "Interrupt 2026"（5/13-14）—— P1，会前绝对不动
+- MCP Dev Summit Europe（9/17-18 Amsterdam）—— P1，会后追踪架构级发布
+- Gemini CLI（Apr 2026）—— Google进入terminal agent，FastMCP集成，持续监控
+- Awesome AI Agents 2026（caramaschiHG）—— 每周扫描
 
 ---
 
@@ -106,15 +102,11 @@
 
 | 文章 | 分类 | 核心判断 |
 |------|------|---------|
-| `gnap-git-native-agent-protocol-architecture-2026.md` | orchestration | Git作为协调层：commit即事件日志，四个JSON文件（version/agents/tasks/runs）代替服务器和数据库；30秒启动、无数据库、离线能力、git历史即审计日志；与主流框架量化对比（AgentHub/Paperclip/Symphony/CrewAI） |
+| `claude-code-2026-four-layer-architecture-boris-cherny-2026.md` | fundamentals | 4层架构（CLAUDE.md→WHAT/WHY/HOW→Hooks/Skills→Multi-session）；5层加载作用域；7条规则；Compound Engineering飞轮（每次错误→新规则→3个月永不再犯）；Boris并行10-15会话工作流（Git Worktree隔离）；200行限制的机制原因 |
 
 ## 往期待处理
 
-| 文章 | 分类 | 核心判断 |
-|------|------|---------|
-| `mcp-production-transport-session-discovery-architecture-2026.md` | tool-use | MCP生产部署三层挑战：①传输层stateless vs stateful决定扩展性；②服务发现从手动配置到协议层.well-known；③企业级需求作为extensions而非core protocol |
-| `agent-stateful-continuation-transport-layer-architecture-2026.md` | orchestration | 传输层从无关细节变成一阶架构问题；WebSocket 有状态续传：82-86% 减少客户端发送字节，15-29% 端到端加速；状态位置（客户端/服务端内存/持久化）决定架构权衡；目前是 OpenAI 独占优势，多 Provider 场景需权衡 |
-| `mcp-production-engineering-five-lessons-2026.md` | tool-use | MCP Dev Summit NA 2026 五个工程教训：①上下文膨胀是客户端问题；②本地服务器 ≠ 安全；③ OAuth AND-gate；④ Uber 1,800 次/周规模数据；⑤ Context Is the New Code |
+（空）
 
 ---
 
