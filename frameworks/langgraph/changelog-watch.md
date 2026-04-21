@@ -6,6 +6,15 @@
 
 ## 更新记录
 
+**langgraph 1.1.9（2026-04-21）— ⭐ 修复 ReplayState 子图传播问题**：
+- `fix(langgraph): don't propagate ReplayState to subgraphs on plain resume (#7561)` — 修复 Plain resume 模式下 ReplayState 被错误传播到子图的问题，这是 v1.1 引入 ReplayState 机制后的重要 BugFix
+- `chore(langgraph): undo unnecessary changes in stream handler (#7536)` — 流处理器的不必要变更回退
+
+**langgraph 1.1.8（2026-04-17）**：
+- `fix(langgraph): remove strict add_handler type check that breaks OTel instrumentation (#7544)` — **重要**：移除严格的 add_handler 类型检查，该检查破坏了 OpenTelemetry instrumentation 的接入，修复了生产环境中 OTel 集成的问题
+- `release(prebuilt): 1.0.10`
+- `release(cli): 0.4.23`
+
 ### 2026-04（重要）
 
 **langgraph 1.1.7a1（2026-04-10）— ⭐ Graph Lifecycle Callbacks 正式引入**：

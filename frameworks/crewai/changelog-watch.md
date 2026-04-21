@@ -6,7 +6,39 @@
 
 ## 更新记录
 
+### 2026-04-20 · v1.14.3a1
+
+**来源**：[GitHub Release v1.14.3a1](https://github.com/crewaiinc/crewai/releases/tag/v1.14.3a1)
+
+| 变更类型 | 变更内容 |
+|---------|---------|
+| **新能力** | **Standalone Agent Checkpoint/Fork 支持**：为独立 Agent 添加 checkpoint 和 fork 支持，与之前仅为 Crew 提供的能力对齐 |
+| **Bug 修复** | Preserve thought_signature in Gemini streaming tool calls；修复 dry-run 顺序和 devtools release 中 stale branch 处理 |
+| **测试** | 使用未来日期的 checkpoint prune 测试防止时间依赖失败 |
+
+
+### 2026-04-17 · v1.14.2 ⭐（正式版）
+
+
+**来源**：[GitHub Release v1.14.2](https://github.com/crewaiinc/crewai/releases/tag/v1.14.2)
+
+| 变更类型 | 变更内容 |
+|---------|---------|
+| **新能力** | **Checkpoint Fork with Lineage Tracking**：Agent 的 checkpoint/fork 能力正式版，支持完整的执行 lineage 追踪 |
+| **新能力** | **Checkpoint CLI 增强**：`checkpoint resume`/`diff`/`prune` 命令新增更好的可发现性设计 |
+| **新能力** | **`from_checkpoint` 参数**：新增 `Agent.kickoff(from_checkpoint=...)` 参数，支持从指定 checkpoint 恢复执行 |
+| **新能力** | **Deploy Validation CLI**：新增部署校验命令 |
+| **LLM 追踪增强** | Token 追踪新增 reasoning tokens 和 cache creation tokens 记录 |
+| **安全修复** | 修复 cyclic JSON schemas in MCP tool resolution；bump python-multipart → 0.0.26；bump pypdf → 6.10.1 |
+
+
+**为什么重要**：
+- **Checkpoint Fork 是生产级可靠性的关键能力**——有了 lineage tracking，Agent 的每次「分支」操作可审计、可回溯，这是 Autonomous Agent 从 demo 走向生产的关键基础设施
+- **Standalone Agent 的 checkpoint 支持** 意味着即使不组成 Crew，单个 Agent 也能使用 checkpoint/fork，企业场景的采用门槛降低
+- MCP tool resolution 的 cyclic JSON schema 修复是 v1.14 重要的稳定性改进
+
 ### 2026-04-01 · v1.13.0a6 ⭐（最新预发布）
+
 
 **来源**：[GitHub Release v1.13.0a6](https://github.com/crewaiinc/crewai/releases/tag/v1.13.0a6) | 仓库名已确认为 `crewaiinc/crewai`（非 crewAIInc/crewAI）
 
