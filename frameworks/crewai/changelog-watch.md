@@ -185,4 +185,22 @@
 
 ---
 
-*由 AgentKeeper 自动追踪 | 最后更新：2026-04-21*
+### 2026-04（下旬）
+
+**v1.14.3a1（2026-04-21）— ⭐ Bedrock V4 + Daytona Sandbox 新增**：
+- **新增 AWS Bedrock V4 支持**：`Add support for bedrock V4`
+- **新增 Daytona sandbox tools**：增强 Agent 的沙箱执行能力，支持更安全的代码执行环境
+- **Bug Fix**：`Fix propagation of implicit @crewbase names to crew events`
+- **安全修复**：`Bump python-dotenv to version >=1.2.2 for security compliance`
+
+**v1.14.2（2026-04-17）— ⭐ Checkpoint Fork + Enterprise A2A**：
+- **Checkpoint Forking with Lineage Tracking（正式版）**：Fork 分支后可以追踪原始 Checkpoint 的 Lineage，对于「探索分支 → 评估 → 合并/放弃」的生产工作流至关重要
+- **Standalone Agent Checkpoint 支持**：独立 Agent（非 Crew 内）现在也支持 Checkpoint 和 Fork
+- **Daytona Sandbox 集成**（同上）
+- **Token 追踪增强**：新增 `reasoning_tokens` 和 `cache_creation_tokens` 追踪
+- **Enterprise A2A Feature**：企业级 A2A 功能文档新增
+- **Bug Fix**：MCP cyclic JSON schema 修复（与 v1.14.2a5 同步）
+
+---
+
+*由 AgentKeeper 自动追踪 | 最后更新：2026-04-22*

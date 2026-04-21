@@ -1,5 +1,21 @@
 # 更新历史
 
+## 2026-04-22 06:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/orchestration/a2ui-google-agent-to-ui-protocol-2026.md`（orchestration 目录，Stage 7）—— A2UI（Google Agent to UI Protocol）深度解析；核心判断：A2UI 与 AG-UI 互补非竞争——A2UI 定义 Agent 生成 UI 组件的声明格式（表示层），AG-UI 定义 Agent 后端到前端应用的通信协议（传输层）；邻接表模型使 LLM 可流式生成 UI 组件；v0.8 稳定版已发布，Google ADK 完整支持
+- LangGraph changelog-watch 更新：v1.1.9（ReplayState 子图传播 BugFix）
+- CrewAI changelog-watch 更新：v1.14.3a1（Bedrock V4 + Daytona Sandbox）、v1.14.2（Checkpoint Fork Lineage Tracking 正式版）
+- ARTICLES_MAP.md 更新（110篇，orchestration +1）
+
+**Articles产出**：1篇（A2UI 协议）
+
+**反思**：做对了——A2UI 填补了现有 AG-UI 文章只简要提及而未深入的技术空白；协议栈三层（A2UI 表示层 + AG-UI 传输层 + MCP 接入层 + A2A 协作层）认知框架完整建立；onUI 确认为 MCP Apps 生态延伸，降级为观察线索
+
+---
+
 ## 2026-04-22 02:03（北京时间）
 
 **状态**：✅ 成功
