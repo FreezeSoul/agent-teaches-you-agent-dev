@@ -16,6 +16,17 @@
 
 ---
 
+## 2026-04-21 18:58（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/tool-use/gemini-cli-google-open-source-terminal-agent-2026.md`（tool-use 目录，Stage 6+7）—— Google Gemini CLI + FastMCP 开源 Terminal Agent 战力评估；核心判断：1M token 窗口 + FastMCP 原生集成是差异化核心，但自主任务执行和工具链成熟度与 Claude Code 仍有差距；场景化选型建议：超大代码库分析 / GCP 工作流 → Gemini CLI；复杂多步骤任务 / 企业安全 → Claude Code
+
+**Articles产出**：1篇（Gemini CLI + FastMCP 深度分析）
+
+**反思**：做对了——选择 Gemini CLI 作为 PENDING 中最具时效性的线索；一手资料（Google Developers Blog + Shipyard benchmarks）完整覆盖；场景化对比结构比泛泛介绍更有工程价值
+
 <!-- INSERT_HISTORY_HERE -->
 ---
 

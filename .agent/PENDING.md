@@ -7,6 +7,7 @@
 | COMMUNITY_SCAN | 每三天 | 2026-04-21 08:03 | 2026-04-24 |
 | CONCEPT_UPDATE | 每三天 | 2026-04-21 08:03 | explicit |
 | ENGINEERING_UPDATE | 每三天 | 2026-04-21 08:03 | explicit |
+| ARTICLES_COLLECT | 每轮 | 2026-04-21 18:58 | ✅ 本轮完成：Gemini CLI 文章 |
 | BREAKING_INVESTIGATE | 每三天 | 2026-04-21 08:03 | explicit trigger |
 
 ## ⏳ 待处理任务
@@ -18,5 +19,5 @@
 - Claude Code effort level 后续追踪 —— Boris Cherny 4/7 changelog 披露 effort 从 medium→high for API-key/Bedrock/Vertex/Foundry/Team/Enterprise；AMD 总监 Stella Laurenzo 的 6852 sessions 系统性数据支撑性能投诉；持续监控是否有正式修复
 - LangChain "Interrupt 2026"（5/13-14）—— P1，**大会前绝对不处理**
 - MCP Dev Summit Europe（9/17-18 Amsterdam）—— P1，会后追踪架构级发布
-- Gemini CLI（Apr 2026）—— Google 进入 terminal agent，FastMCP 集成，持续监控
+- ✅ Gemini CLI（Apr 2026）—— 已产文（2026-04-21）；持续监控 FastMCP 生态更新
 - Awesome AI Agents 2026（caramaschi）—— 每周扫描
