@@ -4,6 +4,52 @@
 
 ---
 
+## 2026-04-22｜langchain-core 1.3.0 稳定版发布 + 密集补丁周期
+
+**版本**：langchain-core 1.3.0（稳定版，2026-04-17）
+**性质**：🟡 Minor（框架演进）
+**来源**：[GitHub Release](https://github.com/langchain-ai/langchain/releases/tag/langchain-core%401.3.0)
+
+### 关键变更：langchain-core 1.3.0
+
+| 变更 | 说明 |
+|------|------|
+| **checkpoint_ns backward compat** | 在 streaming metadata 中保持 checkpoint_ns 行为，确保向后兼容 |
+| **chat model / LLM invocation params** | 新增 chat model 和 LLM 调用参数内省能力（来自 1.3.0a3）|
+
+### 密集补丁周期（2026-04-07 ~ 2026-04-17）
+
+自上次记录（1.2.23，2026-04-01）以来，langchain-core 共发布 **9 个版本**：
+
+| 版本 | 日期 | 关键变更 |
+|------|------|---------|
+| 1.2.27 | 04-07 | deprecated prompt save path 符号链接解析漏洞修复（安全）|
+| 1.2.28 | 04-08 | 依赖刷新 |
+| 1.3.0a1 | 04-10 | alpha1 |
+| 1.3.0a2 | 04-13 | alpha2 |
+| 1.2.29 | 04-14 | patch |
+| 1.2.30 | 04-15 | patch |
+| 1.3.0a3 | 04-16 | alpha3 |
+| 1.2.31 | 04-16 | patch |
+| **1.3.0** | **04-17** | **稳定版发布** |
+
+**为什么重要**：langchain-core 的快速发布节奏（9版本/16天）表明安全补丁和依赖更新进入高频周期；1.3.0 稳定版是自 1.2.x 以来的首个主版本次要更新，带来 checkpoint 行为改进。
+
+### 伙伴包更新（同期）
+
+| 包 | 版本 | 日期 | 关键变更 |
+|----|------|------|---------|
+| langchain-openai | 1.1.16 | 04-21 | streaming 下 `prompt_cache_retention` drift 容忍度修复 |
+| langchain-openai | 1.1.15 | 04-20 | streaming `dict response` 项兼容、azure chat profiles 推断 |
+| langchain-openai | 1.1.14 | 04-16 | SSRF-safe transport 用于图像 token counting |
+| langchain-anthropic | 1.4.1 | 04-17 | opus 4.7 features 支持、null encrypted_content 剥离 |
+| langchain-text-splitters | 1.1.2 | 04-16 | SSRF-safe transport in `split_text_from_url` |
+| langchain-huggingface | 1.2.2 | 04-16 | hostname 验证加固、拒绝 URL in repo_id |
+
+**版本判断**：Minor（安全补丁 + SSRF 加固为主，无 Breaking Changes）
+
+---
+
 ## 2026-04-01｜langchain-core 1.2.23：安全补丁 + 性能优化
 
 **版本**：langchain-core 1.2.23
