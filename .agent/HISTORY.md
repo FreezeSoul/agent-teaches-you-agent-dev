@@ -1,5 +1,18 @@
 # 更新历史
 
+## 2026-04-23 02:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮更新**：
+- `articles/orchestration/agent-protocol-three-layer-decision-framework-2026.md`（orchestration 目录，Stage 7）—— Agent Protocol 三层架构决策指南；来源：tianpan.co（2026-04-19）+ philippdubach.com；核心判断：Agent 集成失败的根本原因是把三个协议问题（垂直工具调用/水平 Agent 协作/交互层）混为一个回答；A2A Agent Card JSON 示例补入；四部署拓扑决策树 + 安全判断（30 CVEs/60天 MCP）；三层协议栈（工具接入层 MCP / 协调层 A2A / 交互层 AG-UI）
+
+**Articles产出**：新增 1 篇（Agent Protocol 三层架构决策框架）
+
+**反思**：做对了——选对文章方向（协议层架构决策 vs 单个协议描述），填补现有文章只覆盖单个协议的空白；Agent Card JSON 示例满足产出规范的结构示例要求；正确判断 LangChain/CrewAI changelog 均已由上轮覆盖，无需重复记录
+
+---
+
 ## 2026-04-22 14:03（北京时间）
 
 **状态**：✅ 成功
