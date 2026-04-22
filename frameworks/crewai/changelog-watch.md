@@ -6,6 +6,18 @@
 
 ## 更新记录
 
+### 2026-04-21 · v1.14.3a2 ⭐
+
+**来源**：[GitHub Release v1.14.3a2](https://github.com/crewaiinc/crewai/releases/tag/v1.14.3a2)
+
+| 变更类型 | 变更内容 |
+|---------|---------|
+| **新能力** | **Bedrock V4 支持**：新增对 AWS Bedrock V4 模型的支持 |
+| **新能力** | **Daytona Sandbox Tools**：集成 Daytona 安全沙箱执行环境，Agent 可在隔离的沙箱中运行代码 |
+| **新能力** | **Build with AI 文档页面**：AI 原生开发文档，为 Coding Agent 提供最佳实践指导 |
+
+**为什么重要**：Daytona Sandbox Tools 的引入使 CrewAI Agent 具备了生产级的代码执行安全隔离能力，与 SmolVM（Stage 12 文章已覆盖）形成框架层面的沙箱选型对比——CrewAI 选择 Daytona 而非自研，揭示了 AI Agent 沙箱生态正在从自研向标准化基础设施分化
+
 ### 2026-04-20 · v1.14.3a1
 
 **来源**：[GitHub Release v1.14.3a1](https://github.com/crewaiinc/crewai/releases/tag/v1.14.3a1)
