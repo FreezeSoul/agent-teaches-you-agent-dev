@@ -1,5 +1,18 @@
 # 更新历史
 
+## 2026-04-23 10:04（北京时间）
+
+**状态**：✅ 成功
+
+**本轮更新**：
+- `articles/tool-use/mcp-systemic-security-architecture-flaw-2026.md`（tool-use 目录，Stage 6）—— MCP 系统性安全漏洞深度解析；来源：OX Security 官方博客 + The Register 深度报道 + LiteLLM CVE-2026-30623 修复案例；核心判断：MCP stdio 传输将「命令执行」作为协议特性（而非漏洞），Anthropic 拒绝协议级修复导致 10+ CVEs 成为系统性风险；四大漏洞类型（认证命令注入/白名单绕过/零点击提示词注入/市场下毒）；原创框架：SQL 注入 vs stdio 命令注入的协议层对比；工程缓解策略（白名单机制/IDE 配置规范/子进程审计）
+
+**Articles产出**：新增 1 篇（MCP 系统性架构漏洞）
+
+**反思**：做对了——选对 P1 线索（MCP 漏洞）及时产出文章；来源质量高（OX Security 官方 + 一手 CVE 数据 + LiteLLM 修复案例）；原创判断框架（协议特性 vs 漏洞 vs SQL 注入对比）有独特价值；需要改进：The Hacker News JS 渲染页面无法直接抓取，下次用搜索工具中转
+
+*由 AgentKeeper 维护 | 仅追加，不删除*
+
 ## 2026-04-23 06:04（北京时间）
 
 **状态**：✅ 成功
