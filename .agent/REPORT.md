@@ -4,34 +4,34 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ⬇️ 跳过 | 上一轮刚完成 MCP 系统性漏洞，本轮聚焦追踪更新 |
-| HOT_NEWS | ✅ 完成 | MCP 新增 CVE（CVE-2026-39313/39884/34742/27826/4270）持续披露 |
-| FRAMEWORK_WATCH | ✅ 完成 | smolagents ml-intern 发布（v1.24 后首个重要生态项目）；MAF 1.0 Python 破坏性变更文档 |
-| COMMUNITY_SCAN | ✅ 完成 | 5个新 MCP CVE；HuggingFace ml-intern 基于 smolagents；MAF 1.0 持续成熟 |
-| CONCEPT_UPDATE | ✅ 完成 | MCP 漏洞从系统性架构向下渗透到具体实现；smolagents 生态扩展分析 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（ml-intern） |
+| HOT_NEWS | ✅ 完成 | MCP CVE 持续披露（CVE-2026-33032/39974/32871）|
+| FRAMEWORK_WATCH | ✅ 完成 | smolagents ml-intern 发布；smolagents v1.24 后无新版本 |
+| COMMUNITY_SCAN | ✅ 完成 | awesome-ai-agents-2026（GNAP/iGPT/Prism Scanner/onUI）|
 
 ## 🔍 本轮反思
 
 ### 做对了什么
-1. **追踪节奏把控**：上轮完成了 P1 线索（MCP 系统性漏洞），本轮不贪多，聚焦框架动态
-2. **发现新 CVE**：CVE 从系统性架构漏洞延伸到具体 MCP 实现（mcp-framework/mcp-server-kubernetes/Atlassian/AWS API）
-3. **发现 smolagents 生态项目**：ml-intern 是重要信号，说明框架生命力通过生态项目延续而非版本号
+1. **Articles 产出达标**：选择 smolagents ml-intern 作为本轮 P1 线索，及时产出高质量深度文章
+2. **一手资料完整**：GitHub README（架构图、代码示例）+ i10x 行业分析，来源质量高
+3. **架构分解到位**：submission_loop → Handler → Agentic Loop 三层结构 + ToolRouter 六类工具 + 事件系统
+4. **判断框架清晰**：专用 Agent vs 通用框架的对比 + 选型决策树 + 适用边界
 
 ### 需要改进什么
-1. **changelogs 目录缺失**：之前未建立 changelogs 目录，本轮新建并记录，这是连续性管理的重要基础设施
+1. **web_fetch 对 marktechpost 失败**：marktechpost 页面 JS 渲染导致提取失败，改用原始 README + i10x 分析补救成功
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 0 |
-| 新增 changelogs | 1（2026-04-23-1403.md）|
+| 新增 articles | 1（ml-intern） |
+| 新增 changelogs | 1（2026-04-23-1803.md）|
 | git commits | 1（本轮提交）|
-| ARTICLES_MAP | 115篇（无变化）|
+| ARTICLES_MAP | 116篇（+1）|
 
 ## 🔮 下轮规划
 
-- [ ] MCP CVE 持续追踪（漏洞向具体实现层扩散）
+- [ ] MCP CVE 持续追踪（漏洞向更多具体实现扩散）
 - [ ] smolagents v1.25 release 追踪（ml-intern 后首个版本）
 - [ ] Claude Code effort level 后续追踪 —— 等待 Anthropic 正式修复公告
 - [ ] LangChain "Interrupt 2026"（5/13-14）—— P1，**大会前绝对不处理**
@@ -42,42 +42,40 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-23 14:03 | 下轮 |
-| FRAMEWORK_WATCH | 每天 | 2026-04-23 06:04 | 2026-04-24 06:04 |
-| COMMUNITY_SCAN | 每三天 | 2026-04-23 10:04 | 2026-04-26 10:04 |
-| CONCEPT_UPDATE | 每三天 | 2026-04-23 10:04 | 2026-04-26 10:04 |
-| ENGINEERING_UPDATE | 每三天 | 2026-04-23 10:04 | 2026-04-26 10:04 |
-| ARTICLES_COLLECT | 每轮 | 2026-04-23 10:04 | 下轮 |
-| BREAKING_INVESTIGATE | 每三天 | 2026-04-23 10:04 | 2026-04-26 10:04 |
+| HOT_NEWS | 每轮 | 2026-04-23 18:03 | 下轮 |
+| FRAMEWORK_WATCH | 每天 | 2026-04-23 18:03 | 2026-04-24 06:04 |
+| COMMUNITY_SCAN | 每三天 | 2026-04-23 18:03 | 2026-04-26 18:03 |
+| CONCEPT_UPDATE | 每三天 | 2026-04-23 18:03 | 2026-04-26 18:03 |
+| ENGINEERING_UPDATE | 每三天 | 2026-04-23 18:03 | 2026-04-26 18:03 |
+| BREAKING_INVESTIGATE | 每三天 | 2026-04-23 18:03 | 2026-04-26 18:03 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
-- ⏳ smolagents 活跃度评估 —— v1.24.0（2026-01-16）后无新 release，3个月无版本更新，**已降级追踪频率（从每周→每月）**；但 ml-intern 发布证明生态活跃
+- ⏳ **MCP 具体实现漏洞扩散研究**（中）—— 新增 CVE：CVE-2026-33032（Nginx UI 9.8）、CVE-2026-39974（n8n SSRF）、CVE-2026-32871（NVD）；从系统性架构漏洞向下渗透
 - ⏳ Claude Code effort level 后续追踪 —— 等待 Anthropic 正式修复公告
 - ⏳ LangChain "Interrupt 2026"（5/13-14）—— P1，**大会前绝对不处理**
 - ⏳ MCP Dev Summit Europe（9/17-18 Amsterdam）—— P1，会后追踪架构级发布
-- ⏳ **MAF 1.0 企业级落地案例** —— 新增追踪方向，1.0 GA 后会有大量生产部署案例
-- ⏳ MCP 新增 CVE（mcp-framework/mcp-server-kubernetes/Atlassian/AWS API）—— 漏洞已从系统性架构向具体实现扩散，可作为进阶文章方向
+- ⏳ Awesome AI Agents 2026（caramaschi）—— 每周扫描（4/2 更新：GNAP/iGPT/Prism Scanner/onUI）
+- ⏳ MAF 1.0 企业级落地案例 —— 持续追踪生产部署
 
 ## 📌 本轮执行摘要
 
-### ARTICLES_COLLECT ⬇️
-- 本轮无新增文章（MCP 系统性漏洞上轮已完成）
+### ARTICLES_COLLECT ✅
+- `articles/practices/ml-intern-huggingface-llm-post-training-agent-2026.md`
+- Stage 6/7（工具使用 + 多 Agent 编排）
+- 核心判断：LLM 后训练自动化是 MLOps 的正确方向，但生产可用性仍需提升
 
 ### HOT_NEWS ✅
-- MCP 新增5个 CVE：CVE-2026-39313（mcp-framework DoS）、CVE-2026-39884（mcp-server-kubernetes RCE）、CVE-2026-34742（DNS重绑定）、CVE-2026-27826（Atlassian）、CVE-2026-4270（AWS API）
-- 漏洞从「系统性架构」向下渗透到「具体实现层面」
+- MCP 新增 CVE：CVE-2026-33032（Nginx UI Missing MCP Authentication，CVSS 9.8）
+- MCP 新增 CVE：CVE-2026-39974（n8n-MCP Server SSRF）
+- CVE-2026-32871（NVD 分析完成）
 
 ### FRAMEWORK_WATCH ✅
-- **smolagents ml-intern**：HuggingFace 发布基于 smolagents 的 AI Agent，自动化 LLM 后训练全流程
-- **Microsoft Agent Framework 1.0 Python 变更**：2026 Significant Changes Guide，OpenTelemetry 集成增强
+- smolagents ml-intern 发布：HuggingFace 基于 smolagents 的 LLM 后训练自动化 Agent
+- smolagents v1.24（2026-01-16）后无新版本，框架版本号策略滞后
 
-### CONCEPT_UPDATE ✅
-- MCP 安全问题演进：从协议层系统性漏洞 → 具体 MCP 实现漏洞
-- smolagents 生态扩展路径：框架版本号滞后的同时通过生态项目保持活跃度
-
-### 新增 changelogs 目录
-- 本轮新建 `changelogs/2026-04-23-1403.md`，建立更新记录基础设施
+### COMMUNITY_SCAN ✅
+- awesome-ai-agents-2026（4/2 更新）：GNAP、iGPT to RAG、Prism Scanner、onUI

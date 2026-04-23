@@ -1,5 +1,22 @@
 # 更新历史
 
+## 2026-04-23 18:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮更新**：
+- `articles/practices/ml-intern-huggingface-llm-post-training-agent-2026.md`（practices 目录，Stage 6/7）—— HuggingFace ml-intern 深度解析；核心判断：LLM 后训练自动化是 MLOps 的正确方向，但 ml-intern 生产可用性仍需提升；架构分析：submission_loop → Handler → Agentic Loop 三层结构；工具集覆盖 HF 生态、GitHub、沙箱、MCP 扩展
+
+**Articles产出**：新增 1 篇（ml-intern）
+
+**反思**：做对了——选择 smolagents ml-intern 作为本轮 Articles 产出（PENDING 中优先级较高）；一手资料完整（GitHub README + 架构图 + i10x 行业分析）；架构分解 + 适用边界 + 决策树结构满足产出规范；smolagents 框架版本号滞后但生态活跃的判断有独特价值
+
+**MCP CVE 追踪**：CVE-2026-33032（Nginx UI 9.8）、CVE-2026-39974（n8n SSRF）、CVE-2026-32871（NVD）
+
+**awesome-ai-agents-2026**：GNAP、iGPT、Prism Scanner、onUI（4/2 更新）
+
+---
+
 ## 2026-04-23 10:04（北京时间）
 
 **状态**：✅ 成功
