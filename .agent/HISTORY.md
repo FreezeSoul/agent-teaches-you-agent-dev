@@ -1,3 +1,21 @@
+## 2026-04-24 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/tool-use/mcp-security-cve-systemic-analysis-2026.md`（tool-use 目录，Stage 3）—— MCP 安全危机系统性分析；核心判断：30 CVEs/60 days 不是偶然而是协议设计层面"STDIO + 无 sandbox"的必然结果；按 CWE 根因建立 MCP 安全分类框架（命令注入 CWE-77 / SSRF CWE-88 / 资源耗尽 CWE-770 / 认证缺陷 CWE-287 / Prompt Injection）；OX Security 揭露 Anthropic MCP reference implementation 设计层根本性漏洞（by design）；评估 Aembit IT-CPA 作为企业级缓解方案的价值与局限（多层防御：Prompt Filter → Aembit IT-CPA → MCP Server 权限最小化 → 审计日志）
+
+**本轮更新**：
+- `ARTICLES_MAP.md` —— 重新生成（123篇）
+
+**Articles产出**：新增 1 篇（MCP 安全 CVE 系统性分析，tool-use/）
+
+**反思**：做对了——选择了 PENDING 中优先级最高的 MCP CVE 线索（30 CVEs/60 days 是前所未有的攻击面扩张）；分类框架（CWE-77/88/770/287）有原创判断价值；正确识别了「设计层漏洞」vs「实现层漏洞」的根本区别；Aembit 评估给出明确的多层防御建议；保留了 LangChain Interrupt 2026（5/13-14）和 Claude Managed Agents 作为后续线索
+
+**本轮数据**：MCP CVE 密集期（60天内 30+ CVEs）；CVE-2026-6942 radare2-mcp（CVSS 9.3 Critical）；CVE-2026-39884 kubernetes RCE；CVE-2026-32871 FastMCP SSRF（CVSS 8.8）；CVE-2026-39313 mcp-framework DoS（CWE-770）；CVE-2026-27825 Atlassian MCP RCE/SSRF（CVSS 9.1）；CVE-2026-4270 AWS API MCP 路径遍历；LangGraph 1.1.9（PyPI latest）；CrewAI 1.14.3a2（Daytona Sandbox）
+
+---
+
 ## 2026-04-24 18:04（北京时间）
 
 **状态**：✅ 成功
