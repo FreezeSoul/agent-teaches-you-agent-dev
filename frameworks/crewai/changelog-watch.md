@@ -213,6 +213,25 @@
 - **Enterprise A2A Feature**：企业级 A2A 功能文档新增
 - **Bug Fix**：MCP cyclic JSON schema 修复（与 v1.14.2a5 同步）
 
+### 2026-04（下旬）
+
+**v1.14.3a1（2026-04-21）— ⭐ Standalone Agent Checkpoint**：
+- **独立 Agent Checkpoint 支持扩展**：Checkpoint 和 Fork 现已支持非 Crew 环境下的独立 Agent 使用
+- Bug Fix：保留 `thought_signature` 在 Gemini streaming tool calls；修复 checkpoint TUI 显示问题
+
+**v1.14.3a2（2026-04-22）— ⭐ Bedrock V4 + Daytona Sandbox 新增**：
+- **新增 AWS Bedrock V4 支持**：`Add support for bedrock V4`
+- **新增 Daytona sandbox tools**：增强 Agent 的沙箱执行能力，支持更安全的代码执行环境
+- **Bug Fix**：修复隐式 @CrewBase 名称向 crew events 的传播；修复 MCP cyclic JSON schema
+- **安全更新**：bump python-dotenv to version >=1.2.2
+- **性能**：MCP SDK 懒加载，冷启动时间改善约 29%
+
+**v1.14.3a3（2026-04-23）— ⭐ E2B 支持 + 凭证降级**：
+- **新增 E2B 支持**：`Add support for e2b`（云端沙箱执行平台）
+- **Azure 凭证降级**：实现无 API key 时回退到 DefaultAzureCredential（企业环境便利性）
+- **安全修复**：升级 lxml to >=6.1.0（GHSA-vfmq-68hx-4jfw）
+- 性能改善：MCP SDK 冷启动约 29%
+
 ---
 
-*由 AgentKeeper 自动追踪 | 最后更新：2026-04-22*
+*由 AgentKeeper 自动追踪 | 最后更新：2026-04-24*

@@ -184,8 +184,16 @@ gantt
 **langgraph 1.1.7a1（2026-04-17）— asyncio 自定义并行执行**：
 - **asyncio 自定义并行执行**：通过 asyncio 实现低级别控制的并行执行
 - **混合工作流**：结合 Parallel + Sequential Chains
+**langgraph 1.1.8（2026-04-17）— ⭐ OTel 检测修复 + asyncio 自定义并行**：
+- **OpenTelemetry 检测兼容性修复**：修复了 LangGraph 在启用 OTel 检测时的兼容性问题
+- **asyncio 自定义并行执行**：通过 asyncio 实现低级别控制的并行执行
+- **混合工作流**：结合 Parallel + Sequential Chains
 - Instagram 报道确认：2026-04-17 发布
+
+**langgraph 1.1.9（2026-04-21）— Bug Fix + 依赖更新**：
+- 修复 State 和 Store 后端文件格式以支持二进制文件存储
+- 依赖更新：langsmith 0.6.4 → 0.7.31, langchain-core 1.2.27 → 1.2.28, uv 0.11.3 → 0.11.6 等
 
 ---
 
-*由 AgentKeeper 自动追踪 | 最后更新：2026-04-22*
+*由 AgentKeeper 自动追踪 | 最后更新：2026-04-24*
