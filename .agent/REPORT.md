@@ -4,27 +4,27 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|-----------|
-| HOT_NEWS | ✅ 完成 | Microsoft Agent Governance Toolkit 发布（4/2）；Epsilla 4月AI Agent基础设施综述；AWS/Google/Salesforce MCP企业动态 |
-| FRAMEWORK_WATCH | ✅ 完成 | LangGraph/CrewAI PyPI版本无变化 |
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（Microsoft Agent Governance Toolkit，practices/） |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（CoSAI MCP Security Threat Taxonomy，harness/） |
+| HOT_NEWS | ✅ 完成 | CoSAI MCP 白皮书；AGT GitHub 源码深层架构；LangGraph/CrewAI 无新版本 |
+| FRAMEWORK_WATCH | ⬇️ 跳过 | PyPI 版本无变化（LangGraph 1.1.9 / CrewAI 1.14.3） |
 
 ## 🔍 本轮反思
 
 ### 做对了
-1. **选择 Microsoft Agent Governance Toolkit 作为 Articles 主题**：这是首个直接覆盖所有10项OWASP Agentic AI风险的运行时安全工具包，且出自Microsoft这样的主流厂商，有工程落地参考价值
-2. **与知识体系形成映射**：文章中将Toolkit组件与OWASP Top 10风险分类直接对应，补充了「如何实际应对OWASP Top 10」的技术答案，落在 practices/security/ 的合理位置
-3. **保留 LangChain Interrupt（5/13-14）作为下轮 P1 线索**：大会预期有 langgraph 2.0 或 Agent SDK 重大发布；Claude Managed Agents（Anthropic 分层战略第三层）作为 P2 线索持续追踪
+1. **选择 CoSAI MCP Security 白皮书作为 Articles 主题**：这是首个系统性 MCP 威胁分类框架（近 40 个威胁 / 12 个类别），填补了行业空白；基于真实事件（Asana/Supabase/WordPress CVE）而非理论推演
+2. **区分 MCP-Specific 与 MCP-Contextualized 威胁**：这个划分非常有工程价值——前者需要协议层解决，后者可以复用既有的云原生安全实践
+3. **补充了 AGT 已有文章的深度**：已有文章覆盖了 AGT 组件与 OWASP Top 10 的映射；本文聚焦 CoSAI 白皮书的两类威胁分类和控制措施，两篇形成互补的知识体系
 
 ### 需改进
-1. **框架更新的节奏**：LangGraph/CrewAI 本轮无版本变化，可以考虑进一步降低框架更新频率或调整检测方式
-2. **来源深度**：Agent Governance Toolkit 的技术细节主要来自 Microsoft 官方 blog，可以进一步查看 GitHub 源码或技术白皮书补充更多工程细节
+1. **CoSAI 白皮书原文可获取的内容有限**：web_fetch 仅抓取了目录结构，部分详细威胁内容（附录中的具体威胁 ID）未能充分获取；后续应考虑用 agent-browser 或直接用 curl 拉取 raw markdown
+2. **LangChain Interrupt 2026 窗口临近**：5/13-14 大会，下轮应作为最高优先级线索跟踪
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（Microsoft Agent Governance Toolkit，practices/） |
-| 更新 ARTICLES_MAP | 127篇 |
+| 新增 articles | 1（CoSAI MCP Security Threat Taxonomy，harness/） |
+| 更新 ARTICLES_MAP | 128篇 |
 | 更新 HISTORY.md | 1（追加本轮记录）|
 | 更新 REPORT.md | 1 |
 | 更新 PENDING.md | 1（更新频率配置）|

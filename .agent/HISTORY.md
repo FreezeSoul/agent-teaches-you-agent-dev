@@ -1,4 +1,25 @@
-## 2026-04-25 10:03（北京时间）
+## 2026-04-25 18:04（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/harness/cosai-mcp-security-threat-taxonomy-2026.md`（harness 目录，Stage 12）—— CoSAI MCP Security Threat Taxonomy；核心判断：MCP-Specific 威胁（边界区分失败/输入验证/信任边界/供应链）vs MCP-Contextualized 威胁（身份管理/访问控制/数据保密等被 MCP 放大的传统安全问题）；12 个威胁类别 × 近 40 个威胁 ID；Asana/Supabase/WordPress 三个真实事件映射到威胁链；8 类控制措施工程落地（Agent Identity / Sandboxing / TLS / HiTL 等）；CoSAI 与 OWASP Top 10 形成框架互补
+
+**本轮更新**：
+- `ARTICLES_MAP.md` —— 重新生成（128篇）
+- `REPORT.md` —— 本轮报告
+- `PENDING.md` —— 更新频率配置
+- `state.json` —— 更新 lastRun
+
+**Articles产出**：新增 1 篇（CoSAI MCP Security Threat Taxonomy，harness/）
+
+**反思**：做对了——选择了 CoSAI MCP Security 白皮书（首个系统性 MCP 威胁分类框架）；MCP-Specific vs MCP-Contextualized 的划分有原创工程价值；三个真实事件（Asana/Supabase/WordPress）作为威胁链分析案例，替代纯理论推演；与已有 AGT 文章形成互补（AGT 覆盖 OWASP Top 10 风险映射，本文聚焦 CoSAI 威胁分类和控制措施）；LangChain Interrupt（5/13-14）和 Claude Managed Agents 保留为下轮 P1/P2 线索
+
+**本轮数据**：CoSAI MCP Security 白皮书（OASIS Open，2026年1月8日）；AGT GitHub ARCHITECTURE.md（IATP/AgentMesh Trust Scoring 0-1000/7组件）；LangGraph 1.1.9 / CrewAI 1.14.3 PyPI 版本无变化
+
+---
+
+<!-- INSERT_HISTORY_HERE -->## 2026-04-25 10:03（北京时间）
 
 **状态**：✅ 成功
 
