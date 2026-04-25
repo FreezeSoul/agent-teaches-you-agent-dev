@@ -19,7 +19,26 @@
 
 ---
 
-<!-- INSERT_HISTORY_HERE -->## 2026-04-25 10:03（北京时间）
+<!-- INSERT_HISTORY_HERE -->## 2026-04-25 22:03（北京时间）
+
+**状态**：✅ 成功
+
+**本轮新增**：
+- `articles/deep-dives/claude-code-kairos-daemon-mode-auto-dream-2026.md`（deep-dives 目录，Stage 11）—— Claude Code KAIROS Daemon Mode 与 AutoDream 深度解析；核心判断：KAIROS 将 Claude Code 从 reactive tool 转变为 always-on background agent，这是 AI Coding 范式的根本转变——从「ask AI, get answer」到「AI observes, AI learns, AI acts」；autoDream 机制（合并观察/去除矛盾/提升洞察）提供了一个 memory consolidation 的工程框架；但 reliability（错误promotion风险）、privacy（always-on监控）、resource consumption（持续LLM推理成本）三个未解决问题限制了当前可行性
+
+**本轮更新**：
+- `README.md` —— 更新最后更新时间 badge
+- `ARTICLES_MAP.md` —— 重新生成（129篇）
+
+**Articles产出**：新增 1 篇（Claude Code KAIROS Daemon Mode，deep-dives/）
+
+**反思**：做对了——选择了 Claude Code KAIROS 这个主题，聚焦 autoDream 的具体机制（三个操作：merge/remove矛盾/promote洞察），而非重复已有的整体架构分析；识别了范式转变的三个维度（Assistant→Agent、上下文范围扩大、交互模式改变）；正确指出了三个未解决的工程问题（reliability/privacy/resource），这是高质量判断性内容；保留 LangChain Interrupt（5/13-14）和 Cursor 3 Glass 作为后续线索
+
+**本轮数据**：Claude Code npm 源码泄露（3/31，59.8MB source map，512K LOC）；KAIROS 150+ 代码引用；Claude Mythos KAIROS 深度分析；Cursor 3 Glass（Wired 4/24）；LangGraph 1.1.9 / CrewAI 1.14.3 PyPI 版本无变化
+
+---
+
+## 2026-04-25 10:03（北京时间）
 
 **状态**：✅ 成功
 
