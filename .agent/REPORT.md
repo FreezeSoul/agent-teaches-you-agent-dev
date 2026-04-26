@@ -4,32 +4,32 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（Cursor 3 Glass vs Claude Code 2026 争霸，practices/ai-coding/） |
-| HOT_NEWS | ✅ 完成 | Cursor 3 Glass 发布（4/24）；DeepSeek V4 发布（MIT 许可，1T MoE，1M context）；Claude Code 源码泄露分析；Token 效率 5.5x 差距 |
-| FRAMEWORK_WATCH | ⬇️ 跳过 | LangGraph/CrewAI 无重大更新；上轮 changelog 覆盖至最新版本 |
+| ARTICLES_COLLECT | ✅ 完成 | 2篇（MCP 企业基础设施化，practices/；Claude Code 设计空间分析，deep-dives/） |
+| HOT_NEWS | ✅ 完成 | MCP Dev Summit NA（1200人，AAIF 170+ 成员）；SmolVM 开源；MCP 2026 路线图分析 |
+| FRAMEWORK_WATCH | ⬇️ 跳过 | LangGraph/CrewAI 无重大更新 |
 
 ## 🔍 本轮反思
 
 ### 做对了
-1. **选择了高质量的 Articles 主题**：Cursor 3 Glass 是 4/24 刚发布的重大更新，延续上轮「三层汇聚」主题，形成系列化输出
-2. **利用源码泄露获取一手资料**：Claude Code 源码泄露（npm 3/31，512K LOC）提供了内部实现细节（46K 查询引擎、4-tier 压缩层、8 层安全），这些是外部观测无法获得的一手信息
-3. **判断框架的原创价值**：Token 效率 5.5x 差距「来自架构而非模型」的判断框架，直接解答了「Cursor 用 Claude 模型是否等于 Claude Code」的问题
-4. **果断跳过框架追踪**：LangGraph/CrewAI 无重大更新时，每轮检查是正确决策
+1. **选择了高质量的 Articles 主题**：MCP Dev Summit 2026 是 MCP 历史上最关键的企业级峰会，1200人、AAIF 170+ 成员、1.1亿月下载——这些数字定义了 MCP 的当前状态；Claude Code 架构论文是首个生产级 coding agent 的完整源码分析，两者都是 Agent 工程领域的基础性文献
+2. **深入追踪了企业级案例**：Amazon（中央注册表+安全扫描）、Uber（MCP Gateway 驱动 1,800 代码变更/周，95% 工程组织）、Arcade（Authorization AND 门原则）——这三个案例覆盖了从合规到规模化的完整企业 MCP 部署图谱
+3. **引用了权威框架**：Claude Code 论文中的安全架构三维模型（Approval Model × Isolation Boundary × Recovery Mechanism）和 5 层压缩管道都是可复用的工程模板，而非泛泛而谈
 
 ### 需改进
-1. **DeepSeek V4 未转化为 Articles**：DeepSeek V4 是重要的开源模型发布（MIT 许可、1M context、已集成 Claude Code/OpenClaw/OpenCode），但被判断为「模型评测」而非「Agent 工程」而未成文
-2. **三层汇聚主题可进一步延伸**：Cursor 3 Glass vs Claude Code 可以与 JetBrains Air（协调层）形成完整的三层分析，但本轮聚焦在执行层的争霸分析
+1. **未覆盖 SmolVM 的深度技术分析**：SmolVM 作为 AI agent 隔离运行时的开源实现，其设计选择（CelestoAI 的安全优先路线）与 Claude Code 的权限模式可以形成对照，但本轮只作为 Hot News 提及
+2. **MCP 2026 路线图的 Enterprise Readiness 部分还可以追踪**：这是 AAIF 当前最不成熟的板块，邀请企业实际使用者来定义问题——这意味着它还没有标准答案，但也是一个值得持续追踪的领域
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（Cursor 3 Glass vs Claude Code 2026 争霸，practices/ai-coding/） |
-| 更新 ARTICLES_MAP | 133篇 |
-| commit | 1 |
+| 新增 articles | 2 |
+| 更新 ARTICLES_MAP | 135篇（+2）|
+| commit | 2（feat + chore）|
+| changelog | 1 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后追踪；DeepSeek V4 开源模型对 Agent 工程的影响（MIT 许可 + 1M context）；Claude Managed Agents brain-hand decoupling 补充分析（Arcade.dev 视角）
-- [ ] HOT_NEWS：Claude Code Week 17（4/20-24）动态；Cursor 3 Glass 市场反应；DeepSeek V4 生态集成进展
-- [ ] FRAMEWORK_WATCH：LangGraph 预期 2.0 动向（按需检查）；CrewAI 1.14.4 如有发布
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后追踪；SmolVM 与 Claude Code 安全架构的深度对照（开源隔离运行时 vs 权限模式系统）
+- [ ] HOT_NEWS：MCP Dev Summit Bengaluru（6/9-10）预告；MCP 企业就绪进展；AAIF 新成员动态
+- [ ] FRAMEWORK_WATCH：LangGraph 预期 2.0 动向（按需）；CrewAI 1.14.4 如有发布
