@@ -1,15 +1,16 @@
 # 📚 Article Map
 
-> Auto-generated at 2026-04-26 22:11:36
+> Auto-generated at 2026-04-27 02:03:00
 
-> Total articles: 136
+> Total articles: 137
 
 ---
 
 
 | # | Title | Category | Created | Path |
 |---|-------|----------|---------|------|
-| 1 | DeepSeek V4 与 Agent 架构：上下文作为基础设施的范式转移 | fundamentals | unknown | [articles/fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md) |
+| 1 | Claude Code Week 14-15 新功能深度分析：Ultraplan、Monitor 与 CLI Computer Use | deep-dives | 2026-04-27 | [articles/deep-dives/claude-code-week-14-15-ultraplan-monitor-computer-use-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/deep-dives/claude-code-week-14-15-ultraplan-monitor-computer-use-2026.md) |
+| 2 | DeepSeek V4 与 Agent 架构：上下文作为基础设施的范式转移 | fundamentals | unknown | [articles/fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md) |
 | 2 | MCP 已成企业基础设施：MCP Dev Summit North America 2026 全记录 | practices | 2026-04-26 | [articles/practices/mcp-enterprise-infrastructure-mcp-dev-summit-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/practices/mcp-enterprise-infrastructure-mcp-dev-summit-2026.md) |
 | 3 | AI Coding 工具的三层演进：为什么 Cursor、Claude Code 和 Codex 正在自然汇聚 | practices | 2026-04-26 | [articles/practices/ai-coding/ai-coding-three-layer-convergence.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/practices/ai-coding/ai-coding-three-layer-convergence.md) |
 | 4 | Claude Code 质量回退事件复盘：三个可预防的工程问题 | practices | 2026-04-26 | [articles/practices/ai-coding/claude-code-quality-postmortem-april-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/practices/ai-coding/claude-code-quality-postmortem-april-2026.md) |

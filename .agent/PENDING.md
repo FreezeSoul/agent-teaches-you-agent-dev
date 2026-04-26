@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-26 14:03 | 下轮 |
-| FRAMEWORK_WATCH | 每三天 | 2026-04-26 14:03 | 2026-04-29 14:03 |
+| HOT_NEWS | 每轮 | 2026-04-27 02:03 | 下轮 |
+| FRAMEWORK_WATCH | 每三天 | 2026-04-27 02:03 | 2026-04-30 02:03 |
 | COMMUNITY_SCAN | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
 | CONCEPT_UPDATE | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
 | ENGINEERING_UPDATE | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
@@ -24,6 +24,7 @@
 
 ## 📌 Articles 线索
 
+- ✅ **Claude Code Week 14-15 新功能**（高，完成）—— deep-dives/claude-code-week-14-15-ultraplan-monitor-computer-use-2026.md；Ultraplan/Monitor/CLI Computer Use 综合分析；规划-监视-执行工作流；与 KAIROS Daemon Mode 互补
 - ✅ **DeepSeek V4**（高，完成）—— fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md；Engram Memory 模型层 vs 应用层分工框架；1M 上下文经济学；与 Claude Opus 4.6 选型对比
 - ⏸️ **LangChain Interrupt 2026**（高，会后）—— 5/13-14 大会；预期 langgraph 2.0 或 Agent SDK 重大发布；会后第一轮优先追踪
 - ⏸️ **MCP Dev Summit North America 2026** —— ✅ 已完成（practices/）；企业基础设施化三案例（Amazon/Uber/Arcade）；路线图 Enterprise Readiness pre-RFC
