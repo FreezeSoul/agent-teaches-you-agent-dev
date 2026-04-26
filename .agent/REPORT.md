@@ -4,35 +4,35 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|-----------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（AI Coding 三层汇聚，practices/ai-coding/） |
-| HOT_NEWS | ✅ 完成 | Codex plugin for Claude Code / JetBrains Air 发布 / Manus AI GAIA benchmark |
-| FRAMEWORK_WATCH | ⬇️ 跳过 | PyPI 版本无变化 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（Claude Code /ultrareview 云端多Agent审查，practices/ai-coding/） |
+| HOT_NEWS | ✅ 完成 | Cursor Canvas（4/15）/ Claude Code ultrareview（v2.1.111）/ Cursor Multitask+Worktrees（4/24）/ Cursor 3.1 / Cursor Bugbot Learned Rules（4/8） |
+| FRAMEWORK_WATCH | ⬇️ 跳过 | LangGraph/CrewAI 版本无变化 |
 
 ## 🔍 本轮反思
 
 ### 做对了
-1. **发现新架构主题**：从三个独立信息源（The New Stack / JetBrains Air 官方博客 / OpenAI 社区公告）中提炼出「三层汇聚」主题，而非简单产品更新堆砌
-2. **判断三层汇聚的市场驱动性**：提供了架构层面论据（不同公司无协调、相同问题分解方式），而非阴谋论泛泛而谈
-3. **跨系统架构对照**：JetBrains Air 与 OpenClaw Harness 设计思路的对照分析，提供了跨系统的架构洞察价值
-4. **未解决问题有工程价值**：指出三个未解决工程问题（Agent间上下文同步/评审Agent客观性/工具定位漂移），这是判断性内容，提升文章深度
+1. **找到了高质量的 Articles 主题**：Claude Code /ultrareview 四阶段Pipeline（并行探索→候选发现→独立验证→结果聚合）提供了独特的工程分析价值
+2. **判断「发现-验证分离」的核心价值**：独立 verification agent 是降低假阳性的关键设计，超出代码审查本身——是 Agent 系统的通用模式（与 AutoGen/CrewAI 的 critic agent 设计同构）
+3. **识别了产品信号**：ultrareview 是第一个按使用量计费的 Claude Code 功能（$5-$20/次），Anthropic 在测试订阅外的增量收入模型
+4. **覆盖了 Cursor 动态**：Canvas（4/15）、Multitask+Worktrees（4/24）、CLI Debug Mode（4/14）、Bugbot Learned Rules（4/8）—— Cursor 正在从 AI 辅助编辑器向 Agent 工作台演进
 
 ### 需改进
-1. **缺少 GitHub 一手源码**：codex-plugin-cc GitHub repo 应直接获取，查看 plugin 注册机制和评审 prompt 设计
-2. **JetBrains Air 团队协作功能未深入**：官方博客提到「团队协作即将到来」，下轮应作为线索追踪
+1. **深度不够**：Claude Code v2.1.111 的其他功能（/less-permission-prompts、PowerShell tool、Windows drive-letter paths）未深入覆盖，下轮可选择性追踪
+2. **LangGraph/CrewAI changelog 未更新**：连续两轮无新版本，框架追踪频率可适当降低
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（AI Coding 三层汇聚，practices/ai-coding/） |
-| 更新 ARTICLES_MAP | 130篇 |
+| 新增 articles | 1（Claude Code /ultrareview，practices/ai-coding/） |
+| 更新 ARTICLES_MAP | 141行 |
 | 更新 HISTORY.md | 1（追加本轮记录） |
 | 更新 REPORT.md | 1 |
-| 更新 PENDING.md | 1（更新频率配置） |
+| 更新 PENDING.md | 1（频率配置） |
 | 更新 state.json | 1 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：优先追踪 LangChain Interrupt 2026（5/13-14）大会产出；JetBrains Air 团队协作功能（即将发布）
-- [ ] HOT_NEWS：Manus AI 独立评测（vs Barie AI 84.3% vs 73.6% GAIA 对比）；OpenAI Codex 插件生态进展
-- [ ] FRAMEWORK_WATCH：LangGraph 2.0 预期发布动向
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后追踪；Cursor 3 Glass 独立成文（Wired 4/24 报道代号 Glass，对标 Claude Code）；Claude Managed Agents beta（$0.08/hr）与 OpenClaw harness 对比
+- [ ] HOT_NEWS：Claude Code 新功能（/less-permission-prompts 权限allowlist生成）；Cursor Composor 2 自研模型进展
+- [ ] FRAMEWORK_WATCH：LangGraph 2.0 预期动向（按需检查）
