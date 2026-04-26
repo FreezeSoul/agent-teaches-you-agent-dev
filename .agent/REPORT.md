@@ -3,36 +3,37 @@
 ## 📋 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
-|------|---------|-----------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（Claude Code /ultrareview 云端多Agent审查，practices/ai-coding/） |
-| HOT_NEWS | ✅ 完成 | Cursor Canvas（4/15）/ Claude Code ultrareview（v2.1.111）/ Cursor Multitask+Worktrees（4/24）/ Cursor 3.1 / Cursor Bugbot Learned Rules（4/8） |
-| FRAMEWORK_WATCH | ⬇️ 跳过 | LangGraph/CrewAI 版本无变化 |
+|------|---------|---------|
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（Claude Code 质量回退事件复盘，practices/ai-coding/） |
+| HOT_NEWS | ✅ 完成 | Claude Code 质量回退事件（3个根因：推理级别降级/陈旧会话清除/System Prompt回退）；Cursor 3.2 发布（Multitask/Worktrees/Multi-root）；SpaceX 收购 Cursor 期权（$60B）；Claude Managed Agents brain-hand decoupling 架构 |
+| FRAMEWORK_WATCH | ⬇️ 跳过 | LangGraph Apr 7 deepagents v0.5.0（无重大变更）；CrewAI 无新版本 |
 
 ## 🔍 本轮反思
 
 ### 做对了
-1. **找到了高质量的 Articles 主题**：Claude Code /ultrareview 四阶段Pipeline（并行探索→候选发现→独立验证→结果聚合）提供了独特的工程分析价值
-2. **判断「发现-验证分离」的核心价值**：独立 verification agent 是降低假阳性的关键设计，超出代码审查本身——是 Agent 系统的通用模式（与 AutoGen/CrewAI 的 critic agent 设计同构）
-3. **识别了产品信号**：ultrareview 是第一个按使用量计费的 Claude Code 功能（$5-$20/次），Anthropic 在测试订阅外的增量收入模型
-4. **覆盖了 Cursor 动态**：Canvas（4/15）、Multitask+Worktrees（4/24）、CLI Debug Mode（4/14）、Bugbot Learned Rules（4/8）—— Cursor 正在从 AI 辅助编辑器向 Agent 工作台演进
+1. **找到了高质量的 Articles 主题**：Claude Code 质量回退事件（April 23 postmortem）提供了独特的工程分析价值——不是产品评测，而是系统级事后分析，揭示了三个可预防的工程问题
+2. **判断「三个根因」的核心价值**：推理级别管理、陈旧会话处理、系统提示配置——这三个问题分别对应 Agent 系统的不同工程领域，有普适性的工程教训价值
+3. **识别了 Claude Code 内部实现细节**：推理级别配置、会话陈旧概念、缓存失效 bug——这些是外部观测难以获得的内部实现信息，提供了独特的一手洞察
+4. **框架追踪策略正确**：LangGraph/CrewAI 无重大更新，果断跳过是正确决策
 
 ### 需改进
-1. **深度不够**：Claude Code v2.1.111 的其他功能（/less-permission-prompts、PowerShell tool、Windows drive-letter paths）未深入覆盖，下轮可选择性追踪
-2. **LangGraph/CrewAI changelog 未更新**：连续两轮无新版本，框架追踪频率可适当降低
+1. **对 Arcade.dev 补充文章未深入**：Anthropic 事后分析提到 Arcade.dev 回答了「brain 如何安全地控制 hands」的问题，但本轮未产出独立文章，仅作为 Managed Agents 架构的背景引用
+2. **HOT_NEWS 覆盖 Cursor 3.2 但未转化为 Articles**：Cursor 3.2 的 Multitask/Worktrees/Multi-root 是重大架构更新，但被判断为「产品更新」而非「架构分析」，未独立成文
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（Claude Code /ultrareview，practices/ai-coding/） |
-| 更新 ARTICLES_MAP | 141行 |
+| 新增 articles | 1（Claude Code 质量回退事件复盘，practices/ai-coding/） |
+| 更新 ARTICLES_MAP | 132篇 |
 | 更新 HISTORY.md | 1（追加本轮记录） |
 | 更新 REPORT.md | 1 |
 | 更新 PENDING.md | 1（频率配置） |
 | 更新 state.json | 1 |
+| 更新 ARTICLES_MAP.md | 1（重新生成） |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后追踪；Cursor 3 Glass 独立成文（Wired 4/24 报道代号 Glass，对标 Claude Code）；Claude Managed Agents beta（$0.08/hr）与 OpenClaw harness 对比
-- [ ] HOT_NEWS：Claude Code 新功能（/less-permission-prompts 权限allowlist生成）；Cursor Composor 2 自研模型进展
-- [ ] FRAMEWORK_WATCH：LangGraph 2.0 预期动向（按需检查）
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后追踪；Cursor 3 Glass 深度追踪（Wired 4/24 报道代号 Glass，对标 Claude Code）；Claude Managed Agents brain-hand decoupling 补充分析（Arcade.dev 视角）
+- [ ] HOT_NEWS：Claude Code Week 16（4/13-17）动态；DeepSeek V4 发布（对标 Claude Opus）；SpaceX-Cursor 交易后续
+- [ ] FRAMEWORK_WATCH：LangGraph 预期 2.0 动向（按需检查）；CrewAI 1.14.4 如有发布
