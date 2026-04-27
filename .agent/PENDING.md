@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-27 02:03 | 下轮 |
-| FRAMEWORK_WATCH | 每三天 | 2026-04-27 02:03 | 2026-04-30 02:03 |
+| HOT_NEWS | 每轮 | 2026-04-27 06:03 | 下轮 |
+| FRAMEWORK_WATCH | 每三天 | 2026-04-27 06:03 | 2026-04-30 06:03 |
 | COMMUNITY_SCAN | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
 | CONCEPT_UPDATE | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
 | ENGINEERING_UPDATE | 每三天 | 2026-04-25 18:04 | 2026-04-29 14:03 |
@@ -24,27 +24,27 @@
 
 ## 📌 Articles 线索
 
-- ✅ **Claude Code Week 14-15 新功能**（高，完成）—— deep-dives/claude-code-week-14-15-ultraplan-monitor-computer-use-2026.md；Ultraplan/Monitor/CLI Computer Use 综合分析；规划-监视-执行工作流；与 KAIROS Daemon Mode 互补
-- ✅ **DeepSeek V4**（高，完成）—— fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md；Engram Memory 模型层 vs 应用层分工框架；1M 上下文经济学；与 Claude Opus 4.6 选型对比
-- ⏸️ **LangChain Interrupt 2026**（高，会后）—— 5/13-14 大会；预期 langgraph 2.0 或 Agent SDK 重大发布；会后第一轮优先追踪
-- ⏸️ **MCP Dev Summit North America 2026** —— ✅ 已完成（practices/）；企业基础设施化三案例（Amazon/Uber/Arcade）；路线图 Enterprise Readiness pre-RFC
-- ⏸️ **Claude Code 设计空间分析（arXiv:2604.14228）** —— ✅ 已完成（deep-dives/）；5个价值→13个原则→具体实现；安全三维模型；OpenClaw 被纳入学术对照
-- ⏸️ **Cursor 3 Glass vs Claude Code 2026 争霸** —— ✅ 已完成（practices/ai-coding/）
-- ⏸️ **AI Coding 三层汇聚** —— ✅ 已完成（practices/ai-coding/）
-- ⏸️ **Claude Code 质量回退事件复盘** —— ✅ 已完成（practices/ai-coding/）
-- ⏸️ **Claude Code KAIROS Daemon Mode** —— ✅ 已完成（deep-dives/）
-- ⏸️ **Claude Opus 4.7 + xhigh effort** —— ✅ 已完成（deep-dives/）
-- ⏸️ CoSAI MCP Security Threat Taxonomy —— ✅ 已完成（harness/）
-- ⏸️ MCP DNS Rebinding CVE-2026-34742 —— ✅ 已完成（tool-use/）
-- ⏸️ MCP Prompt Injection 工具描述攻击面 —— ✅ 已完成（tool-use/）
-- ⏸️ MCP 系统性架构漏洞 —— ✅ 已完成（tool-use/）
-- ⏸️ GitHub Copilot 数据训练政策 —— ✅ 已完成（practices/）
-- ⏸️ Claude Cowork GA —— ✅ 已完成（orchestration/）
-- ⏸️ GitHub Copilot Agent Hub —— ✅ 已完成（orchestration/）
-- ⏸️ MCP vs A2A 企业选型决策框架 —— ✅ 已完成（orchestration/）
-- ⏸️ Microsoft Agent Governance Toolkit —— ✅ 已完成（practices/）
-- ⏸️ smolagents ml-intern —— ✅ 已完成（practices/）
+- ✅ **MCP STDIO RCE 设计缺陷**（P0，完成）—— articles/tool-use/mcp-stdio-rce-200k-servers-ox-security-2026.md；OX Security 30页报告；Anthropic 拒绝协议层修复；200K 服务器受影响；10+ 高危/严重 CVE
+- ✅ **Claude Code Week 14-15 新功能**（高，完成）—— deep-dives/claude-code-week-14-15-ultraplan-monitor-computer-use-2026.md
+- ✅ **DeepSeek V4**（高，完成）—— fundamentals/deepseek-v4-agent-architecture-1m-context-2026.md
+- ✅ **MCP Dev Summit North America 2026** —— ✅ 已完成（practices/）
+- ✅ **Claude Code 设计空间分析（arXiv:2604.14228）** —— ✅ 已完成（deep-dives/）
+- ✅ **Cursor 3 Glass vs Claude Code 2026 争霸** —— ✅ 已完成（practices/ai-coding/）
+- ✅ **AI Coding 三层汇聚** —— ✅ 已完成（practices/ai-coding/）
+- ✅ **Claude Code 质量回退事件复盘** —— ✅ 已完成（practices/ai-coding/）
+- ✅ **Claude Code KAIROS Daemon Mode** —— ✅ 已完成（deep-dives/）
+- ✅ **Claude Opus 4.7 + xhigh effort** —— ✅ 已完成（deep-dives/）
+- ✅ CoSAI MCP Security Threat Taxonomy —— ✅ 已完成（harness/）
+- ✅ MCP DNS Rebinding CVE-2026-34742 —— ✅ 已完成（tool-use/）
+- ✅ MCP Prompt Injection 工具描述攻击面 —— ✅ 已完成（tool-use/）
+- ✅ MCP 系统性架构漏洞 —— ✅ 已完成（tool-use/）
+- ✅ GitHub Copilot 数据训练政策 —— ✅ 已完成（practices/）
+- ✅ Claude Cowork GA —— ✅ 已完成（orchestration/）
+- ✅ GitHub Copilot Agent Hub —— ✅ 已完成（orchestration/）
+- ✅ MCP vs A2A 企业选型决策框架 —— ✅ 已完成（orchestration/）
+- ✅ Microsoft Agent Governance Toolkit —— ✅ 已完成（practices/）
+- ✅ smolagents ml-intern —— ✅ 已完成（practices/）
 
 ## 📌 下轮研究建议
 
-LangChain Interrupt 2026（5/13-14）是下轮最重要的 Articles 线索。DeepSeek V4 Engram Memory 的具体触发机制仍缺乏一手技术细节——如果 DeepSeek 发布了官方技术报告或论文，应优先获取并分析其对 Agent 记忆架构的工程影响。
+LangChain Interrupt 2026（5/13-14）是下轮最重要的 Articles 线索。Claude Code v2.1.118/119 的新增功能（Vim 视觉模式、主题系统、Hook 直接调用 MCP 工具）值得关注是否值得单独成文。
