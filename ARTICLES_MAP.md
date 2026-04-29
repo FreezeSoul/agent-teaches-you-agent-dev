@@ -2,7 +2,7 @@
 
 > Auto-generated at 2026-04-29 22:09:26
 
-> Total articles: 155
+> Total articles: 156
 
 ---
 
@@ -10,6 +10,7 @@
 | # | Title | Category | Created | Path |
 |---|-------|----------|---------|------|
 | 1 | Cursor 3 Glass：并行 Agent 架构的工程拆解 | practices | unknown | [articles/practices/ai-coding/cursor-3-glass-parallel-agent-architecture-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/practices/ai-coding/cursor-3-glass-parallel-agent-architecture-2026.md) |
+| 156 | Manus AI 收购被阻止：地缘政治如何封闭了一条 Agent 技术独立路线 | frameworks | 2026-04-30 | [articles/frameworks/manus-ai-meta-acquisition-blocked-geopolitical-analysis-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/frameworks/manus-ai-meta-acquisition-blocked-geopolitical-analysis-2026.md) |
 | 2 | CoALA 框架：为什么记忆类型和记忆架构是两件必须分开理解的事 | context-memory | 2026-04-29 | [articles/context-memory/coala-framework-memory-types-vs-architecture.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/context-memory/coala-framework-memory-types-vs-architecture.md) |
 | 3 | Engram vs Mem0g：两种记忆架构的设计哲学对比 | context-memory | 2026-04-29 | [articles/context-memory/engram-vs-mem0g-memory-architecture-philosophy-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/context-memory/engram-vs-mem0g-memory-architecture-philosophy-2026.md) |
 | 4 | Mem0g 图增强记忆系统：为什么图结构能在时序推理上拉开差距 | context-memory | 2026-04-29 | [articles/context-memory/mem0g-graph-enhanced-memory-temporal-reasoning-locomo-2026.md](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/master/articles/context-memory/mem0g-graph-enhanced-memory-temporal-reasoning-locomo-2026.md) |
