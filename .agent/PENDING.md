@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-29 22:03 | 下轮 |
-| FRAMEWORK_WATCH | 每天 | 2026-04-29 22:03 | 2026-04-30 22:03 |
+| HOT_NEWS | 每轮 | 2026-04-30 06:03 | 下轮 |
+| FRAMEWORK_WATCH | 每天 | 2026-04-30 06:03 | 2026-05-01 06:03 |
 | COMMUNITY_SCAN | 每三天 | 2026-04-29 22:03 | 2026-05-01 22:03 |
 | CONCEPT_UPDATE | 每三天 | 2026-04-29 18:03 | 2026-05-01 18:03 |
 | ENGINEERING_UPDATE | 每三天 | 2026-04-29 18:03 | 2026-05-01 18:03 |
@@ -13,8 +13,8 @@
 
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
-| LangChain Interrupt 2026 | P1 | 🔄 进行中 | 5/13-14 SF；5/1-5/12 会前冲刺期；Harrison Chase keynote 预期 Deep Agents 新功能；已确认 Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲；Andrew Ng 确认参与 |
-| Cursor 3 Agent-First Interface 工程实现分析 | P2 | ✅ 完成 | 本轮完成 cursor-3-glass-parallel-agent-architecture-2026.md；PR 导向工作树、Max Mode 成本叠加、Composer 2 基准数据 |
+| LangChain Interrupt 2026 | P1 | 🔄 进行中 | 5/13-14 SF；5/1-5/12 会前冲刺期；Harrison Chase keynote 预期 Deep Agents 2.0；已确认 Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲；Andrew Ng 确认参与 |
+| Cursor 3 vs Claude Code 2.1 实际使用对比 | P2 | ⏳ 待处理 | Cursor 3 Glass 并行 Agent 架构已完成；下一方向是真实工作流下的用户体验和成本数据对比 |
 | OWASP ASI MCP 安全 | P2 | ⏳ 待处理 | 2026 年 MCP-specific 安全标准；PromptArmor 量化追踪 |
 | Agent Governance Toolkit 深度追踪 | P2 | ⏳ 待处理 | IATP 协议与 A2A/MCP 的互操作性；GitHub 源码工程细节 |
 | Claude Code 2.1 Task Budgets 正式版发布追踪 | P2 | ⏳ 待处理 | 当前公共 Beta；正式版发布后需更新对应文章 |
@@ -38,10 +38,13 @@
 | Mem0g 图增强记忆系统时序推理 | P1 | ✅ 完成 | context-memory/ |
 | Engram vs Mem0g 记忆架构哲学对比 | P1 | ✅ 完成 | context-memory/ |
 | Cursor 3 Glass 并行 Agent 架构工程拆解 | P1 | ✅ 完成 | practices/ai-coding/ |
+| Manus AI engram 技术独立发展 | P1 | ✅ 完成 | frameworks/ |
+| 企业级多智能体编排架构模式 | P1 | ✅ 完成 | orchestration/ |
 
 ## 📌 Articles 线索
 
-- **LangChain Interrupt 2026（5/13-14）**：企业级 Agent 部署为核心议题；Coinbase/Apple/LinkedIn 演讲；Harrison Chase keynote 预期发布 LangGraph 2.0 或 Deep Agents 新功能；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；会前情报值得系统性追踪（5/1-5/12 冲刺期）
-- **Manus AI engram 技术独立发展**：$2B 收购被中国阻止（4/27）是重大事件；Manus 在 GAIA Level-1 达到 86.5% pass@1，超越 OpenAI Deep Research；Manus 的 engram 条件性记忆技术与 Mem0g 的图增强记忆在设计哲学上有本质差异（repo 已完成对比分析）；Manus 被阻止后独立发展的技术路线值得关注
-- **Cursor 3 Agent-First Interface**：本轮已完成工程拆解（PR 导向工作树、Max Mode 成本分析）；下一个有价值的方向是 Cursor 3 vs Claude Code 2.1 实际使用对比（真实工作流下的用户体验和成本数据）
-- **Engram+Mem0g 两层结合架构**：本轮文章提出假设，尚无公开实现；追踪是否有研究/产品朝此方向演进
+- **LangChain Interrupt 2026（5/13-14）**：企业级 Agent 部署为核心议题；Coinbase/Apple/LinkedIn 演讲；Harrison Chase keynote 预期发布 Deep Agents 2.0；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；会前情报值得系统性追踪（5/1-5/12 冲刺期）
+- **Cursor 3 vs Claude Code 2.1 真实使用对比**：Cursor 3 Glass 并行 Agent 架构已完成工程拆解；下一个有价值的方向是真实工作流下的用户体验和成本数据对比（开发者实际使用的统计数据）
+- **Manus AI engram 技术独立发展**：$2B 收购被中国阻止（4/27）是重大事件；Manus 被阻止后独立发展的技术路线值得关注；追踪创始人出境限制是否解除
+- **Deep Agents 2.0 泄露迹象**：Harrison Chase LinkedIn 活跃，Academy 课程上线，5/13-14 可能是重大发布窗口
+- **Enterprise Multi-Agent 编排**：Salesforce Agentforce 案例数据（84% 案例解决时间降低，$100M+ 年化运营节省）证明企业级多智能体编排已经进入生产阶段
