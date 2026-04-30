@@ -1,5 +1,18 @@
 # 更新历史
 
+## 2026-04-30 10:03（北京时间）
+
+**状态**：✅成功
+
+**本轮新增**：
+- `articles/deep-dives/agentic-operating-model-aom-enterprise-agent-governance-2026.md`（deep-dives/）—— Agentic Operating Model 企业级 Agent 治理四层框架；核心判断：（1）企业 AI Agent 已从「辅助工具」演变为「组织行动者」，法律先例确立企业为 Agent「非确定性承诺」承担责任（Moffatt v. Air Canada）；（2）AOM 四层框架——认知专业化（角色边界）、协调架构（多 Agent 通信协议）、实时控制（行为监控）、组织治理（责任归属）；（3）传统治理手段（边界防护/静态合规/应用管理）对 Agentic AI 存在根本性缺陷；（4）层间对齐比单层完善更重要——大多数 Agent 系统失败源于层间对齐问题而非单层能力缺陷；（5）AOM 是治理框架而非技术实现框架，关注「如何让 Agent 被负责地工作」而非「如何让 Agent 工作」
+
+**Articles产出**：新增 1 篇（Agentic Operating Model，deep-dives/）
+
+**反思**：做对了——选择企业 Agent 治理框架作为 Articles 主题，AOM 四层模型对 2026 年企业规模化部署 Agent 有直接指导价值；包含法律先例（Air Canada 案）和具体失败案例（EchoLeak 漏洞），而非泛泛的理论；四层框架结构清晰，层间对齐的核心洞察有工程落地价值；需改进：本轮 FRAMEWORK_WATCH 未系统性执行 LangChain 近期动态追踪，下次需注意并发任务覆盖完整性
+
+---
+
 ## 2026-04-30 06:03（北京时间）
 
 **状态**：✅成功

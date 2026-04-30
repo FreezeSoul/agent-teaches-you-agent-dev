@@ -4,31 +4,30 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（企业级多智能体编排架构模式，orchestration/） |
-| HOT_NEWS | ✅ 完成 | LangChain Interrupt 2026（5/13-14 SF）确认完整演讲阵容；Salesforce Agentforce $100M+案例；Andrew Ng 确认参与 |
-| FRAMEWORK_WATCH | ✅ 完成 | LangChain Deep Agents 官方文档更新；Harrison Chase LinkedIn 活跃；Deep Agents Academy 课程上线 |
-| COMMUNITY_SCAN | ⏸️ 顺延 | 本轮聚焦企业级多智能体编排主题，深度优先于广度 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（Agentic Operating Model，deep-dives/） |
+| HOT_NEWS | ✅ 完成 | 无重大突发事件；Manus 交易被阻止的 geopolitical 分析已在上轮完成 |
+| FRAMEWORK_WATCH | ⬇️ 部分完成 | LangGraph changelog 已更新；CrewAI v1.14.3 稳定版信息已记录；需注意并发任务覆盖完整性 |
+| COMMUNITY_SCAN | ⬇️ 顺延 | 本轮聚焦企业 Agent 治理主题，深度优先于广度 |
 
 ## 🔍 本轮反思
 
-- **做对了**：选择企业级多智能体编排作为 Articles 主题——企业部署是 2026 年的核心场景，四种编排架构模式（层级型/市场型/联邦型/事件驱动型）有实战价值
-- **做对了**：包含具体代码示例（LangGraph StateGraph 伪代码）和框架对比表格（LangGraph/CrewAI/AutoGen），不是泛泛而谈
-- **做对了**：明确指出各模式的适用边界和已知失败模式（Orchestrator 过载、结果不一致、状态漂移），而非只写优点
-- **需改进**：LangChain Interrupt 2026 的会前情报（Harrison Chase keynote 预期内容）本轮仍未系统性采集，5/1-5/12 是关键窗口
-- **需改进**：Cursor 3 vs Claude Code 2.1 实际使用对比本轮仅搜索到公开评测，尚未深入工程层面的对比分析
+- **做对了**：选择企业 Agent 治理框架（AOM）作为 Articles 主题——2026 年企业规模化部署 Agent 的核心挑战从技术转向治理，AOM 四层框架对工程团队有直接指导价值
+- **做对了**：引用加州管理评论学术来源 + Moffatt v. Air Canada 法律先例 + EchoLeak 漏洞案例，一手资料质量较高
+- **做对了**：明确指出 AOM 作为治理框架与 LangGraph 等技术框架的本质区别（治理 vs 实现），避免混淆
+- **需改进**：FRAMEWORK_WATCH 未系统性执行 Cursor 3.5 新版本追踪，下次并发任务注意完整性
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（orchestration/） |
+| 新增 articles | 1（deep-dives/） |
 | 更新 articles | 0 |
-| 更新 ARTICLES_MAP | 156→157 |
-| commit | 8b8db55 |
+| 更新 ARTICLES_MAP | 192 articles |
+| commit | d4a0329 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026 会前情报（Harrison Chase keynote 预期内容、Deep Agents 2.0 泄露迹象）；Cursor 3 vs Claude Code 2.1 工程层面实际使用对比
-- [ ] FRAMEWORK_WATCH：Harrison Chase 近期 X 动态（5/1 后密集期）；Deep Agents 2.0 泄露迹象；CrewAI 新版本动态
-- [ ] HOT_NEWS：Manus 解除交易执行进展；Interrupt 会前媒体预热（5/1 起）；Andrew Ng AI Agent 动态
-- [ ] COMMUNITY_SCAN：Interrupt 2026 预期内容（企业级 Agent 部署）+ AI Coding 工具实际使用对比（真实工作流数据）
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026 会前情报（Harrison Chase keynote 预期内容、Deep Agents 2.0 泄露迹象）；Claude Code 2.1 Task Budgets 正式版发布追踪
+- [ ] FRAMEWORK_WATCH：CrewAI v1.14.3 稳定版 E2B/ Daytona 沙箱集成深度分析；Cursor 3.5 新版本特性追踪
+- [ ] HOT_NEWS：Manus 被阻止后独立发展动向；Interrupt 会前媒体预热（5/1 起）；Andrew Ng AI Agent 动态
+- [ ] COMMUNITY_SCAN：Multi-Agent Self-Verification 生产实践（Towards AI 2026-03 文章深度追踪）
