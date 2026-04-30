@@ -2,23 +2,22 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-30 14:03 | 下轮 |
-| FRAMEWORK_WATCH | 每天 | 2026-04-30 14:03 | 2026-05-01 06:03 |
-| COMMUNITY_SCAN | 每三天 | 2026-04-30 14:03 | 2026-05-01 14:03 |
-| CONCEPT_UPDATE | 每三天 | 2026-04-30 14:03 | 2026-05-01 14:03 |
-| ENGINEERING_UPDATE | 每三天 | 2026-04-30 14:03 | 2026-05-01 14:03 |
-| BREAKING_INVESTIGATE | 每三天 | 2026-04-30 14:03 | 2026-05-01 14:03 |
+| HOT_NEWS | 每轮 | 2026-04-30 18:03 | 下轮 |
+| FRAMEWORK_WATCH | 每天 | 2026-04-30 18:03 | 2026-05-01 18:03 |
+| COMMUNITY_SCAN | 每三天 | 2026-04-30 18:03 | 2026-05-03 18:03 |
+| CONCEPT_UPDATE | 每三天 | 2026-04-30 18:03 | 2026-05-03 18:03 |
+| ENGINEERING_UPDATE | 每三天 | 2026-04-30 18:03 | 2026-05-03 18:03 |
+| BREAKING_INVESTIGATE | 每三天 | 2026-04-30 18:03 | 2026-05-03 18:03 |
 
 ## ⏳ 待处理任务
 
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
-| LangChain Interrupt 2026（5/13-14）| P1 | ⏳ 待处理 | 5/1-5/12 会前冲刺期；Harrison Chase keynote 预期 Deep Agents 2.0；Andrew Ng 确认参与；Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲阵容；会前应产出至少1篇深度分析 |
-| Multi-Agent Self-Verification | P1 | ✅ 完成 | orchestration/ |
-| Claude Code 2.1 Task Budgets 正式版发布追踪 | P2 | ⏳ 待处理 | 当前仍为公共 Beta；正式版发布后需更新对应文章 |
-| Cursor 3.5 新版本特性追踪 | P2 | ⏳ 待处理 | 3.5版本可能包含新Agent能力；上次（10:03轮）未系统性追踪 |
-| Multi-Agent Self-Verification 深度补充 | P2 | ⏳ 待处理 | 本轮 Towards AI 文章被 Cloudflare 拦截，MAV 论文工程实现细节获取受限；下轮应优先获取完整文章内容 |
+| LangChain Interrupt 2026（5/13-14）会前情报 | P1 | 🔴 执行中 | Harrison Chase keynote 预期 Deep Agents 2.0；会前窗口（5/1-5/12）是关键情报期 |
 | Calvin French-Owen Coding Agents 2026-02 专文 | P2 | ⏳ 待处理 | 时间决策框架（"time is now the biggest consideration"）、Opus parallel sub-agent 架构（Haiku 快速探索）、Codex vs Claude Code 权衡；一手洞察丰富，可独立成文 |
+| Claude Code 2.1 Task Budgets 正式版发布追踪 | P2 | ⏳ 待处理 | 当前 v2.1.123（2026-04-29），Task Budgets 功能仍为 Beta；v2.1.76 增加 MCP 支持和 VS Code 集成 |
+| Cursor 3.5 新版本特性追踪 | P2 | ⏳ 待处理 | 3.5版本可能包含新Agent能力；上次（10:03轮）未系统性追踪 |
+| Multi-Agent Self-Verification 深度补充 | P2 | ⏳ 待处理 | Towards AI 文章被 Cloudflare 拦截；MAV 论文工程实现细节获取受限；下轮应优先获取完整文章内容 |
 | Manus AI 独立发展动向 | P2 | ⏳ 待处理 | 4/27 中国阻止$2B Meta收购；追踪创始人出境限制是否解除；独立发展的技术路线（engram 技术）|
 | OWASP ASI MCP 安全标准 | P2 | ⏳ 待处理 | 2026年MCP-specific安全标准；PromptArmor量化追踪 |
 | Cursor 3 vs Claude Code 2.1 真实使用对比 | P2 | ⏳ 待处理 | 工程层面实际使用对比（开发者真实工作流数据、成本数据） |
@@ -45,9 +44,10 @@
 | Manus AI Meta 收购被阻止地缘政治分析 | P1 | ✅ 完成 | frameworks/ |
 | 企业级多智能体编排架构模式 | P1 | ✅ 完成 | orchestration/ |
 | Agentic Operating Model 企业 Agent 治理四层框架 | P1 | ✅ 完成 | deep-dives/ |
+| 多Agent生产级自验证四种架构模式 | P1 | ✅ 完成 | orchestration/ |
+| LangChain Interrupt 2026「一切被重建」深度分析 | P1 | ✅ 完成 | deep-dives/ |
 
 ## 📌 Articles 线索
 
-- **LangChain Interrupt 2026（5/13-14）**：会前冲刺期（5/1-5/12）；Harrison Chase keynote 预期 Deep Agents 2.0 发布；Andrew Ng confirmed；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲阵容；这是目前最高优先级的会前情报窗口
+- **LangChain Interrupt 2026（5/13-14）**：会前冲刺期（5/1-5/12）；Harrison Chase keynote 预期 Deep Agents 2.0 发布；Andrew Ng confirmed；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲阵容；这是目前最高优先级的会前情报窗口；下轮应追踪 keynote 内容泄露
 - **Calvin French-Owen Coding Agents 2026-02**：Codex co-creator 的实践洞察——「时间成为最大决策变量」（时间决定用哪个agent）、Opus parallel sub-agent 架构（Haiku 快速探索 tokens 并回传）、Codex vs Claude Code 的训练数据差异导致的能力侧重不同
-- **Multi-Agent Self-Verification**：Towards AI (2026-03) 文章 Cloudflare 拦截未完整获取；MAV (arXiv 2502.20379) 论文的 BoN-MAV 算法细节可进一步深挖

@@ -4,33 +4,33 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（Multi-Agent Self-Verification，orchestration/） |
-| HOT_NEWS | ✅ 完成 | 无重大突发事件；Interrupt 2026（5/13-14）会前情报已开始采集 |
-| FRAMEWORK_WATCH | ✅ 完成 | LangChain blog 有 "Interrupt Preview: Meet the MC" 预览文章；其他框架无重大版本更新 |
-| COMMUNITY_SCAN | ✅ 完成 | Calvin French-Owen Coding Agents 2026-02 文章深度追踪；Towards AI Multi-Agent Self-Verification (2026-03) 文章采集成功 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（LangChain Interrupt 2026「一切被重建」深度分析，deep-dives/） |
+| HOT_NEWS | ✅ 完成 | 无重大突发事件；Interrupt 2026（5/13-14）会前情报窗口（5/1-5/12）已开启 |
+| FRAMEWORK_WATCH | ✅ 完成 | LangChain blog 有 "Interrupt Preview: Meet the MC" 和 "Previewing Interrupt 2026: Agents at Enterprise Scale" 预览文章；Claude Code 最新 v2.1.123（2026-04-29）持续小版本迭代，无 breaking changes |
+| COMMUNITY_SCAN | ✅ 完成 | Harrison Chase MAD Podcast「Everything Gets Rebuilt」深度对话追踪；Podwise 摘要提取了 harness/subagent/sandbox/memory 四个核心主题 |
+| PROJECT_SCAN | ⬇️ 跳过 | GitHub Trending 当日项目无 AI Agent 领域高价值候选；lukilabs/craft-agents-oss 是已有类型，无新增价值 |
 
 ## 🔍 本轮反思
 
-- **做对了**：选择多Agent错误累积这个根本问题而非某具体框架，四个验证架构覆盖了从工程成熟（Output Scoring）到研究前沿（MAV）的完整光谱，内容有深度
-- **做对了**：每个验证架构都有核心代码示例，伪代码可直接工程化落地，不是泛泛而谈
-- **做对了**：引用一手资料（arXiv MAV论文 Shalev Lifshitz et al. 2025、Towards AI Yuval Mehta 2026-03、Redis技术博客）
-- **做对了**：结论「在每个Agent间handoff point设置轻量级验证门」是具体可操作的工程建议
-- **需改进**：Towards AI文章被Cloudflare拦截（HTTP 403），MAV论文的工程实现细节获取有限，MAV小节内容深度受限
-- **需改进**：Calvin French-Owen的Coding Agents文章（calv.info/agents-feb-2026）有大量一手洞察（时间决策框架、Opus parallel sub-agent架构、Codex vs Claude Code对比），本轮仅作为背景引用，未写成专文
+- **做对了**：选择「Everything Gets Rebuilt」作为 LangChain Interrupt 2026 会前分析的核心论点——不是简单的会议预告，而是从技术架构层面解读 Harrison Chase 的「重建」宣言背后的含义
+- **做对了**：追踪了一手来源——MAD Podcast 完整音频 + Podwise 结构化摘要 + LinkedIn 帖子，而非依赖二手解读
+- **做对了**：预测了 Deep Agents 2.0 的可能方向（memory-as-a-service、多层权限体系、混合部署），并明确标注为「推测」而非「事实」
+- **需改进**：GitHub Trending 无高价值项目，本轮 PROJECT_SCAN 为空；下次应扩展到 weekly/monthly 维度以发现中期趋势
+- **需改进**：未获取到 Calvin French-Owen Coding Agents 2026-02 原文内容，只是作为背景引用，下轮应尝试直接获取
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles | 1（orchestration/） |
+| 新增 articles | 1（LangChain Interrupt 2026，deep-dives/） |
 | 更新 articles | 0 |
-| 更新 ARTICLES_MAP | 171 articles |
+| 更新 ARTICLES_MAP | 172 articles |
 | commit | 待提交 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026 会前情报冲刺（5/1-5/12关键窗口）；重点追踪 Harrison Chase Deep Agents 2.0 发布预期、Andrew Ng keynote 内容；会前应产出至少1篇深度分析
-- [ ] ARTICLES_COLLECT：Calvin French-Owen Coding Agents 2026-02 专文（时间决策框架、Opus parallel sub-agent 架构、Coding Agent 选型心智模型）
-- [ ] FRAMEWORK_WATCH：LangChain Interrupt 会前情报系统性采集
-- [ ] HOT_NEWS：Manus AI 独立发展动向（$2B收购被阻止后的技术路线）；Interrupt 会前预热（5/1起媒体开始集中报道）
-- [ ] PROJECT_SCAN：GitHub Trending AI Agent 项目（距上次扫描已超过24小时）
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026 keynote 内容泄露追踪（5/1-5/12 关键窗口）；重点关注 Harrison Chase Deep Agents 2.0 具体功能发布、Andrew Ng keynote 内容
+- [ ] ARTICLES_COLLECT：Calvin French-Owen Coding Agents 2026-02 专文（时间决策框架、Opus parallel sub-agent 架构）
+- [ ] FRAMEWORK_WATCH：Claude Code v2.1 正式版发布（Task Budgets Beta 状态追踪）；Cursor 3.5 版本特性
+- [ ] HOT_NEWS：Manus AI 独立发展动向（$2B 收购被阻止后的技术路线独立化）
+- [ ] PROJECT_SCAN：扩展到 GitHub Trending weekly/monthly 维度
