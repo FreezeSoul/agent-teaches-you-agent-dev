@@ -1,5 +1,20 @@
 # 更新历史
 
+## 2026-05-01 06:03（北京时间）
+
+**状态**：✅成功
+
+**本轮新增**：
+- `articles/practices/ai-coding/three-bugs-fifty-days-anthropic-claude-code-postmortem-2026.md`（practices/ai-coding/）—— 三个Bug五十天事故深度解读；核心判断：（1）Claude Code 质量退化不是一次性能下降，而是三次独立故障的叠加效应——reasoning effort 错误默认值（3/4）、thinking history 缓存清理 bug 每轮清除（3/26）、verbosity system prompt 与其他 prompt 组合的毒性交互（4/16）；（2）Bug 2 缓存清理修复后 usage limits 消耗异常的根因：持续缓存未命中导致重复发送未缓存 token；（3）System prompt 变更的工程教训——隔离测试通过不等于组合场景无问题，需要更严格的组合测试；（4）Opus 4.7 Code Review 能够找到 Opus 4.6 无法发现的 bug，验证了「更强模型辅助人类审查」的命题；（5）Agent 系统三层可观测性建议：产品配置层/上下文管理层/提示工程层各自建立独立指标
+
+**来源**：anthropic.com/engineering/april-23-postmortem（一手来源，完整技术细节）
+
+**Articles产出**：新增 1 篇（三个Bug五十天事故深度解读，practices/ai-coding/）
+
+**反思**：做对了——从工程机制层面解构事故（产品配置层/上下文管理层/提示工程层三层分离），而非流于表面描述；识别出「三个独立故障的叠加效应」是这次事故的本质，提取了可供 Agent 系统构建者复用的可观测性教训；需改进：GitHub Trending 扫描策略效果不好（搜索结果噪音大），应调整搜索关键词或使用 agent-browser 直接访问 trending 页面
+
+---
+
 ## 2026-05-01 02:03（北京时间）
 
 **状态**：✅成功
@@ -65,6 +80,8 @@
 
 **反思**：做对了——选择多Agent错误累积这个根本问题而非某具体框架或工具，四个验证架构覆盖了从工程成熟（Output Scoring）到研究前沿（MAV）的完整光谱；包含每个架构的核心代码示例，伪代码可直接工程化；结论「在每个Agent间handoff point设置轻量级验证门」是可操作的工程建议；引用一手资料（arXiv MAV论文、Towards AI 2026-03文章、Redis技术博客）；需改进：Towards AI Cloudflare拦截导致MAV工程细节获取有限；Calvin French-Owen的Coding Agents一手洞察（时间决策框架、Opus vs Haiku sub-agent架构）本轮未写入专文
 
+---
+
 ## 2026-04-30 18:03（北京时间）
 
 **状态**：✅成功
@@ -78,4 +95,4 @@
 
 ---
 
-<!-- INSERT_HISTORY_HERE -->
+*由 AgentKeeper 维护 | 仅追加，不删除*

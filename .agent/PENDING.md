@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| HOT_NEWS | 每轮 | 2026-04-30 22:03 | 下轮 |
-| FRAMEWORK_WATCH | 每天 | 2026-04-30 22:03 | 2026-05-01 22:03 |
+| HOT_NEWS | 每轮 | 2026-05-01 06:03 | 下轮 |
+| FRAMEWORK_WATCH | 每天 | 2026-05-01 06:03 | 2026-05-02 06:03 |
 | COMMUNITY_SCAN | 每三天 | 2026-04-30 22:03 | 2026-05-03 22:03 |
 | CONCEPT_UPDATE | 每三天 | 2026-04-30 22:03 | 2026-05-03 22:03 |
 | ENGINEERING_UPDATE | 每三天 | 2026-04-30 22:03 | 2026-05-03 22:03 |
@@ -14,42 +14,18 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | LangChain Interrupt 2026（5/13-14）会前情报 | P1 | 🔴 下轮优先 | Harrison Chase keynote 预期 Deep Agents 2.0；Andrew Ng confirmed；5/1-5/12 是关键情报窗口 |
-| Calvin French-Owen Coding Agents 2026-02 专文 | P2 | ✅ 完成 | 时间决策框架（"time is now the biggest consideration"）、Opus parallel sub-agent 架构（Haiku 快速探索）、Codex vs Claude Code 权衡；一手洞察丰富，可独立成文 |
-| Claude Code 2.1 Task Budgets 正式版发布追踪 | P2 | ⏳ 待处理 | 当前 v2.1.123（2026-04-29），Task Budgets 功能仍为 Beta；v2.1.76 增加 MCP 支持和 VS Code 集成 |
-| Cursor 3.5/Glass 正式版特性追踪 | P2 | ⏳ 待处理 | Glass Beta（2026-03）已发布；正式版预期 Q3 2026；关注并行 Agent 架构正式落地 |
-| Multi-Agent Self-Verification 深度补充 | P2 | ⏳ 待处理 | Towards AI 文章被 Cloudflare 拦截；MAV 论文工程实现细节获取受限；下轮应优先获取完整文章内容 |
-| Manus AI 独立发展动向 | P2 | ⏳ 待处理 | 4/27 中国阻止$2B Meta收购；追踪创始人出境限制是否解除；独立发展的技术路线（engram 技术）|
+| Manus AI 独立发展动向 | P2 | 🔴 下轮优先 | $2B Meta收购被阻止（2026-04-27）；追踪创始人出境限制是否解除；engram 技术路线 |
+| Claude Code 2.1 Task Budgets 正式版发布追踪 | P2 | ⏳ 待处理 | 当前 v2.1.123（2026-04-29），Task Budgets 功能仍为 Beta |
+| Cursor 3.5/Glass 正式版特性追踪 | P2 | ⏳ 待处理 | Glass Beta（2026-03）已发布；正式版预期 Q3 2026 |
+| Multi-Agent Self-Verification 深度补充 | P2 | ⏳ 待处理 | Towards AI 文章被 Cloudflare 拦截；MAV 论文工程实现细节获取受限 |
 | OWASP ASI MCP 安全标准 | P2 | ⏳ 待处理 | 2026年MCP-specific安全标准；PromptArmor量化追踪 |
 | Cursor 3 vs Claude Code 2.1 真实使用对比 | P2 | ⏳ 待处理 | 工程层面实际使用对比（开发者真实工作流数据、成本数据） |
 | Enterprise Memory Stack 商业实现 | P2 | ⏳ 待处理 | Databricks Unity Catalog；memory-as-service商业产品 |
 | Agent Governance Toolkit 深度追踪 | P2 | ⏳ 待处理 | IATP 协议与 A2A/MCP 的互操作性；GitHub 源码工程细节 |
-| LangChain Deep Agents 生产运行架构 | P1 | ✅ 完成 | deep-dives/ |
-| A2A Protocol 1.0 协议设计决策深度分析 | P1 | ✅ 完成 | frameworks/ |
-| AI协调DDoS攻击分析 | P1 | ✅ 完成 | orchestration/ |
-| Claude Code 质量回退事件复盘 | P1 | ✅ 完成 | practices/ai-coding/ |
-| Cursor 3 Glass vs Claude Code 2026 争霸 | P1 | ✅ 完成 | practices/ai-coding/ |
-| Auto Mode 安全架构双层防御 | P1 | ✅ 完成 | harness/ |
-| ShellBridge Postmortem | P1 | ✅ 完成 | deep-dives/ |
-| 执行层安全结构性失效 | P1 | ✅ 完成 | harness/ |
-| AI Agent 框架安全披露真空 | P1 | ✅ 完成 | harness/ |
-| MCP Server 命令注入漏洞 | P1 | ✅ 完成 | harness/ |
-| DeepSeek V4 与 Agent 架构 | P1 | ✅ 完成 | fundamentals/ |
-| Microsoft Agent Framework 1.0 GA | P1 | ✅ 完成 | frameworks/ |
-| Claude Code 2.1 Effort Level 系统（xhigh 默认）| P1 | ✅ 完成 | practices/ai-coding/ |
-| CoALA Framework 记忆类型与架构区分 | P1 | ✅ 完成 | context-memory/ |
-| 企业级 Agent 记忆栈四层架构 | P1 | ✅ 完成 | fundamentals/ |
-| Mem0g 图增强记忆系统时序推理 | P1 | ✅ 完成 | context-memory/ |
-| Engram vs Mem0g 记忆架构哲学对比 | P1 | ✅ 完成 | context-memory/ |
-| Cursor 3 Glass 并行 Agent 架构工程拆解 | P1 | ✅ 完成 | practices/ai-coding/ |
-| Manus AI Meta 收购被阻止地缘政治分析 | P1 | ✅ 完成 | frameworks/ |
-| 企业级多智能体编排架构模式 | P1 | ✅ 完成 | orchestration/ |
-| Agentic Operating Model 企业 Agent 治理四层框架 | P1 | ✅ 完成 | deep-dives/ |
-| 多Agent生产级自验证四种架构模式 | P1 | ✅ 完成 | orchestration/ |
-| LangChain Interrupt 2026「一切被重建」深度分析 | P1 | ✅ 完成 | deep-dives/ |
-| Cursor「战时策略」与 AI 编码工具格局重塑 | P1 | ✅ 完成 | practices/ai-coding/ |
+| GitHub Trending 扫描策略优化 | P2 | ⏳ 待处理 | 当前搜索噪音大，应调整策略或使用 agent-browser 直接访问 |
 
 ## 📌 Articles 线索
 
-- **LangChain Interrupt 2026（5/13-14）**：会前冲刺期（5/1-5/12）；Harrison Chase keynote 预期 Deep Agents 2.0 发布；Andrew Ng confirmed；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；Coinbase/Apple/LinkedIn/Cisco/Toyota 演讲阵容；这是目前最高优先级的会前情报窗口；下轮应追踪 keynote 内容泄露
-- **Calvin French-Owen Coding Agents 2026-02**：Codex co-creator 的实践洞察——「时间成为最大决策变量」（时间决定用哪个agent）、Opus parallel sub-agent 架构（Haiku 快速探索 tokens 并回传）、Codex vs Claude Code 的训练数据差异导致的能力侧重不同
-- **Anthropic April 23 post-mortem（已获取一手来源）**：三个 bug 的完整技术机制——(1) March 4 reasoning effort 从 high 改为 medium 导致智能下降；(2) March 26 thinking history 清除 bug 每轮清除而非只清除一次；(3) April 16 verbosity system prompt 与其他 prompt 组合影响编码质量；已获取完整一手文章内容，下轮应直接写作
+- **LangChain Interrupt 2026（5/13-14）**：会前冲刺期（5/1-5/12）；Harrison Chase keynote 预期 Deep Agents 2.0 发布；Andrew Ng confirmed；MongoDB CEO fireside chat 揭示企业数据层与 Agent 的集成挑战；下轮应追踪 keynote 内容泄露
+- **Manus AI 地缘政治案例**：$2B Meta收购被中国阻止（2026-04-27），这是中国首次阻止美国科技公司对中国AI初创公司的收购，可作为企业Agent在地缘政治风险下的生存策略分析案例
+- **Claude Code Task Budgets beta 演进**：当前处于公开 beta（需要 `task-budgets-2026-03-13` header），正式版发布后将改变 agent loop 的 token 管理范式
