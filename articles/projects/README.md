@@ -7,6 +7,7 @@
 
 ## 已推荐项目
 
+- [meta-pytorch/KernelAgent](https://github.com/meta-pytorch/KernelAgent) — Deep Agent + GPU Kernel 自动化优化开源实现，PyTorch → Triton 自动转化
 - [coleam00/Archon](https://github.com/coleam00/Archon) — 首个开源 AI 编程工作流引擎，让 AI 编程变得确定可重复
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
@@ -30,6 +31,7 @@
 
 ## 推荐文章索引
 
+- [kernelagent-meta-multi-agent-gpu-optimization](./kernelagent-meta-multi-agent-gpu-optimization.md) — Deep Agent + GPU Kernel 自动化优化开源实现
 - [archon-open-source-harness-builder](./archon-open-source-harness-builder.md) — 让 AI 编程变得确定可重复的开源工作流引擎
 - [superpowers-llm-feature-flags](./superpowers-llm-feature-flags.md) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [everything-claude-code](./everything-claude-code.md) — AI Agent Harness 的性能优化系统
