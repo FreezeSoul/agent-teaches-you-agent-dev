@@ -57,3 +57,4 @@
 - [zilliztech/memsearch](./memsearch-cross-platform-agent-memory-2026.md) — 跨平台统一的 AI Agent 持久记忆层，Markdown 即真理、Milvus 影子索引
 - [jcode-next-generation-coding-agent-harness](./jcode-next-generation-coding-agent-harness.md) — 极致轻量化的下一代编码 Agent Harness（RAM 比 Claude Code 低 93%）
 - [planner-worker-multi-agent-autonomous-coding-architecture-2026](../orchestration/planner-worker-multi-agent-autonomous-coding-architecture-2026.md) — Planner/Worker 架构深度分析（Cursor Scaling Agents + Anthropic C Compiler 双案例实证）
+- [hermes-agent-nousresearch-self-improving-agent-2026](./hermes-agent-nousresearch-self-improving-agent-2026.md) — Nous Research 自改进 AI Agent，内置学习闭环 + 多平台部署
