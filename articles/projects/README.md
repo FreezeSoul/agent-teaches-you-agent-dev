@@ -24,6 +24,7 @@
 - [bytedance/deer-flow](https://github.com/bytedance/deer-flow) — 字节跳动开源的多智能体编排框架，Supervisor 模式 + Docker 沙箱 + 持久化记忆
 - [numman-ali/openskills](https://github.com/numman-ali/openskills) — Anthropic Agent Skills 的跨平台实现，一个 CLI 让所有 AI 编码工具都能用 Skills
 - [mattpocock/skills](https://github.com/mattpocock/skills) — 来自真实工程师的 Agent Skills 实践集，将二十年工程经验蒸馏为可组合的 Agent Skills
+- [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排框架，Sandbox Agent 原生支持长时任务
 
 ---
 
@@ -46,5 +47,6 @@
 - [deerflow-2-bytedance-multi-agent-orchestration](./deerflow-2-bytedance-multi-agent-orchestration-2026.md) — 字节跳动开源的多智能体编排框架
 - [openskills-universal-skills-loader](./openskills-universal-skills-loader-2026.md) — Anthropic Agent Skills 的跨平台实现
 - [mattpocock-skills-engineering-agent-2026](./mattpocock-skills-engineering-agent-2026.md) — 来自真实工程师的 Agent Skills 实践集
+- [openai-agents-sdk-multi-agent-framework](./openai-agents-sdk-multi-agent-framework.md) — OpenAI 官方多 Agent 编排框架
 - [openfang-rust-agent-operating-system](./openfang-rust-agent-operating-system.md) — Rust 编写的开源 Agent 操作系统
 - [RightNow-AI/openfang](https://github.com/RightNow-AI/openfang) — Rust 编写的开源 Agent 操作系统，Hands 概念实现真正的自主执行
