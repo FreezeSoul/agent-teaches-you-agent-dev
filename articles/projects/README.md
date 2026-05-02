@@ -32,6 +32,7 @@
 - [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) — 开源 MultiAgentOps 评估框架，5000+ 场景库 + Flight Recorder 轨迹回放 + 9层安全审计
 - [RightNow-AI/forge-mcp-server](https://github.com/RightNow-AI/forge-mcp-server) — Swarm Agent GPU Kernel 优化 MCP Server，14x 加速 + 100% 数值正确性
 - [withastro/flue](https://github.com/withastro/flue) — Astro 团队开源的 TypeScript Agent Harness 框架，虚拟沙箱 + Markdown Skill 系统
+- [aden-hive/hive](https://github.com/aden-hive/hive) — 目标驱动的 Multi-Agent 生产级 Harness，自动生成执行图谱 + 自愈能力
 
 ---
 
@@ -68,4 +69,6 @@
 - [forge-mcp-server-rightnow-2026](./forge-mcp-server-rightnow-2026.md) — 让 AI 编程 Agent 拥有 GPU Kernel 优化能力的 MCP Server，14x 加速
 - [multiagenteval-open-source-agent-eval-harness-2026](./multiagenteval-open-source-agent-eval-harness-2026.md) — 填补 Agentic Reliability Gap 的开源评估框架，5000+ 场景 + Zero-Touch Core Architecture
 - [flue-astro-agent-harness-framework-2026](./flue-astro-agent-harness-framework-2026.md) — Astro 团队开源的 TypeScript Agent Harness，虚拟沙箱 + Markdown Skill 系统
+- [hive-openhive-multi-agent-harness-2026](./hive-openhive-multi-agent-harness-2026.md) — 目标驱动的 Multi-Agent 生产级 Harness，YC 背景 + 自愈图谱演化
+- [anysphere-kernel-optimization-results](./anysphere-kernel-optimization-results-2026.md) — Cursor + NVIDIA 235 个 CUDA Kernel 38% 加速的开源验证结果
 - [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
