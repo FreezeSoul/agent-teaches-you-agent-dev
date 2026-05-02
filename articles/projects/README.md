@@ -31,6 +31,7 @@
 - [provos/ironcurtain](https://github.com/provos/ironcurtain) — 运行时动态风险评估安全运行时，填补静态规则和人工审批之间的空白
 - [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) — 开源 MultiAgentOps 评估框架，5000+ 场景库 + Flight Recorder 轨迹回放 + 9层安全审计
 - [RightNow-AI/forge-mcp-server](https://github.com/RightNow-AI/forge-mcp-server) — Swarm Agent GPU Kernel 优化 MCP Server，14x 加速 + 100% 数值正确性
+- [withastro/flue](https://github.com/withastro/flue) — Astro 团队开源的 TypeScript Agent Harness 框架，虚拟沙箱 + Markdown Skill 系统
 
 ---
 
@@ -66,3 +67,5 @@
 - [ironcurtain-secure-runtime-autonomous-ai-2026](./ironcurtain-secure-runtime-autonomous-ai-2026.md) — 运行时动态风险评估安全运行时，与 Claude Code Auto Mode 双层防御形成技术对照
 - [forge-mcp-server-rightnow-2026](./forge-mcp-server-rightnow-2026.md) — 让 AI 编程 Agent 拥有 GPU Kernel 优化能力的 MCP Server，14x 加速
 - [multiagenteval-open-source-agent-eval-harness-2026](./multiagenteval-open-source-agent-eval-harness-2026.md) — 填补 Agentic Reliability Gap 的开源评估框架，5000+ 场景 + Zero-Touch Core Architecture
+- [flue-astro-agent-harness-framework-2026](./flue-astro-agent-harness-framework-2026.md) — Astro 团队开源的 TypeScript Agent Harness，虚拟沙箱 + Markdown Skill 系统
+- [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
