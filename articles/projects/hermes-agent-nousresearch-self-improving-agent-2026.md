@@ -1,4 +1,4 @@
-## 项目名称：NousResearch/hermes-agent
+# 项目名称：NousResearch/hermes-agent
 
 ## 核心问题：如何让 Agent 在跨会话中持续自我改进
 
