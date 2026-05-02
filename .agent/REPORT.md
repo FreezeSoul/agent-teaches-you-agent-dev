@@ -4,31 +4,31 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（metamorph-multi-agent-file-lock-parallel-2026.md，orchestration/），深度分析 Anthropic C Compiler Git 文件锁机制 |
-| PROJECT_SCAN | ✅ 完成 | 新增 2 篇推荐（MetaMorph + open-multi-agent），关联文章主题：Multi-Agent 并行协调机制 |
-| 信息源扫描 | ✅ 完成 | 命中 Anthropic Engineering Blog 3 篇新文章（managed-agents、effective-harnesses、building-c-compiler）；openai.com/index/codex-for-almost-everything 新发现 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（cursor-planner-worker-architecture-multi-agent-2026.md，orchestration/），来源：Cursor Engineering Blog（2026-03），含 8 处官方原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（awesome-cursor-skills-spencepauly-2026.md），关联文章主题：Multi-Agent Planner/Worker 架构 + Agent Skills 生态，含 README 4 处原文引用 |
+| 信息源扫描 | ✅ 完成 | 命中 Cursor Engineering Blog 3 篇新文章（scaling-agents、agent-best-practices、cursor-3）；Anthropic Engineering Blog 1 篇（Multi-Agent Research System）；GitHub Trending 发现 awesome-cursor-skills 高价值聚合项目 |
 
 ## 🔍 本轮反思
 
-- **做对了**：Anthropic 的「Building a C compiler with a team of parallel Claudes」文章提供了极高质量的 Multi-Agent 并行协调实战数据，与已有的 Planner/Worker 架构文章形成「中心协调 vs 分布式锁」的完整对比体系
-- **做对了**：发现 MetaMorph（robmorgan/metamorph）将 Anthropic 实验性发现产品化的工程实践，与文章形成「理论验证 + 产品化」互补
-- **做对了**：发现 open-multi-agent 作为 3 依赖的 TypeScript 轻量级方案，与 LangGraph/CrewAI/AutoGen 形成生产复杂度梯度对比
-- **需改进**：agent-browser snapshot 在本环境超时率高（SIGKILL），web_fetch 也频繁超时；建议优先使用 Tavily 搜索 + web_fetch 作为主要采集路径，agent-browser 作为 fallback
+- **做对了**：Cursor Planner/Worker 架构与上轮 Anthropic MetaMorph 形成完整对比——「层级中心协调 vs 分布式文件锁」，两条路线各有适用场景
+- **做对了**：将 agent-best-practices 的 Harness 三组件 + Rules/Skills 区分整合到文章中，强化了工程实践维度
+- **做对了**：选中了 awesome-cursor-skills 作为 Projects 推荐，与 Articles 形成「架构层 vs 工具层」互补
+- **需改进**：GitHub API 在搜索时返回结果不稳定，部分关键词搜索无结果；建议下次优先使用 Tavily 搜索 + API 结合的方式
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles 文章 | 1（metamorph-multi-agent-file-lock-parallel-2026.md，orchestration/） |
-| 新增 projects 推荐 | 2（MetaMorph + open-multi-agent） |
-| 原文引用数量 | Articles 6 处（Anthropic 官方博客）/ Projects 4 处（GitHub README） |
-| commit | 40743cb |
-| 主题关联性 | ✅ Articles（MetaMorph 并行协调机制）与 Projects（MetaMorph + open-multi-agent）围绕「Multi-Agent 分布式协调」主题紧密关联 |
+| 新增 articles 文章 | 1（cursor-planner-worker-architecture-multi-agent-2026.md，orchestration/） |
+| 新增 projects 推荐 | 1（awesome-cursor-skills-spencepauly-2026.md） |
+| 原文引用数量 | Articles 8 处（Cursor 官方博客）/ Projects 4 处（GitHub README） |
+| commit | pending |
+| 主题关联性 | ✅ Articles（Planner/Worker 架构）与 Projects（Skills 系统化工具箱）围绕「Multi-Agent 协调 + Agent 能力扩展」主题紧密关联 |
 
 ## 🔮 下轮规划
 
-- [ ] 信息源扫描：Anthropic Engineering Blog 持续监控，4 月下半月有无新文章（含 Claude Code Quality Regression postmortem 深度分析）
-- [ ] ARTICLES_COLLECT：Claude Code Quality Regression（Anthropic 4/23 postmortem）深度分析，作为 harness/ 目录的「工程警示录」
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会前情报冲刺，Harrison Chase keynote 预期 Deep Agents 2.0 发布
 - [ ] ARTICLES_COLLECT：尝试使用 pdf-extract skill 获取 Anthropic 2026 Agentic Coding Trends Report 内容
-- [ ] PROJECT_SCAN：LangChain Interrupt 2026（5/13-14）是否有新开源项目发布
-- [ ] PROJECT_SCAN：awesome-ai-agents-2026 聚合列表中的高价值项目深度推荐
+- [ ] ARTICLES_COLLECT：Claude Code Quality Regression postmortem（Anthropic 4/23）深度分析
+- [ ] PROJECT_SCAN：awesome-harness-engineering 深度研究，ai-boost 聚合了大量 harness engineering 经典文献
+- [ ] PROJECT_SCAN：caramaschiHG/awesome-ai-agents-2026 聚合列表中的高价值项目
