@@ -33,6 +33,8 @@
 - [RightNow-AI/forge-mcp-server](https://github.com/RightNow-AI/forge-mcp-server) — Swarm Agent GPU Kernel 优化 MCP Server，14x 加速 + 100% 数值正确性
 - [withastro/flue](https://github.com/withastro/flue) — Astro 团队开源的 TypeScript Agent Harness 框架，虚拟沙箱 + Markdown Skill 系统
 - [aden-hive/hive](https://github.com/aden-hive/hive) — 目标驱动的 Multi-Agent 生产级 Harness，自动生成执行图谱 + 自愈能力
+- [robmorgan/metamorph](https://github.com/robmorgan/metamorph) — 并行 Claude Code 容器编排，Git 文件锁分布式任务协调
+- [JackChen-me/open-multi-agent](https://github.com/JackChen-me/open-multi-agent) — 3 依赖的 TypeScript Multi-Agent 引擎，单 `runTeam()` 调用从目标到结果
 
 ---
 
@@ -71,4 +73,6 @@
 - [flue-astro-agent-harness-framework-2026](./flue-astro-agent-harness-framework-2026.md) — Astro 团队开源的 TypeScript Agent Harness，虚拟沙箱 + Markdown Skill 系统
 - [hive-openhive-multi-agent-harness-2026](./hive-openhive-multi-agent-harness-2026.md) — 目标驱动的 Multi-Agent 生产级 Harness，YC 背景 + 自愈图谱演化
 - [anysphere-kernel-optimization-results](./anysphere-kernel-optimization-results-2026.md) — Cursor + NVIDIA 235 个 CUDA Kernel 38% 加速的开源验证结果
+- [metamorph-multi-agent-file-lock-parallel-2026](../orchestration/metamorph-multi-agent-file-lock-parallel-2026.md) — Git 文件锁分布式协调机制，Anthropic 100K 行 C 编译器的工程验证
+- [open-multi-agent-typescript-multi-agent-2026](./open-multi-agent-typescript-multi-agent-2026.md) — 3 依赖的 TypeScript Multi-Agent 引擎，从目标到结果单调用
 - [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
