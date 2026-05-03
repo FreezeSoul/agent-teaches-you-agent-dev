@@ -32,6 +32,7 @@
 - [provos/ironcurtain](https://github.com/provos/ironcurtain) — 运行时动态风险评估安全运行时，填补静态规则和人工审批之间的空白
 - [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) — 开源 MultiAgentOps 评估框架，5000+ 场景库 + Flight Recorder 轨迹回放 + 9层安全审计
 - [RightNow-AI/forge-mcp-server](https://github.com/RightNow-AI/forge-mcp-server) — Swarm Agent GPU Kernel 优化 MCP Server，14x 加速 + 100% 数值正确性
+- [BytedTsinghua-SIA/CUDA-Agent](https://github.com/BytedTsinghua-SIA/CUDA-Agent) — 首个 RL 训练超越 Claude Opus-4.6 的 GPU Kernel 优化系统，2,026 ⭐
 - [withastro/flue](https://github.com/withastro/flue) — Astro 团队开源的 TypeScript Agent Harness 框架，虚拟沙箱 + Markdown Skill 系统
 - [aden-hive/hive](https://github.com/aden-hive/hive) — 目标驱动的 Multi-Agent 生产级 Harness，自动生成执行图谱 + 自愈能力
 - [robmorgan/metamorph](https://github.com/robmorgan/metamorph) — 并行 Claude Code 容器编排，Git 文件锁分布式任务协调
@@ -82,3 +83,5 @@
 - [browserbase-skills-claude-code-cloud-browser-automation-2026](./browserbase-skills-claude-code-cloud-browser-automation-2026.md) — Browserbase Skills 云端浏览器自动化，突破编码 Agent 处理受保护站点的能力瓶颈
 - [genericagent-self-evolving-agent-framework-3k-lines-2026](./genericagent-self-evolving-agent-framework-3k-lines-2026.md) — ~3K 行极简自进化 Agent 框架，技能从任务中结晶而非预装，<30K context window
 - [awesome-agent-skills-agent-skill-index-4494-stars-2026](./awesome-agent-skills-agent-skill-index-4494-stars-2026.md) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
+- [cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026](../orchestration/cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026.md) — Cursor 多智能体系统 3 周 38% 加速，235 个 CUDA Kernel 优化工程方法论解析（Planner/Worker 架构 + Self-Benchmarking 闭环）
+- [cuda-agent-byted-tsinghua-rl-kernel-optimization-2026](./cuda-agent-byted-tsinghua-rl-kernel-optimization-2026.md) — 字节跳动 × 清华 RL 训练 GPU Kernel 优化系统，首个超越 Claude Opus-4.6 的开源实现
