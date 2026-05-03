@@ -14,6 +14,7 @@
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 轻量级 AI Agent 工具链的另一种选择
+- [RenseiAI/AgentFactory](https://github.com/RenseiAI/agentfactory) — Linear 原生的多 Agent 软件工厂，Dev/QA/Acceptance 三阶段流水线，TypeScript/Redis 生产级架构
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
 - [MemTensor/MemOS](https://github.com/MemTensor/MemOS) — LLM 和 AI Agent 的记忆操作系统
