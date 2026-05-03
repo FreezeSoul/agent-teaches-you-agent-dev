@@ -26,8 +26,8 @@
 - [bytedance/deer-flow](https://github.com/bytedance/deer-flow) — 字节跳动开源的多智能体编排框架，Supervisor 模式 + Docker 沙箱 + 持久化记忆
 - [numman-ali/openskills](https://github.com/numman-ali/openskills) — Anthropic Agent Skills 的跨平台实现，一个 CLI 让所有 AI 编码工具都能用 Skills
 - [mattpocock/skills](https://github.com/mattpocock/skills) — 来自真实工程师的 Agent Skills 实践集，将二十年工程经验蒸馏为可组合的 Agent Skills
-- [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排框架，Sandbox Agent 原生支持长时任务
 - [1jehuang/jcode](https://github.com/1jehuang/jcode) — 下一代编码 Agent Harness，极致轻量化设计（RAM 占用比 Claude Code 低 93%）
+- [browserbase/skills](https://github.com/browserbase/skills) — 将 Browserbase 云端浏览器自动化封装为 Claude Code Skill 插件，使编码 Agent 能处理登录受限站点、CAPTCHA 和反爬保护页面
 - [provos/ironcurtain](https://github.com/provos/ironcurtain) — 运行时动态风险评估安全运行时，填补静态规则和人工审批之间的空白
 - [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) — 开源 MultiAgentOps 评估框架，5000+ 场景库 + Flight Recorder 轨迹回放 + 9层安全审计
 - [RightNow-AI/forge-mcp-server](https://github.com/RightNow-AI/forge-mcp-server) — Swarm Agent GPU Kernel 优化 MCP Server，14x 加速 + 100% 数值正确性
@@ -35,6 +35,7 @@
 - [aden-hive/hive](https://github.com/aden-hive/hive) — 目标驱动的 Multi-Agent 生产级 Harness，自动生成执行图谱 + 自愈能力
 - [robmorgan/metamorph](https://github.com/robmorgan/metamorph) — 并行 Claude Code 容器编排，Git 文件锁分布式任务协调
 - [JackChen-me/open-multi-agent](https://github.com/JackChen-me/open-multi-agent) — 3 依赖的 TypeScript Multi-Agent 引擎，单 `runTeam()` 调用从目标到结果
+- [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) — ~3K 行代码的极简自进化 Agent 框架，技能从任务中结晶而非预装
 
 ---
 
@@ -76,3 +77,5 @@
 - [metamorph-multi-agent-file-lock-parallel-2026](../orchestration/metamorph-multi-agent-file-lock-parallel-2026.md) — Git 文件锁分布式协调机制，Anthropic 100K 行 C 编译器的工程验证
 - [open-multi-agent-typescript-multi-agent-2026](./open-multi-agent-typescript-multi-agent-2026.md) — 3 依赖的 TypeScript Multi-Agent 引擎，从目标到结果单调用
 - [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
+- [browserbase-skills-claude-code-cloud-browser-automation-2026](./browserbase-skills-claude-code-cloud-browser-automation-2026.md) — Browserbase Skills 云端浏览器自动化，突破编码 Agent 处理受保护站点的能力瓶颈
+- [genericagent-self-evolving-agent-framework-3k-lines-2026](./genericagent-self-evolving-agent-framework-3k-lines-2026.md) — ~3K 行极简自进化 Agent 框架，技能从任务中结晶而非预装，<30K context window
