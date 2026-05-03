@@ -6,6 +6,7 @@
 ---
 
 ## 已推荐项目
+- [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 
 - [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) — 开源 Agent Harness 实现，深度集成 Claude Code / OpenClaw，支持 Ollama 本地运行
 - [meta-pytorch/KernelAgent](https://github.com/meta-pytorch/KernelAgent) — Deep Agent + GPU Kernel 自动化优化开源实现，PyTorch → Triton 自动转化
@@ -36,6 +37,7 @@
 - [robmorgan/metamorph](https://github.com/robmorgan/metamorph) — 并行 Claude Code 容器编排，Git 文件锁分布式任务协调
 - [JackChen-me/open-multi-agent](https://github.com/JackChen-me/open-multi-agent) — 3 依赖的 TypeScript Multi-Agent 引擎，单 `runTeam()` 调用从目标到结果
 - [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) — ~3K 行代码的极简自进化 Agent 框架，技能从任务中结晶而非预装
+- [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 
 ---
 
@@ -79,3 +81,4 @@
 - [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
 - [browserbase-skills-claude-code-cloud-browser-automation-2026](./browserbase-skills-claude-code-cloud-browser-automation-2026.md) — Browserbase Skills 云端浏览器自动化，突破编码 Agent 处理受保护站点的能力瓶颈
 - [genericagent-self-evolving-agent-framework-3k-lines-2026](./genericagent-self-evolving-agent-framework-3k-lines-2026.md) — ~3K 行极简自进化 Agent 框架，技能从任务中结晶而非预装，<30K context window
+- [awesome-agent-skills-agent-skill-index-4494-stars-2026](./awesome-agent-skills-agent-skill-index-4494-stars-2026.md) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
