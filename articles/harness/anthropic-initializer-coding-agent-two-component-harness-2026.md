@@ -1,53 +1,52 @@
-# Anthropic 双组件 Harness 架构：Initializer Agent + Coding Agent 的工程实践
+# Agentic Loop 与 Long-Running Agent 的工程挑战：Anthropic 双组件 Harness 架构深度解析
 
-## 核心问题
+**核心主张**：长时运行 Agent 的核心挑战不是上下文窗口不足，而是**会话边界导致的状态丢失与目标偏移**。Anthropic 通过Initializer Agent + Coding Agent 的双组件分工，配合 Feature List JSON 和增量进度模式，将这一工程难题转化为可执行的状态管理协议。
 
-如何让 Agent 在跨多个上下文窗口的长时间任务中保持一致的进展？
+**读者画像**：有 Agent 开发经验，理解 ReAct / Tool Use 基础机制，但未系统处理过长时多会话场景的工程师。
 
-Anthropic 在 2026 年发布的工程文章中提出了一个关键洞察：**单一大一统 Agent 无法有效处理超长时间跨度的复杂任务**，必须通过多角色分工来解决。这是继 Claude Code Postmortem 之后，Anthropic 在 Harness 工程领域的又一次重要实践输出。
+**核心障碍**：大多数 Agent 框架默认每次会话是「从零开始」——没有机制保证下一会话能继承上一会话的「清洁状态」，导致项目进度丢失或 Agent 重复劳动。
 
 ---
 
-## 问题分析：长时间运行 Agent 的双重失败模式
+## 1. 为什么「上下文压缩」不够：长时运行 Agent 的两个失效模式
 
-Anthropic 观察到，即使使用 Opus 4.5 这样的前沿模型，在跨多个上下文窗口的长时间任务中也会出现两种典型的失败模式：
+Anthropic 在 Claude Agent SDK 的实验中发现，即使启用了上下文压缩（compaction），纯通用 Agent 在多会话场景下仍会陷入两类失效：
 
-### 失败模式一：One-Shot 过度
+**失效模式一：Agent 试图单次完成整个项目**
 
-Agent 倾向于一次性完成整个任务，而不是分阶段推进。这导致：
+典型表现：从高层次 prompt（如「构建一个 claude.ai 克隆」）出发，Agent 在单次上下文中试图实现全部功能，导致：
+- 上下文在实现中途耗尽，下一会话面对的是「半完成、未归档」的状态
+- 下一会话 Agent 需要「猜」前一个会话做了什么，花费大量时间恢复基础可运行状态
 
-- 在实现中途耗尽上下文窗口
-- 下一个 Agent Session 面对的是一个半成品且无文档的状态
-- 需要花费大量时间"考古"之前的工作
-
-> 官方原文：
-> "The agent tended to try to do too much at once—essentially to attempt to one-shot the app. Often, this led to the model running out of context in the middle of its implementation, leaving the next session to start with a feature half-implemented and undocumented."
+> "Even with compaction, which doesn't always pass perfectly clear instructions to the next agent."
 > — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 
-### 失败模式二：过早宣布完成
+**失效模式二：Agent 过早宣告项目完成**
 
-在部分功能实现后，Agent 会"环顾四周"，看到已有进展就认为任务完成了，忽略剩余的未完成功能。
+在某些功能已实现后，新会话的 Agent 会环视代码库，看到已有进度，直接声明任务完成——忽略未完成的部分。
+
+这两个失效模式的根因不是模型能力不足，而是 **Harness 缺乏「会话边界协议」**：没有机制告诉每一会话「你已经做到哪一步」「还需要做什么」「如何判定完成」。
 
 ---
 
-## 双组件解决方案：Initializer Agent + Coding Agent
+## 2. 双组件架构：Initializer Agent 与 Coding Agent 的职责分离
 
-Anthropic 的解决方案是将 Agent 角色分离为两个专门的组件：
+Anthropic 的解决方案是将长时运行场景拆分为两个不同角色的 Agent：
 
-### 组件一：Initializer Agent
+### 2.1 Initializer Agent（初始化 Agent）
 
-首次运行时使用，专门负责：
+**触发时机**：项目第一次运行，即第一个上下文窗口。
 
-| 职责 | 具体产出 |
-|------|---------|
-| 环境初始化 | `init.sh` 启动脚本 |
-| 进度追踪 | `claude-progress.txt` 进度日志 |
-| 特性规范 | `feature_list.json` 功能清单（200+ 项） |
-| 版本控制 | 初始 git commit 记录 |
+**职责**：基于用户的高层次 prompt，搭建完整的初始环境，包括：
 
-**关键设计：feature_list.json**
+| 产物 | 作用 |
+|------|------|
+| `init.sh` | 可执行的开发环境启动脚本（启动本地服务、初始化依赖） |
+| `feature_list.json` | 结构化的功能清单，包含所有需要实现的功能项，每项标记 `passes: false` |
+| `claude-progress.txt` | 进度日志，记录每个会话完成的工作 |
+| 初始 git commit | 展示已添加文件的快照 |
 
-这是一个结构化的 JSON 文件，每个功能包含：
+Feature List JSON 的格式示例：
 
 ```json
 {
@@ -64,117 +63,165 @@ Anthropic 的解决方案是将 Agent 角色分离为两个专门的组件：
 }
 ```
 
-Anthropic 选择 JSON 而非 Markdown 的原因是：**模型对 JSON 文件的不当修改概率更低**。这体现了 Harness 设计中对模型行为不确定性的规避。
+**设计原则**：Initializer 的核心目标是建立「完整的功能地图」，让后续 Coding Agent 始终有明确的未完成项可查询。Anthropic 选择 JSON 而非 Markdown，因为模型对 JSON 的修改行为更可预测（不易出现意外覆盖）。
 
-### 组件二：Coding Agent
+### 2.2 Coding Agent（编码 Agent）
 
-每次 Session 使用，专门负责：
+**触发时机**：除第一次外的所有会话。
 
-1. **启动时恢复状态**：读取 `claude-progress.txt` 和 git log
-2. **增量工作**：每次只实现一个 feature
-3. **测试验证**：使用 Puppeteer MCP 进行端到端测试
-4. **收尾工作**：git commit + 进度更新
+**职责**：在每个会话中：
+1. 读取 `claude-progress.txt` 和 git log，恢复上一会话的工作状态
+2. 运行 `init.sh` 启动开发服务器，验证当前应用是否处于可运行状态（baseline 测试）
+3. 从 `feature_list.json` 中选择**最高优先级且 passes=false** 的功能项
+4. 实现该功能，进行端到端测试
+5. 将 `passes` 改为 `true`，提交 git commit，更新 progress 文件
 
-> 官方原文：
+**增量进度的关键约束**：Anthropic 要求 Coding Agent 只在上一功能通过测试后才开始下一个，且必须留下「可合并到主分支」状态的代码——无重大 bug、代码有序、有关键文档。
+
+> "By 'clean state' we mean the kind of code that would be appropriate for merging to a main branch: there are no major bugs, the code is orderly and well-documented."
+> — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+
+---
+
+## 3. Feature List JSON：让 Agent 自我追踪进度的结构化协议
+
+Feature List 是整个双组件架构的核心数据载体。它的设计解决了三个问题：
+
+### 3.1 防止「过早完成」
+
+传统的进度追踪（如简单的 TODO 列表）容易被 Agent 在发现已有部分实现后跳过。Feature List 的设计强制每个功能项都必须显式标记为 `passes: true` 才能算完成——且这个标记必须经过实际测试验证。
+
+Anthropic 的 prompt 约束：
+
+> "It is unacceptable to remove or edit tests because this could lead to missing or buggy functionality."
+
+禁止删除或修改测试条目，违者视为功能不完整。
+
+### 3.2 提供增量粒度的任务分配
+
+Feature List 将大型项目拆解为可独立验证的功能单元。每次 Coding Agent 只处理一个 `passes: false` 的条目，避免了「试图一次做完」的原发倾向。
+
+在 claude.ai 克隆的案例中，Initializer 生成了超过 200 个功能项，每项都有明确的验证步骤。这使得整个项目可以通过「逐个击破」完成，而非在单个长上下文中挣扎。
+
+### 3.3 作为跨会话的上下文摘要
+
+Feature List 是比压缩后的原始代码更高效的工作状态摘要。每个新会话的 Agent 只需读取 Feature List，就能快速判断「还剩什么要做」，而不必重新遍历整个代码库。
+
+---
+
+## 4. 清洁状态协议：Git 提交与 Progress 文件的工程契约
+
+除了 Feature List，Anthropic 还要求每个 Coding Agent 在会话结束时：
+
+1. **提交带有描述性信息的 git commit**：记录本次完成的工作
+2. **更新 claude-progress.txt**：简述本次做了什么、下一步是什么
+
+这两份产物构成了跨会话的「双向恢复通道」：
+- `git log`：可以追溯任意历史状态，发现错误实现时可以回滚
+- `claude-progress.txt`：快速了解当前进度和下一步方向
+
+> "We found that the best way to elicit this behavior was to ask the model to commit its progress to git with descriptive commit messages and to write summaries of its progress in a progress file."
+> — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+
+这与人类工程师在换班时的做法完全一致：交接时需要留下「可读的进度记录」和「可恢复的代码状态」。
+
+---
+
+## 5. 端到端测试作为会话启动仪式
+
+Anthropic 的实验中发现了一个反直觉的设计：**每个 Coding Agent 在开始新功能之前，必须先运行一次基础功能的端到端测试，验证应用当前处于可用状态。**
+
+在 Web 应用的场景中，这意味着：
+- 启动本地开发服务器
+- 使用 Puppeteer MCP 模拟用户操作（新建对话、发送消息、接收回复）
+- 验证基础功能仍然正常
+
+只有验证通过后，才开始新功能的实现。
+
+> "If the agent had instead started implementing a new feature, it would likely make the problem worse."
+
+这个设计背后是一个关键洞察：**长时运行 Agent 的累积状态损坏往往是无声的**。代码看起来没问题，但运行时行为已改变。如果 Agent 直接开始实现新功能，可能会在已损坏的基础上继续构建，导致问题扩大化。
+
+Baseline 测试的作用是将「沉默的损坏」显式化为可见的失败，让 Agent 能立即修复，而非带着隐患前进。
+
+---
+
+## 6. 测试工具的关键作用：Puppeteer MCP 与视觉盲区
+
+Anthropic 发现 Claude 在测试场景中的核心能力瓶颈不是「是否执行测试」，而是**能否识别端到端的实际功能是否正常**。
+
+在没有明确引导的情况下，Claude 会：
+- 执行单元测试或 curl 命令
+- 但无法判断功能是否在真实用户场景下正常工作
+
+明确要求使用浏览器自动化工具（Puppeteer MCP）后，Claude 能够：
+- 识别渲染问题（如 CSS 加载失败）
+- 发现 API 响应正常但 UI 未更新的问题
+- 捕获截图作为调试证据
+
+**已知的视觉盲区**：Claude 无法看到浏览器原生的 alert modal（`window.alert()` 弹窗），因此依赖这些 modal 的功能在测试中更容易出现漏测。这是浏览器自动化工具在当前阶段的固有局限。
+
+---
+
+## 7. 常见失效模式与解决方案总结
+
+| 失效模式 | 根因 | 解决方案 |
+|----------|------|----------|
+| Agent 试图单次完成整个项目 | 缺少任务分解机制 | Initializer 生成 Feature List；Coding Agent 每次只做一个功能 |
+| Agent 过早宣告完成 | 缺少明确的进度边界 | Feature List 中每项必须通过测试才标记 passes:true |
+| 新会话 Agent 需要「猜」进度 | 缺少状态继承机制 | claude-progress.txt + git log 提供双向恢复通道 |
+| 会话间状态损坏未被发现 | 缺少基线验证 | 每次会话开始前运行端到端测试作为 baseline |
+| Agent 花费大量时间理解如何运行应用 | 环境信息未结构化 | init.sh 提供一键启动脚本 |
+
+---
+
+## 8. 未来方向：单 Agent 还是多 Agent？
+
+Anthropic 明确指出现有方案的开放问题：
+
+> "It's still unclear whether a single, general-purpose coding agent performs best across contexts, or if better performance can be achieved through a multi-agent architecture."
+
+潜在方向包括：
+- **专用测试 Agent**：专门负责端到端验证，与负责实现的 Coding Agent 并行工作
+- **QA Agent**：检查 Feature List 中各项的测试覆盖度
+- **代码清理 Agent**：在会话间隙执行清理工作，保证代码库始终处于可合并状态
+
+此外，当前的方案针对全栈 Web 开发优化，如何泛化到科研、金融建模等场景仍是开放问题。核心原则（任务分解、清洁状态、增量验证）应可迁移，但具体工具链需要针对领域调整。
+
+---
+
+## 9. 与其他长时运行方案的架构对照
+
+| 方案 | 状态管理 | 任务分配 | 会话恢复 |
+|------|----------|----------|----------|
+| **Anthropic 双组件** | Feature List JSON + Progress 文件 | 增量 feature-by-feature | git log + progress 文件 |
+| **DeepSeek-TUI** | 侧 git 快照（turn-based） | Plan/Agent/YOLO 三模式 | `/restore` + `revert_turn` |
+| **GenericAgent（约 3K 行）** | 技能从任务中结晶 | 无预定义角色，按需生成 | 无持久化（依赖 LLM 上下文） |
+
+Anthropic 的方案强调**结构化的任务边界与验证协议**，DeepSeek-TUI 则通过 turn-based 快照提供更细粒度的回退能力。两者分别适用于「需要精确进度追踪的项目级任务」和「需要频繁上下文回退的探索式任务」。
+
+---
+
+## 结语：Harness 作为会话间的工程契约
+
+本文的核心结论不是「双组件架构是最好的方案」，而是：**长时运行 Agent 的核心工程问题是如何在会话之间建立可靠的工程契约**。
+
+Anthropic 通过三个设计回答了这个问题：
+1. **任务边界协议**：Feature List 强制每项工作有明确边界和验证标准
+2. **状态继承协议**：Progress 文件 + git log 让下一会话能准确恢复
+3. **清洁状态协议**：每次会话必须留下可合并到主分支的代码
+
+这三个协议将「依赖模型自发行为」转变为「依赖结构化工程约束」，这正是 Harness 区别于裸模型调用的本质。
+
+---
+
+**引用来源**
+
+> "We developed a two-fold solution to enable the Claude Agent SDK to work effectively across many context windows: an initializer agent that sets up the environment on the first run, and a coding agent that is tasked with making incremental progress in every session."
+> — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+
 > "The key insight here was finding a way for agents to quickly understand the state of work when starting with a fresh context window, which is accomplished with the claude-progress.txt file alongside the git history."
 > — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 
----
-
-## 关键机制解析
-
-### 1. Feature List 的双重作用
-
-Feature List 既是对任务的完整分解，也是对进度的客观记录：
-
-- **约束 One-Shot 行为**：Agent 必须在清单中选择下一个要实现的 feature，无法"一口气做完"
-- **防止过早完成**：已实现的 feature 必须通过端到端测试才能标记为 `passes: true`
-
-### 2. 端到端测试的必要性
-
-Anthropic 发现，Agent 在代码修改后倾向于"自我感觉良好"但实际功能不工作。解决方案是提供 Browser 自动化工具（Puppeteer MCP）让 Agent 像真实用户一样操作界面。
-
-> 官方原文：
-> "In the case of building a web app, Claude mostly did well at verifying features end-to-end once explicitly prompted to use browser automation tools and do all testing as a human user would."
+> "By 'clean state' we mean the kind of code that would be appropriate for merging to a main branch: there are no major bugs, the code is orderly and well-documented."
 > — [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-
-**已知限制**：Claude 无法看到浏览器原生的 alert modal，导致依赖这些 modal 的功能 bug 率较高。
-
-### 3. Git 作为状态恢复机制
-
-Git commit history + git revert 提供了：
-- 可审计的进度记录
-- 错误代码的快速回滚
-- 并行试验的安全隔离
-
----
-
-## 失败模式与解决方案对照表
-
-| 失败模式 | Initializer Agent 行为 | Coding Agent 行为 |
-|---------|----------------------|------------------|
-| One-Shot 过度 | 建立 feature list 分解任务 | 每次只选一个 feature 实现 |
-| 环境状态混乱 | 初始化 git repo + progress 文件 | 启动时读取状态，收尾时 commit |
-| 过早宣布完成 | 建立 feature list 定义完成标准 | 端到端测试验证后才标记 passes |
-| 不知道如何运行 | 编写 init.sh 启动脚本 | 启动时执行 init.sh |
-
----
-
-## 与 Claude Code Postmortem 的关联
-
-本篇文章与上轮产出的 Claude Code April 2026 Postmortem 形成互补：
-
-| 维度 | Claude Code Postmortem | 双组件 Harness |
-|------|----------------------|----------------|
-| **问题域** | 已有产品的质量回归 | 新架构设计 |
-| **关注点** | 三个独立问题的根因 | 系统性工程解决方案 |
-| **产出** | 警示录（工程教训） | 设计模式（工程实践） |
-| **演进关系** | 修复 → 预防 | 预防 → 架构 |
-
-两者共同构成了 Anthropic 在 Harness 工程领域的完整视图：**问题诊断 + 架构设计**。
-
----
-
-## 未来方向：多 Agent 专业分工
-
-Anthropic 在文章结尾提出了一个开放问题：
-
-> "It’s still unclear whether a single, general-purpose coding agent performs best across contexts, or if better performance can be achieved through a multi-agent architecture. It seems reasonable that specialized agents like a testing agent, a quality assurance agent, or a code cleanup agent, could do an even better job at sub-tasks."
-
-这指向了一个明确的演进方向：
-
-```
-当前：Initializer Agent + Coding Agent（双角色）
-未来：Initializer + Coding Agent + Testing Agent + QA Agent + Code Cleanup Agent（多角色）
-```
-
-每个专门的 Agent 负责软件开发生命周期中的一个特定阶段，通过协作完成复杂任务。这与 Cursor 的 Planner/Worker 架构（已在 [Planner/Worker 双组件架构分析](./planner-worker-multi-agent-autonomous-coding-architecture-2026.md) 中记录）形成了技术路线上的共鸣。
-
----
-
-## 工程判断
-
-### 适用场景
-
-- ✅ 超长周期任务（数小时到数天）
-- ✅ 需要跨 Session 保持一致性
-- ✅ 任务可被分解为离散的 feature
-
-### 不适用场景
-
-- ❌ 短时一次性任务（反而增加复杂度）
-- ❌ 难以定义明确完成标准的任务
-- ❌ 需要实时人类反馈的探索性任务
-
-### 核心启示
-
-> 笔者认为：双组件架构的核心价值不在于"多 Agent"，而在于**引入了任务分解和状态恢复的显式机制**。任何一个长时间运行的 Agent 系统，都需要回答两个问题："下一步做什么？"和"如何从中断处继续？"。Anthropic 选择了 Feature List + Git History 这套组合，正是将工程实践中的人类工作模式（任务清单 + 版本控制）显式化给 Agent。
-
----
-
-## 参考文献
-
-- [Anthropic Engineering: Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- [Anthropic Claude 4 Prompting Guide: Multi-context window workflows](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices#multi-context-window-workflows)
-- [Anthropic Claude Agent SDK Overview](https://platform.claude.com/docs/en/agent-sdk/overview)
-- [claude-quickstarts: autonomous-coding](https://github.com/anthropics/claude-quickstarts/tree/main/autonomous-coding)
