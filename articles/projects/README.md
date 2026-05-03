@@ -18,6 +18,7 @@
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
+- [lobehub/lobe-chat](https://github.com/lobehub/lobe-chat) — Agent 协作空间，75K ⭐，Agent as the Unit of Work 设计理念
 - [MemTensor/MemOS](https://github.com/MemTensor/MemOS) — LLM 和 AI Agent 的记忆操作系统
 - [alibaba/page-agent](https://github.com/alibaba/page-agent) — 让任何网页都能被自然语言控制
 - [agent-sandbox/agent-sandbox](https://github.com/agent-sandbox/agent-sandbox) — E2B 兼容的企业级 AI Agent 沙箱
@@ -90,3 +91,4 @@
 - [cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026](../orchestration/cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026.md) — Cursor 多智能体系统 3 周 38% 加速，235 个 CUDA Kernel 优化工程方法论解析（Planner/Worker 架构 + Self-Benchmarking 闭环）
 - [cuda-agent-byted-tsinghua-rl-kernel-optimization-2026](./cuda-agent-byted-tsinghua-rl-kernel-optimization-2026.md) — 字节跳动 × 清华 RL 训练 GPU Kernel 优化系统，首个超越 Claude Opus-4.6 的开源实现
 - [gastown-multi-agent-workspace-manager-2026](./gastown-multi-agent-workspace-manager-2026.md) — 多 Agent 工作空间编排系统，14,914 ⭐，Git Worktree 隔离 + Beads 账本 + Witness/Deacon 三层监控（关联：Cursor 第三时代多 Agent Fleet 范式）
+- [lobehub-agent-collaboration-platform-2026](./lobehub-agent-collaboration-platform-2026.md) — Agent 协作空间平台，75K ⭐，Agent as the Unit of Work + Create/Collaborate/Evolve 三层协作模式（关联：Anthropic 四层组件模型 → 多 Agent 协作场景下的人类控制设计）
