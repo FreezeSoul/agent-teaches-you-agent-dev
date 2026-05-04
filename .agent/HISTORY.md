@@ -1,3 +1,14 @@
+## 2026-05-04 21:57 (517a106)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（anthropic-initializer-coding-agent-two-component-harness-2026.md，harness/），来源：Anthropic Engineering Blog，含 5 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（nonstop-agent-claude-long-running-harness-2026.md），关联文章主题：Initializer + Coding Agent 双组件架构，含 README 5 处原文引用 |
+
+**反思**：命中 Anthropic「Effective harnesses for long-running agents」+ Cursor Automations + OpenAI Agents SDK 更新。本轮 Articles 解析了「Compaction 为何不够」的深层原因（缺少完整性保证机制），而非只描述「做了什么」。Projects 选择了与 Articles 强关联的 Nonstop Agent（直接实现 Anthropic two-agent pattern），而非 OpenHarness（更通用但关联度低）。Articles 末尾加入与 OpenAI Agents SDK 的设计哲学对比，形成行业横向视野。
+
+---
+
 ## 2026-05-04 19:57 (7ca63b6)
 
 | 任务 | 结果 | 产出 |
