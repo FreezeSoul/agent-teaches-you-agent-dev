@@ -14,6 +14,8 @@
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 轻量级 AI Agent 工具链的另一种选择
+- [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
+
 - [RenseiAI/AgentFactory](https://github.com/RenseiAI/agentfactory) — Linear 原生的多 Agent 软件工厂，Dev/QA/Acceptance 三阶段流水线，TypeScript/Redis 生产级架构
 - [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排 SDK，Sandbox Agents + Handoffs + Guardrails 生产级基础设施，685+ stars/day
 
@@ -103,3 +105,4 @@
 - [mem0-universal-memory-layer-agent-2026](./mem0-universal-memory-layer-agent-2026.md) — LLM 和 AI Agent 的通用记忆层，self-improving memory，LoCoMo 91.6 分（关联：Anthropic Context Engineering → Memory Management 实践验证）
 - [tradingagents-multi-agent-trading-framework-2026](./tradingagents-multi-agent-trading-framework-2026.md) — Multi-Agent 金融交易框架，角色分层（分析师/研究员/交易员/风控），真实金融机构运作逻辑的开源实现（关联：Anthropic Agent Skills → 多 Agent 专业角色编排）
 - [evalview-ai-agent-behavior-regression-gate-2026](./evalview-ai-agent-behavior-regression-gate-2026.md) — AI Agent 行为回归门卫，snapshot behavior → diff tool calls → classify regression，与 Anthropic Long-Running Agent Harness 互补（前者保实现可维护性，后者保行为一致性）
+- [ouroboros-agent-os-replayable-specification-first-2026](./ouroboros-agent-os-replayable-specification-first-2026.md) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，与 Anthropic Context Engineering 形成互补（前者减少输入端冗余，后者管理过程端容量）
