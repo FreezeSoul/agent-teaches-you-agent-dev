@@ -20,6 +20,8 @@
 - [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排 SDK，Sandbox Agents + Handoffs + Guardrails 生产级基础设施，685+ stars/day
 - [LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%
 
+- [VibePod/vibepod-cli](https://github.com/VibePod/vibepod-cli) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent
+
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
@@ -109,3 +111,4 @@
 - [nonstop-agent-claude-long-running-harness-2026](./nonstop-agent-claude-long-running-harness-2026.md) — Claude 长时连续工作 harness，feature_list.json + 双 Agent Pattern，Anthropic 官方工程实践的开源实现（关联：Anthropic Initializer + Coding Agent 双组件架构）
 - [ouroboros-agent-os-replayable-specification-first-2026](./ouroboros-agent-os-replayable-specification-first-2026.md) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，与 Anthropic Context Engineering 形成互补（前者减少输入端冗余，后者管理过程端容量）
 - [local-deep-research-encrypted-agentic-research-2026](./local-deep-research-encrypted-agentic-research-2026.md) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%（关联：Cursor Composer Self-Summarization → 信息管理问题的互补视角：压缩 vs 扩展）
+- [vibepod-cli-docker-agent-container-2026](./vibepod-cli-docker-agent-container-2026.md) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent（关联：OpenAI Agents SDK Native Sandbox → 本地 vs 云端的不同隔离路径）
