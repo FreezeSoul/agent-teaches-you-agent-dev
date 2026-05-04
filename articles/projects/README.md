@@ -15,6 +15,8 @@
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 轻量级 AI Agent 工具链的另一种选择
 - [RenseiAI/AgentFactory](https://github.com/RenseiAI/agentfactory) — Linear 原生的多 Agent 软件工厂，Dev/QA/Acceptance 三阶段流水线，TypeScript/Redis 生产级架构
+- [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排 SDK，Sandbox Agents + Handoffs + Guardrails 生产级基础设施，685+ stars/day
+
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
