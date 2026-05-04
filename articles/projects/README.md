@@ -78,7 +78,7 @@
 - [oh-my-openagent-agent-framework](./oh-my-openagent-agent-framework.md) — 多模型协同的开源 Agent Harness
 - [notebooklm-skill-google-ai](./notebooklm-skill-google-ai.md) — Claude Code 与 Google NotebookLM 的无缝集成
 - [colleague-skill-ai-agent](./colleague-skill-ai-agent.md) — 将人蒸馏为 AI Skill 的工程实践
-- [deerflow-2-bytedance-multi-agent-orchestration](./deerflow-2-bytedance-multi-agent-orchestration-2026.md) — 字节跳动开源的多智能体编排框架
+- [deer-flow-2-bytedance-super-agent-harness](./deer-flow-2-bytedance-super-agent-harness-2026.md) — 字节跳动开源的多智能体编排框架，Supervisor 模式 + Docker 沙箱 + 持久化记忆
 - [openskills-universal-skills-loader](./openskills-universal-skills-loader-2026.md) — Anthropic Agent Skills 的跨平台实现
 - [mattpocock-skills-engineering-agent-2026](./mattpocock-skills-engineering-agent-2026.md) — 来自真实工程师的 Agent Skills 实践集
 - [openai-agents-sdk-multi-agent-framework](./openai-agents-sdk-multi-agent-framework.md) — OpenAI 官方多 Agent 编排框架
