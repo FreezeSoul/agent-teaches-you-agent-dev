@@ -1,3 +1,14 @@
+## 2026-05-05 01:57 (pending commit)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（third-era-software-development-agent-fleet-architecture-2026.md，orchestration/），来源：Cursor Blog + GitHub Blog，含 5 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（overstory-multi-agent-orchestration-git-worktree-2026.md），关联文章主题：Cursor 第三代 → Agent Fleet 架构第三种路线，含 README 2 处原文引用 |
+
+**反思**：命中 Cursor「Third Era」+ GitHub Copilot `/fleet`。Articles 揭示「软件工厂」隐喻下 Agent Fleet 的三种架构路线（Cursor Cloud Agent / Copilot /fleet / Overstory），与上轮 OpenAI Agents SDK（Sandbox/Harness）形成「应用编排层 vs 基础设施层」的完整演进体系。Overstory 的「Session as Orchestrator」设计是本文的最佳实证——不需要独立 Daemon，Claude Code Session 本身就是编排器。
+
+---
+
 ## 2026-05-04 21:57 (517a106)
 
 | 任务 | 结果 | 产出 |

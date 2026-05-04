@@ -21,6 +21,7 @@
 - [LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%
 
 - [VibePod/vibepod-cli](https://github.com/VibePod/vibepod-cli) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent
+- [jayminwest/overstory](https://github.com/jayminwest/overstory) — Git Worktree 隔离的多 Agent 编排工具，1.2K ⭐，Session as Orchestrator 设计，SQLite Mail 高效通信
 
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
@@ -112,3 +113,4 @@
 - [ouroboros-agent-os-replayable-specification-first-2026](./ouroboros-agent-os-replayable-specification-first-2026.md) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，与 Anthropic Context Engineering 形成互补（前者减少输入端冗余，后者管理过程端容量）
 - [local-deep-research-encrypted-agentic-research-2026](./local-deep-research-encrypted-agentic-research-2026.md) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%（关联：Cursor Composer Self-Summarization → 信息管理问题的互补视角：压缩 vs 扩展）
 - [vibepod-cli-docker-agent-container-2026](./vibepod-cli-docker-agent-container-2026.md) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent（关联：OpenAI Agents SDK Native Sandbox → 本地 vs 云端的不同隔离路径）
+- [overstory-multi-agent-orchestration-git-worktree-2026](./overstory-multi-agent-orchestration-git-worktree-2026.md) — Git Worktree 隔离的多 Agent 编排工具，让单个 Claude Code Session 变身多 Agent 团队（关联：Cursor 第三代软件开发 → Agent Fleet 架构的第三种路线：本地化隔离 + 实时干预）
