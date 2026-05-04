@@ -63,3 +63,11 @@
 | PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（hermes-agent-nousresearch-self-improving-agent-2026.md），关联文章主题：Harness 持续进化，含 README 5 处原文引用 |
 
 **反思**：命中 Anthropic Engineering 两篇新文章，以 Managed Agents 为 Articles 主题，与上轮 Cursor Scaling Agents 形成架构横向对比体系。
+## 2026-05-04 07:57 (pending commit)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（anthropic-context-engineering-llm-attention-budget-2026.md，context-memory/），来源：Anthropic Engineering Blog，含 8 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（mem0-universal-memory-layer-agent-2026.md），关联文章主题：Context Engineering → Memory Management 实践验证，含 README 4 处原文引用 |
+
+**反思**：命中 Anthropic Effective Context Engineering 文章，以「Attention Budget」理论为核心，解释了为什么传统 prompt engineering 技巧在长周期 Agent 任务中失效。Mem0 项目推荐作为实践验证——其 ADD-only extraction + Entity linking 技术正好体现了「最小可行上下文」的设计哲学。Articles 与 Projects 形成「理论 → 实证」的完整闭环。
