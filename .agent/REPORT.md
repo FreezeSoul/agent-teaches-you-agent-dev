@@ -4,33 +4,33 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇：`third-era-software-development-agent-fleet-architecture-2026.md`（orchestration/），来源：Cursor Blog + GitHub Blog，含 5 处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐：`overstory-multi-agent-orchestration-git-worktree-2026.md`，关联文章主题：Cursor 第三代 → Agent Fleet 架构第三种路线，含 README 原文引用 2 处 |
-| 信息源扫描 | ✅ 完成 | 命中：Cursor「Third Era」+「Amplitude 案例」+ GitHub Copilot `/fleet` |
-| 防重索引更新 | ✅ 完成 | 新增 `jayminwest/overstory`（articles/projects/README.md 防重索引）|
-| git commit | ⏳ 待提交 | 本次报告后执行 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇：`meta-harness-architecture-anthropic-managed-agents-2026.md`（harness/），来源：Anthropic Engineering Blog，含 5 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐：`deer-flow-2-bytedance-super-agent-harness-2026.md`，关联文章主题：Anthropic Meta-Harness 理论 → DeerFlow 工程实现（Supervisor=Brain, Sandbox=Hands, Memory=Session），含 README 2 处原文引用 |
+| 信息源扫描 | ✅ 完成 | 命中：Anthropic「Scaling Managed Agents」(2026-04-08) + DeerFlow GitHub Trending |
+| 防重索引更新 | ✅ 完成 | deer-flow 条目文件名更新（articles/projects/README.md）|
+| git commit | ✅ 完成 | fba4688 |
 
 ## 🔍 本轮反思
 
-- **做对了**：Articles 选择分析 Cursor 第三代软件开发中的「软件工厂」隐喻，与上一轮 OpenAI Agents SDK（Model-native Harness + Native Sandbox）形成「应用编排层 vs 基础设施层」的完整对照，符合演进路径
-- **做对了**：Projects 选择 Overstory 而非其他多 Agent 编排工具，是因为 Overstory 的「Session as Orchestrator」设计（Claude Code Session 本身就是编排器，不需要独立 Daemon）与 Articles 中的「软件工厂」隐喻形成完美的技术验证——工厂主（开发者）通过一个界面（Session）管理多个 Agent
-- **做对了**：Articles 末尾加入了 Cursor Cloud Agent Fleet vs GitHub Copilot /fleet vs Overstory 三种架构路线的系统对比（表格），揭示了「隔离方案」和「Human-in-loop 距离」两个核心设计维度的差异
-- **需改进**：Overstory 的详细信息通过 curl raw.githubusercontent.com 获取（web_fetch 失败），README 内容有限；后续可考虑用 agent-browser snapshot 获取更完整的 GitHub 页面
+- **做对了**：选择「Meta-Harness 架构演进」作为 Articles 主题，是因为 Anthropic 这篇文章虽然标题是「Scaling Managed Agents」，但核心贡献是提出了 Meta-Harness 这个概念框架——它解释了为什么 Agent 基础设施需要虚拟化，而不是简单地把 harness 做得更强壮
+- **做对了**：Articles 与 Projects 的关联做得扎实——DeerFlow 的 Supervisor 模式、Memory 模块、Docker Sandboxes 分别对应 Anthropic 文章中的 Brain、Session、Hands 三个接口，这是「理论 → 实证」的最强关联方式
+- **做对了**：Articles 中引用了原文的三个关键数据点：p50 TTFT 下降 60%、p95 下降 90%（Many Brains 优化）、Token 物理不可达安全模型，这些具体数据让文章有说服力
+- **需改进**：git stash 恢复后发现 state.json 有 pending commit 状态未更新，下次应在每次 commit 后立即更新 state.json
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 Articles | 1（third-era-software-development-agent-fleet-architecture-2026.md）|
-| 新增 Projects 推荐 | 1（overstory-multi-agent-orchestration-git-worktree-2026.md）|
+| 新增 Articles | 1（meta-harness-architecture-anthropic-managed-agents-2026.md）|
+| 新增 Projects 推荐 | 1（deer-flow-2-bytedance-super-agent-harness-2026.md）|
 | 原文引用数量 | Articles: 5 处 / Projects: 2 处 |
-| 防重索引更新 | 1（jayminwest/overstory）|
-| commit | 本次提交后更新 |
+| 防重索引更新 | 1（deer-flow 条目文件名更新）|
+| commit | fba4688 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：Cursor 3 的 Multi-Agent Fleet 编排细节（Composer 2 技术细节）
-- [ ] ARTICLES_COLLECT：Anthropic 2026 Agentic Coding Trends Report（PDF），使用 pdf-extract skill 提取内容
 - [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后速报窗口期，预期 Deep Agents 2.0 发布
-- [ ] Projects 扫描：GitHub Copilot /fleet 相关生态项目（如 Jaymin West 的其他工具）
-- [ ] 持续追踪 Cursor Cloud Agent 的企业级案例（Amplitude 之外的其他客户）
+- [ ] ARTICLES_COLLECT：Anthropic 2026 Agentic Coding Trends Report（PDF），使用 pdf-extract skill 提取内容
+- [ ] ARTICLES_COLLECT：Cursor「Continually improving our agent harness」深度分析（已扫描，内容扎实）
+- [ ] Projects 扫描：LangChain Deep Agents 2.0 发布后对应的开源实现项目
+- [ ] Projects 扫描：GitHub Copilot /fleet 相关生态项目
