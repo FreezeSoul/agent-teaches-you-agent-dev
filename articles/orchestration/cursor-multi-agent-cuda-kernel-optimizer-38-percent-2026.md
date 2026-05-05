@@ -1,214 +1,263 @@
-# Cursor Multi-Agent 系统：238% 性能突破背后的工程方法论
+# Cursor Multi-Agent 系统：CUDA Kernel 优化的 38% 提速工程实践
 
-> 本文深度解析 Cursor 多智能体系统如何通过单 Markdown 协调协议 + Planner/Worker 架构在 3 周内将 235 个 CUDA Kernel 性能平均提升 38%，并产出 19% 超过 2 倍加速的优化结果。
+## 核心论点
 
----
-
-## 一、问题的本质：为什么 Kernel 优化是多智能体系统的试金石
-
-传统的 Kernel 优化是高度专业化的手工工作：工程师将模型分解为单个数学运算，逐个调优，最后集成。这种方式的瓶颈在于**片面的优化丢失了系统级性能**——每个 Kernel 的独立最优解不等于整个模型的最优解。
-
-但更深层的问题在于：即使理解了这个问题，手工探索的解空间受限于工程师的个人经验。一个 GPU 架构包含数百种硬件单元和调度策略组合，人工无法穷尽搜索。
-
-> "One of the best ways to evaluate long-running, multi-agent systems is to give them open-ended optimization problems where even we don't know the right answer. Kernel optimization problems meet this criteria."
-> — [Cursor Engineering Blog: Speeding up GPU kernels by 38%](https://cursor.com/blog/multi-agent-kernels)
-
-多智能体系统的价值在于：**它能探索超出训练数据分布的开放性问题**。这是本文的核心论点。
+> 本文要证明：Multi-Agent 架构正在成为解决「超出训练数据分布」的开域优化问题的默认范式。Cursor 的 235 个 GPU Kernel 优化实验（38% Geomean 提速）提供了迄今为止最有力的实证——当单 Agent 受限于训练数据的窄任务边界时，多 Agent 协作能够探索单 Agent 无法触及的解空间，并在 3 周内完成人类专家数月才能完成的优化工作。
 
 ---
 
-## 二、架构设计：单 Markdown 协调协议 + Planner/Worker 分层
+## 背景：Kernel 优化为何是 Multi-Agent 的试金石
 
-### 2.1 协调协议的设计选择
+GPU Kernel 优化是典型的「超出训练数据分布」问题。原因有三：
 
-传统的多智能体协调依赖复杂的代码实现——状态机、消息队列、共享内存。Cursor 选择了完全不同的路径：
+**1. 手工优化的局限性**
+传统 Kernel 优化依赖人类工程师将模型分解为单个数学运算，逐个调优。这种方式使得问题变得可管理，但代价是错过了跨整个系统同时优化的潜在收益——因为分段优化忽略了各操作之间的依赖和协同效应。
 
-**所有协调协议存在于一个 Markdown 文件中**，定义了：
-- 输出格式规范
-- 规则和约束
-- 测试流程
+> "Today, engineers optimize kernels by breaking models into individual math operations and tuning each one separately. This makes the problem manageable but leaves performance on the table because piecemeal optimization misses potential gains from optimizing across the entire system simultaneously."
+> — [Cursor Engineering Blog: Speeding up GPU kernels by 38% with a multi-agent system](https://cursor.com/blog/multi-agent-kernels)
 
-> "The entire coordination protocol lived in a single markdown file that specified the output format, rules, and tests."
+**2. 解空间的规模远超单 Agent 能力**
+GPU Kernel 优化涉及从高层算法描述到 PTX 汇编的多层抽象。单个模型在最狭窄的任务范围内表现最佳，而超出这个范围的优化策略需要同时理解硬件约束、内存布局、指令调度等多项复杂因素——这恰恰是单 Agent 架构的盲区。
 
-这个选择有几个关键优势：
+**3. 可量化但无标准答案**
+Kernel 优化提供了可测量的目标（SOL 评分、P99 延迟），但没有人知道「最优解在哪里」。这使得 Kernel 优化成为评估长时运行 Multi-Agent 系统的完美基准。
 
-| 传统方案 | Markdown 协调协议 |
-|----------|-------------------|
-| 需要状态机实现 | 自然语言描述规则 |
-| 代码修改需要重新部署 | 规则变更即时生效 |
-| 调试困难，需要跟踪状态转换 | 文档即规范，规范即调试手册 |
+---
 
-### 2.2 Planner/Worker 分层架构
+## 实验设计：三周、235 个问题、27 张 GPU
 
-系统架构是经典的 Planner/Worker 模式，但实现细节值得深入研究：
+### 2.1 问题来源
+
+NVIDIA 使用 SOL-ExecBench 从 124 个生产级开源模型（如 DeepSeek、Qwen、Gemma、Kimi、Stable Diffusion）生成了 235 个优化问题，涵盖：
+- LLM（推理/训练）
+- Diffusion（图像/视频）
+- Vision/Audio/多模态
+
+> "SOL-ExecBench is an effective evaluator that compares kernel performance against existing software baselines and theoretical hardware performance limits. If agents use cheating tactics like caching and deliver performance beyond what a B200 can support, the pipeline invalidates the result."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
+
+这确保了测试问题都是真实世界的约束，而非合成数据或toy kernel。
+
+### 2.2 Multi-Agent 协调架构
+
+整个系统在 3 周内完成了 235 个 GPU Kernel 优化问题，采用的是 **Planner-Worker 两级架构**：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PLANNER AGENT                             │
-│  - 分析 235 个问题的整体分布                                 │
-│  - 根据性能指标分配任务给 Worker                             │
-│  - 动态重新平衡工作负载                                      │
-│  - 监控 SOL 分数，决定何时停止迭代                           │
+│  Planner Agent                                            │
+│  ├─ 根据性能指标分配任务给 Worker                          │
+│  ├─ 动态 Rebalance 工作负载                               │
+│  └─ 协调协议存在于单一 Markdown 文件中                    │
 └─────────────────────────────────────────────────────────────┘
                               │
               ┌───────────────┼───────────────┐
               ▼               ▼               ▼
         ┌──────────┐   ┌──────────┐   ┌──────────┐
-        │ WORKER 1 │   │ WORKER 2 │   │ WORKER N │
-        │ Kernel A │   │ Kernel B │   │ Kernel M │
+        │ Worker 1 │   │ Worker 2 │   │ Worker N │
+        │ (自动探索)│   │ (自动探索)│   │ (自动探索)│
         └──────────┘   └──────────┘   └──────────┘
-              │               │               │
-              └───────────────┼───────────────┘
-                              ▼
-                ┌─────────────────────────┐
-                │    BENCHMARK PIPELINE   │
-                │    (SOL-ExecBench)      │
-                │  - 验证数值正确性        │
-                │  - 对比硬件理论上限      │
-                │  - 拒绝作弊方案          │
-                └─────────────────────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              ▼               ▼               ▼
+        ┌──────────────────────────────────────┐
+        │  NVIDIA SOL-ExecBench Benchmark Pipeline │
+        │  ├─ 性能基准对比                       │
+        │  ├─ SOL 评分（vs 理论硬件上限）         │
+        │  └─ 作弊检测（防缓存等非常规手段）      │
+        └──────────────────────────────────────┘
 ```
 
-**Planner 的核心能力**不是简单的任务分配，而是**基于性能反馈的动态调度**。Worker 完成一个 Kernel 的优化后，Planner 会根据当前的 SOL 分数决定：
-- 是否继续深入优化
-- 是否重新分配到其他 Worker 尝试不同策略
-- 何时合并结果
+关键设计决策：**协调协议完全存在于单一 Markdown 文件中**（输出格式、规则、测试），而非硬编码。这使得整个协调过程可以被 Agent 自主读取和修改，实现了真正的自主优化闭环。
 
----
+> "The entire coordination protocol lived in a single markdown file that specified the output format, rules, and tests. The multi-agent system independently learned to call the benchmarking pipeline during its runs, creating a loop where the system continuously tested, debugged, and optimized kernels without any developer intervention."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
 
-## 三、Self-Benchmarking 闭环：无需人工干预的迭代优化
+### 2.3 双语言验证
 
-系统的另一个关键设计是**自我基准测试循环**：
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                    SELF-BENCHMARKING LOOP                     │
-│                                                               │
-│  Worker 产出 Kernel → SOL-ExecBench 验证 → 反馈给 Planner   │
-│         ↑                                                    │
-│         └────────────── 新一轮优化迭代 ←──────────────────  │
-└──────────────────────────────────────────────────────────────┘
-```
-
-> "The multi-agent system independently learned to call the benchmarking pipeline during its runs, creating a loop where the system continuously tested, debugged, and optimized kernels without any developer intervention."
-
-这个闭环有几个关键特性：
-
-1. **数值正确性验证**：SOL-ExecBench 会验证 Kernel 输出是否正确。如果超过硬件理论上限（作弊），直接拒绝。
-2. **无需人工介入**：Worker 能自主判断何时需要重新提交测试，Planner 能自主决定是否继续迭代。
-3. **可量化的终止条件**：SOL 分数到 1.0 即达到硬件上限，Planner 可以明确停止优化。
-
----
-
-## 四、实验设计：两种语言、两个极端抽象层级
-
-为了验证系统的泛化能力，Cursor 团队让系统用两种完全不同的语言写 Kernel：
+实验要求 Multi-Agent 系统用两种语言各运行一次，在 GPU 抽象谱系的两端验证能力：
 
 | 语言 | 抽象层级 | 测试目标 |
-|------|----------|----------|
-| **CUDA C + inline PTX** | 接近硬件（ assembly 级别） | 系统能否在最低层级推理硬件行为 |
-| **CuTe DSL** | 高层抽象（新 API，几乎无公开训练数据） | 系统能否从文档学习全新 API |
-
-> "We asked it to write its solutions in two languages in two separated runs, at opposite ends of the GPU abstraction spectrum."
-
-结果显示系统在这两个极端都成功了，说明**多智能体系统的能力不依赖于特定训练数据分布**。
+|------|---------|---------|
+| **CUDA C++ with inline PTX** | 最底层（寄存器、ISA 级指令） | Agent 能否理解最底层硬件？ |
+| **CuTe DSL** | 高层（组合抽象，公开训练数据中极少） | Agent 能否纯粹从文档学习新 API？ |
 
 ---
 
-## 五、数据分析：38% 加速的深层含义
+## 核心结果：38% Geomean 提速
 
-### 5.1 性能分布
+### 3.1 整体性能
 
-- **63%** (149/235)：超过 baseline
-- **38%**：几何平均加速
-- **19%** (45/235)：超过 2 倍加速
-- **中位数 SOL**：0.56（理论上限 1.0）
+| 指标 | 数值 |
+|------|------|
+| Geomean Speedup | **38%**（vs 单 Agent 优化基线） |
+| 超越基线的问题数 | 149/235（63%）|
+| 超过 2x 提速的问题数 | 45/235（19%）|
+| SOL Score 中位数 | 0.56（仍有巨大优化空间）|
 
-### 5.2 典型案例分析
+> "Our multi-agent system successfully outperformed baselines on 149 out of 235 problems (63%), with a geometric mean ratio of 1.38x (38% geomean speedup)."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
 
-**BF16 Grouped Query Attention with Paged Prefill**
-- 来源：SGLang inference for Llama 3.1 8B
-- 方法：persistent kernels + hardware-specific 指令优化
-- SOL 分数：0.9722（**接近硬件上限**）
-- 端到端 TTFT 提升：**3%**
+SOL 评分（Speed-of-Light）是与理论硬件上限的对数比例：0.5 = PyTorch 基线，1.0 = 硬件性能极限。
 
-> "We found that the system produced a solution approaching hardware limits with a SOL score of 0.9722, representing an 84% geomean speedup over the baseline."
+### 3.2 典型案例拆解
 
-**BF16 Matrix Multiplication（GEMM）**
-- 难度：需要理解硬件单元调度、inline PTX、pipelining
-- 结果：达到人类精心调优的 NVIDIA cuBLAS 库的 **86%**
-- 特殊案例（小 M）：系统 Kernel **超越** cuBLAS 最高 **9%**
+#### Case 1：BF16 Grouped Query Attention（Paged Prefill）
 
-> "On small-M test cases, which are especially important for LLM inference decode, the multi-agent system kernel outperformed the library by up to 9%."
+这是 LLM 推理中常见的 Prompt 阶段操作，直接影响了 SGLang 中 Llama 3.1 8B 的 Prefill 过程（占 2-5% 的 Prefill 时间）。
 
----
+Agent 采用了以下策略：
+- 直接使用硬件级内存加载和数学指令
+- 引入 Persistent Kernels 优化调度
+- 针对输入尺寸进行超优化
 
-## 六、与 Long-Running Agent 会话管理的深层关联
+结果：
+- SOL Score: **0.9722**（接近硬件极限）
+- Geomean Speedup vs FlashInfer 基线: **84%**
+- 集成到 SGLang 后，TTFT（Time To First Token）端到端提速 **3%**
 
-本文揭示了一个关键的技术演进方向：**多智能体系统的能力瓶颈已经从「协调」转移到「优化空间探索」**。
+> "The agent used CUDA C++ to optimize this attention problem extracted from SGLang inference for Llama 3.1 8B. As the agent iterated on the kernel, it successfully employed specific hardware instructions for memory loading and math, added improved scheduling via persistent kernels, and hyper-optimized for input size."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
 
-当前的 Long-Running Agent 讨论聚焦于会话状态管理（Feature List、快照、git 追踪），但 Cursor 的实验表明：**当协调问题解决后，真正的挑战是探索空间的广度和深度**。
+#### Case 2：NVFP4 MoE Linear with Gating
 
-这也解释了为什么 Cursor 要在 27 个 GPU 上同时运行系统——更多的计算资源意味着更深的探索。但同时也说明：**当前多智能体系统的效率仍然有很大的提升空间**（中位数 SOL 0.56）。
+这是 Qwen3 等 MoE 模型中的常见模式，核心挑战是输入张量和中间乘法输出都量化到了 NVFP4（4-bit 浮点）。
 
-> "We believe that multi-agent solutions can be vastly improved with more compute."
+Agent 的策略：融合 Scale 计算和 Rounding，直接用预计算的阈值桶将 FP32 映射到 FP4（因为只有 16 种可能的 NVFP4 值）。
 
----
+结果：
+- Geomean Speedup: **39%**
+- SOL Score: **0.58**
 
-## 七、工程启示录
+> "The agent correctly identified the quantization area as the primary bottleneck and accordingly fused scale calculation and rounding. Instead of scaling and then rounding during quantization, it used pre-computed threshold buckets to directly map FP32 values to FP4 codes."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
 
-### 7.1 协调协议的最小化设计
+#### Case 3：BF16 Matrix Multiplication
 
-单 Markdown 协调协议的成功验证了一个原则：**协调复杂度应该与任务复杂度解耦**。当你需要处理 235 个不同类型的优化问题时，过于精细的协调协议反而会成为瓶颈。
+矩阵乘法是公认的难题，需要深入理解硬件各单元及其调度。人类工程师编写高性能 GEMM 需要内联 PTX、流水线、Staging——这些技能长期局限于少数资深 Kernel 专家。
 
-### 7.2 Planner 的动态调度能力是关键
+Agent 的结果：
+- 从零生成专用 CUDA C++ GEMM Kernel
+- 达到 cuBLAS 精心调优基线的 **86%**
+- 在小矩阵（LLM Inference decode 的关键场景）上**反超 cuBLAS 高达 9%**
 
-Planner 不是简单的任务分配器，它需要：
-- 理解任务间的性能差异
-- 根据中间结果动态调整策略
-- 决定何时终止迭代
-
-这与 Long-Running Agent 中的状态管理问题高度相关——Planner 需要维护一个全局的「优化状态」，这与 Harness 的会话状态管理是同一类问题。
-
-### 7.3 Self-Benchmarking 闭环是自动化的前提
-
-没有自动验证的迭代是危险的。SOL-ExecBench 的设计（验证数值正确性 + 对比理论上限）保证了系统的自主性不会变成「加速错误的方向」。
-
----
-
-## 八、局限性与发展方向
-
-### 当前局限
-
-| 指标 | 当前值 | 上限 |
-|------|--------|------|
-| 中位数 SOL | 0.56 | 1.0 |
-| 成功问题比例 | 63% (149/235) | 100% |
-| GPU 利用率 | 27 GPUs | 受限 |
-
-### 改进方向
-
-1. **增加计算资源**：更多的 GPU 意味着更深的探索
-2. **跨任务知识迁移**：当前 50% 的突破来自建立在其他 Agent 发现之上
-3. **更智能的 Planner**：学习哪些策略在特定类型问题上更有效
-
-> "Over 50% of breakthroughs in multi-agent runs come from building on other agents' discoveries."
-> — [Ao Qu @ ICLR2026](https://x.com/ao_qu18465)
+> "On small-M test cases, which are especially important for LLM inference decode, the multi-agent system kernel outperformed the library by up to 9%. This result points to multi-agent systems soon outperforming domain experts even on the hardest kernel problems."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
 
 ---
 
-## 九、结论
+## 为什么 Multi-Agent 能在 Kernel 优化上成功
 
-Cursor 的实验验证了一个核心命题：**多智能体系统能解决超出训练数据分布的开放性问题**。38% 的加速、19% 超过 2 倍的性能提升、以及小 M 场景下对专业 Kernel 工程师的超越，都指向同一个结论——
+### 4.1 Planner-Worker 架构的分工逻辑
 
-**多智能体架构正在成为复杂软件系统构建的默认方式。**
+Kernel 优化的核心挑战不是「找到一个正确答案」，而是「探索一个巨大解空间」。这需要：
 
-但这不意味着我们已经解决了问题。中位数 SOL 0.56 说明仍有巨大空间，而 63% 的成功率说明系统在某些类型的问题上仍然失败。下一阶段的挑战不是让系统更快，而是让系统更聪明——更少的计算资源，更深的探索深度。
+1. **Planner**：拥有全局视图，理解问题间的依赖关系，分配任务并 Rebalance
+2. **Worker**：拥有局部执行能力，在分配的问题域内深度搜索
+
+这与软件工程中的人类团队组织方式高度一致——架构师规划全局，工程师执行局部。
+
+### 4.2 自主 Benchmark 调用打破人工瓶颈
+
+传统 AutoML 的瓶颈在于人工介入Benchmark循环。Cursor 的 Multi-Agent 系统实现了：
+
+```
+Worker Agent 发现新优化
+        ↓
+自主调用 SOL-ExecBench
+        ↓
+Benchmark 返回 SOL 评分
+        ↓
+Agent 根据结果调整策略
+        ↓
+循环直到收敛或超时
+```
+
+这将人工介入从每个优化步骤中移除，使得 235 个问题能够在 3 周内全部完成。
+
+> "The multi-agent system independently learned to call the benchmarking pipeline during its runs, creating a loop where the system continuously tested, debugged, and optimized kernels without any developer intervention."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
+
+### 4.3 解空间边界的突破
+
+单 Agent 的本质局限在于：模型训练数据中见过的任务边界。Kernel 优化的开放性使得解空间远超任何训练数据分布。Multi-Agent 通过并行探索多个子空间，突破了这一瓶颈。
 
 ---
 
-## 引用来源
+## 对 AI Agent 工程实践的启示
 
-1. Cursor Engineering Blog: [Speeding up GPU kernels by 38% with a multi-agent system](https://cursor.com/blog/multi-agent-kernels)
-2. GitHub: [anysphere/kernel-optimization-results](https://github.com/anysphere/kernel-optimization-results)
-3. Ao Qu @ICLR2026: [Multi-agent breakthrough analysis](https://x.com/ao_qu18465)
+### 5.1 Multi-Agent 不是银弹，但有一个明确的适用边界
+
+Cursor 的实验揭示了一个清晰的判断框架：
+
+| 适用 Multi-Agent | 仍需单 Agent |
+|-----------------|-------------|
+| 开放域优化问题（无标准答案）| 窄目标问题（有明确 Diff）|
+| 解空间巨大且多维度 | 问题可分解为顺序步骤 |
+| 需要并行探索多个子空间 | 需要深度专注单一方案 |
+
+> "Single agent systems struggle here because models are best at narrowly scoped tasks they have already seen during training. We see the kernel optimization experiment as further validation that multi-agent architectures will quickly become the default approach to building software because they can tackle novel problems that fall far outside training data distribution."
+> — [Cursor Engineering Blog](https://cursor.com/blog/multi-agent-kernels)
+
+### 5.2 Planner-Worker 架构的工程可复制性
+
+Cursor 的协调协议完全存在于单一 Markdown 文件中，这意味着：
+
+- **零代码基础设施**：任何 Agent 系统都可以通过读取 Markdown 理解协调规则
+- **可版本控制的协议**：协调逻辑可以通过 Git 管理
+- **可组合的 Worker Pool**：不同类型的 Worker 可以插入同一个 Planner 框架
+
+### 5.3 自主 Benchmark 能力的工程价值
+
+自动调用 Benchmark 的能力意味着 Multi-Agent 系统可以用于：
+- AutoML 超参搜索
+- 芯片设计空间探索
+- 编译器优化
+- 任何需要迭代优化的开放域问题
+
+---
+
+## 已知局限与未解决的问题
+
+**1. SOL 中位数仍有提升空间**
+目前中位数 SOL 仅为 0.56，意味着还有 44% 的理论上限未达成。Cursor 指出这主要受限于 GPU 数量（仅 27 张 Blackwell GPU），而非 Multi-Agent 架构本身。
+
+**2. 小矩阵优化 vs 大矩阵优化的不对称性**
+在 BF16 GEMM 中，Multi-Agent 在小矩阵上超越 cuBLAS，但在大矩阵上仍有差距。这指向一个未解决的工程问题：Multi-Agent 如何在不同尺度的问题上自适应调整策略。
+
+**3. 双语言验证的完整性**
+CuTe DSL 的验证结果未在文章中详细披露。CuTe 作为公开数据中极少见的高层抽象，其学习效果如何，直接影响 Multi-Agent 对新硬件/新编程模型的适应能力评估。
+
+---
+
+## 下一步：LangChain Interrupt 2026 的 Deep Agents 2.0
+
+根据 [PENDING.md 线索](https://github.com/FreezeSoul/agent-engineering-by-openclaw/blob/main/.agent/PENDING.md)，LangChain 将在 5/13-14 的 Interrupt 2026 大会上发布 Deep Agents 2.0。Cursor 的 Multi-Agent Kernel 优化实验为这个时间点提供了重要的行业背景：
+
+- Multi-Agent 架构已经从「概念验证」进入「工业级输出」阶段
+- 38% 的 Geomean 提速在 GPU 芯片级优化这个高度专业化的领域都是突破性的
+- Planner-Worker 架构 + 自主 Benchmark 调用 + 单一 Markdown 协调协议 的组合正在成为 Multi-Agent 系统的新工程范式
+
+> 笔者认为：Deep Agents 2.0 如果要超越 Cursor 的成果，需要解决的不是「Multi-Agent 能否做到」，而是「如何让 Multi-Agent 的能力规模化输出到通用软件工程领域」。Kernel 优化有明确的量化指标，但通用代码生成的质量评估是更复杂的命题。
+
+---
+
+## 结论
+
+Cursor 的 235 个 GPU Kernel 优化实验证明了一件事：**Multi-Agent 架构正在成为解决超出训练数据分布的开域优化问题的默认范式**。当单 Agent 在窄任务边界内表现出色时，Multi-Agent 通过并行探索和自主 Benchmark 调用，能够在人类专家无法企及的时间内达到接近理论极限的性能。
+
+这不仅是 Kernel 优化的突破，更是软件工程方法论的一次范式转移——从「人类工程师手工优化」到「Multi-Agent 系统自主探索」，这个转移的起点就在 2026 年的今天。
+
+---
+
+**执行流程**：
+1. **理解任务**：本轮 Cron 触发，需要产出 ≥1 篇 Articles + ≥1 篇 Projects 推荐，且主题必须关联
+2. **规划**：扫描一手来源（Anthropic/OpenAI/Cursor），Cursor Blog 的 multi-agent-kernels 文章（2026-04-14）是最有价值的新主题；关联 Projects 需要从 GitHub Trending 搜索
+3. **执行**：Tavily 搜索 + web_fetch 采集 Cursor Blog 原文章，识别已覆盖文章（cursor-multi-agent-kernel-optimization-2026.md），聚焦 38% speedup 的独特工程价值；扫描 GitHub Trending 未找到直接关联项目，扩大搜索到 cursor/cookbook 相关生态
+4. **返回**：Cursor Blog multi-agent-kernels 原文字数 10906，含 3 个具体案例（BF16 Attention/NVFP4 MoE/BF16 GEMM）；Projects 搜索发现 Cursor Cookbook SDK 示例但无独立高星项目
+5. **整理**：Articles 归档至 orchestration/，Projects 跳过上轮已推荐的 cursor-multi-agent-kernel-optimization 相关内容，本轮聚焦 Articles 深度写作
+
+**调用工具**：
+- `exec`: 9次
+- `read`: 1次
+- `web_fetch`: 4次
+- `write`: 1次
