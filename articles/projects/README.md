@@ -53,6 +53,7 @@
 - [mem0ai/mem0](https://github.com/mem0ai/mem0) — LLM 和 AI Agent 的通用记忆层，self-improving memory，LoCoMo 91.6 分，ADD-only extraction + Entity linking
 - [agno-agi/agno](https://github.com/agno-agi/agno) — 将 Agent 转化为生产软件的 Runtime，Session 管理 + OpenTelemetry tracing + RBAC + 多框架兼容
 - [memfreeme/memfree](https://github.com/memfreeme/memfree) — 开源混合 AI 搜索引擎，支持知识库 + 互联网搜索 + Chrome 书签同步，一键部署
+- [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) — 用简单模式构建高效 Agent 的 MCP 框架，Full MCP Support + Temporal Durable Execution + 46%+ Token 节省
 - [hidai25/eval-view](https://github.com/hidai25/eval-view) — AI Agent 行为回归测试框架，snapshot behavior → diff tool calls → classify regression，生产级 Silent Regression 检测
 - [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) — MCP Server for n8n workflow automation，1,650+ nodes 文档覆盖，Claude Code/VS Code/Cursor 多 IDE 支持
 - [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) — Multi-Agent 金融交易框架，角色分层（分析师/研究员/交易员/风控），真实金融机构运作逻辑的开源实现
@@ -116,3 +117,4 @@
 - [local-deep-research-encrypted-agentic-research-2026](./local-deep-research-encrypted-agentic-research-2026.md) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%（关联：Cursor Composer Self-Summarization → 信息管理问题的互补视角：压缩 vs 扩展）
 - [vibepod-cli-docker-agent-container-2026](./vibepod-cli-docker-agent-container-2026.md) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent（关联：OpenAI Agents SDK Native Sandbox → 本地 vs 云端的不同隔离路径）
 - [overstory-multi-agent-orchestration-git-worktree-2026](./overstory-multi-agent-orchestration-git-worktree-2026.md) — Git Worktree 隔离的多 Agent 编排工具，让单个 Claude Code Session 变身多 Agent 团队（关联：Cursor 第三代软件开发 → Agent Fleet 架构的第三种路线：本地化隔离 + 实时干预）
+- [mcp-agent-lastmile-ai-mcp-framework-2026](./mcp-agent-lastmile-ai-mcp-framework-2026.md) — 用简单模式构建高效 Agent 的 MCP 框架，Full MCP Support + Temporal Durable Execution（关联：动态上下文发现 → Token 效率工程）
