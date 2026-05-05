@@ -132,3 +132,7 @@
 - [wshobson-agents-claude-code-plugins-34800-stars-2026](./wshobson-agents-claude-code-plugins-34800-stars-2026.md) — Claude Code 最大插件市场，34,800 ⭐，185 个专项 Agent + 80 个解耦插件 + 渐进式披露架构（关联：Anthropic Initializer+Coding Agent 双组件模式 → 插件市场级多 Agent 协作解决方案）
 - [cc-telegram-bridge-claude-code-telegram-harness-2026](./cc-telegram-bridge-claude-code-telegram-harness-2026.md) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
 - [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
+
+- [future-agi/future-agi](https://github.com/future-agi/future-agi) — 开源端到端 Agent 评估与优化平台，Simulate→Evaluate→Protect→Monitor→Optimize 单闭环，Go 网关 ~29k req/s，836 ⭐
+
+- [skyflo-ai/skyflo](https://github.com/skyflo-ai/skyflo) — Kubernetes 原生的 Self-Hosted AI Agent，Approval-Gated + 确定性控制循环，TypeScript，108 ⭐
