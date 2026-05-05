@@ -62,6 +62,7 @@
 
 - [opensearch-project/agent-health](https://github.com/opensearch-project/agent-health) — OpenSearch 官方的 Agent 评估与观测框架，Golden Path Trajectory 对比 + OpenTelemetry Traces + LLM Judge，15 ⭐
 - [elct9620/autonoe](https://github.com/elct9620/autonoe) — 基于 Claude Agent SDK 的长程自主编码工具，1.2k ⭐，Anthropic 双 Agent 模式的完整开源实现
+- [sunnweiwei/FoldAgent](https://github.com/sunnweiwei/FoldAgent) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理
 
 ---
 
@@ -127,3 +128,4 @@
 - [lumen-omxyz-vision-first-browser-agent-context-compression-2026](./lumen-omxyz-vision-first-browser-agent-context-compression-2026.md) — 视觉优先浏览器 Agent，screenshot→action 循环 + 两层上下文压缩（80% threshold），与 Cursor Self-Summarization 形成训练侧×工程侧的互补（关联：Context Engineering → 注意力预算管理与压缩触发机制工程实现）
 - [swarms-kyegomez-enterprise-multi-agent-orchestration-2026](./swarms-kyegomez-enterprise-multi-agent-orchestration-2026.md) — 企业级 Multi-Agent 编排框架，6,620 ⭐，七种预构建编排模式（MCP/x402/Skills 协议兼容）（关联：Anthropic Multi-Agent 四种协调范式 + Swarms 工程实现）
 - [wshobson-agents-claude-code-plugins-34800-stars-2026](./wshobson-agents-claude-code-plugins-34800-stars-2026.md) — Claude Code 最大插件市场，34,800 ⭐，185 个专项 Agent + 80 个解耦插件 + 渐进式披露架构（关联：Anthropic Initializer+Coding Agent 双组件模式 → 插件市场级多 Agent 协作解决方案）
+- [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
