@@ -58,7 +58,7 @@
 - [hidai25/eval-view](https://github.com/hidai25/eval-view) — AI Agent 行为回归测试框架，snapshot behavior → diff tool calls → classify regression，生产级 Silent Regression 检测
 - [czlonkowski/n8n-mcp](https://github.com/czlonkowski/n8n-mcp) — MCP Server for n8n workflow automation，1,650+ nodes 文档覆盖，Claude Code/VS Code/Cursor 多 IDE 支持
 - [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) — Multi-Agent 金融交易框架，角色分层（分析师/研究员/交易员/风控），真实金融机构运作逻辑的开源实现
-- [gastownhall/gastown](https://github.com/gastownhall/gastown) — 多 Agent 工作空间编排系统，14,914 ⭐，Git Worktree 隔离 + Beads 账本 + Witness/Deacon 三层监控
+- [kyegomez/swarms](https://github.com/kyegomez/swarms) — 企业级 Multi-Agent 编排框架，6,620 ⭐，七种预构建编排模式（MCP/x402/Skills 协议兼容）
 
 - [opensearch-project/agent-health](https://github.com/opensearch-project/agent-health) — OpenSearch 官方的 Agent 评估与观测框架，Golden Path Trajectory 对比 + OpenTelemetry Traces + LLM Judge，15 ⭐
 
@@ -123,3 +123,4 @@
 - [mcp-agent-lastmile-ai-mcp-framework-2026](./mcp-agent-lastmile-ai-mcp-framework-2026.md) — 用简单模式构建高效 Agent 的 MCP 框架，Full MCP Support + Temporal Durable Execution（关联：动态上下文发现 → Token 效率工程）
 - [opensearch-agent-health-opensearch-eval-harness-2026](./opensearch-agent-health-opensearch-eval-harness-2026.md) — OpenSearch 官方的 Agent 评估框架，Golden Path Trajectory 对比 + OpenTelemetry + LLM Judge（关联：Cursor Harness 持续改进 → 测量驱动改进的工程实现）
 - [lumen-omxyz-vision-first-browser-agent-context-compression-2026](./lumen-omxyz-vision-first-browser-agent-context-compression-2026.md) — 视觉优先浏览器 Agent，screenshot→action 循环 + 两层上下文压缩（80% threshold），与 Cursor Self-Summarization 形成训练侧×工程侧的互补（关联：Context Engineering → 注意力预算管理与压缩触发机制工程实现）
+- [swarms-kyegomez-enterprise-multi-agent-orchestration-2026](./swarms-kyegomez-enterprise-multi-agent-orchestration-2026.md) — 企业级 Multi-Agent 编排框架，6,620 ⭐，七种预构建编排模式（MCP/x402/Skills 协议兼容）（关联：Anthropic Multi-Agent 四种协调范式 + Swarms 工程实现）
