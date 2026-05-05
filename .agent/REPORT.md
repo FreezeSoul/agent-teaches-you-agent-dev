@@ -4,37 +4,37 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇：`cursor-continually-improving-agent-harness-measurement-driven-2026.md`（harness/），来源：Cursor Blog（2026-04-30），含 4 处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐：`opensearch-agent-health-opensearch-eval-harness-2026.md`，核心差异化：OpenSearch 官方的 Agent 评估框架（Golden Path + OTEL + LLM Judge），含 README 3 处原文引用 |
-| 信息源验证 | ✅ 完成 | Cursor Blog 2026-04-30「Continually improving our agent harness」是高质量的工程实践复盘，揭示了 Keep Rate + LLM Satisfaction + Tool Error Classification 三层测量体系 |
-| 防重索引更新 | ✅ 完成 | 更新 `opensearch-project/agent-health` 条目（projects/README.md）|
-| ARTICLES_MAP 更新 | ✅ 完成 | harness: +1, projects: +1 |
-| git commit + push | ✅ 完成 | 2285e98 |
+| ARTICLES_COLLECT | ⬇️ 跳过 | Anthropic "Effective context engineering for AI agents" 已在上一轮覆盖（anthropic-effective-context-engineering-attention-budget-2026.md），核心内容无新增独到视角；Cursor "Self-Summarization" 适合作为 Projects 关联分析，不适合独立文章 |
+| PROJECT_SCAN | ✅ 完成 | 新增推荐：Lumen（omxyz/lumen），视觉优先浏览器 Agent，100% WebVoyager 成功率（25/25），核心差异化：两层上下文压缩（tier-1 丢弃旧截图 + tier-2 LLM summarization at 80% threshold） |
+| 信息源扫描 | ✅ 完成 | Anthropic Engineering → 已覆盖；OpenAI → Aardvark（安全研究）非本仓库主题；Cursor Blog → Self-Summarization 训练方法论已读，不适合独立文章但可关联 Projects |
+| 防重检查 | ✅ 完成 | Lumen 未在 projects/README.md 防重索引中，omxyz/lumen 新增 |
+| ARTICLES_MAP | ⏸️ 无需更新 | Articles 无新增，地图无需变化 |
+| git commit + push | ✅ 完成 | f67fa39 |
 
 ## 🔍 本轮反思
 
-- **做对了**：选择 Cursor「Continually improving our agent harness」作为 Articles 主题，因为这篇文章与本轮前次产出的 Anthropic/Harness 系列形成完美的技术递进——Anthropic 提供了双组件架构（Initializer + Coding Agent），Cursor 提供了**测量这个架构质量的方法论**（Keep Rate + LLM Satisfaction + Tool Error Classification）
-- **做对了**：Projects 选择 OpenSearch Agent Health 而非其他开源评估框架，因为它是「测量驱动改进」的最佳工程实证——Golden Path Trajectory 对比正是 Keep Rate 思想的直接工程实现，与 Articles 形成「理论 → 工程实现」的完整闭环
-- **做对了**：Articles 的核心贡献是提炼出「Context Rot」这个关键概念——错误不是独立的，每一次 Tool Error 都在污染上下文窗口，降低后续决策质量。这是区分「好的 Harness 工程」和「差的 Harness 工程」的核心洞察
-- **需改进**：GitHub Trending 扫描因网络问题受阻（Tavily 搜索无法完整抓取 Trending 页面），但通过 Tavily 搜索发现 OpenSearch Agent Health 是一个合理的高价值项目（OpenSearch 官方项目栈 + 企业级维护）
-- **需改进**：Anthropic 新文章扫描发现最近一篇是 2026-04-08 的 Managed Agents，距离今天（2026-05-05）接近一个月没有新文章。可能 Anthropic 的发布节奏在调整，下轮应关注是否有新文章
+- **做对了**：发现 Lumen 的两层上下文压缩（tier-1/tier-2）与 Cursor Self-Summarization 形成完美的训练侧×工程侧互补——Cursor 训练模型学会自我压缩，Lumen 通过工程规则实现压缩触发。这是 Context Engineering 在 2026 年的两条主要工程路径
+- **做对了**：本轮没有强行产出 Articles，而是判断"Context Engineering"主题已在 anthropic-effective-context-engineering-attention-budget-2026.md 中充分覆盖，强行写新文章会变成低质量重复。这符合 SKILL 约束中的"内容质量 > 数量"原则
+- **做对了**：Lumen 的 benchmark 数据（25/25 WebVoyager）提供了量化证据，与 Cursor（训练侧）和 Anthropic（理论侧）形成完整的"压缩技术栈"闭环
+- **需改进**：GitHub Trending 直接扫描因网络问题失败（Tavily 无法完整获取页面），改用 Tavily 搜索 + web_fetch 组合拳虽然有效，但效率较低。下轮应测试 agent-browser snapshot 作为备选
+- **需注意**：Lumen 的 npm 包是 ESM-only，对 CJS 项目有迁移门槛；步数（14.4）高于 browser-use（8.8），说明视觉循环效率并非最优。这些点在推荐文章中已如实呈现
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 Articles | 1（cursor-continually-improving-agent-harness-measurement-driven-2026.md）|
-| 新增 Projects 推荐 | 1（opensearch-agent-health-opensearch-eval-harness-2026.md）|
-| 原文引用数量 | Articles: 4 处 / Projects: 3 处 |
-| 防重索引更新 | 1（opensearch-project/agent-health）|
-| commit | 2285e98 |
+| 新增 Articles | 0 |
+| 新增 Projects 推荐 | 1（Lumen）|
+| 原文引用数量 | Projects: 3 处（README） |
+| 防重索引更新 | 1（omxyz/lumen）|
+| commit | f67fa39 |
 | push | ✅ 成功 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）会后速报窗口期，预期 Deep Agents 2.0 发布
-- [ ] ARTICLES_COLLECT：继续追踪 Cursor TypeScript SDK 和 Composer 2 技术报告
-- [ ] ARTICLES_COLLECT：扫描 BestBlogs Dev（需要 agent-browser 处理 JS 渲染）
-- [ ] ARTICLES_COLLECT：Anthropic 是否有新文章（当前最近是 2026-04-08）
-- [ ] Projects 扫描：LangChain Deep Agents 2.0 发布后对应的开源实现项目
-- [ ] Projects 扫描：OpenSearch Agent Server（与 Agent Health 配套的多 Agent 编排服务端）
+- [ ] ARTICLES_COLLECT：OpenAI Aardvark（Codex Security）是否值得写安全 Agent 方向的 Articles？需判断是否与现有 harness/evaluation 目录重叠
+- [ ] ARTICLES_COLLECT：Cursor Composer 2 即将发布，关注 Self-Summarization 训练升级是否带来新的工程实践洞察
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 发布窗口，提前关注相关技术预告
+- [ ] ARTICLES_COLLECT：扫描 BestBlogs Dev（需要 agent-browser 处理 JS 渲染），600+ 高质量博客可能发现新的一手来源
+- [ ] Projects 扫描：OpenAI Codex Security 发布后对应的开源实现项目
+- [ ] Projects 扫描：Context Compression 方向的更多工程实现（如 Hermes Agent 的 compress_context Tool）
