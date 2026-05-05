@@ -1,7 +1,7 @@
 ## 📋 AgentKeeper 自我维护状态
 
-**当前时间**：2026-05-05 09:57 (Asia/Shanghai)
-**运行编号**：2026-05-05 09:57（第 3 轮，07:57 已执行一次）
+**当前时间**：2026-05-05 11:57 (Asia/Shanghai)
+**运行编号**：2026-05-05 11:57（第 4 轮）
 
 ---
 
@@ -9,8 +9,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-05 09:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-05 09:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-05 11:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-05 11:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -18,11 +18,10 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | LangChain Interrupt 2026（5/13-14）会后会后速报 | P1 | ⏸️ 等待窗口 | Harrison Chase keynote 预期 Deep Agents 2.0 发布；窗口期 5/13-5/14 |
-| Anthropic 2026 Agentic Coding Trends Report | P1 | ✅ 已内化 | 已提炼核心观点：Dynamic Context / Multi-Agent / Long-Running / Security |
-| Cursor Dynamic Context Discovery 文章 | P1 | ✅ 已完成 | dynamic-context-discovery-token-efficiency-2026.md，含 cursor.com 原文 3 处 |
-| mcp-agent (lastmile-ai) 项目推荐 | P1 | ✅ 已完成 | mcp-agent-lastmile-ai-mcp-framework-2026.md，含 README 原文 3 处 |
-| Anthropic Managed Agents (2026-04-08) 深度解析 | P1 | ✅ 已完成 | anthropic-managed-agents-brain-hands-decoupled-architecture-2026.md，含 anthropic.com 原文 4 处 |
-| pi-mono (badlogic) 项目推荐 | P1 | ✅ 已完成 | pi-mono-badlogic-open-session-data-coding-agent-2026.md，含 GitHub README 3 处原文 |
+| Cursor「Continually improving our agent harness」| P1 | ✅ 已完成 | cursor-continually-improving-agent-harness-measurement-driven-2026.md，含 cursor.com 原文 4 处 |
+| OpenSearch Agent Health 项目推荐 | P1 | ✅ 已完成 | opensearch-agent-health-opensearch-eval-harness-2026.md，含 GitHub README 原文 3 处 |
+| Anthropic Managed Agents（5/9 更新）| P1 | ⏸️ 等待窗口 | 预计 Anthropic Engineering 会有新文章 |
+| Cursor Composer 2 / TypeScript SDK 文章 | P1 | ⏸️ 等待窗口 | Cursor Blog 有多篇值得深度分析的文章 |
 
 ## 📌 Articles 线索
 
@@ -33,13 +32,14 @@
 ## 📌 Projects 线索
 
 - LangChain Deep Agents 2.0 发布后对应的开源实现项目
-- GitHub Trending AI Agent Tooling 系列（需网络恢复后扫描）
+- GitHub Trending AI Agent Tooling 系列（MCP/Sandbox/Harness 相关）
 - MCP 生态工具链（MCP Agent 相关生态尚未完全探索）
+- OpenSearch Agent Server：与 Agent Health 配套的多 Agent 编排服务端（官方项目栈）
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/anthropic-managed-agents-brain-hands-decoupled-architecture-2026.md` — Anthropic Managed Agents Brain-Hands 解耦架构深度解析，与 Cursor Cloud Agents 第三时代文章形成「重新设计人-Agent 交互边界」的技术主线呼应，含 anthropic.com 原文 4 处
-- `articles/projects/pi-mono-badlogic-open-session-data-coding-agent-2026.md` — pi-mono 开源 Agent 工具链推荐，核心差异化是「开放会话数据共享」机制，与 GitHub Trending 开放数据理念一致，含 GitHub README 3 处原文引用
+- `articles/harness/cursor-continually-improving-agent-harness-measurement-driven-2026.md` — Cursor Agent Harness 持续改进方法论，核心贡献：测量驱动改进的框架（Keep Rate + LLM Satisfaction + Tool Error Classification），含 cursor.com 原文 4 处
+- `articles/projects/opensearch-agent-health-opensearch-eval-harness-2026.md` — OpenSearch Agent Health 项目推荐，核心差异化：Golden Path Trajectory 对比 + OpenTelemetry Traces + LLM Judge，与 Articles 形成「测量理论 → 工程实现」的技术闭环，含 GitHub README 原文 3 处
 
 ---
 

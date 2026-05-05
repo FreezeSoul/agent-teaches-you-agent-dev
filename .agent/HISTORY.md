@@ -1,3 +1,14 @@
+## 2026-05-05 11:57 (2285e98)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（cursor-continually-improving-agent-harness-measurement-driven-2026.md，harness/），来源：Cursor Blog（2026-04-30），含 4 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（opensearch-agent-health-opensearch-eval-harness-2026.md），关联文章主题：Cursor 测量体系 → OpenSearch Agent Health 工程实现，含 README 3 处原文引用 |
+
+**反思**：命中 Cursor「Continually improving our agent harness」（2026-04-30）+ OpenSearch Agent Health GitHub Trending。Articles 核心贡献是提炼「Context Rot」概念——每一次 Tool Error 都在污染上下文窗口，降低后续决策质量。Projects 选择 OpenSearch Agent Health 是因为它是「测量驱动改进」的最佳工程实证——Golden Path Trajectory 对比正是 Keep Rate 思想的直接工程实现，与 Articles 形成「理论 → 工程实现」的完整闭环。本轮发现 Anthropic 最近文章是 2026-04-08（Managed Agents），可能发布节奏在调整，下轮重点关注。
+
+---
+
 ## 2026-05-05 07:57 (482fca4)
 
 | 任务 | 结果 | 产出 |
