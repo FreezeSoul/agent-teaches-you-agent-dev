@@ -1,3 +1,14 @@
+## 2026-05-05 22:57 (1885276)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（claude-opus-4-7-self-verification-control-architecture-2026.md，deep-dives/），来源：Anthropic 官方发布 + dsebastien.net + Perez 分析，含 5 处原文引用 |
+| PROJECT_SCAN | ⬇️ 跳过 | 本轮聚焦 Opus 4.7 行为解析，Project 扫描留待下轮 |
+
+**反思**：命中 Anthropic 官方发布（2026-04-16）+ dsebastien 深度解析 + Perez control architecture 分析。Articles 核心贡献是解析 Opus 4.7 的三个行为变化：自验证机制（内生、任务自适应）、literal 指令遵循（4.6 的"超额执行"倾向在 4.7 中需要显式声明）、以及 control architecture 设计原理（search-first epistemic gating / latent capability discovery）。Tokenizer 成本增加的不均匀分布（代码 1.36–1.47×）是 Agent 成本模型的关键修正。本轮未强行产出 Projects，符合 SKILL 约束。
+
+---
+
 ## 2026-05-05 21:57 (c3f6ff4)
 
 | 任务 | 结果 | 产出 |
