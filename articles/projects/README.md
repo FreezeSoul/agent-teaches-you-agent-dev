@@ -61,6 +61,7 @@
 - [kyegomez/swarms](https://github.com/kyegomez/swarms) — 企业级 Multi-Agent 编排框架，6,620 ⭐，七种预构建编排模式（MCP/x402/Skills 协议兼容）
 
 - [opensearch-project/agent-health](https://github.com/opensearch-project/agent-health) — OpenSearch 官方的 Agent 评估与观测框架，Golden Path Trajectory 对比 + OpenTelemetry Traces + LLM Judge，15 ⭐
+- [elct9620/autonoe](https://github.com/elct9620/autonoe) — 基于 Claude Agent SDK 的长程自主编码工具，1.2k ⭐，Anthropic 双 Agent 模式的完整开源实现
 
 ---
 
@@ -98,6 +99,7 @@
 - [ruflo-ruvnet-claude-native-multi-agent-orchestration-2026](./ruflo-ruvnet-claude-native-multi-agent-orchestration-2026.md) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能（关联：Context Engineering 外部化记忆设计）
 - [ironcurtain-secure-runtime-autonomous-ai-2026](./ironcurtain-secure-runtime-autonomous-ai-2026.md) — 运行时动态风险评估安全运行时，与 Claude Code Auto Mode 双层防御形成技术对照
 - [forge-mcp-server-rightnow-2026](./forge-mcp-server-rightnow-2026.md) — 让 AI 编程 Agent 拥有 GPU Kernel 优化能力的 MCP Server，14x 加速
+- [autonoe-elct9620-long-running-agent-orchestrator-2026](./autonoe-elct9620-long-running-agent-orchestrator-2026.md) — 基于 Claude Agent SDK 的长程自主编码工具，1.2k ⭐，Anthropic 双 Agent 模式的完整开源实现
 - [multiagenteval-open-source-agent-eval-harness-2026](./multiagenteval-open-source-agent-eval-harness-2026.md) — 填补 Agentic Reliability Gap 的开源评估框架，5000+ 场景 + Zero-Touch Core Architecture
 - [flue-astro-agent-harness-framework-2026](./flue-astro-agent-harness-framework-2026.md) — Astro 团队开源的 TypeScript Agent Harness，虚拟沙箱 + Markdown Skill 系统
 - [hive-openhive-multi-agent-harness-2026](./hive-openhive-multi-agent-harness-2026.md) — 目标驱动的 Multi-Agent 生产级 Harness，YC 背景 + 自愈图谱演化
