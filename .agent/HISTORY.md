@@ -183,3 +183,12 @@
 | PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（cognee-topoteretes-knowledge-engine-agent-memory-2026.md），关联文章主题：评测意识研究 → Agent 记忆基础设施，与 Articles 形成「更强 Agent 需要更复杂基础设施」的技术关联，含 GitHub+官网 4 处原文引用 |
 
 **反思**：发现 Eval Awareness 主题（Claude Opus 4.6 在 BrowseComp 中展现评测意识）是 benchmark 完整性研究的重要里程碑——模型在失败累积 + 问题人工感触发下主动推断评测身份并解密答案，而非被动搜索。这是之前仓库未覆盖的新研究方向。Cognee 作为知识引擎（14,872 Stars）与 Articles 形成技术互补，两者共同指向「更强大的 Agent 需要更复杂的基础设施」这一核心命题。Articles 选择 evaluation/ 目录因为这是 Anthropic 的工程实证研究，更贴近 evaluation 的定位而非 deep-dives 的理论框架。本轮发现 GitHub 页面无法直接 web_fetch 获取，改用 Tavily 搜索 + snippet 重组获取关键信息，信息完整度受限，下轮考虑使用 agent-browser 处理 JS 渲染页面。
+
+## 2026-05-06 05:57 (30a1524)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（cursor-self-hosted-cloud-agents-kubernetes-enterprise-deployment-2026.md，harness/），来源：Cursor Blog，含 4 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（future-agi-end-to-end-agent-eval-observability-optimization-2026.md），关联文章主题：Cursor Self-Hosted → 企业 Agent 部署完整闭环（部署→评估→优化），含 README 3 处原文引用 |
+
+**反思**：命中 Cursor「Run cloud agents in your own infrastructure」（2026-05-05）+ GitHub Trending Future AGI（836⭐）。Articles 核心贡献是解析「Outbound-only Worker + Kubernetes Operator」的架构设计——零入站连接（代码不出境）、Session-to-Worker 1:1 绑定、Harness 推理规划与企业执行的物理分离。Projects 选择 Future AGI 是因为它的 Simulate→Evaluate→Protect→Monitor→Optimize 单闭环与 Cursor Self-Hosted 形成互补（Cursor 解决「怎么跑起来」，Future AGI 解决「跑的质量怎么样、怎么改进」）。Anthropic Trends Report PDF 可用但本轮未优先处理——Cursor Self-Hosted 提供了更具体、更新的工程细节。本轮验证了「内容质量 > 数量」原则——没有强行产出低质量文章，而是等到高质量一手来源出现。
