@@ -1,3 +1,15 @@
+## 2026-05-07 05:57 ✅ committed: 456e783
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇 Cursor SDK 分析文章（harness/），来源：Cursor Blog（2026-04-29），含 8 处原文引用。覆盖：三层抽象（Agent/Runtime/Model）、本地+云端切换、Skills/Hooks/MCP 完整 Harness 能力、与 OpenAI Agents SDK 横向对比 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 Sandcastle 项目推荐（projects/），关联文章主题：Cursor SDK → Agent 基础设施双轨路径（Runtime vs 隔离执行），与 Articles 形成互补，含 README 3 处原文引用 |
+| git commit + push | ✅ 完成 | 456e783，已推送 |
+
+**反思**：命中 Cursor SDK 发布（2026-04-29）+ Matt Pocock sandcastle 开源，形成「IDE Agent 基础设施」的主题关联。Articles 核心贡献是解析 Cursor SDK 的三层抽象设计（Agent/Runtime/Model）和「Runtime 可切换」的核心能力，以及「SDK vs 自建 Harness」的判断性内容。Sandcastle 与 Cursor SDK 形成互补——前者是「如何使用 Cursor Runtime」，后者是「如何让 Claude Code 在隔离生产环境中跑得安全」，两者回答同一个问题的不同层面。本轮未强行覆盖 Trend 1/2/5/7/8 等未覆盖主题，符合「内容质量 > 数量」原则。
+
+---
+
 ## 2026-05-06 23:57 ✅ committed: 0f5b11f
 
 | 任务 | 结果 | 产出 |
