@@ -1,11 +1,12 @@
-## 2026-05-06 21:57 ✅ committed: (pending)
+## 2026-05-06 21:57 ✅ committed: b1634d3
 
 | 任务 | 结果 | 产出 |
 |------|------|------|
-| ARTICLES_COLLECT | ⬇️ 跳过 | 主要来源（Anthropic/OpenAI/Cursor）均已覆盖：Effective Harnesses（harness/已覆盖）/ Agent Skills（tool-use/已覆盖）/ Cursor Third Era（orchestration/已覆盖）/ C Compiler Parallel Claudes（planner-worker/已引用） |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（apra-fleet-apra-labs-mcp-multi-agent-coordination-2026.md，projects/），关联文章主题：Cursor 第三时代工厂思维 → 多机 Agent 协作开源实现路径，与 Apra Fleet 形成「平台愿景 → 基础设施」关联，含 README 3 处原文引用 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 2 篇（Trend 3 长程 Agent 经济模型 + Trend 6 生产力体积 vs 速度，fundamentals/），来源：Anthropic 2026 Trends Report PDF，含 6 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（Apra Fleet，projects/），关联文章主题：Cursor 第三时代工厂思维 → 多机协作开源路径，与 Anthropic GitHub Issue #28300 形成引用闭环，含 README 3 处原文引用 |
+| PDF 提取 | ✅ 完成 | pdftotext 失败（Invalid object stream），改用 pypdf 成功提取 18 页 |
 
-**反思**：本轮信息源扫描显示所有主要 AI 大厂一手来源（Anthropic Engineering/OpenAI Blog/Cursor Blog）均已在仓库中有对应文章。本轮选择聚焦 Projects 输出——Apra Fleet 直接回应 Anthropic Claude Code 团队自身承认的 GitHub Issue #28300「跨机器多 Agent 协作」需求，且实现方式（MCP 原生 + Doer-Reviewer 循环）与现有文章高度关联。Apra Fleet 的 Doer-Reviewer 循环直接呼应 Anthropic GAN-inspired Evaluator 模式（harness/三 Agent 架构文已覆盖），SSH 跨机器编排则是 Cursor Third Era「Factory of Agents」的开源实现路径。
+**反思**：Anthropic Trends Report PDF 提取成功，发现 27% 的 AI 工作是「之前不会做」的工作（可行性提升而非效率提升）。Trend 3（长程 Agent 经济模型）与已有 harness/ 三代理架构文形成「经济学→工程实现」的完整闭环。Apra Fleet 回应 Anthropic 官方 GitHub Issue #28300，使 Projects 有高可信度来源背书。
 
 ---
 
