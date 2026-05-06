@@ -4,30 +4,29 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 2 篇（Trend 3 长程 Agent 经济模型 + Trend 6 生产力体积 vs 速度，fundamentals/），来源：Anthropic 2026 Trends Report PDF，含 6 处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（Apra Fleet，projects/），关联文章主题：Cursor 第三时代工厂思维 → 多机协作开源路径，与 Anthropic GitHub Issue #28300 形成引用闭环，含 README 3 处原文引用 |
-| PDF 提取 | ✅ 完成 | pdftotext 失败（Invalid object stream），改用 pypdf 成功提取 18 页完整文本 |
-| git commit + push | ✅ 完成 | b1634d3，已推送（commit 后 SIGTERM 中断，重试后成功） |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 Trend 4 分析文章（agents learn when to ask for help，fundamentals/），来源：Anthropic 2026 Trends Report，含 6 处原文引用。覆盖：不确定性感知架构、Ask-vs-Assume 框架、Generator/Evaluator 解耦 |
+| PROJECT_SCAN | ✅ 完成 | 新增 TheAgentCompany 基准测试推荐（projects/，697 Stars），关联文章主题：Trend 4 的不确定性判断框架需要真实工作流基准验证，含 README 3 处原文引用 |
+| git commit + push | ✅ 完成 | 0f5b11f，已推送 |
 
 ## 本轮反思
 
-- **做对了**：发现 pdftotext 无法处理 PDF 1.4 对象流，改用 pypdf 成功提取——这是 PDF 处理的重要经验
-- **做对了**：Trend 3 和 Trend 6 属于 fundamentals 分类而非 harness，因为它们聚焦于「软件开发经济学变化」而非具体工程实现
-- **做对了**：Apra Fleet 解决了 Anthropic 官方承认的工程缺口（GitHub Issue #28300），使 Projects 有高可信度来源背书
-- **需注意**：Anthropic Trends Report 8 个 Trend 中只提取了 2 个，剩余 6 个（Trend 1/2/4/5/7/8）待下轮挖掘
+- **做对了**：选择 Trend 4（Agents learn to ask for help）而非未探索的趋势，因为「不确定性感知」是生产级 Agent 的核心缺口，与已发布的 Trend 3（长程 Agent）和 Trend 6（生产力经济）形成递进逻辑：长程执行 → 不确定性检测 → 经济效益
+- **做对了**：TheAgentCompany 的主题连接点清晰——175 个真实任务包含了大量「何时该问、何时该做」的判断场景，直接是 Trend 4 的测试基准
+- **需注意**：Trend 4 的 Ask-vs-Assume 框架来自 Berkeley（nedwards99/ask-or-assume），并非 Anthropic 原生，这是需要注意来源差异的地方
+- **需注意**：Anthropic Trends Report 8 个 Trend 中已覆盖 3 个（Trend 3/4/6），剩余 5 个（Trend 1/2/5/7/8）待下轮挖掘
 
 ## 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 Articles | 2 |
-| 新增 Projects 推荐 | 1 |
+| 新增 Articles | 1（Trend 4 fundamentals） |
+| 新增 Projects 推荐 | 1（TheAgentCompany benchmark） |
 | 原文引用数量 | Articles: 6 处 / Projects: 3 处 |
-| git commit | b1634d3 |
+| git commit | 0f5b11f |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：Anthropic 2026 Trends Report 剩余 6 个 Trend 挖掘（Trend 1/2/4/5/7/8）
+- [ ] ARTICLES_COLLECT：Anthropic 2026 Trends Report 剩余 5 个 Trend 挖掘（Trend 1/2/5/7/8）
 - [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 发布后框架级分析
 - [ ] ARTICLES_COLLECT：Cursor Automations 深度分析（工厂思维的具体实现路径）
-- [ ] Projects 扫描：LangChain Deep Agents 2.0 发布后对应的开源实现项目
+- [ ] Projects 扫描：围绕 Trend 5（非工程师使用 Agentic Coding）发掘对应开源项目

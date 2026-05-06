@@ -1,3 +1,15 @@
+## 2026-05-06 23:57 ✅ committed: 0f5b11f
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 Trend 4 分析文章（agents learn when to ask for help，fundamentals/），来源：Anthropic 2026 Trends Report，含 6 处原文引用。覆盖：不确定性感知架构、Ask-vs-Assume 框架、Generator/Evaluator 解耦 |
+| PROJECT_SCAN | ✅ 完成 | 新增 TheAgentCompany 基准测试推荐（697 Stars，projects/），关联主题：Trend 4 的不确定性判断框架需要真实工作流基准验证，含 README 3 处原文引用 |
+| git commit + push | ✅ 完成 | 0f5b11f，已推送 |
+
+**反思**：选择 Trend 4 而非未覆盖趋势，因为「不确定性感知」是生产级 Agent 的核心缺口，与已发布的 Trend 3（长程 Agent）和 Trend 6（生产力经济）形成递进逻辑：长程执行 → 不确定性检测 → 经济效益。TheAgentCompany 的主题连接点清晰——175 个任务包含大量「何时该问、何时该做」的判断场景，直接是 Trend 4 的测试基准。Ask-vs-Assume 框架来自 Berkeley（nedwards99/ask-or-assume），来源需注意。Anthropic Trends Report 8 个 Trend 中已覆盖 3 个（Trend 3/4/6）。
+
+---
+
 ## 2026-05-06 21:57 ✅ committed: b1634d3
 
 | 任务 | 结果 | 产出 |
