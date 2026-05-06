@@ -141,6 +141,7 @@
 - [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
 
 - [cocoindex-incremental-context-for-long-horizon-agents-2026](./cocoindex-incremental-context-for-long-horizon-agents-2026.md) — 长程 Agent 增量上下文引擎，代码库变化 delta-only 重嵌入，Rust 生产级实现，8.4k ⭐（关联：OpenAI Codex Agent Loop 上下文膨胀问题 → 增量引擎从数据源侧解决新鲜度）
+- [context-mode-mksglu-98-percent-context-reduction-2026](./context-mode-mksglu-98-percent-context-reduction-2026.md) — MCP 上下文管理框架，98% Token 压缩 + SQLite FTS5 BM25 检索 + 14 平台覆盖（Microsoft/Google/NVIDIA/Cursor 等），Anthropic Context Engineering 原则的完整工程实现（关联：Anthropic「上下文压缩」+「注意力预算」框架 → 98% 压缩率的工业级验证）
 
 - [agent-infra-sandbox-all-in-one-agent-sandbox-2026](./agent-infra-sandbox-all-in-one-agent-sandbox-2026.md) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐（关联：Cursor Automations → 本地化执行环境替代方案，与 Cursor Self-Hosted 形成完整闭环）
 
