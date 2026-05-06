@@ -8,6 +8,9 @@
 ## 已推荐项目
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — AI Coding Agent 的 Production-Grade 工程技能库，DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 六阶段质量门禁，9 大平台官方推荐
+- [virattt/dexter](https://github.com/virattt/dexter) — 面向深度金融研究的 Autonomous Agent，24K ⭐，Multi-Agent 分工 + 沙箱执行 + 全程可溯源
+
 - [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) — 开源 Agent Harness 实现，深度集成 Claude Code / OpenClaw，支持 Ollama 本地运行
 - [meta-pytorch/KernelAgent](https://github.com/meta-pytorch/KernelAgent) — Deep Agent + GPU Kernel 自动化优化开源实现，PyTorch → Triton 自动转化
 - [coleam00/Archon](https://github.com/coleam00/Archon) — 首个开源 AI 编程工作流引擎，让 AI 编程变得确定可重复
@@ -54,6 +57,9 @@
 - [langgenius/dify](https://github.com/langgenius/dify) — 生产级 Agentic Workflow 开发平台，134.7k Stars 全球排名第 49，支持可视化 Workflow/RAG/Agent 多类型编排
 - [JackChen-me/open-multi-agent](https://github.com/JackChen-me/open-multi-agent) — 3 依赖的 TypeScript Multi-Agent 引擎，单 `runTeam()` 调用从目标到结果
 - [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) — ~3K 行代码的极简自进化 Agent 框架，技能从任务中结晶而非预装
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — AI Coding Agent 的 Production-Grade 工程技能库，DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 六阶段质量门禁，9 大平台官方推荐
+- [virattt/dexter](https://github.com/virattt/dexter) — 面向深度金融研究的 Autonomous Agent，24K ⭐，Multi-Agent 分工 + 沙箱执行 + 全程可溯源
+
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 - [mem0ai/mem0](https://github.com/mem0ai/mem0) — LLM 和 AI Agent 的通用记忆层，self-improving memory，LoCoMo 91.6 分，ADD-only extraction + Entity linking
 
