@@ -45,6 +45,7 @@
 - [bytedance/deer-flow](https://github.com/bytedance/deer-flow) — 字节跳动开源的多智能体编排框架，Supervisor 模式 + Docker 沙箱 + 持久化记忆
 - [numman-ali/openskills](https://github.com/numman-ali/openskills) — Anthropic Agent Skills 的跨平台实现，一个 CLI 让所有 AI 编码工具都能用 Skills
 - [mattpocock/skills](https://github.com/mattpocock/skills) — 来自真实工程师的 Agent Skills 实践集，将二十年工程经验蒸馏为可组合的 Agent Skills
+- [mattpocock/sandcastle](https://github.com/mattpocock/sandcastle) — Git Worktree 隔离的 Claude Code 生产编排工具，Docker/Podman/Vercel 三层沙箱 + 分支策略自动化，TypeScript 生产级开源实现（关联：Cursor SDK → 生产级 Agent 基础设施的双轨路径）
 - [1jehuang/jcode](https://github.com/1jehuang/jcode) — 下一代编码 Agent Harness，极致轻量化设计（RAM 占用比 Claude Code 低 93%）
 - [browserbase/skills](https://github.com/browserbase/skills) — 将 Browserbase 云端浏览器自动化封装为 Claude Code Skill 插件，使编码 Agent 能处理登录受限站点、CAPTCHA 和反爬保护页面
 - [provos/ironcurtain](https://github.com/provos/ironcurtain) — 运行时动态风险评估安全运行时，填补静态规则和人工审批之间的空白
@@ -106,6 +107,7 @@
 - [claude-context-zilliz-semantic-code-search](./claude-context-zilliz-semantic-code-search-2026.md) — 语义代码搜索 MCP server，让编码 Agent 在 50k+ 行代码库中即时检索相关上下文
 - [openskills-universal-skills-loader](./openskills-universal-skills-loader-2026.md) — Anthropic Agent Skills 的跨平台实现
 - [mattpocock-skills-engineering-agent-2026](./mattpocock-skills-engineering-agent-2026.md) — 来自真实工程师的 Agent Skills 实践集
+- [sandcastle-mattpocock-claude-code-sandbox-orchestration-2026](./sandcastle-mattpocock-claude-code-sandbox-orchestration-2026.md) — Git Worktree 隔离的 Claude Code 生产编排工具，Docker/Podman/Vercel 三层沙箱（关联：Cursor SDK → 生产级 Agent 基础设施的双轨路径）
 - [openai-agents-sdk-multi-agent-framework](./openai-agents-sdk-multi-agent-framework.md) — OpenAI 官方多 Agent 编排框架
 - [openfang-rust-agent-operating-system](./openfang-rust-agent-operating-system.md) — Rust 编写的开源 Agent 操作系统
 - [memsearch-cross-platform-agent-memory-2026](./memsearch-cross-platform-agent-memory-2026.md) — 跨平台统一的 AI Agent 持久记忆层
