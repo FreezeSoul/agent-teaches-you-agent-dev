@@ -71,6 +71,7 @@
 - [sunnweiwei/FoldAgent](https://github.com/sunnweiwei/FoldAgent) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理
 
 - [cloveric/cc-telegram-bridge](https://github.com/cloveric/cc-telegram-bridge) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
+- [Apra-Labs/apra-fleet](https://github.com/Apra-Labs/apra-fleet) — MCP 原生多机 Agent 协作框架，Doer-Reviewer 双角色循环，SSH 跨机器编排（35 ⭐，Apache 2.0）
 
 ---
 
@@ -139,6 +140,7 @@
 - [swarms-kyegomez-enterprise-multi-agent-orchestration-2026](./swarms-kyegomez-enterprise-multi-agent-orchestration-2026.md) — 企业级 Multi-Agent 编排框架，6,620 ⭐，七种预构建编排模式（MCP/x402/Skills 协议兼容）（关联：Anthropic Multi-Agent 四种协调范式 + Swarms 工程实现）
 - [wshobson-agents-claude-code-plugins-34800-stars-2026](./wshobson-agents-claude-code-plugins-34800-stars-2026.md) — Claude Code 最大插件市场，34,800 ⭐，185 个专项 Agent + 80 个解耦插件 + 渐进式披露架构（关联：Anthropic Initializer+Coding Agent 双组件模式 → 插件市场级多 Agent 协作解决方案）
 - [cc-telegram-bridge-claude-code-telegram-harness-2026](./cc-telegram-bridge-claude-code-telegram-harness-2026.md) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
+- [apra-fleet-apra-labs-mcp-multi-agent-coordination-2026](./apra-fleet-apra-labs-mcp-multi-agent-coordination-2026.md) — MCP 原生多机 Agent 协作框架，Doer-Reviewer 双角色循环，SSH 跨机器编排（关联：Cursor 第三时代工厂思维 → 多机 Agent 协作的开源实现路径）
 
 - [claude-agent-teams-ui-777genius-multi-agent-kanban-2026](./claude-agent-teams-ui-777genius-multi-agent-kanban-2026.md) — 多 Agent 团队编排桌面应用，855 ⭐，Kanban 看板 + Hunk 级 Review + 零配置启动，Electron 桌面端读取本地 Claude/Codex Session（关联：Cursor 3 统一多 Agent 工作空间 → 开源生态的等效实现）
 - [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
