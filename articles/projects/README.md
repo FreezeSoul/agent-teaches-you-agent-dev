@@ -24,6 +24,8 @@
 - [jayminwest/overstory](https://github.com/jayminwest/overstory) — Git Worktree 隔离的多 Agent 编排工具，1.2K ⭐，Session as Orchestrator 设计，SQLite Mail 高效通信
 
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
+- [daytonaio/daytona](https://github.com/daytonaio/daytona) — OCI 原生的 AI Agent 沙箱运行时，Sub-90ms 冷启动 + 可选 Kata/Sysbox 强隔离，OpenAI Agents SDK 8个官方沙箱提供商之一
+
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
 - [lobehub/lobe-chat](https://github.com/lobehub/lobe-chat) — Agent 协作空间，75K ⭐，Agent as the Unit of Work 设计理念
@@ -125,6 +127,8 @@
 - [evalview-ai-agent-behavior-regression-gate-2026](./evalview-ai-agent-behavior-regression-gate-2026.md) — AI Agent 行为回归门卫，snapshot behavior → diff tool calls → classify regression，与 Anthropic Long-Running Agent Harness 互补（前者保实现可维护性，后者保行为一致性）
 - [nonstop-agent-claude-long-running-harness-2026](./nonstop-agent-claude-long-running-harness-2026.md) — Claude 长时连续工作 harness，feature_list.json + 双 Agent Pattern，Anthropic 官方工程实践的开源实现（关联：Anthropic Initializer + Coding Agent 双组件架构）
 - [ouroboros-agent-os-replayable-specification-first-2026](./ouroboros-agent-os-replayable-specification-first-2026.md) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，与 Anthropic Context Engineering 形成互补（前者减少输入端冗余，后者管理过程端容量）
+- [daytona-open-source-ai-agent-sandbox-oci-containers-2026](./daytona-open-source-ai-agent-sandbox-oci-containers-2026.md) — OCI 原生的 AI Agent 沙箱运行时，Sub-90ms 冷启动 + 可选 Kata/Sysbox 强隔离（关联：Anthropic April Postmortem → 沙箱隔离是防止跨层缺陷演变为安全事件的最后防线）
+
 - [local-deep-research-encrypted-agentic-research-2026](./local-deep-research-encrypted-agentic-research-2026.md) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%（关联：Cursor Composer Self-Summarization → 信息管理问题的互补视角：压缩 vs 扩展）
 - [vibepod-cli-docker-agent-container-2026](./vibepod-cli-docker-agent-container-2026.md) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent（关联：OpenAI Agents SDK Native Sandbox → 本地 vs 云端的不同隔离路径）
 - [overstory-multi-agent-orchestration-git-worktree-2026](./overstory-multi-agent-orchestration-git-worktree-2026.md) — Git Worktree 隔离的多 Agent 编排工具，让单个 Claude Code Session 变身多 Agent 团队（关联：Cursor 第三代软件开发 → Agent Fleet 架构的第三种路线：本地化隔离 + 实时干预）

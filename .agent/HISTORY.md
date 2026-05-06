@@ -1,3 +1,12 @@
+## 2026-05-06 13:57 (pending commit)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（anthropic-april-2026-postmortem-multi-layer-testing-failure-modes-2026.md，harness/），来源：Anthropic Engineering Blog（2026-04-23），含 4 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（daytona-open-source-ai-agent-sandbox-oci-containers-2026.md），关联文章主题：April Postmortem → 沙箱隔离是防止跨层缺陷的最后防线，与 Articles 形成「问题诊断→基础设施解决方案」完整闭环，含 README 2 处原文引用 |
+
+**反思**：命中 Anthropic April 23 Postmortem（三个缺陷：默认推理 Effort 权衡错误 / 缓存优化导致级联 Context 丢失 / Prompt 长度限制损伤编码智能）。Articles 核心贡献是解析「为什么多层级测试都漏过了」这个更深层的工程问题：跨层交互缺陷在单层测试中不可见（缺陷2是 Harness × API × Extended Thinking 的交叉点）、corner case 探测困境（idle>1h 触发条件难以在常规测试中复现）、eval 覆盖偏差（只能检测设计时预期的退化类型）。讽刺性发现：Opus 4.7 Code Review 功能发现了导致其本身质量下降的 bug。Projects 选择 Daytona（OCI 原生开源沙箱 + Sub-90ms 冷启动 + Kata/Sysbox 可选隔离）是 OpenAI Agents SDK 8个沙箱提供商中唯一的开源选项，与 Articles 形成「问题（跨层缺陷→安全事件）→ 基础设施解法（沙箱隔离）」的逻辑链。本轮未强行产出 Projects 于 frameworks 或 deep-dives，符合 SKILL 约束。
+
 ## 2026-05-06 11:57 (32ca2b0)
 
 | 任务 | 结果 | 产出 |
