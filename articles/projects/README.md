@@ -53,6 +53,8 @@
 - [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) — ~3K 行代码的极简自进化 Agent 框架，技能从任务中结晶而非预装
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 - [mem0ai/mem0](https://github.com/mem0ai/mem0) — LLM 和 AI Agent 的通用记忆层，self-improving memory，LoCoMo 91.6 分，ADD-only extraction + Entity linking
+
+- [cocoindex-io/cocoindex](https://github.com/cocoindex-io/cocoindex) — 长程 Agent 增量上下文引擎，代码库变化仅 delta 重嵌入，Rust 生产级实现，8.4k ⭐，Apache 2.0
 - [agno-agi/agno](https://github.com/agno-agi/agno) — 将 Agent 转化为生产软件的 Runtime，Session 管理 + OpenTelemetry tracing + RBAC + 多框架兼容
 - [memfreeme/memfree](https://github.com/memfreeme/memfree) — 开源混合 AI 搜索引擎，支持知识库 + 互联网搜索 + Chrome 书签同步，一键部署
 - [lastmile-ai/mcp-agent](https://github.com/lastmile-ai/mcp-agent) — 用简单模式构建高效 Agent 的 MCP 框架，Full MCP Support + Temporal Durable Execution + 46%+ Token 节省
@@ -133,6 +135,8 @@
 - [wshobson-agents-claude-code-plugins-34800-stars-2026](./wshobson-agents-claude-code-plugins-34800-stars-2026.md) — Claude Code 最大插件市场，34,800 ⭐，185 个专项 Agent + 80 个解耦插件 + 渐进式披露架构（关联：Anthropic Initializer+Coding Agent 双组件模式 → 插件市场级多 Agent 协作解决方案）
 - [cc-telegram-bridge-claude-code-telegram-harness-2026](./cc-telegram-bridge-claude-code-telegram-harness-2026.md) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
 - [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
+
+- [cocoindex-incremental-context-for-long-horizon-agents-2026](./cocoindex-incremental-context-for-long-horizon-agents-2026.md) — 长程 Agent 增量上下文引擎，代码库变化 delta-only 重嵌入，Rust 生产级实现，8.4k ⭐（关联：OpenAI Codex Agent Loop 上下文膨胀问题 → 增量引擎从数据源侧解决新鲜度）
 
 - [agent-infra-sandbox-all-in-one-agent-sandbox-2026](./agent-infra-sandbox-all-in-one-agent-sandbox-2026.md) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐（关联：Cursor Automations → 本地化执行环境替代方案，与 Cursor Self-Hosted 形成完整闭环）
 
