@@ -80,6 +80,7 @@
 - [Apra-Labs/apra-fleet](https://github.com/Apra-Labs/apra-fleet) — MCP 原生多机 Agent 协作框架，Doer-Reviewer 双角色循环，SSH 跨机器编排（35 ⭐，Apache 2.0）
 
 - [TheAgentCompany/TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany) — 在模拟真实软件公司中测试 AI Agent 能力的基准测试框架，175 个真实工作场景，GitLab/Plane/RocketChat 全工具链覆盖，697 ⭐（关联：Anthropic Trend 4 — Agent 学会在不确定性中主动寻求帮助的测试基准）
+- [InsForge/InsForge](https://github.com/InsForge/insforge) — AI Coding Agent 的 Backend-as-a-Service 平台，Postgres + Auth + Storage + Model Gateway + Edge Functions，语义层让 Agent 理解「后端在做什么」而非机械生成代码，8.3K ⭐（关联：Anthropic Initializer Agent + Coding Agent 双组件架构 → 后端基础设施的语义化封装）
 
 ---
 
