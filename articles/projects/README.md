@@ -133,6 +133,10 @@
 - [cc-telegram-bridge-claude-code-telegram-harness-2026](./cc-telegram-bridge-claude-code-telegram-harness-2026.md) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
 - [foldagent-context-folding-reinforcement-learning-2026](./foldagent-context-folding-reinforcement-learning-2026.md) — Context-Folding 强化学习框架开源实现，AAAI 2026 论文，让 Agent 学会主动上下文管理（关联：Anthropic「注意力预算」+ Cursor「Self-Summarization」→ Learned Context Compression 方向实证）
 
+- [agent-infra-sandbox-all-in-one-agent-sandbox-2026](./agent-infra-sandbox-all-in-one-agent-sandbox-2026.md) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐（关联：Cursor Automations → 本地化执行环境替代方案，与 Cursor Self-Hosted 形成完整闭环）
+
 - [future-agi/future-agi](https://github.com/future-agi/future-agi) — 开源端到端 Agent 评估与优化平台，Simulate→Evaluate→Protect→Monitor→Optimize 单闭环，Go 网关 ~29k req/s，836 ⭐
+
+- [agent-infra/sandbox](https://github.com/agent-infra/sandbox) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐
 
 - [skyflo-ai/skyflo](https://github.com/skyflo-ai/skyflo) — Kubernetes 原生的 Self-Hosted AI Agent，Approval-Gated + 确定性控制循环，TypeScript，108 ⭐

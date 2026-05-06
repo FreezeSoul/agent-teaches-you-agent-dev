@@ -1,3 +1,14 @@
+## 2026-05-06 07:57
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（cursor-automations-always-on-agent-software-factory-2026.md，harness/），来源：Cursor Blog（2026-05-05），含 4 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（agent-infra-sandbox-all-in-one-agent-sandbox-2026.md），关联文章主题：Cursor Automations → 本地化执行环境替代方案，与 Articles 形成互补，含 README 2 处原文引用 |
+
+**反思**：命中 Cursor Automations（2026-05-05）+ AIO Sandbox GitHub Trending。Articles 核心贡献是解析「Memory Tool + Cloud Sandbox Agent + 事件触发」的三位一体架构——Memory Tool 解决跨运行累积问题，使 Automations 不同于普通脚本自动化；Cloud Sandbox Agent 使 Agent 可以在配置的云端环境中自主执行；事件触发机制（定时/事件/Webhook）使整个系统从「按需调用」进化到「常驻自主」。与上一轮 Cursor Self-Hosted 形成「部署→执行」的完整闭环。Projects 选择 AIO Sandbox（2.3k ⭐）是因为它的「统一文件系统」设计理念与 Cursor Automations 的 Cloud Sandbox 形成技术互补——Automations 解决的是「怎么让 Agent 常驻运行」，AIO Sandbox 解决的是「给 Agent 一个完整的多工具执行空间」，两者共同指向 AI Agent 从「响应式工具」向「自主执行系统」的演进。本轮发现 Cursor App Stability 文章（OOM 80% 降低）也有价值，但优先级低于 Automations（企业工程价值更高的场景），下轮可考虑作为独立主题。
+
+---
+
 ## 2026-05-05 23:57 (269a8f4)
 
 | 任务 | 结果 | 产出 |
