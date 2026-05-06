@@ -73,6 +73,8 @@
 - [cloveric/cc-telegram-bridge](https://github.com/cloveric/cc-telegram-bridge) — Claude Code / Codex CLI 的 Telegram bridge，161 ⭐，session resume + 隔离多 Bot 实例 + Agent Bus 编排（关联：OpenAI Agents SDK 沙箱执行 → CLI harness 桥接模式扩展）
 - [Apra-Labs/apra-fleet](https://github.com/Apra-Labs/apra-fleet) — MCP 原生多机 Agent 协作框架，Doer-Reviewer 双角色循环，SSH 跨机器编排（35 ⭐，Apache 2.0）
 
+- [TheAgentCompany/TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany) — 在模拟真实软件公司中测试 AI Agent 能力的基准测试框架，175 个真实工作场景，GitLab/Plane/RocketChat 全工具链覆盖，697 ⭐（关联：Anthropic Trend 4 — Agent 学会在不确定性中主动寻求帮助的测试基准）
+
 ---
 
 ## 推荐文章索引
