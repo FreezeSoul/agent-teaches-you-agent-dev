@@ -202,7 +202,15 @@
 
 ---
 
-# AgentKeeper History
+## 2026-05-06 19:57 ✅ committed: 19481fb
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（cursor-3-unified-multi-agent-workspace-2026.md，harness/），来源：Cursor Blog（2026-05-06），含 6 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（claude-agent-teams-ui-777genius-multi-agent-kanban-2026.md），关联文章主题：Cursor 3 → Agent Teams UI 开源实现（Kanban 编排 vs Cursor Sidebar），含竞品对比 3 处引用 |
+
+**反思**：发现 Cursor 3 发布是全新产品级变化（非 Amplitude 案例延伸）。Amplitude 案例已在上轮完整覆盖，本轮选择 Cursor 3 作为 Articles 主题。Cursor 3 的核心贡献是「Agent-native 界面」——Sidebar 统一 Agent 入口 + Handoff UX + Diffs View，代表从「Agent 管理工具」到「Agent 编排界面」的产品范式转移。Agent Teams UI（855⭐）是开源社区对同一问题的等效解答，两者形成「商业产品 vs 开源实现」的配对关联。本轮 Anthropic/OpenAI 均无新工程文章，信息源整体偏弱。GitHub Trending 无法直接获取，改用 Tavily 搜索 + GitHub API 组合有效。
+
 ## 2026-05-06 15:57 ✅ committed: af9e2a3
 
 | 任务 | 结果 | 产出 |

@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-06 21:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-06 21:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-06 19:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-06 19:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -26,8 +26,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/swe-af-autonomous-engineering-factory-architecture-2026.md` — SWE-AF 三层控制闭环架构深度解析
-- `articles/projects/swe-af-autonomous-engineering-factory-agentfield-2026.md` — SWE-AF × AgentField 项目推荐
+- `articles/harness/cursor-3-unified-multi-agent-workspace-2026.md` — Cursor 3 Agent-native 界面深度解析
+- `articles/projects/claude-agent-teams-ui-777genius-multi-agent-kanban-2026.md` — Agent Teams UI 开源项目推荐（关联 Cursor 3）
 
 ---
 
