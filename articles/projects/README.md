@@ -48,6 +48,8 @@
 - [numman-ali/openskills](https://github.com/numman-ali/openskills) — Anthropic Agent Skills 的跨平台实现，一个 CLI 让所有 AI 编码工具都能用 Skills
 - [mattpocock/skills](https://github.com/mattpocock/skills) — 来自真实工程师的 Agent Skills 实践集，将二十年工程经验蒸馏为可组合的 Agent Skills
 - [mattpocock/sandcastle](https://github.com/mattpocock/sandcastle) — Git Worktree 隔离的 Claude Code 生产编排工具，Docker/Podman/Vercel 三层沙箱 + 分支策略自动化，TypeScript 生产级开源实现（关联：Cursor SDK → 生产级 Agent 基础设施的双轨路径）
+- [wilsonzlin/fastrender](https://github.com/wilsonzlin/fastrender) — 百枚并发 Agent 从零构建浏览器引擎，Planner/Sub-Planner/Worker 三层分离架构，100 万行代码验证大规模 Agent Swarm 工程可行性，1.5K ⭐（关联：Anthropic Agent Skills 渐进式披露 → 复杂工作流的知识组织与按需加载）
+- [microsoft/skills](https://github.com/microsoft/skills) — 174 个 Agent Skills 的 Microsoft 官方技能库，覆盖 Azure SDK / Foundry / MCP 构建，Context-Driven Development 理念，与 Anthropic Agent Skills 形成企业级 vs 开源的两条路径（关联：Agent Skills 渐进式披露 → 企业级大规模技能管理的实现路径）
 - [1jehuang/jcode](https://github.com/1jehuang/jcode) — 下一代编码 Agent Harness，极致轻量化设计（RAM 占用比 Claude Code 低 93%）
 - [browserbase/skills](https://github.com/browserbase/skills) — 将 Browserbase 云端浏览器自动化封装为 Claude Code Skill 插件，使编码 Agent 能处理登录受限站点、CAPTCHA 和反爬保护页面
 - [provos/ironcurtain](https://github.com/provos/ironcurtain) — 运行时动态风险评估安全运行时，填补静态规则和人工审批之间的空白
