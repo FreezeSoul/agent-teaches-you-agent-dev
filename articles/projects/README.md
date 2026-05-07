@@ -8,6 +8,8 @@
 - [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
 
 ## 已推荐项目
+- [PackmindHub/context-evaluator](https://github.com/PackmindHub/context-evaluator) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md/CLAUDE.md 质量问题，自动修复 + Before/After 分数对比（关联：Agent 配置过载问题 → 配置文件质量的系统性诊断与修复）
+
 - [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) — 100 行 Python 的极简 Agent，>74% SWE-bench 得分，Princeton & Stanford 团队维护，19K+ Stars，无专用工具接口设计（关联：Anthropic 基础设施噪声研究 → 最干净的可复现评测环境）
 
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
@@ -96,6 +98,8 @@
 - [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) — 专业分工的 AI Agent 团队编排框架，30+ 专才 Agent（Frontend/Backend/SRE/Security 等），人格驱动的 Agent 定义格式标准
 
 ## 推荐文章索引
+
+- [context-evaluator-packmindhub-ai-agent-config-health-2026](./context-evaluator-packmindhub-ai-agent-config-health-2026.md) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md 质量问题，自动修复 + Before/After 对比（关联：Agent 配置过载 → 配置文件质量的系统性诊断）
 
 - [openharness-hKUDS-agent-harness-open-source-2026](./openharness-hKUDS-agent-harness-open-source-2026.md) — 香港大学开源 Agent Harness，深度集成 Claude Code / OpenClaw
 - [kernelagent-meta-multi-agent-gpu-optimization](./kernelagent-meta-multi-agent-gpu-optimization.md) — Deep Agent + GPU Kernel 自动化优化开源实现
