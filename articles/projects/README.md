@@ -89,6 +89,7 @@
 
 - [89luca89/clampdown](https://github.com/89luca89/clampdown) — 零信任 AI 编码 Agent 沙箱，Landlock + Seccomp + OCI Hook 三层内核级隔离，零密钥泄露架构
 - [navam-io/sentinel](https://github.com/navam-io/sentinel) — 视觉优先 Agent 评测平台，React Flow 画布 + YAML 即时生成 + 12 分类断言系统，Postman for AI Agents 定位
+- [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) — 专业分工的 AI Agent 团队编排框架，30+ 专才 Agent（Frontend/Backend/SRE/Security 等），人格驱动的 Agent 定义格式标准
 
 ## 推荐文章索引
 
@@ -163,6 +164,7 @@
 - [swe-af-autonomous-engineering-factory-agentfield-2026](./swe-af-autonomous-engineering-factory-agentfield-2026.md) — 自主工程团队 Runtime，三层控制闭环（Inner/Middle/Outer Loop）+ Git Worktree 隔离并行，Fleet-scale 编排（关联：Cursor 第三时代「工厂思维」→ 自主工程工厂的开源实现）
 
 - [cocoindex-incremental-context-for-long-horizon-agents-2026](./cocoindex-incremental-context-for-long-horizon-agents-2026.md) — 长程 Agent 增量上下文引擎，代码库变化 delta-only 重嵌入，Rust 生产级实现，8.4k ⭐（关联：OpenAI Codex Agent Loop 上下文膨胀问题 → 增量引擎从数据源侧解决新鲜度）
+- [agency-agents-msitarzewski-multi-agent-professional-team-2026](./agency-agents-msitarzewski-multi-agent-professional-team-2026.md) — 专业分工的 AI Agent 团队编排框架，30+ 专才 Agent 人格驱动定义（关联：Anthropic 三代理 GAN 启发架构 → Planner-Generator-Evaluator vs. Agency-Agents 静态专才分工的两种协作范式）
 - [context-mode-mksglu-98-percent-context-reduction-2026](./context-mode-mksglu-98-percent-context-reduction-2026.md) — MCP 上下文管理框架，98% Token 压缩 + SQLite FTS5 BM25 检索 + 14 平台覆盖（Microsoft/Google/NVIDIA/Cursor 等），Anthropic Context Engineering 原则的完整工程实现（关联：Anthropic「上下文压缩」+「注意力预算」框架 → 98% 压缩率的工业级验证）
 
 - [agent-infra-sandbox-all-in-one-agent-sandbox-2026](./agent-infra-sandbox-all-in-one-agent-sandbox-2026.md) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐（关联：Cursor Automations → 本地化执行环境替代方案，与 Cursor Self-Hosted 形成完整闭环）
