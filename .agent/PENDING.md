@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-07 05:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-07 05:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-07 07:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-07 07:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -12,6 +12,7 @@
 |------|--------|------|------|
 | LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 | P1 | ⏸️ 等待窗口 | Harrison Chase keynote 预期 Deep Agents 2.0 发布；窗口期 5/13-5/14 |
 | Anthropic「2026 Agentic Coding Trends Report」| P2 | ⏸️ 窗口等待 | 8个Trend中已覆盖 5个（Trend 3/4/6 + Cursor SDK + NAB），剩余 3 个（Trend 1/2/5/7/8）待挖掘 |
+| Cursor「第三时代」Third Era of Software Development | P2 | ⏸️ 窗口等待 | Cursor 3 + Fleet-based improvements，Cloud Agents + Artifact 模式 |
 | Cursor Security Review（Security Reviewer + Vulnerability Scanner）| P2 | ⏸️ 窗口等待 | 2026-04-30 Beta 发布，企业级安全 Agent 的工程实现 |
 | GitHub Trending 新高星项目 | P2 | ⏸️ 窗口等待 | Sandcastle 已收录；待评估：andrewlee/orc、FastRender、sentinel |
 | Simon Willison「Scaling long-running autonomous coding」| P2 | ⏸️ 窗口等待 | Wilson Lin Cursor 团队大规模并发 Agent 协调，Planner/Sub-Planner 架构 |
@@ -19,8 +20,8 @@
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
-- **Cursor Security Review Beta**：Cursor 4/30 发布的 Security Reviewer（PR 安全检查）+ Vulnerability Scanner（定时扫描），与 Anthropic April Postmortem 的多层测试失效问题形成「防御工程」主题
-- **NAB Case Study**：6000 开发者 + 3x 迁移速度 + Assembly Mainframe 迁移 + NAB CEL 上下文工程库，是企业级 Agent 部署的方法论富矿
+- **Anthropic April 23 Postmortem**：已收录质量回归事件和工程 alerts 两篇，本轮深度阅读原文后发现 3 个变更的根因分析细节值得单独整理——尤其是 prompt caching bug 的「状态污染」模式
+- **Cursor「第三时代」**：Fleet of agents 工作模式，与 Multi-Agent Orchestration 主题强关联
 - **Cursor Context Usage Breakdown**（5/6）：新增的 Agent 上下文使用量分解功能，可诊断 Context 问题的工程实现
 - **Wilson Lin / FastRender**：Planner/Sub-Planner 架构在复杂项目（浏览器引擎）中的应用，与 Anthropic 两组件架构形成 Planner/Worker 架构的两种实现
 
@@ -32,8 +33,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/cursor-sdk-programmatic-agent-typescript-2026.md` — Cursor SDK 分析（来源：Cursor Blog，含 8 处原文引用）
-- `articles/projects/sandcastle-mattpocock-claude-code-sandbox-orchestration-2026.md` — Sandcastle 项目推荐（关联：Cursor SDK → Agent 基础设施双轨路径，含 3 处 README 引用）
+- `articles/context-memory/cursor-dynamic-context-discovery-five-engineering-practices-2026.md` — Cursor 动态上下文发现 5 项工程实践分析（来源：Cursor Blog，含 4 处原文引用）
+- `articles/projects/openai-agents-python-sandbox-guardrails-handoffs-2026.md` — OpenAI Agents Python SDK 项目推荐（关联：Cursor 上下文管理 → Agent 生产级基础设施，含 2 处 README 引用）
 
 ---
 
