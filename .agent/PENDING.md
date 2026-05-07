@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-07 23:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-07 23:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-08 01:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-08 01:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -24,6 +24,8 @@
 | Cursor Kernel Multi-Agent（38% 加速 235 CUDA Kernels）| P2 | ✅ 已闭环 | 内容已在 cursor-multi-agent-kernel-optimization-2026 覆盖，评估后跳过 |
 | OpenAI「The next phase of enterprise AI」| P2 | ✅ 已闭环 | Frontier 智能层 + Stateful Runtime + Frontier Alliances + Multi-agent 落地案例 |
 | Anthropic「Equipping agents for the real world with Agent Skills」| P2 | ✅ 已闭环 | 渐进式披露三层架构 + Skills vs MCP 互补关系 + 安全考量 + 工程实践指南 |
+| OpenAI Harness Engineering + Martin Fowler Framework | P2 | ✅ 已闭环 | 本轮新增：OpenAI 实证 + Fowler 框架 convergence |
+| Gizele1/harness-init 工程化实现 | P2 | ✅ 已闭环 | 本轮新增：8 阶段脚手架，OpenAI 方法论工程化 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -35,18 +37,21 @@
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 的工程博客系列，Responses API 提示缓存 / Compaction 机制
 - **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源
+- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域（Content/Software Dev/Data/Business/Education/Legal/Health/Communication/Operations/Specialized），489 个 Agent 定义，315 个 Skills
 
 ## 📌 Projects 线索
 
 - **awesome-ai-agents-2026 系列**：Zijij-Ni/ARUNAGIRINATHAN-K/caramaschiHG 三个版本，300+ AI Agents 索引
 - **未来值得关注的领域**：AI Agent 安全评测工具、企业级 Agent 治理平台
 - **microsoft/skills MCP 插件体系**：Azure SDK Skills + Foundry MCP 的企业级接入模式
-- **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器，可能的后续关联：自动修复质量对比
+- **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器
+- **Gizele1/harness-init**：OpenAI Harness Engineering 工程化实现，8 阶段脚手架
+- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，覆盖全栈开发/CI/CD/安全审计/IaC 等
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/agent-config-overload-context-files-making-agents-dumber-2026.md` — Agent 配置正在让你的 Agent 变笨（ETH Zurich 研究 + Vercel 反直觉实验 + 配置分层认知框架）
-- `articles/projects/context-evaluator-packmindhub-ai-agent-config-health-2026.md` — context-evaluator 项目推荐（17 个评估器配置文件健康体检，与 Article 形成「诊断+治疗」闭环）
+- `articles/harness/harness-engineering-openai-fowler-convergence-2026.md` — OpenAI 实证 + Martin Fowler 框架 convergence，完整 Harness Engineering 图景
+- `articles/projects/harness-init-gizele1-openai-harness-scaffold-2026.md` — harness-init 项目推荐（8阶段工程化实现，与 Article 形成「理论框架 → 工程落地」闭环）
 
 ---
 
