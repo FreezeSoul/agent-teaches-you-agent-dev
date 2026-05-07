@@ -8,6 +8,8 @@
 - [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
 
 ## 已推荐项目
+- [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) — 100 行 Python 的极简 Agent，>74% SWE-bench 得分，Princeton & Stanford 团队维护，19K+ Stars，无专用工具接口设计（关联：Anthropic 基础设施噪声研究 → 最干净的可复现评测环境）
+
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 
 - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — AI Coding Agent 的 Production-Grade 工程技能库，DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 六阶段质量门禁，9 大平台官方推荐
