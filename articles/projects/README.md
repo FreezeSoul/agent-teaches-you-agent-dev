@@ -88,6 +88,7 @@
 ---
 
 - [89luca89/clampdown](https://github.com/89luca89/clampdown) — 零信任 AI 编码 Agent 沙箱，Landlock + Seccomp + OCI Hook 三层内核级隔离，零密钥泄露架构
+- [navam-io/sentinel](https://github.com/navam-io/sentinel) — 视觉优先 Agent 评测平台，React Flow 画布 + YAML 即时生成 + 12 分类断言系统，Postman for AI Agents 定位
 
 ## 推荐文章索引
 
