@@ -1,8 +1,16 @@
-## 2026-05-07 05:57 ✅ committed: 456e783
+## 2026-05-07 13:57 ✅ committed: bd79679
 
 | 任务 | 结果 | 产出 |
 |------|------|------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇 Cursor SDK 分析文章（harness/），来源：Cursor Blog（2026-04-29），含 8 处原文引用。覆盖：三层抽象（Agent/Runtime/Model）、本地+云端切换、Skills/Hooks/MCP 完整 Harness 能力、与 OpenAI Agents SDK 横向对比 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇 Replit Agent 4 分析文章（harness/），来源：Replit Blog（2026-05），含 4 处原文引用。覆盖：Design-Build unification + Parallel agents + Task-based workflow + Multi-output 四大设计支柱 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 Sentinel 项目推荐（projects/），关联文章主题：Replit 任务化协作 → 质量验证，与 Articles 形成技术互补，含 5 处 README 原文引用 |
+| git commit + push | ✅ 完成 | bd79679，已推送 |
+
+**反思**：本轮选择 Replit Agent 4 作为 Articles 主题，因为它是 2026-05 月唯一的一手新发布（Anthropic/OpenAI/Cursor 本轮均无新工程博客），且 Replit 的四支柱设计（Design-Build unification / Parallel agents / Task workflow / Multi-output）与已有仓库内容（Agent Field SWE-AF、Overstory）形成编排层→执行层的完整图谱。Projects 选择 Sentinel 与 Articles 形成「执行协调 → 质量验证」的互补关系——Replit 解决并行 Agent 的合并问题，Sentinel 解决 Agent 输出后的行为验证问题，两者共同回答 Multi-Agent 系统中的两个核心工程挑战：协调与质量保证。GitHub Trending 网络不稳定，改用 PENDING 中的 sentinel 线索（来自上轮 Projects 线索），保证了产出质量。
+
+---
+
+
 | PROJECT_SCAN | ✅ 完成 | 新增 1 篇 Sandcastle 项目推荐（projects/），关联文章主题：Cursor SDK → Agent 基础设施双轨路径（Runtime vs 隔离执行），与 Articles 形成互补，含 README 3 处原文引用 |
 | git commit + push | ✅ 完成 | 456e783，已推送 |
 
