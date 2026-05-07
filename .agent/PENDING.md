@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-08 03:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-08 03:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-08 05:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-08 05:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -26,10 +26,12 @@
 | Anthropic「Equipping agents for the real world with Agent Skills」| P2 | ✅ 已闭环 | 渐进式披露三层架构 + Skills vs MCP 互补关系 + 安全考量 + 工程实践指南 |
 | OpenAI Harness Engineering + Martin Fowler Framework | P2 | ✅ 已闭环 | 本轮新增：OpenAI 实证 + Fowler 框架 convergence |
 | Gizele1/harness-init 工程化实现 | P2 | ✅ 已闭环 | 本轮新增：8 阶段脚手架，OpenAI 方法论工程化 |
-| **YC Garry Tan「Thin Harness, Fat Skills」方法论** | P2 | ✅ 已闭环 | 本轮新增：fundamentals/ + gbrain project 闭环 |
+| **YC Garry Tan「Thin Harness, Fat Skills」方法论** | P2 | ✅ 已闭环 | fundamentals/ + gbrain project 闭环 |
 | Tencent Cloud / Alibaba Aegis Harness Engineering | P2 | ⏳ 待处理 | Chinese 厂商 Harness Engineering 实践首次覆盖 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏳ 待处理 | 500 senior executives 调研，31% workflow 已自动化 |
 | Cloudflare「Agentic Cloud」Agents Week 发布 | P2 | ⏳ 待处理 | Cloudflare 2026 年 5 月第一周产品套件 |
+| **Cursor「动态上下文发现」** | P2 | ✅ 本轮闭环 | 5个核心机制（工具响应文件化/摘要引用历史/Skills动态加载/MCP按需加载/终端会话文件化），节省46.9% tokens |
+| **prompt-tower 上下文打包（376 Stars）** | P2 | ✅ 本轮闭环 | VS Code 插件，上下文预打包，与动态上下文发现形成互补（预打包 vs 按需拉取）|
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -42,7 +44,7 @@
 - **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域（Content/Software Dev/Data/Business/Education/Legal/Health/Communication/Operations/Specialized），489 个 Agent 定义，315 个 Skills
-- **Tencent Cloud / Alibaba Aegis**：Harness Engineering 的 Chinese 厂商实践，四象限架构（执行路由 × 外部化状态）
+- **Anthropic April 23 Postmortem**：Claude Code 质量回退的三个根因分析，Code Review 发现 bug 的案例值得深度分析
 
 ## 📌 Projects 线索
 
@@ -56,8 +58,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/thin-harness-fat-skills-yc-garry-tan-2026.md` — YC Garry Tan「Thin Harness, Fat Skills」方法论完整解析
-- `articles/projects/gbrain-garry-tan-yc-agent-brain-13599-stars-2026.md` — gbrain 项目推荐（13,599 Stars，生产级 Agent Brain 实现）
+- `articles/context-memory/cursor-dynamic-context-discovery-2026.md` — Cursor「动态上下文发现」完整技术解析
+- `articles/projects/prompt-tower-context-packaging-376-stars-2026.md` — prompt-tower 项目推荐（376 Stars）
 
 ---
 
