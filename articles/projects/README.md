@@ -164,6 +164,8 @@
 - [swe-af-autonomous-engineering-factory-agentfield-2026](./swe-af-autonomous-engineering-factory-agentfield-2026.md) — 自主工程团队 Runtime，三层控制闭环（Inner/Middle/Outer Loop）+ Git Worktree 隔离并行，Fleet-scale 编排（关联：Cursor 第三时代「工厂思维」→ 自主工程工厂的开源实现）
 
 - [cocoindex-incremental-context-for-long-horizon-agents-2026](./cocoindex-incremental-context-for-long-horizon-agents-2026.md) — 长程 Agent 增量上下文引擎，代码库变化 delta-only 重嵌入，Rust 生产级实现，8.4k ⭐（关联：OpenAI Codex Agent Loop 上下文膨胀问题 → 增量引擎从数据源侧解决新鲜度）
+
+- [deepseek-tui-terminal-native-coding-agent-2026](./deepseek-tui-terminal-native-coding-agent-2026.md) — Terminal 原生 AI 编码 Agent，DeepSeek V4 + 1M context + Auto mode，+1,274 stars trending（关联：OpenAI 企业 AI 战略 → Codex vs DeepSeek-TUI 的终端工具双轨竞争）
 - [agency-agents-msitarzewski-multi-agent-professional-team-2026](./agency-agents-msitarzewski-multi-agent-professional-team-2026.md) — 专业分工的 AI Agent 团队编排框架，30+ 专才 Agent 人格驱动定义（关联：Anthropic 三代理 GAN 启发架构 → Planner-Generator-Evaluator vs. Agency-Agents 静态专才分工的两种协作范式）
 - [context-mode-mksglu-98-percent-context-reduction-2026](./context-mode-mksglu-98-percent-context-reduction-2026.md) — MCP 上下文管理框架，98% Token 压缩 + SQLite FTS5 BM25 检索 + 14 平台覆盖（Microsoft/Google/NVIDIA/Cursor 等），Anthropic Context Engineering 原则的完整工程实现（关联：Anthropic「上下文压缩」+「注意力预算」框架 → 98% 压缩率的工业级验证）
 
@@ -172,6 +174,8 @@
 - [future-agi/future-agi](https://github.com/future-agi/future-agi) — 开源端到端 Agent 评估与优化平台，Simulate→Evaluate→Protect→Monitor→Optimize 单闭环，Go 网关 ~29k req/s，836 ⭐
 
 - [agent-infra/sandbox](https://github.com/agent-infra/sandbox) — All-in-One Agent 沙箱框架，Browser+Shell+File+VSCode+Jupyter+MCP 同容器统一文件系统，2.3k ⭐
+
+- [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) — Terminal 原生 AI 编码 Agent，DeepSeek V4 + 1M context + Auto mode 自动选择模型思考级别，+1,274 stars trending（关联：OpenAI Codex → 终端原生 AI 工具的双轨竞争格局）
 
 - [skyflo-ai/skyflo](https://github.com/skyflo-ai/skyflo) — Kubernetes 原生的 Self-Hosted AI Agent，Approval-Gated + 确定性控制循环，TypeScript，108 ⭐
 
