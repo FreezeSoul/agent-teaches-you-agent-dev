@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-07 07:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-07 07:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-07 09:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-07 09:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -16,25 +16,28 @@
 | Cursor Security Review（Security Reviewer + Vulnerability Scanner）| P2 | ⏸️ 窗口等待 | 2026-04-30 Beta 发布，企业级安全 Agent 的工程实现 |
 | GitHub Trending 新高星项目 | P2 | ⏸️ 窗口等待 | Sandcastle 已收录；待评估：andrewlee/orc、FastRender、sentinel |
 | Simon Willison「Scaling long-running autonomous coding」| P2 | ⏸️ 窗口等待 | Wilson Lin Cursor 团队大规模并发 Agent 协调，Planner/Sub-Planner 架构 |
+| Anthropic Claude Code quality reports postmortem（5月初）| P2 | ⏸️ 窗口等待 | 3 个 separate changes 导致质量回归的根因分析 |
+| Wilson Lin / FastRender | P2 | ⏸️ 窗口等待 | Planner/Sub-Planner 架构在复杂项目（浏览器引擎）中的应用 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
-- **Anthropic April 23 Postmortem**：已收录质量回归事件和工程 alerts 两篇，本轮深度阅读原文后发现 3 个变更的根因分析细节值得单独整理——尤其是 prompt caching bug 的「状态污染」模式
-- **Cursor「第三时代」**：Fleet of agents 工作模式，与 Multi-Agent Orchestration 主题强关联
-- **Cursor Context Usage Breakdown**（5/6）：新增的 Agent 上下文使用量分解功能，可诊断 Context 问题的工程实现
-- **Wilson Lin / FastRender**：Planner/Sub-Planner 架构在复杂项目（浏览器引擎）中的应用，与 Anthropic 两组件架构形成 Planner/Worker 架构的两种实现
+- **Anthropic「Harness design for long-running application development」**：GAN-inspired 三 Agent 架构（Planner/Generator/Evaluator），Sprint Contract 机制，Context Reset vs Compaction 权衡，本轮已深度分析并产出文章
+- **Anthropic「Effective context engineering for AI agents」**：Attention budget 有限性 + just-in-time context retrieval 策略 + progressive disclosure + Sub-agent 架构，本轮已作为 Generator-Evaluator 文章的引用来源
+- **Cursor「Speeding up GPU kernels by 38%」**：多 Agent 系统的 38% GPU kernel 优化实证，Planner + Workers 协作模式，SOL-ExecBench 基准测试，本轮已作为 Generator-Evaluator 文章的实证数据
+- **addyosmani/agent-skills**：GitHub Trending 新增高星项目（1,500+ ⭐），Google SWE 文化蒸馏为 20 个可验证 Skill 工作流，本轮产出 Projects 推荐
 
 ## 📌 Projects 线索
 
-- **FastRender**：wilsonzlin/fastrender（1.5K ⭐），并行 Agent 团队构建的 Rust 浏览器引擎，与本轮的「长时运行 Agent」主题高度关联
+- **FastRender**：wilsonzlin/fastrender（1.5K ⭐），并行 Agent 团队构建的 Rust 浏览器引擎，与 Planner/Sub-Planner 架构主题强关联
 - **andrewlee/orc**：Hierarchical multi-agent orchestrator，Planner + Sub-Planner + Workers，Git Worktree 隔离
 - **Sentinel**：navam-io/sentinel（视觉优先 Agent 评测平台，Drag-and-Drop + YAML，React Flow + Tauri），Postman for AI Agents 定位
+- **InsForge**：8.5K ⭐，Postgres-based backend with auth/storage/compute/hosting/AI gateway，专为 coding agents 设计，230 stars/day
 
 ## 🏷️ 本轮产出索引
 
-- `articles/context-memory/cursor-dynamic-context-discovery-five-engineering-practices-2026.md` — Cursor 动态上下文发现 5 项工程实践分析（来源：Cursor Blog，含 4 处原文引用）
-- `articles/projects/openai-agents-python-sandbox-guardrails-handoffs-2026.md` — OpenAI Agents Python SDK 项目推荐（关联：Cursor 上下文管理 → Agent 生产级基础设施，含 2 处 README 引用）
+- `articles/deep-dives/generator-evaluator-multi-agent-evaluation-architecture-2026.md` — Generator-Evaluator 多 Agent 评估架构深度分析（来源：Anthropic Engineering Blog + Cursor Blog，含 6 处原文引用）
+- `articles/projects/addyosmani-agent-skills-production-engineering-workflows-2026.md` — addyosmani/agent-skills 项目推荐（关联：Generator-Evaluator 架构 → Agent 工程判断力，含 README 3 处原文引用）
 
 ---
 
