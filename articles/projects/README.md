@@ -5,6 +5,8 @@
 
 ---
 
+- [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
+
 ## 已推荐项目
 - [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
 
@@ -84,6 +86,8 @@
 - [InsForge/InsForge](https://github.com/InsForge/insforge) — AI Coding Agent 的 Backend-as-a-Service 平台，Postgres + Auth + Storage + Model Gateway + Edge Functions，语义层让 Agent 理解「后端在做什么」而非机械生成代码，8.3K ⭐（关联：Anthropic Initializer Agent + Coding Agent 双组件架构 → 后端基础设施的语义化封装）
 
 ---
+
+- [89luca89/clampdown](https://github.com/89luca89/clampdown) — 零信任 AI 编码 Agent 沙箱，Landlock + Seccomp + OCI Hook 三层内核级隔离，零密钥泄露架构
 
 ## 推荐文章索引
 
