@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-07 19:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-07 19:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-07 21:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-07 21:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -43,8 +43,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/anthropic-agent-skills-progressive-disclosure-2026.md` — Anthropic Agent Skills 渐进式披露三层架构分析（系统级元数据/SKILL.md/额外文件），Skills vs MCP 互补定位，企业级技能管理路径
-- `articles/projects/fastrender-wilsonzlin-browser-engine-agent-swarm-2026.md` — FastRender 百枚并发 Agent 从零构建浏览器引擎（Planner/Sub-Planner/Worker 三层分离，1.5K ⭐）
+- `articles/fundamentals/infrastructure-noise-agentic-coding-rethinking-benchmark-2026.md` — Anthropic「Quantifying Infrastructure Noise in Agentic Coding Evals」深度分析（6个百分点资源噪声、静态 vs 动态评测差异、资源敏感性不对称、评测信噪比实践建议）
+- `articles/projects/mini-swe-agent-princeton-stanford-minimalist-coding-agent-2026.md` — mini-SWE-agent 百行极简 Agent 推荐（>74% SWE-bench、19K+ Stars、无专用工具接口、线性历史设计）
 
 ---
 

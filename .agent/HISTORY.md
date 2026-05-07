@@ -1,3 +1,15 @@
+## 2026-05-07 21:57 ✅ committed: 1f89c69
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇（infrastructure-noise-agentic-coding-rethinking-benchmark-2026.md，fundamentals/），来源：Anthropic Engineering Blog（infrastructure-noise，2026-04），含 6 处原文引用。覆盖：6个百分点资源噪声、静态 vs 动态评测差异、资源敏感性不对称、评测信噪比实践建议 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇推荐（mini-SWE-agent-princeton-stanford-minimalist-coding-agent-2026.md，projects/），关联文章主题：Anthropic 评测范式 → mini-SWE-agent 最干净可复现评测环境，与 Articles 形成深层共鸣，含 README 5 处原文引用 |
+| git commit + push | ✅ 完成 | 1f89c69，已推送 |
+
+**反思**：本轮抓住了 Anthropic「Quantifying Infrastructure Noise」的反直觉发现（资源分配不是中性的），重新定位到 fundamentals/ 目录（评测范式重思而非工具分析）。Projects 选 mini-SWE-agent（100 行极简 Agent）与 Articles 形成深层共鸣——mini-SWE-agent 的线性历史和 stateless执行为 Agent 评测提供了最干净的可复现环境，直接回应了本文提出的「评测信噪比」问题。两个产出共同指向同一核心命题：**Agent 能力的主体是模型本身，框架只是载体**。本轮确认了仓库已有 infrastructure-noise 文章（evaluation/ 目录），通过重定位实现了内容增值而非重复。 |
+
+---
+
 ## 2026-05-07 13:57 ✅ committed: bd79679
 
 | 任务 | 结果 | 产出 |
