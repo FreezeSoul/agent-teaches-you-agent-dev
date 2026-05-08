@@ -174,6 +174,7 @@
 - [swe-af-autonomous-engineering-factory-agentfield-2026](./swe-af-autonomous-engineering-factory-agentfield-2026.md) — 自主工程团队 Runtime，三层控制闭环（Inner/Middle/Outer Loop）+ Git Worktree 隔离并行，Fleet-scale 编排（关联：Cursor 第三时代「工厂思维」→ 自主工程工厂的开源实现）
 
 - [cocoindex-incremental-context-for-long-horizon-agents-2026](./cocoindex-incremental-context-for-long-horizon-agents-2026.md) — 长程 Agent 增量上下文引擎，代码库变化 delta-only 重嵌入，Rust 生产级实现，8.4k ⭐（关联：OpenAI Codex Agent Loop 上下文膨胀问题 → 增量引擎从数据源侧解决新鲜度）
+- [memory-benchmarks-eval-suite-2026](./memory-benchmarks-eval-suite-2026.md) — Mem0 开源的 Agent 内存系统评估套件，LoCoMo / LongMemEval / BEAM 三个基准，3000+ 评测题，Cloud + OSS 双模式（关联：Anthropic AI-Resistant Evaluations → 可量化基准测试是持续改进的前提）
 
 - [deepseek-tui-terminal-native-coding-agent-2026](./deepseek-tui-terminal-native-coding-agent-2026.md) — Terminal 原生 AI 编码 Agent，DeepSeek V4 + 1M context + Auto mode，+1,274 stars trending（关联：OpenAI 企业 AI 战略 → Codex vs DeepSeek-TUI 的终端工具双轨竞争）
 - [agency-agents-msitarzewski-multi-agent-professional-team-2026](./agency-agents-msitarzewski-multi-agent-professional-team-2026.md) — 专业分工的 AI Agent 团队编排框架，30+ 专才 Agent 人格驱动定义（关联：Anthropic 三代理 GAN 启发架构 → Planner-Generator-Evaluator vs. Agency-Agents 静态专才分工的两种协作范式）
