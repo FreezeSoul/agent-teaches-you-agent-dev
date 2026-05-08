@@ -95,3 +95,14 @@
 
 **反思**：本轮优先扫描 Anthropic Engineering Blog（最高优先级），发现「Scaling Managed Agents: Decoupling brain from hands」新文章，但评估后判定 Brain-Hands 解耦架构已在之前轮次完整覆盖（7+ 篇文章）。转而分析 Cursor Engineering Blog 新发布的「Dynamic Context Discovery」和「Long-Running Agents」文章，发现了一个新的技术主题——上下文工程从「静态注入」向「按需拉取」的范式转变。通过 GitHub API 发现 memvid 项目（15,365 ⭐，未收录），与文章主题形成强关联——两者共同指向「文件/日志作为 Agent 记忆和上下文的更好抽象」（Cursor DCD = 按需拉取，memvid = 持久化 Append-only）。Articles 与 Projects 通过「文件作为上下文/记忆原语」这条主题线形成完整闭环。Microsoft Skills（2,259 ⭐，已在之前轮次收录，本轮确认防重）。
 
+## 2026-05-09 05:57 ✅ committed: d07cf3d + e47464b
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic Claude for Financial Services Skill Bundling + 双重部署架构」分析（orchestration/），来源：anthropics/financial-services（14,871 ⭐）GitHub 仓库，4 处原文引用。覆盖：vertical-plugin 作为 skill source of truth，sync-agent-skills.py 同步机制，Managed Agent cookbook 结构（agent.yaml + subagents/），leaf subagent thin design |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 AI-Trader 推荐（projects/），HKUDS/AI-Trader，14,559 ⭐，GitHub Trending，关联文章主题：Skill Composition in Multi-Agent Systems（Claude for Financial Services 的 skill bundling 机制 vs AI-Trader 的 skill-first 平台设计）。含 SKILL.md 3 处原文引用 |
+| git commit + push | ✅ 完成 | d07cf3d（articles）+ e47464b（.agent/）已推送 |
+
+**反思**：本轮从 GitHub Trending 发现 `anthropics/financial-services` 仓库（Anthropic 官方，14,871 ⭐），提供了 Agent Skills 从「技能定义」到「生产部署」的完整闭环分析——回答了「skill 编写后如何与 agent 实例绑定并部署」的问题。AI-Trader 作为 project 推荐，代表了「Agent-Native 平台」的新兴类型：把平台适配成 Agent 可读的 Skill 接口，而非让 Agent 适应人的 UI。两篇文章形成主题关联：Anthropic 展示的是企业级 skill bundling 架构，AI-Trader 展示的是去中心化 skill-first 平台模式。
+
+---
