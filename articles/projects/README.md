@@ -5,6 +5,8 @@
 
 ---
 
+- [agent-squad-2fastlabs-multi-agent-orchestration-2026](./agent-squad-2fastlabs-multi-agent-orchestration-2026.md) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调（关联：Anthropic Managed Agents Brain-Hands 解耦 → 多 Agent 入口层智能路由问题的一体化回答）
+
 - [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
 
 - [open-code-review-multi-agent-code-review-2026](./open-code-review-multi-agent-code-review-2026.md) — 多评审者对抗式代码审查框架，28 种评审者人格 + 辩论机制 + GAN 风格对抗评审（关联：GAN 三代理架构 → 多评审者对抗式代码审查工程实现）
@@ -12,6 +14,8 @@
 - [prompt-tower-context-packaging-376-stars](./prompt-tower-context-packaging-376-stars-2026.md) — VS Code 上下文打包插件，376 Stars，1,000+ 用户，将代码库上下文一键打包为 AI 可消费的 XML 结构，与 Cursor 动态上下文发现形成互补（预打包 vs 动态拉取）
 
 ## 已推荐项目
+- [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调，Python/TypeScript 双语言
+
 - [PackmindHub/context-evaluator](https://github.com/PackmindHub/context-evaluator) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md/CLAUDE.md 质量问题，自动修复 + Before/After 分数对比（关联：Agent 配置过载问题 → 配置文件质量的系统性诊断与修复）
 
 - [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) — 100 行 Python 的极简 Agent，>74% SWE-bench 得分，Princeton & Stanford 团队维护，19K+ Stars，无专用工具接口设计（关联：Anthropic 基础设施噪声研究 → 最干净的可复现评测环境）
