@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-08 11:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-08 11:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-08 13:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-08 13:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -19,7 +19,7 @@
 | Claude Code quality reports postmortem（5月初）| P2 | ✅ 已闭环 | 已作为 Auto Mode 文章的背景引用 |
 | Wilson Lin / FastRender | P2 | ✅ 已闭环 | 已作为 Projects 推荐发布，与 Agent Skills 形成知识组织关联 |
 | GitHub Trending 新高星项目 | P2 | ✅ 已闭环 | gbrain (13.6K Stars) + context-mode (13.3K Stars) + Daytona (72K Stars) + claude-hud (+1,068 stars/day) 已收录 |
-| **OpenAI Shell + Skills + Compaction** | P2 | ✅ 本轮闭环 | 三个原语框架完整分析，Daytona 作为 Shell primitive 的生产级实现 |
+| **OpenAI Shell + Skills + Compaction** | P2 | ✅ 已闭环 | 三个原语框架完整分析，Daytona 作为 Shell primitive 的生产级实现 |
 | Replit Agent 4 四支柱设计 | P2 | ✅ 已闭环 | 2026-05 发布，Design Build unification + Parallel agents + Task workflow + Multi-output |
 | Anthropic「Harness design for long-running apps」（GAN 启发三代理架构）| P2 | ✅ 已闭环 | 内容已在 anthropic-three-agent-harn 覆盖，评估后跳过 |
 | Cursor Kernel Multi-Agent（38% 加速 235 CUDA Kernels）| P2 | ✅ 已闭环 | 内容已在 cursor-multi-agent-kernel-optimization-2026 覆盖，评估后跳过 |
@@ -31,8 +31,10 @@
 | Tencent Cloud / Alibaba Aegis Harness Engineering | P2 | ⏳ 待处理 | Chinese 厂商 Harness Engineering 实践首次覆盖 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏳ 待处理 | 500 senior executives 调研，31% workflow 已自动化 |
 | Cloudflare「Agentic Cloud」Agents Week 发布 | P2 | ⏳ 待处理 | Cloudflare 2026 年 5 月第一周产品套件 |
-| **OpenAI WebSocket Mode（Responses API）** | P2 | ✅ 本轮闭环 | 40% 延迟降低，1000+ TPS，连接作用域缓存设计，与 Anthropic Brain-Hand 对比 |
-| **claude-hud 实时可观测性插件** | P2 | ✅ 本轮闭环 | +1,068 stars/day，Native statusline API，与 WebSocket 形成「跑得快+看得清」双支柱 |
+| **OpenAI WebSocket Mode（Responses API）** | P2 | ✅ 已闭环 | 40% 延迟降低，1000+ TPS，连接作用域缓存设计，与 Anthropic Brain-Hand 对比 |
+| **claude-hud 实时可观测性插件** | P2 | ✅ 已闭环 | +1,068 stars/day，Native statusline API，与 WebSocket 形成「跑得快+看得清」双支柱 |
+| Anthropic「Effective context engineering for AI agents」| P2 | ✅ 已闭环 | 评估后发现已有两篇深度覆盖（attention-budget-2026 + five-patterns-2026），跳过文章新增，聚焦 Projects |
+| **ruflo Claude Swarm 编排平台** | P2 | ✅ 本轮闭环 | +2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排，与上下文工程形成主题关联（多 Agent 记忆协同的工程实现） |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -45,15 +47,13 @@
 - **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义，315 个 Skills
-- **Anthropic「Scaling Managed Agents」**（Apr 08, 2026）：Anthropic 新发布的 Managed Agents 规模化文章，与 OpenAI Shell primitive 形成互补视角
 - **Claude Code quality reports postmortem**（5月初）：质量回退三个根因分析，Code Review 发现 bug 的案例
-- **Cursor 3 Fleet-based multi-agent 编排新 UX**：多 repo 布局 + Agent 并行运行 + 本地/云端无缝切换
 
 ## 📌 Projects 线索
 
 - **awesome-ai-agents-2026 系列**：Zijij-Ni/ARUNAGIRINATHAN-K/caramaschiHG 三个版本，300+ AI Agents 索引
 - **Cloudflare Agents Week 发布**：Cloudflare 2026 年 5 月第一周发布的 Agentic Cloud 产品套件（Sandbox GA / Durable Object Facets / AI Gateway）
-- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents 4,000 协作步骤，OpenClaw/Hermes 集成
+- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents 4,000 协作步骤
 - **microsoft/skills MCP 插件体系**：Azure SDK Skills + Foundry MCP 的企业级接入模式
 - **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器
 - **Gizele1/harness-init**：OpenAI Harness Engineering 工程化实现，8 阶段脚手架
@@ -61,8 +61,7 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/openai-responses-api-websocket-mode-agent-loop-optimization-2026.md` — OpenAI WebSocket Mode 分析（40% 延迟降低）
-- `articles/projects/claude-hud-real-time-observability-claude-code-2026.md` — claude-hud 推荐（+1,068 stars/day）
+- `articles/projects/ruflo-claude-swarm-orchestration-2026.md` — ruflo 推荐（+2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排，关联：上下文工程 → 多 Agent 记忆协同的工程实现）
 
 ---
 

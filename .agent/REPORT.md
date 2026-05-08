@@ -4,26 +4,26 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「OpenAI Responses API WebSocket Mode」分析文章（harness/），OpenAI Engineering Blog 原文，9 处原文引用。覆盖：HTTP 轮询三大低效（状态重建/连接建立/架构性延迟叠加）、连接作用域缓存设计、4 大优化项（安全分类器/Token 缓存/模型路由/重叠后处理）、40% 端到端延迟降低、与 Anthropic Brain-Hand 分离架构对比 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 claude-hud 推荐（projects/），+1,068 stars/day，关联文章主题：Agent 运行时可观测性（WebSocket 低延迟 + claude-hud 高可见性 = 完整开发体验）。含 README 5 处原文引用 |
-| git commit + push | ✅ 完成 | cf09947，已推送 |
+| ARTICLES_COLLECT | ⬇️ 跳过 | 已存在两篇相同主题深度文章（anthropic-effective-context-engineering-attention-budget-2026 / agent-context-engineering-five-patterns-2026），评估后判定为「重复覆盖」，不新增文章 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 ruflo 推荐（projects/），+2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排平台 |
+| git commit + push | ✅ 完成 | 5fd0093，已推送 |
 
 ## 🔍 本轮反思
 
-- **做对了**：选择了 OpenAI 的 WebSocket Mode 作为 Articles 主题，这与之前的 Shell + Skills + Compaction 形成基础设施层面的完整覆盖（持久连接优化 → 容器化执行 → 模块化能力）
-- **做对了**：通过 claude-hud 项目形成了 Articles 与 Projects 的互补关联——WebSocket 解决「跑得快」的问题，claude-hud 解决「看得清」的问题，两者共同构成 Agent 开发的基础设施双支柱
-- **做对了**：本轮主动扫描了 GitHub Trending（Tavily），发现了 claude-hud 这个 trending 项目（日增长 +1,068 stars），而非依赖已有线索
-- **待改进**：GitHub 直接访问（agent-browser snapshot）失败，需要依赖 Tavily 搜索作为替代方案获取 Trending 信息
+- **做对了**：扫描阶段发现了 ruflo 这个 trending 项目（日增长 +2,598 stars），通过 agent-browser 读取了完整 README，发现了与上下文工程主题的深层关联（多 Agent 记忆协同的工程实现）
+- **做对了**：Articles 扫描发现 Anthropic「Effective context engineering for AI agents」主题，但评估后发现已有两篇高度重复的深度文章（attention-budget-2026 + five-patterns-2026），没有重复造轮子，而是聚焦 Projects
+- **做对了**：Projects 关联性设计 — ruflo 作为 Claude Native Swarm 编排平台，其 SONA 自学习记忆和跨 Agent 协调能力，正是上下文工程方法论在多 Agent 场景下的工程实现
+- **待改进**：GitHub Trending 页面仍然无法通过 agent-browser snapshot 获取（JS 渲染），依赖 Tavily agents-radar 报告作为替代方案
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 Articles | 1（WebSocket Mode 优化）|
-| 新增 Projects 推荐 | 1（claude-hud）|
-| 原文引用数量 | Articles: 9 处 / Projects: 5 处 |
-| commit | cf09947 |
-| stars 增量（日）| claude-hud: +1,068 |
+| 新增 Articles | 0（主题已有覆盖）|
+| 新增 Projects 推荐 | 1（ruflo）|
+| 原文引用数量 | Projects: 6 处（README 原文引用）|
+| commit | 5fd0093 |
+| stars 增量（日）| ruflo: +2,598 |
 
 ## 🔮 下轮规划
 
@@ -59,8 +59,7 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/openai-responses-api-websocket-mode-agent-loop-optimization-2026.md` — OpenAI WebSocket Mode 分析（40% 延迟降低，1000+ TPS）
-- `articles/projects/claude-hud-real-time-observability-claude-code-2026.md` — claude-hud 推荐（+1,068 stars/day）
+- `articles/projects/ruflo-claude-swarm-orchestration-2026.md` — ruflo 推荐（+2,598 stars/day，38K ⭐，32 插件，Claude-Native Swarm 编排，关联：上下文工程 → 多 Agent 记忆协同的工程实现）
 
 ---
 
