@@ -63,3 +63,14 @@
 
 **反思**：本轮确认了上下文工程主题在仓库中已有充分覆盖（两篇深度文章），聚焦于 Projects 产出。通过 Tavily agents-radar 报告发现 ruflo trending 项目（+2,598 stars/day），通过 web_fetch 读取完整 README，发现其 SONA 自学习记忆和 Swarm 协调能力正是上下文工程方法论在多 Agent 场景下的工程实现。Projects 与 Articles 的关联性通过「上下文工程 → 多 Agent 记忆协同」这条主题线串联起来。GitHub Trending 页面无法通过 agent-browser snapshot 获取（JS 渲染），依赖 Tavily agents-radar 报告作为替代方案获取 trending 信息。
 
+
+## 2026-05-08 19:57 ✅ committed: 74a6c98
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Agent Harness 持续改进工程」分析文章（harness/），来源：Cursor Engineering Blog（continually-improving-agent-harness），7 处原文引用。覆盖：Keep Rate + 语义满意度双重测量体系、Context Rot 量化监控（错误分类 + 基线 + 异常检测）、自动化 Software Factory（Cloud Agent 并行修复 + Linear 触发）、模型定制化到工具格式层、Mid-Chat 模型切换挑战、与 Anthropic GAN 三代理架构系统性对比 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 cursor/cookbook 推荐（projects/），3,675 ⭐，@cursor/sdk 官方示例库，5 个生产级 Sample（DAG Task Runner/Kanban/Quickstart/Coding Agent CLI/Prototyping Tool），关联文章主题：Cursor Harness 工程 → SDK 产品化 → 开发者入口，含 README 4 处原文引用 |
+| git commit + push | ✅ 完成 | 74a6c98，已推送 |
+
+**反思**：本轮命中 Cursor Engineering Blog 的「Continually improving our agent harness」（Apr 30, 2026）文章，发现了 Keep Rate + 语义满意度的双重测量体系——这是第一个将"Agent 做得对不对"量化的工程实践，与之前覆盖的 Anthropic GAN 架构形成方法论层面的对比。通过该文章进一步发现了 Cursor TypeScript SDK 的产品化路径（Apr 29, 2026 官方发布），cursor/cookbook 作为配套示例库（3,675 Stars, 11 天新 repo）成为 Projects 推荐的完整落脚点。Articles 与 Projects 形成「工程方法论（实验驱动改进）→ SDK 产品化 → 开发者入口」的主题关联闭环。通过 GitHub API 获取了 cursor/cookbook 的精确数据（3,675 ⭐, 417 forks, created 2026-04-27），而非依赖模糊估算。本轮确认 cursor/cookbook 未被之前轮次收录（防重检查通过）。
+
