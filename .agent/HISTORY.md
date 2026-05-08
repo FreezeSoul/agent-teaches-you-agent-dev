@@ -84,3 +84,14 @@
 | git commit + push | ✅ 完成 | 7eb71d9，已推送 |
 
 **反思**：本轮命中的 Cursor app-stability 文章是 harness/ 目录的深度补充——与上一轮「Cursor Agent Harness 持续改进」（Keep Rate + Context Rot）形成完整的技术覆盖：从「如何让 Agent 做对」（测量体系）到「如何让 App 保持稳定」（OOM 防护）。通过 Amplitude 的 Cloud Agents 案例（3x commits, 1000+ weekly runs），揭示了 local-only agents 的根本瓶颈（资源约束 + 环境缺失），Cloud Agents 成为解决方案。mcp-memory-service 作为 Projects 推荐，恰好对应了「记忆外部化」的需求——当 Cursor App 遇到 OOM 时，通过 Remote MCP 将记忆层从 Agent 进程解耦到独立服务，这是与 Cloud Agents 互补的另一条路径。本轮确认 doobidoo/mcp-memory-service 未被之前轮次收录（防重检查通过）。
+
+## 2026-05-08 23:57 ✅ committed: 6cc69aa
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor 动态上下文发现」分析文章（harness/），来源：Cursor Engineering Blog，5 处原文引用。覆盖：静态注入 vs 按需拉取范式转变、文件作为上下文原语、5大场景（工具响应/对话历史/Skills/MCP/Terminal）、46.9% Token 减少（A/B测试统计显著） |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 memvid 推荐（projects/），15,365 ⭐，Smart Frames 机制（视频编码思维），LoCoMo +35% SOTA，P50 0.025ms，关联文章主题：文件作为记忆/上下文抽象（Cursor DCD → memvid Append-only Timeline = 完整的上下文工程双视角） |
+| git commit + push | ✅ 完成 | 6cc69aa，已推送 |
+
+**反思**：本轮优先扫描 Anthropic Engineering Blog（最高优先级），发现「Scaling Managed Agents: Decoupling brain from hands」新文章，但评估后判定 Brain-Hands 解耦架构已在之前轮次完整覆盖（7+ 篇文章）。转而分析 Cursor Engineering Blog 新发布的「Dynamic Context Discovery」和「Long-Running Agents」文章，发现了一个新的技术主题——上下文工程从「静态注入」向「按需拉取」的范式转变。通过 GitHub API 发现 memvid 项目（15,365 ⭐，未收录），与文章主题形成强关联——两者共同指向「文件/日志作为 Agent 记忆和上下文的更好抽象」（Cursor DCD = 按需拉取，memvid = 持久化 Append-only）。Articles 与 Projects 通过「文件作为上下文/记忆原语」这条主题线形成完整闭环。Microsoft Skills（2,259 ⭐，已在之前轮次收录，本轮确认防重）。
+
