@@ -38,6 +38,7 @@
 
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [ruflo-claude-swarm-orchestration-2026](./ruflo-claude-swarm-orchestration-2026.md) — Ruflo 推荐，+2,598 stars/day，32 插件 + SONA 自学习 + 零信任联邦（关联：上下文工程 → 多 Agent 记忆协同的工程实现）
+- [browser-use/browser-use](./browser-use-browser-automation-open-source-92k-stars-2026.md) — 浏览器自动化开源框架，92,878 ⭐，LLM-agnostic + Stealth Cloud，与 Cloudflare Sandboxes 形成「执行 + 操作」互补
 - [daytonaio/daytona](https://github.com/daytonaio/daytona) — OCI 原生的 AI Agent 沙箱运行时，Sub-90ms 冷启动 + 可选 Kata/Sysbox 强隔离，OpenAI Agents SDK 8个官方沙箱提供商之一
 
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD

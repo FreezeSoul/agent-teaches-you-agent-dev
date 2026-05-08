@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-08 13:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-08 13:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-08 17:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-08 17:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -30,11 +30,13 @@
 | **YC Garry Tan「Thin Harness, Fat Skills」方法论** | P2 | ✅ 已闭环 | fundamentals/ + gbrain project 闭环 |
 | Tencent Cloud / Alibaba Aegis Harness Engineering | P2 | ⏳ 待处理 | Chinese 厂商 Harness Engineering 实践首次覆盖 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏳ 待处理 | 500 senior executives 调研，31% workflow 已自动化 |
-| Cloudflare「Agentic Cloud」Agents Week 发布 | P2 | ⏳ 待处理 | Cloudflare 2026 年 5 月第一周产品套件 |
+| Cloudflare「Agentic Cloud」Agents Week 发布 | P2 | ✅ 本轮闭环 | Sandboxes GA + Agent Memory + Mesh + Flagship + Unweight 五大核心发布，Articles + Projects 双轨覆盖 |
 | **OpenAI WebSocket Mode（Responses API）** | P2 | ✅ 已闭环 | 40% 延迟降低，1000+ TPS，连接作用域缓存设计，与 Anthropic Brain-Hand 对比 |
 | **claude-hud 实时可观测性插件** | P2 | ✅ 已闭环 | +1,068 stars/day，Native statusline API，与 WebSocket 形成「跑得快+看得清」双支柱 |
 | Anthropic「Effective context engineering for AI agents」| P2 | ✅ 已闭环 | 评估后发现已有两篇深度覆盖（attention-budget-2026 + five-patterns-2026），跳过文章新增，聚焦 Projects |
-| **ruflo Claude Swarm 编排平台** | P2 | ✅ 本轮闭环 | +2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排，与上下文工程形成主题关联（多 Agent 记忆协同的工程实现） |
+| **ruflo Claude Swarm 编排平台** | P2 | ✅ 已闭环 | +2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排，与上下文工程形成主题关联 |
+| **browser-use 浏览器自动化** | P2 | ✅ 本轮闭环 | 92,878 ⭐，LLM-agnostic + Stealth Cloud，与 Cloudflare Sandboxes 形成「执行+操作」互补 |
+| **Cloudflare Sandboxes GA** | P2 | ✅ 本轮闭环 | 持久化执行环境 + 零信任出站代理 + 快照恢复，与 Cursor Self-Hosted 形成「边界+执行」互补 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -44,24 +46,26 @@
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，预期 Harrison Chase keynote 发布
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 的工程博客系列，Responses API / Compaction 机制
-- **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践
+- **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践（已有基础覆盖）
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义，315 个 Skills
 - **Claude Code quality reports postmortem**（5月初）：质量回退三个根因分析，Code Review 发现 bug 的案例
+- **browser-use Cloud 1,000+ 集成生态**：SAAS 应用原生集成的工程实现路径
 
 ## 📌 Projects 线索
 
 - **awesome-ai-agents-2026 系列**：Zijij-Ni/ARUNAGIRINATHAN-K/caramaschiHG 三个版本，300+ AI Agents 索引
-- **Cloudflare Agents Week 发布**：Cloudflare 2026 年 5 月第一周发布的 Agentic Cloud 产品套件（Sandbox GA / Durable Object Facets / AI Gateway）
+- **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本，整合 Sandboxes/Agent Memory/AI Gateway
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents 4,000 协作步骤
-- **microsoft/skills MCP 插件体系**：Azure SDK Skills + Foundry MCP 的企业级接入模式
+- **microsoft/skills MCP 插件体系**：Azure SDK Skills + Foundry MCP 的企业级接入模式（已有基础覆盖）
 - **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器
 - **Gizele1/harness-init**：OpenAI Harness Engineering 工程化实现，8 阶段脚手架
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，覆盖全栈开发/CI/CD/安全审计/IaC 等
 
 ## 🏷️ 本轮产出索引
 
-- `articles/projects/ruflo-claude-swarm-orchestration-2026.md` — ruflo 推荐（+2,598 stars/day，38K ⭐，32 插件生态，Claude-Native Swarm 编排，关联：上下文工程 → 多 Agent 记忆协同的工程实现）
+- `articles/harness/cloudflare-sandboxes-ga-agent-persistent-execution-environment-2026.md` — Cloudflare Sandboxes GA 分析（持久化执行环境、零信任出站代理、快照恢复，与 Cursor Self-Hosted 形成互补）
+- `articles/projects/browser-use-browser-automation-open-source-92k-stars-2026.md` — browser-use 推荐（92,878 ⭐，浏览器自动化，LLM-agnostic，与 Cloudflare Sandboxes 形成「执行+操作」互补）
 
 ---
 
