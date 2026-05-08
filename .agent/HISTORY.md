@@ -74,3 +74,13 @@
 
 **反思**：本轮命中 Cursor Engineering Blog 的「Continually improving our agent harness」（Apr 30, 2026）文章，发现了 Keep Rate + 语义满意度的双重测量体系——这是第一个将"Agent 做得对不对"量化的工程实践，与之前覆盖的 Anthropic GAN 架构形成方法论层面的对比。通过该文章进一步发现了 Cursor TypeScript SDK 的产品化路径（Apr 29, 2026 官方发布），cursor/cookbook 作为配套示例库（3,675 Stars, 11 天新 repo）成为 Projects 推荐的完整落脚点。Articles 与 Projects 形成「工程方法论（实验驱动改进）→ SDK 产品化 → 开发者入口」的主题关联闭环。通过 GitHub API 获取了 cursor/cookbook 的精确数据（3,675 ⭐, 417 forks, created 2026-04-27），而非依赖模糊估算。本轮确认 cursor/cookbook 未被之前轮次收录（防重检查通过）。
 
+
+## 2026-05-08 21:57 ✅ committed: 7eb71d9
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor App 稳定性工程」分析（harness/），来源：Cursor Engineering Blog（app-stability），4 处原文引用。覆盖：多进程架构崩溃分类（Renderer/Utility/Main）、双路径调试策略（自顶向下 Feature-Flag + 自底向上根因追溯）、OOM 崩溃模式分类（急性 vs 缓慢稳定）、Agentic 修复机制（Bugbot Rules/Skills/自动化回滚）、Cloud Agents 突破本地天花板（3x production commits） |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 doobidoo/mcp-memory-service 推荐（projects/），1,811 ⭐，多框架统一记忆后端，REST+MCP 双协议，Remote MCP（浏览器端 claude.ai），5ms 检索因果知识图谱，关联文章主题：Cursor 本地 OOM 问题 → 远程记忆解耦的互补路径，含 README 3 处原文引用 |
+| git commit + push | ✅ 完成 | 7eb71d9，已推送 |
+
+**反思**：本轮命中的 Cursor app-stability 文章是 harness/ 目录的深度补充——与上一轮「Cursor Agent Harness 持续改进」（Keep Rate + Context Rot）形成完整的技术覆盖：从「如何让 Agent 做对」（测量体系）到「如何让 App 保持稳定」（OOM 防护）。通过 Amplitude 的 Cloud Agents 案例（3x commits, 1000+ weekly runs），揭示了 local-only agents 的根本瓶颈（资源约束 + 环境缺失），Cloud Agents 成为解决方案。mcp-memory-service 作为 Projects 推荐，恰好对应了「记忆外部化」的需求——当 Cursor App 遇到 OOM 时，通过 Remote MCP 将记忆层从 Agent 进程解耦到独立服务，这是与 Cloud Agents 互补的另一条路径。本轮确认 doobidoo/mcp-memory-service 未被之前轮次收录（防重检查通过）。

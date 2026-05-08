@@ -47,6 +47,7 @@
 - [lobehub/lobe-chat](https://github.com/lobehub/lobe-chat) — Agent 协作空间，75K ⭐，Agent as the Unit of Work 设计理念
 - [omxyz/lumen](https://github.com/omxyz/lumen) — 视觉优先浏览器 Agent，screenshot→action 循环 + 两层上下文压缩，100% WebVoyager 成功率
 - [MemTensor/MemOS](https://github.com/MemTensor/MemOS) — LLM 和 AI Agent 的记忆操作系统
+- [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) — 多框架统一的 Agent 持久记忆后端，REST API + MCP + OAuth + CLI + Dashboard，5ms 检索因果知识图谱，与 Cursor App Stability 形成「本地资源约束 vs 远程记忆解耦」的互补
 - [alibaba/page-agent](https://github.com/alibaba/page-agent) — 让任何网页都能被自然语言控制
 - [Agent-Field/SWE-AF](https://github.com/Agent-Field/SWE-AF) — 自主工程团队 Runtime，三层控制闭环（Inner/Middle/Outer Loop）+ Git Worktree 隔离并行，Fleet-scale 编排
 - [agent-sandbox/agent-sandbox](https://github.com/agent-sandbox/agent-sandbox) — E2B 兼容的企业级 AI Agent 沙箱
