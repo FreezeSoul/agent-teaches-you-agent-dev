@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-08 23:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-08 23:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-08 18:06 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-08 18:06 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -11,9 +11,9 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 | P1 | ⏸️ 等待窗口 | Harrison Chase keynote 预期 Deep Agents 2.0 发布；窗口期 5/13-5/14 |
-| Anthropic「2026 Agentic Coding Trends Report」| P2 | ⏸️ 部分闭环 | 8个Trend，已覆盖 Trend 3/4/6；剩余 Trend 1（SDLC变革）、Trend 2（Agent能力）、Trend 5（多Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析 |
-| Cursor「Dynamic Context Discovery」| P2 | ✅ 本轮闭环 | 5大场景（工具响应/对话历史/Skills/MCP/Terminal）+ 46.9% Token 减少 |
-| memvid Smart Frames 记忆层 | P2 | ✅ 本轮闭环 | 15,365⭐，Smart Frames（视频编码思维），LoCoMo +35% SOTA |
+| Anthropic「2026 Agentic Coding Trends Report」| P2 | ⏸️ 待处理 | 8个Trend，已覆盖 Trend 3/4/6；剩余 Trend 1（SDLC变革）、Trend 2（Agent能力）、Trend 5（多Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析 |
+| Cursor「Dynamic Context Discovery」| P2 | ✅ 已闭环 | 5大场景（工具响应/对话历史/Skills/MCP/Terminal）+ 46.9% Token 减少 |
+| memvid Smart Frames 记忆层 | P2 | ✅ 已闭环 | 15,365⭐，Smart Frames（视频编码思维），LoCoMo +35% SOTA |
 | Anthropic Feb 2026 Risk Report（已解密版）| P2 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfeit/Influence），AI 模型自主性风险的系统性评估 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏸️ 待处理 | 500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点 |
 | OpenAI Codex Agent Loop 工程细节 | P2 | ⏸️ 待处理 | Michael Bolin 的工程博客系列，Responses API / Compaction 机制 |
@@ -33,6 +33,8 @@
 | gbrain / context-mode / daytona / claude-hud | P2 | ✅ 已闭环 | 高星项目已收录 |
 | cursor/app-stability OOM Reduction | P2 | ✅ 已闭环 | 多进程崩溃分类 + 双路径调试 + Agentic 修复 |
 | doobidoo/mcp-memory-service | P2 | ✅ 已闭环 | 1,811⭐，多框架统一记忆后端 |
+| **OWASP Agentic Skills Top 10（AST10）** | P2 | ✅ 本轮闭环 | OWASP 官方安全风险标准，Skills 行为层（MCP=如何通信，AST10=如何行动），36.82% Skills 含漏洞，Lethal Trifecta |
+| **CloakBrowser Stealth Chromium** | P2 | ✅ 本轮闭环 | 2,742⭐，30/30 检测通过，源码级指纹补丁，drop-in Playwright 替代 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -48,9 +50,11 @@
 
 ## 📌 Projects 线索
 
+- **Local-Deep-Research**：6,643 ⭐，~95% SimpleQA（Qwen3.6-27B on 3090），10+ 搜索引擎，本地加密，与 GAIA Benchmark 关联
+- **SkillScanner / SkillGuard**：Skills 安全扫描工具，AST10 落地的工具验证
 - **awesome-ai-agents-2026 系列**：Zijij-Ni/ARUNAGIRINATHAN-K/caramaschiHG 三个版本，300+ AI Agents 索引
-- **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本，整合 Sandboxes/Agent Memory/AI Gateway
-- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents 4,000 协作步骤
+- **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
+- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
 - **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器
 - **Gizele1/harness-init**：OpenAI Harness Engineering 工程化实现，8 阶段脚手架
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
@@ -61,8 +65,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/cursor-dynamic-context-discovery-file-as-context-primitive-2026.md` — Cursor 动态上下文发现分析（静态注入→按需拉取范式转变，文件作为上下文原语，46.9% Token 减少）
-- `articles/projects/memvid-smart-frames-agent-memory-15365-stars-2026.md` — memvid 推荐（15,365 ⭐，Smart Frames 视频编码思维，LoCoMo +35% SOTA，与 Cursor DCD 形成「文件作为记忆/上下文抽象」的完整闭环）
+- `articles/fundamentals/owasp-agentic-skills-top-10-ast10-security-risks-2026.md` — OWASP AST10 安全风险完整解析（Skills 行为层，36.82% 含漏洞，Lethal Trifecta，8 处官方原文引用）
+- `articles/projects/cloakbrowser-stealth-chromium-2742-stars-2026.md` — CloakBrowser 推荐（2,742 ⭐，30/30 检测通过，源码级 Chromium 指纹补丁，3 处 README 原文引用）
 
 ---
 
