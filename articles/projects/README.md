@@ -26,6 +26,7 @@
 - [coleam00/Archon](https://github.com/coleam00/Archon) — 首个开源 AI 编程工作流引擎，让 AI 编程变得确定可重复
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
+- [cursor/cookbook](https://github.com/cursor/cookbook) — `@cursor/sdk` 官方示例库，3,675 ⭐，5 个生产级 Sample（Quickstart / Kanban / DAG Task Runner / Coding Agent CLI / Prototyping Tool），Cursor Agent 运行时的代码级路线图（关联：Cursor 持续改进 Harness 工程 → SDK 产品化 → cookbook 成为开发者接入生产级 Agent 的入口）
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
 - [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
 
@@ -106,6 +107,7 @@
 ## 推荐文章索引
 
 - [context-evaluator-packmindhub-ai-agent-config-health-2026](./context-evaluator-packmindhub-ai-agent-config-health-2026.md) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md 质量问题，自动修复 + Before/After 对比（关联：Agent 配置过载 → 配置文件质量的系统性诊断）
+- [cursor-cookbook-sdk-examples-2026](./cursor-cookbook-sdk-examples-2026.md) — cursor/cookbook 推荐，3,675 ⭐，5 个生产级 Sample，DAG Task Runner + Cloud Agent 自动化 PR（关联：Cursor Harness 持续改进工程 → SDK 产品化 → 开发者接入生产级 Agent 运行时的代码级入口）
 
 - [openharness-hKUDS-agent-harness-open-source-2026](./openharness-hKUDS-agent-harness-open-source-2026.md) — 香港大学开源 Agent Harness，深度集成 Claude Code / OpenClaw
 - [kernelagent-meta-multi-agent-gpu-optimization](./kernelagent-meta-multi-agent-gpu-optimization.md) — Deep Agent + GPU Kernel 自动化优化开源实现
