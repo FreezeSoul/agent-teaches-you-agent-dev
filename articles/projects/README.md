@@ -7,6 +7,8 @@
 
 - [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
 
+- [open-code-review-multi-agent-code-review-2026](./open-code-review-multi-agent-code-review-2026.md) — 多评审者对抗式代码审查框架，28 种评审者人格 + 辩论机制 + GAN 风格对抗评审（关联：GAN 三代理架构 → 多评审者对抗式代码审查工程实现）
+
 - [prompt-tower-context-packaging-376-stars](./prompt-tower-context-packaging-376-stars-2026.md) — VS Code 上下文打包插件，376 Stars，1,000+ 用户，将代码库上下文一键打包为 AI 可消费的 XML 结构，与 Cursor 动态上下文发现形成互补（预打包 vs 动态拉取）
 
 ## 已推荐项目
