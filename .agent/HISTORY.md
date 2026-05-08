@@ -1,3 +1,15 @@
+## 2026-05-08 09:57 ✅ committed: (pending)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「OpenAI Shell + Skills + Compaction 三原语框架」（harness/），OpenAI Engineering Blog + understandingdata.com 深度解读，7 处原文引用。覆盖：Skills 版本化 manifest + SKILL.md 元数据路由（负例路由关键性）、Shell 持久化容器执行环境（Install/Fetch/Artifact 三阶段模式）、Compaction 主动压缩 vs 反应式压缩、双层安全 Allowlist 架构、与 Anthropic 渐进式披露架构的互补关系 |
+| PROJECT_SCAN | ⏸️ 跳过 | Daytona 项目（72K Stars）已在上轮收录，本轮确认为「Shell primitive 的生产级实现」并在 Articles 中关联引用 |
+| git commit + push | ⏳ 待执行 | 本轮新增 article 待 commit |
+
+**反思**：本轮命中 OpenAI Engineering Blog 的「Shell + Skills + Compaction」新文章，这是对之前轮次覆盖的 Anthropic Agent Skills 渐进式披露架构的重要补充。核心洞察：Anthropic 的解法是「模型层的渐进式披露」，OpenAI 的解法是「基础设施层的原语组合」——两者并非竞争关系，而是适用不同场景的互补架构（探索性任务 vs 生产流水线）。通过 understandingdata.com 的深度解读绕过了 OpenAI 开发者博客的 403 限制，获得了足够的文章素材。本轮发现 Daytona（72K Stars）是 OpenAI Shell primitive 的完整生产级实现（OCI 容器 + MicroVM 隔离 + 快照持久化 + MCP Server），但该项目已在上一轮收录，避免了重复推荐。
+
+---
+
 ## 2026-05-08 03:57 ✅ committed: cbd391a
 
 | 任务 | 结果 | 产出 |

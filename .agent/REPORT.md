@@ -4,33 +4,31 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor动态上下文发现」分析（context-memory/），Cursor Engineering Blog 原文，6 处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 prompt-tower 推荐（projects/），376 Stars，5 处 README 原文引用，与 Articles 形成「理论→实证」闭环 |
-| git commit + push | ✅ 完成 | a93ec1b，成功 push 到 master |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「OpenAI Shell + Skills + Compaction 三原语框架」（harness/），OpenAI Engineering Blog 原文 + understandingdata.com 深度解读，7 处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | Daytona 项目已在之前轮次收录（72K Stars），本轮确认为「Shell primitive 的生产级实现」并在 Articles 中关联引用 |
+| git commit + push | ⏳ 待执行 | 本轮新增 article 待 commit |
 
 ## 🔍 本轮反思
 
-- **做对了**：找到了 Cursor 动态上下文发现与 prompt-tower 的互补关系——前者是 Agent 运行时按需拉取，后者是发送前预打包，两者适用场景不同但互补
-- **做对了**：优先扫描了 Anthropic Engineering Blog 最新文章（April 23 Postmortem / Managed Agents），发现「brain-hand 分离架构」相关主题已在之前轮次覆盖，转向了 Cursor 最新发布的动态上下文发现文章
-- **做对了**：通过 Tavily 搜索发现 GitHub trending 项目（prompt-tower），结合 Cursor 文章主题做关联过滤，确保 Projects 与 Articles 主题相关
-- **待改进**：部分 GitHub 页面（agent-context-system）无法通过 web_fetch 直接访问，改用 GitHub API + raw.githubusercontent.com 绕过了问题
+- **做对了**：选择了 OpenAI 的 Shell + Skills + Compaction 三原语框架作为主题，这与之前的 Anthropic Agent Skills 内容形成互补（渐进式披露 vs 模块化原语组合），丰富了长程 Agent 的知识体系
+- **做对了**：通过 understandingdata.com 的深度解读获得了足够的文章素材，避免了直接访问 OpenAI 开发者博客的 403 问题
+- **做对了**：没有重复扫描已有的 Anthropic/Cursor 内容，而是将本轮焦点放在 OpenAI 的新文章上，扩大了知识覆盖范围
+- **待改进**：Daytona 项目已在上轮收录，本轮的 Projects 推荐实际上是 Articles 的关联引用而非全新发现。下轮应更早确认已收录项目，避免重复工作
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 Articles | 1（Cursor动态上下文发现理论分析）|
-| 新增 Projects 推荐 | 1（prompt-tower 376 Stars 工程实现）|
-| 原文引用数量 | Articles: 6 处 / Projects: 5 处 |
-| git commit | a93ec1b |
+| 新增 Articles | 1（三原语框架）|
+| 新增 Projects 推荐 | 0（Daytona 已在库）|
+| 原文引用数量 | Articles: 7 处 |
+| commit | 待执行 |
 
 ## 🔮 下轮规划
 
-- [ ] ARTICLES_COLLECT：Anthropic「2026 Agentic Coding Trends Report」剩余 Trend 深度分析（Trend 1 SDLC 变革 / Trend 5 多 Agent / Trend 7 安全 / Trend 8 Eval）
-- [ ] ARTICLES_COLLECT：Anthropic April 23 Postmortem 中提到的「Code Review 发现 bug」案例深度分析
-- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 发布后框架级分析
+- [ ] ARTICLES_COLLECT：LangChain Interrupt 2026 Deep Agents 2.0（5/13-14 窗口期）
+- [ ] ARTICLES_COLLECT：Anthropic「Scaling Managed Agents」与「Claude Code quality reports postmortem」（Apr-May 2026 新发布）
 - [ ] ARTICLES_COLLECT：CrewAI「Agentic AI Report 2026」500 senior executives 调研解读
-- [ ] ARTICLES_COLLECT：OpenAI Codex Agent Loop 工程细节（Michael Bolin 的工程博客系列）
 - [ ] ARTICLES_COLLECT：Tencent Cloud / Alibaba Aegis 的 Chinese 厂商 Harness Engineering 实践
 - [ ] Projects 扫描：Cloudflare Agents Week 发布的 Agentic Cloud 相关项目
 - [ ] Projects 扫描：moonshot-ai/kimi-k2.6 开源版的 agent-cluster 编排能力
@@ -45,6 +43,7 @@
 - **microsoft/skills 深度分析**：174 个企业级 Skills 的 Context-Driven Development 实践
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义，315 个 Skills
+- **Anthropic「Scaling Managed Agents」**（Apr 08, 2026）：Managed Agents 规模化架构，Brain-Hand 分离的工程化实践
 
 ## 📌 Projects 线索
 
@@ -58,8 +57,7 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/context-memory/cursor-dynamic-context-discovery-2026.md` — Cursor 动态上下文发现完整技术解析
-- `articles/projects/prompt-tower-context-packaging-376-stars-2026.md` — prompt-tower 项目推荐（376 Stars）
+- `articles/harness/openai-shell-skills-compaction-three-primitives-long-running-agents-2026.md` — OpenAI Shell + Skills + Compaction 三原语框架完整分析
 
 ---
 
