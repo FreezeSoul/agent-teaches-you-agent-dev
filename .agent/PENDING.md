@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 15:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 15:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 17:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 17:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -32,6 +32,8 @@
 | Hermes Agent（NousResearch，131.8k ⭐）| P2 | ✅ 本轮闭环 | FTS5 跨 Session 检索 + 技能自创建/自改进，Agent 自主积累范式（关联：Context 工程两极） |
 | Sanity Agent Context | P2 | ✅ 本轮闭环 | 结构化 GROQ 查询 + 语义搜索组合，MCP 接入生产级 CMS |
 | AI-DLC（awslabs，1,847 ⭐）| P2 | ✅ 本轮闭环 | 三阶段（Inception→Construction→Operations）+ 六合一安全扫描 + 8 平台适配层（关联：Claude Code April Postmortem → 结构化 Human-in-the-loop）|
+| Anthropic Introspection Adapters | P2 | ✅ 本轮闭环 | LoRA 适配器让模型自述习得行为，两阶段训练泛化到未见过的微调，AuditBench SOTA |
+| getzep/graphiti（25.8k ⭐）| P2 | ✅ 本轮闭环 | 时态上下文图谱，MCP Server，多图数据库支持，与 Introspection Adapters 形成「外部上下文管理 vs 内部行为审计」的主题关联 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -44,6 +46,7 @@
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
 - **Anthropic「AI Organizations」**：多 Agent 协作的对齐问题（Business ↑ / Ethics ↓），组织结构影响有限，模型选择是关键因素
+- **Cursor「Training Composer for Longer Horizons」**：Self-Summarization 强化学习训练，compaction-in-the-loop，50% 错误率降低
 
 ## 📌 Projects 线索
 
@@ -55,8 +58,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/ai-dlc-aws-ai-driven-development-life-cycle-2026.md` — 新增：AI-DLC 方法论分析，三阶段架构（Inception→Construction→Operations）+ 问答文件机制 + 六合一安全扫描 + 8 平台适配层（关联：Claude Code April 23 Postmortem 质量回退 → 根因：evalu体系不完善 + Human-in-the-loop 缺失 → AI-DLC 结构化门控方案）
-- `articles/projects/awslabs-aidlc-workflows-structured-ai-driven-development-2026.md` — 新增：awslabs/aidlc-workflows，1,847 ⭐，AWS Labs 官方维护，Claude Code/Cursor/Amazon Q 等 8 平台适配（关联：方法论 → 实证案例）
+- `articles/deep-dives/anthropic-introspection-adapters-fine-tuning-audit-2026.md` — 新增：Anthropic Introspection Adapters 分析，两阶段训练（植入行为微调 + 联合 LoRA IA）+ 泛化机制 + AuditBench SOTA（关联：Agent harness 信任问题 → 模型行为来源的审计能力）
+- `articles/projects/getzep-graphiti-temporal-context-graph-2026.md` — 新增：getzep/graphiti 推荐，25.8k ⭐，时态上下文图谱（实体+关系+事实+episode 四组件）+ validity window + MCP Server（关联：Introspection Adapters → Agent 的内外自省能力体系）
 
 ---
 
