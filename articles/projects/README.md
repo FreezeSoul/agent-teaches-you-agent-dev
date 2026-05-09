@@ -15,6 +15,8 @@
 
 - [golutra-multi-agent-orchestration-platform-3408-stars-2026](./golutra-multi-agent-orchestration-platform-3408-stars-2026.md) — 多 CLI 统一编排平台，3408 Stars，统一 Codex/Claude Code/OpenClaw 等 7 个 CLI，Rust+Vue3+Tauri，并行执行 + 工作流编排（关联：Anthropic C compiler 16 Agent 并行自治 → 不同协调机制的统一编排视角）
 
+- [gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026](./gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，Pi SDK 构建，真正实现"一次命令，几个月不管"的无人值守编码（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
+
 ## 已推荐项目
 - [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调，Python/TypeScript 双语言
 
@@ -34,6 +36,7 @@
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
 - [cursor/cookbook](https://github.com/cursor/cookbook) — `@cursor/sdk` 官方示例库，3,675 ⭐，5 个生产级 Sample（Quickstart / Kanban / DAG Task Runner / Coding Agent CLI / Prototyping Tool），Cursor Agent 运行时的代码级路线图（关联：Cursor 持续改进 Harness 工程 → SDK 产品化 → cookbook 成为开发者接入生产级 Agent 的入口）
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
+- [gsd-build/GSD-2](https://github.com/gsd-build/GSD-2) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，真正实现"一次命令，几个月不管"（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
 - [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
 
 - [golutra/golutra](https://github.com/golutra/golutra) — 多 CLI 统一编排平台，3,408 Stars，Rust+Vue3+Tauri，统一 Claude Code/Codex/Gemini/OpenClaw 等 7 个 CLI，Stealth Terminal + 并行执行 + 工作流模板，CEO Agent 路线图（关联：Anthropic C compiler 并行自治 → 无中心 vs 有中心协调的架构对比）
