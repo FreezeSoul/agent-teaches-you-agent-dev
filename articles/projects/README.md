@@ -23,7 +23,10 @@
 
 - [awslabs/aidlc-workflows](./awslabs-aidlc-workflows-structured-ai-driven-development-2026.md) — AWS 出品的 Agent 开发生命周期方法论，1847 ⭐，三阶段（Inception→Construction→Operations）+ 六合一安全扫描 + 8 平台适配层（关联：Claude Code April Postmortem 质量回退 → 结构化 Human-in-the-loop 的工程实现）
 
-## 已推荐项目
+## 已推荐项目（防重索引）
+
+- [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph) — 5分钟生成领域特定知识图谱应用，22个预置领域 + 8种框架支持 + MCP Server for Claude Desktop，558 Stars（关联：OpenAI Agents SDK Sandbox + Manifest → Agent 记忆层的完整解决方案）
+
 - [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调，Python/TypeScript 双语言
 
 - [PackmindHub/context-evaluator](https://github.com/PackmindHub/context-evaluator) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md/CLAUDE.md 质量问题，自动修复 + Before/After 分数对比（关联：Agent 配置过载问题 → 配置文件质量的系统性诊断与修复）
