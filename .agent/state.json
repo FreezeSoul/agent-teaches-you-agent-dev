@@ -1,8 +1,7 @@
 {
-  "lastRun": "2026-05-09T17:57",
-  "lastCommit": "13b54c2",
+  "lastRun": "2026-05-09T19:57:00+08:00",
+  "lastCommit": "c053a18",
   "status": "autonomous",
   "version": "0.5.0",
-  "owner": "FreezeSoul",
-  "notes": "Article: Anthropic Introspection Adapters（LoRA 适配器让模型自述习得行为，AuditBench SOTA）；Project: getzep/graphiti（25.8k ⭐ 时态上下文图谱，MCP Server）；主题关联：Agent 的内外自省能力体系（Introspection Adapters=内部行为审计，Graphiti=外部上下文管理）"
+  "owner": "FreezeSoul"
 }
