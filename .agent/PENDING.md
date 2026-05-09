@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 07:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 07:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 09:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 09:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -23,6 +23,10 @@
 | Agent Squad 2FastLabs | P2 | ✅ 本轮闭环 | Classifier-First 动态路由，SupervisorAgent 并行协调，Python/TypeScript 双语言 |
 | Anthropic Claude for Financial Services（Skill Bundling + 双重部署）| P2 | ✅ 本轮闭环 | Vertical-plugin 作为 source of truth，sync-agent-skills.py 同步，Managed Agent cookbook 结构 |
 | AI-Trader（HKUDS/Agent-Native Trading Platform）| P2 | ✅ 本轮闭环 | Skill-first 平台设计，14,559 stars，Agent 自注册机制，多 Agent 真实经济协作 |
+| Cursor 多智能体 CUDA Kernel 38% 加速 | P2 | ✅ 本轮闭环 | Planner/Worker + Self-Benchmarking 闭环，235 个 CUDA Kernel，3 周，38% 加速 |
+| kevinrgu/autoagent 元 Agent 配置迭代 | P2 | ✅ 本轮闭环 | program.md 编程元 Agent，Harbor 基准测试兼容，自动化 hill-climb |
+| Anthropic C Compiler 并行 Claudes Git 文件锁协调 | P2 | ✅ 本轮闭环 | 16 Agent 并行，2000 Session，$20K，Ralph Loop + Git 文件锁 + 测试驱动自主推进 |
+| Golutra 多 CLI 统一编排平台 | P2 | ✅ 本轮闭环 | 3,408 Stars，统一 7 个 CLI，Rust+Vue3+Tauri，Stealth Terminal + 并行执行 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -34,7 +38,7 @@
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
-- **Flutter Agent Skills（flutter/skills）**：Flutter 团队维护的 10+ skills，npx skills CLI 工具，SKILL.md 标准格式
+- **flutter/skills**（1,640 ⭐）：Flutter 官方维护的 skill 库，npx skills CLI 工具，SKILL.md 标准格式
 
 ## 📌 Projects 线索
 
@@ -48,8 +52,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/orchestration/cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026.md` — 重写版：从工程视角深度解析 Cursor 多智能体系统 38% 加速的 Planner/Worker 架构 + Self-Benchmarking 闭环（235 个 CUDA Kernel，3 周，3 个典型案例：Attention/GEMM/MoE）
-- `articles/projects/autoagent-kevinrgu-meta-agent-configuration-iteration-2026.md` — 新增：kevinrgu/autoagent（4,400 ⭐），元 Agent 自动迭代 harness 配置的框架，program.md 编程元 Agent，Harbor 基准测试兼容
+- `articles/orchestration/anthropic-c-compiler-parallel-claudes-lock-based-coordination-2026.md` — 新增：Anthropic C 编译器 16 并行 Agent 实验复盘，Git 文件锁分布式协调 + 测试驱动自主推进 + 角色专门化，与 Planner/Worker 层级架构对比（关联：无中心 vs 有中心协调的架构范式）
+- `articles/projects/golutra-multi-agent-orchestration-platform-3408-stars-2026.md` — 新增：Golutra（3,408 ⭐），统一 Claude Code/Codex/Gemini/OpenClaw 等 7 个 CLI，Rust+Vue3+Tauri，Stealth Terminal + 并行执行 + 工作流模板（关联：Anthropic C compiler 无中心协调 → 有中心统一编排的架构对比）
 
 ---
 
