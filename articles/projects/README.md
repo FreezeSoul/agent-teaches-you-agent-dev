@@ -150,7 +150,9 @@
 - [zilliztech/memsearch](./memsearch-cross-platform-agent-memory-2026.md) — 跨平台统一的 AI Agent 持久记忆层，Markdown 即真理、Milvus 影子索引
 - [jcode-next-generation-coding-agent-harness](./jcode-next-generation-coding-agent-harness.md) — 极致轻量化的下一代编码 Agent Harness（RAM 比 Claude Code 低 93%）
 - [planner-worker-multi-agent-autonomous-coding-architecture-2026](../orchestration/planner-worker-multi-agent-autonomous-coding-architecture-2026.md) — Planner/Worker 架构深度分析（Cursor Scaling Agents + Anthropic C Compiler 双案例实证）
-- [hermes-agent-nousresearch-self-improving-agent-2026](./hermes-agent-nousresearch-self-improving-agent-2026.md) — Nous Research 自改进 AI Agent，内置学习闭环 + 多平台部署
+- [hermes-agent-nousresearch-self-improving-agent-2026](./hermes-agent-nousresearch-self-improving-agent-2026.md) — Nous Research 自改进 AI Agent，131.8k ⭐，内置学习闭环 + FTS5 跨 Session 检索 + 多平台部署（关联：Cursor 动态上下文发现 → context 工程的两极：动态拉取 vs 自主积累）
+
+- [sanity-io/agent-context](./sanity-io-agent-context-structured-access-2026.md) — Sanity 官方的 Agent Context 工具库，结构化访问 CMS 内容，MCP 集成 + Skills 系统（关联：Context 工程的下一阶段 → 结构化上下文访问）
 - [ruflo-ruvnet-claude-native-multi-agent-orchestration-2026](./ruflo-ruvnet-claude-native-multi-agent-orchestration-2026.md) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能（关联：Context Engineering 外部化记忆设计）
 - [ironcurtain-secure-runtime-autonomous-ai-2026](./ironcurtain-secure-runtime-autonomous-ai-2026.md) — 运行时动态风险评估安全运行时，与 Claude Code Auto Mode 双层防御形成技术对照
 - [forge-mcp-server-rightnow-2026](./forge-mcp-server-rightnow-2026.md) — 让 AI 编程 Agent 拥有 GPU Kernel 优化能力的 MCP Server，14x 加速

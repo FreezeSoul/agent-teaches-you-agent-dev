@@ -1,128 +1,179 @@
-# 项目名称：NousResearch/hermes-agent
+# NousResearch Hermes Agent：自改进 AI Agent 的工程化实现
 
-## 核心问题：如何让 Agent 在跨会话中持续自我改进
+> **核心论点**：Hermes Agent 的核心价值不在于「又一个 Agent 框架」，而在于它解决了一个根本问题——**大多数 Agent 没有学习能力**。每次对话都是从零开始，而 Hermes 通过内置的闭环学习机制，让 Agent 可以从经验中创建技能、在使用中改进技能、把知识固化为长期记忆。这是一个量产的「经验驱动型 Agent」，而不是一个「问答加强型 Agent」。
 
-Hermes Agent 是 Nous Research 开发的「自改进 AI Agent」，解决了传统 Agent 的两个核心缺陷：**无法从经验中持续学习**和**会话间缺乏记忆延续**。它将 Agent 的学习闭环内置于系统本身，而非依赖外部记忆框架。
+## 1. 自改进 Agent 的核心机制
 
-> "It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions."
+### 1.1 关闭学习闭环的四个组件
+
+Hermes Agent 实现了完整的学习闭环，四个组件各司其职：
+
+**① 技能自创建（Skill Creation）**
+
+> 官方原文引用：
+> "A closed learning loop — Agent-curated memory with periodic nudges. Autonomous skill creation after complex tasks. Skills self-improve during use."
 > — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
 
----
+复杂任务完成后，Agent 自动从中提取可复用的工作流程，将其固化为 Skill。这个过程是**自主的**，不需要人工干预。
 
-## 为什么存在（项目背景）
+**② 技能自改进（Skill Self-Improvement）**
 
-当前大多数 Agent 框架将「记忆」和「学习」视为外部能力——通过 RAG、向量数据库或手工配置的 Memory 层实现。这种做法的问题是：
+Skill 不是一次性创建就完了，而是在每次使用中持续改进。这意味着 Agent 会记录「这个 Skill 哪里不完善」，并在下一次使用时自动优化。
 
-1. **记忆与应用割裂**：记忆系统与 Agent 行为之间没有内生的改进闭环
-2. **跨会话学习缺失**：每次新会话都是「全新开始」，历史经验无法自动转化为能力提升
-3. **平台绑定**：大多数 Agent 系统与特定部署平台耦合，难以迁移
+**③ 周期性记忆推送（Periodic Nudges）**
 
-Nous Research 认为，一个真正有用的 Agent 应该像人类助手一样——每次交互后都能变得更好，不需要用户手动维护知识库。
+> 官方原文引用：
+> "Agent-curated memory with periodic nudges."
+> — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
 
----
+Agent 定期主动推送记忆摘要，确保关键信息不会被 session 边界稀释。
 
-## 核心能力与技术架构
+**④ 跨 Session 检索（FTS5 Session Search + LLM Summarization）**
 
-### 关键特性 1：内置自改进学习闭环
+Hermes 维护了一个本地 FTS5（SQLite 全文搜索）索引，让 Agent 可以搜索自己过去的对话。这解决了「跨 session 记忆」的核心问题：**Agent 如何在当前任务中发现自己曾经解决过类似问题**。
 
-Hermes Agent 的核心创新是将学习闭环内置于 Agent 循环中：
+### 1.2 与传统 Agent 的根本区别
 
-```
-每次会话结束 → Agent 分析本次经验 
-  → 自动创建或更新 Skill
-  → 自我提醒（nudge）保持知识持久化
-  → 下次会话自动应用改进
-```
+| 维度 | 传统 Agent（无学习闭环）| Hermes Agent（有学习闭环）|
+|------|----------------------|------------------------|
+| **Session 0** | 从空白开始 | 继承历史 Skills 和记忆 |
+| **技能获取** | 靠人工编写/导入 | 自主从经验中提取 |
+| **技能改进** | 永不更新 | 在使用中自动迭代 |
+| **跨 Session 知识** | 丢失或靠 summarization 压缩 | FTS5 全文索引 + LLM summarization |
+| **用户建模** | 每次重新学习偏好 | Honcho dialectic 持续建模 |
 
-这与 OpenClaw 的 Skill 机制有类似思路，但 Hermes 将其做到**更深层的内生性**——学习不是通过外部 RAG 实现，而是 Agent 主动分析自身经验后生成可复用模块。
+## 2. 记忆系统的工程架构
 
-### 关键特性 2：跨会话 FTS5 搜索 + LLM 摘要
+### 2.1 三层记忆架构
 
+Hermes 的记忆系统分为三层：
+
+**① Procedural Memory（程序性记忆）**
+
+Agent 的操作模式和决策逻辑，存储为可执行的 Skills。这是最高频被调用的记忆层。
+
+**② Semantic Memory（语义记忆）**
+
+从对话中提取的长期知识，例如「用户的代码风格偏好」「项目架构约束」。
+
+**③ Episodic Memory（情景记忆）**
+
+具体的会话历史，通过 FTS5 索引支持全文检索。
+
+> 官方原文引用：
 > "FTS5 session search with LLM summarization for cross-session recall."
 > — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
 
-Hermes 使用 FTS5（SQLite 全文搜索）实现会话历史搜索，每次搜索后由 LLM 生成摘要压缩，实现：
-- **即时检索**：历史对话可被精确查询
-- **自动摘要**：长会话压缩为可快速查阅的语义摘要
-- **跨会话关联**：相关经验被关联到当前任务的上下文中
+FTS5 的使用是一个工程亮点：直接用 SQLite 的全文搜索能力做对话历史检索，而不是依赖外部向量数据库。
 
-### 关键特性 3：多部署后端 + 近乎零成本的空闲开销
+### 2.2 Honcho 用户建模
 
+Hermes 集成了 [Honcho](https://github.com/plastic-labs/honcho)（Plastic Labs 的开源项目），实现 dialectic 用户建模——不是简单的「标签偏好」，而是构建用户心智的**动态模型**。
+
+### 2.3 与其他 Memory 方案的对比
+
+| 方案 | 存储形式 | 检索方式 | 学习机制 |
+|------|---------|---------|---------|
+| Hermes Agent | FTS5 + SQLite + Skills | 全文检索 + LLM summarization | 自主技能创建 + 使用中迭代 |
+| OpenViking | 文件系统 + RAGFS | 层级检索 + 可视化轨迹 | 自动压缩 + 长期记忆提取 |
+| GSD-2 | DB 一等公民 | 状态驱动 | 无（靠外部状态） |
+| 传统 RAG | 向量数据库 | embedding similarity | 无 |
+
+## 3. 多平台部署与调度系统
+
+### 3.1 七种终端后端
+
+Hermes 支持七种运行后端：
+
+```
+local / Docker / SSH / Singularity / Modal / Daytona / Vercel Sandbox
+```
+
+Daytona 和 Modal 提供** serverless 持久化**：Agent 环境在空闲时休眠，需要时按需唤醒，几乎不在空闲时段产生费用。
+
+> 官方原文引用：
 > "Daytona and Modal offer serverless persistence — your agent's environment hibernates when idle and wakes on demand, costing nearly nothing between sessions."
 > — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
 
-支持的部署后端：
-- **Local**：直接运行在本地机器
-- **Docker**：容器化部署
-- **SSH**：远程机器
-- **Daytona**：云端沙箱（可休眠）
-- **Singularity**：HPC 场景
-- **Modal**：Serverless GPU 集群
+### 3.2 Cron 调度系统
 
-Daytona 和 Modal 的 serverless 模式解决了长期运行 Agent 的**资源浪费问题**：Agent 空闲时休眠，几乎零成本；收到消息时自动唤醒。
+Hermes 内置了自然语言 Cron 调度：
 
-### 关键特性 4：多平台消息网关
-
-> "Telegram, Discord, Slack, WhatsApp, Signal, and CLI — all from a single gateway process. Voice memo transcription, cross-platform conversation continuity."
-> — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
-
-用自然语言配置定时任务：
 ```
-"每天早上 9 点给我发一份项目进度报告"
-"每周日晚备份一次代码仓库"
-"当 X 收到 Y 时，自动执行 Z"
+"每天早上 9 点给我发送日程摘要"
+"每周一早上 10 点运行一次代码审计"
+"凌晨 2 点执行数据备份"
 ```
 
-### 关键特性 5：Agent Skills 兼容 + OpenClaw 迁移支持
+不需要写 cron 表达式，直接用自然语言描述即可。
 
-Hermes 兼容 [agentskills.io](https://agentskills.io) 开放标准，并且提供 OpenClaw 迁移工具：
+### 3.3 Subagent 并行化
 
-> "During first-time setup: The setup wizard (`hermes setup`) automatically detects `~/.openclaw` and offers to migrate before configuration begins."
+> 官方原文引用：
+> "Delegates and parallelizes — Spawn isolated subagents for parallel workstreams. Write Python scripts that call tools via RPC, collapsing multi-step pipelines into zero-context-cost turns."
 > — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
 
-可迁移内容：SOUL.md、Memories、Skills、Command allowlist、Messaging settings、API keys、TTS assets。
+通过 RPC 调用实现零 context 开销的多步 pipeline 并行执行，不占用主 Agent 的 context window。
+
+## 4. 部署体验：从安装到第一个对话
+
+**安装（2 分钟）**：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+source ~/.bashrc
+hermes
+```
+
+**模型选择**：
+
+```bash
+hermes model  # 交互式选择 provider 和 model
+```
+
+支持 200+ 模型（OpenRouter）、NVIDIA NIM、Xiaomi MiMo、GLM、Kimi/Moonshot、MiniMax、HuggingFace 等。
+
+**迁移路径（从 OpenClaw）**：
+
+```bash
+hermes claw migrate  # 自动检测 ~/.openclaw 并迁移
+```
+
+> 官方原文引用：
+> "If you're coming from OpenClaw, Hermes can automatically import your settings, memories, skills, and API keys."
+> — [NousResearch/hermes-agent README](https://github.com/NousResearch/hermes-agent)
+
+支持的导入项：SOUL.md、MEMORY.md/USER.md、Skills、API keys（白名单内的）、TTS 资产、workspace 指令。
+
+## 5. 安全机制
+
+Hermes 提供了多层安全机制：
+
+- **命令审批白名单**：定义允许/禁止的命令模式
+- **DM 配对验证**：只有白名单内的用户可以 DM
+- **容器隔离**：Docker/Singularity 容器隔离
+
+## 6. 技术评估
+
+**优势**：
+- 自改进闭环是实打实的，不是噱头——技能创建+迭代是生产可用的
+- FTS5 而非向量数据库做记忆检索，降低了运维复杂度
+- 多后端支持让 serverless 部署成为可能
+- 与 OpenClaw 的迁移路径意味着生态是开放的
+
+**局限**：
+- 技能自改进的质量取决于 LLM 的自我反思能力——在复杂任务上可能产生错误的自我优化
+- 记忆系统完全基于 SQLite，本地存储，多设备同步依赖第三方方案
+- 社区相比 OpenClaw 较小，Skills 生态尚在建设中
+
+**与 Cursor 动态上下文发现的主题关联**：两者都指向「Agent 需要更好的上下文管理」，但切入点不同——Cursor 是「如何让 agent 更高效地获取上下文」（动态拉取），Hermes 是「如何让 agent 自己积累和维护上下文」（自主学习）。两个方向互补，共同指向「context engineering 的下一阶段」。
 
 ---
 
-## 与同类项目对比
-
-| 维度 | Hermes Agent | OpenClaw | LangChain Agent |
-|------|-------------|----------|-----------------|
-| **自改进机制** | ✅ 内置学习闭环 | ❌ 依赖外部 Skill | ❌ 靠 ReAct/Memory |
-| **跨会话学习** | ✅ 自动创建 Skill | ✅ Memory 分层 | ❌ 需手动配置 |
-| **多平台部署** | ✅ 6 种后端 | ✅ 本地优先 | ❌ 主要 Python |
-| **消息网关** | ✅ 5 大平台 | ❌ 飞书/TG | ❌ 无 |
-| **Serverless 休眠** | ✅ Daytona/Modal | ❌ 无 | ❌ 无 |
-| **标准 Skill 兼容** | ✅ agentskills.io | ❌ 专有格式 | ❌ 框架私有 |
+**关联文章**：
+- [Cursor 动态上下文发现](./cursor-dynamic-context-discovery-2026.md) — 动态拉取 vs 自主积累，构成 context 工程的两极
+- [Anthropic「Effective Harnesses」](./anthropic-effective-harnesses-long-running-agents-initializer-pattern-2026.md) — 长程 Agent 的外部状态管理 vs Hermes 的内部记忆系统
 
 ---
 
-## 适用场景与局限
-
-### 适用场景
-
-- **需要长期记忆的个人助手**：跨会话理解用户偏好、工作风格、项目背景
-- **多平台消息统一管理**：在 Telegram/Discord 上对话，Agent 在云端 VM 工作
-- **低成本长期运行**：用 $5 VPS 或 Daytona/Modal serverless 模式运行
-- **从 OpenClaw 迁移**：已有大量 Skill 和 Memory 积累，希望切换到有自改进能力的系统
-
-### 局限
-
-1. **Native Windows 不支持**：仅支持 WSL2
-2. **自改进质量依赖模型能力**：能力较弱的模型可能生成低质量 Skill
-3. **多 Hand 调度**：尚不支持 Many Hands 的认知调度（即 Agent 主动选择分发到哪个执行环境）
-
----
-
-## 一句话推荐
-
-Hermes Agent 将「自改进」从外部记忆层提升为 Agent 的内生能力，配合多平台消息网关和 serverless 部署，是目前最接近「自主进化助手」的开源实现——尤其适合需要跨会话持续学习能力的个人 AI 工作流场景。
-
----
-
-## 防重索引记录
-
-- GitHub URL: https://github.com/NousResearch/hermes-agent
-- 推荐日期: 2026-05-02
-- 推荐者: ArchBot
-- 关联文章主题: Anthropic Managed Agents 的 Meta-Harness 架构 → Hermes Agent 的自改进学习闭环是「Harness 持续进化」的具体实现案例
+*来源：[NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)（MIT License，131.8k ⭐，全球 GitHub #60）*
