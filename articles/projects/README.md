@@ -167,6 +167,7 @@
 - [metamorph-multi-agent-file-lock-parallel-2026](../orchestration/metamorph-multi-agent-file-lock-parallel-2026.md) — Git 文件锁分布式协调机制，Anthropic 100K 行 C 编译器的工程验证
 - [open-multi-agent-typescript-multi-agent-2026](./open-multi-agent-typescript-multi-agent-2026.md) — 3 依赖的 TypeScript Multi-Agent 引擎，从目标到结果单调用
 - [brain-hands-decoupled-agent-architecture-2026](../orchestration/brain-hands-decoupled-agent-architecture-2026.md) — Anthropic / OpenAI / Cursor 三家 Brain-Hands 解耦架构对比分析
+- [getzep/graphiti](https://github.com/getzep/graphiti) — 面向 AI Agent 的时态上下文图谱，25.8k ⭐，实体/关系/事实四组件 + validity window + episode 溯源，MCP Server 接入 Claude/Cursor
 - [browserbase-skills-claude-code-cloud-browser-automation-2026](./browserbase-skills-claude-code-cloud-browser-automation-2026.md) — Browserbase Skills 云端浏览器自动化，突破编码 Agent 处理受保护站点的能力瓶颈
 - [genericagent-self-evolving-agent-framework-3k-lines-2026](./genericagent-self-evolving-agent-framework-3k-lines-2026.md) — ~3K 行极简自进化 Agent 框架，技能从任务中结晶而非预装，<30K context window
 - [awesome-agent-skills-agent-skill-index-4494-stars-2026](./awesome-agent-skills-agent-skill-index-4494-stars-2026.md) — GitHub 最大的 Agent Skills 索引，4,494 ⭐，覆盖 9 个主流 AI Coding 平台
@@ -181,6 +182,7 @@
 - [ouroboros-agent-os-replayable-specification-first-2026](./ouroboros-agent-os-replayable-specification-first-2026.md) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，与 Anthropic Context Engineering 形成互补（前者减少输入端冗余，后者管理过程端容量）
 - [daytona-open-source-ai-agent-sandbox-oci-containers-2026](./daytona-open-source-ai-agent-sandbox-oci-containers-2026.md) — OCI 原生的 AI Agent 沙箱运行时，Sub-90ms 冷启动 + 可选 Kata/Sysbox 强隔离（关联：Anthropic April Postmortem → 沙箱隔离是防止跨层缺陷演变为安全事件的最后防线）
 
+- [getzep/graphiti](./getzep-graphiti-temporal-context-graph-2026.md) — 面向 AI Agent 的时态上下文图谱，25.8k ⭐，MCP Server + 多图数据库支持，与 Anthropic Introspection Adapters 形成「外部上下文管理 vs 内部行为审计」的互补
 - [local-deep-research-encrypted-agentic-research-2026](./local-deep-research-encrypted-agentic-research-2026.md) — 本地化深度研究 Agent，4,706 ⭐，SQLCipher AES-256 加密 + LangGraph Agent Strategy + SimpleQA ~95%（关联：Cursor Composer Self-Summarization → 信息管理问题的互补视角：压缩 vs 扩展）
 - [vibepod-cli-docker-agent-container-2026](./vibepod-cli-docker-agent-container-2026.md) — Docker 容器化的 AI 编码 Agent 管理 CLI，零配置 + 本地 Analytics Dashboard，支持 7 个主流 Agent（关联：OpenAI Agents SDK Native Sandbox → 本地 vs 云端的不同隔离路径）
 - [overstory-multi-agent-orchestration-git-worktree-2026](./overstory-multi-agent-orchestration-git-worktree-2026.md) — Git Worktree 隔离的多 Agent 编排工具，让单个 Claude Code Session 变身多 Agent 团队（关联：Cursor 第三代软件开发 → Agent Fleet 架构的第三种路线：本地化隔离 + 实时干预）
