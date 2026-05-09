@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 09:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 09:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 11:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 11:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -27,6 +27,8 @@
 | kevinrgu/autoagent 元 Agent 配置迭代 | P2 | ✅ 本轮闭环 | program.md 编程元 Agent，Harbor 基准测试兼容，自动化 hill-climb |
 | Anthropic C Compiler 并行 Claudes Git 文件锁协调 | P2 | ✅ 本轮闭环 | 16 Agent 并行，2000 Session，$20K，Ralph Loop + Git 文件锁 + 测试驱动自主推进 |
 | Golutra 多 CLI 统一编排平台 | P2 | ✅ 本轮闭环 | 3,408 Stars，统一 7 个 CLI，Rust+Vue3+Tauri，Stealth Terminal + 并行执行 |
+| Anthropic「Effective Harnesses for Long-Running Agents」（Initializer Pattern）| P2 | ✅ 本轮闭环 | 双组件架构（Initializer + Coding Agent），Feature List JSON + Progress File + Git 原子提交，Browser Automation Tools 端到端验证，Planner/Worker 系统性对比 |
+| GSD-2（gsd-build，7,269 ⭐）| P2 | ✅ 本轮闭环 | DB 权威运行时状态 + Auto Pipeline + Milestone/Slice 机制，Pi SDK 构建，"一次命令，几个月不管"的无人值守编码（关联：Anthropic 双组件架构 → 生产级工程实现）|
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -38,22 +40,20 @@
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
-- **flutter/skills**（1,640 ⭐）：Flutter 官方维护的 skill 库，npx skills CLI 工具，SKILL.md 标准格式
+- **Cursor「Dynamic Context Discovery」**：5 个工程实现（tool response 文件化、chat history 引用、Agent Skills、MCP 工具加载、terminal session 文件化）
 
 ## 📌 Projects 线索
 
+- **flutter/skills**（1,640 ⭐）：Flutter 官方维护的 skill 库，npx skills CLI 工具，SKILL.md 标准格式
 - **Local-Deep-Research**：6,643 ⭐，~95% SimpleQA（Qwen3.6-27B on 3090），10+ 搜索引擎，本地加密，与 GAIA Benchmark 关联
 - **SkillScanner / SkillGuard**：Skills 安全扫描工具，AST10 落地的工具验证
 - **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
-- **PackmindHub/context-evaluator**：配置文件健康体检，17个评估器
-- **Gizele1/harness-init**：OpenAI Harness Engineering 工程化实现，8 阶段脚手架
-- **anthropics/financial-services**：14,871 ⭐，Anthropic 官方金融领域 Agent Skills 仓库，Skill Bundling 最佳实践
 
 ## 🏷️ 本轮产出索引
 
-- `articles/orchestration/anthropic-c-compiler-parallel-claudes-lock-based-coordination-2026.md` — 新增：Anthropic C 编译器 16 并行 Agent 实验复盘，Git 文件锁分布式协调 + 测试驱动自主推进 + 角色专门化，与 Planner/Worker 层级架构对比（关联：无中心 vs 有中心协调的架构范式）
-- `articles/projects/golutra-multi-agent-orchestration-platform-3408-stars-2026.md` — 新增：Golutra（3,408 ⭐），统一 Claude Code/Codex/Gemini/OpenClaw 等 7 个 CLI，Rust+Vue3+Tauri，Stealth Terminal + 并行执行 + 工作流模板（关联：Anthropic C compiler 无中心协调 → 有中心统一编排的架构对比）
+- `articles/harness/anthropic-effective-harnesses-long-running-agents-initializer-pattern-2026.md` — 新增：Anthropic 长程 Agent Harness 双组件架构（Initializer + Coding Agent）解析，Feature List JSON + Progress File + Git 原子提交，与 Planner/Worker 架构的系统性对比（关联：GSD-2 生产级工程实现）
+- `articles/projects/gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md` — 新增：GSD-2（7,269 ⭐），Pi SDK 构建的生产级自主编码 Harness，DB 权威状态 + Auto Pipeline + Milestone/Slice + Deep Planning Mode（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
 
 ---
 

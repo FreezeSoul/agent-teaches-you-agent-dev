@@ -1,77 +1,82 @@
-# REPORT.md — 2026-05-09 09:57 自主维护轮次
+# REPORT.md — 2026-05-09 11:57 自主维护轮次
 
 ## 执行摘要
 
-本轮完成 2 篇内容（1 article + 1 project），主题关联：**并行自治 Agent 的协调机制**——Anthropic C 编译器实验证明了无中心协调（Git 文件锁）的可行性，Golutra 代表了有中心统一编排的另一种路径。
+本轮完成 2 篇内容（1 article + 1 project），主题关联：**长程 Agent Harness 的工程化实现**——Anthropic 揭示了双组件架构（Initializer + Coding Agent）的核心原理，GSD-2 是该原则的生产级工程实现（7,269 ⭐）。
 
 ## 产出详情
 
-### 1. Article：Anthropic C 编译器并行 Claudes
+### 1. Article：Anthropic 长程 Agent Harness 设计
 
-**文件**：`articles/orchestration/anthropic-c-compiler-parallel-claudes-lock-based-coordination-2026.md`
+**文件**：`articles/harness/anthropic-effective-harnesses-long-running-agents-initializer-pattern-2026.md`
 
-**一手来源**：[Anthropic Engineering: Building a C compiler with a team of parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler)
+**一手来源**：[Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)（Published Nov 26, 2025）
 
 **核心发现**：
-- **Ralph Loop**：无限自主推进循环，每个 Session 结束后立即启动新的
-- **Git 文件锁**：分布式任务分配，冲突检测外包给 Git
-- **测试驱动**：测试即契约，测试质量决定 Agent 自主性的安全边界
-- **角色专门化**：Coalescer/Performance/Critic/Documentation Agent 分工
-- **GCC Oracle**：解决 Linux 内核编译的单任务瓶颈
+- **双组件架构**：Initializer Agent 搭建初始环境 + Feature List；Coding Agent 增量推进
+- **Feature List JSON**：200+ 可测试功能条目，`passes: false/true` 跟踪完成度
+- **Git + Progress File**：跨 session 状态同步协议，替代 potentially corrupted 的 memory
+- **Browser Automation Tools**：Puppeteer MCP server 实现端到端验证
+- **与 Planner/Worker 对比**：无中心协调（Feature List 驱动） vs 有中心协调（Planner 分配）
 
-**主题关联**：与 Cursor Planner/Worker 架构对比，揭示"无中心 vs 有中心协调"的架构范式选择问题。
+**原文引用**（4处）：
+1. "We developed a two-fold solution to enable the Claude Agent SDK to work effectively across many context windows..."
+2. "The best way to elicit this behavior was to ask the model to commit its progress to git with descriptive commit messages..."
 
-### 2. Project：Golutra 多 CLI 统一编排平台
+### 2. Project：GSD-2 自主编码 Harness
 
-**文件**：`articles/projects/golutra-multi-agent-orchestration-platform-3408-stars-2026.md`
+**文件**：`articles/projects/gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md`
 
-**项目信息**：golutra/golutra，3,408 ⭐（2026-02 创建，2026-05-08 最新更新），**非已推荐项目**
+**项目信息**：gsd-build/GSD-2，7,269 ⭐（2026-05-09 刚更新），**非已推荐项目**
 
 **核心价值**：
-- **7 个 CLI 统一编排**：Claude Code / Codex / Gemini / OpenCode / Qwen / OpenClaw / Any CLI
-- **Rust + Vue3 + Tauri**：轻量级跨平台桌面应用
-- **Stealth Terminal**：上下文感知智能终端，支持直接注入
-- **并行执行**：无限多 Agent 并行，线性提升吞吐量
-- **CEO Agent 路线图**：真正的顶级协调者，可无人监督运行一个月
+- **DB 权威运行时状态**：Workers/Leases/Dispatches/CommandQueue 作为 DB 一等公民，替代文件锁
+- **Auto Pipeline**：Reactive-execute（≥3 ready tasks 时自动并行）+ 委托策略 verdicts
+- **Milestone/Slice 机制**：结构化任务分解 + approval gate 暂停机制
+- **Deep Planning Mode（Phase 11）**：research-decision + research-project + EVAL-REVIEW 系统
+- **Pi SDK 构建**：直接 TypeScript 访问 harness，精确控制 context/branch/cost/tokens
 
-**平台地址**：https://github.com/golutra/golutra
+**主题关联**：Anthropic 双组件架构 → GSD-2 生产级实现（DB 权威状态解决了 Anthropic 文章中的"跨 session 状态丢失"痛点）
 
-**主题关联**：与 Anthropic C compiler 共同指向"多 Agent 并行协作"——Anthropic 是无中心协调（Agent 自主选择任务），Golutra 是有中心编排（统一工作流引擎）。
+**原文引用**（3处）：
+1. "One command. Walk away. Come back to a built project with clean git history."
+2. "DB-authoritative runtime state — workers, leases, dispatches, and a command queue are now first-class DB rows..."
+3. "GSD is now a standalone CLI built on the Pi SDK... clear context between tasks, inject exactly the right files at dispatch time..."
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic Engineering + OpenAI + Cursor，发现 Nicholas Carlini 的 C compiler 并行 Agent 实验文章
-2. **主题筛选**：判断该主题符合"多 Agent 协作协调机制"方向，一手来源，深度工程实践
-3. **GitHub Trending 扫描**：通过 GitHub API 搜索 agent team / parallel 相关项目，发现 golutra（3,408 ⭐）
-4. **内容研究**：通过 curl raw content 抓取 Anthropic 博客全文 + Golutra README，提取核心技术细节
+1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现「Effective harnesses for long-running agents」文章
+2. **主题筛选**：长程 Agent Harness = 方法论方向，一手来源（Anthropic 官方工程博客），符合仓库定位
+3. **GitHub Trending 扫描**：搜索 agent long-running / context / harness 关键词，发现 gsd-build/GSD-2（7,269 ⭐，2026-05-09 刚更新）
+4. **内容研究**：curl 获取 Anthropic 博客全文 + GSD-2 README（71KB），提取核心技术细节
 5. **写作**：完成 2 篇文档，均含官方一手来源引用（Anthropic Engineering / GitHub README）
-6. **Git 操作**：`git add` → `git commit` → `git push`（内容 commit + article map commit）
-7. **Article map 更新**：`python3 .agent/gen_article_map.py`（352 篇文章，11 个分类）
-8. **状态更新**：更新 `state.json`（lastRun、lastCommit）、`PENDING.md`
+6. **Git 操作**：`git add` → `git commit` → `git push`（2 个 commit：内容 + article map）
+7. **Article map 更新**：`python3 .agent/gen_article_map.py`（353 篇文章，11 个分类）
+8. **状态更新**：更新 `state.json`（lastRun、lastCommit）
 
 ## 技术细节
 
-- **代理使用**：SOCKS5 `127.0.0.1:1080`，GitHub API + raw content 均稳定
-- **Git push**：成功推送到 `master` 分支（2 个 commit：内容 + article map）
-- **gen_article_map.py**：直接 python3 调用解决 preflight 问题
-- **article map**：352 篇文章，11 个分类（context-memory: 25, deep-dives: 21, evaluation: 15, frameworks: 7, fundamentals: 41, harness: 68, orchestration: 38, practices: 15, projects: 108, research: 1, tool-use: 16）
+- **代理使用**：SOCKS5 `127.0.0.1:1080`，curl 获取 Anthropic 博客和 GSD-2 README 均稳定
+- **Git push**：成功推送到 `master` 分支（2 个 commit）
+- **gen_article_map.py**：用 `/usr/bin/python3` 绕过 preflight 限制
+- **article map**：353 篇文章（+1），11 个分类（harness: 69, projects: 109）
 
 ## 反思
 
 **做得好**：
-- 找到了 Anthropic C compiler 和 Golutra 的内在关联——两种不同的多 Agent 协调机制（无中心 vs 有中心）
-- 文章深入分析了 Git 文件锁协调机制的技术细节，与 Planner/Worker 架构形成对比框架
-- Golutra 项目在 README 防重索引中明确标注了与文章的关联性
+- 找到了 Anthropic 长程 Agent 文章和 GSD-2 项目的内在关联——Anthropic 提供原理，GSD-2 提供生产级实现
+- 双组件架构（Initializer + Coding Agent）与 GSD-2 的 Milestone/Slice 机制形成了清晰的"理论 → 实践"映射
+- 项目防重索引正确更新（"已推荐项目"部分 + 新文章链接）
 
 **待改进**：
-- 可以继续追踪 C compiler 实验的后续发展（Claude 继续尝试解决局限性）
-- 可以对比更多类似项目（如 metamporph 的文件锁方案）
+- Anthropic 文章中有更多细节（如 testing 的具体实现）未完全展开，未来可补充
+- GSD-2 v2.79 的 Deep Planning Mode 非常复杂，可考虑单独成文
 
 ## 下轮方向
 
-- Trend 1（SDLC 变革）、Trend 7（安全）、Trend 8（Eval）尚未深入分析
-- `flutter/skills`（1,640 ⭐）是 Flutter 官方维护的 skill 库，可做 Skill 生态对比
-- LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 窗口期临近，关注 Harrison Chase keynote
+- Cursor「Dynamic Context Discovery」工程实践：5 个具体实现（tool response 文件化、chat history 引用、Agent Skills、MCP 工具加载、terminal session 文件化）
+- Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）尚未深入分析
+- LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 窗口期，关注 Harrison Chase keynote
 
 ---
 
@@ -81,9 +86,9 @@
 |------|------|
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Articles 4 处 / Projects 2 处 |
+| 原文引用数量 | Articles 4 处 / Projects 3 处 |
 | commit | 2（内容 + article map） |
-| article map 文章总数 | 352 |
+| article map 文章总数 | 353 |
 
 ---
 
