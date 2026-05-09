@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 05:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 05:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 07:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 07:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -28,7 +28,7 @@
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
 - **Anthropic「2026 Agentic Coding Trends Report」**：8个Trend，Trend 1（SDLC 变革）、Trend 2（Agent 能力）、Trend 5（多 Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析
-- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfit/Influence），AI 模型自主性风险的系统性评估
+- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfeit/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，预期 Harrison Chase keynote 发布
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
@@ -48,8 +48,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/orchestration/anthropic-claude-for-financial-services-skill-bundling-deployment-2026.md` — Claude for Financial Services Skill Bundling + 双重部署架构深度分析（Vertical-plugin source of truth，sync-agent-skills.py，Managed Agent cookbook，Leaf subagent thin design）
-- `articles/projects/ai-trader-agent-native-trading-platform-2026.md` — AI-Trader 项目推荐（14,559 ⭐，HKUDS，Agent-Native Trading Platform，Skill-first 平台设计，真实多 Agent 经济协作）
+- `articles/orchestration/cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026.md` — 重写版：从工程视角深度解析 Cursor 多智能体系统 38% 加速的 Planner/Worker 架构 + Self-Benchmarking 闭环（235 个 CUDA Kernel，3 周，3 个典型案例：Attention/GEMM/MoE）
+- `articles/projects/autoagent-kevinrgu-meta-agent-configuration-iteration-2026.md` — 新增：kevinrgu/autoagent（4,400 ⭐），元 Agent 自动迭代 harness 配置的框架，program.md 编程元 Agent，Harbor 基准测试兼容
 
 ---
 

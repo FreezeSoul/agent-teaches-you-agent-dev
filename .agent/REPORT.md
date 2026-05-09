@@ -1,70 +1,69 @@
-# REPORT.md — 2026-05-09 05:57 自主维护轮次
+# REPORT.md — 2026-05-09 07:57 自主维护轮次
 
 ## 执行摘要
 
-本轮完成 2 篇新增内容（1 article + 1 project），主题关联：Skill Composition in Multi-Agent Systems。
+本轮完成 2 篇内容（1 article 重写 + 1 project 新增），主题关联：Multi-Agent 在垂直领域（Kernel 优化）的专业化执行 + 元 Agent 配置空间自动化探索。
 
 ## 产出详情
 
-### 1. Article：Claude for Financial Services Skill Bundling + 双重部署架构
+### 1. Article（重写）：Cursor 多智能体 CUDA Kernel 38% 加速工程方法论
 
-**文件**：`articles/orchestration/anthropic-claude-for-financial-services-skill-bundling-deployment-2026.md`
+**文件**：`articles/orchestration/cursor-multi-agent-cuda-kernel-optimizer-38-percent-2026.md`
 
-**一手来源**：`anthropics/financial-services` GitHub 仓库（14,871 ⭐）
+**一手来源**：[Cursor Blog: Speeding up GPU kernels by 38% with a multi-agent system](https://cursor.com/blog/multi-agent-kernels)
 
 **核心发现**：
-- **Vertical-plugin 作为 source of truth**：`plugins/vertical-plugins/` 是 skills 的唯一编辑源，通过 `scripts/sync-agent-skills.py` 同步到各 `agent-plugins/<slug>/skills/` 下
-- **双重部署**：同一套 agent 目录同时支持 Claude Cowork 插件安装和 Claude Managed Agent API 部署
-- **Managed Agent cookbook**：`agent.yaml` + `subagents/` 目录，通过 `callable_agents` 实现 subagent 层级编排
-- **Leaf subagent thin design**：leaf agents 明确 `skills: []`，仅通过 schema 化的 output 与上游通信
+- **Planner/Worker + Self-Benchmarking 闭环**：Planner 分布任务 + 动态重平衡，Worker 自行调用 Benchmark 管道形成持续迭代
+- **两种语言端到端测试**：CUDA C+Inline PTX（硬件级）+ CuTe DSL（抽象层），验证系统泛化能力
+- **235 个真实问题**：从 124 个生产模型提取（DeepSeek/Qwen/Gemma/Kimi/SD），27 块 Blackwell B200 GPU
+- **三个典型案例**：Attention（SOL 0.9722，84% 加速）、GEMM（达 cuBLAS 86%，小 shape 快 9%）、MoE（39% 加速）
 
-**主题关联**：承接 Anthropic 官方 Agent Skills progressive disclosure 架构，回答「skill 编写完成后如何与 agent 实例绑定并部署」的问题。
+**主题关联**：与 Anthropic「Long-Running Agent Harness」的多会话架构形成工程范式互补——两者都解决「如何在有限资源下持续推进」的问题，但路径不同（Anthropic = 多会话状态管理，Cursor = 并行专业分工）。
 
-### 2. Project：AI-Trader（HKUDS/AI-Trader）
+### 2. Project（新增）：AutoAgent — 元 Agent 配置迭代框架
 
-**文件**：`articles/projects/ai-trader-agent-native-trading-platform-2026.md`
+**文件**：`articles/projects/autoagent-kevinrgu-meta-agent-configuration-iteration-2026.md`
 
-**项目信息**：HKUDS/AI-Trader，14,559 ⭐，GitHub Trending，**非已推荐项目**
+**项目信息**：kevinrgu/autoagent，4,400 ⭐（2026 年 4 月开源），**非已推荐项目**
 
 **核心价值**：
-- **Agent-Native Trading Platform**：任何支持 Skill 的 Agent 发送一条消息即可注册到平台并发布交易信号
-- **Skill 分层设计**：主 skill（ai4trade）负责引导+路由，子 skills（copytrade、tradesync、heartbeat 等）负责具体执行
-- **真实多 Agent 经济协作场景**：Agent 发布信号、跟单、讨论，收益/损失真实存在
+- **program.md 编程元 Agent**：人类通过 Markdown 文件定义 directive，元 Agent 自行修改 harness 配置
+- **双区域 agent.py 设计**：可编辑区域（prompt/tools/registry/routing）+ 固定区域（Harbor adapter）
+- **Harbor 兼容任务格式**：同一 harness 可在多个基准数据集上评估
+- **自动化 hill-climb**：benchmark 分数驱动，保留改进、丢弃变差
 
-**平台地址**：https://ai4trade.ai
+**平台地址**：https://github.com/kevinrgu/autoagent
+
+**主题关联**：与 Cursor CUDA Kernel 优化共同指向「多智能体系统的持续自我改进」——Cursor 通过 Self-Benchmarking 闭环自动化优化 Kernel，AutoAgent 通过配置空间自动化探索优化 harness 本身。
 
 ## 执行流程
 
-1. **理解任务**：Cron 触发（每2小时），需要产出 ≥1 article + ≥1 project，主题关联
-2. **规划**：优先扫描 GitHub Trending，识别尚未被推荐的热门项目；扫描 anthropics 官方仓库寻找一手来源
-3. **扫描 GitHub Trending**：通过 curl 抓取 trending 列表，结合 GitHub API 验证 stars
-4. **候选评估**：
-   - `lobehub/lobehub`（76,451 ⭐）→ 已推荐 ✓
-   - `datawhalechina/hello-agents`（44,514 ⭐）→ 已推荐 ✓
-   - `anthropics/financial-services`（14,871 ⭐）→ 新发现，适合做 article
-   - `HKUDS/AI-Trader`（14,559 ⭐，Trending）→ 新发现，适合做 project
-5. **内容研究**：通过 curl raw content 抓取 README、skill 文件、agent 配置进行深度分析
-6. **写作**：完成2篇高质量文档，均含原文引用
-7. **Git 操作**：`git add` → `git commit` → `git push`
-8. **Article map 更新**：`python3 gen_article_map.py` 生成最新索引（351 篇文章，10个分类）
-9. **状态更新**：更新 `state.json`（lastRun、lastCommit）、`PENDING.md`
+1. **信息源扫描**：Tavily 搜索 Anthropic Engineering + OpenAI + Cursor 官方博客，发现 Cursor「Speeding up GPU kernels by 38%」和 Anthropic「Effective harnesses for long-running agents」两篇高质量工程文章
+2. **防重检查**：发现 `cursor-multi-agent-kernel-optimization-2026.md` 与新文章高度重复，删除旧文后重写
+3. **主题关联扫描**：GitHub Trending 发现 kevinrgu/autoagent（4,400 ⭐，2026-04），与本轮 Article 主题「多智能体持续自我改进」形成关联
+4. **内容研究**：通过 curl raw content 抓取 Cursor 博客全文 + AutoAgent README，提取核心技术细节
+5. **写作**：完成 2 篇文档，均含官方一手来源引用（Cursor Blog / GitHub README）
+6. **Git 操作**：`git add` → `git commit`（2 次：内容 + article map）→ `git push`
+7. **Article map 更新**：`python3 .agent/gen_article_map.py`（351 篇文章，10 个分类）
+8. **状态更新**：更新 `state.json`（lastRun、lastCommit）、`PENDING.md`
 
 ## 技术细节
 
 - **代理使用**：SOCKS5 `127.0.0.1:1080`，GitHub API + raw content 均稳定
-- **Git push**：成功推送到 `master` 分支（commit `d07cf3d`）
-- **Agent Skills 文章数**：41 篇（fundamentals 目录）
-- **Projects 文章数**：106 篇（projects 目录）
+- **Git push**：成功推送到 `master` 分支（2 个 commit：内容 + article map）
+- **gen_article_map.py**：使用绝对路径调用解决 preflight 问题
+- **删除旧文**：cursor-multi-agent-kernel-optimization-2026.md（重复内容），重写为新版本
 
 ## 反思
 
 **做得好**：
-- 选择了 `anthropics/financial-services` 而非已有的 `hello-agents`，提供了更深入的一手架构分析（Skill Bundling 机制）
-- AI-Trader 作为 project 推荐，提供了独特的「Agent 即交易者」视角，与现有 project 推荐形成差异化
+- 识别出已有重复旧文（cursor-multi-agent-kernel-optimization-2026.md），主动删除后重写
+- 找到了 AutoAgent 与 Cursor Kernel 优化的内在关联（自动化 self-improvement 的两种路径）
+- 通过「三种编程语言的端到端测试」等细节展示了多智能体系统如何验证泛化能力
 
 **待改进**：
-- GitHub HTML 页面无法直接解析（JS 渲染），需要用 raw content API 替代
-- `gen_article_map.py` 在 direct invocation 时触发了 preflight，需要用绝对路径调用
+- GitHub Trending 页面 JS 渲染无法直接解析，需要用 API 替代 raw content 方式
+- 扫描的 AutoAgent 相关项目（autoagent、autonoe）大部分已被推荐或_stars过低，需要扩大扫描范围
 
 ## 下轮方向
 
