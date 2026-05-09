@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 19:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 19:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 21:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 21:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -38,14 +38,16 @@
 | getzep/graphiti（25.8k ⭐）| P2 | ✅ 本轮闭环 | 时态上下文图谱，MCP Server，多图数据库支持，与 Introspection Adapters 形成「外部上下文管理 vs 内部行为审计」的主题关联 |
 | Anthropic Measuring Agent Autonomy | P2 | ✅ 本轮闭环 | 99.9% 分位 turn 翻倍（~25→45 分钟），部署 overhang，监督范式根本性转移，Agent 主动暂停 > 人类中断 |
 | agentmemory（rohitg00，3,047 ⭐）| P2 | ✅ 本轮闭环 | 免 DB 持久记忆基础设施，iii engine 零外部依赖，95.2% R@5，16+ Agent 共享记忆服务器，与 Measuring Agent Autonomy 形成「上下文坍缩 → 记忆基础设施」的主题关联 |
+| Cursor 3 第三时代（Agent Fleet 新范式）| P2 | ✅ 本轮闭环 | 三时代演进（Tab→同步Agent→异步Fleet），35% PR 来自云端Agent，15x Agent使用增长，Fleet调度层 + Skills能力层组合架构 |
+| Claude Code Memory Setup（590 ⭐）| P2 | ✅ 本轮闭环 | Obsidian Zettelkasten + Graphify 三层记忆体系，71.5x Token优化，499x查询节省，0 token生成成本（AST模式），与 Cursor 3 第三时代形成「范式定义 → 基础设施解法」闭环 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
+- **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，预期 Harrison Chase keynote 发布
 - **Anthropic「2026 Agentic Coding Trends Report」**：8个Trend，Trend 1（SDLC 变革）、Trend 2（Agent 能力）、Trend 5（多 Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点
-- **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，预期 Harrison Chase keynote 发布
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
 - **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人 Karri Saarinen 关注，Issue Tracker → Control Plane
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
@@ -63,8 +65,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/anthropic-measuring-agent-autonomy-deployment-overhang-2026.md` — 新增：Anthropic Measuring Agent Autonomy 分析，99.9% 分位 turn 翻倍（~25→45 分钟），部署 overhang + 监督范式根本性转移（关联：长程 Agent 上下文坍缩 → 记忆基础设施的系统性需求）
-- `articles/projects/agentmemory-persistent-memory-ai-coding-agents-2026.md` — 新增：agentmemory 推荐，3,047 ⭐，免 DB 持久记忆，iii engine 零外部依赖，95.2% R@5，16+ Agent 共享记忆服务器（关联：Measuring Agent Autonomy → 上下文坍缩问题 → 记忆基础设施的工程解法）
+- `articles/fundamentals/cursor-third-era-fleet-agents-paradigm-shift-2026.md` — 新增：Cursor 3 第三时代分析，三时代演进（Tab→同步Agent→异步Fleet），35% PR 来自云端Agent，15x Agent使用增长，Fleet调度层 + Skills能力层组合架构，与 Claude Code Memory Setup 形成「范式定义 → 基础设施解法」闭环
+- `articles/projects/claude-code-memory-setup-obsidian-graphify-token-optimization-2026.md` — 新增：Claude Code Memory Setup 推荐，590 ⭐，Obsidian Zettelkasten + Graphify 三层记忆体系，71.5x Token优化，499x查询节省，0 token生成成本（关联：Cursor 3 第三时代 → 长程Agent上下文连续性 → 记忆基础设施的系统性解决方案）
 
 ---
 
