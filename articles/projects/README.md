@@ -5,6 +5,8 @@
 
 ---
 
+- [claude-code-memory-setup-obsidian-graphify-token-optimization-2026](./claude-code-memory-setup-obsidian-graphify-token-optimization-2026.md) — 71.5x Token 优化的 Claude Code 记忆方案，Obsidian Zettelkasten + Graphify 知识图谱 + Chat Import Pipeline 三层体系，499x 查询 token 节省，0 token 生成成本（AST 模式），跨项目知识复用（关联：Cursor 3 第三时代 → 长程 Agent 上下文连续性 → 记忆基础设施的系统性解决方案）
+
 - [agentmemory-persistent-memory-ai-coding-agents-2026](./agentmemory-persistent-memory-ai-coding-agents-2026.md) — 免 DB 的持久记忆基础设施，iii engine 实现零外部依赖，95.2% R@5 检索精度 + 92% token 节省，16+ Agent 共享统一记忆服务器（关联：Anthropic Measuring Agent Autonomy → 长程 Agent 的上下文坍缩问题 → 记忆基础设施的系统性解决方案）
 
 - [agent-squad-2fastlabs-multi-agent-orchestration-2026](./agent-squad-2fastlabs-multi-agent-orchestration-2026.md) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调（关联：Anthropic Managed Agents Brain-Hands 解耦 → 多 Agent 入口层智能路由问题的一体化回答）
