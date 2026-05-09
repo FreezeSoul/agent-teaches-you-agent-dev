@@ -5,6 +5,8 @@
 
 ---
 
+- [strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026](./strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026.md) — 统一虚拟文件系统，1,612 Stars，TypeScript，将 S3/Gmail/GitHub/Slack 等后端挂载为文件目录，让 AI Agent 用原生 bash 工具操作一切数据源，与 OpenAI Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补（关联：Codex Agent Loop → 长程 Agent 需要统一的工具抽象层 → Mirage VFS 的工程实现）
+
 - [rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026](./rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md) — 本地优先的 AI coworker，13,666 Stars，TypeScript，构建持久知识图谱 + Gmail/Calendar/Notion 深度集成，与 Cursor Long-Running Agents 形成「工作流控制 + 上下文积累」的互补（关联：规划优先 Harness 架构 → 长程 Agent 需要外部化的上下文积累机制）
 
 - [claude-code-memory-setup-obsidian-graphify-token-optimization-2026](./claude-code-memory-setup-obsidian-graphify-token-optimization-2026.md) — 71.5x Token 优化的 Claude Code 记忆方案，Obsidian Zettelkasten + Graphify 知识图谱 + Chat Import Pipeline 三层体系，499x 查询 token 节省，0 token 生成成本（AST 模式），跨项目知识复用（关联：Cursor 3 第三时代 → 长程 Agent 上下文连续性 → 记忆基础设施的系统性解决方案）
@@ -48,7 +50,7 @@
 - [coleam00/Archon](https://github.com/coleam00/Archon) — 首个开源 AI 编程工作流引擎，让 AI 编程变得确定可重复
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
-- [cursor/cookbook](https://github.com/cursor/cookbook) — `@cursor/sdk` 官方示例库，3,675 ⭐，5 个生产级 Sample（Quickstart / Kanban / DAG Task Runner / Coding Agent CLI / Prototyping Tool），Cursor Agent 运行时的代码级路线图（关联：Cursor 持续改进 Harness 工程 → SDK 产品化 → cookbook 成为开发者接入生产级 Agent 的入口）
+- [strukto-ai/mirage](https://github.com/strukto-ai/mirage) — 统一虚拟文件系统，1,612 Stars，TypeScript，将 S3/Gmail/GitHub/Slack 等后端挂载为文件目录，AI Agent 用 bash 工具操作一切数据源（关联：Codex Agent Loop → 工具抽象层 → 跨后端统一 bash 接口）
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
 - [gsd-build/GSD-2](https://github.com/gsd-build/GSD-2) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，真正实现"一次命令，几个月不管"（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
 - [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
