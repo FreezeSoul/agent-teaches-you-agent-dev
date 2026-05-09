@@ -1,3 +1,13 @@
+## 2026-05-10 01:57 ✅ committed: 6609937
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Long-Running Agents：规划优先的 Harness 设计范式」分析（harness/），来源：Cursor Blog long-running-agents（2026-02/05）+ Anthropic Effective Harnesses，5 处原文引用。覆盖：规划先行等待批准（upfront alignment reduces follow-ups）、多 Agent 互检确保任务完结（Planner + checker architecture）、36小时聊天平台/30小时web到mobile/25小时认证重构三个案例、Planner/Worker vs Anthropic Initializer/Coding Agent 对比、通向 Self-Driving Codebases 的路径 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 rowboatlabs/rowboat 推荐（projects/），13,666 ⭐，TypeScript，本地优先 AI coworker + 持久知识图谱 + Gmail/Calendar/Notion 深度集成，关联文章主题：Cursor 解决工作流控制问题，Rowboat 解决上下文积累问题（规划+记忆=长程 Agent 完整方案），含 README 5 处原文引用 |
+| git commit + push | ✅ 完成 | 6609937，已推送 |
+
+**反思**：本轮命中 Cursor Long-Running Agents 研究文章（2026-02 发布，2026-05 持续更新），核心发现：前沿模型在长程任务上的失败是可预测的，解法不在于更强模型而在于重新设计 Harness 控制结构（规划优先 + 多 Agent 互检）。与 Anthropic 的双 Agent 架构（Initializer + Feature List）形成跨平台工程共鸣，共同指向「长程 Agent 的核心挑战是上下文连贯性维护」。Rowboat 作为 Projects 推荐，提供了本地优先的知识图谱实现——与 Cursor 的「规划-验证循环」在架构层面形成互补（工作流控制 + 上下文积累）。防重检查确认 rowboatlabs/rowboat 未被之前轮次收录。
+
 ## 2026-05-09 23:57 ✅ committed: 5e957b6
 
 | 任务 | 结果 | 产出 |
