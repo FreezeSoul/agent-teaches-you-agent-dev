@@ -13,6 +13,8 @@
 
 - [prompt-tower-context-packaging-376-stars](./prompt-tower-context-packaging-376-stars-2026.md) — VS Code 上下文打包插件，376 Stars，1,000+ 用户，将代码库上下文一键打包为 AI 可消费的 XML 结构，与 Cursor 动态上下文发现形成互补（预打包 vs 动态拉取）
 
+- [golutra-multi-agent-orchestration-platform-3408-stars-2026](./golutra-multi-agent-orchestration-platform-3408-stars-2026.md) — 多 CLI 统一编排平台，3408 Stars，统一 Codex/Claude Code/OpenClaw 等 7 个 CLI，Rust+Vue3+Tauri，并行执行 + 工作流编排（关联：Anthropic C compiler 16 Agent 并行自治 → 不同协调机制的统一编排视角）
+
 ## 已推荐项目
 - [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调，Python/TypeScript 双语言
 
@@ -33,6 +35,8 @@
 - [cursor/cookbook](https://github.com/cursor/cookbook) — `@cursor/sdk` 官方示例库，3,675 ⭐，5 个生产级 Sample（Quickstart / Kanban / DAG Task Runner / Coding Agent CLI / Prototyping Tool），Cursor Agent 运行时的代码级路线图（关联：Cursor 持续改进 Harness 工程 → SDK 产品化 → cookbook 成为开发者接入生产级 Agent 的入口）
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
 - [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
+
+- [golutra/golutra](https://github.com/golutra/golutra) — 多 CLI 统一编排平台，3,408 Stars，Rust+Vue3+Tauri，统一 Claude Code/Codex/Gemini/OpenClaw 等 7 个 CLI，Stealth Terminal + 并行执行 + 工作流模板，CEO Agent 路线图（关联：Anthropic C compiler 并行自治 → 无中心 vs 有中心协调的架构对比）
 
 - [RenseiAI/AgentFactory](https://github.com/RenseiAI/agentfactory) — Linear 原生的多 Agent 软件工厂，Dev/QA/Acceptance 三阶段流水线，TypeScript/Redis 生产级架构
 - [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排 SDK，Sandbox Agents + Handoffs + Guardrails 生产级基础设施，685+ stars/day
