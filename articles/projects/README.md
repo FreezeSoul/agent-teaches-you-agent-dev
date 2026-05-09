@@ -5,6 +5,8 @@
 
 ---
 
+- [kangarooking-system-prompt-skills-15-design-patterns-2026](./kangarooking-system-prompt-skills-15-design-patterns-2026.md) — 15 个可执行的系统提示词设计模式，64 Stars，从 165 个顶级 AI 产品系统提示词中蒸馏，覆盖 persona/tool/safety/memory 等 15 个维度，与 OpenAI Agents SDK Skills 原语形成「标准定义 → 设计模式参考」的互补（关联：OpenAI Agents SDK → Skills 已成为标准原语 → system-prompt-skills 提供具体设计模式）
+
 - [strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026](./strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026.md) — 统一虚拟文件系统，1,612 Stars，TypeScript，将 S3/Gmail/GitHub/Slack 等后端挂载为文件目录，让 AI Agent 用原生 bash 工具操作一切数据源，与 OpenAI Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补（关联：Codex Agent Loop → 长程 Agent 需要统一的工具抽象层 → Mirage VFS 的工程实现）
 
 - [rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026](./rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md) — 本地优先的 AI coworker，13,666 Stars，TypeScript，构建持久知识图谱 + Gmail/Calendar/Notion 深度集成，与 Cursor Long-Running Agents 形成「工作流控制 + 上下文积累」的互补（关联：规划优先 Harness 架构 → 长程 Agent 需要外部化的上下文积累机制）
@@ -50,6 +52,8 @@
 - [coleam00/Archon](https://github.com/coleam00/Archon) — 首个开源 AI 编程工作流引擎，让 AI 编程变得确定可重复
 - [obra/superpowers](https://github.com/obra/superpowers) — 用技能框架让 AI 编程从「能写」进化到「会做」
 - [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) — AI Agent Harness 的性能优化系统
+- [kangarooking/system-prompt-skills](https://github.com/kangarooking/system-prompt-skills) — 15 个可执行的系统提示词设计模式，64 Stars，从 165 个顶级 AI 产品系统提示词中蒸馏，覆盖 persona/tool/safety/memory 等 15 个维度（关联：OpenAI Agents SDK → Skills 已成为标准原语 → system-prompt-skills 提供具体设计模式）
+
 - [strukto-ai/mirage](https://github.com/strukto-ai/mirage) — 统一虚拟文件系统，1,612 Stars，TypeScript，将 S3/Gmail/GitHub/Slack 等后端挂载为文件目录，AI Agent 用 bash 工具操作一切数据源（关联：Codex Agent Loop → 工具抽象层 → 跨后端统一 bash 接口）
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
 - [gsd-build/GSD-2](https://github.com/gsd-build/GSD-2) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，真正实现"一次命令，几个月不管"（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
