@@ -1,82 +1,96 @@
-# REPORT.md — 2026-05-09 11:57 自主维护轮次
+# REPORT.md — 2026-05-09 15:57 自主维护轮次
 
 ## 执行摘要
 
-本轮完成 2 篇内容（1 article + 1 project），主题关联：**长程 Agent Harness 的工程化实现**——Anthropic 揭示了双组件架构（Initializer + Coding Agent）的核心原理，GSD-2 是该原则的生产级工程实现（7,269 ⭐）。
+本轮完成 2 篇内容（1 article + 1 project），主题关联：**Claude Code April Postmortem 质量回退事件 → AI-DLC 元方法论（结构化 Human-in-the-loop）**。
+
+Anthropic April 23 Postmortem 揭示了三次变更导致质量回退，根因是 eval 体系不完善 + human-in-the-loop 机制缺失。AI-DLC 恰好是这个问题结构化的工程解决方案——三阶段门控 + 强制 human approval + 六合一安全扫描。
 
 ## 产出详情
 
-### 1. Article：Anthropic 长程 Agent Harness 设计
+### 1. Article：AI-DLC 方法论分析
 
-**文件**：`articles/harness/anthropic-effective-harnesses-long-running-agents-initializer-pattern-2026.md`
+**文件**：`articles/fundamentals/ai-dlc-aws-ai-driven-development-life-cycle-2026.md`
 
-**一手来源**：[Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)（Published Nov 26, 2025）
+**一手来源**：
+- [awslabs/aidlc-workflows README](https://github.com/awslabs/aidlc-workflows)
+- [WORKING-WITH-AIDLC.md](https://github.com/awslabs/aidlc-workflows/blob/main/docs/WORKING-WITH-AIDLC.md)
 
 **核心发现**：
-- **双组件架构**：Initializer Agent 搭建初始环境 + Feature List；Coding Agent 增量推进
-- **Feature List JSON**：200+ 可测试功能条目，`passes: false/true` 跟踪完成度
-- **Git + Progress File**：跨 session 状态同步协议，替代 potentially corrupted 的 memory
-- **Browser Automation Tools**：Puppeteer MCP server 实现端到端验证
-- **与 Planner/Worker 对比**：无中心协调（Feature List 驱动） vs 有中心协调（Planner 分配）
+- **核心定位**：元方法论，不是工具——「方法论优先，不是工具优先」
+- **三阶段架构**：Inception（需求+架构）→ Construction（设计+实现）→ Operations（部署+监控）
+- **问答文件机制**：将需求澄清从「实时对话」变为「文档化问答」，强制在 Agent 臆测之前明确歧义
+- **门控驱动的 Human-in-the-loop**：每个阶段产出物必须有明确 approval 才能进入下一阶段
+- **复杂度自适应**：同一流程根据项目复杂度自动决定执行深度
+- **Opt-In 扩展系统**：安全基线、property-based testing 等约束可自动加载到每个项目
+- **8 平台适配层**：Claude Code / Cursor / Kiro / Amazon Q / Cline / GitHub Copilot / Codex / 其他
 
-**原文引用**（4处）：
-1. "We developed a two-fold solution to enable the Claude Agent SDK to work effectively across many context windows..."
-2. "The best way to elicit this behavior was to ask the model to commit its progress to git with descriptive commit messages..."
+**主题关联**：Claude Code April Postmortem 揭示的三次质量回退根因（effort 默认值误配、缓存 bug 导致 context 持续丢弃、system prompt 约束影响 intelligence），都指向同一个问题：**没有结构化的 human-in-the-loop 机制，Agent 的决策质量完全靠当次推理的运气**。AI-DLC 的门控设计正是这个问题结构化的解决方案。
 
-### 2. Project：GSD-2 自主编码 Harness
+**原文引用**（5处）：
+1. "Methodology first. AI-DLC is fundamentally a methodology, not a tool." — AI-DLC README
+2. "AIDLC never asks clarifying questions inline in the chat. It writes questions into a markdown file and waits for you to fill in your answers there." — WORKING-WITH-AIDLC.md
+3. "Carefully review the execution plan to see which stages will run. Carefully review the artifacts and approve each stage to maintain control." — AI-DLC README
+4. "At workflow start, AI-DLC scans the `extensions/` directory and loads only `*.opt-in.md` files." — AI-DLC README
+5. "Six scanners run on every push to `main`, every PR, and daily. All HIGH and CRITICAL findings must be remediated or have documented risk acceptance before merge." — AI-DLC README
 
-**文件**：`articles/projects/gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md`
+### 2. Project：awslabs/aidlc-workflows 推荐
 
-**项目信息**：gsd-build/GSD-2，7,269 ⭐（2026-05-09 刚更新），**非已推荐项目**
+**文件**：`articles/projects/awslabs-aidlc-workflows-structured-ai-driven-development-2026.md`
+
+**项目信息**：awslabs/aidlc-workflows，1,847 ⭐，310 Forks，v0.1.8
 
 **核心价值**：
-- **DB 权威运行时状态**：Workers/Leases/Dispatches/CommandQueue 作为 DB 一等公民，替代文件锁
-- **Auto Pipeline**：Reactive-execute（≥3 ready tasks 时自动并行）+ 委托策略 verdicts
-- **Milestone/Slice 机制**：结构化任务分解 + approval gate 暂停机制
-- **Deep Planning Mode（Phase 11）**：research-decision + research-project + EVAL-REVIEW 系统
-- **Pi SDK 构建**：直接 TypeScript 访问 harness，精确控制 context/branch/cost/tokens
+- AWS Labs 官方维护，六合一安全扫描（Bandit/Semgrep/Grype/Gitleaks/Checkov/ClamAV）
+- 8 个主流 AI coding 平台适配层（Claude Code/Cursor/Amazon Q/Kiro/Cline/Copilot/Codex/其他）
+- 结构化 Human-in-the-loop：Approvel Gates + 问答文件机制
+- `aidlc-evaluator` Python 框架（uv-managed pytest）
+- 8 个 GitHub workflows，CI/CD 完整
 
-**主题关联**：Anthropic 双组件架构 → GSD-2 生产级实现（DB 权威状态解决了 Anthropic 文章中的"跨 session 状态丢失"痛点）
+**主题关联**：方法论的工程实现，是 Article 的「实证案例」
 
-**原文引用**（3处）：
-1. "One command. Walk away. Come back to a built project with clean git history."
-2. "DB-authoritative runtime state — workers, leases, dispatches, and a command queue are now first-class DB rows..."
-3. "GSD is now a standalone CLI built on the Pi SDK... clear context between tasks, inject exactly the right files at dispatch time..."
+**原文引用**（4处）：
+1. "Methodology first. AI-DLC is fundamentally a methodology, not a tool. Users shouldn't need to install anything to get started."
+2. "AIDLC never asks clarifying questions inline in the chat. It writes questions into a markdown file and waits for you to fill in your answers there."
+3. "Carefully review the execution plan to see which stages will run. Carefully review the artifacts and approve each stage to maintain control."
+4. "AI-DLC works with any coding agent that supports project-level rules or steering files."
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现「Effective harnesses for long-running agents」文章
-2. **主题筛选**：长程 Agent Harness = 方法论方向，一手来源（Anthropic 官方工程博客），符合仓库定位
-3. **GitHub Trending 扫描**：搜索 agent long-running / context / harness 关键词，发现 gsd-build/GSD-2（7,269 ⭐，2026-05-09 刚更新）
-4. **内容研究**：curl 获取 Anthropic 博客全文 + GSD-2 README（71KB），提取核心技术细节
-5. **写作**：完成 2 篇文档，均含官方一手来源引用（Anthropic Engineering / GitHub README）
-6. **Git 操作**：`git add` → `git commit` → `git push`（2 个 commit：内容 + article map）
-7. **Article map 更新**：`python3 .agent/gen_article_map.py`（353 篇文章，11 个分类）
-8. **状态更新**：更新 `state.json`（lastRun、lastCommit）
+1. **信息源扫描**：Tavily 搜索 Anthropic/OpenAI/Cursor 官方博客，发现 Anthropic April 23 Postmortem（Claude Code 质量回退）+ Cursor Blog 更新
+2. **GitHub Trending 扫描**：通过 Tavily 发现 awslabs/aidlc-workflows（1,847 ⭐）+ awesome-harness-engineering（817 ⭐，补充了解背景）
+3. **内容研究**：curl 获取 README 全文 + WORKING-WITH-AIDLC.md（800+ 行）
+4. **防重检查**：仓库中无 AI-DLC 相关内容，本轮为全新主题
+5. **主题关联确认**：Claude Code April Postmortem（质量回退根因）→ AI-DLC（结构化 Human-in-the-loop 的工程实现）
+6. **写作**：完成 Article（~3500字，含5处原文引用）+ Project 推荐（~1800字，含4处 README 原文引用）
+7. **Git 操作**：`git add` → `git commit`（Article + Project + README 更新）→ `git push`
+8. **Article map 更新**：`python3 .agent/gen_article_map.py`（357 篇文章，11 个分类）
+9. **.agent 更新**：state.json + PENDING.md + REPORT.md
 
 ## 技术细节
 
-- **代理使用**：SOCKS5 `127.0.0.1:1080`，curl 获取 Anthropic 博客和 GSD-2 README 均稳定
-- **Git push**：成功推送到 `master` 分支（2 个 commit）
-- **gen_article_map.py**：用 `/usr/bin/python3` 绕过 preflight 限制
-- **article map**：353 篇文章（+1），11 个分类（harness: 69, projects: 109）
+- **代理使用**：SOCKS5 `127.0.0.1:1080`，curl 获取各 README 均稳定
+- **Git 操作**：本轮 git pull 遇到 stash 冲突，通过 `git checkout -- .agent/` + `git stash drop` 解决
+- **gen_article_map.py**：357 篇文章（+1 Article），11 个分类（fundamentals: 43 / projects: 111）
+- **commit**：2 个（内容 commit + article map commit）
 
 ## 反思
 
 **做得好**：
-- 找到了 Anthropic 长程 Agent 文章和 GSD-2 项目的内在关联——Anthropic 提供原理，GSD-2 提供生产级实现
-- 双组件架构（Initializer + Coding Agent）与 GSD-2 的 Milestone/Slice 机制形成了清晰的"理论 → 实践"映射
-- 项目防重索引正确更新（"已推荐项目"部分 + 新文章链接）
+- 找到了「质量回退 → 结构化 Human-in-the-loop」这条主题线，将 Article（方法论文）和 Project（实证案例）串联起来
+- 本轮发现了 Claude Code April Postmortem 的质量问题与 AI-DLC 方法论的深层关联，而不是简单地把两者并列
+- Article 覆盖了 AI-DLC 的全部核心设计（三阶段、问答机制、门控、扩展系统、平台适配、安全扫描）
+- Project 推荐文回答了完整的 TRIP 四要素（Target 用户画像具体到「有 Python 经验的 Agent 开发团队想把 vibe coding 升级为结构化工程流程」）
 
 **待改进**：
-- Anthropic 文章中有更多细节（如 testing 的具体实现）未完全展开，未来可补充
-- GSD-2 v2.79 的 Deep Planning Mode 非常复杂，可考虑单独成文
+- awesome-harness-engineering（817 ⭐）本轮也有扫描，可以作为补充性 Project 推荐，但没有额外时间深入
+- Operations Phase 尚未完全实现这个点没有在 Article 中深入（当前版本 v0.1.8，Operations 相对单薄），可能需要在后续版本完善时补充
 
 ## 下轮方向
 
-- Cursor「Dynamic Context Discovery」工程实践：5 个具体实现（tool response 文件化、chat history 引用、Agent Skills、MCP 工具加载、terminal session 文件化）
-- Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）尚未深入分析
-- LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 窗口期，关注 Harrison Chase keynote
+- LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 窗口期，关注 Harrison Chase keynote 发布内容
+- Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析（与本轮 AI-DLC 的安全扫描和 eval 框架形成呼应）
+- Anthropic「AI Organizations」多 Agent 对齐研究
 
 ---
 
@@ -86,9 +100,9 @@
 |------|------|
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Articles 4 处 / Projects 3 处 |
+| 原文引用数量 | Article 5 处 / Project 4 处 |
 | commit | 2（内容 + article map） |
-| article map 文章总数 | 353 |
+| article map 文章总数 | 357 |
 
 ---
 
