@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 23:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 23:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 01:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 01:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -42,6 +42,8 @@
 | Claude Code Memory Setup（590 ⭐）| P2 | ✅ 本轮闭环 | Obsidian Zettelkasten + Graphify 三层记忆体系，71.5x Token优化，499x查询节省，0 token生成成本（AST模式），与 Cursor 3 第三时代形成「范式定义 → 基础设施解法」闭环 |
 | **OpenAI Agents SDK 原生沙箱与 Manifest 抽象** | P2 | ✅ 本轮闭环 | 可配置内存 + Sandbox-aware orchestration + Codex-like filesystem tools；Manifest 声明式跨提供商抽象；Snapshotting + Rehydration 持久化；与 Cursor Cloud Agents 形成技术路径对比 |
 | **neo4j-labs/create-context-graph（558 ⭐）** | P2 | ✅ 本轮闭环 | 5分钟生成完整知识图谱 Agent 应用，22个预置领域 + 8种框架支持，MCP Server for Claude Desktop；与 OpenAI Agents SDK 形成「执行层 + 记忆层」的完整架构闭环 |
+| **Cursor Long-Running Agents 规划优先架构** | P2 | ✅ 本轮闭环 | 规划先行等待批准（upfront alignment）+ 多 Agent 互检确保完结，36小时聊天平台/30小时web移植/25小时认证重构案例，Planner/Worker vs Anthropic Initializer/Coding Agent 对比，与 Rowboat 形成「工作流控制 + 上下文积累」互补 |
+| **rowboatlabs/rowboat（13,666 ⭐）** | P2 | ✅ 本轮闭环 | 本地优先 AI coworker，持久知识图谱 + Gmail/Calendar/Notion 集成，TypeScript，13,666 Stars，与 Cursor Long-Running Agents 形成「规划+记忆」完整方案 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -67,8 +69,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/openai-agents-sdk-native-sandbox-harness-2026.md` — 新增：OpenAI Agents SDK 新版核心能力分析，原生沙箱执行（Manifest 跨提供商抽象）+ Model's natural operating pattern（Harness 对齐模型最优执行模式）+ Snapshotting + Rehydration（断点续传）+ 与 Cursor Cloud Agents 技术路径对比（Manifest vs 平台托管）
-- `articles/projects/create-context-graph-neo4j-scaffolding-2026.md` — 新增：neo4j-labs/create-context-graph 推荐，558 ⭐，Neo4j Labs 官方项目，5分钟生成完整知识图谱 Agent 应用（FastAPI + Next.js + Neo4j），22个预置领域 + 8种框架支持，MCP Server for Claude Desktop（关联：OpenAI Agents SDK Sandbox 负责任务执行，Context Graph 负责任务上下文 = 完整生产级 Agent 架构）
+- `articles/harness/cursor-long-running-agents-planning-first-harness-architecture-2026.md` — 新增：Cursor Long-Running Agents 规划优先的 Harness 设计范式分析，来源：Cursor Blog long-running-agents（2026-02/05）+ Anthropic Effective Harnesses，5处原文引用，覆盖：规划先行等待批准、多 Agent 互检确保完结、三个长程案例（36h聊天平台/30h web移植/25h认证重构）、Planner/Worker vs Anthropic Initializer/Coding Agent 对比、通向 Self-Driving Codebases
+- `articles/projects/rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md` — 新增：rowboatlabs/rowboat 推荐，13,666 ⭐，本地优先 AI coworker + 持久知识图谱 + Gmail/Calendar/Notion 集成，与 Cursor Long-Running Agents 形成「工作流控制 + 上下文积累」互补，含 README 5处原文引用
 
 ---
 
