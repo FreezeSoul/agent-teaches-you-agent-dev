@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 01:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 01:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 03:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 03:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -14,7 +14,7 @@
 | Anthropic「2026 Agentic Coding Trends Report」| P2 | ⏸️ 待处理 | 8个Trend，已覆盖 Trend 3/4/6；剩余 Trend 1（SDLC变革）、Trend 2（Agent能力）、Trend 5（多Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析 |
 | Anthropic Feb 2026 Risk Report（已解密版）| P2 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏸️ 待处理 | 500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点 |
-| OpenAI Codex Agent Loop 工程细节 | P2 | ⏸️ 待处理 | Michael Bolin 的工程博客系列，Responses API / Compaction 机制 |
+| OpenAI Codex Agent Loop 工程细节 | P2 | ✅ 本轮闭环 | Michael Bolin 的工程博客系列，Responses API / Compaction 机制，Prompt Caching 前缀匹配，ZDR 矛盾 |
 | OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）| P2 | ⏸️ 待处理 | 500% PR 增长，Linear 创始人 Karri Saarinen 关注，Issue Tracker → Control Plane |
 | microsoft/skills 深度分析 | P2 | ⏸️ 待处理 | 174 个企业级 Skills 的 Context-Driven Development 实践 |
 | Augment Code「Your agent's context is a junk drawer」| P2 | ⏸️ 待处理 | ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源 |
@@ -44,6 +44,8 @@
 | **neo4j-labs/create-context-graph（558 ⭐）** | P2 | ✅ 本轮闭环 | 5分钟生成完整知识图谱 Agent 应用，22个预置领域 + 8种框架支持，MCP Server for Claude Desktop；与 OpenAI Agents SDK 形成「执行层 + 记忆层」的完整架构闭环 |
 | **Cursor Long-Running Agents 规划优先架构** | P2 | ✅ 本轮闭环 | 规划先行等待批准（upfront alignment）+ 多 Agent 互检确保完结，36小时聊天平台/30小时web移植/25小时认证重构案例，Planner/Worker vs Anthropic Initializer/Coding Agent 对比，与 Rowboat 形成「工作流控制 + 上下文积累」互补 |
 | **rowboatlabs/rowboat（13,666 ⭐）** | P2 | ✅ 本轮闭环 | 本地优先 AI coworker，持久知识图谱 + Gmail/Calendar/Notion 集成，TypeScript，13,666 Stars，与 Cursor Long-Running Agents 形成「规划+记忆」完整方案 |
+| **OpenAI Codex Agent Loop 工程解析** | P2 | ✅ 本轮闭环 | Agent Loop 的 O(n²) 代价、Prompt Caching 前缀匹配、Compaction 机制、ZDR 与 stateless 的矛盾，5处原文引用 |
+| **strukto-ai/mirage（1,612 ⭐）** | P2 | ✅ 本轮闭环 | 统一虚拟文件系统，bash 工具跨服务操作 S3/Gmail/GitHub/Slack，与 Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补，6处 README 引用 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -52,7 +54,6 @@
 - **Anthropic「2026 Agentic Coding Trends Report」**：8个Trend，Trend 1（SDLC 变革）、Trend 2（Agent 能力）、Trend 5（多 Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点
-- **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
 - **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注，Issue Tracker → Control Plane
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
@@ -69,8 +70,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/cursor-long-running-agents-planning-first-harness-architecture-2026.md` — 新增：Cursor Long-Running Agents 规划优先的 Harness 设计范式分析，来源：Cursor Blog long-running-agents（2026-02/05）+ Anthropic Effective Harnesses，5处原文引用，覆盖：规划先行等待批准、多 Agent 互检确保完结、三个长程案例（36h聊天平台/30h web移植/25h认证重构）、Planner/Worker vs Anthropic Initializer/Coding Agent 对比、通向 Self-Driving Codebases
-- `articles/projects/rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md` — 新增：rowboatlabs/rowboat 推荐，13,666 ⭐，本地优先 AI coworker + 持久知识图谱 + Gmail/Calendar/Notion 集成，与 Cursor Long-Running Agents 形成「工作流控制 + 上下文积累」互补，含 README 5处原文引用
+- `articles/context-memory/openai-codex-agent-loop-engineering-deep-dive-2026.md` — 新增：OpenAI Codex Agent Loop 工程解析，来源：OpenAI 官方博客 Unrolling the Codex Agent Loop（2026-05），5处原文引用，覆盖：Agent Loop O(n²) 代价、Prompt Caching 前缀匹配、Compaction 机制、ZDR 与 stateless 矛盾、与 Anthropic 方案的横向对比
+- `articles/projects/strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026.md` — 新增：strukto-ai/mirage 推荐，1,612 Stars，统一虚拟文件系统，bash 工具跨服务操作 S3/Gmail/GitHub/Slack 等后端，与 Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补，6处 README 原文引用
 
 ---
 

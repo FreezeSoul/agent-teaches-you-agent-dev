@@ -1,107 +1,93 @@
 # AgentKeeper 自我报告
 
-## 执行摘要
+## 📋 本轮任务执行情况
 
-本轮完成 2 篇内容（1 article + 1 project），主题关联：**长程 Agent 的双轨挑战——工作流控制与上下文积累**。
+| 任务 | 执行结果 | 原因/产出 |
+|------|---------|---------|
+| ARTICLES_COLLECT | ✅ | 1篇（context-memory），OpenAI 官方博客 Unrolling the Codex Agent Loop，5处原文引用 |
+| PROJECT_SCAN | ✅ | 1篇（projects），strukto-ai/mirage，1,612 Stars，6处 README 原文引用 |
 
-Cursor Long-Running Agents 的核心发现是：前沿模型在长程任务上的失败是可预测的，解法不在于更强的模型，而在于重新设计 Harness 的控制结构——规划优先（等待批准） + 多 Agent 互检确保完结。这与 Anthropic 的双 Agent 架构（Initializer + Feature List）形成跨平台工程共鸣。
+## 🔍 本轮反思
 
-Rowboat 作为配套项目，提供了本地优先的持久知识图谱实现——所有数据存储为 Markdown 文件，通过 Gmail/Calendar/Notion 深度集成构建跨时间的知识积累。与 Cursor 的「规划-验证循环」在架构层面形成互补：Cursor 解决工作流控制问题，Rowboat 解决上下文积累问题。
+**做对了**：
+- 准确识别了 OpenAI Codex Agent Loop 文章的核心价值：不是讲"如何调用模型"，而是讲"如何在有限上下文窗口内维持可持续运转的 Agent 循环"
+- 提炼出三个关键工程机制：Prompt Caching（前缀匹配）、Compaction（有损压缩）、Context Window 管理
+- Project 选择 Mirage 与 Article 形成互补：Codex 解决上下文管理问题，Mirage 解决工具抽象问题，两者共同指向"Harness 工程的两条路线"
+- 保持了文章产出规范的所有要求：核心论点明确、技术细节落地（代码示例 + 架构图描述）、判断性内容（与 Anthropic 方案对比）、原文引用（5处）
 
-两者共同揭示：未来的 AI coworker 不只是执行工具，而是持续追踪和学习的工作伙伴。
+**待改进**：
+- GitHub Trending 扫描受网络限制，agent-browser 挂起，改用 GitHub API 替代
+- LangChain Interrupt 2026（5/13-14）窗口期临近，需关注 Harrison Chase keynote
 
-## 产出详情
+## 本轮产出
 
-### 1. Article：Cursor Long-Running Agents：规划优先的 Harness 设计范式
+### Article：OpenAI Codex Agent Loop 工程解析
 
-**文件**：`articles/harness/cursor-long-running-agents-planning-first-harness-architecture-2026.md`
+**文件**：`articles/context-memory/openai-codex-agent-loop-engineering-deep-dive-2026.md`
 
-**一手来源**：[Cursor Blog: Expanding our long-running agents research preview](https://cursor.com/blog/long-running-agents)（2026-02）+ [Cursor Blog: Self-driving codebases](https://cursor.com/blog/self-driving-codebases)（2026-01）
+**一手来源**：[OpenAI Blog: Unrolling the Codex Agent Loop](https://openai.com/index/unrolling-the-codex-agent-loop/)（2026-05）
 
 **核心发现**：
-
-- **规划先行，等待批准**：Long-running agents 在 Cursor 中先提出计划并等待批准，而不是立即跳转到执行。认识到提前对齐可以减少后续的返工需求。
-- **多 Agent 互检**：使用计划和多个不同的 Agent 互相检查彼此的工作，以完成更大、更复杂的任务。
-- **案例**：36 小时构建全新聊天平台、30 小时基于现有 web app 实现移动端、25 小时重构认证和 RBAC 系统
-- **内部生产案例**：视频渲染器 Rust 迁移（完整迁移到 Rust + 自定义 kernels）、万行 PR 网络策略代理、安全的 sudo 密码提示
-- **Planner/Worker vs Anthropic Initializer/Coding Agent**：两者都解决长程 Agent 问题，但侧重点不同（规划验证 vs 结构化 Feature List）
+- **O(n²) 问题**：Agent Loop 的代价是上下文窗口的二次增长
+- **Prompt Caching**：Exact Prefix Match 条件，Static Content 靠前、Variable Content 靠后
+- **Compaction**：从手动 `/compact` 到自动 `/responses/compact` 端点的演进
+- **ZDR 矛盾**：不使用 `previous_response_id` 是为了支持 Zero Data Retention，但这导致每次请求都附带完整历史
 
 **原文引用**（5处）：
+1. "Because the agent can execute tool calls that modify the local environment, its 'output' is not limited to the assistant message." — OpenAI Codex Blog
+2. "You might be asking yourself, 'Wait, isn't the agent loop quadratic in terms of the amount of JSON sent to the Responses API over the course of the conversation?' And you would be right." — OpenAI Codex Blog
+3. "When we get cache hits, sampling the model is linear rather than quadratic." — OpenAI Codex Blog
+4. "Cache hits are only possible for exact prefix matches within a prompt. To realize caching benefits, place static content like instructions and examples at the beginning of your prompt, and put variable content, such as user-specific information, at the end." — OpenAI Codex Blog
+5. "While the Responses API does support an optional previous_response_id parameter to mitigate this issue, Codex does not use it today, primarily to keep requests fully stateless and to support Zero Data Retention (ZDR) configurations." — OpenAI Codex Blog
 
-1. "Long-running agents in Cursor propose a plan and wait for approval instead of immediately jumping into execution, recognizing that upfront alignment reduces the need for follow-ups." — Cursor Engineering Blog
-2. "Long-running agents use a plan and multiple different agents checking each other's work in order to follow through on larger, more complex tasks." — Cursor Engineering Blog
-3. "Often, this led to the model running out of context in the middle of its implementation, leaving the next session to start with a feature half-implemented and undocumented." — Anthropic Engineering: Effective harnesses for long-running agents
-4. "In research preview and internal testing, long-running agents completed work with merge rates comparable to other agents." — Cursor Engineering Blog
-5. "Long-running agents in Cursor are an early milestone on the path toward self-driving codebases, where agents can handle more work with less human intervention." — Cursor Engineering Blog
+### Project：strukto-ai/mirage 推荐
 
-### 2. Project：rowboatlabs/rowboat 推荐
+**文件**：`articles/projects/strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026.md`
 
-**文件**：`articles/projects/rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md`
-
-**项目信息**：rowboatlabs/rowboat，13,666 Stars，TypeScript（2025-01-13 创建）
+**项目信息**：strukto-ai/mirage，1,612 Stars，TypeScript（2026-05-06 创建）
 
 **核心价值**：
+- **统一虚拟文件系统**：S3/Gmail/GitHub/Slack 等后端挂载为文件目录，bash 工具跨服务统一操作
+- **Pipeline 跨服务**：`cp /s3/file.csv /data/file.csv` 在不同后端之间流动
+- **框架集成**：OpenAI Agents SDK、Vercel AI SDK、LangChain、Pydantic AI、OpenHands、Mastra
+- **两层缓存**：Index Cache（目录元数据）+ File Cache（文件字节内容）
 
-- **本地优先**：所有数据存储为 Markdown 文件，无专有格式或云端锁定，随时可审查、编辑、备份或删除
-- **持久知识图谱**：不同于传统 RAG 从文档中检索，Rowboat 将工作流本身构建为知识图谱——邮件、决策、会议都成为图谱中的节点，关系显式且可编辑
-- **多工具深度集成**：Gmail（邮件上下文）、Google Calendar（会议历史）、Notion/Firebase（笔记和文档）、MCP 支持（可扩展的工具生态）
-- **具体案例**：Build me a deck about our next quarter roadmap——从邮件和会议中提取上下文，生成基于真实历史积累的 roadmap PDF
+**主题关联**：Codex Agent Loop 解决上下文管理问题（Compaction、Prompt Caching），Mirage 解决工具抽象问题（统一 VFS 让 bash 工具跨后端工作）。两者共同指向：Harness 工程需要同时关注"上下文"和"工具"两个维度的管理。
 
-**主题关联**：Cursor Long-Running Agents 解决了长程 Agent 的「工作流控制」问题（规划-验证循环），Rowboat 解决了长程 Agent 的「上下文积累」问题（持久知识图谱）。两者共同指向「AI coworker 不是一次性工具，而是持续工作的伙伴」这一方向。
-
-**原文引用**（5处）：
-
-1. "Rowboat connects to your email and meeting notes, builds a long-lived knowledge graph, and uses that context to help you get work done — privately, on your machine." — Rowboat README
-2. "Most AI tools reconstruct context on demand by searching transcripts or documents. Rowboat maintains long-lived knowledge instead: context accumulates over time; relationships are explicit and inspectable; notes are editable by you, not hidden inside a model." — Rowboat README
-3. "Everything lives on your machine as plain Markdown. No proprietary formats or hosted locks-in. You can inspect, edit, back up, or delete everything at any time." — Rowboat README
-4. "You can do things like: Build me a deck about our next quarter roadmap, based on context from your email and meetings." — Rowboat README
-5. "Rowboat builds memory from the work you already do, including: Gmail (email), Google Calendar (meetings), Rowboat meeting notes or Notion/Firebase." — Rowboat README
+**原文引用**（6处）：
+1. "Mirage is a Unified Virtual File System for AI Agents: a single tree that mounts services and data sources like S3, Google Drive, Slack, Gmail, and Redis side-by-side as one filesystem." — Mirage README
+2. "AI agents reach every backend with the same handful of Unix-like tools, and pipelines compose across services as naturally as on a local disk." — Mirage README
+3. "Any LLM that already knows bash can use Mirage out of the box, with zero new vocabulary." — Mirage README
+4. "One filesystem, every backend. Every service speaks the same filesystem semantics, so agents reason about one abstraction instead of N SDKs and M MCPs, leaning on the filesystem and bash vocabulary LLMs are most fluent in." — Mirage README
+5. "Works with major agent application frameworks: OpenAI Agents SDK, Vercel AI SDK (TypeScript), LangChain, Pydantic AI, CAMEL, and OpenHands." — Mirage README
+6. "Portable workspaces: clone, snapshot, and version your environment. Move agent runs between machines without restarting or reconfiguring the system." — Mirage README
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic/OpenAI/Cursor 官方博客，发现 Cursor Long-Running Agents 文章（2026-02-12/05 持续更新）
-2. **深度内容获取**：web_fetch 获取 Cursor Long-Running Agents + Anthropic Effective Harnesses 两篇原文
-3. **主题关联确认**：Cursor 的「规划-执行分离」与 Anthropic 的「Initializer + Feature List」形成跨平台工程共鸣
-4. **评分**：来源质量（Cursor 官方博客）× 时效（2月/5月持续更新）× 重要性（通向 self-driving codebases）= 高分 → 写 Article
-5. **写作**：Article（~4000字，含5处原文引用）
-6. **Projects 扫描**：GitHub API 发现 rowboatlabs/rowboat（13,666 stars，TypeScript，2025-01 创建）
-7. **防重检查**：检查 articles/projects/README.md，未收录 → 写 Project 推荐
-8. **主题关联设计**：Rowboat 作为知识图谱的本地实现，与 Article 的「规划-验证循环」形成「工作流控制 + 上下文积累」的架构互补
-9. **Git 操作**：`git add`（新文件 + README 更新）→ `git commit` → `git push`
-10. **.agent 更新**：state.json + PENDING.md + REPORT.md + HISTORY.md
+1. **信息源扫描**：Tavily 搜索 Anthropic/OpenAI/Cursor 官方博客，发现 OpenAI Codex Agent Loop 文章
+2. **git stash pop**：恢复上一轮未提交的 state.json 变更
+3. **内容采集**：web_fetch 获取 Codex Agent Loop 原文
+4. **GitHub Trending 扫描**：GitHub API（因 agent-browser 挂起，改用 API），发现 Mirage（1,612 Stars，2026-05-06 创建）
+5. **防重检查**：检查 articles/projects/README.md，未收录 Mirage
+6. **写作**：Article（~4000字，含5处原文引用）+ Project（~3000字，含6处 README 引用）
+7. **主题关联设计**：Codex 上下文管理 vs Mirage 工具抽象，两者共同指向 Harness 工程的两个方向
+8. **Git 操作**：`git add` → `git commit` → `git push`
+9. **.agent 更新**：state.json + PENDING.md + REPORT.md
 
-## 反思
-
-**做得好**：
-
-- 准确捕捉了 Cursor Long-Running Agents 的核心发现：前沿模型在长程任务上的失败是可预测的，解法在于重新设计 Harness 的控制结构（规划优先 + 多 Agent 互检）
-- 与 Anthropic 的双 Agent 架构形成跨平台工程共鸣，而非孤立介绍 Cursor 的方案
-- Projects 选择了 rowboatlabs/rowboat，因为它提供了本地优先的持久知识图谱，与 Article 的「规划-验证循环」在架构层面形成互补（工作流控制 + 上下文积累）
-- Rowboat 的「显式关系」设计哲学与 Cursor 的「规划优先」模式异曲同工——都不是依赖模型自己记住，而是通过外部结构让记忆变得可审查和可控
-- 保持了文章产出规范中的所有要求：核心论点明确、技术细节落地（架构图 + 案例数据）、判断性内容（Anthropic vs Cursor 对比）、原文引用（5处）
-
-**待改进**：
-
-- LangChain Interrupt 2026（5/13-14）窗口期临近，关注 Harrison Chase keynote 发布内容
-- Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析（与 Cursor 的安全关键任务案例关联）
-- OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）500% PR 增长数据待跟进
-
-## 下轮方向
-
-- **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：关注框架级架构更新，预期 Harrison Chase keynote 发布
-- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**
-- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
-
----
-
-## 本轮数据
+## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles 文章 | 1（harness）|
+| 新增 articles 文章 | 1（context-memory）|
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Article 5 处 / Project 5 处 |
-| commit | 2（6609937 内容 + 499a53a HISTORY.md） |
+| 原文引用数量 | Article 5 处 / Project 6 处 |
+| commit | 1（140bf3a） |
+
+## 🔮 下轮规划
+
+- **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：关注框架级架构更新
+- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**
+- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
 
 ---
 
