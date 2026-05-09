@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-09 21:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-09 21:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-09 23:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-09 23:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -40,6 +40,8 @@
 | agentmemory（rohitg00，3,047 ⭐）| P2 | ✅ 本轮闭环 | 免 DB 持久记忆基础设施，iii engine 零外部依赖，95.2% R@5，16+ Agent 共享记忆服务器，与 Measuring Agent Autonomy 形成「上下文坍缩 → 记忆基础设施」的主题关联 |
 | Cursor 3 第三时代（Agent Fleet 新范式）| P2 | ✅ 本轮闭环 | 三时代演进（Tab→同步Agent→异步Fleet），35% PR 来自云端Agent，15x Agent使用增长，Fleet调度层 + Skills能力层组合架构 |
 | Claude Code Memory Setup（590 ⭐）| P2 | ✅ 本轮闭环 | Obsidian Zettelkasten + Graphify 三层记忆体系，71.5x Token优化，499x查询节省，0 token生成成本（AST模式），与 Cursor 3 第三时代形成「范式定义 → 基础设施解法」闭环 |
+| **OpenAI Agents SDK 原生沙箱与 Manifest 抽象** | P2 | ✅ 本轮闭环 | 可配置内存 + Sandbox-aware orchestration + Codex-like filesystem tools；Manifest 声明式跨提供商抽象；Snapshotting + Rehydration 持久化；与 Cursor Cloud Agents 形成技术路径对比 |
+| **neo4j-labs/create-context-graph（558 ⭐）** | P2 | ✅ 本轮闭环 | 5分钟生成完整知识图谱 Agent 应用，22个预置领域 + 8种框架支持，MCP Server for Claude Desktop；与 OpenAI Agents SDK 形成「执行层 + 记忆层」的完整架构闭环 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -49,7 +51,7 @@
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点
 - **OpenAI Codex Agent Loop 工程细节**：Michael Bolin 工程博客系列
-- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人 Karri Saarinen 关注，Issue Tracker → Control Plane
+- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注，Issue Tracker → Control Plane
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
 - **Cursor Browser Visual Editor**：DOM 可视化编辑，Cursor 3 的新工具链方向
@@ -65,8 +67,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/cursor-third-era-fleet-agents-paradigm-shift-2026.md` — 新增：Cursor 3 第三时代分析，三时代演进（Tab→同步Agent→异步Fleet），35% PR 来自云端Agent，15x Agent使用增长，Fleet调度层 + Skills能力层组合架构，与 Claude Code Memory Setup 形成「范式定义 → 基础设施解法」闭环
-- `articles/projects/claude-code-memory-setup-obsidian-graphify-token-optimization-2026.md` — 新增：Claude Code Memory Setup 推荐，590 ⭐，Obsidian Zettelkasten + Graphify 三层记忆体系，71.5x Token优化，499x查询节省，0 token生成成本（关联：Cursor 3 第三时代 → 长程Agent上下文连续性 → 记忆基础设施的系统性解决方案）
+- `articles/harness/openai-agents-sdk-native-sandbox-harness-2026.md` — 新增：OpenAI Agents SDK 新版核心能力分析，原生沙箱执行（Manifest 跨提供商抽象）+ Model's natural operating pattern（Harness 对齐模型最优执行模式）+ Snapshotting + Rehydration（断点续传）+ 与 Cursor Cloud Agents 技术路径对比（Manifest vs 平台托管）
+- `articles/projects/create-context-graph-neo4j-scaffolding-2026.md` — 新增：neo4j-labs/create-context-graph 推荐，558 ⭐，Neo4j Labs 官方项目，5分钟生成完整知识图谱 Agent 应用（FastAPI + Next.js + Neo4j），22个预置领域 + 8种框架支持，MCP Server for Claude Desktop（关联：OpenAI Agents SDK Sandbox 负责任务执行，Context Graph 负责任务上下文 = 完整生产级 Agent 架构）
 
 ---
 
