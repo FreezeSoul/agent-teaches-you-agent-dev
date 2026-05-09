@@ -5,6 +5,8 @@
 
 ---
 
+- [rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026](./rowboatlabs-rowboat-local-first-ai-coworker-13666-stars-2026.md) — 本地优先的 AI coworker，13,666 Stars，TypeScript，构建持久知识图谱 + Gmail/Calendar/Notion 深度集成，与 Cursor Long-Running Agents 形成「工作流控制 + 上下文积累」的互补（关联：规划优先 Harness 架构 → 长程 Agent 需要外部化的上下文积累机制）
+
 - [claude-code-memory-setup-obsidian-graphify-token-optimization-2026](./claude-code-memory-setup-obsidian-graphify-token-optimization-2026.md) — 71.5x Token 优化的 Claude Code 记忆方案，Obsidian Zettelkasten + Graphify 知识图谱 + Chat Import Pipeline 三层体系，499x 查询 token 节省，0 token 生成成本（AST 模式），跨项目知识复用（关联：Cursor 3 第三时代 → 长程 Agent 上下文连续性 → 记忆基础设施的系统性解决方案）
 
 - [agentmemory-persistent-memory-ai-coding-agents-2026](./agentmemory-persistent-memory-ai-coding-agents-2026.md) — 免 DB 的持久记忆基础设施，iii engine 实现零外部依赖，95.2% R@5 检索精度 + 92% token 节省，16+ Agent 共享统一记忆服务器（关联：Anthropic Measuring Agent Autonomy → 长程 Agent 的上下文坍缩问题 → 记忆基础设施的系统性解决方案）
@@ -25,7 +27,9 @@
 
 ## 已推荐项目（防重索引）
 
-- [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph) — 5分钟生成领域特定知识图谱应用，22个预置领域 + 8种框架支持 + MCP Server for Claude Desktop，558 Stars（关联：OpenAI Agents SDK Sandbox + Manifest → Agent 记忆层的完整解决方案）
+- [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) — 本地优先的 AI coworker，13,666 Stars，TypeScript，持久知识图谱 + Gmail/Calendar/Notion 深度集成（关联：Cursor Long-Running Agents → 长程 Agent 的上下文积累问题 → 外部化知识图谱的工程实现）
+
+- [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph)
 
 - [2FastLabs/agent-squad](https://github.com/2FastLabs/agent-squad) — 意图分类驱动的多 Agent 编排框架，AWS Labs → 2FastLabs，Classifier-First 动态路由 + SupervisorAgent 并行协调，Python/TypeScript 双语言
 
