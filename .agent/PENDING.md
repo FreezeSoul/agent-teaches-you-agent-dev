@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 13:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 13:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 15:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 15:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -48,6 +48,8 @@
 | CudaForge（OptimAI-Lab，80 ⭐）| P2 | ✅ 本轮闭环 | 训练免费的 Multi-Agent CUDA 工作流，SKILL.md 规范驱动，与 Markdown 协调规范形成「理论→工程实现」闭环，3处 README 引用 |
 | Claude Code April 2026 Postmortem（三 bug 导致模型退化）| P2 | ✅ 本轮闭环 | Anthropic Engineering 复盘，三个产品层 bug（推理effort/缓存/提示词）导致六周性能下降，harness 是独立能力维度，5处原文引用 |
 | mcpware/cross-code-organizer（310 ⭐）| P2 | ✅ 本轮闭环 | 跨 Claude Code/Codex CLI/MCP 配置管理仪表板，Security scanning + Context budget + Backups，与 Claude Code April Postmortem 形成主题关联（配置管理 → 问题预防） |
+| **Anthropic AI-Resistant Technical Evaluations（三轮迭代）**| P2 | ✅ 本轮闭环 | 三轮迭代（真实工作→增加深度→Zachtronics风格），时间约束是关键变量，工具建设判断是AI难以自动化的维度，8处原文引用，与 FeatureBench 形成「AI抗性设计 vs 能力边界检测」互补 |
+| **LiberCoders/FeatureBench（ICLR 2026）**| P2 | ✅ 本轮闭环 | 功能级编程评测框架，Fast split 57.2秒/实例，支持5个主流Agent框架，与 Anthropic AI-Resistant Evaluations 形成主题关联，3处README引用 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -68,11 +70,12 @@
 - **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
 - **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools，ohmo 个人 Agent
+- **InnovatorBench（ICLR 2026）**：Agent 创新研究能力评测，GAIR-NLP 出品
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/anthropic-claude-code-april-2026-postmortem-three-bugs-six-weeks-2026.md` — 新增：Claude Code April 2026 Postmortem 分析，来源：Anthropic Engineering Blog（2026-04-23），5处原文引用。覆盖：三个独立产品层 bug（默认推理 effort 变更/缓存优化 bug/提示词变更）、六周性能下降的级联效应、harness 层是独立能力维度的工程教训
-- `articles/projects/mcpware-cross-code-organizer-cross-harness-config-dashboard-310-stars-2026.md` — 新增：mcpware/cross-code-organizer 推荐，310 Stars，跨 Claude Code/Codex CLI/MCP 配置管理仪表板（Security scanning + Context budget + Backups），与 Claude Code April Postmortem 形成「配置管理 → 问题预防」主题关联
+- `articles/fundamentals/anthropic-ai-resistant-technical-evaluations-three-iterations-2026.md` — 新增：Anthropic AI抗性评估设计分析，来源：Anthropic Engineering Blog（Tristan Hume），8处原文引用。覆盖：三轮迭代（真实工作风格→增加深度→Zachtronics风格），时间约束是关键变量，工具建设判断是AI难以自动化的维度
+- `articles/projects/LiberCoders-FeatureBench-feature-level-agentic-coding-benchmark-2026.md` — 新增：FeatureBench 推荐，ICLR 2026，功能级编程评测框架，Fast split 57.2秒/实例，支持5个主流Agent框架，与 Article 形成「AI抗性设计 vs 能力边界检测」的主题关联
 
 ---
 
