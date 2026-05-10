@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 07:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 07:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 09:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 09:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -41,6 +41,9 @@
 | rowboatlabs/rowboat（13,666 ⭐）| P2 | ✅ 本轮闭环 | 本地优先 AI coworker，持久知识图谱 + Gmail/Calendar/Notion 集成，TypeScript，13,666 Stars，与 Cursor Long-Running Agents 形成「规划+记忆」完整方案 |
 | strukto-ai/mirage（1,612 ⭐）| P2 | ✅ 本轮闭环 | 统一虚拟文件系统，bash 工具跨服务操作 S3/Gmail/GitHub/Slack，与 Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补，6处 README 引用 |
 | neo4j-labs/create-context-graph（558 ⭐）| P2 | ✅ 本轮闭环 | 5分钟生成完整知识图谱 Agent 应用，22个预置领域 + 8种框架支持，MCP Server for Claude Desktop；与 OpenAI Agents SDK 形成「执行层 + 记忆层」的完整架构闭环 |
+| Cursor Multi-Agent CUDA Kernel 38% 加速 | P2 | ✅ 本轮闭环 | 235 个 CUDA Kernel，3 周自主优化，Planner/Worker + Self-Benchmarking 闭环，与 Anthropic C Compiler 形成方法论印证 |
+| Multi-Agent Markdown 协调规范 | P2 | ✅ 本轮闭环 | 协调协议从代码层下沉到 Markdown 声明式规范，Self-Benchmarking 闭环，5处原文引用 |
+| CudaForge（OptimAI-Lab，80 ⭐）| P2 | ✅ 本轮闭环 | 训练免费的 Multi-Agent CUDA 工作流，SKILL.md 规范驱动，与 Markdown 协调规范形成「理论→工程实现」闭环，3处 README 引用 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -52,7 +55,6 @@
 - **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
 - **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
-- **Cursor Browser Visual Editor**：DOM 可视化编辑，Cursor 3 的新工具链方向
 
 ## 📌 Projects 线索
 
@@ -64,8 +66,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/openai-codex-safe-deployment-security-control-plane-2026.md` — 新增：OpenAI Codex 安全运行架构，来源：OpenAI Engineering Blog（2026-05），5处原文引用，覆盖：Sandbox 边界控制 / Auto-review subagent 审批策略 / Agent-native OpenTelemetry + AI triage / Credential OS keyring 分离，与 Anthropic Initializer Pattern 形成「企业合规视角 + 工程架构视角」完整方案
-- `articles/projects/Fangcun-AI-SkillWard-security-scanner-agent-skills-2026.md` — 新增：SkillWard 安全扫描推荐，123 Stars，三阶段扫描（静态+LLM+Docker沙箱），实测 5,000 Skills ~25% 标记不安全，约 1/3 沙箱样本暴露运行时威胁，与 Codex Safe Deployment 形成「发布前扫描 + 运行控制」安全闭环，4处 README 原文引用
+- `articles/fundamentals/multi-agent-coordination-markdown-specification-2026.md` — 新增：Multi-Agent 协调协议的本质重构，从代码约束到 Markdown 声明式规范。来源：Cursor Blog（2026-04-14），5处原文引用。覆盖：协调逻辑下沉 → 声明式优于过程式 → Self-Benchmarking 闭环 → 边界约束释放探索效率
+- `articles/projects/OptimAI-Lab-CudaForge-training-free-multi-agent-cuda-kernel-2026.md` — 新增：CudaForge 推荐，80 Stars，训练免费的 Multi-Agent CUDA Kernel 工作流，SKILL.md 规范驱动，与 Article 形成「理论→工程实现」闭环，3处 README 原文引用
 
 ---
 
