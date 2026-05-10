@@ -146,6 +146,8 @@
 
 ## 推荐文章索引
 
+- [Martian-Engineering/Volt](./Martian-Engineering-volt-lossless-context-management-2026.md) — 无损上下文管理，273 Stars，LCM 双态架构（Immutable Store + Active Context）+ 三级升级协议保证收敛，在 OOLONG benchmark 32K-1M tokens 所有长度上超过 Claude Code，与 Anthropic 上下文工程形成「理论框架 → 工程实现」的完整闭环（关联：上下文压缩 → 确定性压缩引擎 → Volt LCM）
+
 - [LiberCoders-FeatureBench-feature-level-agentic-coding-benchmark-2026](./LiberCoders-FeatureBench-feature-level-agentic-coding-benchmark-2026.md) — ICLR 2026 功能级编程 Agent 评测框架，Fast split 57.2 秒/实例，支持 Claude Code/Codex/OpenHands 等 5 个主流 Agent 框架，与 Anthropic AI-Resistant Evaluations 形成「能力边界检测 vs AI 抗性设计」的互补（关联：AI-Resistant Evaluations → 细粒度能力评测趋势 → FeatureBench 功能级评测框架）
 
 - [context-evaluator-packmindhub-ai-agent-config-health-2026](./context-evaluator-packmindhub-ai-agent-config-health-2026.md) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md 质量问题，自动修复 + Before/After 对比（关联：Agent 配置过载 → 配置文件质量的系统性诊断）
