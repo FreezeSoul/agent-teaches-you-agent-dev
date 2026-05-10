@@ -188,3 +188,12 @@
 **反思**：本轮从 GitHub Trending 发现 `anthropics/financial-services` 仓库（Anthropic 官方，14,871 ⭐），提供了 Agent Skills 从「技能定义」到「生产部署」的完整闭环分析——回答了「skill 编写后如何与 agent 实例绑定并部署」的问题。AI-Trader 作为 project 推荐，代表了「Agent-Native 平台」的新兴类型：把平台适配成 Agent 可读的 Skill 接口，而非让 Agent 适应人的 UI。两篇文章形成主题关联：Anthropic 展示的是企业级 skill bundling 架构，AI-Trader 展示的是去中心化 skill-first 平台模式。
 
 ---
+
+## 2026-05-10 17:57 ✅ committed: 5d177ba
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「上下文工程的范式转移」（context-memory/），来源：Anthropic Engineering Blog，8处原文引用。覆盖：Prompt Engineering → Context Engineering范式转移，注意力预算有限资源，Context Rot现象，Compaction/Note-taking/Sub-agents三大支柱，Claude Code混合模型案例。与Volt形成「理论 → 工程实现」闭环 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇「Volt — 无损上下文管理」（projects/），273 Stars，LCM双态架构（Immutable Store + Active Context）+ 三级升级协议，OOLONG benchmark全面超越Claude Code（32K-1M tokens），4处README引用 |
+
+**主题关联**：Anthropic Context Engineering（理论框架：注意力预算/压缩/笔记/多Agent） ↔ Volt LCM（工程实现：确定性双态架构/三级升级协议）= 完整的长程Agent上下文管理方法论
