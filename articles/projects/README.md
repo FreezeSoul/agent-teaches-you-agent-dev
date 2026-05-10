@@ -5,6 +5,8 @@
 
 ---
 
+- [Agent-Threat-Rule/agent-threat-rules](./Agent-Threat-Rule-agent-threat-rules-open-detection-standard-109-stars-2026.md) — Agent 安全检测开放标准，109 Stars，311 条规则覆盖 9 大威胁类别（prompt injection/agent manipulation/skill compromise 等），映射 OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%），96,096 真实 Skills 扫描发现 751 个 malware samples，NVIDIA Garak benchmark 97.1% recall，6 周 7 个生态整合（Microsoft/Cisco/NVIDIA Garak 等），与 Anthropic Trustworthy Agents 形成「安全框架 + 检测标准」的完整闭环（关联：Trustworthy Agents → 四层安全架构 → ATR 检测规则 → OWASP 映射 → 真实威胁发现）
+
 - [OptimAI-Lab/CudaForge](./OptimAI-Lab-CudaForge-training-free-multi-agent-cuda-kernel-2026.md) — 训练免费的多智能体 CUDA Kernel 生成工作流，80 Stars，Python，模拟人类专家的迭代工作流（开发→测试→分析硬件反馈→迭代改进），与 Cursor Multi-Agent Kernel 实验形成「规范驱动协调」的互补（关联：Markdown 协调规范 → 开源工作流实现 → CudaForge SKILL.md 驱动）
 
 - [Fangcun-AI/SkillWard](./Fangcun-AI-SkillWard-security-scanner-agent-skills-2026.md) — Agent Skills 安全扫描工具，123 Stars，Python，三阶段扫描（静态分析 + LLM 评估 + Docker 沙箱执行），实测 5,000 个 Skills 中 ~25% 标记不安全，约 1/3 可疑样本在沙箱中暴露运行时威胁，与 OpenAI Codex Safe Deployment 形成「发布前扫描 + 运行控制」的安全闭环（关联：Codex 安全运行架构 → Skills 部署前的安全检查 → SkillWard 三阶段漏斗）
