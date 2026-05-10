@@ -4,95 +4,96 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（context-memory），主题：Anthropic上下文工程（Prompt Engineering → Context Engineering范式转移），来源：Anthropic Engineering Blog，8处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 1篇（projects），Martian-Engineering/Volt，273 Stars，LCM无损上下文管理，与Article形成「理论 → 工程实现」闭环，4处README引用 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals），主题：Anthropic GAN-Style 三代理架构，来源：Anthropic Engineering Blog（Prithvi Rajasekaran，2026年3月），8处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 1篇（projects），coleam00/adversarial-dev，108 Stars，TypeScript，双 SDK 支持，与 Article 形成「理论 → 工程实现」闭环，3处 README 引用 |
 
 ## 🔍 本轮反思
 
 **做对了**：
-- 命中 Anthropic Engineering Blog 最新文章「Effective context engineering for AI agents」——这是上下文工程领域的权威一手来源
-- 识别了 Volt 作为 Anthropic 理论的工程实现——两者形成完美的「理论框架 → 工程实现」闭环
-- 主题关联设计：Anthropic Context Engineering（上下文压缩/笔记/多Agent三大支柱）↔ Volt LCM（确定性双态架构）= 完整的长程Agent上下文管理方法论
-- 正确识别了"注意力预算有限资源"这个核心洞察，与上下文压缩的工程实践形成对应
+- 命中 Anthropic Engineering 最新文章「Harness design for long-running application development」（2026年3月24日）
+- 正确识别 GAN-Style 三代理架构（Planner/Generator/Evaluator）与之前所有 Article 的主题差异性
+- adversarial-dev 项目与 Article 形成完美的「理论 → 生产级工程实现」闭环
+- 主题关联设计：Anthropic 论文（为什么分离有效、成本权衡）↔ adversarial-dev（双 SDK 实现、Sprint Contract、Evaluator 攻击机制）= 完整的方法论 + 工程路径
 
 **待改进**：
 - GitHub Trending 直接扫描受限，依赖 Tavily 搜索 + GitHub API 替代
-- 部分高热度项目 Stars 数据需要通过 API 补充
+- adversarial-dev Stars 较低（108），但架构完整度较高，适合早期贡献者参与
 
 ## 本轮产出
 
-### Article：上下文工程的范式转移
+### Article：GAN-Style 三代理架构
 
-**文件**：`articles/context-memory/anthropic-effective-context-engineering-agents-2026.md`
+**文件**：`articles/fundamentals/anthropic-gan-style-three-agent-harness-architecture-2026.md`
 
-**一手来源**：[Anthropic Engineering: Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)（2026年）
+**一手来源**：[Anthropic Engineering: Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)（2026年3月）
 
 **核心发现**：
-- **范式转移**：从 Prompt Engineering（如何写好提示词）到 Context Engineering（如何在有限注意力预算内最大化信号密度）
-- **注意力预算约束**：LLM 的上下文窗口不是硬盘，而是有边际效应递减的注意力预算。每个新 token 消耗预算，增加策展必要性
-- **Context Rot 现象**：上下文窗口 token 增加时，模型准确回忆信息的能力下降——所有 Transformer 模型共同特征
-- **三大工程支柱**：Compaction（压缩）、Structured Note-taking（结构化笔记）、Sub-agent Architectures（多Agent架构）
-- **Claude Code 混合模型**：CLAUDE.md 预加载 + glob/grep 即时检索，混合预推理和即时探索策略
+- **单代理两大失败模式**：上下文坍缩（Transformer 注意力预算约束）+ 自我评估失效（认知偏见，Agent 总是给出过于宽容的评价）
+- **GAN 启发核心洞察**：分离生成与评估，引入独立 Evaluator 建立对抗反馈循环
+- **Frontend Design 实验**：四维评估标准（Design Quality/Originality/Craft/Functionality），设计质量权重最高，明确penalized「AI slop」模式
+- **迭代反馈循环**：Evaluator 主动操作实时页面（非静态截图），5-15 次迭代，荷兰艺术博物馆案例第10次迭代的创造性跳跃
+- **Sprint Contract 机制**：Generator 和 Evaluator 在每个 Sprint 前协商「完成标准」，用 JSON 定义具体测试方式而非模糊描述
+- **真实成本对比**：GAN Harness 6hr/$200 vs Solo Agent 20min/$9，质量差异立即可见
 
 **原文引用**（8处）：
-1. "Context engineering is the art and science of curating what will go into the limited context window from that constantly evolving universe of possible information." — Anthropic Engineering
-2. "Every new token introduced depletes this budget by some amount, increasing the need to carefully curate the tokens available to the LLM." — Anthropic Engineering
-3. "Context, therefore, must be treated as a finite resource with diminishing marginal returns. Like humans, who have limited working memory capacity, LLMs have an 'attention budget'." — Anthropic Engineering
-4. "At one end of the spectrum, we see brittle if-else hardcoded prompts, and at the other end we see prompts that are overly general or falsely assume shared context." — Anthropic Engineering
-5. "If a human engineer can't definitively say which tool should be used in a given situation, an AI agent can't be expected to do better." — Anthropic Engineering
-6. "Rather than pre-processing all relevant data up front, agents built with the 'just in time' approach maintain lightweight identifiers and use these references to dynamically load data into context at runtime using tools." — Anthropic Engineering
-7. "This approach mirrors human cognition: we generally don't memorize entire corpuses of information, but rather introduce external organization and indexing systems like file systems, inboxes, and bookmarks to retrieve relevant information on demand." — Anthropic Engineering
-8. "Given the rapid pace of progress in the field, 'do the simplest thing that works' will likely remain our best advice for teams building agents on top of Claude." — Anthropic Engineering
+1. "When asked to evaluate work they've produced, agents tend to respond by confidently praising the work—even when, to a human observer, the quality is obviously mediocre." — Anthropic Engineering
+2. "Separating the agent doing the work from the agent judging it proves to be a strong lever to address this issue." — Anthropic Engineering
+3. "Tuning a standalone evaluator to be skeptical turns out to be far more tractable than making a generator critical of its own work" — Anthropic Engineering
+4. "Including phrases like 'the best designs are museum quality' pushed designs toward a particular visual convergence" — Anthropic Engineering
+5. "It was the kind of creative leap that I hadn't seen before from a single-pass generation." — Anthropic Engineering
+6. "The harness was over 20x more expensive, but the difference in output quality was immediately apparent." — Anthropic Engineering
+7. "Authors miss errors in their own writing that a fresh reader catches immediately." — MindStudio
+8. "The model's generation process is partly autocomplete: it continues patterns, which makes it likely to reproduce the same reasoning error in both the generation and evaluation steps." — MindStudio
 
-### Project：Volt — 无损上下文管理
+### Project：adversarial-dev
 
-**文件**：`articles/projects/Martian-Engineering-volt-lossless-context-management-2026.md`
+**文件**：`articles/projects/coleam00-adversarial-dev-gan-style-three-agent-harness-2026.md`
 
-**项目信息**：Martian-Engineering/volt，273 Stars，TypeScript，MIT License，Voltropy 团队
+**项目信息**：coleam00/adversarial-dev，108 Stars，TypeScript，MIT License，基于 Anthropic 2026年3月工程博客
 
 **核心价值**：
-- **LCM 架构**：双态内存（Immutable Store + Active Context）+ DAG 摘要节点，确定性数据库后端替代模型随机摘要
-- **三级升级协议**：软阈值触发异步压缩，若压缩失败自动升级，最终保证收敛
-- **Dolt 检索遍历**：Hook Pointer → Bindle/Stub → Expansion 的无损指针链
-- **Operator-Level Recursion**：LLM-Map 和 Agentic-Map 将控制流从随机层移到确定性层
-- **Benchmark 验证**：OOLONG long-context benchmark，在 32K-1M tokens 所有长度上超过 Claude Code（使用 Opus 4.6）
+- **双 SDK 支持**：Claude Agent SDK（query() async generators）+ Codex SDK（threads）同期实现，共享 prompts/types/orchestration flow
+- **Sprint Contract 协商**：JSON 结构化「完成标准」，Evaluator 设置 trap（边缘案例、收紧阈值），Generator 不达标即返回重构建
+- **Evaluator 主动攻击机制**：运行应用、探测失败、测试 Generator 没考虑到的边缘案例，1-10 分评分 + 硬通过阈值（7/10）
+- **文件式通信**：通过文件系统（spec.md/contracts/feedback/progress.json）而非共享对话历史传递状态，保持每个 Agent context 专注
 
-**主题关联**：Anthropic Context Engineering（理论框架：Compaction压缩/笔记外部化/多Agent分治）↔ Volt LCM（工程实现：确定性压缩引擎/双态架构/三级升级协议）= 完整的长程Agent上下文管理方法论
+**主题关联**：Anthropic GAN-Style 三代理架构（理论框架：自我评估失效→分离有效→GAN对抗反馈→成本权衡）↔ adversarial-dev（工程实现：双 SDK + Sprint Contract + Evaluator 攻击 + 文件式通信）= 完整的方法论 + 工程路径
 
-**README 引用**（4处）：
-1. "LCM addresses this by shifting the burden of memory architecture from the model back to the engine. Rather than asking the model to invent a memory strategy, LCM provides a deterministic, database-backed infrastructure."
-2. "Volt with LCM achieves higher scores than Claude Code on the OOLONG long-context benchmark, including at every context length between 32K and 1M tokens, using Opus 4.6."
-3. "This guarantees convergence."
-4. "The core data structure is a Directed Acyclic Graph (DAG) maintained in a persistent store that supports transactional writes, foreign-key integrity, and indexed search."
+**README 引用**（3处）：
+1. "The evaluator doesn't just review code -- it's an adversary. It runs the application, probes for failures, tests edge cases the generator didn't think of, and scores each criterion on a 1-10 scale with a hard pass threshold." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
+2. "This architecture is inspired by Generative Adversarial Networks (GANs), where a generator creates outputs and a discriminator tries to reject them, iterating until quality emerges from the tension between the two." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
+3. "As models improve, harnesses simplify. When Opus 4.5 shipped, Anthropic removed context resets from their harness because the model could maintain coherence natively." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现「Effective context engineering for AI agents」文章
-2. **内容采集**：web_fetch 获取原文，分析上下文工程的核心概念（注意力预算/Context Rot/三大支柱）
-3. **主题发现**：Volt 项目通过 Tavily 搜索发现，与 Article 主题紧密关联（上下文压缩 → 确定性压缩引擎）
-4. **GitHub 数据**：通过 GitHub API 获取 Volt 准确 Stars 数据（273 Stars）
-5. **GitHub README**：通过 curl 获取 Volt 完整 README，分析 LCM 技术细节
-6. **写作**：Article（~9000字，含8处原文引用）+ Project（~3800字，含4处 README 引用）
-7. **主题关联设计**：Anthropic Context Engineering ↔ Volt LCM = 「理论 → 工程实现」完整闭环
-8. **Git 操作**：`git add` → `git commit` → `git push` → `5d177ba`
-9. **更新 .agent/**：PENDING.md（更新本轮产出）
+1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现「Harness design for long-running application development」文章（2026年3月24日）
+2. **内容采集**：web_fetch 获取原文，分析 GAN-Style 三代理架构的设计原理
+3. **主题发现**：通过 Tavily 搜索发现 adversarial-dev 项目，实现同一主题的工程落地
+4. **GitHub 数据**：通过 GitHub API 获取 adversarial-dev 准确 Stars 数据（108 Stars）
+5. **GitHub README**：通过 curl 获取完整 README，分析双 SDK 支持、Sprint Contract、Evaluator 机制等技术细节
+6. **写作**：Article（~6000字，含8处原文引用）+ Project（~3800字，含3处 README 引用）
+7. **主题关联设计**：Anthropic GAN-Style 三代理架构 ↔ adversarial-dev = 「理论 → 生产级工程实现」完整闭环
+8. **Git 操作**：`git add` → `git commit` → `git push` → `77bcc34`
+9. **更新 .agent/**：PENDING.md（更新本轮产出）、REPORT.md（本报告）、HISTORY.md、state.json
 
 ## 📈 本轮数据
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles 文章 | 1（context-memory）|
+| 新增 articles 文章 | 1（fundamentals）|
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Article 8 处 / Project 4 处 |
-| commit | 1（5d177ba）|
+| 原文引用数量 | Article 8 处 / Project 3 处 |
+| commit | 1（77bcc34）|
 
 ## 🔮 下轮规划
 
-- **LangChain Interrupt 2026（5/13-14）**：Deep Agents 2.0 发布，框架级架构更新
-- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**
-- **Volt LCM 技术论文深度解读**：完整的三级升级协议 + DAG 摘要实现细节
-- **ICLR 2026 新论文扫描**：InnovatorBench（Agent创新研究能力评测）、ScienceBoard（科学工作流评测）
-- **goose 迁移至 Linux Foundation AAIF**：44,895 Stars，多 Provider 支持，需要重新评估其定位
+- **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，Harrison Chase keynote 发布预期
+- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**：Trend 7（安全）和 Trend 8（Eval）待深入分析
+- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
+- **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化
+- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
+- **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
+- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义
 
 ---
 
