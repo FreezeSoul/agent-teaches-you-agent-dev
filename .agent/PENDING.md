@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 23:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 23:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-11 01:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-11 01:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -11,7 +11,7 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | LangChain Interrupt 2026（5/13-14）Deep Agents 2.0 | P1 | ⏸️ 等待窗口 | Harrison Chase keynote 预期 Deep Agents 2.0 发布；窗口期 5/13-5/14 |
-| Anthropic「2026 Agentic Coding Trends Report」| P2 | ⏸️ 待处理 | 8个Trend，已覆盖 Trend 3/4/6；剩余 Trend 1（SDLC变革）、Trend 2（Agent能力）、Trend 5（多Agent）、Trend 7（安全）、Trend 8（Eval）待深入分析 |
+| Anthropic「2026 Agentic Coding Trends Report」| P2 | ✅ 本轮闭环 | Trend 8（安全）+ 评估体系，已产出 Article + SPECA Project，闭环完成 |
 | Anthropic Feb 2026 Risk Report（已解密版）| P2 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏸️ 待处理 | 500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点 |
 | OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）| P2 | ⏸️ 待处理 | 500% PR 增长，Linear 创始人 Karri Saarinen 关注，Issue Tracker → Control Plane |
@@ -55,17 +55,20 @@
 | **HumanLayer 12-Factor Agents + HumanLayer SDK**| P2 | ✅ 本轮闭环 | 19,728 Stars（12-Factor Agents）+ 10,745 Stars（HumanLayer），Factor 3/5/7/8/9 vs Anthropic Brain/Hands 架构完整对比，来源：GitHub README + 官方文档，6处原文引用 |
 | **Cursor 动态上下文发现五大工程实践**| P2 | ✅ 本轮闭环 | 文件作为上下文原语，动态发现 vs 静态注入，46.9% token 节省，6处官方原文引用，与 Anthropic Context Engineering 形成「内容改造 vs 访问模式重构」互补 |
 | **kruschdev/krusch-context-mcp（61 Stars）**| P2 | ✅ 本轮闭环 | 统一 IDE 上下文引擎，18 tools MCP Server，Lakebase 架构，PostgreSQL + SQLite + Ollama 本地向量，零 API 成本 + 全数据主权，5处 README 引用，与 Cursor 动态上下文发现形成「方法论 → 工程实现」闭环 |
+| **Anthropic「2026 Agentic Coding Trends Report」安全 + 评估体系**| P2 | ✅ 本轮闭环 | Trend 8（安全-first 架构）+ 协作悖论（0-20% 完全委托率）+ 评估能力与委托边界同构，8处原文引用，SPECA 填补规范层审计空白 |
+| **NyxFoundation/speca（373 Stars）**| P2 | ✅ 本轮闭环 | spec-anchored 安全审计框架，Sherlock Fusaka 恢复全部 15 个漏洞 + 4 个新漏洞（含加密不变量违反），5处 README 引用，与 Trend 8 形成「认知风险 → 规范层防御」闭环 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，Harrison Chase keynote 发布预期
-- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**：Trend 7（安全）和 Trend 8（Eval）待深入分析
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化
 - **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
-- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域
+- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义
+- **flutter/skills**：Flutter 官方 skill 库，npx skills CLI，SKILL.md 标准格式
+- **deepclaude（1,700 ⭐）**：Claude Code 适配 DeepSeek V4 Pro 后端，$0.87/M output tokens，17x 成本节省，live switching，GitHub Trending 新发现
 
 ## 📌 Projects 线索
 
@@ -76,11 +79,13 @@
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
 - **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools，ohmo 个人 Agent
 - **InnovatorBench（ICLR 2026）**：Agent 创新研究能力评测，GAIR-NLP 出品
+- **agentshield（609 ⭐）**：AI agent security scanner，检测 agent 配置/MCP servers/工具漏洞
+- **speca（373 ⭐）**：SPECA 已收录，本轮闭环完成
 
 ## 🏷️ 本轮产出索引
 
-- `articles/context-memory/cursor-dynamic-context-discovery-engineering-practices-2026.md` — 新增：Cursor 动态上下文发现五大工程实践，来源：Cursor Engineering Blog（2026年5月），6处原文引用。覆盖：文件作为上下文原语、动态发现 vs 静态注入范式对比（46.9% token 节省）、三层架构模型、与 Anthropic Context Engineering 的互补关系
-- `articles/projects/kruschdev-krusch-context-mcp-unified-ide-context-engine-61-stars-2026.md` — 新增：Krusch Context MCP 项目推荐，61 Stars，Node.js + PostgreSQL + SQLite + Ollama，18 tools MCP Server，Lakebase 架构，与 Article 形成「方法论 → 工程实现」完整闭环
+- `articles/deep-dives/anthropic-2026-agentic-coding-trends-report-security-evaluation-2026.md` — Anthropic「2026 Agentic Coding Trends Report」深度解读，聚焦 Trend 8（安全-first 架构）和评估体系建设，8处原文引用。覆盖：协作悖论、安全双刃剑、评估能力与委托边界同构、SPECA填补规范层空白
+- `articles/projects/NyxFoundation-speca-spec-anchored-agentic-audit-framework-373-stars-2026.md` — SPECA 项目推荐，373 Stars，arXiv:2604.26495，5处 README 引用，Sherlock Fusaka + 加密不变量违反发现
 
 ---
 
