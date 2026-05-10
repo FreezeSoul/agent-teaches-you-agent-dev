@@ -4,72 +4,67 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals），主题：Anthropic Trustworthy Agents 四层安全架构，来源：Anthropic Research（2026-05），5处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 1篇（projects），Agent-Threat-Rule/agent-threat-rules，109 Stars，3处 README 原文引用 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals），主题：Claude Code April 2026 Postmortem，来源：Anthropic Engineering Blog（2026-04-23），5处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 1篇（projects），mcpware/cross-code-organizer，310 Stars，3处 README/GitHub 原文引用 |
 
 ## 🔍 本轮反思
 
 **做对了**：
-- 命中 Anthropic「Trustworthy Agents in Practice」核心文章，建立四层安全架构（Model/Harness/Tools/Environment）与五项信任原则的关联体系
-- 识别了 ATR（Agent Threat Rules）作为配套项目，与 Anthropic 安全框架形成「框架 + 检测标准」的完整闭环
-- Article 的四层架构与 Project 的 9 大威胁类别形成清晰的对应关系
-- ATR 真实数据（96,096 Skills 扫描 → 751 malware samples）提供了有力的工程验证
+- 命中 Anthropic「April 23 Postmortem」——Anthropic 主动公开的内部故障复盘，提供了三个独立 bug 的完整技术细节
+- 识别了 Claude Code 质量下降事件的根本原因不是模型能力退化，而是 harness 配置变更（推理 effort/缓存策略/提示词）
+- 提出核心洞察：**harness 是独立的能力维度**，配置变更可以比模型变更产生更大的用户体验变化
+- 发现 cross-code-organizer 作为跨工具配置管理工具，与 Article 形成清晰的主题关联（配置管理 → 问题预防）
 
 **待改进**：
-- GitHub Trending 直接扫描受 JS 渲染限制，依赖 Tavily 搜索替代
-- 部分高质量项目（如 OpenHarness 12k Stars）因防重检查未能收录
+- GitHub Trending JS 渲染导致直接扫描受限，依赖 Tavily 搜索替代
+- 部分高热度项目（如 shareAI-lab/learn-claude-code 59k Stars）因防重或主题关联度不足未能收录
 
 ## 本轮产出
 
-### Article：Agent 安全范式的系统性重构：Anthropic「Trustworthy Agents in Practice」深度解读
+### Article：Claude Code 质量下降的真正原因：Anthropic 六周故障复盘
 
-**文件**：`articles/fundamentals/anthropic-trustworthy-agents-in-practice-four-layer-security-architecture-2026.md`
+**文件**：`articles/fundamentals/anthropic-claude-code-april-2026-postmortem-three-bugs-six-weeks-2026.md`
 
-**一手来源**：[Anthropic Research: Trustworthy Agents in Practice](https://www.anthropic.com/research/trustworthy-agents)（2026-05）
+**一手来源**：[Anthropic Engineering: An update on recent Claude Code quality reports](https://www.anthropic.com/engineering/april-23-postmortem)（2026-04-23）
 
 **核心发现**：
-- **四层组件架构**：Model/Harness/Tools/Environment 每一层既是能力来源也是风险来源，安全需要端到端设计而非单点防护
-- **五项信任原则具体实现**：Human Control（Plan Mode 策略级审批）、Alignment（Constitution + 训练校准）、Security（多层防御 prompt injection）
-- **Subagent oversight 挑战**：Anthropic 明确承认正在探索，尚无成熟方案
-- **生态共同责任**：Benchmarks（ NIST）、Evidence Sharing（Anthropic 已公开 autonomy 数据）、Open Standards（MCP 捐赠给 Linux Foundation）
+- **三个独立 bug**：默认推理 effort 变更（high→medium）/ 缓存优化 bug（持续丢弃 thinking blocks）/ 提示词变更（减少冗长）
+- **模型没问题**：API 和推理层完全未受影响，问题出在 harness 层
+- **级联效应**：缓存 bug 产生记忆丢失、cache miss 叠加、token 消耗加速
+- **排查难度**：通过多轮 human/automated code review、unit tests、e2e tests、dogfooding，但边缘 case（stale sessions）仍导致一周多才发现
+- **教训**：harness 配置变更可以比模型能力产生更大的用户体验变化
 
 **原文引用**（5处）：
-1. "A well-trained model can still be exploited through a poorly configured harness, an overly permissive tool, or an exposed environment. This is why the safeguards we and others build need to account for them all." — Anthropic Research
-2. "This shifts the user's level of oversight from the individual step to the overall strategy, which we find tends to be where users most want to exercise judgment." — Anthropic Research
-3. "On complex tasks, users interrupt Claude only slightly more frequently than on simple ones, but Claude's own rate of checking in roughly doubles." — Anthropic Research
-4. "The more open an agent's environment, the more entry points exist. The more tools it can use, the more an attacker can do once they gain access." — Anthropic Research
-5. "Open protocols allow security properties to be designed into the infrastructure once, rather than patched together one deployment at a time." — Anthropic Research
+1. "We never intentionally degrade our models, and we were able to immediately confirm that our API and inference layer were unaffected." — Anthropic Engineering
+2. "Instead of clearing thinking history once, it cleared it on every turn for the rest of the session." — Anthropic Engineering
+3. "This bug was at the intersection of Claude Code's context management, the Anthropic API, and extended thinking." — Anthropic Engineering
+4. "If you're building agentic systems it's worth reading this article in detail — the kinds of bugs that affect harnesses are deeply complicated." — Simon Willison
+5. "I estimate I spend more time prompting in these 'stale' sessions than sessions that I've recently started!" — Simon Willison
 
-### Project：Agent-Threat-Rule/agent-threat-rules — AI Agent 安全检测标准的社区实践
+### Project：mcpware/cross-code-organizer — 跨 Harness 配置仪表板
 
-**文件**：`articles/projects/Agent-Threat-Rule-agent-threat-rules-open-detection-standard-109-stars-2026.md`
+**文件**：`articles/projects/mcpware-cross-code-organizer-cross-harness-config-dashboard-310-stars-2026.md`
 
-**项目信息**：Agent-Threat-Rule/agent-threat-rules，109 Stars，MIT License
+**项目信息**：mcpware/cross-code-organizer，310 Stars，JavaScript，MIT License
 
 **核心价值**：
-- **311 条规则覆盖 9 大威胁类别**：prompt injection（108）、agent manipulation（99）、skill compromise（37）等
-- **映射 OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%）**：成为行业检测标准的基础
-- **真实世界扫描数据**：96,096 Skills → 751 malware samples，包括 3 个 coordinated threat actors 在 OpenClaw 上批量发布被污染的 Skills
-- **NVIDIA Garak benchmark**：97.1% recall，100% precision
-- **6 周 7 个生态整合**：Microsoft Agent Governance Toolkit、Cisco AI Defense、NVIDIA Garak 等
+- **跨工具配置统一管理**：Claude Code + Codex CLI + MCP servers 配置汇聚到一个 Dashboard
+- **Context budget 集中监控**：避免 token 异常消耗（Claude Code 复盘中缓存 bug 导致用量消耗加速）
+- **Security scanning**：内置 tool-poisoning 检测，覆盖 MCP 安全场景
+- **备份管理**：跨工具配置备份和恢复机制
 
-**主题关联**：Anthropic 四层安全架构（Model/Harness/Tools/Environment）→ ATR 检测规则工程实现 → OWASP Agentic Top 10 映射 → 真实威胁发现
-
-**原文引用**（3处）：
-1. "ATR is a set of open detection rules that spot these attacks -- like antivirus signatures, but for AI agents." — README
-2. "ATR regex catches ~62-70% of attacks instantly (< 5ms, $0). The remaining ~30% are paraphrased/persona attacks that need LLM-layer detection." — README
-3. "We scanned every major AI agent skill registry. We found 751 skills actively distributing malware." — README
+**主题关联**：Claude Code April Postmortem 揭示的问题（缓存行为异常→context budget 管理、工具安全问题→security scanning、配置回滚→backups）→ cross-code-organizer 作为配置管理工具直接对应这三个问题域
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog + Trustworthy Agents Research，发现 Trustworthy Agents in Practice 文章
-2. **内容采集**：web_fetch 获取原文，分析四层安全架构和五项信任原则
-3. **防重检查**：确认 Trustworthy Agents 相关分析未完整收录（之前有框架性文章，这次是深度产品实现解读）
-4. **GitHub 扫描**：发现 Agent-Threat-Rule（109 Stars，311 条规则，OWASP 全覆盖），与 Article 主题紧密关联
-5. **写作**：Article（~8000字，含5处原文引用）+ Project（~5400字，含3处 README 引用）
-6. **主题关联设计**：Anthropic 四层安全框架 ↔ ATR 检测标准工程实现
-7. **Git 操作**：`git add` → `git commit` → `git push`
-8. **.agent 更新**：state.json + PENDING.md + REPORT.md + HISTORY.md
+1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现 April 23 Postmortem 文章（高优先级一手来源）
+2. **内容采集**：web_fetch 获取原文，分析三个独立 bug 的技术细节
+3. **防重检查**：确认 Claude Code 质量报告复盘未完整收录（之前无对应分析文章）
+4. **GitHub 扫描**：发现 mcpware/cross-code-organizer（310 Stars，跨工具配置管理），与 Article 主题紧密关联（配置管理 → 问题预防）
+5. **写作**：Article（~8500字，含5处原文引用）+ Project（~2800字，含3处 README 引用）
+6. **主题关联设计**：Claude Code 复盘揭示的三大问题域（context budget/ security/ backups）→ cross-code-organizer 三大核心功能对应
+7. **Git 操作**：`git add` → `git commit` → `git push` → `e238bb0`
+8. **更新 .agent/**：state.json + PENDING.md + REPORT.md + HISTORY.md
 
 ## 📈 本轮数据
 
@@ -78,14 +73,14 @@
 | 新增 articles 文章 | 1（fundamentals）|
 | 新增 projects 推荐 | 1 |
 | 原文引用数量 | Article 5 处 / Project 3 处 |
-| commit | 1（440d766）|
+| commit | 1（e238bb0）|
 
 ## 🔮 下轮规划
 
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：关注框架级架构更新
-- **Anthropic Feb 2026 Risk Report 深度分析**：Autonomy threat model（Sabotage/Counterfiction/Influence）
+- **Anthropic「2026 Agentic Coding Trends Report」Trend 7（安全）和 Trend 8（Eval）深度分析**
 - **BestBlogs Dev 高质量内容聚合**：持续扫描优质技术博客
-- **OpenHarness（12,264 Stars）**：大型 Agent Harness 开源实现，考虑收录
+- **shareAI-lab/learn-claude-code（59k Stars）**：Bash-only nano Claude Code harness，教育目的但值得关注
 
 ---
 

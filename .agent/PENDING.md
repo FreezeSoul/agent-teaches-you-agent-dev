@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 11:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 11:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 13:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 13:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -46,6 +46,8 @@
 | Cursor Multi-Agent CUDA Kernel 38% 加速 | P2 | ✅ 本轮闭环 | 235 个 CUDA Kernel，3 周自主优化，Planner/Worker + Self-Benchmarking 闭环，与 Anthropic C Compiler 形成方法论印证 |
 | Multi-Agent Markdown 协调规范 | P2 | ✅ 本轮闭环 | 协调协议从代码层下沉到 Markdown 声明式规范，Self-Benchmarking 闭环，5处原文引用 |
 | CudaForge（OptimAI-Lab，80 ⭐）| P2 | ✅ 本轮闭环 | 训练免费的 Multi-Agent CUDA 工作流，SKILL.md 规范驱动，与 Markdown 协调规范形成「理论→工程实现」闭环，3处 README 引用 |
+| Claude Code April 2026 Postmortem（三 bug 导致模型退化）| P2 | ✅ 本轮闭环 | Anthropic Engineering 复盘，三个产品层 bug（推理effort/缓存/提示词）导致六周性能下降，harness 是独立能力维度，5处原文引用 |
+| mcpware/cross-code-organizer（310 ⭐）| P2 | ✅ 本轮闭环 | 跨 Claude Code/Codex CLI/MCP 配置管理仪表板，Security scanning + Context budget + Backups，与 Claude Code April Postmortem 形成主题关联（配置管理 → 问题预防） |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -69,8 +71,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/anthropic-trustworthy-agents-in-practice-four-layer-security-architecture-2026.md` — 新增：Anthropic Trustworthy Agents 四层安全架构深度解读，来源：Anthropic Research（2026-05），5处原文引用。覆盖：四层组件架构（Model/Harness/Tools/Environment）、五项信任原则具体实现（Plan Mode/Constitution/多层防御）、Subagent oversight 挑战、生态共同责任（Benchmarks/Evidence Sharing/Open Standards）
-- `articles/projects/Agent-Threat-Rule-agent-threat-rules-open-detection-standard-109-stars-2026.md` — 新增：Agent-Threat-Rule/agent-threat-rules 推荐，109 Stars，311 条规则覆盖 9 大威胁类别（prompt injection/agent manipulation/skill compromise 等），映射 OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%），96,096 真实 Skills 扫描发现 751 个 malware samples，NVIDIA Garak 97.1% recall，6 周 7 个生态整合（Microsoft/Cisco/NVIDIA Garak 等）。与 Article 形成「安全框架 + 检测标准」完整闭环
+- `articles/fundamentals/anthropic-claude-code-april-2026-postmortem-three-bugs-six-weeks-2026.md` — 新增：Claude Code April 2026 Postmortem 分析，来源：Anthropic Engineering Blog（2026-04-23），5处原文引用。覆盖：三个独立产品层 bug（默认推理 effort 变更/缓存优化 bug/提示词变更）、六周性能下降的级联效应、harness 层是独立能力维度的工程教训
+- `articles/projects/mcpware-cross-code-organizer-cross-harness-config-dashboard-310-stars-2026.md` — 新增：mcpware/cross-code-organizer 推荐，310 Stars，跨 Claude Code/Codex CLI/MCP 配置管理仪表板（Security scanning + Context budget + Backups），与 Claude Code April Postmortem 形成「配置管理 → 问题预防」主题关联
 
 ---
 
