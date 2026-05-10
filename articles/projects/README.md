@@ -146,6 +146,8 @@
 
 ## 推荐文章索引
 
+- [LiberCoders-FeatureBench-feature-level-agentic-coding-benchmark-2026](./LiberCoders-FeatureBench-feature-level-agentic-coding-benchmark-2026.md) — ICLR 2026 功能级编程 Agent 评测框架，Fast split 57.2 秒/实例，支持 Claude Code/Codex/OpenHands 等 5 个主流 Agent 框架，与 Anthropic AI-Resistant Evaluations 形成「能力边界检测 vs AI 抗性设计」的互补（关联：AI-Resistant Evaluations → 细粒度能力评测趋势 → FeatureBench 功能级评测框架）
+
 - [context-evaluator-packmindhub-ai-agent-config-health-2026](./context-evaluator-packmindhub-ai-agent-config-health-2026.md) — AI Agent 配置文件健康体检工具，17 个评估器诊断 AGENTS.md 质量问题，自动修复 + Before/After 对比（关联：Agent 配置过载 → 配置文件质量的系统性诊断）
 - [cursor-cookbook-sdk-examples-2026](./cursor-cookbook-sdk-examples-2026.md) — cursor/cookbook 推荐，3,675 ⭐，5 个生产级 Sample，DAG Task Runner + Cloud Agent 自动化 PR（关联：Cursor Harness 持续改进工程 → SDK 产品化 → 开发者接入生产级 Agent 运行时的代码级入口）
 
