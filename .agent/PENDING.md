@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 21:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 21:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 23:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 23:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -53,6 +53,8 @@
 | **Anthropic「Effective Context Engineering for AI Agents」**| P2 | ✅ 本轮闭环 | 从 Prompt Engineering 到 Context Engineering 的范式转移，注意力预算有限资源，Compaction + Note-taking + Sub-agents 三大工程支柱，8处原文引用 |
 | **Martian-Engineering/Volt（273 Stars）**| P2 | ✅ 本轮闭环 | 无损上下文管理 LCM，双态架构（Immutable Store + Active Context）+ 三级升级协议保证收敛，OOLONG benchmark 全面超越 Claude Code，与 Anthropic Context Engineering 形成「理论 → 工程实现」闭环，4处 README 引用 |
 | **HumanLayer 12-Factor Agents + HumanLayer SDK**| P2 | ✅ 本轮闭环 | 19,728 Stars（12-Factor Agents）+ 10,745 Stars（HumanLayer），Factor 3/5/7/8/9 vs Anthropic Brain/Hands 架构完整对比，来源：GitHub README + 官方文档，6处原文引用 |
+| **Cursor 动态上下文发现五大工程实践**| P2 | ✅ 本轮闭环 | 文件作为上下文原语，动态发现 vs 静态注入，46.9% token 节省，6处官方原文引用，与 Anthropic Context Engineering 形成「内容改造 vs 访问模式重构」互补 |
+| **kruschdev/krusch-context-mcp（61 Stars）**| P2 | ✅ 本轮闭环 | 统一 IDE 上下文引擎，18 tools MCP Server，Lakebase 架构，PostgreSQL + SQLite + Ollama 本地向量，零 API 成本 + 全数据主权，5处 README 引用，与 Cursor 动态上下文发现形成「方法论 → 工程实现」闭环 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -77,8 +79,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/humanlayer-12-factor-agents-llm-application-engineering-methodology-2026.md` — 新增：12-Factor Agents 方法论深度解析，来源：GitHub README + 官方文档（2026年），6处原文引用。覆盖：Factor 3（Own your context window）、Factor 5（Unify state）、Factor 7（Human-in-the-loop）、Factor 8（Own control flow）、Factor 9（Compact errors），与 Anthropic Brain/Hands 架构完整对比
-- `articles/projects/humanlayer-human-in-the-loop-agent-tool-2026.md` — 新增：HumanLayer 项目推荐，10,745 Stars，TypeScript，@require_approval + webhook 异步恢复机制，Gen 3 Autonomous Agents 架构，与 Article 形成「方法论 → 工程实现」闭环
+- `articles/context-memory/cursor-dynamic-context-discovery-engineering-practices-2026.md` — 新增：Cursor 动态上下文发现五大工程实践，来源：Cursor Engineering Blog（2026年5月），6处原文引用。覆盖：文件作为上下文原语、动态发现 vs 静态注入范式对比（46.9% token 节省）、三层架构模型、与 Anthropic Context Engineering 的互补关系
+- `articles/projects/kruschdev-krusch-context-mcp-unified-ide-context-engine-61-stars-2026.md` — 新增：Krusch Context MCP 项目推荐，61 Stars，Node.js + PostgreSQL + SQLite + Ollama，18 tools MCP Server，Lakebase 架构，与 Article 形成「方法论 → 工程实现」完整闭环
 
 ---
 

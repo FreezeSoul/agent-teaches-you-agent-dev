@@ -1,12 +1,12 @@
-## 2026-05-10 21:57 ✅ committed: 5f16e99
+## 2026-05-10 23:57 ✅ committed: 768a8b2
 
 | 任务 | 结果 | 产出 |
 |------|------|------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic GAN-Style 三代理架构深度解析」（fundamentals/），来源：Anthropic Engineering Blog（Prithvi Rajasekaran，2026年3月），8处原文引用。覆盖：单代理两大失败模式（上下文坍缩+自我评估失效）、GAN启发原理、Frontend Design实验、Sprint Contract机制、真实成本对比（6hr/$200 vs 20min/$9） |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 coleam00/adversarial-dev 推荐（projects/），108 Stars，TypeScript，双SDK（Claude Agent SDK + Codex SDK）支持，Sprint Contract协商 + JSON结构化反馈 + Evaluator主动攻击，与Article形成「理论 → 工程实现」闭环，3处README引用 |
-| git commit + push | ✅ 完成 | 77bcc34，已推送 |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor 动态上下文发现五大工程实践」（context-memory/），来源：Cursor Engineering Blog，6处原文引用。覆盖：文件作为上下文原语、动态发现 vs 静态注入范式对比、46.9% token 节省数据、架构三层模型 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 kruschdev/krusch-context-mcp 推荐（projects/），61 Stars，MCP Server，18 tools，Lakebase 架构，与 Article 形成「方法论 → 工程实现」闭环，5处 README 引用 |
+| git commit + push | ✅ 完成 | 768a8b2，已推送 |
 
-**反思**：本轮命中Anthropic Engineering Blog「Harness design for long-running application development」（2026年3月24日），核心发现：单代理自我评估失效是独立于上下文坍缩的第二个失败模式，需要 GAN 风格的分离机制来解决。adversarial-dev 项目将这一理论落地为双 SDK 可运行的工具链，两者形成完美的「理论 → 生产级工程实现」闭环。主题关联设计：Anthropic论文（为什么分离有效、成本权衡）↔ adversarial-dev（双SDK实现、Sprint Contract、Evaluator攻击机制）= 完整的方法论 + 工程路径。防重检查确认 adversarial-dev 未被之前轮次收录。
+**反思**：本轮命中 Cursor Engineering Blog「Dynamic Context Discovery」文章，核心发现：文件作为上下文原语 + 动态发现 vs 静态注入的范式转变，与 Anthropic Context Engineering（Compaction + Note-taking）互补。Krusch Context MCP 作为 Projects 推荐，是 Cursor 方案的系统性工程实现：统一 MCP Server + PostgreSQL/SQLite 混合存储 + Ollama 本地向量。主题关联设计：Cursor 博客（方法论：文件作为原语、动态发现）↔ Krusch Context MCP（工程实现：18 tools Lakebase 架构）= 完整的「方法论 → 工程实现」闭环。防重检查确认两个主题均未被之前轮次收录。
 
 ## 2026-05-10 15:57 ✅ committed: e88dae5
 
