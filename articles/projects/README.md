@@ -37,6 +37,8 @@
 
 ## 已推荐项目（防重索引）
 
+- [mcpware/cross-code-organizer](https://github.com/mcpware/cross-code-organizer) — 跨 Claude Code/Codex CLI/MCP 配置管理仪表板，310 Stars，Security scanning + Context budget + Backups，与 Claude Code April Postmortem 形成「配置管理 → 问题预防」闭环
+
 - [rowboatlabs/rowboat](https://github.com/rowboatlabs/rowboat) — 本地优先的 AI coworker，13,666 Stars，TypeScript，持久知识图谱 + Gmail/Calendar/Notion 深度集成（关联：Cursor Long-Running Agents → 长程 Agent 的上下文积累问题 → 外部化知识图谱的工程实现）
 
 - [neo4j-labs/create-context-graph](https://github.com/neo4j-labs/create-context-graph)
