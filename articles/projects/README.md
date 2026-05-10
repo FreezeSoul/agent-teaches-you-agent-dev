@@ -5,6 +5,8 @@
 
 ---
 
+- [Fangcun-AI/SkillWard](./Fangcun-AI-SkillWard-security-scanner-agent-skills-2026.md) — Agent Skills 安全扫描工具，123 Stars，Python，三阶段扫描（静态分析 + LLM 评估 + Docker 沙箱执行），实测 5,000 个 Skills 中 ~25% 标记不安全，约 1/3 可疑样本在沙箱中暴露运行时威胁，与 OpenAI Codex Safe Deployment 形成「发布前扫描 + 运行控制」的安全闭环（关联：Codex 安全运行架构 → Skills 部署前的安全检查 → SkillWard 三阶段漏斗）
+
 - [kangarooking-system-prompt-skills-15-design-patterns-2026](./kangarooking-system-prompt-skills-15-design-patterns-2026.md) — 15 个可执行的系统提示词设计模式，64 Stars，从 165 个顶级 AI 产品系统提示词中蒸馏，覆盖 persona/tool/safety/memory 等 15 个维度，与 OpenAI Agents SDK Skills 原语形成「标准定义 → 设计模式参考」的互补（关联：OpenAI Agents SDK → Skills 已成为标准原语 → system-prompt-skills 提供具体设计模式）
 
 - [strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026](./strukto-ai-mirage-unified-virtual-filesystem-1612-stars-2026.md) — 统一虚拟文件系统，1,612 Stars，TypeScript，将 S3/Gmail/GitHub/Slack 等后端挂载为文件目录，让 AI Agent 用原生 bash 工具操作一切数据源，与 OpenAI Codex Agent Loop 形成「工具抽象 vs 上下文管理」的互补（关联：Codex Agent Loop → 长程 Agent 需要统一的工具抽象层 → Mirage VFS 的工程实现）
