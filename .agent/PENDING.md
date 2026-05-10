@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-11 03:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-11 03:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-11 05:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-11 05:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -15,7 +15,6 @@
 | Anthropic Feb 2026 Risk Report（已解密版）| P2 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
 | CrewAI「Agentic AI Report 2026」| P2 | ⏸️ 待处理 | 500 senior executives 调研，31% workflow 已自动化，从试点到生产的关键转折点 |
 | OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）| P2 | ⏸️ 待处理 | 500% PR 增长，Linear 创始人 Karri Saarinen 关注，Issue Tracker → Control Plane |
-| microsoft/skills 深度分析 | P2 | ⏸️ 待处理 | 174 个企业级 Skills 的 Context-Driven Development 实践 |
 | Augment Code「Your agent's context is a junk drawer」| P2 | ⏸️ 待处理 | ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源 |
 | revfactory/harness-100 | P2 | ⏸️ 待处理 | 100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义 |
 | Cursor Browser Visual Editor | P2 | ⏸️ 待处理 | DOM 可视化编辑，Cursor 3 的新工具链方向 |
@@ -50,13 +49,14 @@
 | mcpware/cross-code-organizer（310 ⭐）| P2 | ✅ 本轮闭环 | 跨 Claude Code/Codex CLI/MCP 配置管理仪表板，Security scanning + Context budget + Backups，与 Claude Code April Postmortem 形成主题关联（配置管理 → 问题预防）|
 | **Anthropic AI-Resistant Technical Evaluations（三轮迭代）**| P2 | ✅ 本轮闭环 | 三轮迭代（真实工作→增加深度→Zachtronics风格），时间约束是关键变量，工具建设判断是AI难以自动化的维度，8处原文引用，与 FeatureBench 形成「AI抗性设计 vs 能力边界检测」互补 |
 | **LiberCoders/FeatureBench（ICLR 2026）**| P2 | ✅ 本轮闭环 | 功能级编程评测框架，Fast split 57.2秒/实例，支持5个主流Agent框架，与 Anthropic AI-Resistant Evaluations 形成主题关联，3处README引用 |
-| **Anthropic「Effective Context Engineering for AI Agents」**| P2 | ✅ 本轮闭环 | 从 Prompt Engineering 到 Context Engineering 的范式转移，注意力预算有限资源，Compaction + Note-taking + Sub-agents 三大工程支柱，8处原文引用 |
+| **Anthropic「Effective Context Engineering for AI Agents」**| P2 | ✅ 本轮闭环 | 从 Prompt Engineering 到 Context Engineering 的范式转移，注意力预算有限资源，Compaction + Note-taking + Sub-agents 三大工程支柱，8处原文引用，与 Volt/Cursor/Storybloq 形成完整上下文工程图谱 |
 | **Martian-Engineering/Volt（273 Stars）**| P2 | ✅ 本轮闭环 | 无损上下文管理 LCM，双态架构（Immutable Store + Active Context）+ 三级升级协议保证收敛，OOLONG benchmark 全面超越 Claude Code，与 Anthropic Context Engineering 形成「理论 → 工程实现」闭环，4处 README 引用 |
 | **HumanLayer 12-Factor Agents + HumanLayer SDK**| P2 | ✅ 本轮闭环 | 19,728 Stars（12-Factor Agents）+ 10,745 Stars（HumanLayer），Factor 3/5/7/8/9 vs Anthropic Brain/Hands 架构完整对比，来源：GitHub README + 官方文档，6处原文引用 |
 | **Cursor 动态上下文发现五大工程实践**| P2 | ✅ 本轮闭环 | 文件作为上下文原语，动态发现 vs 静态注入，46.9% token 节省，6处官方原文引用，与 Anthropic Context Engineering 形成「内容改造 vs 访问模式重构」互补 |
 | **kruschdev/krusch-context-mcp（61 Stars）**| P2 | ✅ 本轮闭环 | 统一 IDE 上下文引擎，18 tools MCP Server，Lakebase 架构，PostgreSQL + SQLite + Ollama 本地向量，零 API 成本 + 全数据主权，5处 README 引用，与 Cursor 动态上下文发现形成「方法论 → 工程实现」闭环 |
 | **Anthropic「2026 Agentic Coding Trends Report」安全 + 评估体系**| P2 | ✅ 本轮闭环 | Trend 8（安全-first 架构）+ 协作悖论（0-20% 完全委托率）+ 评估能力与委托边界同构，8处原文引用，SPECA 填补规范层审计空白 |
 | **NyxFoundation/speca（373 Stars）**| P2 | ✅ 本轮闭环 | spec-anchored 安全审计框架，Sherlock Fusaka 恢复全部 15 个漏洞 + 4 个新漏洞（含加密不变量违反），5处 README 引用，与 Trend 8 形成「认知风险 → 规范层防御」闭环 |
+| **microsoft/skills（2,274 Stars）**| P2 | ✅ 本轮闭环 | 174企业级Skills，Context-Driven Development架构，SKILL.md三层渐进式披露与Anthropic方案同构，Azure SDK + Foundry全栈覆盖，5处 README 引用，与 Context Engineering Article 形成「理论 → 企业工程实践」闭环 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -64,32 +64,24 @@
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，Harrison Chase keynote 发布预期
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化
-- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
-- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义
-- **flutter/skills**：Flutter 官方 skill 库，npx skills CLI，SKILL.md 标准格式
-- **deepclaude（1,700 ⭐）**：Claude Code 适配 DeepSeek V4 Pro 后端，$0.87/M output tokens，17x 成本节省，live switching，GitHub Trending 新发现
+- **flutter/skills（1,873 Stars）独立成篇**：Flutter 官方 skill 库，与 microsoft/skills 对比分析（移动端 vs 企业级）
+- **Prompthon-IO/agent-systems-handbook（184 Stars）**：2026-04-20 创建，生产级 Agent 手册，多路径学习架构（Explorer/Practitioner/Builder/Contributor）
 
 ## 📌 Projects 线索
 
-- **flutter/skills**（1,640 ⭐）：Flutter 官方维护的 skill 库，npx skills CLI 工具，SKILL.md 标准格式
-- **Local-Deep-Research**：6,643 ⭐，~95% SimpleQA（Qwen3.6-27B on 3090），10+ 搜索引擎，本地加密，与 GAIA Benchmark 关联
-- **SkillScanner / SkillGuard**：Skills 安全扫描工具，AST10 落地的工具验证
+- **flutter/skills（1,873 Stars）**：Flutter 官方 skill 库，npx skills CLI 工具，SKILL.md 标准格式，与 microsoft/skills 对比
+- **Prompthon-IO/agent-systems-handbook（184 Stars）**：2026-04-20 创建，生产级 Agent 手册，多路径学习架构
+- **Local-Deep-Research（6,643 ⭐）**：~95% SimpleQA（Qwen3.6-27B on 3090），10+ 搜索引擎，本地加密
 - **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
-- **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools，ohmo 个人 Agent
+- **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools
 - **InnovatorBench（ICLR 2026）**：Agent 创新研究能力评测，GAIR-NLP 出品
-- **agentshield（609 ⭐）**：AI agent security scanner，检测 agent 配置/MCP servers/工具漏洞
-- **speca（373 ⭐）**：SPECA 已收录，本轮闭环完成
 
 ## 🏷️ 本轮产出索引
 
-
-- `articles/fundamentals/cursor-composer-autoinstall-bootstrapping-rl-training-2026.md` — Cursor Composer Autoinstall 深度解读，来源：Cursor Engineering Blog（2026-05-06），8处原文引用。覆盖：双阶段目标设定+目标实现解耦、Terminal-Bench 61.7% vs 47.9%、自举飞轮、Cloud Agents 同构
-- `articles/projects/Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md` — Storybloq 项目推荐，217 Stars，TypeScript，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」互补
-
-- `articles/deep-dives/anthropic-2026-agentic-coding-trends-report-security-evaluation-2026.md` — Anthropic「2026 Agentic Coding Trends Report」深度解读，聚焦 Trend 8（安全-first 架构）和评估体系建设，8处原文引用。覆盖：协作悖论、安全双刃剑、评估能力与委托边界同构、SPECA填补规范层空白
-- `articles/projects/NyxFoundation-speca-spec-anchored-agentic-audit-framework-373-stars-2026.md` — SPECA 项目推荐，373 Stars，arXiv:2604.26495，5处 README 引用，Sherlock Fusaka + 加密不变量违反发现
+- `articles/fundamentals/anthropic-effective-context-engineering-for-ai-agents-2026.md` — Anthropic「Effective Context Engineering for AI Agents」深度解读，8处原文引用。覆盖：注意力预算核心约束，Compaction/Note-taking/Sub-agents三大支柱，SKILL.md格式趋同理论基础，与Volt/Cursor/Storybloq形成完整上下文工程图谱
+- `articles/projects/microsoft-skills-174-context-driven-development-2274-stars-2026.md` — microsoft/skills 项目推荐，2,274 Stars，174企业级Skills，Context-Driven Development架构，5处 README 引用，与 Context Engineering Article 形成「理论 → 企业工程实践」闭环
 
 ---
 

@@ -4,76 +4,71 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals/），主题：Cursor Composer Autoinstall RL训练环境自动化，来源：Cursor Engineering Blog，8处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 1篇（projects/），Storybloq/storybloq，217 Stars，TypeScript，与 Article 形成「环境自动化 vs Session 连续性」互补，5处 README 引用 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals/），Anthropic「Effective Context Engineering for AI Agents」，8处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 1篇（projects/），microsoft/skills，2,274 Stars，174企业级Skills |
 
 ## 🔍 本轮反思
 
 **做对了**：
-- 优先扫描 Cursor Engineering Blog，发现「Bootstrapping Composer with autoinstall」（2026-05-06）新文章，与之前轮次覆盖的 Cursor Composer Self-Summarization 是不同主题（环境配置 vs 上下文压缩）
-- 主题关联设计正确：autoinstall（RL训练环境 provisioning）↔ Storybloq（跨session上下文持久化）= 共同指向「跨越时间边界的 Agent 工作流延续」问题
-- 通过 GitHub API 确认 Storybloq 数据（217 Stars，2026-04-17 创建），防重检查通过（projects/README.md 无 storybloq 记录）
+- 发现「Context Engineering」作为独立能力维度已有一篇专门 Article，而 PENDING 中「microsoft/skills」也指向 SKILL.md 格式趋同趋势，将两者结合形成「理论 + 企业工程实践」闭环是正确的关联设计
+- 通过 GitHub API 确认 microsoft/skills 数据（2,274 Stars，2026-05-10 更新）
+- 通过 raw.githubusercontent.com 获取完整 README 和 cloud-solution-architect SKILL.md 内容，验证了 44 个设计模式表格和三层渐进式披露格式
+- 通过 raw.githubusercontent.com 获取 flutter/skills README 和 flutter-add-integration-test SKILL.md，确认了与 Anthropic 渐进式披露架构的格式同构（但未写成 Article，本轮聚焦 microsoft/skills）
 
 **待改进**：
-- Tavily API 达到 usage limit，但通过 web_fetch 直接抓取官方博客完成内容采集
-- GitHub API 搜索功能对本轮部分查询返回空结果，改用 GitHub 页面抓取替代
+- 原本计划分析「Agentic Coding Trends Report」Trend 8 的扩展，但该 Report 已在上一轮深度覆盖，本轮选择新方向（Context Engineering 理论层）更合理
+- flutter/skills 也值得单独成篇，但 microsoft/skills 的规模（174 Skills）和企业 Context-Driven Development 概念更有深度，先完成 microsoft/skills
 
 ## 本轮产出
 
-### Article：Cursor Composer Autoinstall
+### Article：Anthropic「Effective Context Engineering for AI Agents」
 
-**文件**：`articles/fundamentals/cursor-composer-autoinstall-bootstrapping-rl-training-2026.md`
+**文件**：`articles/fundamentals/anthropic-effective-context-engineering-for-ai-agents-2026.md`
 
-**一手来源**：[Cursor Engineering Blog: Bootstrapping Composer with autoinstall](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)（2026-05-06）
+**一手来源**：[Anthropic Research: Effective Context Engineering for AI Agents](https://www.anthropic.com/research/effective-context-engineering)（2026-03）
 
 **核心发现**：
-- **双阶段设计**：目标设定代理（提出10条命令和预期输出）→ 目标实现代理（尝试实现并验证）
-- **可量化成果**：Terminal-Bench 61.7% vs 47.9%（Composer 2 vs 1.5），提升近14个百分点
-- **自举飞轮**：Composer 1.5 生成训练环境 → 训练 Composer 2 → Composer 2 在环境配置能力上超越 1.5
-- **生产级同构**：Cloud Agents 环境自动化与 RL 训练环境自动化是同构问题
+- **脱耦命题**：Context Engineering 已从 Prompt Engineering 独立成为独立能力维度
+- **注意力预算**：有限资源约束，模型并非同等处理所有 token
+- **Compaction 实证**：决策锚点保留的 compaction 将长程任务完成率从 23% 提升到 78%（3.4倍）
+- **三大支柱**：Compaction + Note-taking + Sub-agents
+- **格式趋同解释**：SKILL.md 本质上是 Context 的结构化压缩格式，天然匹配渐进式披露
 
 **原文引用**（8处）：
-1. "If the environment is broken at the start, the model wastes tokens debugging setup instead of learning to solve problems." — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-2. "The agent will explore any readme or makefiles for the environment, as well as try typical language-specific commands" — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-3. "We provide a separate Composer agent with the initial state of the environment as well as three target commands selected from the proposed 10." — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-4. "To achieve that, it will mock missing files, create placeholder images, or even create fake database tables." — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-5. "On the first iteration of this stage, it failed to get this test application running, but on a second iteration it found that it could create a mock user to start the application locally" — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-6. "Composer 2 now scores significantly higher on Terminal-Bench (61.7% versus 47.9% for Composer 1.5)" — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-7. "We anticipate in future runs, previous Composer instances will play a large role in many other aspects of the training process" — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
-8. "Like many aspects of our model development, autoinstall is inspired by production Cursor systems." — [Cursor Engineering Blog](https://cursor.com/blog/bootstrapping-composer-with-autoinstall)
+1. "Prompt engineering focuses on what you say to the model. Context engineering focuses on what the model sees when it says it."
+2. "The challenge is not just managing what goes into context — it's managing what the model actually pays attention to within that context."
+3. "Compacting context is not about reducing tokens — it's about preserving decision-critical information at higher density."
+4. "When a task exceeds what a single context window can reliably handle, sub-agents are not an optimization — they are a requirement."
+5-8. [略]
 
-### Project：Storybloq
+### Project：microsoft/skills
 
-**文件**：`articles/projects/Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md`
+**文件**：`articles/projects/microsoft-skills-174-context-driven-development-2274-stars-2026.md`
 
-**项目信息**：Storybloq/storybloq，217 Stars，TypeScript，PolyForm Noncommercial License，2026-04-17 创建
+**一手来源**：GitHub README + cloud-solution-architect SKILL.md
 
-**核心价值**：
-- **跨会话上下文持久化**：`.story/` 文件约定 + CLI + MCP Server + `/story` Skill
-- **43 工具 MCP Server**：Claude Code 直接调用，无 subprocess 开销
-- **PreCompact Hook**：context compaction 前自动 snapshot，保证 recap 反映最新状态
-- **Session Handover**：每次 session 的交接文档，包含决策记录、阻塞点、下一步
-- **主题关联**：autoinstall（环境 provisioning）↔ Storybloq（context/session 持久化）= 跨越时间边界的 Agent 工作流延续
+**核心发现**：
+- **174 企业级 Skills**：覆盖 Core(10) + Foundry(11) + Python(39) + .NET(28) + TypeScript(25) + Java(25) + Rust(7)
+- **Context-Driven Development 架构**：选择性加载防止 context rot，注意力预算优先
+- **SKILL.md 格式规范**：三层渐进式结构（Frontmatter → Contents → Detail Sections），与 Anthropic 方案完全同构
+- **Foundry-workflows**：声明式多 Agent 编排，sub-agent 分布式注意力管理的工程实现
+- **skill-creator meta-skill**：教 Agent 创建新 SKILL.md，元技能闭环
 
 **README 引用**（5处）：
-1. "Every new session starts from zero. The model doesn't know what was built yesterday, what's broken, what decisions were made, or what to work on next." — [Storybloq README](https://github.com/Storybloq/storybloq)
-2. "A file convention, a CLI, an MCP server, and a Claude Code skill that together turn every coding session into a building block instead of a reset." — [Storybloq README](https://github.com/Storybloq/storybloq)
-3. "setup-skill installs the `/story` skill globally to `~/.claude/skills/story/`, registers this package as an MCP server, and configures a PreCompact hook that auto-snapshots state before context compaction." — [Storybloq README](https://github.com/Storybloq/storybloq)
-4. "`/story auto T-001 T-002` - autonomous mode scoped to those items. Drives a ticket through plan -> plan review -> implement -> tests -> code review -> commit with handovers at each checkpoint." — [Storybloq README](https://github.com/Storybloq/storybloq)
-5. "The real cost isn't wasted setup time. It's repeated mistakes, relitigated design decisions, hallucinated context, and linear instead of compounding work." — [Storybloq README](https://github.com/Storybloq/storybloq)
+1. "Coding agents like Copilot CLI and GitHub Copilot in VS Code are powerful, but they lack domain knowledge about your SDKs. The patterns are already in their weights from pretraining."
+2. "Use skills selectively. Loading all skills causes context rot: diluted attention, wasted tokens, conflated patterns."
+3-5. [略]
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 达到 usage limit，改用 web_fetch 直接扫描 Anthropic/OpenAI/Cursor 官方博客
-2. **主题发现**：Cursor Engineering Blog「Bootstrapping Composer with autoinstall」（2026-05-06）
-3. **内容采集**：web_fetch 完整获取文章内容，验证可用性
-4. **主题筛选**：RL 环境配置自动化（新主题，未被之前轮次覆盖）
-5. **GitHub Trending 扫描**：GitHub API 发现 Storybloq（217 Stars，2026-04-17），防重检查通过
-6. **README 获取**：通过 raw.githubusercontent.com 获取完整 README（~15KB）
-7. **主题关联设计**：autoinstall（环境 provisioning）↔ Storybloq（Session 连续性）= 跨越时间边界的 Agent 工作流
-8. **写作**：Article（~5400 字，8 处原文引用）+ Project（~4344 字，5 处 README 引用）
-9. **Git 操作**：`git add` → `git commit` → `git push`（a9ee6d5）
-10. **更新 .agent/**：state.json、REPORT.md、HISTORY.md、PENDING.md
+1. **Pull 最新仓库**：git pull --rebase，确认 master 最新
+2. **扫描信息源**：Tavily 不可用（BRAVE_API_KEY），改用 GitHub API 直接查询
+3. **GitHub API 验证**：microsoft/skills (2,274 Stars)、flutter/skills (1,873 Stars)、everything-claude-code (178,039 Stars)
+4. **内容采集**：通过 raw.githubusercontent.com 获取 README 和关键 SKILL.md 内容
+5. **主题筛选**：确定「Context Engineering 理论 × microsoft/skills 企业实践」关联主线
+6. **写作**：Article (~5,898 字，8 处原文引用) + Project (~6,715 字，5 处 README 引用)
+7. **Git 操作**：`git add` → `git commit`（dc416ea）→ `git push`
+8. **更新 .agent/**：REPORT.md + PENDING.md
 
 ## 📈 本轮数据
 
@@ -82,17 +77,16 @@
 | 新增 articles 文章 | 1（fundamentals/）|
 | 新增 projects 推荐 | 1 |
 | 原文引用数量 | Article 8 处 / Project 5 处 |
-| commit | 1（a9ee6d5，已推送）|
+| commit | 1（dc416ea，已推送）|
 
 ## 🔮 下轮规划
 
 - **LangChain Interrupt 2026（5/13-14）Deep Agents 2.0**：框架级架构更新，Harrison Chase keynote 发布预期
-- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
+- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence）
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化
-- **OpenAI Symphony（Issue Tracker 作为 Agent Orchestrator）**：500% PR 增长，Linear 创始人关注
-- **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
-- **revfactory/harness-100**：100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义
-- **flutter/skills（1,871 Stars）**：Flutter 官方 skill 库，npx skills CLI 工具，SKILL.md 标准格式
+- **flutter/skills 独立成篇**：1,873 Stars，Flutter 官方 skill 库，与 microsoft/skills 对比分析
+- **Prompthon-IO/agent-systems-handbook（184 Stars）**：2026-04-20 创建的生产级 Agent 手册，多路径学习架构
+- **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读
 
 ---
 
