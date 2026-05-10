@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 09:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 09:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 11:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 11:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -25,6 +25,8 @@
 | OpenAI「The next evolution of the Agents SDK」| P2 | ✅ 本轮闭环 | Model-Native Harness + Native Sandbox + Manifest 抽象，Harness/Compute 分离，与 Anthropic 方案收敛于相同工程范式 |
 | OpenAI「Unrolling the Codex Agent Loop」| P2 | ✅ 本轮闭环 | O(n²) 问题 + Prompt Caching 前缀匹配 + Compaction 机制 + ZDR 矛盾，5处原文引用 |
 | OpenAI「Running Codex safely at OpenAI」（企业安全控制面）| P2 | ✅ 本轮闭环 | Sandbox 边界控制 + Auto-review subagent 审批 + Agent-native OpenTelemetry + AI triage agent，5处原文引用，与 Anthropic Initializer Pattern 形成「企业合规视角 + 工程架构视角」完整方案 |
+| Anthropic「Trustworthy Agents in Practice」（四层安全架构）| P2 | ✅ 本轮闭环 | 四层组件架构（Model/Harness/Tools/Environment）+ 五项信任原则具体实现，5处原文引用 |
+| Agent-Threat-Rule/agent-threat-rules | P2 | ✅ 本轮闭环 | 109 Stars，311 条规则覆盖 9 大威胁类别，OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%），96K Skills 扫描发现 751 malware samples，NVIDIA Garak 97.1% recall，Article 形成「安全框架 + 检测标准」闭环 |
 | system-prompt-skills（kangarooking）| P2 | ✅ 本轮闭环 | 15 个可执行系统提示词设计模式，64 Stars，从 165 个 AI 产品提示词蒸馏，与 OpenAI Agents SDK Skills 原语形成互补 |
 | SkillWard（Fangcun-AI）| P2 | ✅ 本轮闭环 | Agent Skills 三阶段安全扫描，123 Stars，静态+LLM+Docker 沙箱，5,000 Skills ~25% 不安全，约1/3沙箱样本暴露运行时威胁，与 Codex Safe Deployment 形成「发布前扫描 + 运行控制」安全闭环 |
 | Agent Squad 2FastLabs | P2 | ✅ 本轮闭环 | Classifier-First 动态路由，SupervisorAgent 并行协调，Python/TypeScript 双语言 |
@@ -63,11 +65,12 @@
 - **SkillScanner / SkillGuard**：Skills 安全扫描工具，AST10 落地的工具验证
 - **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
 - **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
+- **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools，ohmo 个人 Agent
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/multi-agent-coordination-markdown-specification-2026.md` — 新增：Multi-Agent 协调协议的本质重构，从代码约束到 Markdown 声明式规范。来源：Cursor Blog（2026-04-14），5处原文引用。覆盖：协调逻辑下沉 → 声明式优于过程式 → Self-Benchmarking 闭环 → 边界约束释放探索效率
-- `articles/projects/OptimAI-Lab-CudaForge-training-free-multi-agent-cuda-kernel-2026.md` — 新增：CudaForge 推荐，80 Stars，训练免费的 Multi-Agent CUDA Kernel 工作流，SKILL.md 规范驱动，与 Article 形成「理论→工程实现」闭环，3处 README 原文引用
+- `articles/fundamentals/anthropic-trustworthy-agents-in-practice-four-layer-security-architecture-2026.md` — 新增：Anthropic Trustworthy Agents 四层安全架构深度解读，来源：Anthropic Research（2026-05），5处原文引用。覆盖：四层组件架构（Model/Harness/Tools/Environment）、五项信任原则具体实现（Plan Mode/Constitution/多层防御）、Subagent oversight 挑战、生态共同责任（Benchmarks/Evidence Sharing/Open Standards）
+- `articles/projects/Agent-Threat-Rule-agent-threat-rules-open-detection-standard-109-stars-2026.md` — 新增：Agent-Threat-Rule/agent-threat-rules 推荐，109 Stars，311 条规则覆盖 9 大威胁类别（prompt injection/agent manipulation/skill compromise 等），映射 OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%），96,096 真实 Skills 扫描发现 751 个 malware samples，NVIDIA Garak 97.1% recall，6 周 7 个生态整合（Microsoft/Cisco/NVIDIA Garak 等）。与 Article 形成「安全框架 + 检测标准」完整闭环
 
 ---
 
