@@ -5,6 +5,8 @@
 
 ---
 
+- [coleam00/adversarial-dev](./coleam00-adversarial-dev-gan-style-three-agent-harness-2026.md) — GAN 风格三代理编码 Harness 的生产级实现，108 Stars，TypeScript，双 SDK（Claude Agent SDK + Codex SDK）支持，Sprint Contract 协商机制 + JSON 结构化反馈，Evaluator 主动攻击机制驱动质量提升，与 Anthropic GAN-Style 三代理架构论文形成「理论 → 工程实现」闭环（关联：GAN 三代理架构 → adversarial-dev 生产级实现 → Sprint Contract + 双 SDK 支持）
+
 - [Agent-Threat-Rule/agent-threat-rules](./Agent-Threat-Rule-agent-threat-rules-open-detection-standard-109-stars-2026.md) — Agent 安全检测开放标准，109 Stars，311 条规则覆盖 9 大威胁类别（prompt injection/agent manipulation/skill compromise 等），映射 OWASP Agentic Top 10（10/10）+ SAFE-MCP（91.8%），96,096 真实 Skills 扫描发现 751 个 malware samples，NVIDIA Garak benchmark 97.1% recall，6 周 7 个生态整合（Microsoft/Cisco/NVIDIA Garak 等），与 Anthropic Trustworthy Agents 形成「安全框架 + 检测标准」的完整闭环（关联：Trustworthy Agents → 四层安全架构 → ATR 检测规则 → OWASP 映射 → 真实威胁发现）
 
 - [OptimAI-Lab/CudaForge](./OptimAI-Lab-CudaForge-training-free-multi-agent-cuda-kernel-2026.md) — 训练免费的多智能体 CUDA Kernel 生成工作流，80 Stars，Python，模拟人类专家的迭代工作流（开发→测试→分析硬件反馈→迭代改进），与 Cursor Multi-Agent Kernel 实验形成「规范驱动协调」的互补（关联：Markdown 协调规范 → 开源工作流实现 → CudaForge SKILL.md 驱动）

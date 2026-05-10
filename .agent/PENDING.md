@@ -76,8 +76,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/context-memory/anthropic-effective-context-engineering-agents-2026.md` — 新增：Anthropic 上下文工程深度分析，来源：Anthropic Engineering Blog，8处原文引用。覆盖：从 Prompt Engineering 到 Context Engineering 的范式转移，注意力预算有限资源，Compaction / Structured Note-taking / Sub-agent Architectures 三大支柱，即时检索 vs 预推理检索混合策略，Claude Code 混合模型案例
-- `articles/projects/Martian-Engineering-volt-lossless-context-management-2026.md` — 新增：Volt 推荐，273 Stars，LCM 无损上下文管理，双态架构（Immutable Store + Active Context）+ 三级升级协议保证收敛，OOLONG benchmark 全面超越 Claude Code，与 Article 形成「理论 → 工程实现」闭环
+- `articles/fundamentals/anthropic-gan-style-three-agent-harness-architecture-2026.md` — 新增：Anthropic GAN-Style 三代理架构深度解析，来源：Anthropic Engineering Blog（Prithvi Rajasekaran，2026年3月），8处原文引用。覆盖：单代理两大失败模式（上下文坍缩 + 自我评估失效）、GAN 启发原理、Frontend Design 实验、Sprint Contract 机制、真实成本对比数据（6hr/$200 vs 20min/$9）
+- `articles/projects/coleam00-adversarial-dev-gan-style-three-agent-harness-2026.md` — 新增：adversarial-dev 推荐，108 Stars，TypeScript，双 SDK（Claude Agent SDK + Codex SDK）支持，Sprint Contract 协商机制 + JSON 结构化反馈，Evaluator 主动攻击机制，与 Article 形成「理论 → 工程实现」闭环，3处 README 引用
 
 ---
 
