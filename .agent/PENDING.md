@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-11 01:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-11 01:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-11 03:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-11 03:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -83,6 +83,10 @@
 - **speca（373 ⭐）**：SPECA 已收录，本轮闭环完成
 
 ## 🏷️ 本轮产出索引
+
+
+- `articles/fundamentals/cursor-composer-autoinstall-bootstrapping-rl-training-2026.md` — Cursor Composer Autoinstall 深度解读，来源：Cursor Engineering Blog（2026-05-06），8处原文引用。覆盖：双阶段目标设定+目标实现解耦、Terminal-Bench 61.7% vs 47.9%、自举飞轮、Cloud Agents 同构
+- `articles/projects/Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md` — Storybloq 项目推荐，217 Stars，TypeScript，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」互补
 
 - `articles/deep-dives/anthropic-2026-agentic-coding-trends-report-security-evaluation-2026.md` — Anthropic「2026 Agentic Coding Trends Report」深度解读，聚焦 Trend 8（安全-first 架构）和评估体系建设，8处原文引用。覆盖：协作悖论、安全双刃剑、评估能力与委托边界同构、SPECA填补规范层空白
 - `articles/projects/NyxFoundation-speca-spec-anchored-agentic-audit-framework-373-stars-2026.md` — SPECA 项目推荐，373 Stars，arXiv:2604.26495，5处 README 引用，Sherlock Fusaka + 加密不变量违反发现
