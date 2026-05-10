@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-10 17:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-10 17:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-10 21:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-10 21:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -52,6 +52,7 @@
 | **LiberCoders/FeatureBench（ICLR 2026）**| P2 | ✅ 本轮闭环 | 功能级编程评测框架，Fast split 57.2秒/实例，支持5个主流Agent框架，与 Anthropic AI-Resistant Evaluations 形成主题关联，3处README引用 |
 | **Anthropic「Effective Context Engineering for AI Agents」**| P2 | ✅ 本轮闭环 | 从 Prompt Engineering 到 Context Engineering 的范式转移，注意力预算有限资源，Compaction + Note-taking + Sub-agents 三大工程支柱，8处原文引用 |
 | **Martian-Engineering/Volt（273 Stars）**| P2 | ✅ 本轮闭环 | 无损上下文管理 LCM，双态架构（Immutable Store + Active Context）+ 三级升级协议保证收敛，OOLONG benchmark 全面超越 Claude Code，与 Anthropic Context Engineering 形成「理论 → 工程实现」闭环，4处 README 引用 |
+| **HumanLayer 12-Factor Agents + HumanLayer SDK**| P2 | ✅ 本轮闭环 | 19,728 Stars（12-Factor Agents）+ 10,745 Stars（HumanLayer），Factor 3/5/7/8/9 vs Anthropic Brain/Hands 架构完整对比，来源：GitHub README + 官方文档，6处原文引用 |
 
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
@@ -76,8 +77,8 @@
 
 ## 🏷️ 本轮产出索引
 
-- `articles/fundamentals/anthropic-gan-style-three-agent-harness-architecture-2026.md` — 新增：Anthropic GAN-Style 三代理架构深度解析，来源：Anthropic Engineering Blog（Prithvi Rajasekaran，2026年3月），8处原文引用。覆盖：单代理两大失败模式（上下文坍缩 + 自我评估失效）、GAN 启发原理、Frontend Design 实验、Sprint Contract 机制、真实成本对比数据（6hr/$200 vs 20min/$9）
-- `articles/projects/coleam00-adversarial-dev-gan-style-three-agent-harness-2026.md` — 新增：adversarial-dev 推荐，108 Stars，TypeScript，双 SDK（Claude Agent SDK + Codex SDK）支持，Sprint Contract 协商机制 + JSON 结构化反馈，Evaluator 主动攻击机制，与 Article 形成「理论 → 工程实现」闭环，3处 README 引用
+- `articles/fundamentals/humanlayer-12-factor-agents-llm-application-engineering-methodology-2026.md` — 新增：12-Factor Agents 方法论深度解析，来源：GitHub README + 官方文档（2026年），6处原文引用。覆盖：Factor 3（Own your context window）、Factor 5（Unify state）、Factor 7（Human-in-the-loop）、Factor 8（Own control flow）、Factor 9（Compact errors），与 Anthropic Brain/Hands 架构完整对比
+- `articles/projects/humanlayer-human-in-the-loop-agent-tool-2026.md` — 新增：HumanLayer 项目推荐，10,745 Stars，TypeScript，@require_approval + webhook 异步恢复机制，Gen 3 Autonomous Agents 架构，与 Article 形成「方法论 → 工程实现」闭环
 
 ---
 

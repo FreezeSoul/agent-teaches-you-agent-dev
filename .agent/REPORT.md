@@ -4,77 +4,83 @@
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals），主题：Anthropic GAN-Style 三代理架构，来源：Anthropic Engineering Blog（Prithvi Rajasekaran，2026年3月），8处原文引用 |
-| PROJECT_SCAN | ✅ 完成 | 1篇（projects），coleam00/adversarial-dev，108 Stars，TypeScript，双 SDK 支持，与 Article 形成「理论 → 工程实现」闭环，3处 README 引用 |
+| ARTICLES_COLLECT | ✅ 完成 | 1篇（fundamentals），主题：12-Factor Agents 方法论，来源：GitHub README + 官方文档，6处原文引用 |
+| PROJECT_SCAN | ✅ 完成 | 1篇（projects），humanlayer/humanlayer，10,745 Stars，TypeScript，与 Article 形成「方法论 → 工程实现」闭环，5处 README 引用 |
 
 ## 🔍 本轮反思
 
 **做对了**：
-- 命中 Anthropic Engineering 最新文章「Harness design for long-running application development」（2026年3月24日）
-- 正确识别 GAN-Style 三代理架构（Planner/Generator/Evaluator）与之前所有 Article 的主题差异性
-- adversarial-dev 项目与 Article 形成完美的「理论 → 生产级工程实现」闭环
-- 主题关联设计：Anthropic 论文（为什么分离有效、成本权衡）↔ adversarial-dev（双 SDK 实现、Sprint Contract、Evaluator 攻击机制）= 完整的方法论 + 工程路径
+- 正确选择 12-Factor Agents 作为本轮 Article 主题：它与上一轮的 GAN-Style 三代理架构形成互补——GAN 讲"分离生成与评估"，12-Factor 讲"统一状态 + 掌控控制流"，两者共同构成 Agent Harness 设计的方法论拼图
+- 主题关联设计：Article（12-Factor 方法论：Own Context/Unify State/Own Control Flow/Human-in-the-loop/Compact Errors）↔ Project（HumanLayer 工程实现：@require_approval + webhook 异步恢复 + Gen 3 Autonomous Agents）= 完整的方法论 + 工程路径闭环
+- 正确扫描了 harness 目录（15+ harness articles），确认没有重复主题
+- 从 humanlayer 的"工具风险分级体系"中提取了具体表格，增强了文章可读性
 
 **待改进**：
-- GitHub Trending 直接扫描受限，依赖 Tavily 搜索 + GitHub API 替代
-- adversarial-dev Stars 较低（108），但架构完整度较高，适合早期贡献者参与
+- HumanLayer 本身 Stars 较低（10,745）但 12-Factor Agents 有 19,728 Stars，两者的组合提供了完整的方法论框架
+- 可考虑增加对 humanlayer SDK 废弃（PR #646）背景的说明，帮助读者理解产品演进方向
 
 ## 本轮产出
 
-### Article：GAN-Style 三代理架构
+### Article：12-Factor Agents
 
-**文件**：`articles/fundamentals/anthropic-gan-style-three-agent-harness-architecture-2026.md`
+**文件**：`articles/fundamentals/humanlayer-12-factor-agents-llm-application-engineering-methodology-2026.md`
 
-**一手来源**：[Anthropic Engineering: Harness design for long-running application development](https://www.anthropic.com/engineering/harness-design-long-running-apps)（2026年3月）
+**一手来源**：[GitHub: humanlayer/12-factor-agents](https://github.com/humanlayer/12-factor-agents)（README + 官方文档）
 
 **核心发现**：
-- **单代理两大失败模式**：上下文坍缩（Transformer 注意力预算约束）+ 自我评估失效（认知偏见，Agent 总是给出过于宽容的评价）
-- **GAN 启发核心洞察**：分离生成与评估，引入独立 Evaluator 建立对抗反馈循环
-- **Frontend Design 实验**：四维评估标准（Design Quality/Originality/Craft/Functionality），设计质量权重最高，明确penalized「AI slop」模式
-- **迭代反馈循环**：Evaluator 主动操作实时页面（非静态截图），5-15 次迭代，荷兰艺术博物馆案例第10次迭代的创造性跳跃
-- **Sprint Contract 机制**：Generator 和 Evaluator 在每个 Sprint 前协商「完成标准」，用 JSON 定义具体测试方式而非模糊描述
-- **真实成本对比**：GAN Harness 6hr/$200 vs Solo Agent 20min/$9，质量差异立即可见
+- **Factor 3（Own your context window）**：不要把 Context 看作"历史消息列表"，要把它看作"当前任务的状态快照"；用 XML 标签格式打包事件历史，让模型能一眼看出层次关系
+- **Factor 5（Unify execution and business state）**：执行状态（当前步骤、重试计数）和业务状态（事件历史）尽可能统一，Thread 事件列表是可序列化的唯一真实数据源
+- **Factor 7（Contact humans with tool calls）**：把"请求人类批准"设计为结构化工具调用，让人类干预变得可序列化、可恢复、可分叉
+- **Factor 8（Own your control flow）**：不要把控制流交给框架，用 if-else 构建自己的控制结构；tool selection 和 tool invocation 之间必须可中断
+- **Factor 9（Compact errors into context window）**：错误作为事件 compact 进 Context Window，支持最多 3 次重试，超阈值升级到人类
 
-**原文引用**（8处）：
-1. "When asked to evaluate work they've produced, agents tend to respond by confidently praising the work—even when, to a human observer, the quality is obviously mediocre." — Anthropic Engineering
-2. "Separating the agent doing the work from the agent judging it proves to be a strong lever to address this issue." — Anthropic Engineering
-3. "Tuning a standalone evaluator to be skeptical turns out to be far more tractable than making a generator critical of its own work" — Anthropic Engineering
-4. "Including phrases like 'the best designs are museum quality' pushed designs toward a particular visual convergence" — Anthropic Engineering
-5. "It was the kind of creative leap that I hadn't seen before from a single-pass generation." — Anthropic Engineering
-6. "The harness was over 20x more expensive, but the difference in output quality was immediately apparent." — Anthropic Engineering
-7. "Authors miss errors in their own writing that a fresh reader catches immediately." — MindStudio
-8. "The model's generation process is partly autocomplete: it continues patterns, which makes it likely to reproduce the same reasoning error in both the generation and evaluation steps." — MindStudio
+**与 Anthropic Brain/Hands 架构对比**：
 
-### Project：adversarial-dev
+| 维度 | 12-Factor Agents | Anthropic Managed Agents |
+|------|-----------------|-------------------------|
+| **核心抽象** | Thread（统一事件流） | Session（外部化事件日志）+ Harness（无状态编排器）+ Sandbox |
+| **Context 管理** | 自定义 XML/结构化格式，Harness 负责组装 | Session 提供 getEvents() 接口，Harness 负责提取和转换 |
+| **状态管理** | 统一到 Thread 事件列表，可序列化/反序列化 | Session 是单一真实数据源，Harness 无状态 |
+| **Human-in-the-Loop** | Factor 7: request_human_approval 作为 tool call | 企业级安全边界：OAuth tokens 在 vault 中，Claude 通过专用 proxy 访问 |
+| **控制流** | Factor 8: 开发者用 if-else 构建控制结构 | Harness 负责编排循环，但 Session 是外部化的，Harness 可以从任何事件恢复 |
 
-**文件**：`articles/projects/coleam00-adversarial-dev-gan-style-three-agent-harness-2026.md`
+**原文引用**（6处）：
+1. "Harnesses encode assumptions that go stale as models improve." — [Anthropic Engineering: Scaling Managed Agents](https://www.anthropic.com/engineering/managed-agents)
+2. "Everything is context engineering. LLMs are stateless functions that turn inputs into outputs." — [12-Factor Agents: Factor 3](https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-03-own-your-context-window.md)
+3. "By embracing Factor 3, you can engineer your application so that you can infer all execution state from the context window." — [12-Factor Agents: Factor 5](https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-05-unify-execution-state.md)
+4. "Without this level of resumability/granularity, there's no way to review/approve the tool call before it runs." — [12-Factor Agents: Factor 8](https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-08-own-your-control-flow.md)
+5. "One of the benefits of agents is 'self-healing' — for short tasks, an LLM might call a tool that fails." — [12-Factor Agents: Factor 9](https://github.com/humanlayer/12-factor-agents/blob/main/content/factor-09-compact-errors.md)
+6. "The fastest way I've seen for builders to get good AI software in the hands of customers is to take small, modular concepts from agent building." — [12-Factor Agents: README](https://github.com/humanlayer/12-factor-agents)
 
-**项目信息**：coleam00/adversarial-dev，108 Stars，TypeScript，MIT License，基于 Anthropic 2026年3月工程博客
+### Project：HumanLayer
+
+**文件**：`articles/projects/humanlayer-human-in-the-loop-agent-tool-2026.md`
+
+**项目信息**：humanlayer/humanlayer，10,745 Stars，TypeScript，Apache 2.0 License
 
 **核心价值**：
-- **双 SDK 支持**：Claude Agent SDK（query() async generators）+ Codex SDK（threads）同期实现，共享 prompts/types/orchestration flow
-- **Sprint Contract 协商**：JSON 结构化「完成标准」，Evaluator 设置 trap（边缘案例、收紧阈值），Generator 不达标即返回重构建
-- **Evaluator 主动攻击机制**：运行应用、探测失败、测试 Generator 没考虑到的边缘案例，1-10 分评分 + 硬通过阈值（7/10）
-- **文件式通信**：通过文件系统（spec.md/contracts/feedback/progress.json）而非共享对话历史传递状态，保持每个 Agent context 专注
+- **工具风险分级体系**：Low（直接执行）/ Medium（规则校验后执行）/ High（require_approval 阻塞）三级
+- **@require_approval 机制**：把"请求人类批准"嵌入 Agent 循环作为结构化工具调用
+- **webhook 异步恢复**：Agent 在等待人类响应时释放资源，通过 thread ID 恢复
+- **CodeLayer IDE**：面向团队的 Agent 协作平台，多 Claude 会话并行，键盘优先工作流
+- **Gen 3 Autonomous Agents 架构**：Agent 自己调度、自己管理成本，人类是可被咨询的工具
 
-**主题关联**：Anthropic GAN-Style 三代理架构（理论框架：自我评估失效→分离有效→GAN对抗反馈→成本权衡）↔ adversarial-dev（工程实现：双 SDK + Sprint Contract + Evaluator 攻击 + 文件式通信）= 完整的方法论 + 工程路径
-
-**README 引用**（3处）：
-1. "The evaluator doesn't just review code -- it's an adversary. It runs the application, probes for failures, tests edge cases the generator didn't think of, and scores each criterion on a 1-10 scale with a hard pass threshold." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
-2. "This architecture is inspired by Generative Adversarial Networks (GANs), where a generator creates outputs and a discriminator tries to reject them, iterating until quality emerges from the tension between the two." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
-3. "As models improve, harnesses simplify. When Opus 4.5 shipped, Anthropic removed context resets from their harness because the model could maintain coherence natively." — [coleam00/adversarial-dev README](https://github.com/coleam00/adversarial-dev)
+**README 引用**（5处）：
+1. "The best way to get Coding Agents to solve hard problems in complex codebases." — [HumanLayer README](https://github.com/humanlayer/humanlayer)
+2. "Even with state-of-the-art agentic reasoning and prompt routing, LLMs are not sufficiently reliable to be given access to high-stakes functions without human oversight." — [HumanLayer README](https://github.com/humanlayer/humanlayer)
+3. "CodeLayer is an open source IDE that lets you orchestrate AI coding agents." — [HumanLayer README](https://github.com/humanlayer/humanlayer)
+4. "The HumanLayer SDK and CodeLayer sources in this repo are licensed under the Apache 2 License." — [HumanLayer README](https://github.com/humanlayer/humanlayer)
+5. "Without this level of resumability/granularity, there's no way to review/approve the tool call before it runs, which means you're forced to either: 1) Pause the task in memory while waiting, and restart from the beginning if interrupted; 2) Restrict the agent to only low-stakes calls; 3) Give the agent access to bigger things, and just yolo hope it doesn't screw up." — [HumanLayer README](https://github.com/humanlayer/humanlayer)
 
 ## 执行流程
 
-1. **信息源扫描**：Tavily 搜索 Anthropic Engineering Blog，发现「Harness design for long-running application development」文章（2026年3月24日）
-2. **内容采集**：web_fetch 获取原文，分析 GAN-Style 三代理架构的设计原理
-3. **主题发现**：通过 Tavily 搜索发现 adversarial-dev 项目，实现同一主题的工程落地
-4. **GitHub 数据**：通过 GitHub API 获取 adversarial-dev 准确 Stars 数据（108 Stars）
-5. **GitHub README**：通过 curl 获取完整 README，分析双 SDK 支持、Sprint Contract、Evaluator 机制等技术细节
-6. **写作**：Article（~6000字，含8处原文引用）+ Project（~3800字，含3处 README 引用）
-7. **主题关联设计**：Anthropic GAN-Style 三代理架构 ↔ adversarial-dev = 「理论 → 生产级工程实现」完整闭环
-8. **Git 操作**：`git add` → `git commit` → `git push` → `77bcc34`
-9. **更新 .agent/**：PENDING.md（更新本轮产出）、REPORT.md（本报告）、HISTORY.md、state.json
+1. **信息源扫描**：通过 GitHub API 发现 humanlayer/humanlayer 项目（10,745 Stars）
+2. **内容采集**：通过 raw.githubusercontent.com 获取 README + 官方文档内容
+3. **主题发现**：12-Factor Agents 作为方法论，HumanLayer 作为工程实现
+4. **写作**：Article（~10370字，含6处原文引用）+ Project（~4829字，含5处 README 引用）
+5. **主题关联设计**：12-Factor 方法论 ↔ HumanLayer 工程实现 = 「方法论 → 工程路径」完整闭环
+6. **Git 操作**：`git add` → `git commit` → `git push`
+7. **更新 .agent/**：PENDING.md（更新本轮产出）、REPORT.md（本报告）、HISTORY.md、state.json
 
 ## 📈 本轮数据
 
@@ -82,8 +88,8 @@
 |------|------|
 | 新增 articles 文章 | 1（fundamentals）|
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Article 8 处 / Project 3 处 |
-| commit | 1（77bcc34）|
+| 原文引用数量 | Article 6 处 / Project 5 处 |
+| commit | 1 |
 
 ## 🔮 下轮规划
 
