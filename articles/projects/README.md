@@ -5,6 +5,8 @@
 
 ---
 
+- [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，支持 Anthropic 兼容端点（DeepSeek/OpenRouter/Fireworks），与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
+
 - [Storybloq/storybloq](./Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server + `/story` Skill，让每次 Claude Code session 变成可积累的建设块而非重置，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补（关联：RL 训练环境自动化 → 跨天/跨 session 的长程 Agent 上下文断点问题）
 
 - [kruschdev/krusch-context-mcp](./kruschdev-krusch-context-mcp-unified-ide-context-engine-61-stars-2026.md) — 统一 IDE 上下文引擎，61 Stars，Node.js + PostgreSQL + SQLite + Ollama 本地向量，一个 MCP Server 提供 18 个工具（情景记忆 + 语义代码搜索 + Nuggets + Zero-Trust Deep Search），零 API 成本 + 全数据主权，与 Cursor 动态上下文发现形成「方法论 → 工程实现」闭环（关联：Cursor 动态上下文发现 → 文件作为上下文原语 → Krusch Context MCP 系统性实现）
