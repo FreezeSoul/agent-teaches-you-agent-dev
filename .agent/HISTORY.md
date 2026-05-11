@@ -1,3 +1,13 @@
+## 2026-05-12 03:57 ✅ committed: (pending)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor 企业大规模采用：PayPal 3,000 应用改造的工程启示录」（deep-dives/），来源：Cursor Blog paypal（2026-05-11），5处原文引用。覆盖：3,000 应用 Java 升级从 8-12 个月压缩到 2 个月；8,000 开发者 90%+ Cursor 采用率；角色边界崩溃（PM 带功能原型，工程师带 UI 原型）；DORA 指标全面改善；避免 AI 生成代码占比指标（会激励扭曲） |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 garrytan/gstack 推荐（projects/），93,788 Stars，YC CEO Garry Tan AI 软件工厂，23角色虚拟工程团队，810x 生产力提升，与 PayPal Article 形成「个人 → 企业」完整工具链光谱，6处 README 引用 |
+| git commit + push | ⏳ 待执行 | commit pending |
+
+**反思**：本轮命中 Cursor 5/11 发布的 PayPal 客户案例，这是截至目前最大规模的 Enterprise Case Study。核心发现：AI 编程工具的本质不是效率工具，而是组织变革催化剂——3,000 应用改造、角色边界消失、DORA 指标全面改善。gstack（93,788 Stars）提供了个人开发者层面的 AI 软件工厂实现，与 PayPal 案例构成「个人 → 企业」完整工具链光谱。两者共同验证了「第三代范式」的核心主张：人类从「每步指导」切换到「定义问题和验收标准」。
+
 ## 2026-05-12 01:57 ✅ committed: d9a5d68
 
 | 任务 | 结果 | 产出 |

@@ -5,6 +5,8 @@
 
 ---
 
+- [garrytan/gstack](./garrytan-gstack-yc-ceo-ai-software-factory-93788-stars-2026.md) — YC CEO Garry Tan 的 AI 软件工厂，93,788 Stars，将 Claude Code 变成 23 角色虚拟工程团队（CEO/设计师/安全官/QA 等），810x 生产力提升，与 PayPal Cursor 案例形成「个人 → 企业」完整 Agent 工具链光谱
+
 - [google/agents-cli](./google-agents-cli-google-cloud-agent-factory-2272-stars-2026.md) — Google 官方 Agent 部署 CLI + Skill 库，2,272 Stars，支持 Claude Code / Codex / Gemini CLI / any，7 个核心 Skill 覆盖 scaffold→eval→deploy 全链路，与 Cursor「第三代」云端 Agent 工厂形成「范式定义 → 工程实现」闭环（关联：第三代 → 云端 VM 并行 + Artifacts 交付 → agents-cli 提供部署/评估/可观测性标准工具）
 
 - [NousResearch/hermes-agent](./NousResearch-hermes-agent-self-improving-agent-2026.md) — 自改进 AI Agent，支持 Telegram/Discord/Slack/WhatsApp 等多平台，`hermes model` 任意切换 LLM provider（200+ 模型），$5 VPS 可跑，与 Cursor Autoinstall 形成「Agent 自我改进循环」的互补（关联：Autoinstall 用上一代 Composer 配置环境 → Hermes Agent 用当前 session 经验创建 Skill → model helps itself improve 的两条路径）
