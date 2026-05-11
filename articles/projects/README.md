@@ -4,6 +4,11 @@
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 
 ---
+- [NousResearch/hermes-agent](./NousResearch-hermes-agent-self-improving-agent-2026.md) — 自改进 AI Agent，支持 Telegram/Discord/Slack/WhatsApp 等多平台，`hermes model` 任意切换 LLM provider（200+ 模型），$5 VPS 可跑，与 Cursor Autoinstall 形成「Agent 自我改进循环」的互补（关联：Autoinstall 用上一代 Composer 配置环境 → Hermes Agent 用当前 session 经验创建 Skill → model helps itself improve 的两条路径）
+
+- [huggingface/skills](./huggingface-skills-interoperable-agent-tools-1881-stars-2026.md) — Hugging Face 官方 Agent Skills 库，1,881 Stars，标准 SKILL.md 格式，interoperable with Claude Code / Codex / Gemini CLI / Cursor，与 Cursor Autoinstall 形成「训练环境自动化 vs 工具定义标准化」的互补
+
+
 
 - [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，支持 Anthropic 兼容端点（DeepSeek/OpenRouter/Fireworks），与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
 
