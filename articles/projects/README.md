@@ -6,6 +6,8 @@
 ---
 - [NousResearch/hermes-agent](./NousResearch-hermes-agent-self-improving-agent-2026.md) — 自改进 AI Agent，支持 Telegram/Discord/Slack/WhatsApp 等多平台，`hermes model` 任意切换 LLM provider（200+ 模型），$5 VPS 可跑，与 Cursor Autoinstall 形成「Agent 自我改进循环」的互补（关联：Autoinstall 用上一代 Composer 配置环境 → Hermes Agent 用当前 session 经验创建 Skill → model helps itself improve 的两条路径）
 
+- [itsuzef/goalkeeper](./itsuzef-goalkeeper-contract-driven-claude-code-5-stars-2026.md) — 合约驱动的 Claude Code 目标执行框架，5 Stars，2026-05-11 创建，独立 Judge 子代理对抗 Definition of Done，反占位符规则自动拒绝 stub/`.todo`/`it.only`，与 Augment AGENTS.md 研究形成「配置定义 → 完成验证」的完整闭环（关联：Augment 发现好 AGENTS.md = Haiku→Opus 升级 → Goalkeeper 定义 DoD + Judge 验证完成 = 结构化配置工程的两个维度）
+
 - [huggingface/skills](./huggingface-skills-interoperable-agent-tools-1881-stars-2026.md) — Hugging Face 官方 Agent Skills 库，1,881 Stars，标准 SKILL.md 格式，interoperable with Claude Code / Codex / Gemini CLI / Cursor，与 Cursor Autoinstall 形成「训练环境自动化 vs 工具定义标准化」的互补
 
 
@@ -17,6 +19,7 @@
 - [scottgl9/skelm](./scottgl9-skelm-secure-agentic-workflows-typescript-2026.md) — TypeScript 原生安全 Agent 工作流框架，17 Stars，2026-05-03 创建，默认拒绝（default-deny）安全模型 + 嵌入式 CONNECT 代理 + per-agent workspace 隔离，与 Cursor Agent Harness 测量驱动质量形成「质量优化 vs 安全边界」的互补（关联：测量驱动改进 → 安全边界内置 → skelm 将安全从护栏变为工作流定义的内置约束）
 
 - [Storybloq/storybloq](./Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server + `/story` Skill，让每次 Claude Code session 变成可积累的建设块而非重置，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补（关联：RL 训练环境自动化 → 跨天/跨 session 的长程 Agent 上下文断点问题）
+- [itsuzef/goalkeeper](https://github.com/itsuzef/goalkeeper) — 合约驱动的 Claude Code 目标执行框架，独立 Judge 子代理对抗 Definition of Done
 
 - [kruschdev/krusch-context-mcp](./kruschdev-krusch-context-mcp-unified-ide-context-engine-61-stars-2026.md) — 统一 IDE 上下文引擎，61 Stars，Node.js + PostgreSQL + SQLite + Ollama 本地向量，一个 MCP Server 提供 18 个工具（情景记忆 + 语义代码搜索 + Nuggets + Zero-Trust Deep Search），零 API 成本 + 全数据主权，与 Cursor 动态上下文发现形成「方法论 → 工程实现」闭环（关联：Cursor 动态上下文发现 → 文件作为上下文原语 → Krusch Context MCP 系统性实现）
 
@@ -55,6 +58,7 @@
 ## 已推荐项目（防重索引）
 
 - [Storybloq/storybloq](https://github.com/Storybloq/storybloq) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补
+- [itsuzef/goalkeeper](https://github.com/itsuzef/goalkeeper) — 合约驱动的 Claude Code 目标执行框架，独立 Judge 子代理对抗 Definition of Done
 
 - [NyxFoundation/speca](https://github.com/NyxFoundation/speca) — spec-anchored 安全审计框架，373 Stars，Python，Sherlock Fusaka 恢复全部 15 个漏洞 + 发现 4 个新漏洞（含 1 个人类审计员遗漏的加密不变量违反），arXiv:2604.26495，与 Anthropic Trend 8 形成「认知风险 → 规范层防御方法论」闭环
 
