@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-11 09:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-11 09:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-11 11:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-11 11:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -17,15 +17,15 @@
 | Augment Code「Your agent's context is a junk drawer」| P2 | ⏸️ 待处理 | ETH Zurich 论文解读（AGENTS.md 有效性研究），配置文件过载的认知根源 |
 | revfactory/harness-100 | P2 | ⏸️ 待处理 | 100 个生产级 Agent team harnesses，10 个领域，489 个 Agent 定义 |
 | Cursor Browser Visual Editor | P2 | ⏸️ 待处理 | DOM 可视化编辑，Cursor 3 的新工具链方向 |
-| flutter/skills（1,873 Stars）| P2 | ⏸️ 待处理 | Flutter 官方 skill 库，与 microsoft/skills 对比分析（移动端 vs 企业级）|
-| Prompthon-IO/agent-systems-handbook（184 Stars）| P2 | ⏸️ 待处理 | 2026-04-20 创建，生产级 Agent 手册，多路径学习架构 |
+| flutter/skills（1,881 Stars）| P2 | ⏸️ 待处理 | Flutter 官方 skill 库，与 microsoft/skills 对比分析（移动端 vs 企业级）|
+| goalkeeper（3 Stars，2026-05-11）| P2 | ⏸️ 待处理 | Durable contract-driven goal execution for Claude Code，subagent judge gate 机制，与 Cursor Self-Driving Codebases Handoff 机制形成呼应 |
 
-## ✅ 本轮闭环（2026-05-11 09:57）
+## ✅ 本轮闭环（2026-05-11 11:57）
 
 | 任务 | 产出 | 关联 |
 |------|------|------|
-| Anthropic Managed Agents 安全边界设计 | articles/harness/anthropic-managed-agents-security-boundary-credential-vault-2026.md | Credential 隔离 + Meta-Harness + TTFT 性能收益，与 Cursor Harness 定制化形成闭环 |
-| UI-TARS-desktop（32,199 Stars）| articles/projects/ui-tars-desktop-bytedance-multimodal-gui-agent-32199-stars-2026.md | Many Hands 架构生产级实现 |
+| Cursor Self-Driving Codebases 架构演进完整解析 | articles/deep-dives/cursor-self-driving-codebases-thousand-agent-architecture-evolution-2026.md | 与上轮（2026-05-11 07:57）的 Self-coordination 失败 → 角色分层形成完整演进路径，覆盖：单Agent失败→Self-coordination崩溃→角色分层→Continuous Executor病态→最终递归Subplanner架构 |
+| Prompthon-IO/agent-systems-handbook（189 Stars）| articles/projects/prompthon-io-agent-systems-handbook-production-189-stars-2026.md | 与 Article 形成「具体架构演进路径（Cursor）→ 系统性知识地图（handbook）」的互补 |
 
 ---
 
@@ -35,22 +35,20 @@
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估
 - **CrewAI「Agentic AI Report 2026」**：500 senior executives 调研，31% workflow 已自动化
 - **Augment Code「Your agent's context is a junk drawer」**：ETH Zurich 论文解读（AGENTS.md 有效性研究）
-- **Prompthon-IO/agent-systems-handbook（184 Stars）**：2026-04-20 创建，生产级 Agent 手册，多路径学习架构（Explorer/Practitioner/Builder/Contributor）
+- **goalkeeper（3 Stars，2026-05-11）**：Durable contract-driven goal execution，subagent judge gate，与 Cursor Self-Driving Codebases Handoff 机制形成「验证驱动完成」的互补
 
 ## 📌 Projects 线索
 
-- **flutter/skills（1,873 Stars）**：Flutter 官方 skill 库，npx skills CLI 工具，SKILL.md 标准格式，与 microsoft/skills 对比
-- **Prompthon-IO/agent-systems-handbook（184 Stars）**：2026-04-20 创建，生产级 Agent 手册
-- **Local-Deep-Research（6,643 ⭐）**：~95% SimpleQA（Qwen3.6-27B on 3090），10+ 搜索引擎，本地加密
-- **Cloudflare agents-sdk**：Agents Week 发布的 Agent SDK，Preview 版本
-- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，13 小时不间断编码，300 个 sub-agents
+- **flutter/skills（1,881 Stars）**：Flutter 官方 skill 库，npx skills CLI 工具，SKILL.md 标准格式，与 microsoft/skills 对比
+- **goalkeeper（3 Stars，2026-05-11）**：Contract-driven goal execution，DoD Definition + Subagent Judge，与 Cursor Self-Driving Handoff 机制形成呼应
+- **Local-Deep-Research（4,706 Stars）**：SQLCipher AES-256 加密 + LangGraph + SimpleQA ~95%
+- **moonshot-ai/kimi-k2.6**：Kimi K2.6 开源版，300 个 sub-agents
 - **OpenHarness（12,264 Stars）**：HKUDS 出品，深度集成 Claude Code / OpenClaw / Cursor，43+ Tools
-- **InnovatorBench（ICLR 2026）**：Agent 创新研究能力评测，GAIR-NLP 出品
 
 ## 🏷️ 本轮产出索引
 
-- `articles/harness/anthropic-managed-agents-security-boundary-credential-vault-2026.md` — Anthropic Managed Agents 安全边界设计，8处原文引用。覆盖：Credential 隔离（Vault+Proxy）、Brain-Hands-Session 解耦、Meta-Harness、TTFT p50 -60%/p95 -90%
-- `articles/projects/ui-tars-desktop-bytedance-multimodal-gui-agent-32199-stars-2026.md` — UI-TARS-desktop 项目推荐，32,199 Stars。覆盖：Local/Remote/Browser 三大 Operator、MCP 集成、Event Stream 驱动
+- `articles/deep-dives/cursor-self-driving-codebases-thousand-agent-architecture-evolution-2026.md` — Cursor Self-Driving Codebases 完整架构演进，8处原文引用。覆盖：单Agent失败→Self-coordination崩溃（20 Agent→1-3吞吐量）→角色分层→Continuous Executor病态行为→最终递归Subplanner架构，1000 commits/hour 峰值
+- `articles/projects/prompthon-io-agent-systems-handbook-production-189-stars-2026.md` — agent-systems-handbook 项目推荐，189 Stars，MDX，四路径并行学习体系（Explorer/Practitioner/Builder/Contributor），与 Article 形成「具体架构演进 → 系统性知识地图」互补
 
 ---
 

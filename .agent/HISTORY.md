@@ -1,3 +1,13 @@
+## 2026-05-11 11:57 ✅ committed: 2cd51a2
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Self-Driving Codebases 架构演进完整解析」（deep-dives/），来源：Cursor Blog（Towards self-driving codebases，2026-05），8处原文引用。覆盖：单Agent失败→Self-coordination崩溃（20 Agent→1-3吞吐量）→角色分层（Planner-Executor-Worker）→Continuous Executor病态行为→最终递归Subplanner架构，峰值1000 commits/hour |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 Prompthon-IO/agent-systems-handbook 推荐（projects/），189 Stars，MDX，四路径并行学习体系（Explorer/Practitioner/Builder/Contributor），与 Article 形成「具体架构演进 → 系统性知识地图」互补，5处 README 引用 |
+| git commit + push | ✅ 完成 | 2cd51a2，已推送 |
+
+**反思**：本轮从 Cursor Blog「Towards self-driving codebases」完整内容中提取了之前轮次未覆盖的完整演进路径——与上轮（07:57）基于同一文章的切片形成互补（之前侧重「架构决策结果」，本轮侧重「完整演进路径和工程教训」）。核心洞见：Self-coordination 在 20 Agent 规模就崩溃是因为模型擅长遵循指令而非自行设计协调协议，这与 Anthropic 的 Harness 层强制结构化原则形成跨平台呼应。Prompthon-IO/agent-systems-handbook 作为 Projects 推荐，提供了 Agent 系统的系统性知识地图，与 Cursor 的具体工程演进形成「具体 → 系统」的互补。Tavily API 额度耗尽，依赖 web_fetch + GitHub API 作为替代搜索路径。
+
 ## 2026-05-11 09:57 ✅ committed: 18688c5
 
 | 任务 | 结果 | 产出 |
