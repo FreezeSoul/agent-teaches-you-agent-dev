@@ -4,6 +4,9 @@
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 
 ---
+
+- [google/agents-cli](./google-agents-cli-google-cloud-agent-factory-2272-stars-2026.md) — Google 官方 Agent 部署 CLI + Skill 库，2,272 Stars，支持 Claude Code / Codex / Gemini CLI / any，7 个核心 Skill 覆盖 scaffold→eval→deploy 全链路，与 Cursor「第三代」云端 Agent 工厂形成「范式定义 → 工程实现」闭环（关联：第三代 → 云端 VM 并行 + Artifacts 交付 → agents-cli 提供部署/评估/可观测性标准工具）
+
 - [NousResearch/hermes-agent](./NousResearch-hermes-agent-self-improving-agent-2026.md) — 自改进 AI Agent，支持 Telegram/Discord/Slack/WhatsApp 等多平台，`hermes model` 任意切换 LLM provider（200+ 模型），$5 VPS 可跑，与 Cursor Autoinstall 形成「Agent 自我改进循环」的互补（关联：Autoinstall 用上一代 Composer 配置环境 → Hermes Agent 用当前 session 经验创建 Skill → model helps itself improve 的两条路径）
 
 - [itsuzef/goalkeeper](./itsuzef-goalkeeper-contract-driven-claude-code-5-stars-2026.md) — 合约驱动的 Claude Code 目标执行框架，5 Stars，2026-05-11 创建，独立 Judge 子代理对抗 Definition of Done，反占位符规则自动拒绝 stub/`.todo`/`it.only`，与 Augment AGENTS.md 研究形成「配置定义 → 完成验证」的完整闭环（关联：Augment 发现好 AGENTS.md = Haiku→Opus 升级 → Goalkeeper 定义 DoD + Judge 验证完成 = 结构化配置工程的两个维度）
