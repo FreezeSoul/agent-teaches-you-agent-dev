@@ -1,3 +1,13 @@
+## 2026-05-11 09:57 ✅ committed: 18688c5
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic Managed Agents 安全边界设计」（harness/），来源：Anthropic Engineering Blog（Managed Agents），8处原文引用。覆盖：Credential 隔离（Vault+Proxy）、Brain-Hands-Session 三元解耦、Meta-Harness 架构、TTFT p50 -60%/p95 -90% 性能收益 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 UI-TARS-desktop 推荐（projects/），32,199 Stars，TypeScript，ByteDance 开源多模态 GUI Agent，支持 Local/Remote/Browser 三大 Operator，MCP 集成 |
+| git commit + push | ✅ 完成 | 18688c5，已推送 |
+
+**反思**：本轮从 Anthropic Engineering Blog「Scaling Managed Agents」提取核心内容，与之前轮次的「Anthropic Managed Agents Brain-Hands 解耦」是不同角度：之前侧重「架构模式与 Session 设计」，本篇聚焦「安全边界设计（Credential 隔离）」和「性能收益（TTFT 数据）」。通过 GitHub Trending 发现 UI-TARS-desktop（32,199 Stars，2025-11-05 最新版 v0.3.0），作为 Projects 推荐，关联到 Anthropic「Many Hands」架构——UI-TARS-desktop 的三大 Operator（Local/Remote/Browser）是「Many Hands」模式的生产级实现。主题关联：Managed Agents 安全边界（Credential 永远不可达）→ UI-TARS 作为 Many Hands 具象化 → Harness Engineering 独立学科（与 Cursor 模型定制化策略形成闭环）。防重检查确认两个主题均未被之前轮次收录。
+
 ## 2026-05-11 07:57 ✅ committed: 3ab7c98
 
 | 任务 | 结果 | 产出 |
