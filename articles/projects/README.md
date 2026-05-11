@@ -7,6 +7,8 @@
 
 - [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，支持 Anthropic 兼容端点（DeepSeek/OpenRouter/Fireworks），与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
 
+- [Liu-PenPen/skill-reviewer](./Liu-PenPen-skill-reviewer-skill-quality-enforcement-2026.md) — 给 Agent Skill 做 Code Review 的 Skill，17 Stars，2026-05-11 创建，10 条可检测 rubric + P0–P3 分级 + 零依赖 lint 脚本，与 Cursor「Better AI Models」研究形成「管理 AI 输出」趋势的工具化实现（关联：代码审查 +51% → Skill 成为基础单元 → Skill Review 成为质量门禁）
+
 - [scottgl9/skelm](./scottgl9-skelm-secure-agentic-workflows-typescript-2026.md) — TypeScript 原生安全 Agent 工作流框架，17 Stars，2026-05-03 创建，默认拒绝（default-deny）安全模型 + 嵌入式 CONNECT 代理 + per-agent workspace 隔离，与 Cursor Agent Harness 测量驱动质量形成「质量优化 vs 安全边界」的互补（关联：测量驱动改进 → 安全边界内置 → skelm 将安全从护栏变为工作流定义的内置约束）
 
 - [Storybloq/storybloq](./Storybloq-storybloq-cross-session-context-persistence-217-stars-2026.md) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server + `/story` Skill，让每次 Claude Code session 变成可积累的建设块而非重置，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补（关联：RL 训练环境自动化 → 跨天/跨 session 的长程 Agent 上下文断点问题）
