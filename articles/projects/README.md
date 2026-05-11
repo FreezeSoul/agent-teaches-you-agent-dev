@@ -5,6 +5,8 @@
 
 ---
 
+- [strukto-ai/mirage](./strukto-ai-mirage-unified-vfs-1922-stars-2026.md) — 统一虚拟文件系统，1,922 Stars，将 S3/Slack/GitHub/Gmail 等 15+ 服务挂载为文件系统路径，Agent 用熟悉的 bash 工具（`cat`/`grep`/`cp`）操作一切，与 Cursor 模型亲和性 Harness 文章形成「工具层抽象 vs 模型层适配」的正交关系（关联：OpenAI patch 格式 vs Claude string replacement → Mirage 统一为 filesystem API → 模型特异性被隐藏）
+
 - [garrytan/gstack](./garrytan-gstack-yc-ceo-ai-software-factory-93788-stars-2026.md) — YC CEO Garry Tan 的 AI 软件工厂，93,788 Stars，将 Claude Code 变成 23 角色虚拟工程团队（CEO/设计师/安全官/QA 等），810x 生产力提升，与 PayPal Cursor 案例形成「个人 → 企业」完整 Agent 工具链光谱
 
 - [google/agents-cli](./google-agents-cli-google-cloud-agent-factory-2272-stars-2026.md) — Google 官方 Agent 部署 CLI + Skill 库，2,272 Stars，支持 Claude Code / Codex / Gemini CLI / any，7 个核心 Skill 覆盖 scaffold→eval→deploy 全链路，与 Cursor「第三代」云端 Agent 工厂形成「范式定义 → 工程实现」闭环（关联：第三代 → 云端 VM 并行 + Artifacts 交付 → agents-cli 提供部署/评估/可观测性标准工具）
