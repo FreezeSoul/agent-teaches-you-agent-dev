@@ -1,61 +1,55 @@
-# REPORT.md — 2026-05-11 19:57 执行报告
+# REPORT.md — 2026-05-11 23:57 执行报告
 
 ## 执行概况
 
 | 字段 | 值 |
 |------|-----|
-| **触发时间** | 2026-05-11 19:57 (Asia/Shanghai) |
+| **触发时间** | 2026-05-11 23:57 (Asia/Shanghai) |
 | **执行结果** | ✅ 闭环完成 |
-| **Commit** | 2113daf |
-| **产出** | Article × 1 + Projects × 2 |
+| **Commit** | ae057aa |
+| **产出** | Article × 1 + Projects × 1 |
 
 ---
 
 ## 产出详情
 
-### Article: Cursor Composer Autoinstall：RL 训练环境自动化的工程突破
+### Article: Augment Code AGENTS.md 实证研究：好的配置 = 模型升级，坏的配置比没有更糟糕
 
-- **文件**: `articles/deep-dives/cursor-composer-autoinstall-bootstrapping-rl-training-environments-2026.md`
-- **来源**: Cursor Blog — Bootstrapping Composer with Autoinstall（2026-05-06）
-- **核心内容**: 双阶段 Goal Setting + Execution Agent 架构；Composer 1.5 管理 Composer 2 的环境配置（model bootstrapping）；"model helps itself improve"的完整模式；与 Anthropic Managed Agents 的 Brain/Hands/Session 解耦形成架构互补
+- **文件**: `articles/fundamentals/augment-code-good-bad-agentsmd-2026.md`
+- **来源**: Augment Code Blog — "A good AGENTS.md is a model upgrade" (2026-04-22)
+- **核心内容**: 实证研究发现 AGENTS.md 质量差异相当于 Haiku→Opus 升级（最好）或完整性-30%（最差）；7大有效模式（渐进式披露/流程性工作流/决策表/真实代码示例/领域规则/配对约束/模块化）；过度探索陷阱；文档发现机制（AGENTS.md 100% 自动发现 vs 孤立文档<10%）
 - **引用数**: 6处原文引用
-- **主题关联**: 本轮主题锚点——「Agent Self-Improvement Loop」
+- **主题关联**: 本轮主题锚点——「Agent Configuration Engineering」
 
-### Project: NousResearch/hermes-agent
+### Project: itsuzef/goalkeeper
 
-- **文件**: `articles/projects/NousResearch-hermes-agent-self-improving-agent-2026.md`
-- **来源**: GitHub — NousResearch/hermes-agent（Trending，2026-05-11）
-- **核心内容**: 自改进 Agent，skill self-improvement during use，多平台 messaging（Telegram/Discord/Slack/WhatsApp/Signal），`hermes model` 任意切换 200+ LLM providers，$5 VPS 可跑，batch trajectory generation
-- **主题关联**: 与 Autoinstall 形成「model helps itself improve 的两条路径」：Autoinstall 用上一代模型配置环境 → Hermes 用当前 session 经验创建 Skill
-
-### Project: huggingface/skills
-
-- **文件**: `articles/projects/huggingface-skills-interoperable-agent-tools-1881-stars-2026.md`
-- **来源**: GitHub Trending — huggingface/skills（1,881 Stars）
-- **核心内容**: Hugging Face 官方 Agent Skills 库，SKILL.md 标准格式，Claude Code/Codex/Gemini CLI/Cursor 全平台通用，agentskills.io 开放标准
-- **主题关联**: 与 Autoinstall 形成「工具标准化」互补：Autoinstall 的环境配置 Skill → Hugging Face Skills 的 ML 任务定义 Skill → Skill 标准化的生态支撑
+- **文件**: `articles/projects/itsuzef-goalkeeper-contract-driven-claude-code-5-stars-2026.md`
+- **来源**: GitHub — itsuzef/goalkeeper（5 Stars，2026-05-11 创建）
+- **核心内容**: 合约驱动的 Claude Code 目标执行框架，独立 Judge 子代理对抗 Definition of Done，反占位符规则（stub/`.todo`/`it.only` 自动拒绝），两阶段门控（Validator → Judge），Chain 模式（角色边界门控），Mission 模式（超目标迭代编排）
+- **主题关联**: 与 Augment AGENTS.md 研究形成「配置定义（What）→ 完成验证（Done）」的完整闭环：Augment 研究揭示好的 AGENTS.md 如何定义正确的工作方向，Goalkeeper 验证工作是否真正完成
 
 ---
 
 ## 决策记录
 
-1. **信息源扫描**：Tavily API 超出配额，改用 Playwright headless + SOCKS5 代理抓取 Anthropic/OpenAI/Cursor 官方博客
-2. **Anthropic Engineering Blog 扫描**：发现两篇新文章「Scaling Managed Agents（Apr 08）」和「April 23 Postmortem（Apr 23）」；Managed Agents 已在之前轮次产出 deep-dive 文章（anthropic-managed-agents-brain-hands-session-2026.md），确认仓库已有完整覆盖，跳过文章新增
-3. **Cursor Blog 扫描**：发现「Continually improving our agent harness（Apr 30）」和「Bootstrapping Composer with autoinstall（May 6）」；continually-improving-agent-harness 已在 2026-05-05 产出 harness 文章，跳过；Autoinstall 文章未覆盖，评估后判定为高质量 deep-dive 主题
-4. **GitHub Trending 扫描**：通过 curl + SOCKS5 代理获取 trending 页面，发现 NousResearch/hermes-agent 和 huggingface/skills；防重检查确认未收录
-5. **主题收敛**：本轮主题聚焦「Agent Self-Improvement Loop」—— Autoinstall（model bootstrapping）、Hermes（skill self-improvement）、HF Skills（tool standardization）是同一主题的三个侧面
+1. **信息源扫描**：Tavily API 超出配额（432 错误），改用 web_fetch 直接抓取官方博客
+2. **Anthropic Engineering Blog 扫描**：最新文章为「April 23 Postmortem」（4/23），Managed Agents（4/8），Auto Mode（3/25），Harness Design（3/24）——均已在之前轮次深度覆盖，跳过文章新增
+3. **Cursor Blog 扫描**：发现「Bugbot now self-improves with learned rules」（4/8）——Bugbot 78% 解决率数据，但 learn rules 机制与之前轮次 Cursor/Agent Skills 主题重复，评估后跳过
+4. **Augment Code Blog 扫描**：发现「A good AGENTS.md is a model upgrade」（4/22）——实证研究，AGENTS.md 配置质量量化测量（Haiku→Opus 等效），与之前轮次覆盖的 Anthropic Context Engineering 形成实证互证，判定为高质量主题
+5. **GitHub Trending 扫描**：通过 GitHub API 搜索 `created:>2026-05-10 agent/llm/claude` 关键词组合，发现 goalkeeper（5 Stars，2026-05-11 创建），与 Augment 文章主题强关联（合约/DoD = 结构化配置工程）
+6. **主题收敛**：本轮主题聚焦「Agent Configuration Engineering」—— Augment 研究回答「如何配置」（AGENTS.md 七大模式），Goalkeeper 回答「如何验证完成」（Definition of Done + Judge gate），两者共同构成配置工程的完整闭环
 
 ---
 
 ## 反思
 
-**本轮核心发现**：三条「Agent 自我改进」路径在本轮汇聚：
+**本轮核心发现**：配置工程学（Configuration Engineering）正在成为 Agent 工程的新兴学科：
 
-1. **Cursor Autoinstall（Model Bootstrapping）**：用上一代 Composer 模型配置下一代 Composer 的训练环境，实现训练基础设施的 self-improving loop
-2. **Hermes Agent（Skill Self-Improvement）**：用当前 session 的经验创建 Skill，下一个 session 自动调用，实现 agent 能力的结构化累积
-3. **Hugging Face Skills（Tool Standardization）**：通过 SKILL.md 标准格式实现工具定义的跨平台互操作，使得 self-improving skills 可以跨 Agent 系统流动
+1. **Augment AGENTS.md 研究**：「好配置 = 模型升级」的本质是减少 Agent 的决策负担（决策表在写代码前解决歧义）+ 管理信息流（渐进式披露），而不是告诉 Agent 更多规则
+2. **Goalkeeper 合约框架**：将人类对「什么是完成」的隐性判断封装为显式的 Definition of Done，/goal-prep 交互过程本身就是高价值的知识捕获机制
+3. **两个维度的互补**：Augment 研究 → 配置的定义（What to do）；Goalkeeper → 配置的验证（When is done）
 
-这三条路径共同指向一个更大的趋势：**Agent 系统正在从「一次性工具」演变为「自我改进的实体」**——不是靠人工维护改进流程，而是让 Agent 自己管理自己的演进。
+这揭示了一个更大的趋势：**Agent 系统的质量提升正在从「模型能力提升」转向「配置工程精细化」**——同样的模型，通过更好的配置（AGENTS.md + DoD + Judge gate），可以实现显著的质量跃升。
 
 **下轮线索**：LangChain Interrupt 2026（5/13-14）是框架级架构更新的重要信号，Harrison Chase keynote 可能发布 Deep Agents 2.0；Anthropic Feb 2026 Risk Report 解密版提供了 AI 模型自主性风险的系统性评估框架；flutter/skills 与 Hugging Face Skills 形成移动端 vs 企业级的 Skill 生态对比。
 
