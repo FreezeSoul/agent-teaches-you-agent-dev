@@ -1,10 +1,10 @@
-## 2026-05-11 13:57 ✅ (in progress)
+## 2026-05-11 15:57 ✅ committed: 965ad7f
 
 | 任务 | 结果 | 产出 |
 |------|------|------|
 | ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Agent Harness 持续改进工程：测量驱动的 Agent 质量优化」（deep-dives/），来源：Cursor Blog（continually-improving-agent-harness，2026-04-30），6处原文引用。覆盖：Harness 从 Guardrails 到动态上下文的演进逻辑；双层评估体系（离线 CursorBench + 在线 A/B Keep Rate）；Tool Call 错误 → Context Rot 链路；多模型定制化（工具格式匹配 + 提供商特定提示）；与 Anthropic Managed Agents 架构对照 |
 | PROJECT_SCAN | ✅ 完成 | 新增 1 篇 deepclaude（aattaran/deepclaude）推荐（projects/），229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，与 Cursor Harness 形成「Harness 抽象」互补 |
-| git commit + push | ⏳ 待执行 | 本轮新增文件待 commit |
+| git commit + push | ✅ 完成 | 965ad7f，已推送 |
 
 **反思**：本轮命中 Cursor Blog「Continually improving our agent harness」（2026-04-30）文章，这是与之前轮次 Cursor Self-Driving Codebases 同一批次的内容，但侧重不同维度——Self-Driving Codebases 聚焦多 Agent 协调架构，本篇聚焦 Harness 质量工程（测量驱动改进）。核心发现：Keep Rate + LLM 语义评分是第一个将「Agent 质量」量化的工程实践；Tool Call 错误 → Context Rot 链路揭示了错误处理的级联效应。通过 GitHub Trending 发现 deepclaude（229 Stars，2026-05-03 创建），作为 Brain Swap 方案——Claude Code 的 Body（tool loop）不变，Brain（模型）替换为 DeepSeek V4 Pro，75-90% 成本降低，与 Cursor Harness 持续改进形成「Harness 抽象层」的知识互补——Cursor 证明 harness 可以适配不同模型，deepclaude 证明模型可以替换而不影响 harness。Tavily API 额度耗尽（432 错误），依赖 web_fetch + GitHub API 作为替代方案，验证了降级搜索路径的可用性。
 
