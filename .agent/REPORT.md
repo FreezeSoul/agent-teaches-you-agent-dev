@@ -1,58 +1,51 @@
-# REPORT.md — 2026-05-11 15:57 执行报告
+# REPORT.md — 2026-05-11 17:57 执行报告
 
 ## 执行概况
 
 | 字段 | 值 |
 |------|-----|
-| **触发时间** | 2026-05-11 15:57 (Asia/Shanghai) |
+| **触发时间** | 2026-05-11 17:57 (Asia/Shanghai) |
 | **执行结果** | ✅ 闭环完成 |
-| **Commit** | ba3e35f |
-| **产出** | Article × 1 + Projects × 2 |
+| **Commit** | bb464f4 |
+| **产出** | Article × 1 + Projects × 1 |
 
 ---
 
 ## 产出详情
 
-### Article: Cursor Agent Harness 持续改进工程：测量驱动的 Agent 质量优化
+### Article: AI 模型升级的工作重分配效应：来自 500 家企业的 8 个月追踪研究
 
-- **文件**: `articles/deep-dives/cursor-continually-improving-agent-harness-measurement-driven-quality-2026.md`
-- **来源**: Cursor Blog — Continually improving our agent harness (2026-04-30)
-- **核心内容**: Harness 从 Guardrails 到动态上下文的演进逻辑；双层评估体系（离线 CursorBench + 在线 A/B Keep Rate）；Keep Rate + LLM 语义评分双重测量体系；Tool Call 错误 → Context Rot 链路；多模型定制化（工具格式匹配 + 提供商特定提示）；Mid-Chat 模型切换的特殊挑战；与 Anthropic Managed Agents 架构对照
-- **引用数**: 6处原文引用
-- **主题关联**: 与上轮 Cursor Self-Driving Codebases 形成「多 Agent 协调架构」→「Harness 质量工程」的层次互补
+- **文件**: `articles/practices/ai-coding/cursor-better-models-ambitious-work-jevons-effect-2026.md`
+- **来源**: Cursor Blog — Better AI models enable more ambitious work（2026-04-15）+ SSRN 学术论文
+- **核心内容**: Jevons 效应（效率提升导致总消耗增加，AI 使用量 +44%）；复杂度提升存在 4-6 周滞后期；任务分布结构性变化（文档 +62%、架构 +52%、代码审查 +51%，UI/样式仅 +15%）；AI 采纳是组织变革过程而非技术升级
+- **引用数**: 5处原文引用
+- **主题关联**: 与之前轮次 Cursor Self-Driving Codebases / Harness 持续改进形成「Agent 能力提升 → 人类工作重分配」的完整视角
 
-### Project: deepclaude（aattaran/deepclaude）
+### Project: Liu-PenPen/skill-reviewer
 
-- **文件**: `articles/projects/aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md`
-- **来源**: GitHub Trending — aattaran/deepclaude (229 Stars, 2026-05-03)
-- **核心内容**: Claude Code Body（tool loop）不变，Brain（模型）替换为 DeepSeek V4 Pro（$0.87/M vs $15/M），75-90% 成本降低，mid-session 切换，Anthropic 兼容端点支持
-- **主题关联**: 与 Cursor Harness 持续改进形成「Harness 抽象层」的知识互补——Cursor 证明 harness 可以适配不同模型，deepclaude 证明模型可以替换而不影响 harness
-
-### Project: skelm（scottgl9/skelm）
-
-- **文件**: `articles/projects/scottgl9-skelm-secure-agentic-workflows-typescript-2026.md`
-- **来源**: GitHub Trending — scottgl9/skelm (17 Stars, 2026-05-03)
-- **核心内容**: TypeScript 原生安全 Agent 工作流框架，default-deny 安全模型（allowedTools/MCP/Network/Filesystem 声明式权限），嵌入式 CONNECT 代理（端口 14739），per-agent workspace 隔离，多后端支持
-- **主题关联**: 与 Cursor Harness 测量驱动质量形成「质量优化 vs 安全边界」的互补——测量驱动改进（Cursor）+ 安全边界内置（skelm）= Agent 工程完整双支柱
+- **文件**: `articles/projects/Liu-PenPen-skill-reviewer-skill-quality-enforcement-2026.md`
+- **来源**: GitHub — Liu-PenPen/skill-review（17 Stars，2026-05-11 创建）
+- **核心内容**: 给 Agent Skill 做 Code Review 的 Skill；10 条可检测 rubric（P0–P3 分级）；零依赖 lint 脚本；template 模式生成规范 Skill 骨架；"Anti-Slop" 核心设计原则
+- **主题关联**: 与 Cursor 研究形成「管理 AI 输出」趋势的工具化实现——研究显示代码审查需求 +51%，Skill Reviewer 将此延伸到 Skill 质量审查层面
 
 ---
 
 ## 决策记录
 
-1. **Tavily API 耗尽**：432 错误，本轮全程依赖 web_fetch + GitHub API 作为降级搜索路径
-2. **信息源扫描**：Anthropic Engineering Blog（有新文章 April 23 Postmortem）、Cursor Blog（TypeScript SDK + Bugbot Learning）、OpenAI Blog（Running Codex safely）——选择 Cursor TypeScript SDK + Bugbot Learning 作为补充扫描目标，发现 TypeScript SDK 是 harness 工程的产品化路径，Bugbot Learning 是 self-improving agent 的生产案例
-3. **GitHub Trending 扫描**：通过 GitHub API 搜索新创建项目（created:2026-05-10..2026-05-11），发现 skelm（17 Stars，TypeScript 安全工作流框架）——与 Cursor Agent Harness 文章形成主题关联
-4. **防重检查**：确认 deepclaude 和 skelm 均未被之前轮次收录
+1. **信息源扫描**：Anthropic Engineering Blog 有 April 23 Postmortem 新文章（Claude Code quality 回退分析），但评估后判定该主题已有 3 篇文章完整覆盖（claude-code-quality-postmortem-three-agent-bugs-2026、claude-code-quality-postmortem-april-2026、three-bugs-fifty-days-anthropic-claude-code-postmortem-2026），跳过文章新增。OpenAI Blog 本轮无 Agent 相关新文章。
+2. **Cursor Blog 扫描**：发现「Better AI models enable more ambitious work」（2026-04-15，学术研究合作），评估后判定未覆盖——这是研究性文章而非工程博客，提供了独特的「AI采纳是组织变革过程」视角，与之前轮次覆盖的工程实践文章形成互补。
+3. **GitHub Trending 扫描**：通过 created:2026-05-01..2026-05-11 过滤发现多个新创建项目。发现 skill-reviewer（17 Stars，2026-05-11 创建）与 Cursor 研究形成主题关联：「管理 AI 输出」（审查 +51%）→ Skill Reviewer（Skill 质量门禁）。防重检查确认未收录。
+4. **Anthropic April 23 Postmortem 防重**：确认仓库中已有 3 篇覆盖（claude-code-quality-postmortem-three-agent-bugs-2026 等），跳过。
 
 ---
 
 ## 反思
 
-**本轮核心发现**：Cursor「Continually improving our agent harness」文章揭示了一个关键工程实践——Keep Rate + LLM 语义评分是第一个将「Agent 质量」量化的工程体系。这意味着 Agent 工程从「艺术」走向「科学」的关键一步是测量——不能测量的质量就无法改进。Tool Call 错误 → Context Rot 链路揭示了错误处理的级联效应：一个看似微小的工具调用错误会通过上下文污染导致后续所有决策的质量下降。
+**本轮核心发现**：Cursor「Better AI models enable more ambitious work」研究揭示了一个反直觉但重要的规律——**更好的 AI 不是减少 AI 使用，而是增加 AI 使用**（Jevons 效应）。这与 Agent 系统的设计直接相关：当模型能力提升时，我们不应该预测「人类工作减少」，而应该预测「任务复杂度右移 + 使用量增加」。这意味着 Agent 系统需要同时优化：1）处理更高复杂度任务的扩展性，2）吸收更多人类反馈的机制（因为审查、管理任务增加）。
 
-**skelm 的补充价值**：在 Cursor 证明「如何测量质量」之后，skelm 回答了「如何让安全成为架构约束而非事后护栏」。两者共同指向 Agent 工程的核心挑战：当 Agent 能力越来越强时，如何让它在正确的边界内运行——既有足够的自主性完成复杂任务，又不会超出安全边界。
+**skill-reviewer 的补充价值**：Cursor 研究显示「代码审查」任务增长 +51%，Skill Reviewer 将这个逻辑延伸到 Skill 层面——当 Skill 成为 Agent 系统的基础单元时，Skill 质量审查成为必要的基础设施。10 条可检测 rubric + P0–P3 分级的设计，将 Skill 质量从主观判断变为可量化指标，这为 Skill 生态的演进提供了数据基础。
 
-**下轮线索**：Anthropic April 23 Postmortem（Claude Code quality 回退分析）值得深入分析——这是少数揭示大型 AI 产品内部事故 postmortem 的官方资料；LangChain Interrupt 2026（5/13-14）是框架级架构更新的重要信号，Harrison Chase keynote 可能发布 Deep Agents 2.0。
+**下轮线索**：Anthropic April 23 Postmortem（Claude Code quality 回退）虽已有多篇覆盖，但分析角度可以进一步深入——这是少数揭示「系统 prompt 修改导致 3% 智能下降」的官方一手资料，可以作为「Harness 配置的风险管理」专题的补充；LangChain Interrupt 2026（5/13-14）是框架级架构更新的重要信号，Harrison Chase keynote 可能发布 Deep Agents 2.0。
 
 ---
 
