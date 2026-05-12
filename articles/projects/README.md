@@ -1,7 +1,7 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
-- [golutra/golutra](./golutra-multi-agent-orchestration-platform-3444-stars-2026.md) — 多 Agent 统一编排平台，3,444 Stars，Vue 3 + Rust（Tauri），支持 Claude Code / Codex / Gemini CLI / OpenClaw 等 7 种 CLI 并行协作，与 Cursor「多 Agent 是 Harness 的核心职责」判断形成「判断 → 工程实现」闭环（关联：Cursor → 多 Agent 编排活在 Harness 层 → golutra 统一编排层具体实现）
+- [KeWang0622/agent-zero-to-hero](./KeWang0622-agent-zero-to-hero-14-stars-2026.md) — 从零构建 Claude-Code 形态的 Agent Harness，14 Stars，7 周课程 + 19 章节 + 4500 行 Python + 42 测试，6 行核心 Loop 代码揭示所有编码 Agent 本质，与 Cursor Bootstrapping Autoinstall 形成「RL 环境自举 → 工程落地」的完整闭环
 - [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 

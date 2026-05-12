@@ -368,3 +368,18 @@
 **决策记录**：Anthropic Engineering Blog 扫描发现 april-23-postmortem 文章（2026-04-23）。该文未在仓库中单独成篇（之前作为附录处理）。发现 GitHub 上 asamassekou10/ship-safe（699 Stars）与文章形成主题关联。拒绝了 OpenAI Codex Safe Running（文章已覆盖 Codex）、Cursor Bugbot 更新（产品定价，无技术深度）。
 
 ---
+
+## 2026-05-12 21:57 ✅ committed: (pending)
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Autoinstall：让 AI 编码模型学会『搭环境』的艺术」（practices/），来源：Cursor Blog bootstrapping-composer-with-autoinstall（2026-05-06），6处原文引用。覆盖：双阶段 Goal Setting + Execution 解耦、Terminal-Bench 61.7% vs 47.9%、自举飞轮（Composer 1.5 → Composer 2）、celo-monorepo 真实案例、与 Kernel Optimization 形成互补 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 KeWang0622/agent-zero-to-hero 推荐（projects/），14 Stars，7周课程 + 19章节 + 4500行Python + 42测试，6行核心 Loop 代码揭示所有编码 Agent 本质，与 Cursor Autoinstall 形成「RL 环境自举 → 工程落地」完整闭环，5处 README 引用 |
+| git commit + push | ⏳ 待执行 | commit pending |
+
+**主题关联**：Cursor Bootstrapping（RL 环境自举）→ agent-zero-to-hero（Harness 从零实现）= 「理论 → 工程落地」的完整闭环。Autoinstall 双阶段设计（Goal Setting + Execution）+ agent-zero-to-hero 的 6 行 Loop = 完整的 Agent 工程知识体系。
+
+**技术决策**：Tavily API 432 超额，降级为 web_fetch 直接抓取 Cursor 官方博客；GitHub Trending 用 curl + SOCKS5 直调 GitHub API；验证 KeWang0622/agent-zero-to-hero 未被之前轮次收录（14 Stars，2026-05-02 创建，防重检查通过）。
+
+**反思**：本轮命中 Cursor 5/6 文章「Bootstrapping Composer with autoinstall」，这是 PENDING.md 中记录的窗口期任务（原定等待 LangChain Interrupt，但 LangChain 无新发布，改为处理其他窗口任务）。核心发现：双阶段 Autoinstall（Goal Setting + Execution）将 RL 环境配置问题转化为可验证的 Agent 协作任务，通过 3 条命令 + 5 次重试上限将环境准备失败率从不可控降到可评估。Terminal-Bench 数据（61.7% vs 47.9%）证明了自举飞轮的有效性。agent-zero-to-hero 项目提供了 Harness 从零实现的学习路径，与 Cursor Autoinstall 形成「理论 → 代码级实践」的互补。
+
