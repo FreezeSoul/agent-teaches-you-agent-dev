@@ -115,6 +115,8 @@
 
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
 - [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — Rust 原生浏览器自动化 CLI
+- [iammm0/execgo](./iammm0-execgo-agent-action-harness-8-stars-2026.md) — Agent Action Harness，8 Stars，Go 标准库核心 + 可选 contrib，Brain/Hands 解耦的执行内核，HTTP/JSON + gRPC 接口，Kahn DAG 调度 + 三类执行器（os/mcp/cli-skills），与 Anthropic Managed Agents Brain/Hands 解耦形成「理论 → 工程实现」闭环（关联：Anthropic 的 `execute(name,input)→string` 接口 → ExecGo 的 Task DSL + Pluggable Executors 实现）
+
 - [lobehub/lobe-chat](https://github.com/lobehub/lobe-chat) — Agent 协作空间，75K ⭐，Agent as the Unit of Work 设计理念
 - [omxyz/lumen](https://github.com/omxyz/lumen) — 视觉优先浏览器 Agent，screenshot→action 循环 + 两层上下文压缩，100% WebVoyager 成功率
 - [MemTensor/MemOS](https://github.com/MemTensor/MemOS) — LLM 和 AI Agent 的记忆操作系统
