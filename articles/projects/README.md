@@ -1,6 +1,7 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
+- [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 
 ---
