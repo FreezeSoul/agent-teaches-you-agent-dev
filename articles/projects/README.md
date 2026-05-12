@@ -22,6 +22,7 @@
 
 
 - [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，支持 Anthropic 兼容端点（DeepSeek/OpenRouter/Fireworks），与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
+- [asamassekou10/ship-safe](./asamassekou10-ship-safe-agent-permission-security-scanner-699-stars-2026.md) — Agentic 时代 CLI 安全扫描器，699 Stars，专门检测 CI/CD 错误配置、Agent 权限蔓延风险、MCP 工具注入、硬编码密钥和 DMCA 标志 AI 依赖，与 Anthropic 2026-04 事后分析形成「事后分析 → 事前防御」互补（关联：Anthropic 三类改动导致质量退化 → ship-safe 在 Agent 伤害生产环境前拦截权限配置问题）
 - [anthropics/financial-services](./anthropic-claude-for-financial-services-one-source-two-ways-skill-bundling-architecture-21236-stars-2026.md) — Anthropic 官方金融领域 Agent 参考仓库，21,236 Stars，同一 Skill 文件同时服务 Claude Cowork 插件（人类主导）和 Managed Agent API（autonomous 执行），9 个具名 Agent + 6 个 vertical plugins + 11 个 MCP 数据连接器，代表 2026 年 Agent 技能复用的核心架构模式（关联：本文 Skill Bundling 架构 → 一次编写双重部署 → financial-services 作为生产级参考实现）
 
 - [Liu-PenPen/skill-reviewer](./Liu-PenPen-skill-reviewer-skill-quality-enforcement-2026.md) — 给 Agent Skill 做 Code Review 的 Skill，17 Stars，2026-05-11 创建，10 条可检测 rubric + P0–P3 分级 + 零依赖 lint 脚本，与 Cursor「Better AI Models」研究形成「管理 AI 输出」趋势的工具化实现（关联：代码审查 +51% → Skill 成为基础单元 → Skill Review 成为质量门禁）
