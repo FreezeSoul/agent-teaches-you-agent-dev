@@ -1,6 +1,6 @@
 # agentmemory：免数据库的 Agent 持久记忆基础设施
 
-> 430 stars/day · 95.2% R@5 · 16+ Agent 共享 · $10/年
+> 628 stars/day · 95.2% R@5 · 16+ Agent 共享 · $10/年 · **5,530 Stars（2026-05-12）**
 
 ---
 
