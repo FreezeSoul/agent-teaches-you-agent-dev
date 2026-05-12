@@ -1,6 +1,7 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
+- [golutra/golutra](./golutra-multi-agent-orchestration-platform-3444-stars-2026.md) — 多 Agent 统一编排平台，3,444 Stars，Vue 3 + Rust（Tauri），支持 Claude Code / Codex / Gemini CLI / OpenClaw 等 7 种 CLI 并行协作，与 Cursor「多 Agent 是 Harness 的核心职责」判断形成「判断 → 工程实现」闭环（关联：Cursor → 多 Agent 编排活在 Harness 层 → golutra 统一编排层具体实现）
 - [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 
@@ -57,9 +58,7 @@
 
 - [prompt-tower-context-packaging-376-stars](./prompt-tower-context-packaging-376-stars-2026.md) — VS Code 上下文打包插件，376 Stars，1,000+ 用户，将代码库上下文一键打包为 AI 可消费的 XML 结构，与 Cursor 动态上下文发现形成互补（预打包 vs 动态拉取）
 
-- [golutra-multi-agent-orchestration-platform-3408-stars-2026](./golutra-multi-agent-orchestration-platform-3408-stars-2026.md) — 多 CLI 统一编排平台，3408 Stars，统一 Codex/Claude Code/OpenClaw 等 7 个 CLI，Rust+Vue3+Tauri，并行执行 + 工作流编排（关联：Anthropic C compiler 16 Agent 并行自治 → 不同协调机制的统一编排视角）
-
-- [gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026](./gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，Pi SDK 构建，真正实现"一次命令，几个月不管"的无人值守编码（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
+[gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026](./gsd-2-gsd-build-autonomous-coding-agent-7269-stars-2026.md) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，Pi SDK 构建，真正实现"一次命令，几个月不管"的无人值守编码（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
 
 - [awslabs/aidlc-workflows](./awslabs-aidlc-workflows-structured-ai-driven-development-2026.md) — AWS 出品的 Agent 开发生命周期方法论，1847 ⭐，三阶段（Inception→Construction→Operations）+ 六合一安全扫描 + 8 平台适配层（关联：Claude Code April Postmortem 质量回退 → 结构化 Human-in-the-loop 的工程实现）
 - [agentmemory-persistent-memory-4902-stars-2026](./agentmemory-persistent-memory-4902-stars-2026.md) — 免 DB 的 Agent 持久记忆，4902 Stars，BM25+Vector+Graph 混合检索（RRF fusion），95.2% R@5 + $10/年 + 零 API 成本，与本文配置性降级形成「平台层缓存污染 → 工具层外部记忆」的互补关系
@@ -99,8 +98,6 @@
 - [badlogic/pi-mono](https://github.com/badlogic/pi-mono) — 开源 AI Agent 工具链，强调开放会话数据共享（Hugging Face），npm 包涵盖 LLM API / Agent Runtime / Coding Agent CLI / TUI / Web UI
 - [gsd-build/GSD-2](https://github.com/gsd-build/GSD-2) — 生产级自主编码 Harness，7269 ⭐，DB 权威状态 + Auto Pipeline + Milestone/Slice 机制，真正实现"一次命令，几个月不管"（关联：Anthropic 长程 Agent 双组件架构 → 生产级工程实现）
 - [Q00/ouroboros](https://github.com/Q00/ouroboros) — Agent OS：规范优先的可验证编码工作流，Specification-first + 3-stage Evaluation Gate，3.2K ⭐
-
-- [golutra/golutra](https://github.com/golutra/golutra) — 多 CLI 统一编排平台，3,408 Stars，Rust+Vue3+Tauri，统一 Claude Code/Codex/Gemini/OpenClaw 等 7 个 CLI，Stealth Terminal + 并行执行 + 工作流模板，CEO Agent 路线图（关联：Anthropic C compiler 并行自治 → 无中心 vs 有中心协调的架构对比）
 
 - [RenseiAI/AgentFactory](https://github.com/RenseiAI/agentfactory) — Linear 原生的多 Agent 软件工厂，Dev/QA/Acceptance 三阶段流水线，TypeScript/Redis 生产级架构
 - [openai/openai-agents-python](https://github.com/openai/openai-agents-python) — OpenAI 官方多 Agent 编排 SDK，Sandbox Agents + Handoffs + Guardrails 生产级基础设施，685+ stars/day
