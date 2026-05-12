@@ -127,7 +127,7 @@
 - [titanwings/colleague-skill](https://github.com/titanwings/colleague-skill) — 将人蒸馏为 AI Skill 的工程实践
 - [bytedance/deer-flow](https://github.com/bytedance/deer-flow) — 字节跳动开源的多智能体编排框架，Supervisor 模式 + Docker 沙箱 + 持久化记忆
 - [numman-ali/openskills](https://github.com/numman-ali/openskills) — Anthropic Agent Skills 的跨平台实现，一个 CLI 让所有 AI 编码工具都能用 Skills
-- [mattpocock/skills](https://github.com/mattpocock/skills) — 来自真实工程师的 Agent Skills 实践集，将二十年工程经验蒸馏为可组合的 Agent Skills
+- [mattpocock/skills](./mattpocock-skills-agent-engineering-discipline-74875-stars-2026.md) — 让 AI Coding 从「Vibe」进化到「Engineered」的 Skills 实践集，74,875 Stars，解决对齐偏差/反馈循环断裂/代码entropy加速四大工程失败模式，/grill-me + CONTEXT.md + /tdd + /improve-codebase-architecture 与 Cursor Multi-Agent Kernel 优化形成「能力边界扩展 + 工程纪律强化」的互补（关联：Multi-Agent 探索能力 → 更需要工程纪律防止 chaos → Skills 提供可操作实践框架）
 - [mattpocock/sandcastle](https://github.com/mattpocock/sandcastle) — Git Worktree 隔离的 Claude Code 生产编排工具，Docker/Podman/Vercel 三层沙箱 + 分支策略自动化，TypeScript 生产级开源实现（关联：Cursor SDK → 生产级 Agent 基础设施的双轨路径）
 - [wilsonzlin/fastrender](https://github.com/wilsonzlin/fastrender) — 百枚并发 Agent 从零构建浏览器引擎，Planner/Sub-Planner/Worker 三层分离架构，100 万行代码验证大规模 Agent Swarm 工程可行性，1.5K ⭐（关联：Anthropic Agent Skills 渐进式披露 → 复杂工作流的知识组织与按需加载）
 - [microsoft/skills](https://github.com/microsoft/skills) — 174 个 Agent Skills 的 Microsoft 官方技能库，覆盖 Azure SDK / Foundry / MCP 构建，Context-Driven Development 理念，与 Anthropic Agent Skills 形成企业级 vs 开源的两条路径（关联：Agent Skills 渐进式披露 → 企业级大规模技能管理的实现路径）
