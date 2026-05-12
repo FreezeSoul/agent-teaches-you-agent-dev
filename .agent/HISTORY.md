@@ -301,3 +301,17 @@
 | PROJECT_SCAN | ✅ 完成 | 新增 1 篇「Volt — 无损上下文管理」（projects/），273 Stars，LCM双态架构（Immutable Store + Active Context）+ 三级升级协议，OOLONG benchmark全面超越Claude Code（32K-1M tokens），4处README引用 |
 
 **主题关联**：Anthropic Context Engineering（理论框架：注意力预算/压缩/笔记/多Agent） ↔ Volt LCM（工程实现：确定性双态架构/三级升级协议）= 完整的长程Agent上下文管理方法论
+
+## 2026-05-12 07:57 ✅ committed: f619a25
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「GAN 风格评估器：如何让 AI 生成不可预测的创意设计」（fundamentals/），来源：Anthropic Engineering「harness-design-for-long-running-apps」，5处原文引用。覆盖：独立评估器解决自我宽容偏差，四条评分标准（Design Quality/Originality/Craft/Functionality），few-shot校准，战略决策点（坚持vs转向），荷兰艺术博物馆第10次迭代创意跳跃，标准措辞对输出的隐性影响 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇「CloakBrowser — C++级源码修正的反检测浏览器」（projects/），6,086 Stars，49个C++补丁覆盖canvas/WebGL/audio/fonts/GPU/screen/WebRTC/网络时序/CDP输入行为，reCAPTCHA v3 0.1→0.9，humanize=True行为模拟，3处README引用 |
+| git commit + push | ✅ 完成 | f619a25 已推送 origin/master |
+
+**主题关联**：GAN 风格评估器需要 Playwright 与真实页面交互来验证设计质量 → 反爬系统会阻断这个交互 → CloakBrowser 提供 C++级反检测能力，确保 Agent 的感知环境不被阻断。形成「质量评估 ← → 环境感知」的工具链闭环。
+
+**决策记录**：Anthropic 所有近期工程博客均已覆盖（c-compiler/eval-awareness/infrastructure-noise/scaling-managed-agents/postmortem），Cursor 无新深度技术文章。从已覆盖文章中提取不同角度：GAN 评估器（来自 harness-design-for-long-running-apps）之前没有独立文章。拒绝了 LangChain Interrupt（窗口期5/13-5/14）、Cursor Bugbot（产品定价更新）、9router（无主题关联）。
+
+---
