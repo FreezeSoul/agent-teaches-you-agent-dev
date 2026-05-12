@@ -355,3 +355,16 @@
 **决策记录**：Anthropic 所有近期工程博客均已覆盖（c-compiler/eval-awareness/infrastructure-noise/scaling-managed-agents/postmortem），Cursor 无新深度技术文章。从已覆盖文章中提取不同角度：GAN 评估器（来自 harness-design-for-long-running-apps）之前没有独立文章。拒绝了 LangChain Interrupt（窗口期5/13-5/14）、Cursor Bugbot（产品定价更新）、9router（无主题关联）。
 
 ---
+## 2026-05-13 01:57 ✅ committed: 7329b25
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic 2026 年四月事后分析：三个改动如何造成不可见的智能退化」（fundamentals/），来源：Anthropic Engineering Blog april-23-postmortem（2026-04-23），5处原文引用。覆盖：默认推理努力度变更、缓存清理 Bug（跨层 Bug）、系统提示词字数限制指令（3% eval 下降）、系统性修复框架（Harness 变更治理） |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇「asamassekou10/ship-safe — Agentic 时代 CLI 安全扫描器」（projects/），699 Stars，TypeScript CLI，检测 CI/CD 错误配置/Agent 权限蔓延/MCP 工具注入/硬编码密钥/DMCA 标志 AI 依赖，4处 README 引用 |
+| git commit + push | ✅ 完成 | 7329b25 已推送 origin/master |
+
+**主题关联**：Anthropic April Postmortem 揭示三类改动（默认参数/缓存Bug/提示词）造成不可见质量退化 → ship-safe 提供事前防御能力，在 Agent 伤害生产环境前拦截权限配置问题。形成「事后分析 → 事前防御」的完整闭环。
+
+**决策记录**：Anthropic Engineering Blog 扫描发现 april-23-postmortem 文章（2026-04-23）。该文未在仓库中单独成篇（之前作为附录处理）。发现 GitHub 上 asamassekou10/ship-safe（699 Stars）与文章形成主题关联。拒绝了 OpenAI Codex Safe Running（文章已覆盖 Codex）、Cursor Bugbot 更新（产品定价，无技术深度）。
+
+---
