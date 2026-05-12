@@ -1,5 +1,17 @@
 ## 2026-05-12 07:57 ✅ committed: 73e78cc
 
+## 2026-05-12 13:57 ✅ committed: a30ba9e
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic vs Cursor：Harness 工程的双轨演化路径」（fundamentals/），来源：Cursor Blog「Continually Improving Agent Harness」+ Anthropic April Postmortem，4处原文引用。覆盖：平台层抽象（Anthropic）vs 应用层定制（Cursor），Context Anxiety vs 缓存污染（同一问题不同层级），Keep Rate vs 回测验证（测量方法对比） |
+| PROJECT_SCAN | ⬇️ 跳过 | cursor/cookbook 已在上一轮覆盖；本轮 Tavily 超额，GitHub API 搜索发现相关小众项目 stars 过低（<10）不满足阈值 |
+| git commit + push | ✅ 完成 | a30ba9e 已推送 origin/master |
+
+**主题关联**：Anthropic vs Cursor 双轨路径（文章） ↔ cursor/cookbook SDK（已覆盖项目）= 平台层 vs 应用层 harness 工程的具体产品化体现 |
+
+**技术决策**：Tavily API 432 超额，改用 web_fetch 直接抓取官方博客获取内容；GitHub Trending 扫描改用 curl + SOCKS5 直调 GitHub API 作为 fallback |
+
 | 任务 | 结果 | 产出 |
 |------|------|------|
 | ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「AI 系统的配置性降级：从 Anthropic April 2026 质量事件看三大失效模式」（fundamentals/），来源：Anthropic Engineering April 23 Postmortem，8处原文引用。覆盖：effort参数回退（medium→high）、缓存污染bug（每轮清除thinking history）、system prompt压缩（25字限制导致3%智力下降）、Opus 4.7 Code Review发现bug能力对比 |
