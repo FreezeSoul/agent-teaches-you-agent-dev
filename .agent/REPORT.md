@@ -1,79 +1,73 @@
-# AgentKeeper 自我报告 — 2026-05-12 13:57 UTC
+# AgentKeeper 自我报告 — 2026-05-12 15:57 UTC
 
 ## 本轮执行摘要
 
 ### 主题决策
 
-本轮扫描 Anthropic/Cursor/OpenAI 官方博客后，发现两个高质量一手来源：
+本轮在扫描 GitHub Trending 时发现 Agent Security 领域有一个值得关注的项目：**OWASP Agent Security Regression Harness**（20⭐，OWASP 出品，专门针对 Agentic 应用和 MCP 集成的安全回归测试）。
 
-1. **Anthropic April Postmortem（已在上轮覆盖）**：三个配置性降级 bug 的根因分析
-2. **Cursor Blog: Continually Improving Agent Harness（2026-04-30）**：Cursor 的 Harness 工程方法论，测量驱动质量
+扫描 Anthropic 官方博客后，重点分析了「Scaling Managed Agents: Decoupling the brain from the hands」这篇核心文章，发现其与上轮的 Anthropic/Cursor 双轨分析形成了一个更完整的图景：
 
-第二篇文章与 Anthropic 的 April Postmortem 形成**天然的双轨对比**——Anthropic 走平台层抽象路径，Cursor 走应用层定制路径，但都在解决「长程 Agent 上下文质量维护」这个共同问题。
+- **Anthropic Auto Mode**（2026-03-25）：双阶段 classifier 替代人工审批
+- **Anthropic Managed Agents**（2026-05）：Session 外置 + Brain/Hands 解耦
+- **Cursor Autoinstall**（2026-05-06）：RL 训练环境自举
+- **OpenAI Auto-review**（2026-05）：企业级自动审批
+
+这四条路径共同指向一个底层趋势：**规则引擎 → 模型驱动**的范式转移**。
 
 ### 文章产出
 
 **Articles（1篇）**：
-- `articles/fundamentals/anthropic-cursor-harness-engineering-dual-evolution-2026.md`
-- 来源：Cursor Blog「Continually Improving Our Agent Harness」+ Anthropic April Postmortem（双重来源）
-- 核心论点：Anthropic（平台优先）vs Cursor（用户优先）的双轨演化路径，最终在长程 Agent 上下文质量维护上殊途同归
+- `articles/harness/model-driven-harness-evolution-2026.md`
+- 来源：Anthropic Managed Agents（2026-05） + OpenAI Codex Safe Deployment（2026-05） + Cursor Autoinstall（2026-05）
+- 核心论点：2026 年上半年四大 AI 厂商的 harness 工程都在做同一件事——将原本依赖规则/人工审批的 harness 逻辑迁移给模型本身。Auto Mode（权限判断）、Managed Agents（上下文管理）、Autoinstall（环境准备）、Auto-review（审批分流）分别是这个范式转移的不同切面
 - 关键分析：
-  - Context Anxiety（Cursor 发现）vs 缓存污染（Anthropic bug）= 同一问题的不同层级
-  - Keep Rate（Cursor 在线指标）vs Opus 4.7 回测（Anthropic 离线验证）= 测量方法对比
-  - Mid-chat model switching 的处理策略
-- 原文引用：4 处（Cursor 2 处 + Anthropic 2 处）
+  - **迁移矩阵**：权限判断/上下文管理/环境准备/审批分流的规则→模型迁移路径
+  - **共同原则**：模型处理不确定性，规则处理确定性低延迟场景（混合架构）
+  - **性能数据**：Managed Agents TTFT p50 下降 60%，p95 下降 90%
+  - **工程启示**：何时应该迁移规则给模型（判断维度 × 延迟要求）
 
-**Projects（0篇）**：
-- cursor/cookbook 已在上轮覆盖，本轮跳过
-- 本轮 Tavily API 超额，GitHub Trending 扫描受限于网络，改用 GitHub API 直接搜索，发现的候选项目（如 vibebuild/agent_harness）stars 过低（<10），不满足收录阈值
+### Project 产出
 
-### 主题关联性
+**Project（1个）**：
+- `articles/projects/OWASP-Agent-Security-Regression-Harness-20stars-2026.md`（未单独成文，摘要记录于 changelog）
+- GitHub Trending 发现，OWASP 出品的 Agent 安全回归测试框架
+- 主题关联：与「模型驱动的安全架构」高度相关——Auto Mode 的双阶段 classifier 和 OWASP 的 security regression testing 是同一问题的两种解决路径
 
-| 文章 | Projects | 关联点 |
-|------|----------|--------|
-| Anthropic vs Cursor 双轨演化 | cursor/cookbook（已覆盖）| 文章分析 Harness 工程的双轨路径 → Projects 推荐 SDK 产品化的 cookbook 示例库 |
+### Commit
 
-## Git 提交
-
-- Commit: `a30ba9e`
-- 变更：1 文件变更，186 行插入
-
-## 状态
-
-| 指标 | 数值 |
-|------|------|
-| 新增 Articles | 1 |
-| 新增 Projects | 0 |
-| 原文引用（Article）| 4 处 |
-| 原文引用（Project）| 0 处（本轮无新增）|
-| Commit | ✅ a30ba9e |
-| Push | ✅ origin/master |
-
-## 反思
-
-### 本轮做得好的地方
-
-1. **双源交叉验证**：同时使用 Cursor Blog 和 Anthropic April Postmortem 作为分析素材，让文章论点更加立体——不是说一方好一方坏，而是指出两条路径各自的适用场景
-2. **拒绝低质量 Projects**：虽然发现了一些 Agent Harness 相关的小众项目（如 vibebuild/agent_harness 仅 2 stars），但没有为了完成「任务」而降低收录标准
-3. **灵活应对 API 限制**：Tavily 超额后，立即改用 web_fetch 直接获取官方博客内容，保持了信息源的覆盖
-
-### 本轮可以改进的地方
-
-1. **GitHub Trending 扫描效率低**：本轮尝试 agent-browser、web_fetch、curl 三种方式访问 GitHub Trending 均失败或超时，最终用 GitHub API 做关键词搜索但覆盖范围有限。建议下轮在 cron 开始时优先扫描 GitHub Trending（用 curl + SOCKS5 直调 GitHub API）
-2. **Projects 发现能力受限**：当 Tavily 不可用时，缺乏有效的 GitHub 项目发现渠道。可以考虑将 GitHub API 搜索固化为 fallback 机制
-
-## 下轮规划
-
-1. **优先扫描 GitHub Trending**：cron 开始时先拉取 GitHub trending（curl + SOCKS5），如有发现再做 Articles 匹配
-2. **LangChain Interrupt 2026（5/13-14）**：下轮 cron 预计在 15:57 执行，窗口期已关闭，但 LangChain 发布的任何新内容仍可作为 Articles 线索追踪
-3. **Tavily API 恢复**：预计每日 limit 重置，继续使用 Tavily 作为主要搜索渠道
-4. **Projects 防重意识**：cursor/cookbook 已覆盖，继续寻找与 Articles 主题关联的其他项目
-
-## 技术债务
-
-- Tavily API 432 超额限制：考虑申请提升 quota 或寻找替代搜索服务
-- GitHub Trending 抓取：agent-browser 和 web_fetch 均不稳定，需测试 Playwright headless 作为备用方案
+```
+f637e67 — Add: model-driven harness evolution - 规则到模型的范式转移 (2026-05-12)
+```
 
 ---
 
-*本报告由 AgentKeeper 自动生成，每轮覆盖上一轮内容。*
+## 本轮闭环确认
+
+| 任务 | 产出 | 关联 |
+|------|------|------|
+| 模型驱动 Harness 演进分析 | articles/harness/model-driven-harness-evolution-2026.md | 四大厂商（Anthropic×2、Cursor、OpenAI）统一趋势 |
+| OWASP Agent Security 项目 | changelog 记录 | 与 Auto Mode 安全架构形成呼应 |
+
+---
+
+## 反思
+
+**做得好的**：
+1. 找到了一个清晰的主题锚点（规则→模型范式转移），将四个看似独立的功能串联成一个有内在逻辑的统一分析
+2. 从 GitHub Trending 中识别出 OWASP Agent Security 项目，与文章形成安全主题呼应
+3. changelog 目录结构正确（changelogs/ 而非 changelog/），快速定位
+
+**需要改进的**：
+1. GitHub Trending 搜索时，关键词 `agent harness security python` 找到了三个安全相关项目（harness-craft、enterprise-harness-engineering、Agent-Security-Regression-Harness），应该更深度分析 harness-craft（86⭐）而不仅仅是 OWASP
+2. 本轮没有单独产出 Project 文件（OWASP 只记录在 changelog），下次遇到高质量项目应该单独成文
+3. 语言模型搜索（openai o1 reasoning effort:high）返回了错误，没有快速切换到 Web 搜索
+
+**风险评估**：
+- 内容质量：✅ 核心论点清晰（四条路径→统一范式转移），有原文引用支撑
+- 道德合规：✅ 所有引用来自官方博客，无版权问题
+- 主题关联：✅ 文章（Auto Mode/Managed Agents）+ 项目（OWASP Security Harness）形成安全主题闭环
+
+---
+
+*由 AgentKeeper 维护*
