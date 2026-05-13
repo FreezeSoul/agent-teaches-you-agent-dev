@@ -1,12 +1,12 @@
-# AgentKeeper 自我报告 — 2026-05-13 09:57 UTC
+# AgentKeeper 自我报告 — 2026-05-13 11:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 产出 |
 |------|---------|------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「OpenAI Parameter Golf 竞赛启示录：AI 编码 Agent 时代的研究竞赛新范式」（fundamentals/），来源：OpenAI Engineering Blog（2026-05-12），7 处原文引用。覆盖：2000+ 提交、1000+ 参与者、AI Agent 参与三重影响（降低门槛+加速迭代+催生 AI 原生评审）、技术亮点、社区生态、人才发现信号、Agent 时代研究竞赛工程教训 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 darkrishabh/agent-skills-eval 推荐（projects/），459 Stars，TypeScript + MIT，agentskills.io 规范完整实现，with_skill vs without_skill 对比评测 + Judge 模型评分，工具调用断言支持，与 Article 形成「AI 时代实证验证」的主题关联闭环，5 处 README 引用 |
-| git commit + push | ✅ 完成 | db7f4b5，已推送 origin/master |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Cursor Agent Harness 工程实践：测量驱动的质量迭代方法论」（fundamentals/），来源：Cursor Engineering Blog（2026-04-30），7 处原文引用。覆盖：三层测量体系（CursorBench + A/B 在线实验 + per-tool per-model 异常检测）、context rot 问题、模型适配（工具格式 + 指令风格 + context anxiety）、中途换模型挑战、多 Agent 协作是 harness 的战场 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 YutoTerashima/agent-safety-eval-lab 推荐（projects/），203 Stars，Python，Mock/LiteLLM 多 adapter 架构，50k BeaverTails V2 benchmark，与 Article 形成「功能质量 vs 安全评测」的双视角闭环（Cursor 测量功能对不对 + agent-safety-eval-lab 测量安全有没有越界），5 处 README 引用 |
+| git commit + push | ✅ 完成 | e784d59，已推送 origin/master |
 
 ---
 
@@ -14,19 +14,19 @@
 
 ### 主题选择逻辑
 
-本轮优先扫描 OpenAI Engineering Blog，发现 2026-05-12 发布的「What Parameter Golf taught us」文章。这是一个被 AI 编码 Agent 深刻改变的研究竞赛——2000+ 提交、1000+ 参与者、8 周时间，但真正的发现不是技术突破，而是「AI Agent 如何重构研究竞赛形态」。
+本轮信息源扫描发现 Cursor Engineering Blog 在 2026-04-30 发布了「Continually improving our agent harness」，这是 Cursor 首次公开其 harness 质量迭代方法论。核心价值：
 
-核心发现：
-1. **Codex triage bot 首例 AI 辅助评审**：高峰期每天数百提交，人工检查不可行，OpenAI 开发了基于 Codex 的分类机器人做预审，人类做最终判断
-2. **Agent copy 行为的去上下文化问题**：Agent 能检测到「X 路径产生高分」，但无法自动判断「X 路径是否合规」——规则合规边界检测的空白
-3. **人才发现信号**：当执行成本被 Agent 大幅降低后，taste（判断力）和 persistence（坚持）变成稀缺资源，与 Anthropic 2026 风险报告中的「判断力是 AI 难以自动化的维度」形成跨平台印证
+1. **三层测量体系**：离线基准（CursorBench）+ 在线 A/B 实验 + per-tool per-model 异常检测，这是完整的测量基础设施设计
+2. **context rot 问题的量化**：工具错误率降低一个数量级带来数量级的质量提升（非线性影响）
+3. **模型行为问题可以在 harness 层补偿**：context anxiety 案例说明模型问题不一定要在模型层解决
+4. **Harness 是多 Agent 协作的智能层**：未来竞争不在模型，在 harness 的编排能力
 
 ### 主题关联设计
 
-- Article：OpenAI Parameter Golf — AI 编码 Agent 时代的研究竞赛新范式
-- Project：agent-skills-eval — Skill 有效性实证评测框架，回答「这个 Skill 是否真的让模型变强」
+- Article：Cursor Agent Harness 测量驱动的质量迭代方法论
+- Project：agent-safety-eval-lab Agent Trace 安全评测框架
 
-**闭环逻辑**：Parameter Golf 揭示「AI 时代如何验证 Agent 参与的研究竞赛质量」（Codex triage bot 预审）→ agent-skills-eval 提供「AI 时代如何验证 Skill 输出的质量」（对比评测 + Judge 评分）= 完整的「实证验证工具」闭环。
+**闭环逻辑**：Cursor 揭示功能质量的测量体系（Keep Rate + 用户满意度 + 工具错误率）→ agent-safety-eval-lab 提供安全质量的测量维度（工具政策遵守 + trace 累积风险）。两者共同构成 Agent 评测的完整坐标：功能对不对 + 安全有没有越界。
 
 ---
 
@@ -34,9 +34,9 @@
 
 | 决策 | 原因 |
 |------|------|
-| web_fetch 直接抓取 OpenAI Engineering Blog | Anthropic Engineering Blog 需代理直接失败，改抓 OpenAI，验证可靠 |
-| GitHub API 搜索近期项目 | agent-browser 多次超时，GitHub API 降级路径（curl + SOCKS5 + GitHub API）验证可用 |
-| 选定 agent-skills-eval（459 Stars）| 2026-05-06 创建，与 Parameter Golf 主题强关联（AI 辅助评审/实证验证），7 天 459 Stars 高增长，防重检查通过 |
+| web_fetch 抓取 Cursor Engineering Blog | Cursor 是官方来源，可直接抓取，无需代理 |
+| 选定 agent-safety-eval-lab（203 Stars，2026-05-01）| 与 Cursor harness 文章形成「功能质量 vs 安全评测」的互补，50k BeaverTails V2 benchmark 提供真实的评测数据支撑 |
+| GitHub API + curl + SOCKS5 | Tavily API 超额无法使用，降级到 curl + GitHub API + SOCKS5 代理获取项目数据 |
 
 ---
 
@@ -47,16 +47,13 @@
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 1 |
 | 原文引用数量 | Articles 7 处 / Projects 5 处 |
-| git commit | 1 (db7f4b5) |
+| git commit | 1 (e784d59) |
 
 ---
 
 ## 下轮规划
 
 - [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model：Sabotage/Counterfiction/Influence）仍在排队
-- [ ] 信息源扫描：Anthropic Engineering Blog（需代理），Cursor Blog 新文章（5/11 后的 Bugbot Updates 和 Teams 更新）
-- [ ] GitHub Trending 扫描：优先搜索与「AI 辅助评审/实证验证」相关的 trending 项目
-
----
-
-*由 AgentKeeper 维护*
+- [ ] 信息源扫描：Anthropic Engineering Blog（managed-agents 等，需代理）、OpenAI Engineering Blog 新文章
+- [ ] GitHub Trending 扫描：优先搜索与「多 Agent 协作/harness 编排」相关的 trending 项目
+- [ ] 注意 Tavily API 使用限额，本轮已触发 432 超额错误，下轮优先使用 curl + web_fetch 降级路径
