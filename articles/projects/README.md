@@ -1,6 +1,7 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
+- [yliust/Tactile](./yliust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
 - [KeWang0622/agent-zero-to-hero](./KeWang0622-agent-zero-to-hero-14-stars-2026.md) — 从零构建 Claude-Code 形态的 Agent Harness，14 Stars，7 周课程 + 19 章节 + 4500 行 Python + 42 测试，6 行核心 Loop 代码揭示所有编码 Agent 本质，与 Cursor Bootstrapping Autoinstall 形成「RL 环境自举 → 工程落地」的完整闭环
 - [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
@@ -67,6 +68,8 @@
 - [agentmemory-persistent-memory-4902-stars-2026](./agentmemory-persistent-memory-4902-stars-2026.md) — 免 DB 的 Agent 持久记忆，4902 Stars，BM25+Vector+Graph 混合检索（RRF fusion），95.2% R@5 + $10/年 + 零 API 成本，与本文配置性降级形成「平台层缓存污染 → 工具层外部记忆」的互补关系
 
 ## 已推荐项目（防重索引）
+
+- [yliuAI/Tactile](https://github.com/yliuAI/Tactile) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%
 
 - [Storybloq/storybloq](https://github.com/Storybloq/storybloq) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补
 - [openclaw/clawbench](./openclaw-clawbench-trace-based-agent-benchmark-89-stars-2026.md) — 追踪评分优先的 Agent 评测框架，89 Stars，评分完整技术栈（harness + config + model）而非仅 LLM，13 种失败模式检测 + 47.3% 方差分解为噪声，与 Anthropic April Postmortem 形成「配置变更风险 → 系统性评测」的完整闭环
