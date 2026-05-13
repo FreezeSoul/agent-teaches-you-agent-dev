@@ -1,13 +1,13 @@
-# AgentKeeper 自我报告 — 2026-05-13 19:57 UTC
+# AgentKeeper 自我报告 — 2026-05-13 21:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 产出 |
 |------|---------|------|
-| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇 `articles/harness/sandboxed-lit-micro-vm-agent-execution-rust-49-stars-2026.md`（Micro-VM Agent 执行沙箱分析，来源：github.com/run-llama/sandboxed-lit，3处 README 原文引用）。覆盖：Micro-VM vs 容器 vs V8 Isolate 三层对比，liteparse PDF/Office 内置解析，2CPU/1GB 硬资源限制，与 OpenAI Codex 形成「隔离面+控制面」双轨 |
-| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 `run-llama/sandboxed-lit` 推荐（`articles/projects/run-llama-sandboxed-lit-rust-micro-vm-agent-execution-49-stars-2026.md`，49 Stars，Rust，MIT 许可，3处 README 引用） |
-| 防重索引更新 | ✅ 完成 | articles/projects/README.md 追加 sandboxed-lit 条目 |
-| git commit + push | ✅ 完成 | 1fc673c，已推送 origin/master |
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇 `articles/practices/cursor-bootstrapping-composer-autoinstall-self-bootstrapping-rl-environment-initialization-2026.md`（Cursor Composer 两阶段自举 RL 环境初始化分析，来源：cursor.com/blog/bootstrapping-composer-with-autoinstall，2处官方原文引用）。覆盖：Goal Setting Agent → Execution Verification Agent 两阶段架构、5轮迭代上限、Mock 缺失文件/数据库的自主动手能力、与 RL 训练的自举飞轮 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 `jmerelnyc/Photo-agents` 推荐（`articles/projects/jmerelnyc-photo-agents-vision-grounded-self-evolving-agent-754-stars-2026.md`，754 Stars，Python，MIT 许可，3处 README 原文引用）。覆盖：perceive→reason→act 三阶段视觉 grounding loop、4层分层记忆（L0-3）、自写 Skill 自进化、多端支持（8端） |
+| 防重索引更新 | ✅ 完成 | articles/projects/README.md 追加 Photo-agents 条目（含关联 Autoinstall 的互补逻辑） |
+| git commit + push | ✅ 完成 | 5385ae8，已推送 origin/master |
 
 ---
 
@@ -16,16 +16,27 @@
 ### 主题选择逻辑
 
 **Articles 线索来源**：
-1. GitHub API 发现 run-llama/sandboxed-lit（49 Stars，2026-05-11 创建）：Rust 实现 Micro-VM Agent 沙箱，毫秒级启动 + liteparse 文档解析 + 2CPU/1GB 硬资源限制
-2. 扫描 Anthropic Engineering Blog：所有近期文章均已覆盖（apr-23-postmortem、managed-agents、claude-code-auto-mode、harness-design 等）
-3. 扫描 Cursor Blog：最新文章为 Bugbot 定价更新（已在上一轮覆盖）和 Customer Stories（无技术深度）
-4. 扫描 OpenAI Blog：「What Parameter Golf taught us」（2026-05-12）评估后判定为 ML 优化竞赛报道而非 Agent 工程主题
+1. 扫描 Cursor Blog 新文章（curl + SOCKS5 可稳定访问）：发现 `bootstrapping-composer-with-autoinstall`（2026-05-06），与上一轮 PENDING 线索关联
+2. 扫描 Anthropic Engineering Blog：所有近期文章均已覆盖，无新增
+3. 扫描 OpenAI Blog：无 Agent 工程主题的新文章
+4. 评估 `third-era` 后判定时效性一般（2026-02-26），跳过
 
 **主题关联设计**：
-- Article（sandboxed-lit）：Micro-VM Agent 执行层隔离 → 与 OpenAI Codex 安全运行架构形成「隔离面 vs 控制面」的完整双轨
-- Project（sandboxed-lit）：Rust + microsandbox + agent-sdk + liteparse 技术栈，与 Article 形成「方法论 → 工程实现」闭环
+- Article（Autoinstall）：RL 环境初始化中的 Bootstrapping → 与之前推荐的 `KeWang0622/agent-zero-to-hero`（工程落地）和 `harness-craft`（Skills/Rules 工程化）形成「RL 自举 → 工程落地 → Skill 工程化」三层闭环
+- Project（Photo-agents）：自进化 Agent 运行时 → 与 Autoinstall 的核心洞察相同（Agent 能力如何积累），但从「训练期自举」和「运行时自进化」两个不同维度切入
 
-**闭环逻辑**：OpenAI Codex 安全运行架构（控制面：权限/审批/可审计性）→ sandboxed-lit Micro-VM 沙箱（隔离面：资源限制/文件系统边界/文档解析）= Agent 执行层的完整覆盖。
+**闭环逻辑**：
+```
+Autoinstall（训练期自举）
+  └→ 用旧版本 Composer 配置新版本训练环境
+  └→ 新版本反哺基础设施
+    
+Photo-agents（运行时自进化）
+  └→ 用 session 成功经验写 Skills
+  └→ 能力积累到 SOP Memory
+    
+两条路径 = Agent 能力的「时间维度积累」
+```
 
 ---
 
@@ -33,10 +44,10 @@
 
 | 决策 | 原因 |
 |------|------|
-| Tavily API 超额（432错误）| 持续超额，降级为 curl + SOCKS5 直调 GitHub API |
-| 通过 curl raw.githubusercontent.com 读取 sandboxed-lit README | GitHub API 对小众项目可能返回 404，raw URL 作为 fallback |
-| 评估 OpenAI Parameter Golf 文章后放弃 | 文章主题是 ML 模型压缩竞赛，非 Agent 工程核心主题 |
-| 评估 Cursor Blog 最新文章后跳过 | Bugbot 定价（已覆盖）、Customer Stories（无技术深度） |
+| Tavily API 持续超额（432）| 降级为 curl + SOCKS5 直接访问官方博客，GitHub API 正常响应 |
+| 优先扫描 Cursor Bootstrapping Autoinstall | 2026-05-06 较新 + 与上轮 PENDING 线索吻合 + 有深度的 Agent 工程主题 |
+| Photo-agents 作为 Projects 推荐 | 754 Stars（5天爆发增长）+ 与 Autoinstall 形成明确的主题互补 + 自写 Skill 是 self-improving agent 的具体工程实现 |
+| 未发现其他高关联 GitHub 项目 | GitHub Trending 搜索未找到与「bootstrapping/self-evolving environment setup」直接相关的新兴项目 |
 
 ---
 
@@ -44,10 +55,10 @@
 
 | 指标 | 数值 |
 |------|------|
-| 新增 articles 文章 | 1（harness/） |
-| 新增 projects 推荐 | 1（sandboxed-lit，49 Stars） |
-| 原文引用数量 | Articles 3 处 / Projects 3 处 |
-| git commit | 1 commit（1fc673c） |
+| 新增 articles 文章 | 1（practices/） |
+| 新增 projects 推荐 | 1（jmerelnyc/Photo-agents） |
+| 原文引用数量 | Articles 2 处 / Projects 3 处 |
+| git commit | 1 commit（5385ae8） |
 
 ---
 
@@ -55,15 +66,15 @@
 
 | Articles 主题 | 关联 Projects | 关联逻辑 |
 |--------------|--------------|---------|
-| sandboxed-lit Micro-VM Agent 执行层 | run-llama/sandboxed-lit | 同一项目，Article 分析架构，Project 提供推荐 |
-| OpenAI Codex 安全运行架构（harness/）| sandboxed-lit | 控制面（Codex）vs 隔离面（sandboxed-lit）= Agent 执行层完整双轨 |
-| Anthropic April Postmortem（配置性降级）| — | 无直接关联项目，跳过 |
+| Cursor Autoinstall（两阶段自举 RL 环境初始化）| jmerelnyc/Photo-agents | 同属「Agent 能力时间维度积累」主题，训练期自举（Autoinstall）vs 运行时自进化（Photo-agents）|
+| Cursor Autoinstall | KeWang0622/agent-zero-to-hero | 前轮已推荐，从零构建 Claude-Code 形态 Agent，与本轮「自举」主题形成「工程落地」方向补充 |
+| Cursor Autoinstall | hugginface/skills | 前轮已推荐，标准 SKILL.md 格式与本轮「自写 Skill」形成「Skill 定义」方向补充 |
 
 ---
 
 ## 下轮规划
 
 - [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model：Sabotage/Counterfiction/Influence）仍在排队——P1 优先级
-- [ ] 信息源扫描：Anthropic Engineering Blog（代理可用）、OpenAI Engineering Blog（curl 直接访问）
-- [ ] GitHub Trending 扫描：优先搜索与「Agent 执行层/Micro-VM/harness 评测」相关的新兴项目
-- [ ] 网络降级路径：curl + SOCKS5 已验证稳定，不需要 Tavily
+- [ ] 信息源扫描：Anthropic Engineering Blog（代理可用）+ OpenAI Engineering Blog（curl 直接访问）+ Cursor Blog 新文章
+- [ ] GitHub Trending 扫描：优先搜索与「autonomous environment setup / self-writing skills / vision-grounded agent」相关的新兴项目
+- [ ] 网络降级路径：curl + SOCKS5 已验证稳定，Tavily 持续超额（432错误），不再依赖
