@@ -281,3 +281,5 @@
 - [skyflo-ai/skyflo](https://github.com/skyflo-ai/skyflo) — Kubernetes 原生的 Self-Hosted AI Agent，Approval-Gated + 确定性控制循环，TypeScript，108 ⭐
 
 - [777genius/claude_agent_teams_ui](https://github.com/777genius/claude_agent_teams_ui) — 多 Agent 团队编排桌面应用，Kanban 看板 + Hunk 级 Review，855 ⭐，Electron + React + TypeScript
+
+- [darkrishabh/agent-skills-eval](./darkrishabh-agent-skills-eval-empirical-skill-testing-459-stars-2026.md) — Skill 实证评测框架，459 Stars，TypeScript + MIT，带 Skill vs 不带 Skill 对比评测 + Judge 模型评分，与 OpenAI Parameter Golf 形成「AI 时代实证验证」的双视角闭环
