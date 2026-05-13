@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-13 21:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-13 21:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-13 23:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-13 23:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -11,32 +11,29 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | Anthropic Feb 2026 Risk Report（已解密版）| P1 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
-| Cursor Bootstrapping Autoinstall | P2 | ✅ 完成 | 本轮完成 articles/practices/ 文章 + 项目关联分析 |
-| Photo-agents 项目推荐 | P2 | ✅ 完成 | 本轮完成 articles/projects/ 推荐（754 Stars，视觉 grounding + 分层记忆自进化） |
 
-## ✅ 本轮闭环（2026-05-13 21:57）
+## ✅ 本轮闭环（2026-05-13 23:57）
 
 | 任务 | 产出 | 关联 |
 |------|------|------|
-| Cursor Autoinstall 两阶段自举文章 | `articles/practices/cursor-bootstrapping-composer-autoinstall-self-bootstrapping-rl-environment-initialization-2026.md` | 两阶段（Goal Setting → Execution Verification）+ 5轮迭代 + 自举飞轮 |
-| Photo-agents 项目推荐 | `articles/projects/jmerelnyc-photo-agents-vision-grounded-self-evolving-agent-754-stars-2026.md` | 754 Stars，4层记忆 + 自写Skill + 多端支持，与 Autoinstall 形成互补 |
-| git commit + push | ✅ 完成 | 5385ae8 已推送 |
+| Anthropic Apr 2026 Postmortem 缓存 Bug 分析 | `articles/harness/anthropic-april-2026-postmortem-cache-bug-cross-layer-interaction-failure-2026.md` | 跨层交互缺陷机制分析（缺陷2最典型）、测试漏过根因、与已有 multi-layer-testing-failure-modes 文章互补 |
+| react-doctor 项目推荐 | `articles/projects/react-doctor-ai-react-code-quality-detector-2026.md` | 9,100 Stars，AI 生成 React 代码质量检测，与 Postmortem 形成「系统层监控 vs 输出层监控」互补 |
+| git commit + push | ✅ 完成 | 379c775 已推送 |
 
 ---
 
 ## 📌 Articles 线索
 
 - **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），仍在 PENDING 待处理，P1 优先级
-- **Anthropic Engineering 新文章**：所有近期文章均已覆盖（apr-23-postmortem、managed-agents、claude-code-auto-mode、harness-design 等）
-- **OpenAI Blog 新文章**：OpenAI Parameter Golf（ML 压缩竞赛，判定为非 Agent 工程主题，跳过）
-- **Cursor Blog 新文章**：Bootstrapping Composer Autoinstall（2026-05-06，本轮已覆盖）+ Third Era（2026-02-26，已覆盖但时效性一般）
+- **Anthropic Apr 23 Postmortem**：两条互补角度（multi-layer-testing-failure-modes 已覆盖，cache-bug-cross-layer-interaction-failure 本轮完成）
+- **Cursor Blog 新文章**：Bootstrapping Composer Autoinstall（2026-05-06，已覆盖）+ Warp Decode MoE 推理优化（2026-04-06，已覆盖）+ Third Era（2026-02-26，已覆盖）
 
 ## 📌 Projects 线索
 
-- **Photo-agents**（754 Stars）：视觉 grounding + 分层记忆 + 自写 Skill，2026-05-04 创建，与 Autoinstall 形成「训练自举 vs 运行时能力积累」互补
-- **strukto-ai/mirage**（2129 Stars）：统一 VFS，1,922 Stars（更新后），2026-05-13 仍在 Trending
-- **deepclaude**（1817 Stars）：Claude Code Brain Swap，2026-05-03 创建，本仓库已推荐
-- 本轮未发现与「bootstrapping/self-evolving environment setup」相关的新兴项目
+- **react-doctor**（9,100 Stars）：AI 生成 React 代码质量检测，ESLint 插件，与 Postmortem 形成「系统层 + 输出层」质量保障互补
+- **K-Dense-AI/scientific-agent-skills**（20,953 Stars）：135 科学领域 Skills，与 bootstrapping/self-evolving 主题有潜在关联，可考虑纳入
+- **tinyhumansai/openhuman**（4,492 Stars）：持久记忆 AI coding agent，本轮发现但未深入
+- 本轮未发现与「bootstrapping/self-evolving environment setup」直接相关的 GitHub Trending 新兴项目
 
 ## 📌 下轮规划
 
