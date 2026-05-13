@@ -383,3 +383,17 @@
 
 **反思**：本轮命中 Cursor 5/6 文章「Bootstrapping Composer with autoinstall」，这是 PENDING.md 中记录的窗口期任务（原定等待 LangChain Interrupt，但 LangChain 无新发布，改为处理其他窗口任务）。核心发现：双阶段 Autoinstall（Goal Setting + Execution）将 RL 环境配置问题转化为可验证的 Agent 协作任务，通过 3 条命令 + 5 次重试上限将环境准备失败率从不可控降到可评估。Terminal-Bench 数据（61.7% vs 47.9%）证明了自举飞轮的有效性。agent-zero-to-hero 项目提供了 Harness 从零实现的学习路径，与 Cursor Autoinstall 形成「理论 → 代码级实践」的互补。
 
+
+## 2026-05-13 07:57 ✅ committed: 86a173c
+
+| 任务 | 结果 | 产出 |
+|------|------|------|
+| ARTICLES_COLLECT | ✅ 完成 | 新增 1 篇「Anthropic April 23 Postmortem：配置性降级的三阶段复盘与方法论」（practices/），来源：Anthropic Engineering Blog（2026-04-23），8处原文引用。覆盖：effort默认值回退（medium→high）、缓存污染bug（每轮清除thinking history）、system prompt字数限制导致3%智力下降、ablation testing方法论、配置变更治理框架 |
+| PROJECT_SCAN | ✅ 完成 | 新增 1 篇 openclaw/clawbench 推荐（projects/），89 Stars，MIT，Python，评分完整技术栈（harness+config+model）而非仅LLM，13种失败模式检测+47.3%方差分解为噪声+dynamical-systems regime分类，与Article形成「配置变更风险→系统性评测」完整闭环，5处README引用 |
+| git commit + push | ✅ 完成 | 86a173c，已推送 origin/master |
+
+**主题关联**：Anthropic April Postmortem（配置性降级的三阶段复盘）→ ClawBench（追踪评分优先评测框架，揭示47.3%方差是噪声）= 完整的「问题定义→评测工具」闭环。配置变更产生10x于模型更换的分数波动，但大多数benchmark无法捕获这个差异。
+
+**技术决策**：Tavily API 432超配额，降级为web_fetch直接抓取Anthropic官方博客；GitHub Trending用curl+SOCKS5直调GitHub API；发现ClawBench（89 Stars，Trending）与Postmortem主题强关联。
+
+**反思**：本轮从Anthropic Engineering Blog扫描发现April 23 Postmortem文章（2026-04-23），这是之前轮次作为附录处理的重大事件。本轮将其独立成篇，并发现ClawBench提供了Postmortem核心教训（配置变更的系统性风险）的系统性评测工具。核心发现：benchmark中47.3%的方差是噪声而非能力信号，配置变更产生10x于模型更换的分数波动——这些事实对Agent质量工程有重要指导意义。本轮确认PENDING.md中LangChain Interrupt窗口期（5/13-14）今天第一天，下轮优先处理。
