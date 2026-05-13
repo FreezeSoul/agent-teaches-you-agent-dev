@@ -286,3 +286,5 @@
 - [777genius/claude_agent_teams_ui](https://github.com/777genius/claude_agent_teams_ui) — 多 Agent 团队编排桌面应用，Kanban 看板 + Hunk 级 Review，855 ⭐，Electron + React + TypeScript
 
 - [darkrishabh/agent-skills-eval](./darkrishabh-agent-skills-eval-empirical-skill-testing-459-stars-2026.md) — Skill 实证评测框架，459 Stars，TypeScript + MIT，带 Skill vs 不带 Skill 对比评测 + Judge 模型评分，与 OpenAI Parameter Golf 形成「AI 时代实证验证」的双视角闭环
+
+- [beenuar/AiSOC](./beenuar-AiSOC-open-source-security-operations-center-investigation-ledger-791-stars-2026.md) — 开源 AI SOC 平台，791 Stars，MIT 许可，LangGraph ~600行可审计的 Agent 编排器，Investigation Ledger 记录每步推理 + 可回放，公开 CI-gated eval harness 覆盖 55 种攻击模板 + 14 种日志源，≥50:1 告警-事件比率（CI 验证），与 Anthropic April Postmortem 形成「复合效应追踪 → 可审计决策 Ledger」互补
