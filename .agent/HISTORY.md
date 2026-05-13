@@ -2,6 +2,7 @@
 
 | 时间 | Commit | 事件 |
 |------|--------|------|
+| 2026-05-14 05:57 | a347c1a | 本轮新增 agentmemory 持久记忆基础设施项目推荐（articles/projects/）
 | 2026-05-13 23:57 | 379c775 | 本轮新增 Anthropic Apr 2026 Postmortem 缓存 Bug 跨层交互分析（articles/harness/）+ react-doctor 项目推荐（articles/projects/） |
 | 2026-05-13 21:57 | 5385ae8 | 本轮新增 Cursor Bootstrapping Composer Autoinstall 自举 RL 环境初始化分析（articles/practices/）+ Photo-agents 项目推荐（articles/projects/） |
 | 2026-05-13 19:57 | 5ad8cf4 | 本轮新增 Cursor Bootstrapping Composer Autoinstall 自举分析（articles/practices/）+ agent-zero-to-hero 项目推荐（articles/projects/） |
