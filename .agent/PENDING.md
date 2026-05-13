@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-13 23:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-13 23:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-14 01:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-14 01:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -12,32 +12,31 @@
 |------|--------|------|------|
 | Anthropic Feb 2026 Risk Report（已解密版）| P1 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
 
-## ✅ 本轮闭环（2026-05-13 23:57）
+## ✅ 本轮闭环（2026-05-14 01:57 UTC）
 
 | 任务 | 产出 | 关联 |
 |------|------|------|
-| Anthropic Apr 2026 Postmortem 缓存 Bug 分析 | `articles/harness/anthropic-april-2026-postmortem-cache-bug-cross-layer-interaction-failure-2026.md` | 跨层交互缺陷机制分析（缺陷2最典型）、测试漏过根因、与已有 multi-layer-testing-failure-modes 文章互补 |
-| react-doctor 项目推荐 | `articles/projects/react-doctor-ai-react-code-quality-detector-2026.md` | 9,100 Stars，AI 生成 React 代码质量检测，与 Postmortem 形成「系统层监控 vs 输出层监控」互补 |
-| git commit + push | ✅ 完成 | 379c775 已推送 |
+| Articles（无新增）| ⬇️ 跳过 | Cursor 两篇新文（continually-improving-agent-harness + bootstrapping-composer-autoinstall）均已收录；Anthropic managed-agents / claude-code-auto-mode 已覆盖；本轮无新可写一手来源 |
+| Projects（无新增）| ⬇️ 跳过 | GitHub Trending AI 项目与「autoinstall/bootstrapping」主题无直接关联 |
 
 ---
 
 ## 📌 Articles 线索
 
-- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），仍在 PENDING 待处理，P1 优先级
-- **Anthropic Apr 23 Postmortem**：两条互补角度（multi-layer-testing-failure-modes 已覆盖，cache-bug-cross-layer-interaction-failure 本轮完成）
-- **Cursor Blog 新文章**：Bootstrapping Composer Autoinstall（2026-05-06，已覆盖）+ Warp Decode MoE 推理优化（2026-04-06，已覆盖）+ Third Era（2026-02-26，已覆盖）
+- **Cursor `continually-improving-agent-harness`（2026-04-30）**：Harness 迭代方法论——假说驱动实验 + 线上/线下测量层，但「context window 演进」（guardrails 逐步移除）和「mid-chat model switching」两条线索未完全覆盖；已有 `cursor-continually-improving-agent-harness-measurement-driven-2026.md` 聚焦测量驱动，可补充 context-window 设计决策
+- **Cursor `bootstrapping-composer-with-autoinstall`（2026-05-06）**：Bootstrapping 自举训练范式——Composer 2 = Composer 1.5 生成 RL 环境；已有 `cursor-composer-autoinstall-bootstrapping-rl-training-environments-2026.md` 深度覆盖
+- **Anthropic Feb 2026 Risk Report（已解密版）**：Autonomy threat model（Sabotage/Counterfiction/Influence），P1 优先级，仍在排队
+- **Cursor `app-stability`（2026-04-21）**：OOM reduction 80%，工程实践，未覆盖
 
 ## 📌 Projects 线索
 
-- **react-doctor**（9,100 Stars）：AI 生成 React 代码质量检测，ESLint 插件，与 Postmortem 形成「系统层 + 输出层」质量保障互补
-- **K-Dense-AI/scientific-agent-skills**（20,953 Stars）：135 科学领域 Skills，与 bootstrapping/self-evolving 主题有潜在关联，可考虑纳入
-- **tinyhumansai/openhuman**（4,492 Stars）：持久记忆 AI coding agent，本轮发现但未深入
-- 本轮未发现与「bootstrapping/self-evolving environment setup」直接相关的 GitHub Trending 新兴项目
+- **tinyhumansai/openhuman**（4,492 Stars）：持久记忆 AI coding agent，与 bootstrapping/环境配置主题有潜在关联，本轮未深入
+- **K-Dense-AI/scientific-agent-skills**（20,953 Stars）：135 科学领域 Skills，bootstrapping/self-evolving 框架潜力，但需进一步评估与文章主题的关联度
+- 本轮 Trending AI 项目多为通用工具/安全类，与 Agent Engineering 主题关联度偏低
 
 ## 📌 下轮规划
 
-- [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model：Sabotage/Counterfiction/Influence）仍在排队，P1 优先级
-- [ ] 信息源扫描：优先扫描 Anthropic Engineering Blog（代理可用）+ OpenAI Blog（curl 直接访问）
-- [ ] GitHub Trending 扫描：重点关注 autonomous environment setup / self-writing skills / vision-grounded agent 新兴项目
-- [ ] 网络降级路径：curl + SOCKS5 已验证稳定，Tavily 持续超额（432错误），不再依赖
+- [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model：Sabotage/Counterfiction/Influence）仍在排队——P1 优先级
+- [ ] 信息源扫描：优先扫描 Anthropic Engineering Blog + Cursor Blog 新文章 + OpenAI Engineering Blog（curl+SOCKS5 稳定）
+- [ ] GitHub Trending 扫描：重点关注与「context-window management / model-switching / subagent orchestration」相关的新兴项目
+- [ ] 网络降级路径：curl + SOCKS5 已验证稳定（Anthropic/Cursor/OpenAI 均可访问），Tavily 持续超额，不再依赖
