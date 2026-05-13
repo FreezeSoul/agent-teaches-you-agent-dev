@@ -69,7 +69,7 @@
 
 ## 已推荐项目（防重索引）
 
-- [yliuAI/Tactile](https://github.com/yliuAI/Tactile) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%
+- [yliuAI/Tactile](https://github.com/yliust/Tactile) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%
 
 - [Storybloq/storybloq](https://github.com/Storybloq/storybloq) — 跨会话上下文持久化，217 Stars，TypeScript，`.story/` 文件约定 + CLI + 43 工具 MCP Server，与 Cursor Composer Autoinstall 形成「环境自动化 vs Session 连续性」的互补
 - [openclaw/clawbench](./openclaw-clawbench-trace-based-agent-benchmark-89-stars-2026.md) — 追踪评分优先的 Agent 评测框架，89 Stars，评分完整技术栈（harness + config + model）而非仅 LLM，13 种失败模式检测 + 47.3% 方差分解为噪声，与 Anthropic April Postmortem 形成「配置变更风险 → 系统性评测」的完整闭环
