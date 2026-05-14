@@ -9,7 +9,8 @@
 
 ---
 
-- [jmerelnyc/Photo-agents](./jmerelnyc-photo-agents-vision-grounded-self-evolving-agent-754-stars-2026.md) — 视觉优先的分层记忆自进化 Agent 运行时，754 Stars，Python，perceive→reason→act 三阶段视觉 grounding loop + 4 层记忆系统（L0-3）+ 自写 Skill 自进化 + 多端支持（Streamlit/PyQt/Telegram/飞书/企业微信/钉钉/QQ），与 Cursor Autoinstall 形成「训练环境自举 vs 运行时能力自积累」互补（关联：Autoinstall 用旧版本模型初始化环境 → Photo-agents 用 session 成功经验写 Skills → 两条路径解决同一问题：Agent 能力如何随时间积累而非从零开始）
+- [obra/superpowers](./obra-superpowers-agentic-skills-software-development-methodology-2026.md) — 完整软件工程方法论的 Agent Skills 框架，强制 TDD + 设计优先 + 子代理驱动开发，支持 Claude/Codex/Cursor 等 8 平台，Claude 可自主工作数小时不偏离计划，与本文 Codex Windows 沙箱架构形成「安全执行 → 工程方法论」的完整 Agent 工具链闭环
+- [K-Dense-AI/scientific-agent-skills](./K-Dense-AI-scientific-agent-skills-135-scientific-research-skills-2026.md) — 135 个科研 Agent Skills，覆盖生物信息学/药物发现/医学影像/地理空间等 15 个科学领域，基于开放 Agent Skills 标准，与 Cursor Autoinstall 形成「通用环境自举 → 专业领域 Skills」的互补（关联：Autoinstall 用旧版本模型初始化 → Scientific Skills 提供 135 个专项领域知识 → 两条路径解决同一问题：Agent 能力如何专业深化）
 - [strukto-ai/mirage](./strukto-ai-mirage-unified-vfs-1922-stars-2026.md) — 统一虚拟文件系统，1,922 Stars，将 S3/Slack/GitHub/Gmail 等 15+ 服务挂载为文件系统路径，Agent 用熟悉的 bash 工具（`cat`/`grep`/`cp`）操作一切，与 Cursor 模型亲和性 Harness 文章形成「工具层抽象 vs 模型层适配」的正交关系（关联：OpenAI patch 格式 vs Claude string replacement → Mirage 统一为 filesystem API → 模型特异性被隐藏）
 
 - [garrytan/gstack](./garrytan-gstack-yc-ceo-ai-software-factory-93788-stars-2026.md) — YC CEO Garry Tan 的 AI 软件工厂，93,788 Stars，将 Claude Code 变成 23 角色虚拟工程团队（CEO/设计师/安全官/QA 等），810x 生产力提升，与 PayPal Cursor 案例形成「个人 → 企业」完整 Agent 工具链光谱
