@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-14 07:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-14 07:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-14 09:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-14 09:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -11,33 +11,34 @@
 | 任务 | 优先级 | 状态 | 备注 |
 |------|--------|------|------|
 | Anthropic Feb 2026 Risk Report（已解密版）| P1 | ⏸️ 待处理 | Autonomy threat model（Sabotage/Counterfiction/Influence），AI 模型自主性风险的系统性评估 |
-| mattpocock/skills Skill 框架评估 | P2 | ✅ 已完成 | 与渐进式披露架构文章合并分析，内容已产出 |
-| Cursor Blog「third-era」系列文章 | P2 | ✅ 已完成 | cursor-third-era-fleet-agents/cursor-third-era-cloud-agents 已存在于库，无需重复生产 |
-| GitHub Trending 新项目（danielmiessler/Personal_AI_Infrastructure）| P3 | ⏸️ 待处理 | PAI v5.0.0 Life OS，Ideal State 驱动，文件系统即上下文，非常有深度的架构 |
+| OpenAI Codex Windows 沙箱实现细节分析 | P2 | ⏸️ 待处理 | `building-codex-windows-sandbox`（May 13, 2026）——unelevated sandbox 原型 → 正式沙箱的技术演进路径 |
+| danielmiessler/Personal_AI_Infrastructure 评估 | P3 | ⏸️ 待处理 | PAI v5.0.0 Life OS，Ideal State 驱动，文件系统即上下文，非常独特的架构思路 |
+| CUA vs agent-infra/sandbox vs daytona 差异化定位 | P3 | ⏸️ 待处理 | 三个沙箱框架的技术路线对比分析 |
 
-## ✅ 本轮闭环（2026-05-14 07:57 UTC）
+## ✅ 本轮闭环（2026-05-14 09:57 UTC）
 
 | 任务 | 产出 | 关联 |
 |------|------|------|
-| Articles（新增 1）| `agent-skills-progressive-disclosure-mattpocock-engineering-practice-2026.md` | Anthropic Skills 架构 + Matt Pocock 工程实践，主题强关联 |
-| Projects（新增 1）| `k-dense-ai-scientific-agent-skills-135-scientific-skills-2026.md` | 与 Articles 技能框架主题关联，科学场景的 Skills 实证 |
+| Articles（新增 1）| `cursor-cloud-agent-development-environments-multi-repo-environment-as-code-2026.md` | Cursor 多代码库环境 + 环境即代码，与 Brain-Hands 解耦形成 Hands 层企业化扩展 |
+| Projects（新增 1）| `trycua-cua-open-source-computer-use-agents-sandbox-benchmarks-9574-stars-2026.md` | CUA computer-use agent 全栈基础设施，与 Articles 环境主题呼应 |
 
 ---
 
 ## 📌 Articles 线索
 
-- **Agent Skills 演进方向**：Anthropic 渐进式披露 vs Matt Pocock 强制流程，代表两种不同的 Skills 设计哲学——知识密集型任务用渐进式，流程密集型任务用强制
-- **Cursor third-era**：内部 35% PR 由 Cloud Agent 创建，人类角色从「监督代码」变为「定义问题」——已在 `cursor-third-era-fleet-agents-paradigm-shift-2026.md` 和 `cursor-third-era-cloud-agents-human-role-paradigm-shift-2026.md` 覆盖
-- **Anthropic Feb 2026 Risk Report**：Autonomy threat model P1 优先级，仍在排队
+- **Codex Windows 沙箱技术演进**：`building-codex-windows-sandbox` 揭示了从「unelevated sandbox」原型到正式沙箱的完整技术路径——SIDs + write-restricted tokens + 网络流量 poison，是 Windows 平台 Agent 沙箱工程实践的一手资料
+- **CUA Driver 后台操作**：macOS 背景计算机操作的实现原理（Virtualization.Framework + Accessibility API），不抢占前台焦点是跨时代的能力
+- **Cursor third-era**：内部 35% PR 由 Cloud Agent 创建，人类角色从「监督代码」变为「定义问题」——已在库覆盖
 
 ## 📌 Projects 线索
 
-- **danielmiessler/Personal_AI_Infrastructure**：PAI v5.0.0 Life Operating System，Ideal State 驱动，文件系统即上下文，Algorithm v6.3.0——非常独特的架构思路，值得深入评估
-- **obra/superpowers**：已在库（superpowers-llm-feature-flags.md），TDD 强制执行的 AI 原生开发方法论
+- **tinyhumansai/openhuman**：5,658 ⭐，Personal AI super intelligence，Rust 实现，Personal AI 超能力放大框架
+- **danielmiessler/Personal_AI_Infrastructure**：13,398 ⭐，PAI v5.0.0 Life Operating System，Ideal State 驱动
+- **mattpocock/skills**：79,135 ⭐，Skills for Real Engineers，与渐进式披露架构文章已关联
 
 ## 📌 下轮规划
 
-- [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model：Sabotage/Counterfiction/Influence）—— P1 优先级
-- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog 新文章
-- [ ] GitHub Trending 扫描：持续跟踪 `danielmiessler/Personal_AI_Infrastructure`（Ideal State 驱动架构，独特视角）
-- [ ] 评估是否值得产出「PAI 的 Ideal State 架构」专项分析
+- [ ] PENDING.md 待处理：Anthropic Feb 2026 Risk Report（Autonomy threat model）P1 优先级仍在排队
+- [ ] Codex Windows 沙箱技术演进深度分析——unelevated prototype → 正式沙箱的完整路径
+- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog + OpenAI Engineering Blog
+- [ ] 评估 `tinyhumansai/openhuman`（Rust Personal AI super intelligence）是否值得产出专项分析
