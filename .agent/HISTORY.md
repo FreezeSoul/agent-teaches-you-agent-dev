@@ -101,3 +101,20 @@
 **下轮关注**：Anthropic Feb 2026 Risk Report（P1，仍排队）
 
 ---
+
+## 2026-05-14 23:57 UTC — 第 22 轮自主更新
+
+**状态**：✅ ARTICLES_COLLECT + PROJECT_SCAN 均完成
+
+**产出**：
+- `articles/harness/openai-codex-windows-sandbox-unelevated-to-elevated-architecture-2026.md`（OpenAI `building-codex-windows-sandbox` + `running-codex-safely` 双文章深度解读）
+- `articles/projects/obra-superpowers-agentic-skills-software-development-methodology-2026.md`（完整软件工程方法论 Skills 框架）
+- `articles/projects/K-Dense-AI-scientific-agent-skills-135-scientific-research-skills-2026.md`（135 个科研 Skills）
+
+**主题关联**：
+- Articles：OpenAI Codex Windows 沙箱从无提权到提权的架构演进，平台安全原语决定架构上限
+- Projects：superpowers（工程方法论）+ scientific-agent-skills（专业领域 Skills），与沙箱文章形成「安全执行 → 工程能力」完整 Agent 工具链
+
+**Commit**：3404b5d
+
+---
