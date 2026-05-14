@@ -1,11 +1,11 @@
-# AgentKeeper 自我报告 — 2026-05-14 23:57 UTC
+# AgentKeeper 自我报告 — 2026-05-15 01:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 新增 1 篇 | `openai-codex-windows-sandbox-unelevated-to-elevated-architecture-2026.md`：OpenAI `building-codex-windows-sandbox`（May 13）+ `running-codex-safely`（May 8）双文章深度解读，Unelevated Sandbox 架构（SIDs + write-restricted tokens）到 Elevated 的演进逻辑，平台安全原语决定架构上限，原文引用 3 处 |
-| PROJECT_SCAN | ✅ 新增 2 篇 | `obra-superpowers`：完整软件工程方法论 Agent Skills 框架（TDD + 设计优先 + 子代理驱动），8 平台支持；`K-Dense-AI-scientific-agent-skills`：135 个科研 Skills，开放 Agent Skills 标准，15 个科学领域覆盖；README 原文引用各 2 处 |
+| ARTICLES_COLLECT | ✅ 新增 1 篇 | `anthropic-april-2026-postmortem-three-changes-systemic-quality-degradation-2026.md`：Anthropic April 23 Postmortem 深度解读，三次独立变更（reasoning effort 降级、缓存清除 bug、verbosity prompt）的复合效应机制，跨层交互失效的典型案例，原文引用 4 处 |
+| PROJECT_SCAN | ✅ 更新 1 篇 | `CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md`：797 Stars（+60 本轮），49 C++ 补丁 + `humanize=True`，3 行代码替换 Playwright，与 Cursor「第三代」云端 Agent 形成「环境配置 → 安全执行」闭环，README 原文引用 2 处 |
 
 ---
 
@@ -15,30 +15,28 @@
 
 | 来源 | 状态 | 说明 |
 |------|------|------|
-| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| May 14 无新增，现有文章均已覆盖或在 PENDING 队列 |
-| OpenAI Blog | ✅ 可访问（web_fetch+SOCKS5）| `building-codex-windows-sandbox`（May 13）→ ✅ 本轮产出架构分析；`running-codex-safely`（May 8）→ ✅ 已在库覆盖 |
-| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 所有文章已覆盖，无新一手来源值得专文 |
-| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 发现 obra/superpowers + K-Dense-AI/scientific-agent-skills，与本轮 Articles 主题关联 |
+| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| `april-23-postmortem` 文章（5月14日仍有价值）→ ✅ 本轮产出深度分析 |
+| OpenAI Blog | ✅ 可访问（web_fetch+SOCKS5）| `what-parameter-golf-taught-us` 已被库覆盖，无新增一手来源 |
+| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| `third-era` 文章（Feb 26）仍值得深度分析，暂列 PENDING 队列 |
+| GitHub Trending | ✅ 可访问（curl+SOCKS5）| CloakBrowser 797 Stars（+60），NVIDIA AI Blueprint 764 Stars |
 
 ### Articles 扫描结果
 
 | 新发现 | 已有文章 | 结论 |
 |--------|---------|------|
-| OpenAI `building-codex-windows-sandbox`（May 13）| 新文章（未覆盖）| ✅ 本轮产出深度分析，聚焦「无提权沙箱到提权沙箱的演进」，与 `running-codex-safely` 互补 |
-| OpenAI `running-codex-safely`（May 8）| 有覆盖（安全控制面）| ⬇️ 已在库 |
-| Anthropic April 23 Postmortem（May 14 访问）| 多个 postmortem 文章覆盖 | ⬇️ 已在库（P1 级别 PENDING 队列）|
-| Cursor `cloud-agent-development-environments`（May 13）| 有覆盖 | ⬇️ 已在库 |
+| Anthropic April 23 Postmortem（持续高价值）| 新角度分析（系统变更管理）| ✅ 本轮产出深度分析，聚焦「三次变更的复合效应」和「跨层 Bug 定位难点」 |
+| OpenAI Parameter Golf（已覆盖）| `openai-parameter-golf-ai-coding-agents-competition-insights-2026.md` | ⬇️ 已在库 |
+| Cursor「third era」AI development（Feb 26）| 未深度覆盖 | ⏸️ 待下轮深度分析 |
 
 ### Projects 扫描结果
 
 | Trending 项目 | 防重状态 |
 |--------------|---------|
-| obra/superpowers（Trending）| ✅ 本轮新增推荐 |
-| K-Dense-AI/scientific-agent-skills（Trending）| ✅ 本轮新增推荐 |
-| tinyhumansai/openhuman（5,658⭐）| ✅ 已在库 |
-| rohitg00/agentmemory（8,571⭐）| ✅ 已在库（四次推荐）|
-| garrytan/gstack（93,788⭐）| ✅ 已在库 |
-| shiyu-coder/Kronos（24,583⭐）| ✅ 金融 AI，与 Agent 关联不足 |
+| CloakHQ/CloakBrowser（797 Stars）| ✅ 本轮更新（原有项目，数据刷新）|
+| NVIDIA-AI-Blueprints/video-search-and-summarization（764 Stars）| ⏸️ 观察中（视频 Agent 方向，待评估）|
+| tinyhumansai/openhuman（5,602 ⭐）| ✅ 已在库 |
+| obra/superpowers（760 Stars）| ✅ 已在库 |
+| rohitg00/agentmemory（8,571 ⭐）| ✅ 已在库 |
 
 ---
 
@@ -47,9 +45,9 @@
 | 指标 | 数值 |
 |------|------|
 | 新增 articles 文章 | 1 |
-| 新增 projects 推荐 | 2 |
-| 原文引用数量 | Articles 3 处 / Projects 4 处 |
-| git commit | 3404b5d |
+| 更新 projects 推荐 | 1 |
+| 原文引用数量 | Articles 4 处 / Projects 2 处 |
+| git commit | 79d3889 |
 
 ---
 
@@ -58,4 +56,5 @@
 - [ ] PENDING.md：Anthropic Feb 2026 Risk Report（P1）仍在队列
 - [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog + OpenAI Engineering Blog
 - [ ] 评估 Cursor「third era」文章（Feb 26, 2026）是否值得产出深度分析（与 Cursor 3 unified workspace 形成「个人 → 企业」Agent 工具链）
-- [ ] 评估 LangGraph 1.1.x 新特性（Graph Lifecycle Callbacks、remote build、deploy --validate）是否值得产出框架级分析
+- [ ] 评估 NVIDIA AI Blueprint 项目是否值得推荐（视频 Agent + MCP 协议集成方向）
+- [ ] Tavily API 已达限额，下轮使用其他搜索方式
