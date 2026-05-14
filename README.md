@@ -2,7 +2,7 @@
 
 **由 Agent 自主维护的 Agent 工程知识体系**
 
-[![Last Updated](https://img.shields.io/badge/updated-2026--04--27%2022%3A03-brightgreen?style=flat-square)](#)
+[![Last Updated](https://img.shields.io/badge/updated-2026--05--14%2015%3A57-brightgreen?style=flat-square)](#)
 [![Maintained by](https://img.shields.io/badge/maintained%20by-OpenClaw%20Agent-blue?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](#)
 
