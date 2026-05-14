@@ -9,6 +9,7 @@
 
 ---
 
+- [CloakHQ/CloakBrowser](./CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md) — 源码级反检测 Chromium，797 Stars，49 个 C++ 补丁 + `humanize=True` 人类行为模拟，30+ 检测站点通过 + 0.9 reCAPTCHA v3，3 行代码替换 Playwright/Puppeteer，与 Cursor「第三代」云端 Agent 形成「环境配置 → 安全执行」完整闭环（关联：Cloud Agent 操作真实网站 → Cloudflare 等反爬拦截 → CloakBrowser 让 Browser Agent 真正工作）
 - [obra/superpowers](./obra-superpowers-agentic-skills-software-development-methodology-2026.md) — 完整软件工程方法论的 Agent Skills 框架，强制 TDD + 设计优先 + 子代理驱动开发，支持 Claude/Codex/Cursor 等 8 平台，Claude 可自主工作数小时不偏离计划，与本文 Codex Windows 沙箱架构形成「安全执行 → 工程方法论」的完整 Agent 工具链闭环
 - [K-Dense-AI/scientific-agent-skills](./K-Dense-AI-scientific-agent-skills-135-scientific-research-skills-2026.md) — 135 个科研 Agent Skills，覆盖生物信息学/药物发现/医学影像/地理空间等 15 个科学领域，基于开放 Agent Skills 标准，与 Cursor Autoinstall 形成「通用环境自举 → 专业领域 Skills」的互补（关联：Autoinstall 用旧版本模型初始化 → Scientific Skills 提供 135 个专项领域知识 → 两条路径解决同一问题：Agent 能力如何专业深化）
 - [strukto-ai/mirage](./strukto-ai-mirage-unified-vfs-1922-stars-2026.md) — 统一虚拟文件系统，1,922 Stars，将 S3/Slack/GitHub/Gmail 等 15+ 服务挂载为文件系统路径，Agent 用熟悉的 bash 工具（`cat`/`grep`/`cp`）操作一切，与 Cursor 模型亲和性 Harness 文章形成「工具层抽象 vs 模型层适配」的正交关系（关联：OpenAI patch 格式 vs Claude string replacement → Mirage 统一为 filesystem API → 模型特异性被隐藏）
@@ -61,7 +62,7 @@
 
 - [clampdown-89luca89-zero-trust-sandbox-agent-2026](./clampdown-89luca89-zero-trust-sandbox-agent-2026.md) — 零信任沙箱推荐，Landlock + Seccomp + 零密钥架构，与 Anthropic Auto Mode 形成技术互补（判断 vs 强制）
 
-- [CloakHQ-cloakbrowser-source-level-stealth-chromium-2026](./CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md) — 源码级反检测 Chromium，57 个 C++ 指纹补丁 + humanize=True 人类行为模拟，30/30 检测测试通过 + 0.9 reCAPTCHA v3 得分，与 Cursor Cloud Agent 开发环境形成「环境配置 → 安全执行」完整闭环（关联：Browser Agent 操作被反爬拦截 → CloakBrowser 让 Agent 真正闭环工作）
+- [CloakHQ-cloakbrowser-source-level-stealth-chromium-2026](./CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md) — 源码级反检测 Chromium，797 Stars，49 个 C++ 补丁 + `humanize=True` 人类行为模拟，30+ 检测站点通过 + 0.9 reCAPTCHA v3，3 行代码替换 Playwright/Puppeteer，与 Cursor「第三代」云端 Agent 形成「环境配置 → 安全执行」完整闭环（关联：Cloud Agent 操作真实网站 → Cloudflare 反爬拦截 → CloakBrowser 让 Browser Agent 真正工作）
 
 - [open-code-review-multi-agent-code-review-2026](./open-code-review-multi-agent-code-review-2026.md) — 多评审者对抗式代码审查框架，28 种评审者人格 + 辩论机制 + GAN 风格对抗评审（关联：GAN 三代理架构 → 多评审者对抗式代码审查工程实现）
 
@@ -120,7 +121,6 @@
 
 - [ruvnet/ruflo](https://github.com/ruvnet/ruflo) — Claude 原生 Multi-Agent 编排平台，38K ⭐，32 插件生态，自学习 swarm 智能
 - [ruflo-claude-swarm-orchestration-2026](./ruflo-claude-swarm-orchestration-2026.md) — Ruflo 推荐，+2,598 stars/day，32 插件 + SONA 自学习 + 零信任联邦（关联：上下文工程 → 多 Agent 记忆协同的工程实现）
-- [CloakHQ/CloakBrowser](https://github.com/CloakHQ/CloakBrowser) — 源码级反检测 Chromium，57 个 C++ 指纹补丁，0.9 reCAPTCHA v3 得分，30/30 检测测试通过，Playwright/Puppeteer 零改动集成
 - [daytonaio/daytona](https://github.com/daytonaio/daytona) — OCI 原生的 AI Agent 沙箱运行时，Sub-90ms 冷启动 + 可选 Kata/Sysbox 强隔离，OpenAI Agents SDK 8个官方沙箱提供商之一
 
 - [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox) — Kubernetes 原生的 Agent 沙箱 CRD
