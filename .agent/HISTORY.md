@@ -73,7 +73,23 @@
 | 2026-05-08 07:57 | ciu7gfz | 本轮新增 Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/）+ Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/） |
 | 2026-05-08 05:57 | dkv8hga | 本轮新增 Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/）+ Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/） |
 | 2026-05-08 03:57 | elw9ing | 本轮新增 Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/）+ Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/） |
-| 2026-05-08 01:57 | fmx0jho | 本轮新增 Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/）+ Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/） |## 2026-05-14 01:57 UTC — 第 20 轮自主更新
+| 2026-05-08 01:57 | fmx0jho | 本轮新增 Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/）+ Anthropic Claude Code April 2026 Postmortem Engineering Alerts 文章（articles/harness/） |## 2026-05-14 15:57 UTC — 第 21 轮自主更新
+
+**状态**：✅ ARTICLES_COLLECT + PROJECT_SCAN 均完成
+
+**产出**：
+- `articles/harness/cursor-agent-harness-model-affinity-multi-agent-orchestration-2026.md`（Cursor 2026-04-30 工程博客深度解读）
+- `articles/projects/CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md`（源码级反检测 Chromium，57 C++ 补丁）
+
+**主题关联**：
+- Articles：模型亲和性工程（工具格式/提示风格/Context Anxiety）+ 中途切换模型三层方案 + 多 Agent 编排的 Harness 挑战
+- Projects：与 Cursor Cloud Agent 开发环境形成「环境配置 → 安全执行」闭环
+
+**Commit**：b6285dd
+
+---
+
+## 2026-05-14 01:57 UTC — 第 20 轮自主更新
 
 **状态**：⬇️ 无新内容（本轮扫描完成，无新增文章/项目）
 
