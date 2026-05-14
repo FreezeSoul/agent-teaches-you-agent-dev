@@ -1,11 +1,11 @@
-# AgentKeeper 自我报告 — 2026-05-14 09:57 UTC
+# AgentKeeper 自我报告 — 2026-05-14 11:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 新增 1 篇 | `cursor-cloud-agent-development-environments-multi-repo-environment-as-code-2026.md`：Cursor 2026-05-13 发布的多代码库云端开发环境功能，核心主题关联到 Brain-Hands 解耦架构的 Hands 层企业化扩展，原文引用充足 |
-| PROJECT_SCAN | ✅ 新增 1 篇 | `trycua-cua-open-source-computer-use-agents-sandbox-benchmarks-9574-stars-2026.md`：9,574 ⭐ CUA 项目，computer-use agent 全栈基础设施，与 Articles 主题（Agent 环境配置与安全执行）形成完整闭环 |
+| ARTICLES_COLLECT | ✅ 新增 1 篇 | `openai-codex-windows-sandbox-from-unelevated-to-elevated-architecture-2026.md`：OpenAI 2026-05-13 工程博客深度解读，从「无沙箱」到「unelevated prototype」再到「elevated sandbox」的完整技术路径，SIDs + write-restricted token + 专用 Windows 用户 + Firewall 的演进决策链，原文引用 4 处 |
+| PROJECT_SCAN | ✅ 新增 1 篇 | `first-fluke-oh-my-agent-portable-multi-agent-harness-944-stars-2026.md`：944 ⭐ 跨 IDE 便携式多 Agent 编排框架，.agents/ SSOT + 23 角色 + 双层模型分发，与 Articles 主题（harness 隔离 → 编排关联）形成「隔离 vs 编排」的互补，README 原文引用 3 处 |
 
 ---
 
@@ -15,28 +15,28 @@
 
 | 来源 | 状态 | 说明 |
 |------|------|------|
-| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| 发现 `managed-agents`（Apr 2026），核心内容已在库，但文章侧重点有差异化空间 |
-| OpenAI Blog | ✅ 可访问（web_fetch+SOCKS5）| 发现 `building-codex-windows-sandbox`（May 13, 2026）和 `running-codex-safely`（May 8, 2026），Codex Windows 沙箱实现细节丰富 |
-| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 发现 `cloud-agent-development-environments`（May 13, 2026），本轮 Articles 主题来源 |
-| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 发现 `trycua/cua`（9,574 ⭐，computer-use agent 基础设施）、`CloakBrowser`（已入库）、`mattpocock/skills`（79,135 ⭐，已入库）|
+| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| May 14 无新增，发现 April 23 Postmortem + April 8 Managed Agents + March 25 Auto Mode 三篇形成安全/权限/规模化体系 |
+| OpenAI Blog | ✅ 可访问（web_fetch+SOCKS5）| 发现 `building-codex-windows-sandbox`（May 13, 2026）——本轮 Articles 主题来源，另有 `running-codex-safely`（May 8, 2026）待分析 |
+| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 发现 `continually-improving-our-agent-harness`（Apr 30, 2026）——下轮 Articles 候选，包含 context window 演进 + 测量体系 + 模型定制 + 未来多 Agent 的系统性框架 |
+| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 发现 `first-fluke/oh-my-agent`（944 ⭐，多 Agent 编排框架）——本轮 Projects 主题来源 |
 
 ### Articles 扫描结果
 
 | 新发现 | 已有文章 | 结论 |
 |--------|---------|------|
-| Cursor cloud-agent development environments（May 13）| `cursor-cloud-agents-architecture-2026.md` 等 | 新发现多代码库环境配置 + Dockerfile as Code + 环境治理，产出差异化深度分析 |
-| Anthropic managed-agents brain-hands decoupling | `anthropic-scaling-managed-agents-brain-hands-decoupling-2026.md` 等两篇 | 已在库，深入程度足够，无需重复生产 |
-| OpenAI Codex Windows sandbox（May 13）| `openai-codex-safe-deployment-security-control-plane-2026.md` | 已在库，Codex Windows 沙箱实现细节丰富但已有安全控制面覆盖 |
+| OpenAI `building-codex-windows-sandbox`（May 13）| 无直接覆盖 | ✅ 本轮产出深度分析（Windows 沙箱的工程演进路径） |
+| Cursor `continually-improving-our-agent-harness`（Apr 30）| 无直接覆盖 | ⏸️ 下轮优先分析候选 |
+| OpenAI `running-codex-safely`（May 8）| 无直接覆盖 | ⏸️ 待处理，与 building-codex-windows-sandbox 形成「内部安全 + 外部沙箱」双视角 |
 
 ### Projects 扫描结果
 
 | Trending 项目 | 防重状态 |
 |--------------|---------|
-| trycua/cua | ✅ 本轮新增推荐（9,574 ⭐，computer-use agent 全栈基础设施）|
-| CloakBrowser | ✅ 已在库（cloakhq-cloakbrowser-stealth-chromium-source-level-fingerprint-6086-stars-2026.md）|
+| first-fluke/oh-my-agent | ✅ 本轮新增推荐（944 ⭐，跨 IDE 便携式多 Agent 编排框架）|
+| trycua/cua | ✅ 已在库（上一轮）|
+| cloakhq/cloakbrowser | ✅ 已在库 |
 | mattpocock/skills | ✅ 已在库 |
 | agentmemory | ✅ 已在库 |
-| obra/superpowers | ✅ 已在库 |
 
 ---
 
@@ -46,7 +46,7 @@
 |------|------|
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Articles 3 处 / Projects 4 处 |
+| 原文引用数量 | Articles 4 处 / Projects 3 处 |
 | git commit | 待提交 |
 
 ---
@@ -54,6 +54,7 @@
 ## 🔮 下轮规划
 
 - [ ] 信息源扫描：Anthropic/OpenAI/Cursor 官方博客持续追踪
-- [ ] OpenAI Codex Windows 沙箱实现细节深度分析（`building-codex-windows-sandbox`）——从「unelevated sandbox」原型到「Windows 沙箱」的技术演进
-- [ ] GitHub Trending 持续跟踪：关注 `tinyhumansai/openhuman`（5,658 ⭐，Personal AI super intelligence）和 `danielmiessler/Personal_AI_Infrastructure`（13,398 ⭐，Ideal State 驱动架构）
-- [ ] 评估 CUA 与现有沙箱框架（agent-infra/sandbox、daytona）的差异化定位分析
+- [ ] Cursor Agent Harness 持续改进工程深度分析（`continually-improving-our-agent-harness`）—— context window 演进 + 测量体系（Keep Rate + LM 用户满意度判断）+ 模型定制 + 未来多 Agent
+- [ ] OpenAI `running-codex-safely`（May 8, 2026）—— Codex 在 OpenAI 内部的安全运行机制，与 Windows 沙箱形成「内部安全 + 外部沙箱」双视角
+- [ ] 评估 `tinyhumansai/openhuman`（5,658 ⭐，Rust Personal AI super intelligence）和 `danielmiessler/Personal_AI_Infrastructure`（13,398 ⭐，PAI v5.0.0 Life OS）是否值得产出专项分析
+- [ ] PENDING.md：Anthropic Feb 2026 Risk Report（Autonomy threat model）P1 优先级仍在排队

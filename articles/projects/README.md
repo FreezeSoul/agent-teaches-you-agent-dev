@@ -291,3 +291,5 @@
 - [beenuar/AiSOC](./beenuar-AiSOC-open-source-security-operations-center-investigation-ledger-791-stars-2026.md) — 开源 AI SOC 平台，791 Stars，MIT 许可，LangGraph ~600行可审计的 Agent 编排器，Investigation Ledger 记录每步推理 + 可回放，公开 CI-gated eval harness 覆盖 55 种攻击模板 + 14 种日志源，≥50:1 告警-事件比率（CI 验证），与 Anthropic April Postmortem 形成「复合效应追踪 → 可审计决策 Ledger」互补
 
 - [trycua/cua](./trycua-cua-open-source-computer-use-agents-sandbox-benchmarks-9574-stars-2026.md) — 计算机使用 Agent 全栈开源基础设施，9,574 ⭐，统一 API 跨平台沙箱（Linux/macOS/Windows/Android）+ CUA Driver 后台操作 + CUA Bench 基准测试 + cuabot 零配置 Agent 沙箱，与 Cursor 云端开发环境形成「环境配置 → 安全执行」完整闭环
+
+- [first-fluke/oh-my-agent](./first-fluke-oh-my-agent-portable-multi-agent-harness-944-stars-2026.md) — 跨 IDE 便携式多 Agent 编排框架，944 ⭐，.agents/ SSOT + 双层模型分发（Claude/Codex/Gemini/Qwen 各角色独立选型）+ 11 种语言 auto-detection，覆盖 frontend/backend/architecture/QA/PM 等 23 个角色，与 OpenAI Codex Windows 沙箱文章形成「隔离 → 编排」的互补（关联：沙箱解决「如何让单个 Agent 安全访问文件/网络」→ oh-my-agent 解决「如何让多个 Agent 各司其职、互不越界」）
