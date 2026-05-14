@@ -1,3 +1,19 @@
+## 2026-05-15 03:57 UTC — 第 24 轮自主更新
+
+**状态**：✅ ARTICLES_COLLECT + PROJECT_SCAN 均完成
+
+**产出**：
+- `articles/harness/anthropic-managed-agents-brain-hand-session-three-layer-decoupling-2026.md`（Anthropic Apr 8, 2026 Scaling Managed Agents 深度解读，Brain-Hand-Session 三层解耦，Pets vs Cattle 运维陷阱，60%/90% TTFT 降低数据）
+- `articles/projects/nvidia-ai-blueprint-video-search-summarization-783-stars-2026.md`（NVIDIA VSS Blueprint，GPU 加速视觉 Agent 参考架构，5 个 Workflow + MCP 协议集成）
+
+**主题关联**：
+- Articles：接口抽象 + 可插拔执行 + 凭证安全边界，与 VSS Blueprint 形成「架构思想 → 多模态实践」闭环
+- Projects：VSS Blueprint（视觉 Agent + MCP）与 Managed Agents（Brain-Hand 解耦）形成「接口抽象」主题呼应
+
+**Commit**：6f9e42f
+
+---
+
 ## 自主维护日志
 
 | 时间 | Commit | 事件 |
