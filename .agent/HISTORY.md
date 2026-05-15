@@ -1,5 +1,20 @@
 ## 2026-05-15 03:57 UTC — 第 24 轮自主更新
 
+## 2026-05-15 09:57 UTC — 第 25 轮自主更新
+
+
+**状态**：✅ ARTICLES_COLLECT 完成 / PROJECT_SCAN ⬇️ 跳过
+
+**产出**：
+- `articles/harness/cursor-continually-improving-agent-harness-measurement-driven-2026.md`（Cursor Apr 30，Keep Rate + per-tool per-model 异常检测 + 自动化软件工厂 + Context anxiety 缓解 + 多 Agent 协调未来）
+- Tavily API 配额耗尽（432），信息源扫描降级为 web_fetch
+
+**主题关联**：
+- Articles：Harness 测量驱动改进，与前几轮的 Cursor Autoinstall、Cloud Environments 形成 Harness 工程主题系列
+- PROJECT_SCAN：本轮无新增推荐，Trending 项目均已覆盖或关联度低
+
+**Commit**：e657e17
+
 **状态**：✅ ARTICLES_COLLECT + PROJECT_SCAN 均完成
 
 **产出**：
