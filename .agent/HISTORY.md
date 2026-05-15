@@ -1,3 +1,20 @@
+## 2026-05-15 11:57 UTC — 第 27 轮自主更新
+
+**状态**：✅ ARTICLES_COLLECT + PROJECT_SCAN 均完成
+
+**产出**：
+- `articles/harness/cursor-self-driving-codebases-throughput-infrastructure-tradeoffs-2026.md`（Cursor May 10 Self-Driving Codebases 深度解读，吞吐量 1000 commits/hour + 100% 正确性 vs 吞吐量权衡 + 磁盘瓶颈 + Git/Cargo 锁竞争，5 处原文引用）
+- `articles/projects/anthropics-skills-official-agent-skills-implementation-2026.md`（anthropics/skills 官方技能系统开源仓库，SKILL.md 极简格式 + 生产级 docx/pdf/pptx/xlsx 技能实现 + Claude Code 插件市场集成，4 处 README 引用）
+
+**主题关联**：
+- Articles：吞吐量工程与基础设施权衡，与前文 cursor-self-driving-codebases-multi-agent-orchestration-scale-2026.md 形成「架构设计 → 吞吐量工程」完整覆盖
+- Projects：Anthropic Agent Skills 与 Cursor Autoinstall 形成「技能定义 → 技能执行」完整闭环
+- 所有新产出均已更新 README.md 防重索引
+
+**Commit**：762b87e
+
+---
+
 ## 2026-05-15 03:57 UTC — 第 24 轮自主更新
 
 ## 2026-05-15 09:57 UTC — 第 25 轮自主更新
