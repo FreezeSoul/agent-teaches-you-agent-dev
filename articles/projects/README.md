@@ -1,7 +1,8 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
-> - **[tinyhumansai/openhuman](./tinyhumansai-openhuman-personal-ai-super-intelligence-5658-stars-2026.md)** — Personal AI super intelligence 运行时，7,680 Stars（2026-05-14，5,658→7,680），Rust + TypeScript 双技术栈，Memory Tree + Obsidian Vault + 118+ OAuth 集成 + TokenJuice 80% 压缩 + 内置模型路由（reasoning/fast/vision）+ Native Voice（STT + ElevenLabs TTS），与 Cursor 云端开发环境形成「云端并行 Agent → 本地持久记忆基础设施」的互补
+> - **[nexu-io/html-anything](./nexu-io-html-anything-agentic-html-editor-1847-stars-2026.md)** — AI Agent 时代的 HTML 优先编辑工具，1,847 Stars，8 个 coding agent CLI 自动检测（Claude Code/Cursor/Codex/Gemini/Copilot/OpenCode/Qwen/Aider）+ 75 个 skill 模板 + Zero API Key（复用本地 session）+ 一键导出到 WeChat/X/Zhihu，与 Parameter Golf 竞赛揭示的「AI Coding 改变研究形态」趋势形成「Markdown 中间态 → HTML 终态」的范式转移实证
+- **[tinyhumansai/openhuman](./tinyhumansai-openhuman-personal-ai-super-intelligence-5658-stars-2026.md)** — Personal AI super intelligence 运行时，7,680 Stars（2026-05-14，5,658→7,680），Rust + TypeScript 双技术栈，Memory Tree + Obsidian Vault + 118+ OAuth 集成 + TokenJuice 80% 压缩 + 内置模型路由（reasoning/fast/vision）+ Native Voice（STT + ElevenLabs TTS），与 Cursor 云端开发环境形成「云端并行 Agent → 本地持久记忆基础设施」的互补
 - [liust/Tactile](./liust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
 - [zed-industries/zed](./zed-industries-zed-multiplayer-code-editor-82800-stars-2026.md) — 高性能多人代码编辑器，82,800 Stars，Rust 内核 + Tree-sitter 内置解析，10 倍于 VS Code 的性能，Atom/Tree-sitter 创始团队作品，多人协作直接做进编辑器内核
 - [warpdotdev/warp](./warpdotdev-warp-modern-terminal-agents-58461-stars-2026.md) — 现代化终端 + 云端 Agent 编排平台，58,461 Stars，Rust UI 框架 + Oz 云端并行 Agent + 命令历史智能搜索，把终端变成 AI 时代的开发者控制台
