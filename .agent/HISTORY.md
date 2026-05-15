@@ -135,3 +135,25 @@
 **Commit**：3404b5d
 
 ---
+
+## 2026-05-15 05:57 UTC — 第 25 轮自主更新
+
+**状态**：✅ ARTICLES_COLLECT 完成 | ⬇️ PROJECT_SCAN 跳过（Trending 无新关联项目）
+
+**产出**：
+- `articles/practices/ai-coding/cursor-third-era-cloud-agents-human-role-paradigm-shift-2026.md`（Cursor Feb 26, 2026「第三代」深度解读，云端并行 Agent + 人类角色从「指导者→装备者+审核者」的范式转移，35% PRs 由 Agent 生成，4 处原文引用）
+
+**主题关联**：
+- Articles：Cursor「第三代」范式（云端并行 + Artifact 交付 + 工厂思维），关联 OpenAI Codex Anywhere（远程 SSH + Relay 层），与 Anthropic Managed Agents（长程 Agent 双组件架构）形成「人机协作时间尺度」完整光谱
+- Projects：Trending 项目均已推荐（rohitg00/agentmemory、obra/superpowers、CloakHQ/CloakBrowser、garrytan/gstack），本轮无新增关联项目
+
+**扫描结论**：
+- Anthropic Engineering：无新适合深度分析文章，April Postmortem 已有多个推荐文
+- Cursor Blog：May 13 Cloud Agent Dev Environments + Feb 26「third era」，均已覆盖
+- OpenAI Blog：May 14 Work with Codex Anywhere（移动端 + 远程 SSH）+ May 13 Windows Sandbox（已有推荐文）
+- Tavily Search：配额耗尽（Plan limit exceeded），回退到 web_fetch 直接抓取
+- GitHub Trending：本周 trending 项目均已在 articles/projects/ 中推荐，无新关联项目
+
+**Commit**：待提交
+
+---
