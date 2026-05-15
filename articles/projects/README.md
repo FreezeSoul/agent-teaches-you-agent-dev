@@ -2,7 +2,7 @@
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
 > - **[tinyhumansai/openhuman](./tinyhumansai-openhuman-personal-ai-super-intelligence-5658-stars-2026.md)** — Personal AI super intelligence 运行时，7,680 Stars（2026-05-14，5,658→7,680），Rust + TypeScript 双技术栈，Memory Tree + Obsidian Vault + 118+ OAuth 集成 + TokenJuice 80% 压缩 + 内置模型路由（reasoning/fast/vision）+ Native Voice（STT + ElevenLabs TTS），与 Cursor 云端开发环境形成「云端并行 Agent → 本地持久记忆基础设施」的互补
-- [liust/Tactile](./yliust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
+- [liust/Tactile](./liust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
 - [zed-industries/zed](./zed-industries-zed-multiplayer-code-editor-82800-stars-2026.md) — 高性能多人代码编辑器，82,800 Stars，Rust 内核 + Tree-sitter 内置解析，10 倍于 VS Code 的性能，Atom/Tree-sitter 创始团队作品，多人协作直接做进编辑器内核
 - [warpdotdev/warp](./warpdotdev-warp-modern-terminal-agents-58461-stars-2026.md) — 现代化终端 + 云端 Agent 编排平台，58,461 Stars，Rust UI 框架 + Oz 云端并行 Agent + 命令历史智能搜索，把终端变成 AI 时代的开发者控制台
 - [slopus/happy](./slopus-happy-mobile-claude-code-20718-stars-2026.md) — 移动端 Claude Code/Codex 控制台，20,718 Stars，Expo 构建 + 端到端加密 + 推送通知实时介入，躺在沙发上也能控制 AI 编码 Agent 的工作进度
@@ -28,9 +28,9 @@
 
 - [huggingface/skills](./huggingface-skills-interoperable-agent-tools-1881-stars-2026.md) — Hugging Face 官方 Agent Skills 库，1,881 Stars，标准 SKILL.md 格式，interoperable with Claude Code / Codex / Gemini CLI / Cursor，与 Cursor Autoinstall 形成「训练环境自动化 vs 工具定义标准化」的互补
 
+- [anthropics/skills](./anthropics-skills-official-agent-skills-implementation-2026.md) — Anthropic 官方 Agent Skills 开源仓库，SKILL.md 极简格式 + 生产级 docx/pdf/pptx/xlsx 技能实现 + Claude Code 插件市场集成，与 Cursor Autoinstall 形成「技能定义 → 技能执行」的完整闭环
 
-
-- [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，2026-05-03 创建，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，支持 Anthropic 兼容端点（DeepSeek/OpenRouter/Fireworks），与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
+- [aattaran/deepclaude](./aattaran-deepclaude-claude-code-brain-swap-229-stars-2026.md) — Claude Code Brain Swap 方案，229 Stars，DeepSeek V4 Pro（$0.87/M）替换 Claude Opus（$15/M），90% 成本降低 + mid-session 切换，与 Anthropic Managed Agents Brain/Hands 解耦形成「Harness 抽象层」的互补（关联：Body 固定 → Brain 可换 → Claude Code harness 的真实价值在 tool loop 而非模型）
 - [asamassekou10/ship-safe](./asamassekou10-ship-safe-agent-permission-security-scanner-699-stars-2026.md) — Agentic 时代 CLI 安全扫描器，699 Stars，专门检测 CI/CD 错误配置、Agent 权限蔓延风险、MCP 工具注入、硬编码密钥和 DMCA 标志 AI 依赖，与 Anthropic 2026-04 事后分析形成「事后分析 → 事前防御」互补（关联：Anthropic 三类改动导致质量退化 → ship-safe 在 Agent 伤害生产环境前拦截权限配置问题）
 - [anthropics/financial-services](./anthropic-claude-for-financial-services-one-source-two-ways-skill-bundling-architecture-21236-stars-2026.md) — Anthropic 官方金融领域 Agent 参考仓库，21,236 Stars，同一 Skill 文件同时服务 Claude Cowork 插件（人类主导）和 Managed Agent API（autonomous 执行），9 个具名 Agent + 6 个 vertical plugins + 11 个 MCP 数据连接器，代表 2026 年 Agent 技能复用的核心架构模式（关联：本文 Skill Bundling 架构 → 一次编写双重部署 → financial-services 作为生产级参考实现）
 
