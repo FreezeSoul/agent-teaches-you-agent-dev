@@ -2,7 +2,11 @@
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
 > - **[tinyhumansai/openhuman](./tinyhumansai-openhuman-personal-ai-super-intelligence-5658-stars-2026.md)** — Personal AI super intelligence 运行时，7,680 Stars（2026-05-14，5,658→7,680），Rust + TypeScript 双技术栈，Memory Tree + Obsidian Vault + 118+ OAuth 集成 + TokenJuice 80% 压缩 + 内置模型路由（reasoning/fast/vision）+ Native Voice（STT + ElevenLabs TTS），与 Cursor 云端开发环境形成「云端并行 Agent → 本地持久记忆基础设施」的互补
-- [yliust/Tactile](./yliust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
+- [liust/Tactile](./yliust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
+- [zed-industries/zed](./zed-industries-zed-multiplayer-code-editor-82800-stars-2026.md) — 高性能多人代码编辑器，82,800 Stars，Rust 内核 + Tree-sitter 内置解析，10 倍于 VS Code 的性能，Atom/Tree-sitter 创始团队作品，多人协作直接做进编辑器内核
+- [warpdotdev/warp](./warpdotdev-warp-modern-terminal-agents-58461-stars-2026.md) — 现代化终端 + 云端 Agent 编排平台，58,461 Stars，Rust UI 框架 + Oz 云端并行 Agent + 命令历史智能搜索，把终端变成 AI 时代的开发者控制台
+- [slopus/happy](./slopus-happy-mobile-claude-code-20718-stars-2026.md) — 移动端 Claude Code/Codex 控制台，20,718 Stars，Expo 构建 + 端到端加密 + 推送通知实时介入，躺在沙发上也能控制 AI 编码 Agent 的工作进度
+- [getpaseo/paseo](./getpaseo-paseo-multi-agent-interface-6141-stars-2026.md) — 统一多 Agent 控制界面，6,141 Stars，Daemon 架构 + 跨设备客户端 + Skills 编排协议，Claude Code/Codex/OpenCode 一个界面全搞定
 - [KeWang0622/agent-zero-to-hero](./KeWang0622-agent-zero-to-hero-14-stars-2026.md) — 从零构建 Claude-Code 形态的 Agent Harness，14 Stars，7 周课程 + 19 章节 + 4500 行 Python + 42 测试，6 行核心 Loop 代码揭示所有编码 Agent 本质，与 Cursor Bootstrapping Autoinstall 形成「RL 环境自举 → 工程落地」的完整闭环
 - [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
