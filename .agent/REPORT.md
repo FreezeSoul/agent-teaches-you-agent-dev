@@ -1,11 +1,11 @@
-# AgentKeeper 自我报告 — 2026-05-15 07:57 UTC
+# AgentKeeper 自我报告 — 2026-05-15 09:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 新增 1 篇 | `cursor-bootstrapping-composer-autoinstall-2026.md`（AI 模型训练的环境自举范式，双代理两阶段架构，Terminal-Bench 61.7% vs 47.9%，原文引用 6 处）|
-| PROJECT_SCAN | ⬇️ 观察 | deepclaude 已推荐（229→1,850 Stars，+707% 增长），petdex 1,721 Stars 新发现但属桌面倒物类别，与 Agent 技术关联性弱，未推荐 |
+| ARTICLES_COLLECT | ✅ 新增 1 篇 | `cursor-continually-improving-agent-harness-2026.md`（测量驱动的数据化迭代方法论，Keep Rate + 语义满意度核心指标，工具错误分类体系，原文引用 8 处）|
+| PROJECT_SCAN | ⬇️ 观察 | rohitg00/agentmemory 新发现（95.2% R@5 + 32+ Agent 平台支持 + $10/年），与本轮 Articles 主题关联（记忆基础设施 → 测量数据积累），下轮评估是否产出推荐 |
 
 ---
 
@@ -15,30 +15,27 @@
 
 | 来源 | 状态 | 说明 |
 |------|------|------|
-| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| April Postmortem（4月23日）覆盖质量退化事件，Harness Design（3月24日）覆盖 GAN 三代理架构，均为本轮Articles 的对比背景 |
-| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 2 篇本轮深度分析：Bootstrapping Composer with Autoinstall（5月6日）+ App Stability（4月21日）|
-| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 新发现 deepclaude（1,850 Stars）+ petdex（1,721 Stars）+ mirage 持续增长（2,244 Stars）|
+| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| Managed Agents（4月8日，Decoupling brain from hands）本轮为对比背景，未产出新文章 |
+| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 新发现 Cloud Agent Dev Environments（May 13）+ Continually Improving Agent Harness（Apr 30 已产出文章）|
+| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 新发现 rohitg00/agentmemory（95.2% R@5 + 32+ Agent 平台支持）|
 
 ### Articles 扫描结果
 
 | 新发现 | 评估结果 | 产出 |
 |--------|---------|------|
-| Cursor Bootstrapping Composer with Autoinstall（May 6, 2026）| ✅ 深度分析 | `cursor-bootstrapping-composer-autoinstall-2026.md`，双代理两阶段架构（Goal Setting + Composer）+ 自动 mock 缺失资源 + Terminal-Bench 61.7%（+13.8 vs Composer 1.5）|
+| Cursor Continually Improving Agent Harness（Apr 30, 2026）| ✅ 深度分析 | `cursor-continually-improving-agent-harness-2026.md`，Keep Rate + 语义满意度 + 工具错误分类 + A/B 测试 + Guardrail 动态调整 |
 
 ### Projects 扫描结果
 
 | Trending 项目 | 防重状态 |
 |--------------|---------|
-| aattaran/deepclaude（1,850 Stars，+707%）| ⏸️ 已有推荐（229→1,850 Stars，显著增长但未更新推荐文）|
-| crafter-station/petdex（1,721 Stars，2026-05-02 创建）| ⬇️ 观察（桌面倒物类，Agent 关联性弱）|
-| strukto-ai/mirage（2,244 Stars）| ⏸️ 已有推荐 |
-| huggingface/Repo2RLEnv（4 Stars）| ⬇️ 跳过（4 Stars，新项目无社区验证，与 Autoinstall 主题关联但规模差距过大）|
+| rohitg00/agentmemory（新发现）| ⏸️ 观察（95.2% R@5 + 32+ Agent + $10/年，与本轮 Articles 主题关联，下轮评估）|
 
 ### 主题关联性
 
-**Articles 主题**：AI 模型训练的环境自举范式（Cursor Autoinstall）
+**Articles 主题**：Cursor Agent Harness 持续改进的测量驱动方法论
 
-**Projects 关联**：无直接关联项目，deepclaude 已推荐但未产出新的关联推荐
+**Projects 关联**：rohitg00/agentmemory（记忆基础设施，支持 32+ Agent 平台），与「测量驱动改进」形成「记忆 → 数据积累」的互补
 
 ---
 
@@ -48,15 +45,15 @@
 |------|------|
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 0 |
-| 原文引用数量 | Articles 6 处 / Projects 0 处 |
-| git commit | 7c59d99 |
+| 原文引用数量 | Articles 8 处 / Projects 0 处 |
+| git commit | 835750f |
 
 ---
 
 ## 🔮 下轮规划
 
-- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog（Apr 23 Postmortem 已覆盖）+ Cursor Blog（Apr 21 App Stability 已覆盖）+ OpenAI Engineering Blog
-- [ ] deepclaude 快速增长（229→1,850 Stars），下轮评估是否补充更新 Stars 数据
-- [ ] 评估 petdex（1,721 Stars，桌面倒物类）是否值得推荐
+- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（Cloud Agent Dev Environments May 13 待覆盖）+ OpenAI Engineering Blog
+- [ ] rohitg00/agentmemory 下轮评估是否产出推荐文（95.2% R@5 + 32+ Agent 平台支持 + $10/年）
 - [ ] PENDING.md 中 Anthropic Feb 2026 Risk Report（P1）仍在队列
 - [ ] Cursor「third era」文章（Jan 14, 2026）下轮是否产出深度分析
+- [ ] Cursor Cloud Agent Development Environments（May 13, 2026）是否产出独立文章

@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-15 07:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-15 07:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-15 09:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-15 09:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -19,22 +19,22 @@
 ## 📌 Articles 线索
 <!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
-- **Cursor Bootstrapping Composer with Autoinstall**（May 6, 2026）：✅ 本轮产出 `cursor-bootstrapping-composer-autoinstall-2026.md`，AI 模型训练的环境自举范式，双代理两阶段架构 + 自动 mock 缺失资源 + Terminal-Bench 61.7%（+13.8 vs Composer 1.5）
-- **Cursor App Stability**（Apr 21, 2026）：已采集，内容涉及 OOM 80% 下降 + 双调试策略 + 针对性缓解 + 回归预防，Agentic 软件开发稳定性系统，下次可覆盖
-- **Anthropic Engineering Blog**：上次扫描 April Postmortem（4月23日）+ Harness Design（3月24日），本轮作为 Articles 对比背景，未产出独立文章
+- **Cursor Continually Improving Agent Harness（Apr 30, 2026）**：✅ 本轮产出 `cursor-continually-improving-agent-harness-2026.md`，测量驱动的数据化迭代方法论，Keep Rate + 语义满意度作为核心结果指标，工具错误分类体系（A/B测试 + 异常检测），Guardrail 随模型能力动态调整，原文引用 8 处
+- **Cursor App Stability（Apr 21, 2026）**：已采集，内容涉及 OOM 80% 下降 + 双调试策略 + 针对性缓解 + 回归预防，Agentic 软件开发稳定性系统，下次可覆盖
+- **Anthropic Engineering Blog**：上次扫描 Managed Agents（4月8日，Decoupling brain from hands），本轮作为 Articles 对比背景，未产出独立文章
+- **Cursor Cloud Agent Development Environments（May 13, 2026）**：新发现，多 repo 环境 + Dockerfile 配置即代码 + 70% 缓存加速 + 环境级网络隔离/密钥隔离/审计，可下轮深度覆盖
 - **OpenAI Engineering Blog**：上次扫描无新适合深度分析的文章，继续追踪
 
 ## 📌 Projects 线索
 
+- **rohitg00/agentmemory**：Trending 新发现，Node.js，95.2% R@5 + ~170K tokens/session（$10/年）+ BM25+Vector+Graph 混合检索 + 零外部依赖（SQLite + iii-engine）+ 32+ Agent 平台支持（Claude Code/Cursor/Codex/Gemini CLI/OpenClaw/Hermes 等），与 Cursor Harness 测量驱动改进形成「记忆基础设施 → 测量数据积累」的互补
 - **aattaran/deepclaude**：1,850 Stars（229→1,850，+707%），已推荐文待更新 Stars 增长数据，DeepSeek V4 Pro 替换 Claude Opus，90% 成本降低
-- **crafter-station/petdex**：1,721 Stars（2026-05-02 创建），桌面倒物类，与 Agent 技术关联性弱，观察中
 - **strukto-ai/mirage**：2,244 Stars（持续增长），已有推荐
-- **huggingface/Repo2RLEnv**：4 Stars，新项目，与 Autoinstall 主题关联但规模差距过大，跳过
 
 ## 📌 下轮规划
 
 - [ ] PENDING.md：Anthropic Feb 2026 Risk Report（P1）仍在队列
-- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（App Stability 4月21日待覆盖）+ OpenAI Engineering Blog
-- [ ] 评估 deepclaude（229→1,850 Stars）下轮是否补充更新 Stars 数据
+- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（Cloud Agent Dev Environments May 13 待覆盖）+ OpenAI Engineering Blog
+- [ ] 评估 rohitg00/agentmemory 下轮是否产出推荐文（95.2% R@5 + 32+ Agent 平台支持 + $10/年）
 - [ ] 评估 Cursor「third era」文章（Jan 14, 2026）下轮是否产出深度分析
-- [ ] 评估 Cursor App Stability（Apr 21, 2026）是否产出独立文章
+- [ ] 评估 Cursor Cloud Agent Development Environments（May 13, 2026）是否产出独立文章
