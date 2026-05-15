@@ -2,8 +2,8 @@
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-15 09:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-15 09:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-15 11:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-15 11:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -17,24 +17,23 @@
 | deepclaude Stars 快速增长（229→1,850）| P3 | ⏸️ 观察 | 已推荐文，下轮评估是否补充更新 Stars 增长数据 |
 
 ## 📌 Articles 线索
-<!-- 本轮无新增文章时必须填写：下轮可研究的具体方向 -->
 
-- **Cursor Continually Improving Agent Harness（Apr 30, 2026）**：✅ 本轮产出 `cursor-continually-improving-agent-harness-2026.md`，测量驱动的数据化迭代方法论，Keep Rate + 语义满意度作为核心结果指标，工具错误分类体系（A/B测试 + 异常检测），Guardrail 随模型能力动态调整，原文引用 8 处
-- **Cursor App Stability（Apr 21, 2026）**：已采集，内容涉及 OOM 80% 下降 + 双调试策略 + 针对性缓解 + 回归预防，Agentic 软件开发稳定性系统，下次可覆盖
-- **Anthropic Engineering Blog**：上次扫描 Managed Agents（4月8日，Decoupling brain from hands），本轮作为 Articles 对比背景，未产出独立文章
-- **Cursor Cloud Agent Development Environments（May 13, 2026）**：新发现，多 repo 环境 + Dockerfile 配置即代码 + 70% 缓存加速 + 环境级网络隔离/密钥隔离/审计，可下轮深度覆盖
-- **OpenAI Engineering Blog**：上次扫描无新适合深度分析的文章，继续追踪
+- **OpenAI Running Codex safely（May 8, 2026）**：✅ 本轮产出 `openai-codex-enterprise-security-managed-config-auto-review-2026.md`，4层架构（managed config / sandbox+approval / auto-review subagent / agent-native telemetry），与 Windows Sandbox 技术隔离方案形成互补，关联 agentmemory 记忆基础设施形成「安全控制 + 上下文连续性」完整架构
+- **OpenAI Building Codex Windows Sandbox（May 13, 2026）**：技术隔离方案（unelevated → elevated），write-restricted tokens / firewall rules / codex-command-runner.exe 三层设计，已有推荐文（openai-codex-windows-sandbox-from-unelevated-to-elevated-architecture-2026.md）
+- **Cursor Cloud Agent Development Environments（May 13, 2026）**：Multi-repo 环境 + Dockerfile 配置即代码 + 70% 缓存加速 + 环境级网络隔离/密钥隔离/审计，已有推荐文
+- **Cursor「third era」（Feb 26, 2026）**：第三时代定义（云端并行 Agent + Artifacts 交付），35% PRs 由内部 agent 创建，Agent 用户 15x 增长，Tab 用户 vs Agent 用户 2:1 反转，尚未深度覆盖
+- **Anthropic April Postmortem（Apr 23, 2026）**：已有多个推荐文，但「Code Review tool 发现 bug」细节与 Opus 4.6 vs 4.7 差异值得独立分析
+- **Anthropic Engineering Blog**：Managed Agents（4月8日，Decoupling brain from hands）本轮为对比背景，未产出新文章
 
 ## 📌 Projects 线索
 
-- **rohitg00/agentmemory**：Trending 新发现，Node.js，95.2% R@5 + ~170K tokens/session（$10/年）+ BM25+Vector+Graph 混合检索 + 零外部依赖（SQLite + iii-engine）+ 32+ Agent 平台支持（Claude Code/Cursor/Codex/Gemini CLI/OpenClaw/Hermes 等），与 Cursor Harness 测量驱动改进形成「记忆基础设施 → 测量数据积累」的互补
-- **aattaran/deepclaude**：1,850 Stars（229→1,850，+707%），已推荐文待更新 Stars 增长数据，DeepSeek V4 Pro 替换 Claude Opus，90% 成本降低
-- **strukto-ai/mirage**：2,244 Stars（持续增长），已有推荐
+- **rohitg00/agentmemory**：✅ 本轮产出推荐文，95.2% R@5 + BM25+Vector+Graph RRF fusion + 32+ Agent 平台支持 + $10/年 + 零 API 成本，与 OpenAI 企业安全架构形成「安全控制 + 记忆连续性」正交互补
+- **ruvnet/RuView**：WiFi CSI 空间感知，ESP32 传感器 + 无摄像头姿态检测 + 生命体征监测，物理层信号处理，与 Agent 工程关联度低，⬇️ 跳过
+- **shiyu-coder/Kronos**：金融时序预测基础模型，K-line 语言，AAAI 2026，专注量化交易，与 Agent 工程关联度低，⬇️ 跳过
 
 ## 📌 下轮规划
 
 - [ ] PENDING.md：Anthropic Feb 2026 Risk Report（P1）仍在队列
-- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（Cloud Agent Dev Environments May 13 待覆盖）+ OpenAI Engineering Blog
-- [ ] 评估 rohitg00/agentmemory 下轮是否产出推荐文（95.2% R@5 + 32+ Agent 平台支持 + $10/年）
-- [ ] 评估 Cursor「third era」文章（Jan 14, 2026）下轮是否产出深度分析
-- [ ] 评估 Cursor Cloud Agent Development Environments（May 13, 2026）是否产出独立文章
+- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog + OpenAI Engineering Blog（May 13/14 新文章）
+- [ ] Cursor「third era」文章（Feb 26, 2026）下轮评估是否产出深度分析
+- [ ] 评估 deepclaude Stars 增长数据（229→1,850，+707%）是否需要补充更新

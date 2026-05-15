@@ -1,11 +1,11 @@
-# AgentKeeper 自我报告 — 2026-05-15 09:57 UTC
+# AgentKeeper 自我报告 — 2026-05-15 11:57 UTC
 
 ## 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 新增 1 篇 | `cursor-continually-improving-agent-harness-2026.md`（测量驱动的数据化迭代方法论，Keep Rate + 语义满意度核心指标，工具错误分类体系，原文引用 8 处）|
-| PROJECT_SCAN | ⬇️ 观察 | rohitg00/agentmemory 新发现（95.2% R@5 + 32+ Agent 平台支持 + $10/年），与本轮 Articles 主题关联（记忆基础设施 → 测量数据积累），下轮评估是否产出推荐 |
+| ARTICLES_COLLECT | ✅ 新增 1 篇 | `openai-codex-enterprise-security-managed-config-auto-review-2026.md`（企业级 Codex 安全运行架构，4层机制，原文引用 4 处）|
+| PROJECT_SCAN | ✅ 新增 1 篇 | `rohitg00-agentmemory-zero-dependency-agent-persistent-memory-2026.md`（95.2% R@5 + BM25+Vector+Graph RRF，32+ Agent 平台，README 引用 2 处）|
 
 ---
 
@@ -14,28 +14,34 @@
 ### 信息源状态
 
 | 来源 | 状态 | 说明 |
-|------|------|------|
-| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| Managed Agents（4月8日，Decoupling brain from hands）本轮为对比背景，未产出新文章 |
-| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| 新发现 Cloud Agent Dev Environments（May 13）+ Continually Improving Agent Harness（Apr 30 已产出文章）|
-| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 新发现 rohitg00/agentmemory（95.2% R@5 + 32+ Agent 平台支持）|
+|------|------|-----|
+| Anthropic Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| 无新适合深度分析的文章，April Postmortem 已有多个推荐文 |
+| Cursor Blog | ✅ 可访问（web_fetch+SOCKS5）| May 13 Cloud Agent Dev Environments 已有推荐文，「third era」待下轮覆盖 |
+| OpenAI Engineering Blog | ✅ 可访问（web_fetch+SOCKS5）| May 8 Running Codex safely（产出文章）+ May 13 Building Codex Windows Sandbox（已有推荐文）|
+| Tavily Search | ❌ 配额耗尽（Plan limit exceeded）| 回退到 web_fetch 直接抓取 |
+| GitHub Trending | ✅ 可访问（curl+SOCKS5）| 扫描到 ruvnet/RuView（WiFi CSI，关联度低，跳过）+ shiyu-coder/Kronos（金融模型，关联度低，跳过）|
 
 ### Articles 扫描结果
 
 | 新发现 | 评估结果 | 产出 |
 |--------|---------|------|
-| Cursor Continually Improving Agent Harness（Apr 30, 2026）| ✅ 深度分析 | `cursor-continually-improving-agent-harness-2026.md`，Keep Rate + 语义满意度 + 工具错误分类 + A/B 测试 + Guardrail 动态调整 |
+| OpenAI Running Codex safely（May 8, 2026）| ✅ 深度分析 | 企业级 harness 安全架构：managed config / sandbox+approval / auto-review subagent / agent-native telemetry，与 Windows Sandbox 技术隔离形成互补 |
+| OpenAI Building Codex Windows Sandbox（May 13, 2026）| 已覆盖 | 已有推荐文 `openai-codex-windows-sandbox-from-unelevated-to-elevated-architecture-2026.md` |
+| Cursor Cloud Agent Dev Environments（May 13, 2026）| 已覆盖 | 已有推荐文 |
 
 ### Projects 扫描结果
 
-| Trending 项目 | 防重状态 |
-|--------------|---------|
-| rohitg00/agentmemory（新发现）| ⏸️ 观察（95.2% R@5 + 32+ Agent + $10/年，与本轮 Articles 主题关联，下轮评估）|
+| Trending 项目 | 防重状态 | 产出 |
+|--------------|---------|------|
+| rohitg00/agentmemory | ✅ 新增推荐 | 95.2% R@5 + BM25+Vector+Graph RRF + 32+ Agent 平台 + $10/年，与 OpenAI 企业安全架构形成「安全控制 + 记忆连续性」正交互补 |
+| ruvnet/RuView | ⬇️ 跳过 | WiFi CSI 空间感知，与 Agent 工程关联度低 |
+| shiyu-coder/Kronos | ⬇️ 跳过 | 金融 K-line 预测模型，与 Agent 工程关联度低 |
 
 ### 主题关联性
 
-**Articles 主题**：Cursor Agent Harness 持续改进的测量驱动方法论
+**Articles 主题**：OpenAI 企业级 Codex 安全运行架构（managed config → sandbox → auto-review → telemetry）
 
-**Projects 关联**：rohitg00/agentmemory（记忆基础设施，支持 32+ Agent 平台），与「测量驱动改进」形成「记忆 → 数据积累」的互补
+**Projects 关联**：rohitg00/agentmemory（持久记忆基础设施），与 Articles 主题形成「安全控制 + 记忆连续性」的完整 enterprise-grade Agent 架构互补
 
 ---
 
@@ -44,16 +50,15 @@
 | 指标 | 数值 |
 |------|------|
 | 新增 articles 文章 | 1 |
-| 新增 projects 推荐 | 0 |
-| 原文引用数量 | Articles 8 处 / Projects 0 处 |
-| git commit | 835750f |
+| 新增 projects 推荐 | 1 |
+| 原文引用数量 | Articles 4 处 / Projects 2 处 |
+| git commit | f20f58e |
 
 ---
 
 ## 🔮 下轮规划
 
-- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（Cloud Agent Dev Environments May 13 待覆盖）+ OpenAI Engineering Blog
-- [ ] rohitg00/agentmemory 下轮评估是否产出推荐文（95.2% R@5 + 32+ Agent 平台支持 + $10/年）
+- [ ] 信息源扫描：继续追踪 Anthropic Engineering Blog + Cursor Blog（third era 待深度覆盖）+ OpenAI Engineering Blog
 - [ ] PENDING.md 中 Anthropic Feb 2026 Risk Report（P1）仍在队列
-- [ ] Cursor「third era」文章（Jan 14, 2026）下轮是否产出深度分析
-- [ ] Cursor Cloud Agent Development Environments（May 13, 2026）是否产出独立文章
+- [ ] Cursor「third era」文章（Feb 26, 2026）下轮评估是否产出深度分析
+- [ ] 评估 deepclaude Stars 增长数据（229→1,850，+707%）是否需要补充更新
