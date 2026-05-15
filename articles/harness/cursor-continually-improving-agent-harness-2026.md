@@ -1,199 +1,201 @@
-# Cursor Agent Harness 改进工程：测量驱动的持续优化
+# Cursor Agent Harness 持续改进工程：测量驱动的数据化迭代方法论
 
-> 本文分析 Cursor 2026-04-30 发布的 agent harness 改进方法论，揭示 AI Coding 平台如何在多模型、多版本、多场景的复杂环境下，通过测量驱动的迭代实现持续质量提升。
-
----
-
-## 核心论点
-
-Agent harness 的质量直接决定了 Agent 的能力上限。但 harness 优化不是一次性工程，而是**在模型能力、用户需求、系统复杂度三个维度上持续迭代的测量驱动过程**。Cursor 这篇文章的核心价值在于：**它公开了一个生产级 AI Coding 平台如何系统性地度量、诊断、修复 harness 问题的完整方法论**，这对于所有构建 Agent 系统的工程师都是稀缺的一手参考资料。
+> 核心问题：如何系统性地测量和改进 Agent Harness，而非依赖主观感受？
+>
+> 关键结论：Harness 质量由「代码保留率（Keep Rate）」和「用户满意度语义分析」两个指标驱动，配合 A/B 测试和异常检测实现持续改进。
 
 ---
 
-## 背景：Harness 的本质与挑战
+## 背景：Harness 改进的本质挑战
 
-Cursor 指出，harness 和模型共同决定了 Agent 的表现。但「好」本身是难以定义的——它涉及多个维度的权衡：速度 vs 质量、成本 vs 能力、稳定性 vs 灵活性。
+Cursor Agent 是「Harness + Model」共同决定输出质量的系统。但「好」无法直接测量—— benchmarks 只近似真实使用，指标（延迟、token 效率、工具调用数）只反映过程而非结果。
 
-> "The harness and the model together determine how good the agent is, but 'good' is hard to pin down."
-> — [Cursor Engineering Blog: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
-
-Cursor 的方法论核心是：**用数据驱动的方式找到「好」的定义，然后用系统化的测量持续逼近它**。
+Cursor 的解法：**建立多层测量体系，结合离线和在线实验，用数据驱动而非直觉驱动来迭代 Harness**。
 
 ---
 
-## 上下文窗口的演进：从 Guardrails 到 Dynamic Context
+## 一、测量体系的层次结构
 
-### 早期的 Context 工程：大量静态上下文
+Cursor 的测量体系分为两层：
 
-Cursor 早期（2024 年末）的 harness 设计包含了大量静态上下文：
-- 代码库的文件夹布局
-- 与查询语义匹配的代码片段
-- 用户手动附加的文件的压缩版本
-- Lint 和类型错误的 guardrails（每次编辑后都显示给 Agent）
-- Agent 可以调用的最大工具数量限制
+### 1.1 离线评估：CursorBench
 
-### 演进的动力：模型能力提升
+公开的 benchmark 套件，提供快速、标准化的质量读数，能跨时间对比。但 benchmarks 的局限在于「只近似真实使用」—— 会遗漏重要信号。
 
-随着模型能力的提升，许多早期设计的 guardrails 不再必要。模型现在更擅长自主选择上下文，因此 Cursor 逐步移除了这些限制：
+### 1.2 在线实验：A/B 测试
 
-- 不再强制显示 lint 错误（模型自己知道检查）
-- 不再重写 Agent 的文件读取请求（模型知道自己需要多少行）
-- 不再限制最大工具调用数
+部署两个或多个 Harness 变体，横向对比真实使用。测量维度：
 
-### 核心转变：从「给 Agent 限制」到「让 Agent 自己拉取」
+| 维度 | 类型 | 说明 |
+|------|------|------|
+| 延迟 | 过程指标 | 方向性有用，但不够 |
+| Token 效率 | 过程指标 | 方向性有用，但不够 |
+| 工具调用数 | 过程指标 | 方向性有用，但不够 |
+| **Keep Rate** | **结果指标** | **核心** |
+| **用户语义满意度** | **结果指标** | **核心** |
 
-这个演进揭示了一个重要规律：**随着模型能力提升，harness 的角色从「约束者」变成「赋能者」**。好的 harness 不再是告诉 Agent「你不能做什么」，而是提供工具让 Agent 在需要时能够自己获取正确的上下文。
-
-> "We still include some useful static context (e.g., operating system, git status, current and recently viewed files). But we've adapted to increasing model capability by knocking down guardrails and providing more dynamic context, which can be fetched by the agent while it works."
-> — [Cursor Engineering Blog](https://cursor.com/blog/continually-improving-agent-harness)
-
----
-
-## 两类评测体系：Offline Benchmarks + Online Experiments
-
-Cursor 的测量体系由两个互补的层次构成：
-
-### 第一层：离线评测（CursorBench）
-
-CursorBench 提供快速的标准化质量评估，让团队能够跨时间维度做对比。但 Cursor 明确指出，**即使是最好的 benchmark 也只能近似真实使用场景**，如果只依赖 CursorBench，会错过重要的信号。
-
-### 第二层：在线实验（A/B Testing）
-
-在线实验将两个或多个 harness 变体并行部署，通过 A/B 测试在真实使用中度量效果。Cursor 测量的指标包括：
-
-**直接指标**：
-- 延迟（Latency）
-- Token 效率（Token efficiency）
-- 工具调用次数（Tool call count）
-- 缓存命中率（Cache hit rate）
-
-**质量指标**：
-- **Keep Rate**：Agent 生成的代码在固定时间后仍然留在代码库中的比例。这个指标捕捉「用户是否需要手动调整 Agent 的输出」
-- **LLM Judge**：用语言模型阅读用户对 Agent 初始输出的后续响应，判断用户是否满意。如果用户继续做新功能，说明 Agent 完成了任务；如果用户粘贴了错误栈，说明 Agent 没有完成。
-
+> 原文：
 > "We measure agent quality in these tests through a variety of metrics. Some are straightforward like latency, token efficiency, tool call count, and cache hit rate. Those are directionally useful but still don't get at fuzzier and more important questions of whether the agent actually did a good job."
-
-### 测量体系的工程挑战
-
-这两个层次的结合本身就是工程挑战：
-- **离线评测**需要标准化的数据集和评测流程
-- **在线实验**需要能够同时运行多个 harness 变体的基础架构
-- **指标设计**需要找到能够真正捕捉「质量」的代理变量
-
-Cursor 的经验是：**有时在线测试会否定看起来有前途的想法**。比如，他们尝试用更贵的模型做上下文摘要，观察到对 Agent 质量的影响可以忽略不计，不值得增加的成本。这个发现只有在在线实验中才能得到。
+> — [Cursor Blog: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)
 
 ---
 
-## 追踪与修复退化：Tool Call 错误的系统性处理
+## 二、Keep Rate：代码质量的结果指标
 
-### Tool Call 错误是最广泛的 Bug 来源
+### 什么是 Keep Rate
 
-Agent 的工具调用是最大的 bug 表面积。工具调用错误可能造成严重后果：
-- 错误会留在上下文中，造成「context rot」——累积的错误会降低后续决策的质量
-- 有些错误会直接让 Agent 卡住或完全偏离轨道
+对于 Agent 生成的一组代码变更，追踪这些变更在固定时间间隔后仍保留在用户代码库中的比例。如果用户必须手动调整或迭代修复 Agent 的初始输出，说明 Agent 初始质量较低。
 
-### 错误分类体系
+### Keep Rate 的工程意义
 
-Cursor 将错误分为两个大类：
+- **直接衡量输出价值**：不是衡量 Agent 做了什么，而是衡量用户接受了多少
+- **时间衰减分析**：不同时间点（1小时/1天/1周）分析保留率，了解修复是被用户吸收还是被回滚
+- **Agent 版本对比**：相同任务下，新版 Harness 是否产生更高 Keep Rate
 
-**预期错误**（Expected errors）：
-- `InvalidArguments`：模型提出的错误参数
-- `UnexpectedEnvironment`：模型对上下文的误判
-- `ProviderError`：工具提供商的故障（如 GenerateImage、WebSearch 的服务中断）
+### 局限性
 
-**未知错误**（Unknown errors）：
-- 代表 harness 中的 bug
-
-### 告警机制设计
-
-**规则告警**：当任何工具的未知错误率超过固定阈值时触发。因为未知错误总是 harness 的 bug。
-
-**异常检测告警**：对于预期错误，需要判断「这是预期的行为还是 bug」。比如 grep 超时可能是工具性能问题，也可能是代码库太大导致模型形成了低效查询。
-
-Cursor 的解法是：**按工具和模型分别计算基线**，因为不同模型在不同工具上的出错率不同。
-
-### 自动化的 weekly automation
-
-Cursor 运行一个每周一次的 Automation，它装备了一个 Skill，能够：
-1. 搜索日志
-2. 发现新出现的或最近激增的问题
-3. 在 backlog 中创建或更新 ticket
-
-然后 Cursor Cloud Agents 可以一次性触发多个修复。Cursor 将这个过程描述为「自动化的软件工厂」的一部分。
+Keep Rate 反映「用户没有回退」，但不反映「用户主动复用」。一个 Keep Rate 80% 的 Agent 可能是用户懒得改而非真正满意。需要配合第二个指标。
 
 ---
 
-## 模型定制：同一 Harness 如何适配不同模型
+## 三、用户满意度语义分析
 
-### 工具格式的定制
+### 方法：LLM 读取用户对 Agent 初始输出的响应
 
-OpenAI 的模型训练时使用 patch-based 格式编辑文件，Anthropic 的模型训练时使用 string replacement。**给模型一个它不熟悉的工具格式会额外消耗推理 token 并产生更多错误**。
+用语言模型分析用户对 Agent 初始输出的后续消息，捕获语义层面的满意度：
 
-因此 Cursor 的 harness 为每个模型提供它训练时使用的工具格式。
+- **正向信号**：用户转向下一个功能 → Agent 完成了工作
+- **负向信号**：用户粘贴错误堆栈 → Agent 失败了
 
-### Prompt 的定制
+> 原文：
+> "A user moving on to the next feature is a strong signal the agent did its job, while a user pasting a stack trace is a reliable signal that it didn't."
+> — [Cursor Blog](https://cursor.com/blog/continually-improving-agent-harness)
 
-这个定制深入到 prompt 层面——不同的提供商、甚至同一提供商的不同版本，都可能有不同的行为特征：
+### 与 Keep Rate 的互补关系
 
-> "OpenAI's models tend to be more literal and precise in their instruction following, whereas Claude is a bit more intuitive and more tolerant to imprecise instructions."
+| 指标 | 优点 | 局限 |
+|------|------|------|
+| Keep Rate | 客观、可量化 | 只能捕捉「没被回退」，无法捕获「主动满意」 |
+| 语义满意度 | 捕获主观价值判断 | 需要 LLM 评估、成本更高 |
 
-### 特殊模型 quirk 的处理
-
-有时候模型会有真正的 quirks，harness 可以帮助缓解。比如 Cursor 观察到某个模型的「context anxiety」现象：当上下文窗口变满时，模型会开始拒绝工作，声称任务太大。通过 prompt 调整，Cursor 能够减少这种行为。
-
-### 中途切换模型的挑战
-
-当用户切换模型时，Cursor 自动切换到对应模型的 harness，包括该模型的定制 prompt 和工具。但模型还需要处理由另一个模型产生的对话历史——这超出了它训练时的分布。
-
-Cursor 的解决方案：
-1. **添加自定义指令**，告诉模型它正在中途接管另一个模型，并引导它不要调用对话历史中出现的但不属于自己工具集的工具
-2. **对话摘要**：在切换时总结对话内容，提供干净的摘要减少缓存惩罚。但这会丢失细节，对于深入复杂任务的场景有局限
-
-> "We generally recommend staying with one model for the duration of a conversation unless you have a reason to switch."
-
-另一种解决方案是使用 subagent，它从全新的上下文窗口开始。
+两者结合才能全面衡量 Agent 质量。
 
 ---
 
-## 多 Agent 协作：Harness 的未来角色
+## 四、工具错误的分类体系
 
-Cursor 明确指出：
+### 为什么工具错误是关键测量面
 
-> "The future of AI-assisted software engineering will be multi-agent. Instead of running every subtask through a single agent, the system will learn to delegate across specialized agents and subagents: one for planning, another for fast edits, and a third for debugging, each scoped to what it does best."
+工具调用错误可能对 Cursor 中的会话造成极大伤害。虽然 Agent 常能自我纠正，但错误仍留在上下文中，浪费 tokens 并导致「上下文腐烂」（context rot）—— 累积的错误会降低模型后续决策的质量。
 
-而这种多 Agent 协作的编排能力将存在于 **harness 层而非单个 Agent 层**：
-- 系统需要知道将哪个 Agent 分配到哪个任务
-- 如何根据每个 Agent 的优势调整任务描述
-- 如何将结果缝合为连贯的工作流
+### 错误分类
 
-> "Making that work well is fundamentally a harness challenge... This means that, while harness engineering has always been important for agent success, it's only going to be more critical going forward."
+Cursor 将工具错误分为两类：
+
+**预期错误（Expected Errors）**—— 模型偶尔犯错是正常行为：
+
+| 类型 | 原因 |
+|------|------|
+| InvalidArguments | 模型提出了不正确的编辑 |
+| UnexpectedEnvironment | 试图读取不存在的文件 |
+| ProviderError | 工具供应商（如 GenerateImage、WebSearch）宕机 |
+| UserAborted | 用户中止 |
+| Timeout | 超时 |
+
+**未知错误（Unknown Errors）**—— 始终是 Harness 的 bug。
+
+### 异常检测机制
+
+Cursor 按工具和模型计算基线，因为不同模型可能以不同速率搞砸工具调用。当预期错误显著超过基线时触发异常检测告警。
+
+> 原文：
+> "Since unknown errors are always bugs, we alert whenever the unknown error rate for any tool exceeds a fixed threshold. But it can be tricky to tell whether expected errors represent a bug in the harness or expected behavior."
+> — [Cursor Blog](https://cursor.com/blog/continually-improving-agent-harness)
 
 ---
 
-## 对比：Anthropic vs Cursor 的 Harness 改进哲学
+## 五、上下文窗口的演进
 
-Anthropic 的 harness 文章（如 Building Effective Agents）强调的是**设计原则与接口抽象**——如何通过 Brain-Hand 解耦、Session 层设计来构建可靠的 Agent 系统。
+### Guardrail 逐步拆除
 
-Cursor 的这篇文章强调的是**测量驱动的持续迭代**——如何通过 CursorBench + Online Experiments 的双层测量体系，系统性地发现、诊断、修复 harness 问题。
+2024 年末 Cursor 首次开发编码 Agent 时，模型在自主选择上下文方面差得多，团队投入大量上下文工程创建 guardrails：
+- 每次编辑后向 Agent 显示 lint 和类型错误
+- 当 Agent 请求行数过少时重写其文件读取
+- 限制 Agent 单轮可以调用的最大工具数
 
-两者都是一流的工程实践：Anthropic 提供了架构层面的设计哲学，Cursor 提供了工程实现的度量方法论。
+现在**大部分已消失**。模型能力提升后，动态上下文获取取代了静态 guardrails。
+
+### 当前的静态上下文
+
+仍包含一些有用的静态上下文（如操作系统、git 状态、当前和最近查看的文件），但量已大幅减少。
+
+> 原文：
+> "We still include some useful static context (e.g., operating system, git status, current and recently viewed files). But we've adapted to increasing model capability by knocking down guardrails and providing more dynamic context."
+> — [Cursor Blog](https://cursor.com/blog/continually-improving-agent-harness)
 
 ---
 
-## 未解决的问题与已知局限
+## 六、Harness 改进的数据驱动流程
 
-1. **多 Agent 协调尚未详细展开**：Cursor 描述了多 Agent 的未来方向，但没有讨论多个 Agent 之间的协调冲突、资源竞争、deadlock 等问题
-2. **对话摘要的局限**：切换模型时的对话摘要会丢失细节，Cursor 承认这对于复杂任务有局限，但尚未给出更好的解决方案
-3. **subagent 的粒度**：subagent 的设计和使用场景还有很大的探索空间
+```
+Vision → Hypothesis → Experiment → Iterate
+         ↑                              ↓
+         ←←← Quantitative & Qualitative Signals ←←←
+```
+
+### 实验类型
+
+1. **Harness 变体 A/B 测试**：部署多个变体到真实用户，测量 Keep Rate + 语义满意度
+2. **成本效益分析**：昂贵模型用于上下文摘要的实验显示「Agent 质量提升微乎其微，不值得更高成本」→ 搁置
+3. **特征标志追踪**：通过 Statsig 将崩溃指标链接到对应功能标志，A/B 测试量化功能对崩溃率的贡献
+
+### 每周自动化日志分析
+
+Cursor 运行配备技能的每周 Automation，教导模型如何搜索日志、发现问题是新出现的还是已存在的。
+
+> 原文：
+> "We also run a weekly Automation equipped with a skill that teaches the model how to search through our logs, surface issues that are new or significantly changed relative to the baseline."
+> — [Cursor Blog](https://cursor.com/blog/continually-improving-agent-harness)
 
 ---
 
-## 对实践者的启示
+## 七、对 Agent 开发者的启示
 
-**如果你在构建或优化 Agent 系统：**
+### 1. 建立测量体系而非依赖直觉
 
-1. **测量驱动是核心**：没有测量就没有优化。CursorBench + Online A/B Test 的双层体系是生产级 harness 的基本配置
-2. **错误分类是自动化的基础**：将预期错误和未知错误分开处理，才能设计有效的告警和自动化修复流程
-3. **模型定制要深入到 prompt 层面**：工具格式、prompt 风格、quirk 处理是模型适配的三个层次
-4. **多 Agent 协作是 harness 的未来战场**：单 Agent 优化已经接近极限，多 Agent 编排能力将决定下一代 AI Coding 平台的质量上限
-5. **Context 工程要随模型能力演进**：不要用 2024 年的 guardrails 限制 2026 年的模型，定期重新评估哪些限制已经不再需要
+核心指标必须是**结果导向**（Keep Rate、用户满意度），而非过程指标（工具调用数、延迟）。过程指标方向性有用但不充分。
+
+### 2. 错误分类是改进的前提
+
+未分类的错误 = 未知的改进空间。必须建立错误分类体系，区分「模型预期错误」和「Harness bug」，才能针对性修复。
+
+### 3. Guardrail 需要随模型进化动态调整
+
+2024 年的 Guardrail 可能是必要的，但模型能力提升后它们成为限制。好的 Harness 设计需要**感知模型能力变化并动态调整约束**。
+
+### 4. A/B 测试是 Harness 迭代的核心方法
+
+任何 Harness 改动都需要通过真实使用验证，不能仅凭 benchmarks 或直觉判断。Keep Rate 的差异是判断改进是否有效的黄金标准。
+
+---
+
+## 结论
+
+Cursor 的 Harness 改进方法论核心是：**测量驱动而非直觉驱动**。通过 Keep Rate + 语义满意度两个结果指标，配合错误分类体系和 A/B 测试，实现 Harness 的持续数据化迭代。
+
+这对所有 Agent 开发者有参考价值：Harness 质量不是「设计出来」的，而是「测量出来并迭代改进」的。
+
+---
+
+**关联项目**：
+
+- [openclaw/clawbench](./openclaw-clawbench-trace-based-agent-benchmark-89-stars-2026.md) — 追踪评分优先的 Agent 评测框架，89 Stars，与本文「测量驱动改进」形成「测量 → 迭代」的完整闭环
+
+**关联文章**：
+
+- [Cursor App Stability（Apr 21, 2026）](./cursor-app-stability-oom-80-percent-decrease-2026.md) — OOM 80% 下降，双调试策略，与本文「工具错误导致上下文腐烂」形成「问题诊断 → 持续改进」互补
+- [Anthropic Harness Design（Mar 24, 2026）](../harness/anthropic-harness-design-long-running-apps-2026.md) — GAN 三代理架构，与 Cursor「测量驱动改进」形成「设计先验 vs 数据驱动」的互补
+
+---
+
+**来源**：[Cursor Blog: Continually improving our agent harness](https://cursor.com/blog/continually-improving-agent-harness)（2026-04-30）
