@@ -13,6 +13,9 @@
 
 ---
 
+- [youcheng0526/n8n-mcp](./youcheng0526-n8n-mcp-n8n-mcp-server-20751-stars-2026.md) — N8N MCP Server，20,751 Stars，TypeScript，N8N Workflow Engine 作为 AI 工具调用后端，150+ 内置集成 + 自定义工具定义，让 Workflow Automation 成为 Agent 的可编程工具层，与 OpenAI Codex Windows 沙箱架构形成「工具定义 → 工具执行」的互补（关联：沙箱提供安全执行边界 → n8n-mcp 提供工作流编排工具抽象 → Agent 的完整工具链）
+- [yetone/native-feel-skill](./yetone-native-feel-skill-agent-skill-cross-platform-desktop-914-stars-2026.md) — Agent Skill 让 AI 生成跨平台桌面应用感觉像本地原生，914 Stars，8 条架构原则 + 四层架构 + WebKit/WebView2 生存指南 + 75 项 Ship Audit，与 OpenAI Codex Windows 沙箱架构形成「平台能力缺口」的同一主题双视角（关联：Codex 沙箱因 Windows 缺乏原生隔离原语而复杂 → native-feel-skill 因 Windows 缺乏原生交互范式而需要架构约束）
+
 - [CloakHQ/CloakBrowser](./CloakHQ-cloakbrowser-source-level-stealth-chromium-2026.md) — 源码级反检测 Chromium，797 Stars，49 个 C++ 补丁 + `humanize=True` 人类行为模拟，30+ 检测站点通过 + 0.9 reCAPTCHA v3，3 行代码替换 Playwright/Puppeteer，与 Cursor「第三代」云端 Agent 形成「环境配置 → 安全执行」完整闭环（关联：Cloud Agent 操作真实网站 → Cloudflare 等反爬拦截 → CloakBrowser 让 Browser Agent 真正工作）
 - [obra/superpowers](./obra-superpowers-agentic-skills-software-development-methodology-2026.md) — 完整软件工程方法论的 Agent Skills 框架，强制 TDD + 设计优先 + 子代理驱动开发，支持 Claude/Codex/Cursor 等 8 平台，Claude 可自主工作数小时不偏离计划，与本文 Codex Windows 沙箱架构形成「安全执行 → 工程方法论」的完整 Agent 工具链闭环
 - [K-Dense-AI/scientific-agent-skills](./K-Dense-AI-scientific-agent-skills-135-scientific-research-skills-2026.md) — 135 个科研 Agent Skills，覆盖生物信息学/药物发现/医学影像/地理空间等 15 个科学领域，基于开放 Agent Skills 标准，与 Cursor Autoinstall 形成「通用环境自举 → 专业领域 Skills」的互补（关联：Autoinstall 用旧版本模型初始化 → Scientific Skills 提供 135 个专项领域知识 → 两条路径解决同一问题：Agent 能力如何专业深化）
