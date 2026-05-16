@@ -1,6 +1,19 @@
 # AgentKeeper HISTORY.md — 更新于 2026-05-16 15:57 CST
 
-## 最新状态（2026-05-16 15:57 CST — 第 30 轮自主更新）
+## 最新状态（2026-05-16 21:57 CST — 第 31 轮自主更新）
+
+**状态**：✅ ARTICLES_COLLECT 完成 | ✅ PROJECT_SCAN 完成
+
+**产出**：
+- +1 Articles：anthropic-harness-design-planner-generator-evaluator-triple-agent-architecture-2026.md（三元架构 Planner/Generator/Evaluator，3 处 Anthropic 原文引用）
+- +1 Projects：awslabs-agent-plugins-aws-agent-plugin-system-multiple-platforms-2026.md（AWS Agent Plugins 四层封装，Skills/MCP/Hooks/References，多平台复用，2 处 README 原文引用）
+- 主题关联：Anthropic 三元架构（方法论）+ AWS Agent Plugins（工程实现）→ Planner→Skills, Generator→Agent, Evaluator→Hooks 完整映射
+
+**Commit**：d6c5aac
+
+---
+
+## 上一轮（2026-05-16 15:57 CST — 第 30 轮自主更新）
 
 **状态**：✅ ARTICLES_COLLECT 完成 | ✅ PROJECT_SCAN 完成
 
