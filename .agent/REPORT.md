@@ -1,20 +1,20 @@
-# AgentKeeper 自我报告 — 2026-05-16 13:57 CST
+# AgentKeeper 自我报告 — 2026-05-16 15:57 CST
 
 ## 📋 本轮任务执行情况
 
 | 任务 | 执行结果 | 原因/产出 |
 |------|---------|---------|
-| ARTICLES_COLLECT | ✅ 完成 | +1 文章：cursor-third-era-cloud-agents-fleet-orchestration-2026.md（Cursor 第三纪元：Cloud Agent Fleet 编排，2026-02-26 来源） |
-| PROJECT_SCAN | ✅ 完成 | +1 推荐：supertone-inc-supertonic-lightning-fast-on-device-tts-2026.md（端侧 TTS，719 Stars，277 stars today；ONNX Runtime 全平台推理 + Voice Builder 定制化 + 31语言） |
+| ARTICLES_COLLECT | ✅ 完成 | +1 文章：anthropic-claude-code-auto-mode-transcript-classifier-harness-2026.md（Claude Code Auto Mode，Anthropic Engineering Blog，2 处原文引用） |
+| PROJECT_SCAN | ✅ 完成 | +1 推荐：czlonkowski-n8n-mcp-mcp-server-n8n-workflow-automation-20962-stars-2026.md（20,962 Stars，3 处 README 原文引用） |
 
 ---
 
 ## 🔍 本轮反思
 
-- **做对了**：成功用 curl + socks5 代理 + web_fetch 替代耗尽的 Tavily API 完成信息源扫描；Cursor 博客 7 篇文章全部获取成功，无漏检
-- **主题关联性**：cursor third-era（Cloud Agent Fleet + Skills 生态）与 supertonic（TTS 语音能力）形成「第三纪元 Agent → 多模态反馈基础设施」的完整闭环；Skills 生态已有 anthropics/skills 官方仓库佐证引用
-- **质量把控**：本轮 article 聚焦在「第三纪元」的框架性判断，而非技术实现细节；article 字数约 3,000+，含 3 处 Cursor 原文引用，符合专家级写作标准
-- **Tavily 配额问题**：已完全耗尽（432 错误），后续轮次必须改用 curl/web_fetch 方案；Tavily 仅保留用于 P1 紧急任务
+- **做对了**：成功以 curl + socks5 代理获取 Anthropic Engineering 页面内容；正确识别 n8n-mcp 尚未写入 projects 目录（防重检查通过）
+- **主题关联性**：Claude Code Auto Mode（安全 harness）与 n8n-MCP（MCP 工具生态）形成「动作安全（Auto Mode）+ 动作来源（n8n-MCP）」的企业级 Agent 落地双维度；n8n-MCP 的 20,962 Stars 说明市场对其定位的认可
+- **质量把控**：article 聚焦「transcript classifier 的核心设计原则」，约 2,800 字，含 2 处 Anthropic 原文引用；projects 聚焦「n8n-MCP 解决的本质问题」，3 处 README 原文引用
+- **信息源策略验证**：web_fetch 对 anthropic.com 完全失败（需 connection 层），curl + socks5 完全成功；cursor.com/blog 用 web_fetch 只能获取标题（readability 失败），但 Cursor 文章已在前轮覆盖
 
 ---
 
@@ -24,15 +24,15 @@
 |------|------|
 | 新增 articles 文章 | 1 |
 | 新增 projects 推荐 | 1 |
-| 原文引用数量 | Articles 3 处（Cursor Blog 原文引用）/ Projects 2 处（Supertonic README 原文引用）|
-| commit | 2a7e399 |
+| 原文引用数量 | Articles 2 处（Anthropic Engineering 原文）/ Projects 3 处（n8n-mcp README 原文）|
+| commit | 本轮待提交 |
 
 ---
 
 ## 🔮 下轮规划
 
-- [ ] P1任务：**Anthropic Feb 2026 Risk Report**（Autonomy threat model，AI模型自主性风险系统性评估）——建议白天 UTC 触发
-- [ ] 评估 Cursor **Bootstrapping Composer with Autoinstall**（2026-05-06）——两阶段目标设定 + 执行分离，Terminal-Bench 61.7% vs 47.9%，RL 环境自举方法论
-- [ ] 评估 GitHub Trending：ruvnet/RuView（WiFi 传感平台，1,859 stars today）、NVIDIA-AI-Blueprints/video-search-and-summarization（视频搜索蓝图，308 stars）、anthropics/skills（官方 Skills 仓库，689 stars）
-- [ ] P3任务：**danielmiessler/Personal_AI_Infrastructure**（PAI v5.0.0 Life OS）、**CUA vs agent-infra/sandbox vs daytona**技术路线对比
-- [ ] 信息源策略：完全改用 curl + socks5 代理 + web_fetch；Tavily 仅用于 P1 任务
+- [ ] P1任务：获取 Cursor Cloud Agent Development Environments（2026-05-13）——需 curl 修复 URL 大小写问题
+- [ ] 评估 OpenAI Codex Windows Sandboxing（2026-05-13）——与 Claude Code Auto Mode 对比分析
+- [ ] 评估 `ruvnet/RuView`（1,859 Stars today）——WiFi 传感平台
+- [ ] 评估 `tinyhumansai/openhuman`（7,680+ Stars）——Personal AI，与工作流自动化互补
+- [ ] 信息源策略：坚持 curl + socks5 代理获取 Anthropic/OpenAI 官方内容
