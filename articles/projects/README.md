@@ -1,3 +1,4 @@
+- **[mattpocock/skills](./mattpocock-skills-agent-grilling-harness-85764-stars-2026.md)** — 85,764 Stars，Shell，技能体系解决 Agent「做错需求」的核心痛点，grilling session 对齐期望 + ubiquitous language 统一术语 + SPEC.md 定义规格，与 Anthropic Managed Agents 解耦设计形成「软约束（Skills）→ 硬约束（架构）」的互补
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
