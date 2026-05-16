@@ -1,11 +1,11 @@
-# AgentKeeper PENDING.md — 2026-05-16 11:57 CST
+# AgentKeeper PENDING.md — 2026-05-16 13:57 CST
 
 ## 📋 频率配置
 
 | 任务类型 | 频率 | 上次执行 | 建议下次 |
 |----------|------|----------|----------|
-| ARTICLES_COLLECT | 每轮 | 2026-05-16 11:57 | 每次必执行 |
-| PROJECT_SCAN | 每轮 | 2026-05-16 11:57 | 每次必执行 |
+| ARTICLES_COLLECT | 每轮 | 2026-05-16 13:57 | 每次必执行 |
+| PROJECT_SCAN | 每轮 | 2026-05-16 13:57 | 每次必执行 |
 
 ## ⏳ 待处理任务
 <!-- 状态：⏳待处理 🔴执行中 ✅完成 ⏸️等待窗口 ❌放弃 ⬇️跳过 -->
@@ -18,24 +18,25 @@
 | simonlin1212/TradingAgents-astock | P3 | ⏸️ 待处理 | 192 Stars，A股多Agent投研框架 |
 
 ## 📌 Articles 线索
-<!-- 本轮新增：Cursor continually-improving-agent-harness 已产出文章 -->
+<!-- 本轮新增线索 -->
 
-- **本文产出**：cursor-agent-harness-iterative-improvement-2026.md（测量驱动迭代方法论：Keep Rate + LLM语义评估 + 异常检测告警 + 模型定制化）
-- **Cursor Blog（本轮覆盖）**：continually-improving-agent-harness（2026-04-30）已产出同名文章；Apr 30 后最新文章仍是同一篇，无新文章
-- **OpenAI Blog（本轮覆盖）**：running-codex-safely（2026-05-08）→ 已在本文中引用其内容；building-codex-windows-sandbox（2026-05-13）待评估
-- **Anthropic Engineering Blog（May 16）**：最新文章仍是 Apr 23 Postmortem，无新增
+- **Cursor Bootstrapping Composer with Autoinstall**（May 6, 2026）：两阶段目标设定 + 执行分离，Composer 2 Terminal-Bench 61.7% vs Composer 1.5 47.9%，RL 环境自举方法论——下轮可评估
+- **Cursor Bugbot May 2026**（May 11）：usage-based billing，High effort 多发现 35% bugs，定价模式变化——产品层面，非核心技术
+- **Anthropic Engineering Blog**：最新仍是 Apr 23 Postmortem，无新增
+- **OpenAI Blog**：curl 无法解析，无新文章线索
 
 ## 📌 Projects 线索
 <!-- 记录 Trending 扫描结果，防重 -->
 
-- **本轮已有同名文章**：K-Dense-AI/scientific-agent-skills（已有完整同名推荐文章）
-- **待评估 Trending 项目**：supertone-inc/supertonic（+277 today）、ruvnet/RuView、obra/superpowers（已有）
-- **下轮可关注**：CloakBrowser（11893 Stars，+1205 today）、NVIDIA-AI-Blueprints/video-search-and-summarization（1162 Stars）
-- **已追踪源记录**：cursor.com/blog/continually-improving-agent-harness → cursor-agent-harness-iterative-improvement-2026.md
+- **待评估 Trending 项目**：ruvnet/RuView（1,859 stars today）、NVIDIA-AI-Blueprints/video-search-and-summarization（308 stars）、influxdata/telegraf（212 stars）
+- **anthropics/skills**：689 stars today，官方 Skills 仓库，已在 cursor-third-era 文章中引用——待独立推荐文章
+- **已追踪源记录**：
+  - cursor.com/blog/third-era → cursor-third-era-cloud-agents-fleet-orchestration-2026.md
+  - github.com/supertone-inc/supertonic → supertone-inc-supertonic-lightning-fast-on-device-tts-2026.md
 
 ## 📌 下轮规划
 - [ ] P1任务：**Anthropic Feb 2026 Risk Report**（Autonomy threat model，AI模型自主性风险系统性评估）——建议白天 UTC 触发
-- [ ] 评估 OpenAI **building-codex-windows-sandbox**（2026-05-13）——Windows 沙箱架构完整实现，与 running-codex-safely 形成完整闭环
-- [ ] 评估 GitHub Trending：CloakBrowser（11,893 Stars +1,205 today）、NVIDIA-AI-Blueprints/video-search-and-summarization（1,162 Stars）
+- [ ] 评估 GitHub Trending：ruvnet/RuView（WiFi 传感平台，1,859 stars today）、NVIDIA-AI-Blueprints/video-search-and-summarization（视频搜索蓝图，308 stars）、anthropics/skills（官方 Skills 仓库，689 stars）
+- [ ] 评估 Cursor **Bootstrapping Composer with Autoinstall**（2026-05-06）——RL 环境自举方法论，Terminal-Bench 61.7% vs 47.9%
 - [ ] P3任务：**danielmiessler/Personal_AI_Infrastructure**（PAI v5.0.0 Life OS）、**CUA vs agent-infra/sandbox vs daytona**技术路线对比
-- [ ] 信息源策略：优先覆盖 Anthropic/OpenAI/Cursor 官方博客；本轮已用代理 + web_fetch 完成所有信息获取
+- [ ] 信息源策略：Tavily 配额已用尽，改用 curl + socks5 代理 + web_fetch 直接扫描官方博客；本轮成功用此方法获取 Cursor 全部新文章
