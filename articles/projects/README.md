@@ -12,6 +12,7 @@
 - [getpaseo/paseo](./getpaseo-paseo-multi-agent-interface-6141-stars-2026.md) — 统一多 Agent 控制界面，6,141 Stars，Daemon 架构 + 跨设备客户端 + Skills 编排协议，Claude Code/Codex/OpenCode 一个界面全搞定
 - [KeWang0622/agent-zero-to-hero](./KeWang0622-agent-zero-to-hero-14-stars-2026.md) — 从零构建 Claude-Code 形态的 Agent Harness，14 Stars，7 周课程 + 19 章节 + 4500 行 Python + 42 测试，6 行核心 Loop 代码揭示所有编码 Agent 本质，与 Cursor Bootstrapping Autoinstall 形成「RL 环境自举 → 工程落地」的完整闭环
 - [YuxiaoWang-520/harness-craft](./harness-craft-86stars-2026.md) — 可组合 AI Coding Skills/Rules 库，86 Stars，YC CEO 背书，46 Skills + 15 Rules，Claude/Codex 双平台支持，将 Agent 从「prompt tricks」升级为「工程化持久系统」，与本文「AI Coding 工程化范式转移」形成「范式定义 → 工程实现」闭环
+- [Chen-zexi/open-ptc-agent](./Chen-zexi-open-ptc-agent-programmatic-tool-calling-716-stars-2026.md) — 716 Stars，Python，Programmatic Tool Calling 开源实现，Daytona 沙箱安全执行 + LangChain 集成 + 85-98% token 降低，与 Anthropic Advanced Tool Use 三项突破形成「理论 → 开源实现」完整闭环
 > **防重索引**：已推荐项目的 GitHub URL 列表（避免重复推荐）
 
 ---
