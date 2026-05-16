@@ -107,6 +107,7 @@
 - [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — AI Coding Agent 的 Production-Grade 工程技能库，DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP 六阶段质量门禁，9 大平台官方推荐
 - [virattt/dexter](https://github.com/virattt/dexter) — 面向深度金融研究的 Autonomous Agent，24K ⭐，Multi-Agent 分工 + 沙箱执行 + 全程可溯源
 
+- [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) — CLI-Anything: 让所有软件变成 Agent-Native 接口，371 Stars，18+ 应用支持，七阶段自动生成 CLI 包装器，与 Anthropic Opus 4.7 verbosity 控制形成「工具生成 → 行为控制」的 Agent Harness 工程互补
 - [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness) — 开源 Agent Harness 实现，深度集成 Claude Code / OpenClaw，支持 Ollama 本地运行
 - [meta-pytorch/KernelAgent](https://github.com/meta-pytorch/KernelAgent) — Deep Agent + GPU Kernel 自动化优化开源实现，PyTorch → Triton 自动转化
 - [awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows) — AWS Labs 出品的 AI-Driven Development Life Cycle 方法论，1847 Stars，六合一安全扫描，Claude Code/Cursor/Amazon Q 等 8 平台适配
