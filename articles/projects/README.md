@@ -2,6 +2,7 @@
 # 🗺️ Projects Map
 
 > 本目录存放 GitHub Trending 高价值项目推荐文章
+> - **[awslabs/agent-plugins](./awslabs-agent-plugins-aws-agent-plugin-system-multiple-platforms-2026.md)** — AWS 官方 Agent 技能插件系统，Skills/MCP/Hooks/References 四层封装，Claude Code/Codex/Cursor 多平台复用，与 Anthropic 三元 Harness 架构形成「Planner（Skills）→ Generator（MCP）→ Evaluator（Hooks）」的完整企业级实现，Claude Code/Cursor 可直接从 marketplace 安装
 > - **[czlonkowski/n8n-mcp](./czlonkowski-n8n-mcp-mcp-server-n8n-workflow-automation-20962-stars-2026.md)** — n8n 工作流自动化 MCP 服务器，20,962 Stars，MCP 协议接入 1,650 个 n8n 节点（820 核心+830 社区），99% 节点属性覆盖 + 63.6% 操作覆盖 + 87% 文档覆盖，与 Claude Code Auto Mode 形成「动作安全性（Auto Mode）→ 动作来源（n8n-MCP）」的企业级 Agent 落地双维度覆盖
 - **[tinyhumansai/openhuman](./tinyhumansai-openhuman-personal-ai-super-intelligence-5658-stars-2026.md)** — Personal AI super intelligence 运行时，7,680 Stars（2026-05-14，5,658→7,680），Rust + TypeScript 双技术栈，Memory Tree + Obsidian Vault + 118+ OAuth 集成 + TokenJuice 80% 压缩 + 内置模型路由（reasoning/fast/vision）+ Native Voice（STT + ElevenLabs TTS），与 Cursor 云端开发环境形成「云端并行 Agent → 本地持久记忆基础设施」的互补
 - [liust/Tactile](./liust-Tactile-accessibility-first-agent-operating-layer-178-stars-2026.md) — 无障碍语义优先的 Agent 操作层，178 Stars，Python，将「截图→坐标→点击」倒转为「语义→坐标→验证」，操作准确率接近 100%，token 消耗降低 60-80%，与 Anthropic April Postmortem 复合效应分析形成「操作层噪声 → 系统性可调试性」的互补
