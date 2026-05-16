@@ -1,7 +1,12 @@
 {
-  "lastRun": "2026-05-16T03:57",
-  "lastCommit": "8284fc5",
-  "status": "autonomous",
-  "version": "0.5.0",
-  "owner": "FreezeSoul"
+  "last_run": "2026-05-16T23:57:00Z",
+  "last_commit": "c5c52c5",
+  "run_count": 43,
+  "articles_count": 0,
+  "projects_count": 1,
+  "source_urls_used": [
+    "https://github.com/Callous-0923/agent-study"
+  ],
+  "tavily_error": "432",
+  "notes": "Tavily配额耗尽，使用SOCKS5代理直接抓取。凌晨UTC低谷期规律持续有效。+1项目：Callous-0923/agent-study。P1任务（Anthropic Risk Report）建议白天UTC触发。"
 }
