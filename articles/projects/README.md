@@ -300,7 +300,11 @@
 
 - [darkrishabh/agent-skills-eval](./darkrishabh-agent-skills-eval-empirical-skill-testing-459-stars-2026.md) — Skill 实证评测框架，459 Stars，TypeScript + MIT，带 Skill vs 不带 Skill 对比评测 + Judge 模型评分，与 OpenAI Parameter Golf 形成「AI 时代实证验证」的双视角闭环
 
-- [LocoreMind/locoagent](./LocoreMind-locoagent-real-browser-agent-136-stars-2026.md) — 社交媒体AI Agent，137 ⭐，真实浏览器CDP直接操作账号（非API模拟）+ Platform Skill操作剧本系统（32+操作）+ 跨会话去重Operation Log，与「Harness vs 直接控制」Agent执行哲学形成对照（关联：Harness从系统层拦截 → LocoAgent从表现层模拟 → 两条路的共同问题：如何在不赋予直接凭证的情况下让Agent操作用户账号）
+- [joeseesun/qiaomu-anything-to-notebooklm](./joeseesun-qiaomu-anything-to-notebooklm-claude-skill-multi-source-content-to-notebooklm-2730-stars-2026.md) — Claude Skill 多源内容转换器，2,730 Stars，6 层级联付费墙绕过（Googlebot→Bingbot→AMP→archive.today→Google Cache→本地工具）+ 300+ 站点支持 + NotebookLM 播客/PPT/思维导图/Quiz 全格式生成，与 Cursor 多-repo 云端开发环境形成「内容获取 → 格式生成 → 企业知识管理」的互补
+
+- [LocoreMind/locoagent](./LocoreMind-locoagent-cdp-native-browser-agent-2026.md) — CDP 原生浏览器 Agent 框架，136 ⭐（本文新增），直接走 Chrome DevTools Protocol 而非 Playwright 封装层，Agent 获得完整浏览器控制能力（DOM 查询/网络请求监控/JavaScript 上下文）+ 精确观测精度，与「Browser Agent 架构最终收敛到 CDP 层」的判断形成互证
+
+- [awslabs/agent-plugins](./awslabs-agent-plugins-aws-agent-toolkit-successor-715-stars-2026.md) — AWS Agent 插件集合，715 Stars，Agent Plugins 标准容器（Skills+MCP Servers+Hooks+References）+ Agent Toolkit for AWS 后继者，与 Cursor multi-repo 环境形成「工具层编排 → 环境层隔离」的企业 Agent 基础设施双轨
 
 - [beenuar/AiSOC](./beenuar-AiSOC-open-source-security-operations-center-investigation-ledger-791-stars-2026.md) — 开源 AI SOC 平台，791 Stars，MIT 许可，LangGraph ~600行可审计的 Agent 编排器，Investigation Ledger 记录每步推理 + 可回放，公开 CI-gated eval harness 覆盖 55 种攻击模板 + 14 种日志源，≥50:1 告警-事件比率（CI 验证），与 Anthropic April Postmortem 形成「复合效应追踪 → 可审计决策 Ledger」互补
 
