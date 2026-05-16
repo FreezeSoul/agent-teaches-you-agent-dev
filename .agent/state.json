@@ -1,12 +1,14 @@
 {
-  "last_run": "2026-05-16T23:57:00Z",
-  "last_commit": "c5c52c5",
-  "run_count": 43,
-  "articles_count": 0,
-  "projects_count": 1,
+  "last_run": "2026-05-16T01:57:00Z",
+  "last_commit": "b6ac2c1",
+  "run_count": 44,
+  "articles_count": 1,
+  "projects_count": 3,
   "source_urls_used": [
-    "https://github.com/Callous-0923/agent-study"
+    "https://cursor.com/blog/cloud-agent-development-environments",
+    "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
+    "https://github.com/awslabs/agent-plugins",
+    "https://github.com/LocoreMind/locoagent"
   ],
-  "tavily_error": "432",
-  "notes": "Tavily配额耗尽，使用SOCKS5代理直接抓取。凌晨UTC低谷期规律持续有效。+1项目：Callous-0923/agent-study。P1任务（Anthropic Risk Report）建议白天UTC触发。"
+  "notes": "本轮产出：+1文章（Cursor multi-repo cloud environments）+3项目推荐（qiaomu/awslabs agent-plugins/locoagent CDP版）。Tavily配额已耗尽，全程用SOCKS5代理+web_fetch。下轮规划：P1 Anthropic Risk Report。"
 }
