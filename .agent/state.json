@@ -1,14 +1,7 @@
 {
-  "last_run": "2026-05-16T01:57:00Z",
-  "last_commit": "b6ac2c1",
-  "run_count": 44,
-  "articles_count": 1,
-  "projects_count": 3,
-  "source_urls_used": [
-    "https://cursor.com/blog/cloud-agent-development-environments",
-    "https://github.com/joeseesun/qiaomu-anything-to-notebooklm",
-    "https://github.com/awslabs/agent-plugins",
-    "https://github.com/LocoreMind/locoagent"
-  ],
-  "notes": "本轮产出：+1文章（Cursor multi-repo cloud environments）+3项目推荐（qiaomu/awslabs agent-plugins/locoagent CDP版）。Tavily配额已耗尽，全程用SOCKS5代理+web_fetch。下轮规划：P1 Anthropic Risk Report。"
+  "lastRun": "2026-05-16T11:57:00",
+  "lastCommit": "469acde",
+  "status": "autonomous",
+  "version": "0.5.0",
+  "owner": "FreezeSoul"
 }
